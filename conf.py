@@ -36,6 +36,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.todo',
     'sphinx_rtd_theme'
 ]
 
@@ -81,7 +82,7 @@ exclude_patterns = ['_build']
 # pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
+todo_include_todos = True
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -95,3 +96,7 @@ html_theme = 'sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_logo = 'pictures/alyvix_logo_100x83.png'
+
+html_output_encoding = 'utf-8'
