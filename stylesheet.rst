@@ -1,0 +1,427 @@
+:author: Charles Callaway
+:date: 4-12-2019
+:modified: 4-12-2019
+:tags: stylesheet, guide
+:lang: en-US
+:translation: false
+:status: draft
+
+
+.. _style_top:
+
+############################
+Style Guidelines (Temporary)
+############################
+
+This document provides the style guide for Alyvix with examples of more advanced features and
+their corresponding RST structures, with at least one example of every supported RST feature.
+
+Paragraphs should not have more than four sentences.  Text lines should not be longer than 100
+characters except when:
+
+   * A bulleted line is just over 100 characters (e.g., 105)
+   * There is a very long sequence with no spaces like a web link
+
+
+
+.. _style_sections:
+
+******************************
+Section and Subsection Headers
+******************************
+
+Titles should have English formatting:
+
+   * Capitalize everything except
+   * Should not be too long so that
+
+To improve readability, there should be three blank lines between sections/subsections.  The
+more important top two level headers should have the character sequence both above and below
+the title.  Lower level headers only need them below.  Match the number of characters to the
+length of the title text.  The characters are (in order):  ``# * = -``
+
+Reference anchors above each section title should grow from left to right as nesting depth
+increases.  Because they can be easily broken, they should be changed as infrequently as
+possible.  :ref:`See here for linking to them.<style_links+refs>` They look like this:
+
+.. code-block:: bash
+   :caption: How to create a linkable section reference
+   :name: _style_section_header_example
+
+   .. _style_sections:
+
+You can use ``-----`` (four or more hyphens) to create a horizontal rule:
+
+-----
+
+And you can add a line of blank space (like a <br />) with a pipe character with a blank line
+both above and below.  Use this sparingly, though, since vertical space should really be created
+with CSS.
+
+|
+
+
+
+
+.. _style_bulleted_lists:
+
+**************
+Bulleted Lists
+**************
+
+Bulleted lists should:
+
+   * Always begin with a capital letter and start with the same syntactic type
+   * Have the same ending punctuation (either all with `.` or none)
+   * Have the same style, e.g. all newspaper headlines vs. all with complete sentences
+   * You can also have multi-line bullet points:
+
+        With indented text and images
+
+        .. image:: pictures/alyvix_logo_399x333.png
+           :width: 40pt
+
+     And with non-indented text or images
+
+     .. image:: pictures/alyvix_logo_399x333.png
+        :width: 40pt
+
+
+
+*****************************
+Code Blocks and File Includes
+*****************************
+
+| Write lines with a ``pipe`` character
+| and a space on the left edge to create
+| text with a break in the middle.
+
+A code block takes the language for the style and keywords, an optional caption that will go in
+italics above the block, and an optional link reference.  Sphinx then places the text in a
+preformatted HTML block, and uses the `Pygment lexer <https://pygments.org/docs/lexers/>`_
+to highlight the text with color according to the language.
+
+The simplest code block just has two colons at the end of one paragraph followed by an indented
+paragraph (with a blank line separating them).  It keeps the code block aligned to the left of
+the page::
+
+   Simple code blocks only have the default options.
+
+Which looks like this in the .rst file:
+
+.. code-block:: rst
+   :name: _style_simple_code_block_example
+
+   to the left of the page::
+
+      Simple code blocks only have the default options.
+
+As soon as you return to the previous indentation level, the code block will end.  If you want
+more options, you can use the ``code-block`` directive:
+
+.. code-block:: rst
+   :caption: How to create a code block with options
+   :name: _style_code_block_example
+
+   .. code-block:: <language>
+      :caption: How to create a code block
+      :name: _style_code_block_example
+
+      This is the content of the code block.
+      Maybe it is actual code.
+
+You can also include an entire external file as include like this:
+
+.. code-block:: rst
+   :caption: Importing the content of the file ``includes.c``
+
+   .. literalinclude:: includes.c
+      :language: c
+      :linenos:
+
+Note that you can also include a diff of two files by adding the option ``:diff: includes.c.orig``.
+
+Finally, consider the following for directory structures:
+
+.. code-block:: bash
+
+   .
+   ├─── composer.json
+   └─── Documentation
+        ├─── Index.rst
+        ├─── Settings.cfg
+        └─── ...
+
+
+
+.. _style_links+refs:
+
+**************************************
+Links, Anchors, Aliases and References
+**************************************
+
+Link and anchor names must use Python variable syntax.  Any punctuation characters will be
+converted to hyphens in the resulting link index.
+
+You can create a link to an existing anchor, for instance:
+:ref:`Getting Started <getting_started_top>`.
+Remember to remove the initial underscore from the anchor when you create a link reference.
+
+.. code-block::rst
+
+   :ref:`Getting Started<getting_started_top>`
+
+You can create aliases where you want, and use them repeatedly using the ``|<alias>|`` syntax.
+It does not matter where on the page you define it; it can even be placed at the bottom of the
+page.
+
+.. |logo| image:: pictures/alyvix_logo_399x333.png
+   :align: middle
+   :width: 30pt
+   :height: 10pt
+
+The code for the alias:
+
+.. code-block:: rst
+   :caption: Creating an alias for the text string ``|logo|``
+
+   .. |logo| image:: pictures/alyvix_logo_399x333.png
+      :align: middle
+      :width: 30pt
+      :height: 10pt
+
+And then you can reuse it whenever you want:  |logo| |logo| |logo|
+
+
+
+.. _style_tables:
+
+******
+Tables
+******
+
+There are simple, complex, CSV and list-type tables.
+
+Here is a simple table:
+
+=======  =============  =========
+Name     Syntax         Format
+=======  =============  =========
+Italics  \*             *Italics*
+Bold     \**            **Bold**
+Mono     \``            ``Monospace``
+Mixed    \\             *Ita*\ **Bol**\ ``Lit``\s
+Math     \:math:        :math:`\\\sum_{k=0}^{N-1} s_k`
+GUI      Role:guilabel  :guilabel:`File > Settings`
+Keys     Role:kbd       :kbd:`ctrl` + :kbd:`s`
+File     Role:file      :file:`/etc/passwd`
+=======  =============  =========
+
+This is built as follows::
+
+   =======  =============  =========
+   Name     Syntax         Format
+   =======  =============  =========
+   Italics  \*             *Italics*
+   Bold     \**            **Bold**
+   Mono     \``            ``Monospace``
+   Mixed    \\             *Ita*\ **Bol**\ ``Lit``\s
+   Math     \:math:        :math:`\\\sum_{k=0}^{N-1} s_k`
+   GUI      Role:guilabel  :guilabel:`File > Settings`
+   Keys     Role:kbd       :kbd:`ctrl` + :kbd:`s`
+   File     Role:file      :file:`/etc/passwd`
+   =======  =============  =========
+
+**Note:** ``sphinx-build`` will complain if there is text between the defined columns (but not
+if it sticks out the right hand side).
+
+And here is a complex table:
+
++------------------------+------------+----------+----------+
+| Header row, column 1   | Header 2   | Header 3 | Header 4 |
+| (header rows optional) |            |          |          |
++========================+============+==========+==========+
+| body row 1, column 1   | column 2   | column 3 | column 4 |
++------------------------+------------+----------+----------+
+| body row 2             | ...        | ...Spanning text... |
++------------------------+------------+----------+----------+
+
+Built like so::
+
+   +------------------------+------------+----------+----------+
+   | Header row, column 1   | Header 2   | Header 3 | Header 4 |
+   | (header rows optional) |            |          |          |
+   +========================+============+==========+==========+
+   | body row 1, column 1   | column 2   | column 3 | column 4 |
+   +------------------------+------------+----------+----------+
+   | body row 2             | ...        | ...Spanning text... |
+   +------------------------+------------+----------+----------+
+
+
+
+.. _style_images:
+
+******************
+Images and Figures
+******************
+
+There are a number of options for images, such as resizing and placement.  Clicking on the image
+will load the image by itself into the browser window.
+
+.. image:: pictures/alyvix_logo_399x333.png
+   :width: 200px
+   :align: center
+   :height: 100px
+   :alt: This is alternate text.
+
+This is built as follows:
+
+.. code-block:: rst
+   :caption: How to include a simple image
+   :name: _style_image_example
+
+   .. image:: pictures/alyvix_logo_399x333.png
+      :width: 200px
+      :align: center
+      :height: 100px
+      :alt: This is alternate text.
+
+You can add shadows and other effects by adding a specific CSS class as follows:
+
+.. code-block:: rst
+
+   .. image:: pictures/alyvix_logo_399x333.png
+      :class: with-shadow
+
+You can also make a more structured figure.  It assumes you want an image at the top with the
+basic options above.  A paragraph at the same indentation level as the options will be treated as
+a caption, and any additional indented structures will be treated as a figure legend.  You can set
+an empty caption by using the standard ``..`` paragraph comment.  but can also put an entire (indented) RST structure within the figure space
+and it will add a thin-lined box around the entire thing:
+
+.. figure:: pictures/alyvix_logo_399x333.png
+   :scale: 40 %
+   :align: center
+   :alt: This is alternate text.
+   :figwidth: 50 %
+   :target: http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure
+
+   The indented structure becomes like a caption.
+
+
+
+.. _style_info_boxes:
+
+*******************************
+Info Boxes, Topics and Sidebars
+*******************************
+
+.. note::
+   This is a `note` style of info box.  It can contain bulleted lists and other formatting.
+
+.. warning::
+   The `warning` style of info box has different colors.
+
+The other box types are:  tip, important, seealso, hint
+
+Additional styles like ``epigraph`` and ``pull-quote`` can be tied to specific CSS classes
+with those names.
+
+A **topic** creates a simple box with a title above it.  In some themes, like the sphinx_rtd
+theme, it just creates this HTML structure, which is not mapped to any CSS:
+``<div class="topic"><p class="topic-title first">Title</p><p>Box content</p></div>``
+
+.. topic:: The Topic Title
+
+   Here is the content of the topic box.
+
+.. code-block:: rst
+   :caption: How to create a topic box
+   :name: _style_topic_example
+
+   .. topic:: The Topic Title
+
+      Here is the content of the topic box.
+
+A **sidebar** creates a box that floats to the left.  Other elements will tend to wrap around it:
+
+.. sidebar:: Sidebar Title
+   :subtitle: *Optional Sidebar Subtitle*
+
+   Subsequent indented lines comprise the body of the sidebar.  You can put any kind of block
+   elements inside of it.
+
+This is built as follows:
+
+.. code-block:: rst
+   :caption: How to create a sidebar to the right
+   :name: _style_sidebar_example
+
+   .. sidebar:: Sidebar Title
+      :subtitle: *Optional Sidebar Subtitle*
+
+      Subsequent indented lines comprise the body of the sidebar.  You can put any kind of elements
+      inside of it.
+
+
+
+.. _style_comments:
+
+********
+Comments
+********
+
+Comments are not visible in the rendered document.  See?  No comment visible here:
+
+.. This is a comment that will not be included.
+
+The above comment appears this way in the source file:
+
+   .. code-block:: bash
+
+      .. This is a comment that will not be included.
+
+
+
+.. _style_raw_html:
+
+**************
+Using Raw HTML
+**************
+
+If necessary, straight HTML can be inserted into the guide.  It's not needed for block elements,
+since they can have custom classes and thus custom CSS.  Sometimes it may be necessary for third
+party plugins (video, twitter,  instance with third party Note there are several problems,
+though:
+
+   * It's a potential security hole
+   * It reduces portability
+   * You can't put :ref:`aliases (macro substitution)<style_links+refs>` inside it
+   * For goodness sake, don't put custom CSS in it, just link it to a custom CSS class in the
+     Sphinx template
+
+Here are some examples:
+
+.. raw:: html
+
+   <ul><li>
+   Press the <kbd style="background-color: rgba(62,155,161); color: #fff; font-weight: 400; padding-left: 6px; padding-right: 6px; border-style: none; border-radius: 7px;">Enter</kbd> key.
+   </li><li>
+   <kbd style="background-color: #eee; color: #000; font-weight: 600; padding: 1px 3px 1px 3px; margin: 0px 2px 0px 2px; border-style: solid; border-radius: 6px; border-width: 1px; border-color: rgba(74,158,154);">Network</kbd>
+   </li><li>
+   <code style="background-color: rgba(74,158,154); color: #fff; font-weight: 500; padding: 1px 4px 1px 4px; border-style: none;">Add</code>
+   </li><li>
+   <code style="background-color: white; color: #000; font-weight: 500; padding: 0px 3px 1px 3px; margin: 0px 1px 0px 1px; border-style: solid; border-width: 1px; border-color: rgba(230,230,230); white-space: nowrap;">Add Map</code>
+   </li><li>
+   <code style="color: rgba(74,158,154); background-color: #fff; font-weight: 400; padding: 1px 2px 1px 4px; border-style: none;">Allow viewing of all logs</code>
+   </li><li>
+   <kbd style="background-color: rgb(252,252,252);border-color: rgb(204,204,204);border-style: solid;border-width: 1px;border-radius: 3px;box-shadow: rgb(187,187,187) 0px -1px 0px 0px inset;color: rgb(85,85,85);display: inline;font-family: Consolas, Menlo, Courier;font-weight: 400;overflow-wrap: break-word;padding: 3px 5px 3px 5px;vertical-align: middle;">Test + Text pqj</kbd>
+   </li></ul>
+
+And don't forget that you can alias and reuse it:
+
+.. |enterkey| raw:: html
+
+   <kbd style="background-color: rgba(62,155,161); color: #fff; font-weight: 400; padding-left: 6px; padding-right: 6px; border-style: none; border-radius: 7px;">Enter</kbd>
+
+Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|

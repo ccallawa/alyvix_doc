@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 4-12-2019
+:modified: 5-12-2019
 :tags: how-to
 :lang: en-US
 :translation: false
@@ -17,6 +17,8 @@ Upgrading and Updating Alyvix
 - Schedule/frequency
 - Upgrade procedure
 - Update procedure
+- What if something goes wrong?
+- Do we follow semantic versioning?
 - Any extra info like repositories, URLs, websites, etc.
 
 
