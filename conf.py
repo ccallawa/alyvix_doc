@@ -92,6 +92,15 @@ todo_include_todos = True
 #
 html_theme = 'sphinx_rtd_theme'
 
+# Options for the Read the Docs (rtd) theme.
+html_theme_options = {
+    'display_version': True,                  # Show the version below the logo
+    'prev_next_buttons_location': 'bottom',   # Where to put "Previous" and "Next" buttons
+    'style_external_links': True,             # Add an icon to distinguish external from internal links
+    'sticky_navigation': True,                # Don't scroll the left side of the page
+    'includehidden': True                     # Show hidden ToC trees
+}
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
