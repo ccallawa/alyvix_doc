@@ -18,6 +18,7 @@ Alyvix Robot
 .. toctree::
    :maxdepth: 2
    :name: toc_test
+   :hidden:
 
    alyvix_robot/robot_start.rst
    alyvix_robot/robot_medium.rst

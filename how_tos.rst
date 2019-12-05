@@ -18,6 +18,7 @@ How Tos
 .. toctree::
    :maxdepth: 2
    :name: toc_test
+   :hidden:
 
    how_tos/how_tos_simplest.rst
    how_tos/how_tos_advanced.rst

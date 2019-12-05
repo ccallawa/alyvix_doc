@@ -18,6 +18,7 @@ Alyvix Designer
 .. toctree::
    :maxdepth: 2
    :name: toc_test
+   :hidden:
 
    alyvix_designer/designer_start.rst
    alyvix_designer/designer_medium.rst

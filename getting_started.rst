@@ -19,6 +19,7 @@ Getting Started
 .. toctree::
    :maxdepth: 2
    :name: toc_test
+   :hidden:
 
    getting_started/install_configure.rst
    getting_started/simple_working_test.rst

@@ -40,6 +40,7 @@ Documentation Index
 .. toctree::
    :maxdepth: 2
    :name: toc_master
+   :hidden:
 
    usage_overall_conceptual.rst
    getting_started.rst
