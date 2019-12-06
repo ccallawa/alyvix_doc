@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 4-12-2019
+:modified: 6-12-2019
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -85,6 +85,17 @@ Bulleted lists should:
 
      .. image:: pictures/alyvix_logo_399x333.png
         :width: 40pt
+
+There are also enumerated lists:
+
+   #. Just like bulleted lists
+   #. But start them with ``#.``
+
+      #. Subpoints are just like for bulleted lists
+      #. But they are numbered
+
+   #. You can start with a number other than one by using its number (``4.``) instead of the pound sign (``#.``),
+      but it will affect the very first number at top even if put in a subpoint
 
 
 

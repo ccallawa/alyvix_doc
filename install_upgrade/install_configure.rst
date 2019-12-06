@@ -86,6 +86,7 @@ Alyvix Installation
 Alyvix Configuration
 ====================
 
+- Add :file:`C:\Python37\Lib\site-packages\alyvix\ide` to the path?
 - Are the offline installation instructions still relevant?
 
 

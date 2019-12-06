@@ -96,7 +96,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'display_version': True,                  # Show the version below the logo
     'prev_next_buttons_location': 'bottom',   # Where to put "Previous" and "Next" buttons
-    'style_external_links': True,             # Add an icon to distinguish external from internal links
+    'style_external_links': False,            # Don't add an icon to distinguish external from internal links
     'sticky_navigation': True,                # Don't scroll the left side of the page
     'includehidden': True                     # Show hidden ToC trees
 }
