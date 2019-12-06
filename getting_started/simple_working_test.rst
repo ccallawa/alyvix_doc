@@ -1,7 +1,7 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 4-12-2019
-:tags: how-to
+:modified: 6-12-2019
+:tags: getting, started
 :lang: en-US
 :translation: false
 :status: draft
@@ -15,8 +15,6 @@ Testing that Alyvix is Working
 
 - Test the Designer and Robot, nothing else
 - Should not have to reference the conceptual documentation
-- Link to the installation and configuration doc?
-- Link to the other how tos?
 
 
 
@@ -39,3 +37,7 @@ First Test:  App Launch
 
 - Add example where Designer/Robot launch an app on Windows 10
 - Lots of minimal, focused screenshots
+
+
+
+- Link to the how tos
