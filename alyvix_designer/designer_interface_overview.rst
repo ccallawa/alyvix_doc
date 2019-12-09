@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 6-12-2019
-:modified: 6-12-2019
+:modified: 9-12-2019
 :tags: designer, gui
 :lang: en-US
 :translation: false
@@ -26,7 +26,6 @@ you can then use as building blocks to compose more complicated objects and scri
       :alt: The initial Alyvix Designer selection cursor
       :target: ../../alyvix_designer/images/ad_main_screen_edit_message.png
 
-
 To illustrate how it works, run Designer with no arguments from the command line as follows:
 
 .. code-block:: doscon
@@ -37,8 +36,8 @@ The screen will turn white for a few seconds.  When it returns, you will see a c
 with the phrase :guilabel:`PRESS ESC TO OPEN DIALOG` at the top left, while purple guide lines
 will track the mouse with a crosshair cursor as in Figure 1.
 
-In Alyvix Designer, the color of the guide lines indicates whether you are working with the first,
-second, or third object definition.
+In Alyvix Designer, the color of the guide lines indicates whether you are working with the first
+(purple), second (green), or third (blue) object definition.
 
 .. sidebar:: Fig. 2:  The Designer Interface
 
@@ -48,6 +47,8 @@ second, or third object definition.
 
 If you press escape, you will see the default Designer interface as in the screen shown to the
 right.  The principle interface elements are:
+
+.. rst-class:: bignums
 
 #. The **Object name** (title) of the testcase object, also used for the filename and testcase object reuse
 #. **Testcase-wide parameters**, which affect all screen capture elements

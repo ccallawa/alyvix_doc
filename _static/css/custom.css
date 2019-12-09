@@ -1,0 +1,89 @@
+.rst-content ol.bignums {
+    counter-reset: li-counter;
+}
+.rst-content ol.bignums>li { /* Represents a single list element */
+    list-style-type: none;
+    margin: 24px 0;
+    padding: 8px 8px 8px 40px;
+    position: relative;
+    background-color: #f2ebe3; /* Beige */
+    border-radius: 5px;
+    width: 55%; /* Without this, it writes over any .sidebar */
+}
+.rst-content ol.bignums>li>p.first { /* Formats the text of a single list element */
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+    line-height: 24px;
+}
+.rst-content ol.bignums>li::before { /* Formats the bullet point */
+    background-color: #333;
+    border-radius: 50%;
+    color: white;
+    content: counter(li-counter,  decimal);
+    counter-increment: li-counter;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22.8px;
+    margin: 0 16px 0 0;
+    position: absolute;
+    text-align: center;
+    left: 8px; /* Distances from numbered circle to the left and top */
+    top: 6px;
+    width: 24px;
+    height: 24px;
+}
+
+.rst-content ol.bignums-xxl {
+    counter-reset: li-counter;
+}
+.rst-content ol.bignums-xxl>li {
+    list-style-type: none;
+    margin: 36px 0;
+    padding: 12px 12px 12px 55.2px;
+    position: relative;
+    background-color: transparent;
+    border-radius: 0;
+    border-top: 6px solid #ddd;
+    width: 55%; /* Without this, it writes over any .sidebar */
+}
+.rst-content ol.bignums-xxl>li>p.first {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    line-height: 36px;
+}
+.rst-content ol.bignums-xxl>li::before {
+    background-color: #333;
+    color: white;
+    border: 6px solid #b3b2b2;
+    background-color: #fff;
+    color: #333;
+    border: 6px solid #ddd;
+    border-radius: 50%;
+    content: counter(li-counter,  decimal);
+    counter-increment: li-counter;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34.2px;
+    margin: 0 24px 0 0;
+    position: absolute;
+    text-align: center;
+    left: 2.4px;
+    top: 7.2px;
+    width: 36px;
+    height: 36px;
+}
+
+code.kbd, .rst-content tt.kbd, kbd {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 0 0 2px #fff inset;
+    color: black;
+    display: inline-block;
+    line-height: 1.2;
+    margin: 0 0.1em -0.5em;
+    padding: 0 0.3em;
+    text-shadow: 0 1px 0 #fff;
+}

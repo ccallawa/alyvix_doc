@@ -106,6 +106,16 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# These paths are either relative to html_static_path
+# or fully qualified paths (eg. https://...)
+html_css_files = [
+    'css/custom.css'
+]
+
+# html_js_files = [
+#     'js/custom.js',
+# ]
+
 html_logo = 'pictures/alyvix_logo_100x83.png'
 
 html_output_encoding = 'utf-8'
