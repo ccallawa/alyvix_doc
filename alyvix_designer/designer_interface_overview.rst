@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 6-12-2019
-:modified: 9-12-2019
+:modified: 10-12-2019
 :tags: designer, gui
 :lang: en-US
 :translation: false
@@ -44,9 +44,9 @@ The principle interface elements are:
 
 .. sidebar:: Fig. 2:  The Designer Interface
 
-   .. image:: images/ad_main_screen_initial.png
+   .. image:: images/ad_main_screen_initial_numbered.png
       :alt: The empty Alyvix Designer interface
-      :target: ../../alyvix_designer/images/ad_main_screen_initial.png
+      :target: ../../alyvix_designer/images/ad_main_screen_initial_numbered.png
 
 .. rst-class:: bignums
 
@@ -54,8 +54,10 @@ The principle interface elements are:
 #. **Testcase parameters**, which affect all screen capture elements
 #. The **Screen capture** :ref:`Element Tree <alyvix_designer_element_tree>` that lists all
    regions on the screen available for interaction and their type (image, region or text)
-#. **Screen capture element parameters**
-#. **Interface controls**
+#. **Screen capture element parameters**, which depend on the type of recognized object (and
+   subtype in the case of the *text* component)
+#. **Interface controls**, allowing you to save and exit, exit without saving, or return to the
+   screen capture
 
 Since we started Designer above without any arguments, it assigns the default name
 :guilabel:`VisualObject1`, along with the default parameters ``Appear``, ``Timeout(s): 10``,
