@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 6-12-2019
+:modified: 10-12-2019
 :tags: how-to
 :lang: en-US
 :translation: false
@@ -10,6 +10,10 @@
 .. todo::
 
    Add a banner image with white background and edges
+
+.. todo::
+
+   Import any relevant text from the Alyvix 2.7.5 "Basic Concepts" page
 
 
 .. toctree::

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 6-12-2019
+:modified: 10-12-2019
 :tags: concept
 :lang: en-US
 :translation: false
@@ -9,9 +9,9 @@
 
 .. _concepts_top:
 
-#####################
-Concepts and Glossary
-#####################
+###################
+Concepts & Glossary
+###################
 
 Introductory text
 
@@ -37,19 +37,19 @@ Glossary
 
 .. _glossary_testcase:
 
-Test Case
-  A *test case* is...
+:Test Case:  A *test case* (Designer, Robot) is ...
 
-.. _glossary_definition2:
+.. _glossary_root:
 
-Definition2
-  A *definition2* is something that
-  wraps around.
+:Root node:  A *root node* (Designer) is ...
 
-.. _glossary_definition3:
+.. _glossary_group:
 
-:Definition 3:  A *definition 3* is something that
-  wraps around.
+:Group:  A *group* (Designer) is ...
+
+.. _glossary_component:
+
+:Component:  A *component* (Designer) is ...
 
 
 

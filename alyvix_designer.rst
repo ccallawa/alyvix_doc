@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 6-12-2019
+:modified: 10-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -9,17 +9,16 @@
 
 .. _alyvix_designer_top:
 
-.. todo::
-
-   Everything still to do in Alyvix Designer
-
 ###############
 Alyvix Designer
 ###############
 
-Description of Alyvix Designer
+.. todo::
 
-Description of the various pages
+   Need an overview/map of Alyvix Designer and its doc in the Designer intro page
+
+- Description of Alyvix Designer
+- Description of the various pages
 
 
 
