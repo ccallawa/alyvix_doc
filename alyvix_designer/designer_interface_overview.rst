@@ -33,11 +33,14 @@ To illustrate how it works, run Designer with no arguments from the command line
    C:\Alyvix\testcases> python alyvix_designer.py
 
 The screen will turn white for a few seconds.  When it returns, you will see a copy of the screen
-with the phrase :guilabel:`PRESS ESC TO OPEN DIALOG` at the top left, while purple guide lines
+with the phrase :guilabel:`PRESS ESC TO OPEN DIALOG` at the top left, while red guide lines
 will track the mouse with a crosshair cursor as in Figure 1.
 
 In Alyvix Designer, the color of the guide lines indicates whether you are working with the first
-(purple), second (green), or third (blue) object definition.
+(red), second (green), or third (blue) object definition.
+
+If you press escape, you will see the default Designer interface as in the screenshot shown here.
+The principle interface elements are:
 
 .. sidebar:: Fig. 2:  The Designer Interface
 
@@ -45,15 +48,12 @@ In Alyvix Designer, the color of the guide lines indicates whether you are worki
       :alt: The empty Alyvix Designer interface
       :target: ../../alyvix_designer/images/ad_main_screen_initial.png
 
-If you press escape, you will see the default Designer interface as in the screen shown to the
-right.  The principle interface elements are:
-
 .. rst-class:: bignums
 
 #. The **Object name** (title) of the testcase object, also used for the filename and testcase object reuse
-#. **Testcase-wide parameters**, which affect all screen capture elements
-#. The **Screen capture element tree** that lists all regions on the screen available for interaction
-   and their type (image, region or text)
+#. **Testcase parameters**, which affect all screen capture elements
+#. The **Screen capture** :ref:`Element Tree <alyvix_designer_element_tree>` that lists all
+   regions on the screen available for interaction and their type (image, region or text)
 #. **Screen capture element parameters**
 #. **Interface controls**
 
@@ -65,7 +65,7 @@ And since we have yet to select any screen capture elements, the element tree ha
 root node marked :guilabel:`S` along with a thumbnail of the screen capture.
 
 To add a visual element to the tree, press :guilabel:`EDIT` in the bottom right hand of the
-Designer panel.  This will return us to the screen capture with the purple guide lines.
+Designer panel.  This will return us to the screen capture with the guide lines.
 
 .. figure:: images/ad_screen_capture_combined.png
    :align: center
@@ -91,8 +91,11 @@ For now, press the :guilabel:`CANCEL` button to exit without creating an object.
 
 ----
 
-You can find more information about the available options on the
-:ref:`Designer Interface Options <alyvix_designer_options>` page.
+You can find more information about the available options for Designer on the
+:ref:`Interface Options <alyvix_designer_options>` page.
 
-To learn more about the using the visual elements, go to the
+To learn more about interacting with the visual elements and what they can do, go to the
 :ref:`Element Tree <alyvix_designer_element_tree>` page.
+
+The :ref:`Testcase Object <alyvix_designer_testcase>` page provides technical details on how
+Alyvix files are organized and what they contain.
