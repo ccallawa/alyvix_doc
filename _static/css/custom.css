@@ -1,3 +1,4 @@
+/* Allow some numbered lists to appear as steps in a procedure */
 .rst-content ol.bignums {
     counter-reset: li-counter;
 }
@@ -16,7 +17,7 @@
     margin-top: 0;
     line-height: 24px;
 }
-.rst-content ol.bignums>li::before { /* Formats the bullet point */
+.rst-content ol.bignums>li::before { /* Creates the format for the bullet point */
     background-color: #333;
     border-radius: 50%;
     color: white;
@@ -24,20 +25,21 @@
     counter-increment: li-counter;
     font-size: 16px;
     font-weight: bold;
-    line-height: 22.8px;
+    line-height: 26px;
     margin: 0 16px 0 0;
     position: absolute;
     text-align: center;
-    left: 8px; /* Distances from numbered circle to the left and top */
+    left: 8px;
     top: 6px;
     width: 24px;
     height: 24px;
 }
 
+/* Allow some numbered lists to appear as very emphasized steps in a procedure */
 .rst-content ol.bignums-xxl {
     counter-reset: li-counter;
 }
-.rst-content ol.bignums-xxl>li {
+.rst-content ol.bignums-xxl>li { /* Represents a single list element */
     list-style-type: none;
     margin: 36px 0;
     padding: 12px 12px 12px 55.2px;
@@ -47,13 +49,13 @@
     border-top: 6px solid #ddd;
     width: 55%; /* Without this, it writes over any .sidebar */
 }
-.rst-content ol.bignums-xxl>li>p.first {
+.rst-content ol.bignums-xxl>li>p.first { /* Formats the text of a single list element */
     font-size: 24px;
     font-weight: bold;
     margin-top: 0;
     line-height: 36px;
 }
-.rst-content ol.bignums-xxl>li::before {
+.rst-content ol.bignums-xxl>li::before { /* Creates the format for the bullet point */
     background-color: #333;
     color: white;
     border: 6px solid #b3b2b2;
@@ -75,6 +77,11 @@
     height: 36px;
 }
 
+/* Create a border around figures */
+.rst-content div.figure p.caption { font-style:bold; }   /* Add this to the exiting italics */
+.rst-content div.figure img { border: thin #ddd solid; } /* For all figures (not sidebars) in user guide text! */
+
+/* Make keyboard shortcuts more pronounced */
 code.kbd, .rst-content tt.kbd, kbd {
     background-color: #f0f0f0;
     border-radius: 5px;
@@ -86,4 +93,16 @@ code.kbd, .rst-content tt.kbd, kbd {
     margin: 0 0.1em -0.5em;
     padding: 0 0.3em;
     text-shadow: 0 1px 0 #fff;
+}
+
+/* Remove the horizontal scrollbars in very wide table for larger screens */
+@media screen and (min-width: 767px) {
+  .wy-table-responsive table td {
+    /* !important prevents the common CSS stylesheets from
+       overriding this as on RTD they are loaded after this stylesheet */
+    white-space: normal !important;
+  }
+  .wy-table-responsive {
+    overflow: visible !important;
+  }
 }
