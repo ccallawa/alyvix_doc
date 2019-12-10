@@ -84,6 +84,11 @@ exclude_patterns = ['_build']
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
+# If true, the `numfig` option will produce numbered labels
+# Also:  `numfig_format`, `numfig_secnum_depth`
+numfig = False
+numfig_secnum_depth = 0
+
 
 # -- Options for HTML output -------------------------------------------------
 

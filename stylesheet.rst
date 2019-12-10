@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 6-12-2019
+:modified: 10-12-2019
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -319,6 +319,14 @@ and it will add a thin-lined box around the entire thing:
 
    The indented structure becomes like a caption.
 
+Some support for figure numbering is available:  Add the line ``numfig = True`` to :file:`conf.py`
+and then before the figure add the line ``.. _label_fig1:``, and then the reference
+``:refnum:`label_fig1`` where needed in the text.  Unfortunately for now, it inserts an HTML
+link along with the number (see also ``numfig_format`` and ``numfig_secnum_depth``), and
+the numbering starts over again within each subsection, and these aren't numbered.
+
+(Automatic section numbering is also possible:
+http://docutils.sourceforge.net/docs/ref/rst/directives.html#automatic-section-numbering)
 
 
 .. _style_info_boxes:
@@ -333,13 +341,14 @@ Info Boxes, Topics and Sidebars
 .. warning::
    The `warning` style of info box has different colors.
 
-The other box types are:  tip, important, seealso, hint
+The other box types are:  tip, important, seealso, hint, attention, caution, danger, error,
+and admonition.
 
 Additional styles like ``epigraph`` and ``pull-quote`` can be tied to specific CSS classes
 with those names.
 
 A **topic** creates a simple box with a title above it.  In some themes, like the sphinx_rtd
-theme, it just creates this HTML structure, which is not mapped to any CSS:
+theme, it just creates this HTML structure, which is mapped to the CSS class *topic*:
 ``<div class="topic"><p class="topic-title first">Title</p><p>Box content</p></div>``
 
 .. topic:: The Topic Title
