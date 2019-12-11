@@ -20,7 +20,7 @@ like a nearby button.
 
 The *element tree* is composed of three kinds of elements:
 
-- A :ref:`Root node <glossary_root>`, which holds a screen capture to serve as a basis for
+- A :ref:`Root element <glossary_root>`, which holds a screen capture to serve as a basis for
   visually recognizing parts of the screen.
 - :ref:`Groups <glossary_group>`, which indicate the principal element that needs to be recognized.
   A maximum of three groups can be created per `testcase <glossary_testcase>`.
@@ -47,7 +47,7 @@ Structure of the Element Tree
 When Alyvix Designer is first launched, it will capture the entire screen to use as a basis for
 locating visual elements.  This screen capture is represented in the element tree with the capital
 letter :guilabel:`S` as in Figure 1.  Initially, before you have placed any elements, this
-*root node* will have no children.
+*root element* will have no children.
 
 Also when first started, the Designer will default to the first of the three available groups,
 indicated by the red color.  The three colors (red, green and blue) are only intended to
@@ -128,10 +128,12 @@ used for text recognition.  If a group already exists and is selected, the new r
 a component in that group.
 
 In addition to manually selecting the bounds of the region, you can right click on any point on
-the screen and Alyvix will try to automatically determine the appropriate rectangle to use.
+the screen and Alyvix will try to automatically determine the appropriate rectangle to use.  You
+can also resize the bounding edges of any capture region by dragging them with the left mouse
+button.
 
-You can continue adding components and new groups using the methods above without showing the
-Designer panel.
+You can continue adding components and new groups using the mouse and keyboard shortcuts without
+showing the Designer panel.
 
 At any point you can switch between selecting regions and the Designer panel.  Use the :kbd:`ESC`
 key to open the Designer panel, and the :guilabel:`EDIT` button at the bottom left corner of the
@@ -139,13 +141,12 @@ panel to return to the screen capture.  Figure 4 shows an example of the results
 operations.
 
 .. figure:: images/allX3_sized.png
-   :align: center
    :alt: Progressively selecting more regions in multiple groups.
    :figwidth: 100%
    :target: ../../alyvix_designer/images/allX3_sized.png
    :name: label_fig_component_progression
 
-   **Fig. 4:  Progressively selecting more regions in multiple groups.**
+   Fig. 4:  Progressively selecting more regions in multiple groups.
 
 
 .. todo::
@@ -190,7 +191,7 @@ Descriptions of these actions, along with their keyboard shortcuts, can be found
 +---------------------+-------------------+---------------+---------------------------------------------------------------+
 | **Detect as Text**  | Component         | :kbd:`CTRL-T` | Change the Component type to **Text**                         |
 +---------------------+-------------------+---------------+---------------------------------------------------------------+
-| **Main**            | Component         | :kbd:`CTRL-M` | Make the selected component the main group component (the     |
+| **Set as Main**     | Component         | :kbd:`CTRL-M` | Make the selected component the main group component (the     |
 |                     |                   |               | component cannot be a text region)                            |
 +---------------------+-------------------+---------------+---------------------------------------------------------------+
 

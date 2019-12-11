@@ -65,7 +65,7 @@ Since we started Designer above without any arguments, it assigns the default na
 and ``Break: Yes``.
 
 And since we have yet to select any screen capture elements, the element tree has only a single
-root node marked :guilabel:`S` along with a thumbnail of the screen capture.
+root element marked :guilabel:`S` along with a thumbnail of the screen capture.
 
 To add a visual element to the tree, press :guilabel:`EDIT` in the bottom right hand of the
 Designer panel.  This will return us to the screen capture with the guide lines.
@@ -76,7 +76,7 @@ Designer panel.  This will return us to the screen capture with the guide lines.
    :figwidth: 80%
    :target: ../../alyvix_designer/images/ad_screen_capture_combined.png
 
-   **Fig. 3:  Before and after selecting a rectangle in the screen capture.**
+   Fig. 3:  Before and after selecting a rectangle in the screen capture.
 
 Using the mouse, move to the bottom left of the screen and select the area around the Windows
 Start button.  It should now be similar to the right image in Figure 3.
