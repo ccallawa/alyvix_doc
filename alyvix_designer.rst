@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 10-12-2019
+:modified: 11-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -15,7 +15,8 @@ Alyvix Designer
 
 .. todo::
 
-   Need an overview/map of Alyvix Designer and its doc in the Designer intro page
+   * Need an overview/map of Alyvix Designer and its doc in the Designer intro page
+   * Consider using a styled ``:pull-quote:`` in the intro text to grab attention
 
 - Description of Alyvix Designer
 - Description of the various pages

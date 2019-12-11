@@ -97,9 +97,10 @@ the new element you just selected in the interface as in Figure 4.
 
    At the bottom of the Designer panel are three options:
 
-* :guilabel:`OK`  Save the current testcase and exit
-* :guilabel:`CANCEL`  Exit Designer without saving a testcase
-* :guilabel:`EDIT`  Return to the screen capture interface
+* :guilabel:`OK`  Save the current testcase and exit.  If you did not supply a file name when you
+  started Designer, it will use the ``Object name`` as the file name.
+* :guilabel:`CANCEL`  Exit Designer without saving the testcase.
+* :guilabel:`EDIT`  Return to the screen capture interface.
 
 For now, press the :guilabel:`CANCEL` button to exit without creating an object.
 
@@ -121,5 +122,6 @@ Alyvix files are organized and what they contain.
 
 .. todo::
 
-   Need a consistent way to describe (1) the screen capture/grab, (2) the interface that uses the
-   screen capture, and (3) the selected regions.  Put them in the Glossary.
+   * Need a consistent way to describe (1) the screen capture/grab, (2) the interface that uses the
+     screen capture, (3) the selected regions, (4) the element tree, (5) elements in the tree, and
+     (5) object types.  Put them in the Glossary.

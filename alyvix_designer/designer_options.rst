@@ -13,10 +13,8 @@
 Testcase and Element Options
 ****************************
 
-There are two types:
-
-* Testcase options
-* Element-specific options
+Parameters and settings for Alyvix Designer are separated into those that affect an entire
+testcase, and those that affect a specific element type for a group or component.
 
 
 
@@ -26,20 +24,37 @@ There are two types:
 Testcase Options
 ================
 
+At the top of the Alyvix Designer panel (see Figure 1) are the options for the testcase as a whole.
+
 .. figure:: images/ad_testcase_options_sized.png
-   :align: center
    :alt: To fill in
    :figwidth: 80%
    :target: ../../alyvix_designer/images/ad_testcase_options_sized.png
 
    **Fig. 1:  ad_testcase_options_sized.png.**
 
-* **Object name** of the testcase object (for filename, and for reusing the object)
-* **Testcase-wide parameters**  (affect all screen capture elements)
+The **Object name** is the reference name (not the file name) of the testcase object allowing the
+testcase to be used in testcase scripts.
 
-   * **Trigger condition**  (Appear, AppearDisappear, Disappear)
-   * **Timeout**  (Integer)
-   * **Break**    (Checkbox)
+There are also three **testcase parameters** that affect how the
+:ref:`screen capture elements <alyvix_designer_element_tree_types>` in its element tree
+are detected, regardless of their type, and what happens if they fail to be detected.
+
+* **Detection condition:**  One of the following conditions will be checked at a default
+  interval of every ``0.5`` seconds
+
+   * **Appear:**  Alyvix will continuously try to detect any of the main group elements (*image*
+     or *rect*) on screen if it was not already there when the testcase started
+   * **AppearDisappear:**  Alyvix will see whether any of the main group elements appears,
+     and then disappears
+   * **Disappear:**  If any of the main group elements was present when the testcase started,
+     Alyvix will detect when one is no longer visible
+
+* **Timeout:**  The chosen detection condition will be continuously checked until this number
+  of seconds is reached
+* **Break:**  If this option is ticked, then a timeout will cause the testcase to fail, and
+  if it is part of a series of testcases, then the entire series will fail.  If not ticked,
+  it will report failure but let the series of testcases continue.
 
 
 
@@ -203,3 +218,5 @@ For all object types
    * Timeout(s) implies more than one?  How?
    * The Timeout value can be set as a command line parameter, but not "Appear" and "Break"?
    * Need a clear explanation of `break`
+   * Is the detection interval still set at 0.5 seconds as described in the 2.7.5 doc?  Is
+     it still configurable?
