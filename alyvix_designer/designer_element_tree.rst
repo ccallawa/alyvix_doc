@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 10-12-2019
+:modified: 11-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -150,7 +150,7 @@ operations.
 
 .. todo::
 
-   - See if Franz has better ideas for screenshots of the selection process.  What about using
+   - Find better ideas for screenshots of the selection process.  What about using
      the Windows interface instead of arbitrary shapes?  Create our own fictitious application
      using powerpoint and use it as a running example?
    - Groups let you structure nearby components (what are the limitations?)

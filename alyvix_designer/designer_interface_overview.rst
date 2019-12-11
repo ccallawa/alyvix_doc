@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 6-12-2019
-:modified: 10-12-2019
+:modified: 11-12-2019
 :tags: designer, gui
 :lang: en-US
 :translation: false
@@ -50,14 +50,15 @@ The principle interface elements are:
 
 .. rst-class:: bignums
 
-#. The **Object name** (title) of the testcase object, also used for the filename and testcase object reuse
-#. **Testcase parameters**, which affect all screen capture elements
+#. The **Object name** (title) of the testcase object, also used for the filename and testcase
+   object reuse
+#. **Testcase** :ref:`parameters <alyvix_designer_options>`, which affect all screen capture elements
 #. The **Screen capture** :ref:`Element Tree <alyvix_designer_element_tree>` that lists all
    regions on the screen available for interaction and their type (image, region or text)
-#. **Screen capture element parameters**, which depend on the type of recognized object (and
-   subtype in the case of the *text* component)
-#. **Interface controls**, allowing you to save and exit, exit without saving, or return to the
-   screen capture
+#. **Screen capture element** :ref:`parameters <alyvix_designer_options>`, which depend on the type
+   of recognized object (and subtype in the case of the *text* component)
+#. **Interface controls** that allow you to either
+   :ref:`continue selecting regions or exit Designer <alyvix_designer_interface_controls>`.
 
 Since we started Designer above without any arguments, it assigns the default name
 :guilabel:`VisualObject1`, along with the default parameters ``Appear``, ``Timeout(s): 10``,
@@ -89,15 +90,36 @@ Start button.  It should now be similar to the right image in Figure 3.
 Next, press the :kbd:`Escape` key to bring up the Designer interface again.  You should see
 the new element you just selected in the interface as in Figure 4.
 
+
+
+.. _alyvix_designer_interface_controls:
+.. topic:: Interface Controls
+
+   At the bottom of the Designer panel are three options:
+
+* :guilabel:`OK`  Save the current testcase and exit
+* :guilabel:`CANCEL`  Exit Designer without saving a testcase
+* :guilabel:`EDIT`  Return to the screen capture interface
+
 For now, press the :guilabel:`CANCEL` button to exit without creating an object.
 
-----
+
+
+.. _alyvix_designer_interface_reading:
+.. topic:: Further Reading
+
+   To learn more about interacting with the visual elements and what they can do, go to the
+   :ref:`Element Tree <alyvix_designer_element_tree>` page.
 
 You can find more information about the available options for Designer on the
 :ref:`Interface Options <alyvix_designer_options>` page.
 
-To learn more about interacting with the visual elements and what they can do, go to the
-:ref:`Element Tree <alyvix_designer_element_tree>` page.
-
 The :ref:`Testcase Object <alyvix_designer_testcase>` page provides technical details on how
 Alyvix files are organized and what they contain.
+
+
+
+.. todo::
+
+   Need a consistent way to describe (1) the screen capture/grab, (2) the interface that uses the
+   screen capture, and (3) the selected regions.  Put them in the Glossary.
