@@ -272,12 +272,14 @@ Built like so::
 
 .. _style_images:
 
-******************
-Images and Figures
-******************
+*************************
+Images, Figures and Icons
+*************************
 
-There are a number of options for images, such as resizing and placement.  Clicking on the image
-will load the image by itself into the browser window.
+There are a number of options for images, such as resizing and placement.  Using the ``:align:``
+keyword will allow text to wrap around the sides; to place an image on the left side without
+allowing wrapping on the right, just leave out the parameter altogether.  Clicking on the image
+in the browser will load the image by itself into the browser window.
 
 .. image:: pictures/alyvix_logo_399x333.png
    :width: 200px
@@ -327,6 +329,35 @@ the numbering starts over again within each subsection, and these aren't numbere
 
 (Automatic section numbering is also possible:
 http://docutils.sourceforge.net/docs/ref/rst/directives.html#automatic-section-numbering)
+
+For Font Awesome icons, use the ``fa`` directive:
+
+.. rst-class:: fa fa-check
+
+   With text, or use the ``|`` by itself for just the icon
+
+Just append ``fa-`` to the name of the Font Awesome icon you want.
+
+.. code-block:: rst
+
+   .. rst-class:: fa fa-check
+
+      With text, or use the ``|`` by itself for just the icon (it's always placed as ``::before``)
+
+Don't use RAW HTML to do it:
+
+.. raw:: html
+
+   <i class="fa fa-inbox"></i>
+
+.. code-block:: rst
+
+   .. raw:: html
+
+      <i class="fa fa-inbox"></i>
+
+
+
 
 
 .. _style_info_boxes:
@@ -445,3 +476,14 @@ And don't forget that you can alias and reuse it:
    <kbd style="background-color: rgba(62,155,161); color: #fff; font-weight: 400; padding-left: 6px; padding-right: 6px; border-style: none; border-radius: 7px;">Enter</kbd>
 
 Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
+
+
+
+
+.. todo::
+
+   * Add more spacing above/below section/subsection headers
+   * Also consider negative horizontal offset into the left padding/margin
+   * Reduce spacing between bullet and sub-bullet points
+   * Add spacing between figure image and caption, a bit of left indent for the caption
+     and space after the colon

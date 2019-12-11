@@ -106,3 +106,40 @@ code.kbd, .rst-content tt.kbd, kbd {
     overflow: visible !important;
   }
 }
+
+/* Override the defaults for Font Awesome icons */
+.fa::before {
+    font-size: 32px;
+    /* line-height: 1.5; */
+    padding-right: 10px;
+    color: #2980C9;    /* The same blue as the RTD theme */
+}
+
+/* Override the default style for figure captions */
+div.figure, p.caption, span.caption-text {
+    font-style: normal;
+    font-weight: bold;
+    padding-top:  10px;
+    padding-left:  10px;
+}
+
+/* Narrow the default size of the left-side navigation bar */
+nav.wy-nav-side, div.wy-side-nav-search, div.wy-menu-vertical {
+    width: 260px;  /* Was 300px */
+}
+section.wy-nav-content-wrap {
+    margin-left: 260px; /* Match this to the width above */
+}
+div.wy-side-scroll { /* Hide the scroll bar */
+    width: 280px;  /* Was 320px */
+}
+
+/* Emphasize the section and subsection headers slightly */
+h1, h2 {
+    margin-top: 40px;
+    margin-left: -10px;
+}
+h3, h4 {
+    margin-top: 30px;
+    margin-left: -5px;
+}
