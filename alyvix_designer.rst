@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 11-12-2019
+:modified: 12-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -16,6 +16,9 @@ Alyvix Designer
 .. todo::
 
    * Need an overview/map of Alyvix Designer and its doc in the Designer intro page
+   * Should we talk about "Groups" vs. "Components", or is it better to talk about
+     a "Main" component as the head of a group, but otherwise the same?
+   * "Guide lines", "crosshair", a different option?
    * Consider using a styled ``:pull-quote:`` in the intro text to grab attention
 
 - Description of Alyvix Designer

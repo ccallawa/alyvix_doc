@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 11-12-2019
+:modified: 12-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -212,13 +212,19 @@ Text Type Options
 
 * **Scrap:**  This field contains the text detected by OCR in the selected capture region
 
+.. todo::
+
+   * The **Number** dropdown for ``Logic`` only has "more than zero" as an option
+     ("greater than zero").  Will there be more eventually?
+   * What's the difference between *detect* and *map*?
+   * "Scrap" is not the right word.  How about "Detected" or "Recognized"?
+
 .. figure:: images/ad_type_submenu_text_detect_sized.png
    :alt: Options for the detect text type.
    :figwidth: 80%
    :target: ../../alyvix_designer/images/ad_type_submenu_text_detect_sized.png
 
    Fig. 5:  Options for the *detect* text type.
-
 
 **Map**
 
@@ -232,8 +238,8 @@ Text Type Options
 
 .. todo::
 
-   * The dropdown for ``Logic`` only has "more than zero" as an option. ("greater than zero")
-   * The dropdown for ``Map`` currently has "None" as the only option.
+   * The dropdown for ``Map`` currently has "None" as the only option.  Will there be more?
+   * Fill in details here as they become available
 
 
 
@@ -243,8 +249,8 @@ Text Type Options
 Common Options
 --------------
 
-For all group and component object types, once a region has been detected, you can optionally
-create an action to occur immediately.
+For all group and component object types, once a match on the screen has been found, you can
+optionally set up an immediate action which is unique to each component.
 
 .. figure:: images/ad_action_string_sized.png
    :alt: To fill in
@@ -253,17 +259,39 @@ create an action to occur immediately.
 
    Fig. 7:  ad_action_string_sized.png.
 
-* **Action** (all mouse actions)
+* **Action:**  Create a mouse event corresponding to one of the following types:
 
-   * **None (default):**  Don't perform any action
-   * **Move:**  (SET POINT) moves the cursor
-   * **Click**  (SET POINT, Button [Mouse Left|Right], Units w/delay)
-   * **Scroll**  (SET POINT, Direction [Up|Down|Left|Right], Units w/delay/ms)
-   * **Hold**  (SET POINT)
-   * **Release**  (SET POINT, Direction [None|Up|Down|Left|Right])
+   * **None (default):**  Don't perform any action when a component is recognized.
+   * **Move:**  Move the mouse to any point on the screen, without clicking.  The
+     :guilabel:`SET POINT` button lets you select that point with the guide lines.
+   * **Click:**  Move the mouse to any point on the screen (use :guilabel:`SET POINT` as with
+     **Move**), and then click one or more times at that point.  You can choose the left or right
+     mouse button and the number of times to click (*Units*).  If more than one click, you can
+     then set the delay in milliseconds between each click.
+   * **Scroll:**  Move the mouse to the position indicated by the :guilabel:`SET POINT` button,
+     then pick a direction (up, down, left or right), and indicate how far and how fast the
+     object should be scrolled.
+   * **Hold:**  Move the mouse to the position indicated by the :guilabel:`SET POINT` button,
+     then create a mouse event where a click is initiated but the mouse button is still held down.
+   * **Release:**  If the :guilabel:`Direction` is set to ``None``, then move the mouse to the
+     position indicated by the :guilabel:`SET POINT` button.  Otherwise choose a direction
+     (up, down, left or right) and the distance in pixels to move before releasing the mouse button.
 
 * **String:**  An optional string to enter into a text box like a login/password field
-  after the mouse action
+  after a **Click** mouse action above has moved focus to that field.
+
+.. todo::
+
+   * Does it make sense to have a string argument if the mouse action wasn't **Click**?
+   * Can these be chained together to make combined actions?  I.e., if one region is detected
+     it will hold, if another is detected it will release.  If so, does the order of the components
+     imply the order of the events?  Is there a way to do combinations of events/strings if only
+     one component is detected?
+   * How does the **Scroll** event work with **units**?  Is it the natural distance the scroll
+     would work if a mouse wheel turned one "click"?  If so, why a delay between them?
+   * Can you do a release with both "Set Point" and a direction, or does "Set Point" only work
+     if the direction is "None"?
+   * Does **Hold**/**Release** only work with the left mouse button?
 
 
 

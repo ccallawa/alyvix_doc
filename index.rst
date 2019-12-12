@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 10-12-2019
+:modified: 12-12-2019
 :tags: how-to
 :lang: en-US
 :translation: false
@@ -9,11 +9,10 @@
 
 .. todo::
 
-   Add a banner image with white background and edges
-
-.. todo::
-
-   Import any relevant text from the Alyvix 2.7.5 "Basic Concepts" page
+   * Add a banner image with white background and edges
+   * Import any relevant text from the Alyvix 2.7.5 "Basic Concepts" page
+   * Can you do bad things with this, like click on the "Install as Admin" button without
+     user intervention?
 
 
 .. toctree::

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 6-12-2019
-:modified: 11-12-2019
+:modified: 12-12-2019
 :tags: designer, gui
 :lang: en-US
 :translation: false
@@ -109,10 +109,10 @@ For now, press the :guilabel:`CANCEL` button to exit without creating an object.
 .. _alyvix_designer_interface_reading:
 .. topic:: Further Reading
 
-   To learn more about interacting with the visual elements and what they can do, go to the
+   To learn more about interacting with the visual elements and what they can do, see the
    :ref:`Element Tree <alyvix_designer_element_tree>` page.
 
-You can find more information about the available options for Designer on the
+You can find more information about the available options for testcases and components on the
 :ref:`Interface Options <alyvix_designer_options>` page.
 
 The :ref:`Testcase Object <alyvix_designer_testcase>` page provides technical details on how
