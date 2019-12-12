@@ -10,9 +10,9 @@
 
 .. _alyvix_designer_options:
 
-****************************
-Testcase and Element Options
-****************************
+**************************
+Testcase & Element Options
+**************************
 
 Parameters and settings for Alyvix Designer are separated into those that affect an entire
 testcase, and those that affect a specific element type for a group or component.
