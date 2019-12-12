@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 10-12-2019
+:modified: 12-12-2019
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -377,6 +377,14 @@ and admonition.
 
 Additional styles like ``epigraph`` and ``pull-quote`` can be tied to specific CSS classes
 with those names.
+
+.. epigraph::
+
+   A test epigraph
+
+.. pull-quote::
+
+   “Followed by a test pull-quote„
 
 A **topic** creates a simple box with a title above it.  In some themes, like the sphinx_rtd
 theme, it just creates this HTML structure, which is mapped to the CSS class *topic*:

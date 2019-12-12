@@ -35,6 +35,7 @@
     height: 24px;
 }
 
+
 /* Allow some numbered lists to appear as very emphasized steps in a procedure */
 .rst-content ol.bignums-xxl {
     counter-reset: li-counter;
@@ -77,6 +78,7 @@
     height: 36px;
 }
 
+
 /* Override the absurd amount of space between bullet point levels */
 p {
         margin-bottom: 15px;
@@ -88,9 +90,11 @@ p {
     margin-bottom: 8px;
 }
 
+
 /* Create a border around figures */
-.rst-content div.figure p.caption { font-style:bold; }   /* Add this to the exiting italics */
+.rst-content div.figure p.caption { font-style:bold; }   /* Put the caption in  bold */
 .rst-content div.figure img { border: thin #ddd solid; } /* For all figures (not sidebars) in user guide text! */
+
 
 /* Make keyboard shortcuts more pronounced */
 code.kbd, .rst-content tt.kbd, kbd {
@@ -118,6 +122,7 @@ code.kbd, .rst-content tt.kbd, kbd {
   }
 }
 
+
 /* Override the defaults for Font Awesome icons */
 .fa::before {
     font-size: 40px;
@@ -128,6 +133,7 @@ p.fa {
     line-height: 24px; /* Should inherit from 'p' */
 }
 
+
 /* Override the default style for figure captions */
 div.figure, p.caption, span.caption-text {
     font-style: normal;
@@ -136,6 +142,7 @@ div.figure, p.caption, span.caption-text {
     padding-left:  10px;
 }
 
+
 /* Narrow the default size of the left-side navigation bar */
 nav.wy-nav-side, div.wy-side-nav-search, div.wy-menu-vertical {
     width: 260px;  /* Was 300px */
@@ -143,11 +150,12 @@ nav.wy-nav-side, div.wy-side-nav-search, div.wy-menu-vertical {
 section.wy-nav-content-wrap {
     margin-left: 260px; /* Match this to the width above */
 }
-div.wy-side-scroll { /* Hide the scroll bar */
+div.wy-side-scroll { /* Hides the scroll bar under the main doc page */
     width: 280px;  /* Was 320px */
 }
 
-/* Make the section and subsection headers stand out a bit more */
+
+/* Make the section, subsection and topic headers stand out a bit more */
 h1, h2 {
     margin-top: 42px;
     margin-left: -8px;
@@ -155,4 +163,19 @@ h1, h2 {
 h3, h4 {
     margin-top: 34px;
     margin-left: -5px;
+}
+.rst-content .topic-title {
+    padding-top: 20px;
+    margin-left: -3px;
+    font-size: 18px;
+}
+
+
+blockquote.pull-quote, blockquote.pull-quote div p {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    font-variant: small-caps;
+    padding-left: 20px;
+    padding-right: 20px;
 }
