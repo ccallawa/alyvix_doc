@@ -36,6 +36,39 @@ The following documentation presents information on Alyvix Designer:
   Alyvix Designer files are organized and what they contain.
 
 
+
+.. _alyvix_designer_cli_options:
+.. topic:: Launching Alyvix Designer
+
+   Alyvix Designer can be run as follows if the Alyvix file path (e.g.,
+   :file:`C:\\Python37\\Lib\\site-packages\\alyvix\\ide\\`)
+   is included in your :guilabel:`Path` environment variable:
+
+.. code-block:: doscon
+
+   C:\Alyvix\testcases> python alyvix_designer.py
+
+The following options are available:
+
++---------------+----------+----------------------------------------------+
+| Option        | Shortcut | Description                                  |
++---------------+----------+----------------------------------------------+
+| --delay       | -d       | ``unknown``                                  |
++---------------+----------+----------------------------------------------+
+| --filename    | -f       | Supply the file name with no extension       |
++---------------+----------+----------------------------------------------+
+| --help        | -h       | Display command help                         |
++---------------+----------+----------------------------------------------+
+| --object      | -o       | Supply the Object name                       |
++---------------+----------+----------------------------------------------+
+| --verbose     | -v       | Set the verbosity level for debugging output |
++---------------+----------+----------------------------------------------+
+| --window      | -w       | ``unknown``                                  |
++---------------+----------+----------------------------------------------+
+
+
+
+
 .. todo::
 
    * Need an overview/map of Alyvix Designer and its doc in the Designer intro page
@@ -43,6 +76,7 @@ The following documentation presents information on Alyvix Designer:
      a "Main" component as the head of a group, but otherwise the same?
    * Should we call the capture lines "guide lines", "crosshair", something else?
    * Link to the simple how-to for Designer when ready
+   * Fill in unknown details in the CLI options section
 
 
 

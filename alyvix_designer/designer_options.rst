@@ -259,7 +259,8 @@ optionally set up an immediate action which is unique to each component.
 
    Fig. 7:  ad_action_string_sized.png.
 
-* **Action:**  Create a mouse event corresponding to one of the following types:
+* **Action:**  Create a mouse event corresponding to one of the following types.  By default, the
+   mouse position will be set to the center of the selected region.
 
    * **None (default):**  Don't perform any action when a component is recognized.
    * **Move:**  Move the mouse to any point on the screen, without clicking.  The
