@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 12-12-2019
+:modified: 13-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -72,11 +72,14 @@ The following options are available:
 .. todo::
 
    * Need an overview/map of Alyvix Designer and its doc in the Designer intro page
-   * Should we talk about "Groups" vs. "Components", or is it better to talk about
-     a "Main" component as the head of a group, but otherwise the same?
+   * Should we talk about "Groups" vs. "Components", or is it better to talk about a "Main"
+     component as the head of a group, but otherwise the same?
    * Should we call the capture lines "guide lines", "crosshair", something else?
    * Link to the simple how-to for Designer when ready
    * Fill in unknown details in the CLI options section
+   * Playing with robot and looking at the JSON file, it seems you can have multiple objects in
+     the same file.  It's not clear how to switch between them within Designer.  Do you have to
+     just stop it and restart it with the new object?
 
 
 

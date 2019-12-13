@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 6-12-2019
-:modified: 12-12-2019
+:modified: 13-12-2019
 :tags: designer, gui
 :lang: en-US
 :translation: false
@@ -9,9 +9,9 @@
 
 .. _alyvix_designer_interface_overview:
 
-==================
+******************
 Interface Overview
-==================
+******************
 
 The interface for Alyvix Designer consists of two elements:
 
@@ -47,6 +47,7 @@ The principle interface elements are:
       :target: ../../alyvix_designer/images/ad_main_screen_initial_numbered.png
 
 .. rst-class:: bignums
+   :class: short-bignums
 
 #. The **Object name** (title) of the testcase object, also used for the filename and testcase
    object reuse

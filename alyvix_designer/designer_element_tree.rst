@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 11-12-2019
+:modified: 13-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -9,9 +9,9 @@
 
 .. _alyvix_designer_element_tree:
 
-================
+****************
 The Element Tree
-================
+****************
 
 You can use Alyvix Designer to create regions of interest on the screen.  When these regions are
 detected, whether as images or GUI objects, you can use additional neighboring screen elements to
@@ -33,9 +33,9 @@ The *element tree* is composed of three kinds of elements:
 
 .. _alyvix_designer_element_tree_structure:
 
------------------------------
+=============================
 Structure of the Element Tree
------------------------------
+=============================
 
 .. sidebar:: Fig. 1:  An empty element tree
 
@@ -73,9 +73,9 @@ and an image of the area around the object.  A right-click on a row will display
 
 .. _alyvix_designer_element_tree_types:
 
-------------------------
+========================
 Object Recognition Types
-------------------------
+========================
 
 Alyvix's visual recognition capability is based on two well-known open source systems:
 
@@ -111,9 +111,9 @@ Alyvix uses these tools to visually detect three types of objects:
 
 .. _alyvix_designer_element_components:
 
-------------------------------
+==============================
 Creating Groups and Components
-------------------------------
+==============================
 
 When the Designer panel is not visible (you haven't pressed the :kbd:`ESC` key), the guide lines
 show you where you can select a rectangular region on the screen.  The color will indicate which
@@ -162,9 +162,9 @@ operations.
 
 .. _alyvix_designer_element_actions:
 
----------------------------
+===========================
 Actions on the Element Tree
----------------------------
+===========================
 
 You can modify the element tree at any time by right clicking on a row, which displays a
 contextual menu showing you the available options (some actions will not be shown if they cannot

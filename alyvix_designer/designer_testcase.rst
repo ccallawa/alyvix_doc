@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 12-12-2019
+:modified: 13-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -9,9 +9,9 @@
 
 .. _alyvix_designer_testcase:
 
-###################
+*******************
 The Testcase Object
-###################
+*******************
 
 Alyvix Designer testcases are stored as JSON files.  Each time you exit Designer by pressing the
 :guilabel:`OK` button, the JSON object representing the testcase will be saved in the current
