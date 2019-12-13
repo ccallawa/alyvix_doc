@@ -8,8 +8,7 @@
     padding: 8px 8px 8px 40px;
     position: relative;
     background-color: #f2ebe3; /* Beige */
-    border-radius: 5px;
-    width: 55%; /* Without this, it writes over any .sidebar */
+    border-radius: 12px;
 }
 .rst-content ol.bignums>li>p.first { /* Formats the text of a single list element */
     font-size: 16px;
@@ -33,6 +32,9 @@
     top: 6px;
     width: 24px;
     height: 24px;
+}
+.rst-content .short-bignums { /* Add this :class: to make sure it doesn't overwrite a .sidebar */
+    width: 55%;
 }
 
 
@@ -82,14 +84,19 @@
 }
 
 
-/* Additional styling for warning boxes */
+/* Additional styling for warning boxes and code blocks */
 .rst-content .admonition {  /* Add some space above the box */
     margin-top: 20px;
 }
 .rst-content .short-admonition {  /* A version that isn't full width */
     width: 80%;
 }
-
+div .medium-code-block {  /* A version that isn't full width */
+    width: 85%;
+}
+div .short-code-block {  /* A version that's much less wide' */
+    width: 70%;
+}
 
 /* Override the exaggerated amount of space between bullet point levels */
 p {
@@ -184,6 +191,13 @@ h3, h4 {
 }
 
 
+/* Horizontal lists */
+table.hlist>tbody>tr>td {
+    padding: 10px 25px 10px 0;
+}
+
+
+/* Pull quotes */
 blockquote.pull-quote, blockquote.pull-quote div p {
     font-size: 30px;
     font-style: italic;
@@ -191,4 +205,21 @@ blockquote.pull-quote, blockquote.pull-quote div p {
     font-variant: small-caps;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+
+/* An inline warning rather than a box */
+.redbold {
+    color: red;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-decoration: underline;
+}
+
+
+/* Differentiate :file: from :literal: */
+code.file span.pre {
+    color: #008000;
+    font-family: Consolas,Courier;
+    font-size: 125%;
 }

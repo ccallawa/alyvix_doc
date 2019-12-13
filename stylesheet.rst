@@ -6,6 +6,10 @@
 :translation: false
 :status: draft
 
+.. role:: warn
+   :class: redbold
+
+
 
 .. _style_top:
 
@@ -99,9 +103,9 @@ There are also enumerated lists:
 
 
 
-*****************************
-Code Blocks and File Includes
-*****************************
+**************************
+Code Blocks, File Includes
+**************************
 
 | Write lines with a ``pipe`` character
 | and a space on the left edge to create
@@ -162,6 +166,46 @@ Finally, consider the following for directory structures:
         ├─── Index.rst
         ├─── Settings.cfg
         └─── ...
+
+
+
+.. _style_custom_roles:
+
+*********************************
+Text Properties with Custom Roles
+*********************************
+
+You can create a custom role and map it to a custom CSS class in :file:`_static/css/custom.css`,
+allowing you to change font color and other properties for selected text within a paragraph.
+For example, you can add the following CSS to get a large, fixed green font inheriting other
+:guilabel:`Read The Docs` CSS features:
+
+.. code-block:: css
+
+   .redbold {
+       color: red;
+       font-weight: bold;
+       font-variant: small-caps;
+       text-decoration: underline;
+    }
+
+At the top of each page where you need this (there is no way to do this globally without changing
+or customizing the main RTD template itself), add a new ``Role`` that is tied to the new CSS class
+(it can go anywhere in the .rst file):
+
+.. code-block:: rst
+
+   .. role:: warn
+      :class: redbold
+
+You will then be able to use this new ``warn`` role within a paragraph as follows:
+
+.. code-block:: rst
+
+   This is some text where we need to say :warn:`Don't` do something!
+
+Which looks like this when you write it out:  "This is some text where we need to say :warn:`Don't`
+do something!"
 
 
 
@@ -484,14 +528,3 @@ And don't forget that you can alias and reuse it:
    <kbd style="background-color: rgba(62,155,161); color: #fff; font-weight: 400; padding-left: 6px; padding-right: 6px; border-style: none; border-radius: 7px;">Enter</kbd>
 
 Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
-
-
-
-
-.. todo::
-
-   * Add more spacing above/below section/subsection headers
-   * Also consider negative horizontal offset into the left padding/margin
-   * Reduce spacing between bullet and sub-bullet points
-   * Add spacing between figure image and caption, a bit of left indent for the caption
-     and space after the colon
