@@ -528,3 +528,8 @@ And don't forget that you can alias and reuse it:
    <kbd style="background-color: rgba(62,155,161); color: #fff; font-weight: 400; padding-left: 6px; padding-right: 6px; border-style: none; border-radius: 7px;">Enter</kbd>
 
 Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
+
+
+.. todo::
+
+   * Add new options available from the :file:`_static/css/custom.css` such as ``short-code-block``
