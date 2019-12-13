@@ -6,12 +6,15 @@
 :translation: false
 :status: draft
 
+.. role:: warn
+   :class: redbold
+
 
 .. _install_upgrade_requirements:
 
-===================
+*******************
 System Requirements
-===================
+*******************
 
 You should check that you can meet the following requirements before installing Alyvix.
 
@@ -40,4 +43,4 @@ You should check that you can meet the following requirements before installing 
    .. warning::
       :class: short-admonition
 
-      32-bit versions of Windows are not compatible with Alyvix.
+      32-bit versions of Windows are :warn:`not` compatible with Alyvix.

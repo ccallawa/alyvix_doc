@@ -1,20 +1,22 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 6-12-2019
+:modified: 13-12-2019
 :tags: install, configure, python
 :lang: en-US
 :translation: false
 :status: draft
 
+.. role:: warn
+   :class: redbold
+
 
 .. _install_upgrade_install:
 
-##############################
+******************************
 Installation and Configuration
-##############################
+******************************
 
-- Generic information
-- Download links (sidebar?)
+This section will show you how to install and configure Alyvix, including its dependencies.
 
 
 
@@ -24,26 +26,79 @@ Installation and Configuration
 Python Installation
 ===================
 
-- Download and install Python (3.7.2) for Windows
+.. rst-class:: bignums
 
-   - python-3.7.2-amd64.exe (or .msi ?)
-   - Install as administrator
-   - Preferred location:  :file:C:/Python37
-   - Make sure Python is added to the path
-   - Screenshot(s), small
+#. Download the `latest version of Python 3.7 for Windows <https://www.python.org/downloads/>`_.
+   For instance, `Python 3.7.5 <https://www.python.org/downloads/release/python-375/>`_ was released
+   in October, 2019.  Choose an installer for Windows x86-64 (zip, full or web-based).  Alyvix is
+   :warn:`not` compatible with 32-bit versions of Python.
 
-- Download and install *pip* (version?)
+#. Install Python by right-clicking on the executable and selecting **"Run as Administrator".**
+   The preferred location is :file:`C:\\Python37\\`.  Be sure that Python is added to your path
+   (i.e., the path containing the Python executable is in your *environment variables* under
+   ``Path``).  The path is correct if the following command returns a version rather than an error:
 
-   - get-pip.py ?
-   - Install as administrator
+   .. code-block:: doscon
+      :class: short-code-block
 
-- Install other packages with *pip*
+      C:\> python --version
+      Python 3.7.5
 
-   - Can this be done with an installation batch file?
+#. Download and install *pip*, the `Python packaging tool <https://pypi.org/project/pip/>`_.  For
+   special cases such as installing behind a proxy, see the
+   `pip installation page <https://pip.pypa.io/en/stable/installing/>`_.
+
+   * Open a command prompt **as administrator**
+   * For earlier versions of Windows, `download pip <https://bootstrap.pypa.io/get-pip.py>`_ with
+     your browser.  If you are running one of the latest versions of Windows 10, you can use
+     *curl* directly:
+
+     .. code-block:: doscon
+        :class: medium-code-block
+
+        C:\Python37> curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+   * Then install the downloaded file, for example:
+
+     .. code-block:: doscon
+        :class: short-code-block
+
+        C:\Python37> python.exe get-pip.py
+
+     Note that installing *pip* also installs *setuptools* and *wheel*
+   * Before using *pip*, upgrade it to the latest version:
+
+     .. code-block:: doscon
+        :class: short-code-block
+
+        C:\Python37> python.exe -m pip install -U pip
+
+#. Use *pip* to install the following additional required packages:
+
+   .. code-block:: doscon
+
+      C:\Python37> pip install alabaster Flask gevent opencv-python Pillow tesserocr
+
+   You can find more information about these packages at the following links:
+
+   .. hlist::
+      :columns: 3
+
+      * `alabaster <https://pypi.org/project/alabaster/>`_
+      * `Flask <https://pypi.org/project/Flask/>`_
+      * `gevent <https://pypi.org/project/gevent/>`_
+      * `opencv-python <https://pypi.org/project/opencv-python/>`_
+      * `Pillow <https://pypi.org/project/Pillow/>`_
+      * `tesserocr <https://pypi.org/project/tesserocr/>`_
+
 
 .. todo::
 
-   Integrate the .. rst-class:: bignums and bignums-xxl classes from typo3 into the RTD theme
+   * Double check the full install instructions by installing on a blank Windows machine
+   * Can we install a Sphinx extension to add a "Copy to Clipboard" button to each code block?
+     Like `copybutton <https://sphinx-copybutton.readthedocs.io/en/latest/>`_ ?  Another option is to
+     `add our own to the template <https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/>`_
+     `Also see the RTD instructions <https://docs.readthedocs.io/en/stable/guides/adding-custom-css.html>`_
 
 
 
@@ -53,7 +108,15 @@ Python Installation
 Third Party Software
 ====================
 
-- Download and install Tesseract OCR (version?)
+For character recognition, Alyvix uses Tesseract OCR, which you can
+`download here <https://github.com/simonflueckiger/tesserocr-windows_build/releases>`_.
+Ensure that the version you select is 64-bit and compatible with the version of Python
+you installed in the step above.
+
+.. todo::
+
+   * Is this section necessary?  It's a *.whl* file, so is it already installed when *tesserocr*
+     is installed above?  Not sure because the *tesserocr* package says it's a wrapper.
 
 
 
@@ -63,20 +126,29 @@ Third Party Software
 Alyvix Installation
 ===================
 
-- Install Alyvix with *pip*
-- Put Alyvix \*.exe files on an executable path?
-- Where to put the .alyvix files?
-- Will there eventually be an interface that's not via the command line?
-- Deployment check
+Alyvix itself is also installed via *pip*:
 
-   - Could we have a simpler version of the v2.7.5 "Deployment check"?
-   - Perhaps run a version test in a shell
-   - A NetEye-style "health check" service, or does it have to be checked manually?
-   - An Alyvix test/robot to test click on an Alyvix interface?
+.. code-block:: doscon
 
-- What's recommended, Command Prompt or Powershell?
-- Does v3.0.0 still have the red warnings mentioned in the v2.7 installation instructions?
-- Is "Install background service" still relevant in v3?
+   C:\Python37> pip install alyvix3
+
+This will place the Alyvix executables in the directory :file:`C:\\Python37\\Lib\\site-packages\\alyvix\\`.
+You should maintain a separate directory where you will place your Alyvix testcases.
+By adding the Alyvix executables to your path, you can use them while remaining in the directory
+where you store your testcases.
+
+.. todo::
+
+   * Put Alyvix \*.exe files on an executable path?
+   * Where to put the .alyvix files?
+   * Will there eventually be an interface that's not via the command line?
+   * Deployment check (could we have a simpler version of the v2.7.5 "Deployment check"?)
+   * Perhaps run a version test in a shell like for alyvix_designer.py
+   * Perhaps a NetEye-style "health check" service for everything at once?  Similar to Alyvix 2's
+     "Deployment check", but scripted?
+   * An Alyvix test/robot to test click on an Alyvix interface?
+   * Does v3.0.0 still have the red warnings mentioned in the v2.7 installation instructions?
+   * Is "Install background service" still relevant in v3?
 
 
 
@@ -86,15 +158,10 @@ Alyvix Installation
 Alyvix Configuration
 ====================
 
-- Add :file:`C:\Python37\Lib\site-packages\alyvix\ide` to the path?
-- Are the offline installation instructions still relevant?
-
-
 .. todo::
 
-   Does Alyvix actually need any configuration beyond paths/variables?
-
-
-.. todo::
-
-   Once all installation instructions are written, test it (on multiple OS versions)
+   * Does Alyvix actually need any configuration beyond paths/variables?
+   * Do we need to add :file:`C:\\Python37\\Lib\\site-packages\\alyvix\\ide\\*` or any similar
+     :file:`site-packages\\alyvix` directories to the path?
+   * Are the offline installation instructions from Alyvix 2.* still relevant?
+   * Once all installation instructions are written, test it (on multiple OS versions)

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 6-12-2019
+:modified: 13-12-2019
 :tags: how-to
 :lang: en-US
 :translation: false
@@ -9,16 +9,45 @@
 
 .. _install_upgrade_upgrade:
 
-================
+****************
 Upgrading Alyvix
-================
+****************
 
-- Generic description
-- Schedule/frequency
-- Upgrade procedure
-- Can something go wrong during the upgrade?
-- Do we follow semantic versioning?
-- Any extra info like repositories, URLs, websites, etc.
+Upgrading Alyvix will ensure that you have the latest features, bugfixes, and security patches.
+Follow the Alyvix website or twitter feed to find out when a new upgrade is available.  The
+versions assigned to each Alyvix upgrade follows the
+`Semantic Versioning 2.0 <https://semver.org/>` initiative.
+
+Upgrading is easy, there are only two steps:
+
+.. rst-class:: bignums
+
+#. Close Alyvix
+
+   * Save all of your currently open projects
+   * Close all Alyvix user interfaces and applications
+   * Terminate all running Alyvix processes
+
+#. Upgrade Alyvix with *pip*
+
+   * Start a Command Prompt **in administrator mode**
+   * Run the following command to download and upgrade to the latest Alyvix master release along
+     with all of its dependencies:
+
+   .. code-block:: doscon
+      :class: short-code-block
+
+      C:\\> pip install --upgrade alyvix
+
+And the upgrade process is now complete.
+
+
+.. todo::
+
+   * How do we communicate when upgrades are available?  Is there a regular schedule?
+   * Can something go wrong during the upgrade?  How is it fixed, in general?  Can a "health check"
+     like Alyvix 2's "Deployment check" be run automatically after the update has finished?
+   * Do we need to mention any extra info like repositories, URLs, websites, etc.?
 
 
 
@@ -28,8 +57,8 @@ Upgrading Alyvix
 Release Notes
 =============
 
-- Description of release notes
-- Anything else
+The release notes for each version list all new features, bug fixes, and security patches
+contained in that release.
 
 
 
@@ -39,4 +68,4 @@ Release Notes
 Version 3.0.0
 -------------
 
-- First release notes
+Version 3.0.0 is the first released version of Alyvix 3.
