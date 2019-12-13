@@ -42,13 +42,15 @@
 }
 .rst-content ol.bignums-xxl>li { /* Represents a single list element */
     list-style-type: none;
-    margin: 36px 0;
-    padding: 12px 12px 12px 55.2px;
+    margin: 42px 0;  /* A bit more space above and below each list element */
+    padding: 12px 12px 12px 70px;  /* A bit more space between number and its text */
     position: relative;
     background-color: transparent;
     border-radius: 0;
     border-top: 6px solid #ddd;
-    width: 55%; /* Without this, it writes over any .sidebar */
+}
+.rst-content ol.bignums-xxl>li>p { /* Represents a single list element */
+    font-weight: bold;
 }
 .rst-content ol.bignums-xxl>li>p.first { /* Formats the text of a single list element */
     font-size: 24px;
@@ -62,14 +64,15 @@
     border: 6px solid #b3b2b2;
     background-color: #fff;
     color: #333;
-    border: 6px solid #ddd;
-    border-radius: 50%;
+    border: 5px solid #ddd;
+    border-radius: 35%;
     content: counter(li-counter,  decimal);
     counter-increment: li-counter;
     font-size: 24px;
     font-weight: bold;
-    line-height: 34.2px;
-    margin: 0 24px 0 0;
+    line-height: 36px;
+    margin: 6px 24px 0 0;
+    padding-top: 3px;
     position: absolute;
     text-align: center;
     left: 2.4px;
@@ -79,9 +82,18 @@
 }
 
 
-/* Override the absurd amount of space between bullet point levels */
+/* Additional styling for warning boxes */
+.rst-content .admonition {  /* Add some space above the box */
+    margin-top: 20px;
+}
+.rst-content .short-admonition {  /* A version that isn't full width */
+    width: 80%;
+}
+
+
+/* Override the exaggerated amount of space between bullet point levels */
 p {
-        margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 .rst-content .section ol p, .rst-content .section ul p {
     margin-bottom: 8px;
@@ -109,6 +121,7 @@ code.kbd, .rst-content tt.kbd, kbd {
     padding: 0 0.3em;
     text-shadow: 0 1px 0 #fff;
 }
+
 
 /* Remove the horizontal scrollbars for larger screens in very wide tables */
 @media screen and (min-width: 767px) {

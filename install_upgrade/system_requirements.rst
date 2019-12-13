@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 6-12-2019
+:modified: 13-12-2019
 :tags: system, requirements
 :lang: en-US
 :translation: false
@@ -13,22 +13,31 @@
 System Requirements
 ===================
 
-Hardware:
+You should check that you can meet the following requirements before installing Alyvix.
 
-- Virtual or physical machine, exclusively dedicated to serially run a number of Alyvix test cases
-- Two or more machines are needed to run parallel test cases or to geographically distribute them
-- Internet connection
+.. rst-class:: bignums-xxl
 
-Graphics and Display:
+#. Hardware
 
-- Recommended screen resolution: 1280x720 HD or 1280x800 WXGA
-- Screen color depth: 24bit RGB or 32bit RGBA
+   * One or more physical or virtual machines
 
-Software:
+      * Exclusively dedicated to running Alyvix test cases
+      * Multiple machines should you need to run parallel test cases or geographically distribute them
 
-- List python, pip, etc.?
-- OS: Windows 64-bit 10, 8, 7, Server 2012 or Server 2016
+   * An internet connection
 
-.. warning::
+#. Graphics and Display
 
-   WinOS 32-bit versions are not compatible
+   * The recommended screen resolutions are 1280x720 (HD) and 1280x800 (WXGA)
+   * Screen color depth:  24-bit RGB or 32-bit RGBA
+
+#. Software
+
+   * OS: Windows 64-bit 10, 8, 7, Server 2012 or Server 2016
+   * Python version 3.7
+   * Python packages installed with the *pip* package manager
+
+   .. warning::
+      :class: short-admonition
+
+      32-bit versions of Windows are not compatible with Alyvix.

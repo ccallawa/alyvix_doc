@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 12-12-2019
+:modified: 13-12-2019
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -372,8 +372,8 @@ Info Boxes, Topics and Sidebars
 .. warning::
    The `warning` style of info box has different colors.
 
-The other box types are:  tip, important, seealso, hint, attention, caution, danger, error,
-and admonition.
+The other box types are:  admonition, attention, caution, danger, error, hint, important, seealso
+and tip.
 
 Additional styles like ``epigraph`` and ``pull-quote`` can be tied to specific CSS classes
 with those names.
