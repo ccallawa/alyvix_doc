@@ -18,7 +18,7 @@
    test_case_execution.rst
    test_case_protocol.rst
    tutorials.rst
-   getting_in_touch.rst
+   get_in_touch.rst
    stylesheet.rst
 
 ..   concepts_glossary.rst

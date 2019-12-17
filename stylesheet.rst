@@ -50,6 +50,7 @@ possible.  :ref:`See here for linking to them.<style_links+refs>` They look like
 
 .. code-block:: bash
    :caption: How to create a linkable section reference
+   :class: short-code-block
    :name: _style_section_header_example
 
    .. _style_sections:
@@ -98,8 +99,9 @@ There are also enumerated lists:
       #. Subpoints are just like for bulleted lists
       #. But they are numbered
 
-   #. You can start with a number other than one by using its number (``4.``) instead of the pound sign (``#.``),
-      but it will affect the very first number at top even if put in a subpoint
+   #. You can start with a number other than 1 by using its number (``4.``) instead of the
+      pound sign (``#.``), but it will affect the very first number at top even if put in
+      a subpoint
 
 
 
@@ -107,9 +109,23 @@ There are also enumerated lists:
 Code Blocks, File Includes
 **************************
 
-| Write lines with a ``pipe`` character
-| and a space on the left edge to create
-| text with a break in the middle.
+| Write lines with a ``pipe`` character and
+| a space on the left side of the text to
+| create text with a break in the middle.
+
+.. code-block::
+   :class: short-code-block
+
+   | Write lines with a ``pipe`` character and
+   | a space on the left side of the text to
+   | create text with a break in the middle.
+
+You can also make some empty vertical space just using the pipe character by itself.
+
+.. code-block::
+   :class: short-code-block
+
+   |
 
 A code block takes the language for the style and keywords, an optional caption that will go in
 italics above the block, and an optional link reference.  Sphinx then places the text in a
@@ -126,6 +142,7 @@ Which looks like this in the .rst file:
 
 .. code-block:: rst
    :name: _style_simple_code_block_example
+   :class: short-code-block
 
    to the left of the page::
 
@@ -136,10 +153,12 @@ more options, you can use the ``code-block`` directive:
 
 .. code-block:: rst
    :caption: How to create a code block with options
+   :class: short-code-block
    :name: _style_code_block_example
 
    .. code-block:: <language>
       :caption: How to create a code block
+      :class: short-code-block
       :name: _style_code_block_example
 
       This is the content of the code block.
@@ -148,6 +167,7 @@ more options, you can use the ``code-block`` directive:
 You can also include an entire external file as include like this:
 
 .. code-block:: rst
+   :class: short-code-block
    :caption: Importing the content of the file ``includes.c``
 
    .. literalinclude:: includes.c
@@ -159,6 +179,7 @@ Note that you can also include a diff of two files by adding the option ``:diff:
 Finally, consider the following for directory structures:
 
 .. code-block:: bash
+   :class: short-code-block
 
    .
    ├─── composer.json
@@ -181,6 +202,7 @@ For example, you can add the following CSS to get a large, fixed green font inhe
 :guilabel:`Read The Docs` CSS features:
 
 .. code-block:: css
+   :class: short-code-block
 
    .redbold {
        color: red;
@@ -194,6 +216,7 @@ or customizing the main RTD template itself), add a new ``Role`` that is tied to
 (it can go anywhere in the .rst file):
 
 .. code-block:: rst
+   :class: short-code-block
 
    .. role:: warn
       :class: redbold
@@ -201,6 +224,7 @@ or customizing the main RTD template itself), add a new ``Role`` that is tied to
 You will then be able to use this new ``warn`` role within a paragraph as follows:
 
 .. code-block:: rst
+   :class: medium-code-block
 
    This is some text where we need to say :warn:`Don't` do something!
 
@@ -238,6 +262,7 @@ page.
 The code for the alias:
 
 .. code-block:: rst
+   :class: short-code-block
    :caption: Creating an alias for the text string ``|logo|``
 
    .. |logo| image:: pictures/alyvix_logo_399x333.png
@@ -334,6 +359,7 @@ in the browser will load the image by itself into the browser window.
 This is built as follows:
 
 .. code-block:: rst
+   :class: short-code-block
    :caption: How to include a simple image
    :name: _style_image_example
 
@@ -346,6 +372,7 @@ This is built as follows:
 You can add shadows and other effects by adding a specific CSS class as follows:
 
 .. code-block:: rst
+   :class: short-code-block
 
    .. image:: pictures/alyvix_logo_399x333.png
       :class: with-shadow
@@ -395,6 +422,7 @@ Don't use RAW HTML to do it:
    <i class="fa fa-inbox"></i>
 
 .. code-block:: rst
+   :class: short-code-block
 
    .. raw:: html
 
@@ -439,6 +467,7 @@ theme, it just creates this HTML structure, which is mapped to the CSS class *to
    Here is the content of the topic box.
 
 .. code-block:: rst
+   :class: short-code-block
    :caption: How to create a topic box
    :name: _style_topic_example
 
@@ -458,12 +487,14 @@ This is built as follows:
 
 .. code-block:: rst
    :caption: How to create a sidebar to the right
+   :class: short-code-block
    :name: _style_sidebar_example
 
    .. sidebar:: Sidebar Title
       :subtitle: *Optional Sidebar Subtitle*
 
-      Subsequent indented lines comprise the body of the sidebar.  You can put any kind of elements
+      Subsequent indented lines comprise the body of
+      the sidebar.  You can put any kind of elements
       inside of it.
 
 
@@ -480,9 +511,10 @@ Comments are not visible in the rendered document.  See?  No comment visible her
 
 The above comment appears this way in the source file:
 
-   .. code-block:: bash
+.. code-block:: bash
+   :class: short-code-block
 
-      .. This is a comment that will not be included.
+   .. This is a comment that will not be included.
 
 
 
@@ -532,5 +564,6 @@ Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
 
 .. todo::
 
-   * Add new options available from the :file:`_static/css/custom.css` such as ``short-code-block``
+   * Add new options available from the :file:`_static/css/custom.css` such as ``short-code-block``:
+     ``big-nums, big-nums-xxl, :class:short-bignums, and medium-code-block``
    * Change the horizontal scroll bar (e.g., on wide console commands) to something more modern

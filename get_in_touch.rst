@@ -9,9 +9,9 @@
 
 .. _getting_in_touch_top:
 
-################
-Getting in Touch
-################
+############
+Get in Touch
+############
 
 
 
@@ -21,8 +21,8 @@ Getting in Touch
 Agile Tracker
 *************
 
-We work with **Agile methods**.  If you'd just like to see what we're currently up to, you can
-read about the **Alyvix stories** under development right now.
+We work with **Agile methods**.  If you'd just like to see what we're up to right now, you can
+read about the **Alyvix stories** currently under development.
 
     https://www.pivotaltracker.com/n/projects/1533621
 
@@ -49,6 +49,6 @@ Slack Channel
 *************
 
 **Chat directly with other Alyvix users** to ask for support or to share your solutions: join the
-Alyvix Slack channel.  You can write to info@alyvix.com to get your **Alyvix Slack credentials**.
+Alyvix Slack channel.  Send a request to info@alyvix.com to get your **Alyvix Slack credentials**.
 
     https://alyvix.slack.com/
