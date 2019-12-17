@@ -1,20 +1,10 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 13-12-2019
+:modified: 17-12-2019
 :tags: how-to
 :lang: en-US
 :translation: false
 :status: draft
-
-
-.. todo::
-
-   * Add a banner image with white background and edges
-   * Import any relevant text from the Alyvix 2.7.5 "Basic Concepts" page
-   * Can you do bad things with this, like click on the "Install as Admin" button without
-     user intervention?
-   * Terminology:  User guide?  Documentation?  User manual?
-   * Terminology:  Testcase?  Test case?
 
 
 .. toctree::
@@ -22,14 +12,21 @@
    :name: toc_master
    :hidden:
 
-   install_upgrade.rst
+   install.rst
    getting_started.rst
-   concepts_glossary.rst
-   how_tos.rst
-   alyvix_designer.rst
-   alyvix_robot.rst
-   contact_us.rst
+   test_case_building.rst
+   test_case_execution.rst
+   test_case_protocol.rst
+   tutorials.rst
+   getting_in_touch.rst
    stylesheet.rst
+
+..   concepts_glossary.rst
+
+
+.. image:: pictures/alyvix_logo_399x333.png
+   :align: center
+   :width: 120pt
 
 
 .. _home:
@@ -38,7 +35,7 @@
 Alyvix and Visual Monitoring
 ############################
 
-Welcome to the official documentation for **Alyvix**.
+Welcome to the official documentation for **Alyvix 3.0.0**.
 
 `Alyvix <https://alyvix.com/>`_ is a **synthetic monitoring system based on computer vision
 technology**.  Alyvix simulates real users whose actions you can define, without being hardwired
@@ -60,27 +57,34 @@ are able to successfully complete a given application task.
 What to Do Now
 ==============
 
-The first step is to :ref:`check your system is compatible <install_upgrade_requirements>` and
-then :ref:`install Python and Alyvix <install_upgrade_top>`.
+The first step is to check that your system has the minimum system requirements and then
+:ref:`install Python and Alyvix <install_release_top>`.
 
-If you just want to dive in and get something done with Alyvix, read the
-:ref:`Getting Started <getting_started_top>` page first.  It will get you up and running
+Then if you want to just dive in and get something done with Alyvix, read the
+:ref:`Getting Started <getting_started_top>` page.  It will get you up and running
 and prepare you to implement Alyvix in your environment.
 
-If you want to understand the capabilities of Alyvix more in depth, the
-:ref:`Alyvix Concepts <concepts_top>` page is the place to start.
+.. If you want to understand the capabilities of Alyvix more in depth, the
+   :ref:`Alyvix Concepts <concepts_top>` page is the place to start.
 
-For looking at more extended examples of specific use cases that you can expand upon to implement
-more sophisticated and/or targeted scenarios, try the :ref:`How Tos <how_tos_top>` page.
+For more extended examples of specific, real-world use cases that you can build upon to implement
+more sophisticated or targeted scenarios, take a look at the :ref:`Tutorials <tutorials_top>` page.
 
-To learn more details about a specific Alyvix component, click on its name in the menu at the
-left.  The guide for each component explains its purpose, how to use it, and provides the
-necessary technical details.
+The sections on test cases contain detailed information about using the various Alyvix interfaces
+to create and execute them.
 
 For information on how to get in touch with us, as well as with the Alyvix community, the
-:ref:`Contact <contact_top>` page has everything you need.
+:ref:`Getting in Touch <getting_in_touch_top>` page has everything you need.  If there's anything
+we can do to improve the Alyvix experience for you, let us know!
 
-If there's anything we can do to improve the Alyvix experience for you, let us know!
+
+.. todo::
+
+   * Import any relevant text from the Alyvix 2.7.5 "Basic Concepts" page
+   * Can you do bad things with this, like click on the "Install as Admin" button without
+     user intervention?
+   * Terminology:  User guide?  Documentation?  User manual?
+
 
 
 

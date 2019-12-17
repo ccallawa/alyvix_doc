@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 13-12-2019
+:modified: 17-12-2019
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -14,7 +14,7 @@
 .. _style_top:
 
 ############################
-Style Guidelines (Temporary)
+Style Guidelines (To Remove)
 ############################
 
 This document provides the style guide for Alyvix with examples of more advanced features and
@@ -533,3 +533,4 @@ Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
 .. todo::
 
    * Add new options available from the :file:`_static/css/custom.css` such as ``short-code-block``
+   * Change the horizontal scroll bar (e.g., on wide console commands) to something more modern

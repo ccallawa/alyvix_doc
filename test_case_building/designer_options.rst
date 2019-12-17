@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 12-12-2019
+:modified: 17-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -11,78 +11,74 @@
 .. _alyvix_designer_options:
 
 **************************
-Testcase & Element Options
+Designer Interface Options
 **************************
 
 Parameters and settings for Alyvix Designer are separated into those that affect an entire
-testcase, and those that affect a specific element type for a group or component.
+test case, and those that affect a specific component type for a group or component.
 
-All options shown in this panel are used during the execution of a testcase, not when creating it.
+All options shown in this panel are used during the execution of a test case, not when creating it.
 
 
 
-.. _alyvix_designer_options_testcase:
+.. _alyvix_designer_options_test_case:
 
-================
-Testcase Options
-================
+=================
+Test Case Options
+=================
 
-At the top of the Alyvix Designer panel (see Figure 1) are the options for the testcase as a whole.
+At the top of the Alyvix Designer panel (see Figure 1) are the options for the test case as a whole.
 
 .. figure:: images/ad_testcase_options_sized.png
-   :alt: The testcase options.
+   :alt: The test case options.
    :figwidth: 80%
    :target: ../../alyvix_designer/images/ad_testcase_options_sized.png
 
-   Fig. 1:  The testcase options.
+   Fig. 1:  The test case options.
 
-The **Object name** is the reference name (not the file name) of the testcase object allowing the
-testcase to be used in testcase scripts.
+The **Object name** is the reference name (not the file name) of the test case object allowing the
+test case to be used in test case scripts.
 
-There are also three **testcase parameters** that affect how the
-:ref:`screen capture elements <alyvix_designer_element_tree_types>` in its element tree
+There are also three **test case parameters** that affect how the
+:ref:`screen capture elements <alyvix_designer_component_tree_types>` in its component tree
 are detected, regardless of their type, and what happens if they fail to be detected.
 
 * **Detection condition:**  One of the following conditions will be checked at a default
   interval of every ``0.5`` seconds
 
-   * **Appear:**  Alyvix will continuously try to detect any of the main group elements (*image*
-     or *rect*) on screen if it was not already there when the testcase started
-   * **AppearDisappear:**  Alyvix will see whether any of the main group elements appears,
+   * **Appear:**  Alyvix will continuously try to detect any of the main group components (*image*
+     or *rect*) on screen if it was not already there when the test case started
+   * **AppearDisappear:**  Alyvix will see whether any of the main group components appears,
      and then disappears
-   * **Disappear:**  If any of the main group elements was present when the testcase started,
+   * **Disappear:**  If any of the main group components was present when the test case started,
      Alyvix will detect when one is no longer visible
 
 * **Timeout:**  The chosen detection condition will be continuously checked until this number
   of seconds is reached
-* **Break:**  If this option is ticked, then a timeout will cause the testcase to fail, and
-  if it is part of a series of testcases, then the entire series will fail.  If not ticked,
-  it will report failure but let the series of testcases continue.
-
-.. todo::
-
-   * Check if the pieces of text above from the 2.7.5 doc are still valid.
+* **Break:**  If this option is ticked, then a timeout will cause the test case to fail, and
+  if it is part of a series of test cases, then the entire series will fail.  If not ticked,
+  it will report failure but let the series of test cases continue.
 
 
 
-.. _alyvix_designer_options_elements:
+.. _alyvix_designer_options_components:
 
-===============
-Element Options
-===============
+=================
+Component Options
+=================
 
-Below the element tree you can find the options that affect a specific instance of an element type
-used in an Alyvix testcase.  Whenever you select a row in the element tree, these options will be
-updated to reflect the currently assigned options to that row's element.
+Below the component tree you can find the options that affect a specific instance of an component
+type used in an Alyvix test case.  Whenever you select a row in the component tree, these options
+will be updated to reflect the currently assigned options to that row's component.
 
 
 
 
-.. _alyvix_designer_options_elements_root:
+.. _alyvix_designer_options_components_root:
 
---------------------
-Root Element Options
---------------------
+----------------------
+Root Component Options
+----------------------
 
 The *root* element corresponds to the execution phase that will be invoked when Alyvix Robot starts,
 before any detection algorithms are run.  This allows you to start or close a particular
@@ -91,7 +87,7 @@ application before Alyvix begins looking for any graphical elements.
 .. todo::
 
    * What happens if ``Run`` is set with no path?  Does that correspond to leaving the screen as is?
-   * If a testcase is intended to run in series, how do you indicate it should use the current screen?
+   * If a test case is intended to run in series, how do you indicate it should use the current screen?
    * What happens if the arguments aren't right?  Is it a runtime error?
    * Are the arguments fixed, or can you include variables?
 
@@ -103,9 +99,9 @@ application before Alyvix begins looking for any graphical elements.
    Fig. 2:  Options for the *root* element.
 
 The **Call** option shown in Figure 2 allows you to select an application either to start or
-terminate when the testcase begins.
+terminate when the test case begins.
 
-* The **Run** option lets you start a new application before beginning the testcase.  For instance,
+* The **Run** option lets you start a new application before beginning the test case.  For instance,
   you could start a browser session with the URL as an argument.  The two parameters it takes are:
 
    * **Path:**  Either write the full path for an executable file in your environment, or use
@@ -119,7 +115,7 @@ terminate when the testcase begins.
 
 
 
-.. _alyvix_designer_options_elements_image:
+.. _alyvix_designer_options_components_image:
 
 ------------------
 Image Type Options
@@ -127,8 +123,8 @@ Image Type Options
 
 .. rst-class:: fa fa-image
 
-   The *image* element corresponds to a
-   :ref:`matchable image region <alyvix_designer_element_tree_types>`
+   The *image* component corresponds to a
+   :ref:`matchable image region <alyvix_designer_component_tree_types>`
    on the captured screen, such as an icon.  As shown in Figure 3, it has the following
    visual recognition parameters:
 
@@ -151,7 +147,7 @@ Image Type Options
 
 
 
-.. _alyvix_designer_options_elements_rect:
+.. _alyvix_designer_options_components_rect:
 
 ----------------------
 Rectangle Type Options
@@ -159,8 +155,8 @@ Rectangle Type Options
 
 .. rst-class:: fa fa-retweet
 
-   The *rect* element corresponds to a
-   :ref:`matchable rectangular region <alyvix_designer_element_tree_types>`
+   The *rect* component corresponds to a
+   :ref:`matchable rectangular region <alyvix_designer_component_tree_types>`
    on the captured screen, such as a button, text box, panel or window.  As shown in Figure 4,
    it has the following visual recognition parameters:
 
@@ -183,7 +179,7 @@ Rectangle Type Options
 
 
 
-.. _alyvix_designer_options_elements_text:
+.. _alyvix_designer_options_components_text:
 
 -----------------
 Text Type Options
@@ -191,11 +187,11 @@ Text Type Options
 
 .. rst-class:: fa fa-font
 
-   The *text* element corresponds to a
-   :ref:`matchable rectangular region <alyvix_designer_element_tree_types>`
+   The *text* component corresponds to a
+   :ref:`matchable rectangular region <alyvix_designer_component_tree_types>`
    on the captured screen, such as a label, title or input text.  As shown in Figure 5, it has the
    following visual recognition parameters, which vary depending on the type selected.  For both
-   types, the :guilabel:`Scrap` field is the text that was automatically recognized in the screen
+   types, the :guilabel:`Scrape` field is the text that was automatically recognized in the screen
    capture region.
 
 **Detect**
@@ -210,7 +206,7 @@ Text Type Options
      satisfies the time interval selected in the :guilabel:`Logic` field  (e.g., "last hour",
      "last day", etc.)
 
-* **Scrap:**  This field contains the text detected by OCR in the selected capture region
+* **Scrape:**  This field contains the text detected ("scraped") by OCR in the selected capture region
 
 .. todo::
 
@@ -243,7 +239,7 @@ Text Type Options
 
 
 
-.. _alyvix_designer_options_elements_common:
+.. _alyvix_designer_options_components_common:
 
 --------------
 Common Options
@@ -260,26 +256,27 @@ optionally set up an immediate action which is unique to each component.
    Fig. 7:  ad_action_string_sized.png.
 
 * **Action:**  Create a mouse event corresponding to one of the following types.  By default, the
-   mouse position will be set to the center of the selected region.
+  mouse position will be set to the center of the selected region.
 
-   * **None (default):**  Don't perform any action when a component is recognized.
-   * **Move:**  Move the mouse to any point on the screen, without clicking.  The
-     :guilabel:`SET POINT` button lets you select that point with the guide lines.
-   * **Click:**  Move the mouse to any point on the screen (use :guilabel:`SET POINT` as with
-     **Move**), and then click one or more times at that point.  You can choose the left or right
-     mouse button and the number of times to click (*Units*).  If more than one click, you can
-     then set the delay in milliseconds between each click.
-   * **Scroll:**  Move the mouse to the position indicated by the :guilabel:`SET POINT` button,
-     then pick a direction (up, down, left or right), and indicate how far and how fast the
-     object should be scrolled.
-   * **Hold:**  Move the mouse to the position indicated by the :guilabel:`SET POINT` button,
-     then create a mouse event where a click is initiated but the mouse button is still held down.
-   * **Release:**  If the :guilabel:`Direction` is set to ``None``, then move the mouse to the
-     position indicated by the :guilabel:`SET POINT` button.  Otherwise choose a direction
-     (up, down, left or right) and the distance in pixels to move before releasing the mouse button.
+    * **None (default):**  Don't perform any action when a component is recognized.
+    * **Move:**  Move the mouse to any point on the screen, without clicking.  The
+      :guilabel:`SET POINT` button lets you select that point with the guide lines.
+    * **Click:**  Move the mouse to any point on the screen (use :guilabel:`SET POINT` as with
+      **Move**), and then click one or more times at that point.  You can choose the left or right
+      mouse button and the number of times to click (*Units*).  If more than one click, you can
+      then set the delay in milliseconds between each click.
+    * **Scroll:**  Move the mouse to the position indicated by the :guilabel:`SET POINT` button,
+      then pick a direction (up, down, left or right), and indicate how far and how fast the
+      object should be scrolled.
+    * **Hold:**  Move the mouse to the position indicated by the :guilabel:`SET POINT` button,
+      then create a mouse event where a click is initiated but the mouse button is still held down.
+    * **Release:**  If the :guilabel:`Direction` is set to ``None``, then move the mouse to the
+      position indicated by the :guilabel:`SET POINT` button.  Otherwise choose a direction
+      (up, down, left or right) and the distance in pixels to move before releasing the mouse button.
 
 * **String:**  An optional string to enter into a text box like a login/password field
   after a **Click** mouse action above has moved focus to that field.
+
 
 .. todo::
 
@@ -293,15 +290,9 @@ optionally set up an immediate action which is unique to each component.
    * Can you do a release with both "Set Point" and a direction, or does "Set Point" only work
      if the direction is "None"?
    * Does **Hold**/**Release** only work with the left mouse button?
-
-
-
-
-.. todo::
-
    * Timeout(s) implies more than one?  How?
    * The Timeout value can be set as a command line parameter, but not "Appear" and "Break"?
-   * Need a clear explanation of `break`
+   * Need to write a clearer explanation of `break`
    * Is the detection interval still set at 0.5 seconds as described in the 2.7.5 doc?  Is
      it still configurable?
    * Instantiate the ``execution`` references to Alyvix Robot

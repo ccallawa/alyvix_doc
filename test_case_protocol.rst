@@ -1,28 +1,28 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 13-12-2019
+:modified: 17-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
 :status: draft
 
 
-.. _alyvix_designer_testcase:
+.. _test_case_protocol_top:
 
-*******************
-The Testcase Object
-*******************
+******************
+Test Case Protocol
+******************
 
-Alyvix Designer testcases are stored as JSON files.  Each time you exit Designer by pressing the
-:guilabel:`OK` button, the JSON object representing the testcase will be saved in the current
-directory under the file name:
+Alyvix test case objects are stored as JSON files.  Each time you exit Designer by pressing the
+:guilabel:`OK` button, or modify an object in Editor, the JSON object representing the test case
+will be saved in the current directory under the file name:
 
 :file:`<filename>.alyvix`
 
 where ``filename`` is the value of the ``-f`` parameter passed when starting Designer.
 
 If you then call Alyvix Robot with that file as a parameter, when it finishes it will create a new
-file based on the original testcase, but with the resulting measures included.  The file name will
+file based on the original test case, but with the resulting measures included.  The file name will
 have the timestamp at the moment of execution appended:
 
 :file:`<filename>_<full-timestamp>.alyvix`
@@ -33,14 +33,14 @@ For example:
 
 
 
-.. _alyvix_designer_testcase_json:
+.. _alyvix_designer_test_case_json:
 
-.. topic:: Alyvix Testcase JSON Structure
+.. topic:: Alyvix Test Case Object JSON Structure
 
    Unlike prior versions of Alyvix, this single ``.alyvix`` file contains everything needed to model
-   the testcase and store the resulting measures.
+   the test case and store the resulting measures.
 
-The following JSON structure illustrates the high-level structure of the Testcase object:
+The following JSON structure illustrates the high-level structure of the test case object:
 
 .. code-block:: json
 
@@ -82,3 +82,4 @@ The following JSON structure illustrates the high-level structure of the Testcas
 
    * Why is there a second (or even third) screenshot in the .json file?  Is it a dump of the
      entire screen when a component was detected?
+   * Need to nail down the terminology of "protocol" as in "test case protocol"

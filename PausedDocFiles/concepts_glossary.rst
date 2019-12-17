@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 10-12-2019
+:modified: 17-12-2019
 :tags: concept
 :lang: en-US
 :translation: false
@@ -19,9 +19,9 @@ Introductory text
 
 .. _concepts_concepts:
 
-========
+********
 Concepts
-========
+********
 
 Explanation of major concepts
 
@@ -31,17 +31,17 @@ Explanation of major concepts
 
 .. _concepts_glossary:
 
-========
+********
 Glossary
-========
+********
 
-.. _glossary_testcase:
+.. _glossary_test_case:
 
 :Test Case:  A *test case* (Designer, Robot) is ...
 
 .. _glossary_root:
 
-:Root node:  A *root node* (Designer) is ...
+:Root element:  A *root element* (Designer) is ...
 
 .. _glossary_group:
 

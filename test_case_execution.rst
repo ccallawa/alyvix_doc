@@ -1,13 +1,13 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 13-12-2019
+:modified: 17-12-2019
 :tags: robot
 :lang: en-US
 :translation: false
 :status: draft
 
 
-.. _alyvix_robot_top:
+.. _test_case_execution_top:
 
 Description of Alyvix Robot
 
@@ -15,9 +15,9 @@ Description of Alyvix Robot
 
    Everything still to do in Alyvix Robot
 
-************
-Alyvix Robot
-************
+###################
+Test Case Execution
+###################
 
 
 .. _alyvix_robot_cli_options:
@@ -65,14 +65,3 @@ The following options are available:
    2019/12/12 18:24:20.405: start starts
    2019/12/12 18:24:21.949: open DETECTED in 0.0s (+/-0.060)
    2019/12/12 18:24:21.950: start ends OK, it takes 1.544s.
-
-
-
-.. toctree::
-   :maxdepth: 2
-   :name: toc_test
-   :hidden:
-
-   alyvix_robot/robot_start.rst
-   alyvix_robot/robot_medium.rst
-   alyvix_robot/robot_advanced.rst

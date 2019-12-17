@@ -1,29 +1,29 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 13-12-2019
+:modified: 17-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
 :status: draft
 
 
-.. _alyvix_designer_element_tree:
+.. _alyvix_designer_component_tree:
 
-****************
-The Element Tree
-****************
+******************
+The Component Tree
+******************
 
 You can use Alyvix Designer to create regions of interest on the screen.  When these regions are
 detected, whether as images or GUI objects, you can use additional neighboring screen elements to
 either confirm you have the correct region, or identify other areas that you can then act on,
 like a nearby button.
 
-The *element tree* is composed of three kinds of elements:
+The *component tree* is composed of three types of components:
 
 - A :ref:`Root element <glossary_root>`, which holds a screen capture to serve as a basis for
   visually recognizing parts of the screen.
-- :ref:`Groups <glossary_group>`, which indicate the principal element that needs to be recognized.
-  A maximum of three groups can be created per `testcase <glossary_testcase>`.
+- :ref:`Groups <glossary_group>`, which indicate the principal component that needs to be
+  recognized.  A maximum of three groups can be created per `test case <glossary_test_case>`.
 - :ref:`Components <glossary_component>` are the additional areas that can be used to confirm what
   is being recognized (especially when there are multiple similar target objects), such as a text
   label next to a button, or when the action can be on a separate GUI object, like a slider.  A
@@ -31,22 +31,22 @@ The *element tree* is composed of three kinds of elements:
 
 
 
-.. _alyvix_designer_element_tree_structure:
+.. _alyvix_designer_component_tree_structure:
 
-=============================
-Structure of the Element Tree
-=============================
+===============================
+Structure of the Component Tree
+===============================
 
-.. sidebar:: Fig. 1:  An empty element tree
+.. sidebar:: Fig. 1:  An empty component tree
 
    .. image:: images/ad_main_screen_initial_top.png
-      :alt: An empty element tree
+      :alt: An empty component tree
       :target: ../../alyvix_designer/images/ad_main_screen_initial_top.png
       :name: label_sb_empty_tree
 
 When Alyvix Designer is first launched, it will capture the entire screen to use as a basis for
-locating visual elements.  This screen capture is represented in the element tree with the capital
-letter :guilabel:`S` as in Figure 1.  Initially, before you have placed any elements, this
+locating visual elements.  This screen capture is represented in the component tree with the capital
+letter :guilabel:`S` as in Figure 1.  Initially, before you have placed any component, this
 *root element* will have no children.
 
 Also when first started, the Designer will default to the first of the three available groups,
@@ -55,23 +55,23 @@ distinguish the three groups, and groups may in fact change color if you remove 
 
 .. sidebar:: Fig. 2:  A tree with a single root, group and component
 
-   .. image:: images/ad_main_screen_elements.png
+   .. image:: images/ad_main_screen_components.png
       :alt: A tree with a single root, group and component
-      :target: ../../alyvix_designer/images/ad_main_screen_elements.png
-      :name: label_sb_simple_tree
+      :target: ../../alyvix_designer/images/ad_main_screen_components.png
+      :name: label_sb_group_colors
 
-If you now select a region, a copy of that region will appear in red in the element tree.  This
+If you now select a region, a copy of that region will appear in red in the component tree.  This
 region represents a potential *group* of subregions called *components*, although depending on
 what you need to do, you may not need to create any components for a group.
 
 Each group and component is one row consisting of a `type` icon
-(:ref:`see Object Types <alyvix_designer_element_tree_types>`)
+(:ref:`see Object Types <alyvix_designer_component_tree_types>`)
 and an image of the area around the object.  A right-click on a row will display a
-:ref:`menu of actions <alyvix_designer_element_actions>` for that object.
+:ref:`menu of actions <alyvix_designer_component_actions>` for that object.
 
 
 
-.. _alyvix_designer_element_tree_types:
+.. _alyvix_designer_component_tree_types:
 
 ========================
 Object Recognition Types
@@ -104,12 +104,12 @@ Alyvix uses these tools to visually detect three types of objects:
   In the figure on the right, the "bounding box" icon represents a *Rect* object.
 - **Text:**  Looks for text near another located object.  Because text recognition over the entire
   computer screen would require a significant amount of time, a *text* object cannot be the main
-  element of a group.  Alyvix will always look for text near the already-located main element.
+  component of a group.  Alyvix will always look for text near the already-located main component.
   In the figure on the right, the letter "A" icon represents a *Text* object.
 
 
 
-.. _alyvix_designer_element_components:
+.. _alyvix_designer_component_components:
 
 ==============================
 Creating Groups and Components
@@ -123,7 +123,7 @@ change to indicate the color of the new group.
 
 If the tree is empty, as in Figure 1, the first region you select will become the first group in
 the tree.  As mentioned in the section
-:ref:`Object Recognition Types <alyvix_designer_element_tree_types>`, this region cannot be
+:ref:`Object Recognition Types <alyvix_designer_component_tree_types>`, this region cannot be
 used for text recognition.  If a group already exists and is selected, the new region will become
 a component in that group.
 
@@ -151,22 +151,22 @@ operations.
 
 .. todo::
 
-   - Find better ideas for screenshots of the selection process.  What about using
-     the Windows interface instead of arbitrary shapes?  Create our own fictitious application
-     using powerpoint and use it as a running example?
-   - Groups let you structure nearby components (what are the limitations?)
-   - Resizing outlines (why do you need to?  shouldn't they always just be as small as possible?)
+   - Find better ideas for screenshots of the selection process.  What about using the Windows
+     interface instead of arbitrary shapes since it will be common to everyone?  Or we could
+     create our own fictitious application using powerpoint and use it as an example everywhere?
+   - Resizing outlines:  Why do you need to resize?  How can we explain what effect resizing or
+     not has?  Shouldn't the bounding boxes always just be as small as possible?)
    - Describe the two different bounding boxes (why only for *rect* and *text*?)
 
 
 
-.. _alyvix_designer_element_actions:
+.. _alyvix_designer_component_actions:
 
-===========================
-Actions on the Element Tree
-===========================
+======================
+Component Tree Actions
+======================
 
-You can modify the element tree at any time by right clicking on a row, which displays a
+You can modify the component tree at any time by right clicking on a row, which displays a
 contextual menu showing you the available options (some actions will not be shown if they cannot
 be used given the current configuration of the tree).
 

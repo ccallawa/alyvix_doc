@@ -1,0 +1,57 @@
+:author: Charles Callaway
+:date: 4-12-2019
+:modified: 17-12-2019
+:tags: how-to
+:lang: en-US
+:translation: false
+:status: draft
+
+
+.. _install_release_notes:
+
+*************
+Release Notes
+*************
+
+The release notes listed below for each version show all new features, bug fixes, and security
+patches contained in that release.  The version number sequence assigned to each Alyvix release
+follows the `Semantic Versioning 2.0 <https://semver.org/>` initiative.
+
+Only two steps are needed to upgrade to the latest version:
+
+.. rst-class:: bignums
+
+#. Close Alyvix
+
+   * Save all of your currently open projects
+   * Close all Alyvix user interfaces and applications
+   * Terminate all running Alyvix processes
+
+#. Upgrade Alyvix with *pip*
+
+   * Start a Command Prompt **in administrator mode**
+   * Run the following command to download and upgrade to the latest Alyvix master release along
+     with all of its dependencies:
+
+   .. code-block:: doscon
+      :class: short-code-block
+
+      C:\\> pip install --upgrade alyvix
+
+
+.. todo::
+
+   * How do we communicate when upgrades/bugfixes are available?  Is there a regular schedule?
+     Are Alyvix release notes published anywhere besides the Alyvix blog?
+   * Has a changelog been regularly released for past Alyvix versions?
+   * Can you always skip an arbitrary number of releases when you upgrade?
+
+
+
+.. _install_release_v3_0_0:
+
+-------------
+Version 3.0.0
+-------------
+
+Version 3.0.0 is the first released version of Alyvix 3.

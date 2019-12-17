@@ -1,39 +1,39 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 13-12-2019
+:modified: 17-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
 :status: draft
 
 
-.. _alyvix_designer_top:
+.. _test_case_building_top:
 
-###############
-Alyvix Designer
-###############
+##################
+Test Case Building
+##################
 
 Alyvix Designer lets you select patterns on a copy of the screen, whether they're images,
 rectangles, or text.  You can then define triggers for actions when those patterns are recognized
 later in a simulated interaction with an application.
 
-Designer will then save the set of patterns as a single :ref:`testcase <glossary_testcase>`, which
+Designer will then save the set of patterns as a single :ref:`test case <glossary_test_case>`, which
 you can then use as building blocks to compose more complicated objects and scripts, and to
-measure performance with :ref:`Alyvix Robot <alyvix_robot_top>`.
+measure the performance of executed test cases with :ref:`Alyvix Robot <test_case_execution_top>`.
 
 The following documentation presents information on Alyvix Designer:
 
-* The :ref:`Interface Overview <alyvix_designer_element_tree>` page provides a high-level overview
+* The :ref:`Interface Overview <alyvix_designer_interface_overview>` page provides a high-level overview
   and describes the general layout of the interface.
 
 * To learn more about interacting with specific visual elements and what they can do, see the
-  :ref:`Element Tree <alyvix_designer_element_tree>` page.
+  :ref:`Component Tree <alyvix_designer_component_tree>` page.
 
-* You can find more detailed information about the available options for testcases and components on
-  the :ref:`Interface Options <alyvix_designer_options>` page.
+* You can find more detailed information about the available options for test cases and components
+  on the :ref:`Interface Options <alyvix_designer_options>` page.
 
-* The :ref:`Testcase Object <alyvix_designer_testcase>` page provides technical details on how
-  Alyvix Designer files are organized and what they contain.
+* The :ref:`Test Case Protocol <test_case_protocol_top>` page provides technical details on how
+  Alyvix object files are organized and what they contain.
 
 
 
@@ -71,15 +71,9 @@ The following options are available:
 
 .. todo::
 
-   * Need an overview/map of Alyvix Designer and its doc in the Designer intro page
-   * Should we talk about "Groups" vs. "Components", or is it better to talk about a "Main"
-     component as the head of a group, but otherwise the same?
    * Should we call the capture lines "guide lines", "crosshair", something else?
    * Link to the simple how-to for Designer when ready
    * Fill in unknown details in the CLI options section
-   * Playing with robot and looking at the JSON file, it seems you can have multiple objects in
-     the same file.  It's not clear how to switch between them within Designer.  Do you have to
-     just stop it and restart it with the new object?
 
 
 
@@ -89,7 +83,6 @@ The following options are available:
    :name: toc_designer
    :hidden:
 
-   alyvix_designer/designer_interface_overview.rst
-   alyvix_designer/designer_options.rst
-   alyvix_designer/designer_element_tree.rst
-   alyvix_designer/designer_testcase.rst
+   test_case_building/designer_interface_overview.rst
+   test_case_building/designer_options.rst
+   test_case_building/designer_component_tree.rst

@@ -1,6 +1,7 @@
 # Local folders
 /_build/*
 /.idea/*
+/PausedDocFiles
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -39,7 +40,7 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit how_tos / coverage reports
+# Unit tutorials / coverage reports
 htmlcov/
 .tox/
 .coverage

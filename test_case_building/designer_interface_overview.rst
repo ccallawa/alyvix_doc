@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 6-12-2019
-:modified: 13-12-2019
+:modified: 17-12-2019
 :tags: designer, gui
 :lang: en-US
 :translation: false
@@ -9,9 +9,9 @@
 
 .. _alyvix_designer_interface_overview:
 
-******************
-Interface Overview
-******************
+***************************
+Designer Interface Overview
+***************************
 
 The interface for Alyvix Designer consists of two elements:
 
@@ -49,12 +49,12 @@ The principle interface elements are:
 .. rst-class:: bignums
    :class: short-bignums
 
-#. The **Object name** (title) of the testcase object, also used for the filename and testcase
+#. The **Object name** (title) of the test case object, also used for the filename and test case
    object reuse
-#. **Testcase** :ref:`parameters <alyvix_designer_options>`, which affect all screen capture elements
-#. The **Screen capture** :ref:`Element Tree <alyvix_designer_element_tree>` that lists all
+#. **Test case** :ref:`parameters <alyvix_designer_options>`, which affect all screen capture elements
+#. The **Screen capture** :ref:`Component Tree <alyvix_designer_component_tree>` that lists all
    regions on the screen available for interaction and their type (image, region or text)
-#. **Screen capture element** :ref:`parameters <alyvix_designer_options>`, which depend on the type
+#. **Screen capture** :ref:`parameters <alyvix_designer_options>`, which depend on the type
    of recognized object (and subtype in the case of the *text* component)
 #. **Interface controls** that allow you to either
    :ref:`continue selecting regions or exit Designer <alyvix_designer_interface_controls>`.
@@ -63,10 +63,10 @@ Since we started Designer above without any arguments, it assigns the default na
 :guilabel:`VisualObject1` to the object, along with the default parameters ``Appear``,
 ``Timeout(s): 10``, and ``Break: Yes``.
 
-And since we have yet to select any screen capture elements, the element tree has only a single
+And since we have yet to select any screen capture elements, the component tree has only a single
 root element marked :guilabel:`S` along with a thumbnail of the screen capture.
 
-To add a visual element to the tree, press :guilabel:`EDIT` in the bottom right hand of the
+To add a visual component to the tree, press :guilabel:`EDIT` in the bottom right hand of the
 Designer panel.  This will return us to the screen capture with the guide lines.
 
 .. figure:: images/ad_screen_capture_combined.png
@@ -80,14 +80,14 @@ Designer panel.  This will return us to the screen capture with the guide lines.
 Using the mouse, move to the bottom left of the screen and select the area around the Windows
 Start button.  It should now be similar to the right image in Figure 3.
 
-.. sidebar:: Fig. 4:  Adding a New Element
+.. sidebar:: Fig. 4:  Adding a New Component
 
-   .. image:: images/ad_main_screen_new_element.png
-      :alt: Adding a first element in the Alyvix Designer interface
-      :target: ../../alyvix_designer/images/ad_main_screen_new_element.png
+   .. image:: images/ad_main_screen_new_component.png
+      :alt: Adding a first component in the Alyvix Designer interface
+      :target: ../../alyvix_designer/images/ad_main_screen_new_component.png
 
 Next, press the :kbd:`Escape` key to bring up the Designer interface again.  You should see
-the new element you just selected in the interface as in Figure 4.
+the new component you just selected in the interface as in Figure 4.
 
 
 
@@ -96,9 +96,9 @@ the new element you just selected in the interface as in Figure 4.
 
    At the bottom of the Designer panel are three options:
 
-* :guilabel:`OK`  Save the current testcase and exit.  If you did not supply a file name when you
+* :guilabel:`OK`  Save the current test case and exit.  If you did not supply a file name when you
   started Designer, it will use the ``Object name`` as the file name.
-* :guilabel:`CANCEL`  Exit Designer without saving the testcase.
+* :guilabel:`CANCEL`  Exit Designer without saving the test case.
 * :guilabel:`EDIT`  Return to the screen capture interface.
 
 For now, press the :guilabel:`CANCEL` button to exit without creating an object.
@@ -109,12 +109,12 @@ For now, press the :guilabel:`CANCEL` button to exit without creating an object.
 .. topic:: For Further Information
 
    To learn more about interacting with the visual elements and what they can do, see the
-   :ref:`Element Tree <alyvix_designer_element_tree>` page.
+   :ref:`Component Tree <alyvix_designer_component_tree>` page.
 
-You can find more information about the available options for testcases and components on the
+You can find more information about the available options for test cases and components on the
 :ref:`Interface Options <alyvix_designer_options>` page.
 
-The :ref:`Testcase Object <alyvix_designer_testcase>` page provides technical details on how
+The :ref:`Test Case Protocol <test_case_protocol_top>` page provides technical details on how
 Alyvix Designer files are organized and what they contain.
 
 
@@ -122,5 +122,5 @@ Alyvix Designer files are organized and what they contain.
 .. todo::
 
    * Need a consistent way to describe (1) the screen capture/grab, (2) the interface that uses the
-     screen capture, (3) the selected regions, (4) the element tree, (5) elements in the tree, and
-     (5) object types.  Put them in the Glossary.
+     screen capture, (3) the selected regions, (4) the component tree, (5) components in the tree,
+     and (5) object types.  Put them in the Glossary.
