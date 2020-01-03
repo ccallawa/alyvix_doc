@@ -16,9 +16,8 @@
 Install
 #######
 
-Alyvix is implemented as a Python package.  Once you check that your system is compatible, the
-instructions for installing Python, Alyvix, and its dependencies will guide you through the
-installation process.
+Alyvix is implemented as a *pip* package in **Python 3**.  Once you check that your system is
+compatible, the instructions for installing Python and Alyvix will guide you through the process.
 
 Note that Alyvix 3 is :warn:`not` backwards compatible with Alyvix 2.
 
@@ -28,19 +27,19 @@ Note that Alyvix 3 is :warn:`not` backwards compatible with Alyvix 2.
 
 .. topic:: System Requirements
 
-   You should check that you can meet the following requirements before installing Alyvix.
+   You should check that you can meet the following requirements before installing Alyvix:
 
 .. rst-class:: bignums-xxl
 
 #. Hardware
 
-   * One virtual or physical machines, exclusively dedicated to running Alyvix test cases
+   * One virtual or physical machine, exclusively dedicated to running Alyvix test cases
    * An internet connection
    * Screen color depth:  24-bit RGB or 32-bit RGBA
 
 #. Software
 
-   * OS: Windows 64-bit 10, 8, 7, Server 2012 or Server 2016
+   * OS: **Windows 64-bit** 10, 8, 7, Server 2012 or Server 2016
    * 32-bit versions of Windows are :warn:`not` compatible with Alyvix.
 
 

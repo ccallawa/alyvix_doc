@@ -16,7 +16,7 @@
 Installation
 ************
 
-This section will show you how to install Alyvix, including its dependencies.
+This section will show you how to install Python and Alyvix.
 
 
 
@@ -35,10 +35,11 @@ Install Python as follows:
    in October, 2019.  Choose an installer for Windows x86-64 (zip, full or web-based).  Alyvix is
    :warn:`not` compatible with 32-bit versions of Python.
 
-#. Install Python by right-clicking on the executable and selecting **"Run as Administrator".**
+#. Install Python by right-clicking on the executable and selecting **"Run as administrator".**
    The preferred location is :file:`C:\\Python37\\`.  Be sure that Python is added to your path
-   (i.e., the path containing the Python executable is in your *environment variables* under
-   ``Path``).  The path is correct if the following command returns a version rather than an error:
+   (i.e., the path containing the Python executable is in your *Environment variables* under
+   ``Path``).  The path is correct if the following command returns a version rather than an
+   error message:
 
    .. code-block:: doscon
       :class: short-code-block
@@ -55,23 +56,11 @@ Install Python as follows:
 Alyvix Installation
 ===================
 
-Alyvix itself is also installed *pip*, the official Python package manager:
+Alyvix itself is installed via *pip*, the official Python package manager:
 
 .. code-block:: doscon
 
    C:\Python37> pip install alyvix3
 
 This will place the Alyvix executables in the directory :file:`C:\\Python37\\Lib\\site-packages\\alyvix\\`.
-You should maintain a separate directory where you will place your Alyvix test cases, for instance
-:file:`C:\\Users\\<username>\\Desktop\\Alyvix\\Testcases\\`.  By adding the Alyvix executables to
-your path, you can use them while remaining in your test case directory.
-
-
-.. todo::
-
-   * Recommend to users where they should put their .alyvix files?
-   * How to put Alyvix \*.py files on an executable path? (e.g.
-     :file:`C:\\Python37\\Lib\\site-packages\\alyvix\\ide\\*`) so they don't have to be in the
-     same directory as the .alyvix files?
-   * Once all installation instructions are written, test it (on multiple OS versions, completely
-     fresh install)
+You should place your Alyvix test cases in a separate data directory.

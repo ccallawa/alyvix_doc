@@ -85,6 +85,15 @@ we can do to improve the Alyvix experience for you, let us know!
      user intervention?
    * Terminology:  User guide?  Documentation?  User manual?
 
+.. todo::
+
+   Install/Release Notes:
+
+   * How do we communicate when upgrades/bugfixes are available?  Is there a regular schedule?
+     Are Alyvix release notes published anywhere besides the Alyvix blog?
+   * Has a changelog been regularly released for past Alyvix versions?
+   * Can you always skip an arbitrary number of releases when you upgrade (e.g., from 3.1.1
+     to 3.3.2)?
 
 
 

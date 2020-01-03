@@ -13,9 +13,9 @@
 Release Notes
 *************
 
-The release notes listed below for each version show all new features, bug fixes, and security
-patches contained in that release.  The version number sequence assigned to each Alyvix release
-follows the `Semantic Versioning 2.0 <https://semver.org/>` initiative.
+The release notes listed below show all new features, bug fixes, and security patches contained
+in each release.  The version number sequence assigned to each Alyvix release follows the
+`Semantic Versioning 2.0 <https://semver.org/>`_ initiative.
 
 Only two steps are needed to upgrade to the latest version:
 
@@ -37,14 +37,6 @@ Only two steps are needed to upgrade to the latest version:
       :class: short-code-block
 
       C:\\> pip install --upgrade alyvix
-
-
-.. todo::
-
-   * How do we communicate when upgrades/bugfixes are available?  Is there a regular schedule?
-     Are Alyvix release notes published anywhere besides the Alyvix blog?
-   * Has a changelog been regularly released for past Alyvix versions?
-   * Can you always skip an arbitrary number of releases when you upgrade?
 
 
 
