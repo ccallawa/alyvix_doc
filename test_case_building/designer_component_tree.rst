@@ -41,7 +41,7 @@ Structure of the Component Tree
 
    .. image:: images/ad_main_screen_initial_top.png
       :alt: An empty component tree
-      :target: ../../alyvix_designer/images/ad_main_screen_initial_top.png
+      :target: ../../test_case_building/images/ad_main_screen_initial_top.png
       :name: label_sb_empty_tree
 
 When Alyvix Designer is first launched, it will capture the entire screen to use as a basis for
@@ -57,7 +57,7 @@ distinguish the three groups, and groups may in fact change color if you remove 
 
    .. image:: images/ad_main_screen_components.png
       :alt: A tree with a single root, group and component
-      :target: ../../alyvix_designer/images/ad_main_screen_components.png
+      :target: ../../test_case_building/images/ad_main_screen_components.png
       :name: label_sb_group_colors
 
 If you now select a region, a copy of that region will appear in red in the component tree.  This
@@ -89,7 +89,7 @@ Alyvix's visual recognition capability is based on two well-known open source sy
 
    .. image:: images/ad_component_types.png
       :alt: A tree with a single root, group and component
-      :target: ../../alyvix_designer/images/ad_component_types.png
+      :target: ../../test_case_building/images/ad_component_types.png
       :name: label_sb_component_types
 
 Alyvix uses these tools to visually detect three types of objects:
@@ -143,7 +143,7 @@ operations.
 .. figure:: images/allX3_sized.png
    :alt: Progressively selecting more regions in multiple groups.
    :figwidth: 100%
-   :target: ../../alyvix_designer/images/allX3_sized.png
+   :target: ../../test_case_building/images/allX3_sized.png
    :name: label_fig_component_progression
 
    Fig. 4:  Progressively selecting more regions in multiple groups.

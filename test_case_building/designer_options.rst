@@ -30,9 +30,10 @@ Test Case Options
 At the top of the Alyvix Designer panel (see Figure 1) are the options for the test case as a whole.
 
 .. figure:: images/ad_testcase_options_sized.png
+   :class: outline
    :alt: The test case options.
    :figwidth: 80%
-   :target: ../../alyvix_designer/images/ad_testcase_options_sized.png
+   :target: ../../test_case_building/images/ad_testcase_options_sized.png
 
    Fig. 1:  The test case options.
 
@@ -92,9 +93,10 @@ application before Alyvix begins looking for any graphical elements.
    * Are the arguments fixed, or can you include variables?
 
 .. figure:: images/ad_root_options_sized.png
+   :class: outline
    :alt: Options for the root element.
    :figwidth: 80%
-   :target: ../../alyvix_designer/images/ad_root_options_sized.png
+   :target: ../../test_case_building/images/ad_root_options_sized.png
 
    Fig. 2:  Options for the *root* element.
 
@@ -133,9 +135,10 @@ Image Type Options
 * **Shape:**  Match the same shape as a detailed object in the screen capture region.
 
 .. figure:: images/ad_type_submenu_image_sized.png
+   :class: outline
    :alt: Options for the image type.
    :figwidth: 80%
-   :target: ../../alyvix_designer/images/ad_type_submenu_image_sized.png
+   :target: ../../test_case_building/images/ad_type_submenu_image_sized.png
 
    Fig. 3:  Options for the *image* type.
 
@@ -165,9 +168,10 @@ Rectangle Type Options
 * **Window:**  Locate a panel or a window.
 
 .. figure:: images/ad_type_submenu_rect_sized.png
+   :class: outline
    :alt: Options for the rect type.
    :figwidth: 80%
-   :target: ../../alyvix_designer/images/ad_type_submenu_rect_sized.png
+   :target: ../../test_case_building/images/ad_type_submenu_rect_sized.png
 
    Fig. 4:  Options for the *rect* type.
 
@@ -216,18 +220,20 @@ Text Type Options
    * "Scrap" is not the right word.  How about "Detected" or "Recognized"?
 
 .. figure:: images/ad_type_submenu_text_detect_sized.png
+   :class: outline
    :alt: Options for the detect text type.
    :figwidth: 80%
-   :target: ../../alyvix_designer/images/ad_type_submenu_text_detect_sized.png
+   :target: ../../test_case_building/images/ad_type_submenu_text_detect_sized.png
 
    Fig. 5:  Options for the *detect* text type.
 
 **Map**
 
 .. figure:: images/ad_type_submenu_text_map_sized.png
+   :class: outline
    :alt: Options for the map text type.
    :figwidth: 80%
-   :target: ../../alyvix_designer/images/ad_type_submenu_text_map_sized.png
+   :target: ../../test_case_building/images/ad_type_submenu_text_map_sized.png
 
    Fig. 6:  Options for the *map* text type.
 
@@ -249,9 +255,10 @@ For all group and component object types, once a match on the screen has been fo
 optionally set up an immediate action which is unique to each component.
 
 .. figure:: images/ad_action_string_sized.png
+   :class: outline
    :alt: To fill in
    :figwidth: 80%
-   :target: ../../alyvix_designer/images/ad_action_string_sized.png
+   :target: ../../test_case_building/images/ad_action_string_sized.png
 
    Fig. 7:  ad_action_string_sized.png.
 

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 17-12-2019
+:modified: 30-12-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -12,6 +12,10 @@
 ##################
 Test Case Building
 ##################
+
+.. todo::
+
+   * Rewrite the following text to include Selector and Editor
 
 Alyvix Designer lets you select patterns on a copy of the screen, whether they're images,
 rectangles, or text.  You can then define triggers for actions when those patterns are recognized
@@ -86,3 +90,4 @@ The following options are available:
    test_case_building/designer_interface_overview.rst
    test_case_building/designer_options.rst
    test_case_building/designer_component_tree.rst
+   test_case_building/selector_overview.rst

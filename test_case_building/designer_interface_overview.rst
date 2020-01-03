@@ -22,7 +22,7 @@ The interface for Alyvix Designer consists of two elements:
 
    .. image:: images/ad_main_screen_edit_message.png
       :alt: The initial Alyvix Designer selection cursor
-      :target: ../../alyvix_designer/images/ad_main_screen_edit_message.png
+      :target: ../../test_case_building/images/ad_main_screen_edit_message.png
 
 To illustrate how it works, run Designer with no arguments from the command line as follows:
 
@@ -44,7 +44,7 @@ The principle interface elements are:
 
    .. image:: images/ad_main_screen_initial_numbered.png
       :alt: The empty Alyvix Designer interface
-      :target: ../../alyvix_designer/images/ad_main_screen_initial_numbered.png
+      :target: ../../test_case_building/images/ad_main_screen_initial_numbered.png
 
 .. rst-class:: bignums
    :class: short-bignums
@@ -73,7 +73,7 @@ Designer panel.  This will return us to the screen capture with the guide lines.
    :align: center
    :alt: The empty Alyvix Designer interface
    :figwidth: 80%
-   :target: ../../alyvix_designer/images/ad_screen_capture_combined.png
+   :target: ../../test_case_building/images/ad_screen_capture_combined.png
 
    Fig. 3:  Before and after selecting a rectangle in the screen capture.
 
@@ -84,7 +84,7 @@ Start button.  It should now be similar to the right image in Figure 3.
 
    .. image:: images/ad_main_screen_new_component.png
       :alt: Adding a first component in the Alyvix Designer interface
-      :target: ../../alyvix_designer/images/ad_main_screen_new_component.png
+      :target: ../../test_case_building/images/ad_main_screen_new_component.png
 
 Next, press the :kbd:`Escape` key to bring up the Designer interface again.  You should see
 the new component you just selected in the interface as in Figure 4.
