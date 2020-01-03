@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 17-12-2019
+:modified: 03-01-2020
 :tags: robot
 :lang: en-US
 :translation: false
@@ -57,11 +57,31 @@ The following options are available:
 .. _alyvix_robot_cli_result:
 .. topic:: What Alyvix Robot Returns
 
-   Alyvix Robot will give you output like this.
+   Alyvix Robot will give you output like this if successful.
 
-.. code-block:: doscon
+.. code-block:: md
 
-   C:\Alyvix\testcases> python alyvix_robot.py --filename my_test -o open
+   C:\Alyvix\testcases> python alyvix_robot.py --filename start -o open
    2019/12/12 18:24:20.405: start starts
    2019/12/12 18:24:21.949: open DETECTED in 0.0s (+/-0.060)
    2019/12/12 18:24:21.950: start ends OK, it takes 1.544s.
+
+If it fails instead, the output will look like this:
+
+.. code-block:: md
+
+   C:\Alyvix\testcases> python alyvix_robot.py --filename start-test -o settings
+   2019/12/12 18:37:41.448: start-test starts
+   2019/12/12 18:37:51.762: settings FAILED after 10s
+   2019/12/12 18:37:51.763: start-test ends FAILED because of settings, it takes 10.315s.
+
+
+
+.. Hidden section on Measurement (uncomment when ready)
+
+   ============
+   Measurements
+   ============
+
+   * How measurement is done (get from v2.7 doc?)
+   * How Alyvix is integrated with monitoring/ITOA (NetEye is one example of monitoring)
