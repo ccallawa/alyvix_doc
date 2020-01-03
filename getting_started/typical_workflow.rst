@@ -4,7 +4,7 @@
 :tags: getting, started, workflow
 :lang: en-US
 :translation: false
-:status: draft
+:status: not-started
 
 
 .. _getting_started_workflow:
