@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 30-12-2019
+:modified: 03-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -57,17 +57,17 @@ The following options are available:
 +---------------+----------+----------------------------------------------+
 | Option        | Shortcut | Description                                  |
 +---------------+----------+----------------------------------------------+
-| --delay       | -d       | ``unknown``                                  |
+| \-\\-delay    | -d       | ``unknown``                                  |
 +---------------+----------+----------------------------------------------+
-| --filename    | -f       | Supply the file name with no extension       |
+| \-\\-filename | -f       | Supply the file name with no extension       |
 +---------------+----------+----------------------------------------------+
-| --help        | -h       | Display command help                         |
+| \-\\-help     | -h       | Display command help                         |
 +---------------+----------+----------------------------------------------+
-| --object      | -o       | Supply the Object name                       |
+| \-\\-object   | -o       | Supply the Object name                       |
 +---------------+----------+----------------------------------------------+
-| --verbose     | -v       | Set the verbosity level for debugging output |
+| \-\\-verbose  | -v       | Set the verbosity level for debugging output |
 +---------------+----------+----------------------------------------------+
-| --window      | -w       | ``unknown``                                  |
+| \-\\-window   | -w       | ``unknown``                                  |
 +---------------+----------+----------------------------------------------+
 
 
