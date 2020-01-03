@@ -110,10 +110,13 @@ p {
 }
 
 
-/* Create a border around figures */
-.rst-content div.figure p.caption { font-style:bold; }   /* Put the caption in  bold */
-.rst-content div.figure img { border: thin #ddd solid; } /* For all figures (not sidebars) in user guide text! */
-
+/* Style the captions and borders around figures */
+.rst-content div.figure p.caption { /* Put the caption in  bold */
+    font-style:bold;
+}
+.rst-content div.figure img.outline { /* For all figures (not sidebars) in user guide text! */
+    border: thin #ddd solid;
+}
 
 /* Make keyboard shortcuts more pronounced */
 code.kbd, .rst-content tt.kbd, kbd {
@@ -190,6 +193,11 @@ h3, h4 {
     font-size: 18px;
 }
 
+/* Add more space at the bottom before the footer */
+.rst-footer-buttons {
+    padding-top:  35px;
+}
+
 
 /* Horizontal lists */
 table.hlist>tbody>tr>td {
@@ -217,9 +225,39 @@ blockquote.pull-quote, blockquote.pull-quote div p {
 }
 
 
+/* An inline light gray, e.g. for hints */
+.greybold {
+    color: lightgray;
+}
+
+
 /* Differentiate :file: from :literal: */
 code.file span.pre {
     color: #008000;
     font-family: Consolas,Courier;
     font-size: 125%;
+}
+
+
+/* Scroll bar improvements for Chrome, Safari and Edge */
+div.highlight pre {
+    overflow-x: scroll;
+    scrollbar-color: #2980B9 #ececec;
+    scrollbar-width:  thin;
+}
+div.highlight pre::-webkit-scrollbar {
+    height: 7px;
+}
+div.highlight pre::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #2980B9;
+}
+div.highlight pre::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #eee;
+}
+.force-overflow {
+    min-width: 450px;
 }

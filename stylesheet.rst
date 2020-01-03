@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 4-12-2019
-:modified: 17-12-2019
+:modified: 03-01-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -59,12 +59,11 @@ You can use ``-----`` (four or more hyphens) to create a horizontal rule:
 
 -----
 
-And you can add a line of blank space (like a <br />) with a pipe character with a blank line
-both above and below.  Use this sparingly, though, since vertical space should really be created
-with CSS.
+And you can add a line of :ref:`blank space <style_break_space>` (like a <br />) with a pipe
+character with a blank line both above and below.  Use this sparingly, though, since vertical
+space should really be created with CSS.
 
 |
-
 
 
 
@@ -105,9 +104,11 @@ There are also enumerated lists:
 
 
 
-**************************
-Code Blocks, File Includes
-**************************
+.. _style_break_space:
+
+******************************
+Line Breaks and Vertical Space
+******************************
 
 | Write lines with a ``pipe`` character and
 | a space on the left side of the text to
@@ -126,6 +127,14 @@ You can also make some empty vertical space just using the pipe character by its
    :class: short-code-block
 
    |
+
+
+
+.. _style_code_blocks:
+
+*****************************
+Code Blocks and File Includes
+*****************************
 
 A code block takes the language for the style and keywords, an optional caption that will go in
 italics above the block, and an optional link reference.  Sphinx then places the text in a
@@ -516,6 +525,8 @@ The above comment appears this way in the source file:
 
    .. This is a comment that will not be included.
 
+You can even comment entire sections by indenting appropriately under a comment.
+
 
 
 .. _style_raw_html:
@@ -564,6 +575,9 @@ Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
 
 .. todo::
 
+   A section on Sphinx/HTML/CSS
+
    * Add new options available from the :file:`_static/css/custom.css` such as ``short-code-block``:
      ``big-nums, big-nums-xxl, :class:short-bignums, and medium-code-block``
    * Change the horizontal scroll bar (e.g., on wide console commands) to something more modern
+   * Describe how the todo:: role works
