@@ -1,6 +1,6 @@
 :author: Charles Callaway
-:date: 5-12-2019
-:modified: 17-12-2019
+:date: 05-12-2019
+:modified: 03-01-2019
 :tags: designer
 :lang: en-US
 :translation: false
@@ -18,6 +18,16 @@ Parameters and settings for Alyvix Designer are separated into those that affect
 test case, and those that affect a specific component type for a group or component.
 
 All options shown in this panel are used during the execution of a test case, not when creating it.
+
+.. note::
+
+   When naming files and objects, you should follow the
+   `Python Naming Conventions <https://www.python.org/dev/peps/pep-0008/#naming-conventions>`_,
+   which basically boil down to the following rules:
+
+   * Use letters, numbers and underscores (instead of dashes)
+   * Start with a letter
+   * Names are case sensitive
 
 
 
@@ -53,6 +63,12 @@ are detected, regardless of their type, and what happens if they fail to be dete
      and then disappears
    * **Disappear:**  If any of the main group components was present when the test case started,
      Alyvix will detect when one is no longer visible
+
+     .. figure:: images/appeardisappear.png
+        :class: outline
+        :alt: The test case options.
+        :figwidth: 56%
+        :target: ../../test_case_building/images/appeardisappear.png
 
 * **Timeout:**  The chosen detection condition will be continuously checked until this number
   of seconds is reached
@@ -241,7 +257,7 @@ Text Type Options
 .. todo::
 
    * The dropdown for ``Map`` currently has "None" as the only option.  Will there be more?
-   * Fill in details here as they become available
+   * Need a full description of map and detect
 
 
 
@@ -252,15 +268,15 @@ Common Options
 --------------
 
 For all group and component object types, once a match on the screen has been found, you can
-optionally set up an immediate action which is unique to each component.
+optionally set up an immediate mouse action which is unique to each component.
 
 .. figure:: images/ad_action_string_sized.png
    :class: outline
-   :alt: To fill in
+   :alt: The mouse action selection dropdown.
    :figwidth: 80%
    :target: ../../test_case_building/images/ad_action_string_sized.png
 
-   Fig. 7:  ad_action_string_sized.png.
+   Fig. 7:  The mouse action selection dropdown.
 
 * **Action:**  Create a mouse event corresponding to one of the following types.  By default, the
   mouse position will be set to the center of the selected region.
@@ -288,10 +304,10 @@ optionally set up an immediate action which is unique to each component.
 .. todo::
 
    * Does it make sense to have a string argument if the mouse action wasn't **Click**?
-   * Can these be chained together to make combined actions?  I.e., if one region is detected
-     it will hold, if another is detected it will release.  If so, does the order of the components
-     imply the order of the events?  Is there a way to do combinations of events/strings if only
-     one component is detected?
+   * Can these be chained together within a single test case to make combined actions?  I.e.,
+     if one region is detected it will hold, if another is detected it will release.  If so, does
+     the order of the components imply the order of the events?  Is there a way to do combinations
+     of events/strings if only one component is detected?
    * How does the **Scroll** event work with **units**?  Is it the natural distance the scroll
      would work if a mouse wheel turned one "click"?  If so, why a delay between them?
    * Can you do a release with both "Set Point" and a direction, or does "Set Point" only work

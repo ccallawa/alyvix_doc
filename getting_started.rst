@@ -38,7 +38,7 @@ how Alyvix works:
    * Build a simple test case that looks for and clicks on the Windows Start button
    * Run the test case, so that Alyvix actually opens the Window Start Menu
 
-#. Open the :ref:`Start Menu, then Settings App <getting_started_example_settings>` with two
+#. Open the :ref:`Start Menu, then the Settings App <getting_started_example_settings>` with two
    separate test cases
 
    * Build two separate test cases, where the second depends on the results of the first

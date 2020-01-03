@@ -25,7 +25,7 @@ Concepts
 
 Explanation of major concepts
 
-- Designer is limited by design to 3 objects with 5 elements each.  The color indicates which object#.
+- Designer is limited by design to 3 groups with 4 elements each.  The color indicates which object#.
 
 
 
