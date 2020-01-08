@@ -24,7 +24,7 @@ Name                                  Description
 
 .. todo::
 
-   Get sample use cases from **Alyvix 2.7.5 > Test case building > Common transactions**
+   CC:  Get sample use cases from **Alyvix 2.7.5 > Test case building > Common transactions**
 
 
 

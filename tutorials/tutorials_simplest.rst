@@ -15,4 +15,4 @@ The Simplest Tutorial
 
 .. todo::
 
-   Everything still to do in Simple How To
+   CC:  Everything still to do in Simple How To

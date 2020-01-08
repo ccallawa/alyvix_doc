@@ -80,6 +80,7 @@ The following JSON structure illustrates the high-level structure of the test ca
 
 .. todo::
 
-   * Why is there a second (or even third) screenshot in the .json file?  Is it a dump of the
+   * FM:  Why is there a second (or even third) screenshot in the .json file?  Is it a dump of the
      entire screen when a component was detected?
-   * Need to nail down the terminology of "protocol" as in "test case protocol"
+   * FM:  Why is the word "protocol" used in "test case protocol"?  It's usually a word used
+     in medicine or diplomacy, not IT.

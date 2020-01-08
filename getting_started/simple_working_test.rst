@@ -39,8 +39,8 @@ As a further check, let's make sure that the Alyvix Designer interface is workin
       :target: ../../test_case_building/images/ad_main_screen_initial.png
       :name: label_test_designer_interface
 
-You should see the screen go blank for a few seconds, before it reappears along with a pair of
-guide lines that follow the mouse.  In the top left corner you will see the instructions
+You should see the screen go blank for a few seconds, before it reappears along with the
+crosshairs that follow the mouse.  In the top left corner you will see the instructions
 :guilabel:`PRESS ESC TO OPEN DIALOG`.  Press :kbd:`ESC`, and the Alyvix Designer interface
 will appear.
 

@@ -51,7 +51,8 @@ letter :guilabel:`S` as in Figure 1.  Initially, before you have placed any comp
 
 Also when first started, the Designer will default to the first of the three available groups,
 indicated by the red color.  The three colors (red, green and blue) are only intended to
-distinguish the three groups, and groups may in fact change color if you remove one.
+distinguish the three groups, and a group's elements may in fact change color if you reorder
+or remove one.
 
 .. sidebar:: Fig. 2:  A tree with a single root, group and component
 
@@ -115,10 +116,10 @@ Alyvix uses these tools to visually detect three types of objects:
 Creating Groups and Components
 ==============================
 
-When the Designer panel is not visible (you haven't pressed the :kbd:`ESC` key), the guide lines
+When the Designer panel is not visible (you haven't pressed the :kbd:`ESC` key), the crosshairs
 show you where you can select a rectangular region on the screen.  The color will indicate which
 group any newly selected region will belong to.  You can change to a new group simply by pressing
-the number associated with it (:kbd:`1`, :kbd:`2` or :kbd:`3`) at which point the guide lines will
+the number associated with it (:kbd:`1`, :kbd:`2` or :kbd:`3`) at which point the crosshairs will
 change to indicate the color of the new group.
 
 If the tree is empty, as in Figure 1, the first region you select will become the first group in
@@ -151,12 +152,18 @@ operations.
 
 .. todo::
 
-   - Find better ideas for screenshots of the selection process.  What about using the Windows
-     interface instead of arbitrary shapes since it will be common to everyone?  Or we could
-     create our own fictitious application using powerpoint and use it as an example everywhere?
-   - Resizing outlines:  Why do you need to resize?  How can we explain what effect resizing or
-     not has?  Shouldn't the bounding boxes always just be as small as possible?)
-   - Describe the two different bounding boxes (why only for *rect* and *text*?)
+   - CC+FM:  Rather than using geometric examples for capture regions (squares, stars, etc.),
+     could we use common elements from the Windows interface?  If not (e.g. copyright problems)
+     could we create our own fictitious application using powerpoint and use it as a standard set
+     of examples throughout the Alyvix Guide?  **A:  Eventually make a fictitious application.**
+   - FM:  In Designer, why are there two different bounding boxes for any given low-level
+     component?  Why only one bounding box for the group?  **A:  Components are detected relative
+     to where the group was detected.  The larger bounding box is there in case the GUI container
+     can be resized so the component may "float" left<-->right or up<-->down. and the inner box
+     (selection) can be detected anywhere within the larger Region of Interest.**
+   - FM:  In Designer you can reorder tree components and groups (at the same level) with drag &
+     drop, but how is it helpful?  What does the ordering of the various groups mean, and what does
+     the ordering of the components within a group mean?
 
 
 
@@ -194,8 +201,3 @@ Descriptions of these actions, along with their keyboard shortcuts, can be found
 | **Set as Main**     | Component         | :kbd:`CTRL-M` | Make the selected component the main group component (the     |
 |                     |                   |               | component cannot be a text region)                            |
 +---------------------+-------------------+---------------+---------------------------------------------------------------+
-
-
-.. todo::
-
-   You can reorder tree components and groups (at the same level) with drag & drop, but how is it helpful?

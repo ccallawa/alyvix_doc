@@ -31,10 +31,10 @@ To illustrate how it works, run Designer with no arguments from the command line
    C:\Alyvix\testcases> python alyvix_designer.py
 
 The screen will turn white for a few seconds.  When it returns, you will see a copy of the screen
-with the phrase :guilabel:`PRESS ESC TO OPEN DIALOG` at the top left, while red guide lines will
-track the mouse with a crosshair cursor as in Figure 1.
+with the phrase :guilabel:`PRESS ESC TO OPEN DIALOG` at the top left, while red crosshairs will
+track the mouse as in Figure 1.
 
-In Alyvix Designer, the color of the guide lines indicates whether you are working with the first
+In Alyvix Designer, the color of the crosshairs indicates whether you are working with the first
 (red), second (green), or third (blue) object definition.
 
 If you press escape, you will see the default Designer interface as in the screenshot shown here.
@@ -67,7 +67,7 @@ And since we have yet to select any screen capture elements, the component tree 
 root element marked :guilabel:`S` along with a thumbnail of the screen capture.
 
 To add a visual component to the tree, press :guilabel:`EDIT` in the bottom right hand of the
-Designer panel.  This will return us to the screen capture with the guide lines.
+Designer panel.  This will return us to the screen capture with the crosshairs.
 
 .. figure:: images/ad_screen_capture_combined.png
    :align: center
@@ -121,6 +121,6 @@ Alyvix Designer files are organized and what they contain.
 
 .. todo::
 
-   * Need a consistent way to describe (1) the screen capture/grab, (2) the interface that uses the
-     screen capture, (3) the selected regions, (4) the component tree, (5) components in the tree,
-     and (5) object types.  Put them in the Glossary.
+   * FM+CC:  Need consistent terminology to describe (1) the screen capture/grab process and result,
+     (2) the interface that uses the screen capture, (3) the selected regions, (4) components in the
+     tree, and (5) object types.  (Then put them in the Glossary.)

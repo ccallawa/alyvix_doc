@@ -577,7 +577,7 @@ Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
 
    A section on Sphinx/HTML/CSS
 
-   * Add new options available from the :file:`_static/css/custom.css` such as ``short-code-block``:
+   * CC:  Add new options available from the :file:`_static/css/custom.css` such as ``short-code-block``:
      ``big-nums, big-nums-xxl, :class:short-bignums, and medium-code-block``
-   * Change the horizontal scroll bar (e.g., on wide console commands) to something more modern
-   * Describe how the todo:: role works
+   * CC:  fasmall from custom.css
+   * CC:  Describe how the todo:: role works (local & all)

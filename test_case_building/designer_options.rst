@@ -103,10 +103,11 @@ application before Alyvix begins looking for any graphical elements.
 
 .. todo::
 
-   * What happens if ``Run`` is set with no path?  Does that correspond to leaving the screen as is?
-   * If a test case is intended to run in series, how do you indicate it should use the current screen?
-   * What happens if the arguments aren't right?  Is it a runtime error?
-   * Are the arguments fixed, or can you include variables?
+   In Designer with the root node selected:
+
+   * FM:  What happens if the ``Run`` option is set with no path?
+   * FM:  What happens if the arguments aren't right?  Does it generate a runtime error?
+   * FM:  Are the arguments fixed, or can you include variables?
 
 .. figure:: images/ad_root_options_sized.png
    :class: outline
@@ -161,8 +162,10 @@ Image Type Options
 
 .. todo::
 
-   * For the color match, does it have to be exact?  Can it match a gradient?  The same size?
-   * For the shape match, is it done by openCV?  Are default parameters used?
+   In Designer for the Image object type:
+
+   * FM:  For the color match, does it have to be exact?  Can it match a gradient?  The same size?
+   * FM:  For the shape match, is it done by openCV?  Are default parameters used?
 
 
 
@@ -194,9 +197,14 @@ Rectangle Type Options
 
 .. todo::
 
-   * It's not clear what's the difference between Button, Box and Window
-   * Why are there two bounding boxes?  Do they have different meanings for the different types?
+   In Designer, for the Rectangle object type:
 
+   * FM:  It's not clear what's the difference between Button, Box and Window
+   * FM:  Why are there two bounding boxes?  Do they have different meanings for the different types?
+     **A:  Components are detected relative to where the group was detected.  The larger bounding
+     box is there in case the GUI container can be resized so the component may "float" left<-->right
+     or up<-->down and the inner box (selection) can be detected anywhere within the larger Region
+     of Interest. They don't have different meanings.**
 
 
 .. _alyvix_designer_options_components_text:
@@ -228,12 +236,17 @@ Text Type Options
 
 * **Scrape:**  This field contains the text detected ("scraped") by OCR in the selected capture region
 
+
 .. todo::
 
-   * The **Number** dropdown for ``Logic`` only has "more than zero" as an option
+   In Designer, for the Text object type:
+
+   * FM:  The **Number** dropdown for ``Logic`` only has "more than zero" as an option
      ("greater than zero").  Will there be more eventually?
-   * What's the difference between *detect* and *map*?
-   * "Scrap" is not the right word.  How about "Detected" or "Recognized"?
+   * FM:  What's the difference between *detect* and *map*?  (Map is with Editor?)
+   * FM:  "Scrap" is not the right word.  How about "Detected" or "Recognized"?  Who do I send
+     these problems to?
+
 
 .. figure:: images/ad_type_submenu_text_detect_sized.png
    :class: outline
@@ -256,8 +269,9 @@ Text Type Options
 
 .. todo::
 
-   * The dropdown for ``Map`` currently has "None" as the only option.  Will there be more?
-   * Need a full description of map and detect
+   * FM:  The dropdown for ``Map`` shows "None" as the only option.  Will there be more?  Does it
+     depend on Editor?
+   * CC:  Need to add a full description of map and detect
 
 
 
@@ -283,7 +297,7 @@ optionally set up an immediate mouse action which is unique to each component.
 
     * **None (default):**  Don't perform any action when a component is recognized.
     * **Move:**  Move the mouse to any point on the screen, without clicking.  The
-      :guilabel:`SET POINT` button lets you select that point with the guide lines.
+      :guilabel:`SET POINT` button lets you select that point with the crosshairs.
     * **Click:**  Move the mouse to any point on the screen (use :guilabel:`SET POINT` as with
       **Move**), and then click one or more times at that point.  You can choose the left or right
       mouse button and the number of times to click (*Units*).  If more than one click, you can
@@ -303,19 +317,21 @@ optionally set up an immediate mouse action which is unique to each component.
 
 .. todo::
 
-   * Does it make sense to have a string argument if the mouse action wasn't **Click**?
-   * Can these be chained together within a single test case to make combined actions?  I.e.,
+   From the Designer Common Options section:
+
+   * FM:  Does it make sense to have a string argument if the mouse action wasn't **Click**?
+   * FM:  Can these be chained together within a single test case to make combined actions?  I.e.,
      if one region is detected it will hold, if another is detected it will release.  If so, does
      the order of the components imply the order of the events?  Is there a way to do combinations
      of events/strings if only one component is detected?
-   * How does the **Scroll** event work with **units**?  Is it the natural distance the scroll
+   * FM:  How does the **Scroll** event work with **units**?  Is it the natural distance the scroll
      would work if a mouse wheel turned one "click"?  If so, why a delay between them?
-   * Can you do a release with both "Set Point" and a direction, or does "Set Point" only work
+   * FM:   Can you do a release with both "Set Point" and a direction, or does "Set Point" only work
      if the direction is "None"?
-   * Does **Hold**/**Release** only work with the left mouse button?
-   * Timeout(s) implies more than one?  How?
-   * The Timeout value can be set as a command line parameter, but not "Appear" and "Break"?
-   * Need to write a clearer explanation of `break`
-   * Is the detection interval still set at 0.5 seconds as described in the 2.7.5 doc?  Is
-     it still configurable?
-   * Instantiate the ``execution`` references to Alyvix Robot
+   * FM:  Does **Hold**/**Release** only work with the left mouse button?
+   * FM:  Timeout(s) implies more than one?  How does that work?
+   * FM:  The Timeout value can be set as a command line parameter, but not "Appear" and "Break"?
+   * CC+FM:  Need to write a clearer explanation of `break`
+   * FM:  Is the detection interval still set at 0.5 seconds as described in the 2.7.5 doc?  Is
+     it still configurable?  It includes the 0.00s mark, right, not just starting at 0.5s?
+   * CC:  Instantiate the ``execution`` references to Alyvix Robot

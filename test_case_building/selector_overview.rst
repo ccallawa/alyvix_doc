@@ -9,8 +9,8 @@
 
 .. todo::
 
-   * Describe object import
-   * Describe multiple files
+   * CC:  Describe object import
+   * CC:  Describe multiple files
 
 
 .. _alyvix_selector_top:
@@ -62,19 +62,22 @@ The principle interface elements are:
 
 .. todo::
 
-   * What can you do with the "+" tabs in (1)?
-   * What is a transaction group?
-   * Delay is not shown in the list, nor when a test case is selected.  Why is it in (6)
-     instead of in (3)?
-   * What happens if you accidentally open the same file twice (two tabs)?
-   * Can't use *-f "file1 file2"* with Selector?  Can't kill the first working case?
-     Running alyvix_selector.py with no arguments creates a tab.
-   * How to select a line in the list without selecting one of its elements
+   In the Selector interface:
+
+   * FM: What can you do with the "+" tabs in (1)?  Why is the first one ("working case") more
+     important (e.g. it can't be deleted)?  What happens if you accidentally open the same file
+     twice (two tabs)?
+   * FM:  Can't use *-f "file1 file2"* with Selector?
+   * FM+CC:  What is a transaction group (2nd column)?  We need to describe it, Warning and Critical.
+     (Perhaps a short description with a link to the "Selector Headers" section below?
+   * FM:  Delay is not shown in the list, nor when a test case is selected.  Why is it in (6)
+     instead of in (3)?  Does it just update the "Screen" column with a new grab?  It sometimes
+     crashes Command Prompt until you close the Selector window.  (See the TODO at the bottom)
+   * FM:  How should you select a line in the list without selecting one of its elements
    * Using "COPY" in (4), what is copied and how do you paste it?  How is it different
-     than the "DUPLICATE" button in (6)?  Why is "DELAY" an action like "EDIT" in (6)?
-   * Search seems to work only for the *Name* and *Date modified* fields
-   * Warning and Critical need to be described here.
-   * Unlike Designer, you can right-click in Selector and it brings up a Chrome window.
+     than the "DUPLICATE" button in (6)?
+   * FM:  Search seems to work only for the *Name* and *Date modified* fields, is that expected?
+   * FM:  Unlike Designer, you can right-click in Selector and Editor and it brings up a Chrome menu.
      Is Chrome required to run Alyvix?
 
 
@@ -88,6 +91,11 @@ Selector File Tabs
 - "+" sign to add a tab
 - "x" symbol to remove a tab
 - cannot remove the first tab
+
+
+.. todo::
+
+   * CC:  Finish writing this subsection.
 
 
 
@@ -114,6 +122,11 @@ Selector Headers
   especially helpful when you have a large number of objects in a single file.
 
 
+.. todo::
+
+   * CC:  Finish writing this subsection.
+
+
 
 .. _alyvix_selector_interface_list:
 
@@ -124,6 +137,12 @@ Test Case List
 - Selected row(s) are shown with the light blue background
 - Some fields can be changed (Name, Tgroup, Timeout, Break, Measure, Warning, Critical).
   The others are fixed.
+
+
+.. todo::
+
+   * CC:  Finish writing this subsection.
+
 
 
 .. _alyvix_selector_interface_object_options:
@@ -137,20 +156,21 @@ Object Options
   the :guilabel:`OK` button is pressed, causing Selector to save and exit (or Designer, in the
   case of the **EDIT** button.
 
-* The :guilabel:`DELAY**` control allows you to add or change the countdown delay in seconds
+* The :guilabel:`DELAY` control allows you to add or change the countdown delay in seconds
   between when a test case is invoked, and when it begins visually searching the screen.
-* The :guilabel:`**EDIT**` button calls Alyvix Designer with the currently selected test case
+* The :guilabel:`EDIT` button calls Alyvix Designer with the currently selected test case
   file and object.
-* :guilabel:`**DUPLICATE**` will create a new test case object(s) whose name is the same name as
+* :guilabel:`DUPLICATE` will create a new test case object(s) whose name is the same name as
   the object(s) in the current row(s), but with the string "_copy" appended.
 * **REMOVE** Will delete the currently selected test case object.
 
 .. todo::
 
-   * Is the ``EDIT`` button designed to be used within Editor?  Will it work if I run it
-     from the command line?
-   * Is the delay not saved to the .json file?  When I added ``-d 3`` to the command line
+   * CC:  Finish writing this subsection.
+   * FM:  Is the ``EDIT`` button designed to be used within Editor?  Is it supposed to work
+     anyway if I run it from the command line?
+   * FM:  Is the delay not saved to the .json file?  When I added ``-d 3`` to the command line
      calling Designer, it counted down at the time, but I can't find it in the .json and
      Selector says it's ``0``.  When I try to change the delay to ``3`` in Selector and
      press ``OK``, it sometimes exits with an error and sometimes counts down immediately
-     and then calls Designer with an empty test case.
+     and then calls Designer with an empty test case.  (Delay != Timeout)
