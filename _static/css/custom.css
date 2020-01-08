@@ -152,6 +152,10 @@ code.kbd, .rst-content tt.kbd, kbd {
     padding-right: 10px;
     color: #2980C9;    /* The same blue as the RTD theme */
 }
+.fasmall::before {
+    font-size: 16px;
+    padding-right: 4px;
+}
 p.fa {
     line-height: 24px; /* Should inherit from 'p' */
 }

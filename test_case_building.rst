@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 5-12-2019
-:modified: 03-01-2020
+:modified: 07-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -15,7 +15,7 @@ Test Case Building
 
 .. todo::
 
-   * Rewrite the following text to include Selector and Editor
+   * CC:  Rewrite the following text to include Selector and Editor
 
 Alyvix Designer lets you select patterns on a copy of the screen, whether they're images,
 rectangles, or text.  You can then define triggers for actions when those patterns are recognized
@@ -25,7 +25,7 @@ Designer will then save the set of patterns as a single :ref:`test case <glossar
 you can then use as building blocks to compose more complicated objects and scripts, and to
 measure the performance of executed test cases with :ref:`Alyvix Robot <test_case_execution_top>`.
 
-The following documentation presents information on Alyvix Designer:
+The following sections of the Alyvix Guide present information on Alyvix Designer:
 
 * The :ref:`Interface Overview <alyvix_designer_interface_overview>` page provides a high-level overview
   and describes the general layout of the interface.
@@ -75,9 +75,8 @@ The following options are available:
 
 .. todo::
 
-   * Should we call the capture lines "guide lines", "crosshair", something else?
-   * Link to the simple how-to for Designer when ready
-   * Fill in unknown details in the CLI options section
+   * CC:  Link to the simple how-to for Designer when ready
+   * CC:  Fill in unknown details in the CLI options section
 
 
 
@@ -91,3 +90,6 @@ The following options are available:
    test_case_building/designer_options.rst
    test_case_building/designer_component_tree.rst
    test_case_building/selector_overview.rst
+   test_case_building/editor_overview.rst
+   test_case_building/editor_script_mgmt.rst
+   test_case_building/editor_scripting_panel.rst
