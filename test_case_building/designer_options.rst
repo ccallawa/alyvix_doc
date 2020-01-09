@@ -1,11 +1,12 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 03-01-2019
+:modified: 09-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
 :status: draft
 
+.. include:: ../sphinx-roles.txt
 
 
 .. _alyvix_designer_options:
@@ -14,10 +15,11 @@
 Designer Interface Options
 **************************
 
-Parameters and settings for Alyvix Designer are separated into those that affect an entire
+The parameters and settings for Alyvix Designer are divided into those that affect an entire
 test case, and those that affect a specific component type for a group or component.
 
-All options shown in this panel are used during the execution of a test case, not when creating it.
+All options shown in this panel are used during the :ref:`execution <test_case_execution_top>`
+of a test case, not when creating it.
 
 .. note::
 
@@ -46,6 +48,14 @@ At the top of the Alyvix Designer panel (see Figure 1) are the options for the t
    :target: ../../test_case_building/images/ad_testcase_options_sized.png
 
    Fig. 1:  The test case options.
+
+
+.. todo::
+
+   * FM:  In the Designer interface, ``timeout (s)`` in English implies you're trying to say
+     either "timeout" or "timeouts".  If you mean seconds, you should put "sec" instead to
+     avoid the ambiguity.
+
 
 The **Object name** is the reference name (not the file name) of the test case object allowing the
 test case to be used in test case scripts.
@@ -97,9 +107,9 @@ will be updated to reflect the currently assigned options to that row's componen
 Root Component Options
 ----------------------
 
-The *root* element corresponds to the execution phase that will be invoked when Alyvix Robot starts,
-before any detection algorithms are run.  This allows you to start or close a particular
-application before Alyvix begins looking for any graphical elements.
+The *root* element corresponds to the :ref:`execution <test_case_execution_top>` phase that will
+be invoked when Alyvix Robot starts, before any detection algorithms are run.  This allows you
+to start or close a particular application before Alyvix begins looking for any graphical elements.
 
 .. todo::
 
@@ -124,7 +134,7 @@ terminate when the test case begins.
   you could start a browser session with the URL as an argument.  The two parameters it takes are:
 
    * **Path:**  Either write the full path for an executable file in your environment, or use
-     the :guilabel:`SELECT` button to bring up a file selection dialog.
+     the :nobutton:`SELECT` button to bring up a file selection dialog.
    * **Arguments:**  Here you can enter zero or more arguments to pass to the application when
      it starts up.
 
@@ -165,7 +175,8 @@ Image Type Options
    In Designer for the Image object type:
 
    * FM:  For the color match, does it have to be exact?  Can it match a gradient?  The same size?
-   * FM:  For the shape match, is it done by openCV?  Are default parameters used?
+   * FM:  For the shape match, is it done by openCV?  Are default parameters used?  Can we just
+     refer readers to the OpenCV documentation without repeating it here?
 
 
 
@@ -199,12 +210,9 @@ Rectangle Type Options
 
    In Designer, for the Rectangle object type:
 
-   * FM:  It's not clear what's the difference between Button, Box and Window
-   * FM:  Why are there two bounding boxes?  Do they have different meanings for the different types?
-     **A:  Components are detected relative to where the group was detected.  The larger bounding
-     box is there in case the GUI container can be resized so the component may "float" left<-->right
-     or up<-->down and the inner box (selection) can be detected anywhere within the larger Region
-     of Interest. They don't have different meanings.**
+   * FM:  It's not clear what's the (operational) difference between a Button, Box and Window.
+     We'll need to explain it.
+
 
 
 .. _alyvix_designer_options_components_text:
@@ -243,9 +251,10 @@ Text Type Options
 
    * FM:  The **Number** dropdown for ``Logic`` only has "more than zero" as an option
      ("greater than zero").  Will there be more eventually?
-   * FM:  What's the difference between *detect* and *map*?  (Map is with Editor?)
-   * FM:  "Scrap" is not the right word.  How about "Detected" or "Recognized"?  Who do I send
-     these problems to?
+   * FM:  What's the difference between *detect* and *map*?  (Is Map for autopopulating a
+     map in Editor with a set of scraped words?)
+   * FM:  "Scrap" is not the right word.  How about "Detected" or "Recognized"?  How do I report
+     English problems with GUI labels?
 
 
 .. figure:: images/ad_type_submenu_text_detect_sized.png
@@ -269,9 +278,9 @@ Text Type Options
 
 .. todo::
 
-   * FM:  The dropdown for ``Map`` shows "None" as the only option.  Will there be more?  Does it
-     depend on Editor?
-   * CC:  Need to add a full description of map and detect
+   * FM:  The dropdown for ``Map`` shows "None" as the only option.   Is it a dropdown that will
+     be filled with later code work, or is it a reference to a map name in Editor?
+   * FM+CC:  Need to add a full description of map and detect
 
 
 
@@ -304,7 +313,9 @@ optionally set up an immediate mouse action which is unique to each component.
       then set the delay in milliseconds between each click.
     * **Scroll:**  Move the mouse to the position indicated by the :guilabel:`SET POINT` button,
       then pick a direction (up, down, left or right), and indicate how far and how fast the
-      object should be scrolled.
+      object should be scrolled.  A unit represents an application-dependent measure of how far
+      the screen will scroll if, for example, you move the mouse scroll wheel once.  If it is set
+      to more than one scroll unit, you can set the delay in milliseconds between each scroll.
     * **Hold:**  Move the mouse to the position indicated by the :guilabel:`SET POINT` button,
       then create a mouse event where a click is initiated but the mouse button is still held down.
     * **Release:**  If the :guilabel:`Direction` is set to ``None``, then move the mouse to the
@@ -324,14 +335,9 @@ optionally set up an immediate mouse action which is unique to each component.
      if one region is detected it will hold, if another is detected it will release.  If so, does
      the order of the components imply the order of the events?  Is there a way to do combinations
      of events/strings if only one component is detected?
-   * FM:  How does the **Scroll** event work with **units**?  Is it the natural distance the scroll
-     would work if a mouse wheel turned one "click"?  If so, why a delay between them?
    * FM:   Can you do a release with both "Set Point" and a direction, or does "Set Point" only work
      if the direction is "None"?
-   * FM:  Does **Hold**/**Release** only work with the left mouse button?
-   * FM:  Timeout(s) implies more than one?  How does that work?
-   * FM:  The Timeout value can be set as a command line parameter, but not "Appear" and "Break"?
-   * CC+FM:  Need to write a clearer explanation of `break`
+   * FM:  Do **Hold**/**Release** only work with the left mouse button?
    * FM:  Is the detection interval still set at 0.5 seconds as described in the 2.7.5 doc?  Is
      it still configurable?  It includes the 0.00s mark, right, not just starting at 0.5s?
-   * CC:  Instantiate the ``execution`` references to Alyvix Robot
+

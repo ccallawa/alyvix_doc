@@ -1,10 +1,12 @@
 :author: Charles Callaway
-:date: 5-12-2019
-:modified: 17-12-2019
+:date: 05-12-2019
+:modified: 09-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
 :status: draft
+
+.. include:: ../sphinx-roles.txt
 
 
 .. _alyvix_designer_component_tree:
@@ -23,7 +25,7 @@ The *component tree* is composed of three types of components:
 - A :ref:`Root element <glossary_root>`, which holds a screen capture to serve as a basis for
   visually recognizing parts of the screen.
 - :ref:`Groups <glossary_group>`, which indicate the principal component that needs to be
-  recognized.  A maximum of three groups can be created per `test case <glossary_test_case>`.
+  recognized.  A maximum of three groups can be created per :ref:`test case <glossary_test_case>`.
 - :ref:`Components <glossary_component>` are the additional areas that can be used to confirm what
   is being recognized (especially when there are multiple similar target objects), such as a text
   label next to a button, or when the action can be on a separate GUI object, like a slider.  A
@@ -46,7 +48,7 @@ Structure of the Component Tree
 
 When Alyvix Designer is first launched, it will capture the entire screen to use as a basis for
 locating visual elements.  This screen capture is represented in the component tree with the capital
-letter :guilabel:`S` as in Figure 1.  Initially, before you have placed any component, this
+letter :greyblock:`S` as in Figure 1.  Initially, before you have placed any component, this
 *root element* will have no children.
 
 Also when first started, the Designer will default to the first of the three available groups,
@@ -128,42 +130,17 @@ the tree.  As mentioned in the section
 used for text recognition.  If a group already exists and is selected, the new region will become
 a component in that group.
 
-In addition to manually selecting the bounds of the region, you can right click on any point on
+In addition to manually selecting the bounds of the region, you can right-click on any point on
 the screen and Alyvix will try to automatically determine the appropriate rectangle to use.  You
 can also resize the bounding edges of any capture region by dragging them with the left mouse
 button.
 
-You can continue adding components and new groups using the mouse and keyboard shortcuts without
+You can continue to add components and new groups using the mouse and keyboard shortcuts without
 showing the Designer panel.
 
 At any point you can switch between selecting regions and the Designer panel.  Use the :kbd:`ESC`
 key to open the Designer panel, and the :guilabel:`EDIT` button at the bottom left corner of the
-panel to return to the screen capture.  Figure 4 shows an example of the results after many
-operations.
-
-.. figure:: images/allX3_sized.png
-   :alt: Progressively selecting more regions in multiple groups.
-   :figwidth: 100%
-   :target: ../../test_case_building/images/allX3_sized.png
-   :name: label_fig_component_progression
-
-   Fig. 4:  Progressively selecting more regions in multiple groups.
-
-
-.. todo::
-
-   - CC+FM:  Rather than using geometric examples for capture regions (squares, stars, etc.),
-     could we use common elements from the Windows interface?  If not (e.g. copyright problems)
-     could we create our own fictitious application using powerpoint and use it as a standard set
-     of examples throughout the Alyvix Guide?  **A:  Eventually make a fictitious application.**
-   - FM:  In Designer, why are there two different bounding boxes for any given low-level
-     component?  Why only one bounding box for the group?  **A:  Components are detected relative
-     to where the group was detected.  The larger bounding box is there in case the GUI container
-     can be resized so the component may "float" left<-->right or up<-->down. and the inner box
-     (selection) can be detected anywhere within the larger Region of Interest.**
-   - FM:  In Designer you can reorder tree components and groups (at the same level) with drag &
-     drop, but how is it helpful?  What does the ordering of the various groups mean, and what does
-     the ordering of the components within a group mean?
+panel to return to the screen capture.
 
 
 
