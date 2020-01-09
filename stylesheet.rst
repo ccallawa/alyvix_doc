@@ -1,14 +1,15 @@
 :author: Charles Callaway
-:date: 4-12-2019
-:modified: 03-01-2020
+:date: 04-12-2019
+:modified: 09-01-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
 :status: draft
 
-.. role:: warn
-   :class: redbold
+.. include:: sphinx-roles.txt
 
+.. role:: rawhtml(raw)
+   :format: html
 
 
 .. _style_top:
@@ -102,6 +103,33 @@ There are also enumerated lists:
       pound sign (``#.``), but it will affect the very first number at top even if put in
       a subpoint
 
+The Alyvix :file:`custom.css` files also supports the ``bignums``, ``bignums-xl`` and
+``bignums-xxl`` enumerated list styles:
+
+.. rst-class:: bignums
+
+#. Creates white numbers in black circles
+#. Can be used together with interface screenshots
+
+This is defined as follows:
+
+.. code-block::
+   :class: short-code-block
+
+   .. rst-class:: bignums
+
+   #. Creates white numbers in black circles
+   #. Can be used together with interface screenshots
+
+Similarly, you can replace ``bignums`` with ``bignums-xxl`` to get a larger enumerated list:
+
+.. rst-class:: bignums-xxl
+
+#. Creates black numbers in grey/white circles and a thick horizontal separator
+#. Very useful for step-by-step procedures
+
+|
+
 
 
 .. _style_break_space:
@@ -171,9 +199,12 @@ more options, you can use the ``code-block`` directive:
       :name: _style_code_block_example
 
       This is the content of the code block.
-      Maybe it is actual code.
+      Sometimes it might even be actual code.
 
-You can also include an entire external file as include like this:
+In :file:`custom.css` there are classes available such as ``short-code-block`` and
+``medium-code-block`` that will make the block less wide at preset proportions (e.g. 70% and 85%).
+
+Instead of pasting code into the .rst file, you can also include an entire external file like this:
 
 .. code-block:: rst
    :class: short-code-block
@@ -238,7 +269,7 @@ You will then be able to use this new ``warn`` role within a paragraph as follow
    This is some text where we need to say :warn:`Don't` do something!
 
 Which looks like this when you write it out:  "This is some text where we need to say :warn:`Don't`
-do something!"
+do something!" :hint:`(You can also make a hint with :hint:)`
 
 
 
@@ -248,8 +279,8 @@ do something!"
 Links, Anchors, Aliases and References
 **************************************
 
-Link and anchor names must use Python variable syntax.  Any punctuation characters will be
-converted to hyphens in the resulting link index.
+Link and anchor names must use Python variable syntax.  For automatic link generation, any
+punctuation characters will be converted to hyphens in the resulting link index.
 
 You can create a link to an existing anchor, for instance:
 :ref:`Getting Started <getting_started_top>`.
@@ -289,39 +320,59 @@ And then you can reuse it whenever you want:  |logo| |logo| |logo|
 Tables
 ******
 
-There are simple, complex, CSV and list-type tables.
+There are simple, complex, CSV and list-type tables.  You can span multiple columns (even in
+simple tables) and indicate a blank cell either with a comment (..) or a backslash (\).
 
 Here is a simple table:
 
-=======  =============  =========
-Name     Syntax         Format
-=======  =============  =========
-Italics  \*             *Italics*
-Bold     \**            **Bold**
-Mono     \``            ``Monospace``
-Mixed    \\             *Ita*\ **Bol**\ ``Lit``\s
-Math     \:math:        :math:`\\\sum_{k=0}^{N-1} s_k`
-GUI      Role:guilabel  :guilabel:`File > Settings`
-Keys     Role:kbd       :kbd:`ctrl` + :kbd:`s`
-File     Role:file      :file:`/etc/passwd`
-=======  =============  =========
+=========  =============  =========
+Name       Syntax         Format
+=========  =============  =========
+Italics    \*             *Italics*
+Bold       \**            **Bold**
+Mono       \``            ``Monospace``
+Mixed      \\             *Ita*\ **Bol**\ ``Lit``\s
+Math       \:math:        :math:`\\\sum_{k=0}^{N-1} s_k`
+---------  -------------  ---------
+:caps:`Roles defined by Sphinx and DocUtils`
+-----------------------------------
+GUI        Role:guilabel  :guilabel:`File > Settings`
+Keys       Role:kbd       :kbd:`ctrl` + :kbd:`s`
+File       Role:file      :file:`/etc/passwd`
+---------  -------------  ---------
+:caps:`Roles defined by in-page directives and custom.css`
+-----------------------------------
+Warn       Role:warn      :warn:`Warn`
+Hint       Role:hint      :hint:`Hint`
+SmallCaps  Role:caps      :caps:`CamelCase`
+=========  =============  =========
 
 This is built as follows::
 
-   =======  =============  =========
-   Name     Syntax         Format
-   =======  =============  =========
-   Italics  \*             *Italics*
-   Bold     \**            **Bold**
-   Mono     \``            ``Monospace``
-   Mixed    \\             *Ita*\ **Bol**\ ``Lit``\s
-   Math     \:math:        :math:`\\\sum_{k=0}^{N-1} s_k`
-   GUI      Role:guilabel  :guilabel:`File > Settings`
-   Keys     Role:kbd       :kbd:`ctrl` + :kbd:`s`
-   File     Role:file      :file:`/etc/passwd`
-   =======  =============  =========
+   =========  =============  =========
+   Name       Syntax         Format
+   =========  =============  =========
+   Italics    \*             *Italics*
+   Bold       \**            **Bold**
+   Mono       \``            ``Monospace``
+   Mixed      \\             *Ita*\ **Bol**\ ``Lit``\s
+   Math       \:math:        :math:`\\\sum_{k=0}^{N-1} s_k`
+   ---------  -------------  ---------
+   ``Roles defined by Sphinx``
+   -----------------------------------
+   GUI        Role:guilabel  :guilabel:`File > Settings`
+   Keys       Role:kbd       :kbd:`ctrl` + :kbd:`s`
+   File       Role:file      :file:`/etc/passwd`
+   ---------  -------------  ---------
+   ``Roles defined by in-page directives and custom.css``
+   -----------------------------------
+   Warn       Role:warn      :warn:`Warn`
+   Hint       Role:hint      :hint:`Hint`
+   SmallCaps  Role:caps      :caps:`CamelCase`
+   =========  =============  =========
 
-**Note:** ``sphinx-build`` will complain if there is text between the defined columns (but not
+
+**Note:** ``sphinx-build`` will complain if there is text in between the defined columns (but not
 if it sticks out the right hand side).
 
 And here is a complex table:
@@ -378,7 +429,8 @@ This is built as follows:
       :height: 100px
       :alt: This is alternate text.
 
-You can add shadows and other effects by adding a specific CSS class as follows:
+You can add shadows and other effects by adding a specific CSS class to :file:`custom.css`
+as follows:
 
 .. code-block:: rst
    :class: short-code-block
@@ -388,11 +440,14 @@ You can add shadows and other effects by adding a specific CSS class as follows:
 
 You can also make a more structured figure.  It assumes you want an image at the top with the
 basic options above.  A paragraph at the same indentation level as the options will be treated as
-a caption, and any additional indented structures will be treated as a figure legend.  You can set
-an empty caption by using the standard ``..`` paragraph comment.  but can also put an entire (indented) RST structure within the figure space
-and it will add a thin-lined box around the entire thing:
+a caption, and any additional indented structures will be treated as a figure legend.
+
+You can set an empty caption by using the standard ``..`` paragraph comment.  but can also put an
+entire (indented) RST structure within the figure space.  You can add the class ``:class: outline``
+to the figure declaration and :file:`custom.css` will add a thin-lined box around the entire thing:
 
 .. figure:: pictures/alyvix_logo_399x333.png
+   :class: outline
    :scale: 40 %
    :align: center
    :alt: This is alternate text.
@@ -407,7 +462,7 @@ and then before the figure add the line ``.. _label_fig1:``, and then the refere
 link along with the number (see also ``numfig_format`` and ``numfig_secnum_depth``), and
 the numbering starts over again within each subsection, and these aren't numbered.
 
-(Automatic section numbering is also possible:
+(Automatic section numbering is also possible with an extension to Sphinx:
 http://docutils.sourceforge.net/docs/ref/rst/directives.html#automatic-section-numbering)
 
 For Font Awesome icons, use the ``fa`` directive:
@@ -424,7 +479,15 @@ Just append ``fa-`` to the name of the Font Awesome icon you want.
 
       With text, or use the ``|`` by itself for just the icon (it's always placed as ``::before``)
 
-Don't use RAW HTML to do it:
+A single inline icon is also possible by adding ``fasmall`` as long as it's at the start of a
+sentence/bullet:
+
+.. rst-class:: fa fasmall fa-play-circle
+
+   I'm a ``play-circle`` Font Awesome icon
+
+Don't use RAW HTML to do it (unless required to circumvent the above to restrictions, but even
+then think hard about it due to the security concerns of raw HTML):
 
 .. raw:: html
 
@@ -437,7 +500,8 @@ Don't use RAW HTML to do it:
 
       <i class="fa fa-inbox"></i>
 
-
+Here's a naughty example of using a role directive to pass through raw HTML to create an
+:rawhtml:`<i class="fa fasmall fa-plane"></i>` airplane icon.
 
 
 
@@ -447,17 +511,35 @@ Don't use RAW HTML to do it:
 Info Boxes, Topics and Sidebars
 *******************************
 
-.. note::
-   This is a `note` style of info box.  It can contain bulleted lists and other formatting.
+.. note::   This is a `note` style of info box.  It can contain bulleted lists and other formatting.
+
+The titles are fixed in CSS with the ``::before`` property.
 
 .. warning::
    The `warning` style of info box has different colors.
 
-The other box types are:  admonition, attention, caution, danger, error, hint, important, seealso
-and tip.
+The other box types are:  ``admonition``, ``attention``, ``caution``, ``danger``, ``error``,
+``hint``, ``important``, ``seealso`` and ``tip``.
 
-Additional styles like ``epigraph`` and ``pull-quote`` can be tied to specific CSS classes
-with those names.
+The :file:`custom.css` file allows you to pass a class name to make it less than full width:
+
+.. danger::
+   :class: short-admonition
+
+   A short **Danger** box
+
+.. code-block:: rst
+   :class: short-code-block
+
+   .. danger::
+      :class: short-admonition
+
+      A short **Danger** box
+
+.. topic:: Epigraphs and Pull Quotes
+
+   Additional styles like ``epigraph`` and ``pull-quote`` can be tied to specific CSS classes
+   with those names.
 
 .. epigraph::
 
@@ -471,18 +553,20 @@ A **topic** creates a simple box with a title above it.  In some themes, like th
 theme, it just creates this HTML structure, which is mapped to the CSS class *topic*:
 ``<div class="topic"><p class="topic-title first">Title</p><p>Box content</p></div>``
 
-.. topic:: The Topic Title
+.. topic:: Topic Titles
 
-   Here is the content of the topic box.
+   Here is the content of the topic box.  It's normal text, but has to be indented
+   in the source.  Note also the restyled horizontal scrollbar.
 
 .. code-block:: rst
    :class: short-code-block
-   :caption: How to create a topic box
+   :caption: How you can create a topic box
    :name: _style_topic_example
 
-   .. topic:: The Topic Title
+   .. topic:: Topic Titles
 
-      Here is the content of the topic box.
+      Here is the content of the topic box.  It's normal text, but has to be indented
+      in the source.  Note also the restyled horizontal scrollbar.
 
 A **sidebar** creates a box that floats to the left.  Other elements will tend to wrap around it:
 
@@ -564,7 +648,7 @@ Here are some examples:
    <kbd style="background-color: rgb(252,252,252);border-color: rgb(204,204,204);border-style: solid;border-width: 1px;border-radius: 3px;box-shadow: rgb(187,187,187) 0px -1px 0px 0px inset;color: rgb(85,85,85);display: inline;font-family: Consolas, Menlo, Courier;font-weight: 400;overflow-wrap: break-word;padding: 3px 5px 3px 5px;vertical-align: middle;">Test + Text pqj</kbd>
    </li></ul>
 
-And don't forget that you can alias and reuse it:
+And don't forget that you can alias and reuse all of these:
 
 .. |enterkey| raw:: html
 

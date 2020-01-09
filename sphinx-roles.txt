@@ -1,0 +1,20 @@
+.. role:: warn
+   :class: redbold
+
+.. role:: hint
+   :class: greybold
+
+.. role:: caps
+   :class: smallcaps
+
+.. role:: greyblock
+   :class: greyblock
+
+.. role:: wbutton
+   :class: whitebutton
+
+.. role:: bbutton
+   :class: bluebutton
+
+.. role:: nobutton
+   :class: nobutton

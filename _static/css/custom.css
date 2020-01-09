@@ -61,9 +61,6 @@
     line-height: 36px;
 }
 .rst-content ol.bignums-xxl>li::before { /* Creates the format for the bullet point */
-    background-color: #333;
-    color: white;
-    border: 6px solid #b3b2b2;
     background-color: #fff;
     color: #333;
     border: 5px solid #ddd;
@@ -81,6 +78,44 @@
     top: 7.2px;
     width: 36px;
     height: 36px;
+}
+
+
+/* Allow some numbered lists to appear as very emphasized steps in a procedure */
+.rst-content ol.bignums-xl {
+    counter-reset: li-counter;
+}
+.rst-content ol.bignums-xl>li { /* Represents a single list element */
+    list-style-type: none;
+    margin: 2px 0;  /* A bit more space above and below each list element */
+    padding: 10px 10px 10px 58px;  /* A bit more space between number and its text */
+    position: relative;
+    background-color: transparent;  /* Background of the entire bullet + text */
+}
+.rst-content ol.bignums-xl>li>p { /* Represents a single list element */
+}
+.rst-content ol.bignums-xl>li>p.first { /* Formats the text of a single list element */
+    font-size: 24px;
+    margin-top: 0;
+    line-height: 36px;
+}
+.rst-content ol.bignums-xl>li::before { /* Creates the format for the bullet point */
+    border: 5px solid #ccc;  /* Properties of the circle around the bullet number */
+    background-color: #fff;
+    color: #111;
+    border-radius: 30%; /* How tight the circle is: 65%=circle, %45% = box with big rounded corners */
+    content: counter(li-counter,  decimal);
+    counter-increment: li-counter;
+    font-size: 20px;
+    line-height: 23px;  /* Height of the bullet number line (functions as padding-top) */
+    margin: 1px 24px 0 0;  /* Margin around the bullet number/circle */
+    padding-top: 3px;  /* Padding between the bullet number and bullet circle */
+    position: absolute;
+    text-align: center;
+    left: 2.4px;  /* The offsets of the entire circle/number bullet */
+    top: 10.2px;
+    width: 28px;  /* The width of the bullet circle */
+    height: 26px;  /* The height of the bullet circle */
 }
 
 
@@ -116,8 +151,20 @@ p {
 }
 .rst-content div.figure img.outline { /* For all figures (not sidebars) in user guide text! */
     border: thin #ddd solid;
+    padding: 5px;
 }
 
+
+/* Make guilabel (eventually) fit with the site style */
+.rst-content .guilabel {
+    border: 1px solid #7fbbe3;
+    background: #e7f2fa;
+    font-size: 90%;
+    font-weight: 800;
+    border-radius: 4px;
+    padding: 1.7px 3.5px;
+    margin: auto 1px;
+}
 /* Make keyboard shortcuts more pronounced */
 code.kbd, .rst-content tt.kbd, kbd {
     background-color: #f0f0f0;
@@ -130,6 +177,45 @@ code.kbd, .rst-content tt.kbd, kbd {
     margin: 0 0.1em -0.5em;
     padding: 0 0.3em;
     text-shadow: 0 1px 0 #fff;
+}
+.redbold {  /* An inline warning rather than a box */
+    color: red;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-decoration: underline;
+}
+.greybold {  /* An inline light gray, e.g. for hints */
+    color: lightgray;
+}
+.smallcaps {  /* For inline small caps */
+    font-variant: small-caps;
+}
+.greyblock {  /* Grey background, white font, square block */
+    background-color: #777;
+    color: #fff;
+    padding: 3px 6px;
+    font-size: 90%;
+}
+.bluebutton {  /* Blue background, white font/border, square block */
+    border: 1px solid #fff;
+    background-color: #0078E7;
+    color: #fff;
+    font-size: 80%;
+    padding: 3px 8px;
+}
+.whitebutton {  /* White background, blue font/border, square block */
+    border: 1px solid #0078E7;
+    background-color: #fff;
+    color: #0078E7;
+    font-size: 80%;
+    padding: 3px 8px;
+}
+.nobutton {  /* White background/border, black font */
+    border: 0.1px solid #ddf;
+    background-color: #fff;
+    color: #000;
+    font-size: 80%;
+    padding: 3px 8px;
 }
 
 
@@ -192,10 +278,11 @@ h3, h4 {
     margin-left: -5px;
 }
 .rst-content .topic-title {
-    padding-top: 20px;
+    padding-top: 25px;
     margin-left: -3px;
-    font-size: 18px;
+    font-size: 20px;
 }
+
 
 /* Add more space at the bottom before the footer */
 .rst-footer-buttons {
@@ -217,21 +304,6 @@ blockquote.pull-quote, blockquote.pull-quote div p {
     font-variant: small-caps;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-
-/* An inline warning rather than a box */
-.redbold {
-    color: red;
-    font-weight: bold;
-    font-variant: small-caps;
-    text-decoration: underline;
-}
-
-
-/* An inline light gray, e.g. for hints */
-.greybold {
-    color: lightgray;
 }
 
 
@@ -264,4 +336,17 @@ div.highlight pre::-webkit-scrollbar-track {
 }
 .force-overflow {
     min-width: 450px;
+}
+
+
+/* Vertically center the Previous/Next buttons at the bottom of each page */
+.btn {
+    margin: auto;
+    height: 70px;
+    align-items: center;
+    display: flex;
+}
+.btn span {
+    margin: auto;
+    padding-left: 10px;
 }
