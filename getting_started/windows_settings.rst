@@ -1,13 +1,12 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 03-01-2020
+:modified: 09-01-2020
 :tags: getting, started, beginner, windows, settings
 :lang: en-US
 :translation: false
 :status: draft
 
-.. role:: hint
-   :class: greybold
+.. include:: ../sphinx-roles.txt
 
 
 .. _getting_started_example_settings:
@@ -17,16 +16,18 @@ An Extended Example:  Opening Windows Settings
 **********************************************
 
 The real value of Alyvix lies in chaining together sequences of detections and actions.  So let's
-extend the example above so that in addition to recognizing when the Start Menu is available and
-clicking on it, we'll also do something with that menu.
+extend the :ref:`previous example <getting_started_example_start>` so that in addition to
+recognizing when the Start Menu is available and clicking on it, we'll also do something with
+that menu.
 
 The problem however is that we can't detect anything within the opened Start Menu, because it's
-closed in the screenshot we used in the previous example.  Our second test case should use a new
-screenshot, but how can we detect the Start Menu when running Alyvix Designer will cause the
-opened Start Menu to disappear?
+closed in the screenshot we used in the previous example.  We'll need to create a second test case
+with a new screenshot.  But how can we detect the Start Menu when running Alyvix Designer will
+cause the opened Start Menu to disappear?
 
-The answer is to use the :ref:`delay parameter <alyvix_designer_cli_options>` when starting
-Alyvix Designer.
+The answer is to use the :ref:`delay parameter <test_case_building_designer>` when starting
+Alyvix Designer.  This will insert a delay of however many seconds you request before the screen
+is captured.
 
 
 
@@ -45,7 +46,8 @@ have the same file name, however):
    C:\Users\[username]\Desktop\Alyvix\Testcases\> alyvix_designer -f start-test -o settings -d 3
 
 Once you see the line "Counting down" in the console, you'll have 3 seconds to open the Start
-Menu and then wait for Alyvix Designer to capture the screen.
+Menu and then wait for Alyvix Designer to capture the screen.  If that's not enough time for you,
+just change it to 5, 10, or any other number you like.
 
 .. sidebar:: Fig. 4:  Setting up the Settings button
 
@@ -56,7 +58,7 @@ Menu and then wait for Alyvix Designer to capture the screen.
 
 When you've done that, select the *Settings* icon on the left side of the Start Menu.  Try using
 the right mouse button to autodetect the icon if you didn't in the
-:ref`previous tutorial <getting_started_example_start>`).  It creates minimized rectangles, which
+:ref:`previous tutorial <getting_started_example_start>`).  It creates minimized rectangles, which
 can speed up test execution, especially when it has to look for lots of rectangles.  Your new test
 case should look like Figure 4.
 
@@ -66,8 +68,9 @@ then save everything with the :guilabel:`OK` button.
 
 Where's the trick, though?  Now we just have two, independent test cases (even though they are in
 the same file).  If you run the ``alyvix_robot`` script as before with the object name ``settings``,
-it doesn't detect anything because the Start Menu is not open.  How do we chain them together to
-open the Start Menu, and then open the Settings app?  :hint:`(Hint:  see the next section).`
+it doesn't detect anything because the Start Menu is not open.  How do we chain them together using
+the Command Prompt to open the Start Menu, and then open the Settings app?
+:hint:`(Hint:  see the next section).`
 
 
 

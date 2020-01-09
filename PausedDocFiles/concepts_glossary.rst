@@ -1,10 +1,12 @@
 :author: Charles Callaway
-:date: 4-12-2019
-:modified: 17-12-2019
+:date: 04-12-2019
+:modified: 09-01-2019
 :tags: concept
 :lang: en-US
 :translation: false
 :status: draft
+
+.. include:: ../sphinx-roles.txt
 
 
 .. _concepts_top:
@@ -50,6 +52,10 @@ Glossary
 .. _glossary_component:
 
 :Component:  A *component* (Designer) is ...
+
+.. _glossary_region_of_interest:
+
+:Region of Interest:  A *region of interest* (RoI) is ...
 
 
 

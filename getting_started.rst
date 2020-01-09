@@ -1,10 +1,12 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 03-01-2020
+:modified: 09-01-2020
 :tags: getting, started, beginner
 :lang: en-US
 :translation: false
 :status: draft
+
+.. include:: sphinx-roles.txt
 
 
 .. _getting_started_top:
@@ -19,6 +21,7 @@ For the examples in this section, you'll need to run the Windows Command Prompt 
 the directory where you want to keep your test cases, e.g.:
 
 .. code-block:: doscon
+   :class: short-code-block
 
    C:\> cd C:\Users\<username>\Desktop\Alyvix\Testcases\
 
@@ -62,5 +65,6 @@ how Alyvix works:
    getting_started/simple_working_test.rst
    getting_started/windows_start_button.rst
    getting_started/windows_settings.rst
+   getting_started/using_editor.rst
 
 .. getting_started/typical_workflow.rst

@@ -1,10 +1,13 @@
 :author: Charles Callaway
-:date: 5-12-2019
-:modified: 17-12-2019
+:date: 05-12-2019
+:modified: 09-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
 :status: draft
+
+.. include:: sphinx-roles.txt
+.. include:: sphinx-roles.txt
 
 
 .. _test_case_protocol_top:
@@ -83,4 +86,4 @@ The following JSON structure illustrates the high-level structure of the test ca
    * FM:  Why is there a second (or even third) screenshot in the .json file?  Is it a dump of the
      entire screen when a component was detected?
    * FM:  Why is the word "protocol" used in "test case protocol"?  It's usually a word used
-     in medicine or diplomacy, not IT.
+     in networking, medicine or diplomacy, not data structures.

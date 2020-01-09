@@ -1,10 +1,12 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 03-01-2020
+:modified: 09-01-2020
 :tags: getting, started, beginner, windows, start
 :lang: en-US
 :translation: false
 :status: draft
+
+.. include:: ../sphinx-roles.txt
 
 
 .. _getting_started_example_start:
@@ -63,7 +65,7 @@ Let's use Alyvix Designer to tell Alyvix what to do when it recognizes the Start
 With our rectangle from above still selected, press the :kbd:`Esc` key.  The Alyvix Designer
 interface will appear as in Figure 3, with our rectangle containing the Start button as the child
 node in the :ref:`Component Tree <alyvix_designer_component_tree>`, right below the node with the
-capital letter :guilabel:`S` that represents the entire screenshot.
+capital letter :greyblock:`S` that represents the entire screenshot.
 
 Below the component tree you can see several icons followed by the label :guilabel:`Action`
 with the dropdown option ``None`` below it.  Change that value from ``None`` to ``Click``.  On

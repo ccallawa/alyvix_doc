@@ -1,10 +1,12 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 03-01-2020
+:modified: 09-01-2020
 :tags: robot
 :lang: en-US
 :translation: false
 :status: draft
+
+.. include:: sphinx-roles.txt
 
 
 .. _test_case_execution_top:
@@ -42,6 +44,7 @@ call multiple test cases in sequence.
    Alyvix Robot can be run with the following command:
 
 .. code-block:: doscon
+   :class: medium-code-block
 
    C:\Alyvix\testcases> python alyvix_robot.py
 
@@ -49,6 +52,7 @@ For instance, if you used Alyvix Designer to create a file :file:`my_test.alyvix
 test case with the object name "open", you can call:
 
 .. code-block:: doscon
+   :class: medium-code-block
 
    C:\Alyvix\testcases> python alyvix_robot.py --filename my_test -o open
 
