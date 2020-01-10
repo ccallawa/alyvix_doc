@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 09-01-2020
+:modified: 10-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -83,7 +83,7 @@ is included in your :guilabel:`Path` environment variable:
 
    C:\Alyvix\testcases> python alyvix_ide.py
 
-The following options are available:
+The following command line options are available for Editor:
 
 +---------------+-------------+----------------------------------------------+
 | Option        | Shortcut    | Description                                  |
@@ -133,7 +133,7 @@ is included in your :guilabel:`Path` environment variable:
 
    C:\Alyvix\testcases> python alyvix_designer.py
 
-The following options are available:
+The following command line options are available for Designer:
 
 +---------------+-------------+----------------------------------------------+
 | Option        | Shortcut    | Description                                  |
@@ -177,7 +177,7 @@ is included in your :guilabel:`Path` environment variable:
 
    C:\Alyvix\testcases> python alyvix_selector.py
 
-The following options are available:
+The following command line options are available for Selector:
 
 +---------------+-------------+----------------------------------------------+
 | Option        | Shortcut    | Description                                  |

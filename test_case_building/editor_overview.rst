@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 09-01-2020
+:modified: 10-01-2020
 :tags: editor overview
 :lang: en-US
 :translation: false
@@ -17,9 +17,11 @@ Editor Interface Overview
 
 Alyvix Editor ... (description) ...
 
-You can start Alyvix Editor by itself from the command prompt:
+You can start Alyvix Editor by itself from the command prompt (you can find information about its
+:ref:`command arguments here <test_case_building_editor_launch>`):
 
 .. code-block:: doscon
+   :class: short-code-block
 
    C:\Alyvix\testcases> python alyvix_editor.py -f <file-name>
 
@@ -50,9 +52,12 @@ You will then see the Editor interface as shown here, which includes Selector an
      "Are you sure {you want} to delete section: [object Object]?"  Similarly for the "REMOVE"
      option which asks "Are you sure {you want} to delete steps?"  What's the procedure for informing
      the team about English errors in labels, buttons, and other GUI elements?
-   * Although the Editor window consists of Designer and Selector, it seems some of their interface
-     elements are visible when they are run alone, but disappear when run together with Editor.
-     Is there a reasoning that can be explained simply to users?
+   * FM:  And what happens if you delete a test case object in Selector that is used in Editor?
+     Does that behavior depend on whether it is run standalone or as part of Editor?
+   * FM:  Is the Selector interface the same regardless of whether it is run standalone or
+     run as part of Editor?
+   * CC:  Designer is updated when a Selector object is selected, but not when a script element
+     is selected.
 
 
 The principle interface elements exclusive to the Editor (apart from Selector and Designer) are:

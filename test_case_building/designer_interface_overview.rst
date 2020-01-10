@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 09-01-2020
+:modified: 10-01-2020
 :tags: designer, gui
 :lang: en-US
 :translation: false
@@ -26,7 +26,9 @@ The interface for Alyvix Designer consists of two elements:
       :alt: The initial Alyvix Designer selection cursor
       :target: ../../test_case_building/images/ad_main_screen_edit_message.png
 
-To illustrate how it works, run Designer with no arguments from the command line as follows:
+To illustrate how it works, run Designer with no arguments from the command line as follows
+(you can find information about its
+:ref:`command arguments here <test_case_building_designer_launch>`):
 
 .. code-block:: doscon
    :class: short-code-block
@@ -43,6 +45,8 @@ track the mouse as in Figure 1.
 In Alyvix Designer, the color of the crosshairs indicates whether you are working with the first
 (red), second (green), or third (blue) object group.
 
+.. _alyvix_designer_interface_descriptions:
+
 If you press :kbd:`Escape`, you will see the default Designer interface as in the screenshot
 shown in Figure 2.  The principle interface elements are:
 
@@ -57,17 +61,18 @@ shown in Figure 2.  The principle interface elements are:
 
 #. The **Object name** (title) of the test case object, which together with the filename is used to
    uniquely identify this test case in Alyvix Selector and Editor
-#. **Test case** :ref:`parameters <alyvix_designer_options>`, which affect all screen capture elements
+#. **Test case** :ref:`options <alyvix_designer_options_test_case>`, which affect all screen
+   capture elements
 #. The **Screen capture** :ref:`Component Tree <alyvix_designer_component_tree>` that lists all
    defined regions of interest on the screen that can be interacted with along with their type
    (image, region or text)
-#. **Component** :ref:`parameters <alyvix_designer_options>`, which depend on the type
+#. **Component** :ref:`options <alyvix_designer_options_components>`, which depend on the type
    of the recognized object
 #. **Interface controls** that allow you to either
    :ref:`continue editing regions, or exit Designer <alyvix_designer_interface_controls>`.
 
 Since we started Designer above without any arguments, it assigned the default name
-:guilabel:`VisualObject1` to the object, along with the default parameters :guilabel:`Appear`,
+:guilabel:`VisualObject1` to the object, along with the default options :guilabel:`Appear`,
 :guilabel:`Timeout(s): 10`, and :guilabel:`Break: Yes`.
 
 Also, since we have yet to select any screen capture elements, the component tree has only a single

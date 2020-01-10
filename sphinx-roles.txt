@@ -16,5 +16,8 @@
 .. role:: bbutton
    :class: bluebutton
 
+.. role:: rbutton
+   :class: redbutton
+
 .. role:: nobutton
    :class: nobutton

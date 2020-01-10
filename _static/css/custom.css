@@ -199,6 +199,7 @@ code.kbd, .rst-content tt.kbd, kbd {
 .bluebutton {  /* Blue background, white font/border, square block */
     border: 1px solid #fff;
     background-color: #0078E7;
+    font-weight: bold;
     color: #fff;
     font-size: 80%;
     padding: 3px 8px;
@@ -207,6 +208,13 @@ code.kbd, .rst-content tt.kbd, kbd {
     border: 1px solid #0078E7;
     background-color: #fff;
     color: #0078E7;
+    font-size: 80%;
+    padding: 3px 8px;
+}
+.redbutton {  /* White background, red font/border, square block */
+    border: 1px solid red;
+    background-color: #fff;
+    color: red;
     font-size: 80%;
     padding: 3px 8px;
 }

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 09-01-2020
+:modified: 10-01-2020
 :tags: robot
 :lang: en-US
 :translation: false
@@ -71,6 +71,13 @@ The following options are available:
 +---------------+----------+----------------------------------------------+
 | *<none>*      | -v       | Verbosity:  0=low, 2=high                    |
 +---------------+----------+----------------------------------------------+
+
+
+.. todo::
+
+   * CC:  Add info here about multiple object names as described in the Windows Settings
+     tutorial in Getting Started, then link here from there.
+
 
 
 .. _alyvix_robot_cli_result:

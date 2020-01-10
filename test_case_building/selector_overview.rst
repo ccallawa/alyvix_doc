@@ -1,16 +1,15 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 30-12-2019
+:modified: 10-01-2020
 :tags: selector overview
 :lang: en-US
 :translation: false
 :status: draft
 
+.. include:: ../sphinx-roles.txt
 
-.. todo::
-
-   * CC:  Describe object import
-   * CC:  Describe multiple files
+.. role:: rawhtml(raw)
+   :format: html
 
 
 .. _alyvix_selector_top:
@@ -19,13 +18,24 @@
 Selector Interface Overview
 ***************************
 
-Alyvix Selector allows you to visualize and change some of the basic test case parameters,
-organize individual test cases, and copy test case objects from one file to another.
-The interface is centered around a list display of each test case in a given file.
+Alyvix Selector allows you to organize individual test cases, copy test case objects from one
+file to another, and visualize and change basic test case parameters.  Unlike Designer, you can
+quickly compare multiple test case objects with each other, even if they reside in separate files.
 
-You can start Alyvix Selector by itself from the command prompt:
+When used with Alyvix Editor rather than as a standalone application, it allows you to quickly
+select test case objects to create scripted interactions.
+
+The Selector interface is centered around a list-based display of each test case, with a separate
+tab for each :file:`.alyvix` file.  The *primary* tab (the first one opened that has the blue
+background) is the only file whose objects can be changed.  All other *secondary* tabs are used
+for the purpose of viewing and filtering their test cases, and potentially importing them into the
+primary tab.  The values of test case objects in secondary tabs cannot be changed.
+
+You can start Alyvix Selector by itself from the command prompt (you can find information about its
+:ref:`command arguments here <test_case_building_selector_launch>`):
 
 .. code-block:: doscon
+   :class: short-code-block
 
    C:\Alyvix\testcases> python alyvix_selector.py -f <file-name>
 
@@ -44,133 +54,149 @@ The principle interface elements are:
 
 .. rst-class:: bignums
 
-#. The **file tabs** show the opened :ref:`Alyvix test case files <alyvix_selector_interface_tabs>`.
-   By switching between tabs, you can see the test case objects contained separately in each
-   :ref:`file <test_case_protocol_top>`.
+#. The **file tabs** show the primary tab and any additional opened :file:`.alvyix`
+   :ref:`test case files <test_case_protocol_top>`.  Switching between tabs shows the existing
+   test case objects that each file contains.  New files can be loaded by clicking on the
+   :nobutton:`+` button.  Similarly, the :nobutton:`x` button next to a non-primary tab will
+   remove that tab (note that you cannot remove the primary tab).
 #. The **list headers** :ref:`categorize the properties <alyvix_selector_interface_headers>` of each
-   object, allowing you to find the details of a particular test case object at a glance.
+   object, allowing you to sort on some fields and find the details of a particular test case
+   object at a glance.
 #. The **test case object list** :ref:`shows the principal properties <alyvix_selector_interface_list>`
    (excluding the component tree) of each test case object, with one line for each object.
-#. The **global list options** let you quickly select or deselect all test cases in the list.
+#. The **list actions** let you quickly select or deselect all test cases in the list.
 #. The **filtering and search** fields let you select all test case objects with a given resolution,
-   or that contain a given text string in either the ``Name`` or ``Date modified`` fields.
-#. The **test case object options** for items in the list allow you to
-   :ref:`edit <alyvix_selector_interface_object_options>` that test case object.
-#. The :guilabel:`OK` and :guilabel:`Cancel` buttons will exit Alyvix Selector, either saving or
+   or that contain a given text string in either the :guilabel:`Name` or :guilabel:`Date modified`
+   fields.  The Search field uses a non-regex substring search, and the :nobutton:`x` action
+   clears the field.
+#. The **test case object actions** act on the
+   :ref:`currently selected test case objects <alyvix_selector_interface_object_actions>`
+   in the list.
+#. The :bbutton:`OK` and :nobutton:`Cancel` buttons will exit Alyvix Selector, either saving or
    discarding any changes, respectively.
 
 
 .. todo::
 
-   In the Selector interface:
+   In the Selector interface main section:
 
-   * FM: What can you do with the "+" tabs in (1)?  Why is the first one ("working case") more
-     important (e.g. it can't be deleted)?  What happens if you accidentally open the same file
-     twice (two tabs)?
-   * FM:  Can't use *-f "file1 file2"* with Selector?
-   * FM+CC:  What is a transaction group (2nd column)?  We need to describe it, Warning and Critical.
-     (Perhaps a short description with a link to the "Selector Headers" section below?
-   * FM:  Delay is not shown in the list, nor when a test case is selected.  Why is it in (6)
-     instead of in (3)?  Does it just update the "Screen" column with a new grab?  It sometimes
-     crashes Command Prompt until you close the Selector window.  (See the TODO at the bottom)
-   * FM:  How should you select a line in the list without selecting one of its elements
-   * Using "COPY" in (4), what is copied and how do you paste it?  How is it different
+   * FM: What happens if you accidentally open the same file twice (primary+secondary or
+     secondary+secondary tabs)?
+   * FM:  Using "COPY" in (4), what is copied and how do you paste it?  How is it different
      than the "DUPLICATE" button in (6)?
    * FM:  Search seems to work only for the *Name* and *Date modified* fields, is that expected?
    * FM:  Unlike Designer, you can right-click in Selector and Editor and it brings up a Chrome menu.
      Is Chrome required to run Alyvix?
-
-
-
-.. _alyvix_selector_interface_tabs:
-
-==================
-Selector File Tabs
-==================
-
-- "+" sign to add a tab
-- "x" symbol to remove a tab
-- cannot remove the first tab
-
-
-.. todo::
-
-   * CC:  Finish writing this subsection.
+   * FM:  Why can't you remove the first tab?  If it's fundamental to how Selector works,
+     that should probably be mentioned in the Selector overview since the default idea of
+     tabs is that they are all equivalent.
 
 
 
 .. _alyvix_selector_interface_headers:
 
-================
-Selector Headers
-================
+=====================
+Selector List Headers
+=====================
 
-- Can sort based on the first three columns (name, Tgroup, Date)
-- Some are described in :ref:`Designer <alyvix_designer_options_test_case>`
-  (Name, timeout, break)
+The test case object list headers describe the contents of their respective columns.
+The list can be sorted on the first three columns by clicking on the header name, with the
+:rawhtml:`<i class="fa fasmall fa-sort-up" style="vertical-align:bottom;"></i>` and
+:rawhtml:`<i class="fa fasmall fa-sort-down" style="vertical-align:top;"></i>`
+icons indicating whether the sort is ascending or descending.
 
-* **Name:**
+The list headers have the following characteristics:
+
+* **Name:**  The object name :ref:`assigned to the test case object <alyvix_designer_interface_descriptions>`
+  in Director
 * **Transaction group:**
-* **Date modified:**
-* **Timeout:**
-* **Break:**
-* **Measure:**
-* **Warning:**
-* **Critical:**
-* **Resolution:**
-* The **Screen** element serves as a double check that you have the correct test case, which is
-  especially helpful when you have a large number of objects in a single file.
+* **Date modified:**  The last date and time automatically recorded when saved in Designer
+* **Timeout, Break, Measure:**  Displays the values of the corresponding
+  :ref:`test case options <alyvix_designer_options_test_case>` in Designer
+* **Warning, Critical:**  The threshold values set for integration with monitoring
+* **Resolution:**  The horizontal and vertical pixel resolution, and the frequency (Hz) when the
+  screen capture was created
+* The **Screen** element serves as a visual "double check" that you have the correct test case,
+  which is especially helpful when you have a large number of objects in a single file
 
 
 .. todo::
 
-   * CC:  Finish writing this subsection.
+   In the Selector list headers section:
+
+   * FM+CC:  What is a transaction group (2nd column)?  We need to describe it, Warning and Critical.
+   * FM:  You can set Warning and Critical in the interface, but it disappears after a few seconds
+     (perhaps related to the break/measure reset we saw in our meeting on Editor?)  Is this the
+     place you are supposed to set these values, not in Designer?
 
 
 
 .. _alyvix_selector_interface_list:
 
-==============
-Test Case List
-==============
+=====================
+Test Case Object List
+=====================
 
-- Selected row(s) are shown with the light blue background
-- Some fields can be changed (Name, Tgroup, Timeout, Break, Measure, Warning, Critical).
-  The others are fixed.
+This list shows all test case objects contained in file of the currently selected tab.
 
+The values for most fields in the primary tab can be changed directly without opening Designer
+(except for **Date modified**, **Resolution** and **Screen**).  This can be accomplished merely
+by clicking on the existing value (or blank space where it should go), entering the new value,
+and then clicking elsewhere in the list.  Remember that any changes will not be saved until
+you have exited Selector by clicking on the :bbutton:`OK` button.
 
-.. todo::
+.. note::
 
-   * CC:  Finish writing this subsection.
+   The values of test case objects in secondary tabs cannot be changed.
 
+The *bars* icon :rawhtml:`<i class="fa fasmall fa-bars"></i>` at the start of each row allows you
+to (1) select that test case object, or (2) *drag-and-drop* the test case into the
+:ref:`Editor scripting panel <alyvix_editor_interface_script>` when Selector is not being used
+as a standalone application.
 
-
-.. _alyvix_selector_interface_object_options:
-
-==============
-Object Options
-==============
-
-- General description
-- Any changes made by the following actions will not be written out to the test case file until
-  the :guilabel:`OK` button is pressed, causing Selector to save and exit (or Designer, in the
-  case of the **EDIT** button.
-
-* The :guilabel:`DELAY` control allows you to add or change the countdown delay in seconds
-  between when a test case is invoked, and when it begins visually searching the screen.
-* The :guilabel:`EDIT` button calls Alyvix Designer with the currently selected test case
-  file and object.
-* :guilabel:`DUPLICATE` will create a new test case object(s) whose name is the same name as
-  the object(s) in the current row(s), but with the string "_copy" appended.
-* **REMOVE** Will delete the currently selected test case object.
+The :kbd:`Shift` and :kbd:`Control` keys work together with the mouse to select multiple rows
+in the standard way when using Windows applications.  Selected rows are shown with a light blue
+background, and can then be used with the actions described in the next section below.
 
 .. todo::
 
-   * CC:  Finish writing this subsection.
-   * FM:  Is the ``EDIT`` button designed to be used within Editor?  Is it supposed to work
-     anyway if I run it from the command line?
-   * FM:  Is the delay not saved to the .json file?  When I added ``-d 3`` to the command line
-     calling Designer, it counted down at the time, but I can't find it in the .json and
-     Selector says it's ``0``.  When I try to change the delay to ``3`` in Selector and
-     press ``OK``, it sometimes exits with an error and sometimes counts down immediately
-     and then calls Designer with an empty test case.  (Delay != Timeout)
+   In the Selector test case list section:
+
+   * FM:  You can drag an object from a secondary tab into the Editor interface.  Does that
+     object then get automatically imported into the file of the primary tab?  When I did it,
+     the new object didn't appear in the primary tab.  Is it also a requirement to use the
+     Import button when doing this?
+   * CC: Need to update the screenshot to include the "three line" icon now at the left.  Make
+     sure no new changes are coming soon.
+
+
+
+.. _alyvix_selector_interface_object_actions:
+
+========================
+Test Case Object Actions
+========================
+
+The :wbutton:`DELAY [S] <n> ADD` control allows you to add a completely new test case by launching
+Designer directly from the Selector interface with the specified countdown delay in seconds
+just as if you had used Designer's :file:`--delay` option from the command prompt.  This
+action is available regardless of whether a test case object is selected.
+
+The :wbutton:`EDIT` button appears when only a single test case is selected.  Clicking on it
+launches Alyvix Designer with the currently selected test case file and object.
+
+Two other actions affect all test case objects currently selected:
+
+* :wbutton:`DUPLICATE` will create a new test case object(s) from each selected row.  The new
+  name(s) will be the same name(s) as the currently selected object(s), but with the string
+  *_copy* appended at the end.  The new objects will appear at the bottom of the list.
+* :rbutton:`REMOVE` will delete all currently selected test case objects.  A confirmation
+  request dialog will appear to make sure test cases aren't accidentally deleted.
+
+When an additional file tab is open, only the :wbutton:`IMPORT` action will appear.
+Any objects selected will be copied just as for :wbutton:`DUPLICATE`, except that the new
+object(s) are copied to the primary tab rather than to the currently opened tab.
+
+Remember that any changes you make to test case objects in the primary tab are not saved unless
+you exit Selector by pressing the :bbutton:`OK` button.  (No changes will be made to any objects
+in any additional tabs).
