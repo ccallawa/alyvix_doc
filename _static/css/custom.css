@@ -119,9 +119,15 @@
 }
 
 
-/* Additional styling for warning boxes and code blocks */
+/* Additional styling for admonition boxes and code blocks */
 .rst-content .admonition {  /* Add some space above the box */
     margin-top: 20px;
+}
+.rst-content .warning {
+   background-color: rgb(253,240,240);
+}
+.rst-content .warning .admonition-title {
+   background-color: rgb(230,104,106);
 }
 .rst-content .short-admonition {  /* A version that isn't full width */
     width: 80%;
@@ -172,7 +178,7 @@ code.kbd, .rst-content tt.kbd, kbd {
     border: 1px solid #ccc;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 0 0 2px #fff inset;
     color: black;
-    display: inline-block;
+    /* display: inline-block; */
     line-height: 1.2;
     margin: 0 0.1em -0.5em;
     padding: 0 0.3em;
@@ -260,7 +266,7 @@ div.figure, p.caption, span.caption-text {
     font-style: normal;
     font-weight: bold;
     padding-top:  10px;
-    padding-left:  10px;
+    /* padding-left:  10px; */
 }
 
 

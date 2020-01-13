@@ -1,7 +1,7 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 09-01-2020
-:tags: how-to
+:modified: 13-01-2020
+:tags: install, python, pip
 :lang: en-US
 :translation: false
 :status: draft
@@ -11,42 +11,138 @@
 
 .. _install_release_top:
 
-#######
-Install
-#######
+############
+Installation
+############
 
-Alyvix is implemented as a *pip* package in **Python 3**.  Once you check that your system is
-compatible, the instructions for installing Python and Alyvix will guide you through the process.
-
-Note that Alyvix 3 is :warn:`not` backwards compatible with Alyvix 2.
-
+Before installing Alyvix, first check that your setup meets the system requirements.
+If this is the case, you will then need to install Python on your Windows machine
+before installing Alyvix itself.
 
 
-.. _install_release_requirements:
 
-.. topic:: System Requirements
+.. _system_requirements_top:
 
-   You should check that you can meet the following requirements before installing Alyvix:
+===================
+System Requirements
+===================
 
-.. rst-class:: bignums-xxl
+.. note::
 
-#. Hardware
+   Alyvix assumes that you have **one virtual or physical machine** exclusively dedicated to
+   running Alyvix test cases.
 
-   * One virtual or physical machine, exclusively dedicated to running Alyvix test cases
-   * An internet connection
+You should check that your designated machine meets the following requirements before you install
+Alyvix:
+
+.. admonition::  Requirements
+   :class: warning
+
    * Screen color depth:  24-bit RGB or 32-bit RGBA
+   * OS: **Windows 64-bit** 10, 8, 7, Server 2012 or Server 2016 (32-bit versions of Windows
+     are :warn:`not` compatible with Alyvix)
 
-#. Software
 
-   * OS: **Windows 64-bit** 10, 8, 7, Server 2012 or Server 2016
-   * 32-bit versions of Windows are :warn:`not` compatible with Alyvix.
+
+.. _install_release_python_install:
+
+=================
+Installing Python
+=================
+
+Install Python as follows:
+
+.. rst-class:: bignums
+
+#. Download |python-download-link|.
+   Choose an installer for Windows x86-64 (zip, full or web-based, found at the bottom of
+   the page).  Alyvix is :warn:`not` compatible with 32-bit versions of Python.
+
+#. Install Python by right-clicking on the executable and selecting **"Run as administrator"**.
+   The preferred location is :file:`C:\\Python37\\`.  Be sure that Python is added to your path
+   (i.e., the path containing the Python executable is in your *Environment variables* under
+   ``Path``).  The path is correct if the following command returns a version rather than an
+   error message:
+
+   .. code-block:: doscon
+      :class: short-code-block
+
+      C:\> python --version
+      Python 3.7.5
+
+
+
+.. _install_release_alyvix_install:
+
+=================
+Installing Alyvix
+=================
+
+Alyvix itself is installed via *pip*, the official Python package manager.  It places the
+Alyvix executables in the directory :file:`C:\\Python37\\Lib\\site-packages\\alyvix\\`.  Only a
+single step is required (as above, this command prompt must also be **run in Adminstrator mode**,
+or simply reuse the same command prompt):
+
+.. rst-class:: bignums
+
+#. .. raw:: html
+
+      <br />
+
+   .. code-block:: doscon
+      :class: short-code-block
+
+      C:\> pip install alyvix3
+
+You should place your Alyvix test cases in a separate data directory.
+
+
+
+.. _install_upgrade:
+
+================
+Upgrading Alyvix
+================
+
+Only two steps are needed to upgrade to the latest version:
+
+.. rst-class:: bignums
+
+#. Close Alyvix
+
+   * Save all of your currently open projects
+   * Close all Alyvix user interfaces and applications
+   * Terminate all running Alyvix processes
+
+#. Upgrade Alyvix with *pip*
+
+   * Start a Command Prompt **in administrator mode**
+   * Run the following command to download and upgrade to the latest Alyvix master release along
+     with all of its dependencies:
+
+   .. code-block:: doscon
+      :class: short-code-block
+
+      C:\> pip install --upgrade alyvix
+
+
+
+.. _install_release_notes:
+
+=============
+Release Notes
+=============
+
+The :ref:`release notes for each version <install_release_notes_top>` show all new features, bug
+fixes, and security patches contained in each release.  The version number sequence assigned to
+each Alyvix release follows the |semantic-versioning-link| initiative.
+
 
 
 
 .. toctree::
    :maxdepth: 2
-   :name: toc_test
+   :name: toc_install
    :hidden:
 
-   install/installation.rst
    install/release_notes.rst

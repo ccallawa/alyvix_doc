@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 09-01-2020
+:modified: 13-01-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -661,7 +661,4 @@ Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
 
    A section on Sphinx/HTML/CSS
 
-   * CC:  Add new options available from the :file:`_static/css/custom.css` such as ``short-code-block``:
-     ``big-nums, big-nums-xxl, :class:short-bignums, and medium-code-block``
-   * CC:  fasmall from custom.css
    * CC:  Describe how the todo:: role works (local & all)

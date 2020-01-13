@@ -1,3 +1,13 @@
+.. |python-download-link| raw:: html
+
+   <a href="https://www.python.org/downloads/release/python-375/" target="_blank">
+   Python version 3.7.5 <i class="fa fasmall fa-external-link"></i></a>
+
+.. |semantic-versioning-link| raw:: html
+
+   <a href="https://semver.org/" target="_blank">
+   Semantic Versioning <i class="fa fasmall fa-external-link"></i></a>
+
 .. role:: warn
    :class: redbold
 
