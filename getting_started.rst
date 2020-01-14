@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 09-01-2020
+:modified: 14-01-2020
 :tags: getting, started, beginner
 :lang: en-US
 :translation: false
@@ -17,44 +17,53 @@ Getting Started
 
 Before continuing, make sure you've already :ref:`installed Alyvix <install_release_top>`.
 
-For the examples in this section, you'll need to run the Windows Command Prompt and switch to
-the directory where you want to keep your test cases, e.g.:
+For the examples in this section, you'll need to run the Windows Command Prompt
+(**Start > Windows System > Command Prompt**) and switch to the directory where you want to
+keep your test cases, e.g.:
 
 .. code-block:: doscon
    :class: short-code-block
 
-   C:\> cd C:\Users\<username>\Desktop\Alyvix\Testcases\
+   C:\> cd C:\Alyvix\testcases
 
+Each subsequent example builds on the previous example, so it is important to try them in order.
 
-Once you've walked through the steps for the examples below, you'll have a pretty good idea of
-how Alyvix works:
+Once you've walked through the steps for all the examples below, you'll have a pretty good idea of
+how the Alyvix interface works.
 
 .. rst-class:: bignums-xxl
 
 #. :ref:`Check that Alyvix is working <getting_started_example_test>` with a minimal test
 
-   * Show Python and Alyvix are working at the command prompt with ``--version``
+   .. * Show Python and Alyvix are working at the command prompt with ``--version``
+
    * Launch Alyvix Designer from the command prompt with no arguments and exit
 
-#. Open the Windows :ref:`Start Menu <getting_started_example_start>` with Alyvix
+#. Open the Windows :ref:`Start Menu <getting_started_example_start>` with Alyvix Designer and
+   Alyvix Robot
 
    * Build a simple test case that looks for and clicks on the Windows Start button
    * Run the test case, so that Alyvix actually opens the Window Start Menu
 
-#. Open the :ref:`Start Menu, then the Settings App <getting_started_example_settings>` with two
-   separate test cases
+#. Open the :ref:`Start Menu, then the Settings app <getting_started_example_settings>` as two
+   separate Designer test cases
 
    * Build two separate test cases, where the second depends on the results of the first
    * Join them together to create a combined action
    * Execute the test cases, checking that they work together
 
-.. #. A slightly :ref:`more difficult task <getting_started_workflow>`
+#. Use Selector to :ref:`quickly replicate test cases <getting_started_selector_top>`
 
-   * Page with immediate test working instructions
+   * Use Selector to load one of your existing test cases
+   * Replicating the test cases
+   * Use Robot to see the results
 
-.. Once you've mastered these Alyvix basics, why don't you try something a bit harder like
-   a tutorial in our :ref:`Tutorials section <tutorials_top>`?
+#. Use Editor to :ref:`script a simple test case <getting_started_editor_top>`
 
+   * Start Editor with the prior test case
+   * Use Selector to drag & drop some test case objects
+   * Create a script on those objects in Editor
+   * Run the resulting scripted test case
 
 
 .. toctree::
@@ -65,6 +74,5 @@ how Alyvix works:
    getting_started/simple_working_test.rst
    getting_started/windows_start_button.rst
    getting_started/windows_settings.rst
+   getting_started/using_selector.rst
    getting_started/using_editor.rst
-
-.. getting_started/typical_workflow.rst

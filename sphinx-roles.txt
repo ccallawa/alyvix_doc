@@ -8,6 +8,11 @@
    <a href="https://semver.org/" target="_blank">
    Semantic Versioning <i class="fa fasmall fa-external-link"></i></a>
 
+.. |runblue| image:: /pictures/button_run_blue.png
+   :class: inline-image-higher
+   :height: 16
+   :width: 48
+
 .. role:: warn
    :class: redbold
 

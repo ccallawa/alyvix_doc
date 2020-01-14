@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 13-01-2020
+:modified: 14-01-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -454,7 +454,20 @@ to the figure declaration and :file:`custom.css` will add a thin-lined box aroun
    :figwidth: 50 %
    :target: http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure
 
-   The indented structure becomes like a caption.
+   Fig. 1:  The indented structure becomes like a caption.
+
+.. code-block:: rst
+   :class: medium-code-block
+
+   .. figure:: pictures/alyvix_logo_399x333.png
+      :class: outline
+      :scale: 40 %
+      :align: center
+      :alt: This is alternate text.
+      :figwidth: 50 %
+      :target: http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure
+
+      Fig. 1:  The indented structure becomes like a caption.
 
 Some support for figure numbering is available:  Add the line ``numfig = True`` to :file:`conf.py`
 and then before the figure add the line ``.. _label_fig1:``, and then the reference
