@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 09-01-2020
+:modified: 13-01-2020
 :tags: contact
 :lang: en-US
 :translation: false
@@ -23,6 +23,11 @@ Get in Touch
 Agile Tracker
 *************
 
+.. image:: pictures/pt_logo.png
+   :height: 38px
+   :width: 38px
+   :alt: The logo for Pivotal Tracker.
+
 We work with **Agile methods**.  If you'd just like to see what we're up to right now, you can
 read about the **Alyvix stories** currently under development.
 
@@ -35,6 +40,10 @@ read about the **Alyvix stories** currently under development.
 *************
 Support Email
 *************
+
+.. rst-class:: fa fa-at
+
+   \
 
 Would you like to **get in touch with the Alyvix team**?
 Write us an **email if you'd like custom support**, further clarifications, etc.
@@ -49,6 +58,11 @@ Please, don't be shy: just ask if you need any help.  **We love questions and fe
 *************
 Slack Channel
 *************
+
+.. image:: pictures/slack_logo.png
+   :height: 38px
+   :width: 38px
+   :alt: The logo for Slack.
 
 **Chat directly with other Alyvix users** to ask for support or to share your solutions: join the
 Alyvix Slack channel.  Send a request to info@alyvix.com to get your **Alyvix Slack credentials**.
