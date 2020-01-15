@@ -160,6 +160,21 @@ p {
     padding: 5px;
 }
 
+/* Extra effects for images  */
+.inline-image-higher { /* Images inline with the text are a bit too low.  */
+    margin-top: -3px;
+}
+.image-with-border { /* A simple grey border around an image */
+    border: thin #ddd solid;
+}
+.image-with-boxshadow { /* A gradient box shadow around an image */
+    margin-left: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    display: table;
+}
+
+
 
 /* Make guilabel (eventually) fit with the site style */
 .rst-content .guilabel {
@@ -251,6 +266,9 @@ code.kbd, .rst-content tt.kbd, kbd {
     font-size: 40px;
     padding-right: 10px;
     color: #2980C9;    /* The same blue as the RTD theme */
+}
+a:visited .fa::before {
+    color: #9B59B6;
 }
 .fasmall::before {
     font-size: 16px;
@@ -376,10 +394,4 @@ div.highlight pre::-webkit-scrollbar-track {
     padding-bottom: 0px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-}
-
-
-/* Images inline with the text are a bit too low.  */
-.inline-image-higher {
-    margin-top: -3px;
 }

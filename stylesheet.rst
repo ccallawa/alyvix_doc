@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 14-01-2020
+:modified: 15-01-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -430,13 +430,13 @@ This is built as follows:
       :alt: This is alternate text.
 
 You can add shadows and other effects by adding a specific CSS class to :file:`custom.css`
-as follows:
+as follows (note that figures and images have different options):
 
 .. code-block:: rst
    :class: short-code-block
 
    .. image:: pictures/alyvix_logo_399x333.png
-      :class: with-shadow
+        :class: image-with-boxshadow
 
 You can also make a more structured figure.  It assumes you want an image at the top with the
 basic options above.  A paragraph at the same indentation level as the options will be treated as
@@ -668,10 +668,3 @@ And don't forget that you can alias and reuse all of these:
    <kbd style="background-color: rgba(62,155,161); color: #fff; font-weight: 400; padding-left: 6px; padding-right: 6px; border-style: none; border-radius: 7px;">Enter</kbd>
 
 Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
-
-
-.. todo::
-
-   A section on Sphinx/HTML/CSS
-
-   * CC:  Describe how the todo:: role works (local & all)
