@@ -1,7 +1,7 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 09-01-2019
-:tags: concept
+:modified: 15-01-2019
+:tags: concept, glossary
 :lang: en-US
 :translation: false
 :status: draft
@@ -9,33 +9,11 @@
 .. include:: ../sphinx-roles.txt
 
 
-.. _concepts_top:
+.. _glossary_top:
 
-###################
-Concepts & Glossary
-###################
-
-Introductory text
-
-
-
-.. _concepts_concepts:
-
-********
-Concepts
-********
-
-Explanation of major concepts
-
-- Designer is limited by design to 3 groups with 4 elements each.  The color indicates which object#.
-
-
-
-.. _concepts_glossary:
-
-********
+########
 Glossary
-********
+########
 
 .. _glossary_test_case:
 
@@ -57,9 +35,24 @@ Glossary
 
 :Region of Interest:  A *region of interest* (RoI) is ...
 
+.. # To replace:  rectangles
+
+.. _glossary_object_name:
+
+:Object name:  A *object name* is ...
+
+.. note::
+
+   When naming files and objects, you should follow the |python-naming-link|, which basically
+   boil down to the following rules:
+
+   * Use letters, numbers and underscores (instead of dashes)
+   * Start with a letter
+   * Names are case sensitive
+
 
 
 
 .. todo::
 
-   CC:  Everything still to do in Concepts / Glossary
+   * CC:  Everything still to do in the Glossary

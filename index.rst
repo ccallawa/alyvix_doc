@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 09-01-2020
+:modified: 15-01-2020
 :tags: index
 :lang: en-US
 :translation: false
@@ -18,7 +18,8 @@
    getting_started.rst
    test_case_building.rst
    test_case_execution.rst
-   test_case_protocol.rst
+   test_case_data_format.rst
+   basic_concepts.rst
    tutorials.rst
    get_in_touch.rst
    stylesheet.rst

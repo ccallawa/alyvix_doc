@@ -8,6 +8,21 @@
    <a href="https://semver.org/" target="_blank">
    Semantic Versioning <i class="fa fasmall fa-external-link"></i></a>
 
+.. |open-cv-link| raw:: html
+
+   <a href="https://opencv.org/" target="_blank">
+   OpenCV <i class="fa fasmall fa-external-link"></i></a>
+
+.. |tesseract-link| raw:: html
+
+   <a href="https://github.com/tesseract-ocr/tesseract" target="_blank">
+   Tesseract <i class="fa fasmall fa-external-link"></i></a>
+
+.. |python-naming-link| raw:: html
+
+   <a href="https://www.python.org/dev/peps/pep-0008/#naming-conventions" target="_blank">
+   Python Naming Conventions <i class="fa fasmall fa-external-link"></i></a>
+
 .. |runblue| image:: /pictures/button_run_blue.png
    :class: inline-image-higher
    :height: 16
