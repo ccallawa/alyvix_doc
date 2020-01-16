@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 15-01-2020
+:modified: 16-01-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -84,7 +84,7 @@ The Menu Strip
 
 
 
-* .. rst-class:: fa fasmall fa-play-circle
+* .. rst-class:: fa fa-small fa-play-circle
 
      Run
 

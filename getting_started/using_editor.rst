@@ -39,7 +39,7 @@ create much more complex behaviors than we saw when calling Alyvix Robot in
       :target: ../_images/ae_getting_started_example_main.png
 
 #. Now *drag and drop* the :guilabel:`start` object (here it's on the second row) by clicking on
-   the :rawhtml:`<i class="fa fasmall fablack fa-bars"></i>` icon at the left and dragging it to
+   the :rawhtml:`<i class="fa fa-small fa-black fa-bars"></i>` icon at the left and dragging it to
    the large middle panel.  Its scripting element will appear:
 
    .. image:: images/ae_getting_started_example_drag01.png

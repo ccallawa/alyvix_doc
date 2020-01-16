@@ -38,7 +38,7 @@ when we look at Alyvix Editor.
       :target: ../_images/as_getting_started_example_main.png
 
 #. Now select the first row by clicking on the
-   :rawhtml:`<i class="fa fasmall fablack fa-bars"></i>`
+   :rawhtml:`<i class="fa fa-small fa-black fa-bars"></i>`
    icon to the left of the object name :guilabel:`settings`:
 
    .. image:: images/as_getting_started_example_selected.png

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 15-01-2020
+:modified: 16-01-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -285,6 +285,8 @@ punctuation characters will be converted to hyphens in the resulting link index.
 You can create a link to an existing anchor, for instance:
 :ref:`Getting Started <getting_started_top>`.
 Remember to remove the initial underscore from the anchor when you create a link reference.
+Also note that if the target of a link doesn't exist, Sphinx will not add that link, but it
+will still put the (unlinked) link text there.
 
 .. code-block::rst
 
@@ -492,10 +494,10 @@ Just append ``fa-`` to the name of the Font Awesome icon you want.
 
       With text, or use the ``|`` by itself for just the icon (it's always placed as ``::before``)
 
-A single inline icon is also possible by adding ``fasmall`` as long as it's at the start of a
+A single inline icon is also possible by adding ``fa-small`` as long as it's at the start of a
 sentence/bullet:
 
-.. rst-class:: fa fasmall fa-play-circle
+.. rst-class:: fa fa-small fa-play-circle
 
    I'm a ``play-circle`` Font Awesome icon
 
@@ -514,7 +516,7 @@ then think hard about it due to the security concerns of raw HTML):
       <i class="fa fa-inbox"></i>
 
 Here's a naughty example of using a role directive to pass through raw HTML to create an
-:rawhtml:`<i class="fa fasmall fa-plane"></i>` airplane icon.
+:rawhtml:`<i class="fa fa-small fa-plane"></i>` airplane icon.
 
 
 

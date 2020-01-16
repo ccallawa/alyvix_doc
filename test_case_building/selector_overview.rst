@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 15-01-2020
+:modified: 16-01-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -97,8 +97,8 @@ Selector List Headers
 
 The test case object list headers describe the contents of their respective columns.
 The list can be sorted on the first three columns by clicking on the header name, with the
-:rawhtml:`<i class="fa fasmall fa-sort-up" style="vertical-align:bottom;"></i>` and
-:rawhtml:`<i class="fa fasmall fa-sort-down" style="vertical-align:top;"></i>`
+:rawhtml:`<i class="fa fa-small fa-sort-up" style="vertical-align:bottom;"></i>` and
+:rawhtml:`<i class="fa fa-small fa-sort-down" style="vertical-align:top;"></i>`
 icons indicating whether the sort is ascending or descending.
 
 The list headers have the following characteristics:
@@ -148,7 +148,7 @@ you have exited Selector by clicking on the :bbutton:`OK` button.
 
    The values of test case objects in secondary tabs cannot be changed.
 
-The *bars* icon :rawhtml:`<i class="fa fasmall fablack fa-bars"></i>` at the start of each row
+The *bars* icon :rawhtml:`<i class="fa fa-small fa-black fa-bars"></i>` at the start of each row
 allows you to (1) select that test case object, or (2) *drag-and-drop* the test case into the
 :ref:`Editor scripting panel <alyvix_editor_interface_script>` when Selector is not being used
 as a standalone application.

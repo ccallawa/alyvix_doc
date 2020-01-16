@@ -1,12 +1,15 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 15-01-2020
+:modified: 16-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
 :status: draft
 
 .. include:: ../sphinx-roles.txt
+
+.. role:: rawhtml(raw)
+   :format: html
 
 
 .. _alyvix_designer_options:
@@ -165,9 +168,10 @@ Rectangle Type Options
    :target: ../_images/ad_type_submenu_rect_sized.png
 
 * **Button:**  Match a region such as a button within a larger space
-* **Box:**  Match a horizontal region such as a text field where the space is filled up from the
-  left to the right
-* **Window:**  Locate a panel or a window, where the inner and outer space is the same
+* **Box:**  Match a horizontal region such as a text field, where the space is filled up from the
+  left edge to the right edge
+* **Window:**  Match a panel or a window, both horizontally and vertically, where the region of
+  interest and the selection is the same
 
 
 .. todo::
@@ -176,7 +180,9 @@ Rectangle Type Options
 
    * FM:  It's not clear what's the (operational) difference between a Button, Box and Window.
      We'll need to explain it.  **A:  Box resizable one direction, window another.  Try it out.**
-
+   * FM:  What is the black box in the middle of a box or window
+   * FM:  Can you autodetect buttons, boxes and windows?  Right click doesn't work for me.
+   * FM:  Once you've detected a window, what actions make sense to do, move it?
 
 
 .. _alyvix_designer_options_components_text:
@@ -205,27 +211,27 @@ automatically recognized in the screen capture region.
 .. topic:: **Detect**
 
    The text *Detect* mode will determine that a match was correctly made if the text scraped from
-   the RoI matches the condition specified in the first two fields.
+   the region of interest
+   :rawhtml:`<a href="../basic_concepts/glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle" style="vertical-align:top;"></i></a>`
+   matches the condition specified in the first two fields.
 
 * **Mode:**  Determines how the text is interpreted, setting the criterion to one of these
   3 methods:
 
-   * **Regex**  The recognized text is considered matched only if it satisfies the regular
-     expression in the :guilabel:`Regex` field
-   * **Number**  The recognized text is considered matched only if it results in a number that
-     satisfy the condition selected in the :guilabel:`Logic` field (e.g., "greater than zero")
-   * **Date**  The recognized text is considered matched only if it results in day and time that
-     satisfies the time interval selected in the :guilabel:`Logic` field  (e.g., "last hour",
-     "last day", etc.)
+  * **Regex**  The recognized text is considered matched only if it satisfies the regular
+    expression in the :guilabel:`Regex` field.  The regular expression syntax is governed by
+    the |python-regex-lib|.
+  * **Number**  The recognized text is considered matched only if it results in a number that
+    satisfy the condition selected in the :guilabel:`Logic` field (e.g., "greater than zero").
+  * **Date**  The recognized text is considered matched only if it results in day and time that
+    satisfies the time interval selected in the :guilabel:`Logic` field  (e.g., "last hour",
+    "last day", etc.)
 
 
 .. todo::
 
    In Designer, for the Text object type:
 
-   * FM:  What's the difference between *detect* and *map*?  (Is Map for autopopulating a
-     map in Editor with a set of scraped words?)  **A:  No, but similar.  Try it out.**
-     **There is a bug ATM that keeps it from populating.**
    * FM:  What kind of reg-ex patterns are accepted?
 
 
@@ -244,7 +250,7 @@ automatically recognized in the screen capture region.
 
 .. todo::
 
-   * CC:  Need to add a full description of map and detect
+   * CC:  Expand the description of map and link it to the right place in Editor when ready
 
 
 
@@ -291,8 +297,6 @@ optionally set up an immediate mouse action which is unique to each component.
 
    From the Designer Common Options section:
 
-   * FM:  Does it make sense to have a string argument if the mouse action wasn't **Click**?
-     **A:  Yes, other things like Map can use strings (with variables)**
    * FM:  Can these be chained together within a single test case to make combined/multiple actions?  I.e.,
      if one region is detected it will hold, if another is detected it will release.  If so, does
      the order of the components imply the order of the events?  Is there a way to do combinations

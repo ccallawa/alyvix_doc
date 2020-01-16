@@ -270,11 +270,15 @@ code.kbd, .rst-content tt.kbd, kbd {
 a:visited .fa::before {
     color: #9B59B6;
 }
-.fasmall::before {
+.fa-small::before {
     font-size: 16px;
     padding-right: 4px;
 }
-.fablack::before {
+.fa-tiny::before {
+    font-size: 12px;
+    padding-right: 3px;
+}
+.fa-black::before {
     color: black;    /* Override the blue color when necessary */
 }
 p.fa {
