@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 14-01-2020
+:modified: 15-01-2020
 :tags: getting, started, beginner
 :lang: en-US
 :translation: false
@@ -64,6 +64,11 @@ how the Alyvix interface works.
    * Use Selector to drag & drop some test case objects
    * Create a script on those objects in Editor
    * Run the resulting scripted test case
+
+
+.. todo::
+
+   * CC: Add links from the subpages to the basic_concepts page when ready
 
 
 .. toctree::

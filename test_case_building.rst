@@ -1,7 +1,7 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 10-01-2020
-:tags: designer
+:modified: 15-01-2020
+:tags: designer, test cases
 :lang: en-US
 :translation: false
 :status: draft
@@ -21,22 +21,22 @@ are three main tools for building test cases:
 
 .. rst-class:: bignums-xl
 
-#. **Alyvix Designer:**  Create individual test cases by scanning for individual screen regions and
-   acting on interface controls when a match occurs
-#. **Alyvix Selector:**  Easily manipulate (inspect, copy, edit, delete) recorded test cases as
-   objects and view, filter and sort through properties
-#. **Alyvix Editor:**  Script test cases (run, conditionals, and loops) created by Alyvix Designer
-   and pulled in from Alyvix Selector
+#. **Alyvix Designer:**  Define individual test cases consisting of matchable regions that can be
+   used by Alyvix Robot to scan for and act on visual elements of an interface
+#. **Alyvix Selector:**  Easily manipulate (inspect, copy, edit, delete) those test cases as
+   objects and view, filter and sort their properties
+#. **Alyvix Editor:**  Script test cases (run, conditionals, and loops) defined in Alyvix Designer
+   and pulled in via Alyvix Selector
 
-Alyvix gives you two basic approaches to building your test cases:
+Alyvix gives you two basic approaches to building test cases:
 
 * Build up a library of test cases with Designer and Selector
   (:ref:`launching them <test_case_building_designer_launch>` individually from the command
   prompt), and then later integrate them with Alyvix Editor.
 * Use Alyvix Editor from the beginning, which unifies Designer and Selector into a single
-  interface, and lets you script test cases from the beginning.
+  interface, and lets you script test cases from the start.
 
-The :ref:`Test Case Protocol <test_case_protocol_top>` page provides technical details on how
+The :ref:`Test Case Data Format <test_case_data_format_top>` page provides technical details on how
 Alyvix object files are organized and what they contain.
 
 Finally, the :ref:`Getting Started <getting_started_top>` section includes detailed mini-tutorials
@@ -47,9 +47,8 @@ on how to use Alyvix Designer and Editor if you haven't used them before.
 .. _test_case_building_launch:
 .. topic:: Launching Alyvix Editor, Designer and Selector
 
-   The following three applications that help you build test cases can be launched from the
-   Windows Command Prompt or PowerShell.  They inherit the permissions of the shell they were
-   launched from.
+   All three of these applications can be launched from the Windows Command Prompt or PowerShell.
+   They inherit the permissions of the shell they were launched from.
 
 
 
@@ -57,11 +56,8 @@ on how to use Alyvix Designer and Editor if you haven't used them before.
 
 .. topic:: Alyvix Editor
 
-   Alyvix Editor helps you created scripted connections between individual test case objects,
-   allowing you to create more complicated interactions.
-
-If desired you can use Editor alone for creating and running test cases, since it includes
-both Designer and Selector.
+   Alyvix Editor helps you create scripted connections between individual test case objects,
+   allowing you to create more complicated interactions compared to using Designer alone.
 
 The following sections of the Alyvix Guide present further information about Alyvix Editor:
 
@@ -85,19 +81,14 @@ is included in your :guilabel:`Path` environment variable:
 
 The following command line options are available for Editor:
 
-+---------------+-------------+----------------------------------------------+
-| Option        | Shortcut    | Description                                  |
-+---------------+-------------+----------------------------------------------+
-+---------------+-------------+----------------------------------------------+
-| \-\\-filename | -f *<name>* | Supply the file name with no extension       |
-+---------------+-------------+----------------------------------------------+
-| \-\\-help     | -h          | Display command help                         |
-+---------------+-------------+----------------------------------------------+
-| \-\\-verbose  | -v *<n>*    | Set the verbosity level for debugging output |
-| \             | \           | ranging from **0** (min) to **2** (max)      |
-+---------------+-------------+----------------------------------------------+
-| \-\\-window   | -w          | \                                            |
-+---------------+-------------+----------------------------------------------+
++---------------+-------+----------+----------------------------------------------+
+| Option        | Alias | Argument | Description                                  |
++---------------+-------+----------+----------------------------------------------+
+| \-\\-filename | -f    | *<name>* | Supply the file name with no extension       |
++---------------+-------+----------+----------------------------------------------+
+| \-\\-verbose  | -v    | *<n>*    | Set the verbosity level for debugging output |
+|               |       |          | ranging from **0** (min) to **2** (max)      |
++---------------+-------+----------+----------------------------------------------+
 
 
 
@@ -135,23 +126,19 @@ is included in your :guilabel:`Path` environment variable:
 
 The following command line options are available for Designer:
 
-+---------------+-------------+----------------------------------------------+
-| Option        | Shortcut    | Description                                  |
-+---------------+-------------+----------------------------------------------+
-| \-\\-delay    | -d *<n>*    | Wait *n* seconds before grabbing the screen, |
-| \             | \           | giving you time to move windows around       |
-+---------------+-------------+----------------------------------------------+
-| \-\\-filename | -f *<name>* | Supply the file name with no extension       |
-+---------------+-------------+----------------------------------------------+
-| \-\\-help     | -h          | Display command help                         |
-+---------------+-------------+----------------------------------------------+
-| \-\\-object   | -o *<name>* | Supply the Object name                       |
-+---------------+-------------+----------------------------------------------+
-| \-\\-verbose  | -v *<n>*    | Set the verbosity level for debugging output |
-| \             | \           | ranging from **0** (min) to **2** (max)      |
-+---------------+-------------+----------------------------------------------+
-| \-\\-window   | -w          | \                                            |
-+---------------+-------------+----------------------------------------------+
++---------------+-------+----------+----------------------------------------------+
+| Option        | Alias | Argument | Description                                  |
++---------------+-------+----------+----------------------------------------------+
+| \-\\-delay    | -d    | *<n>*    | Wait *n* seconds before grabbing the screen, |
+|               |       |          | giving you time to move windows around       |
++---------------+-------+----------+----------------------------------------------+
+| \-\\-filename | -f    | *<name>* | Supply the file name with no extension       |
++---------------+-------+----------+----------------------------------------------+
+| \-\\-object   | -o    | *<name>* | Supply the Object name                       |
++---------------+-------+----------+----------------------------------------------+
+| \-\\-verbose  | -v    | *<n>*    | Set the verbosity level for debugging output |
+|               |       |          | ranging from **0** (min) to **2** (max)      |
++---------------+-------+----------+----------------------------------------------+
 
 
 
@@ -179,25 +166,14 @@ is included in your :guilabel:`Path` environment variable:
 
 The following command line options are available for Selector:
 
-+---------------+-------------+----------------------------------------------+
-| Option        | Shortcut    | Description                                  |
-+---------------+-------------+----------------------------------------------+
-+---------------+-------------+----------------------------------------------+
-| \-\\-filename | -f *<name>* | Supply the file name with no extension       |
-+---------------+-------------+----------------------------------------------+
-| \-\\-help     | -h          | Display command help                         |
-+---------------+-------------+----------------------------------------------+
-| \-\\-verbose  | -v *<n>*    | Set the verbosity level for debugging output |
-| \             | \           | ranging from **0** (min) to **2** (max)      |
-+---------------+-------------+----------------------------------------------+
-| \-\\-window   | -w          | \                                            |
-+---------------+-------------+----------------------------------------------+
-
-
-.. todo::
-
-   * FM:  When launching alyvix_designer.py, alyvix_selector.py and alyvix_ide.py, what does
-     the ``--window`` option do?  Add it to all three option tables.
++---------------+-------+----------+----------------------------------------------+
+| Option        | Alias | Argument | Description                                  |
++---------------+-------+----------+----------------------------------------------+
+| \-\\-filename | -f    | *<name>* | Supply the file name with no extension       |
++---------------+-------+----------+----------------------------------------------+
+| \-\\-verbose  | -v    | *<n>*    | Set the verbosity level for debugging output |
+|               |       |          | ranging from **0** (min) to **2** (max)      |
++---------------+-------+----------+----------------------------------------------+
 
 
 

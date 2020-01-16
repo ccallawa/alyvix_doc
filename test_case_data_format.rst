@@ -1,28 +1,27 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 09-01-2020
-:tags: designer
+:modified: 15-01-2020
+:tags: test cases, data format
 :lang: en-US
 :translation: false
 :status: draft
 
 .. include:: sphinx-roles.txt
-.. include:: sphinx-roles.txt
 
 
-.. _test_case_protocol_top:
+.. _test_case_data_format_top:
 
-******************
-Test Case Protocol
-******************
+*********************
+Test Case Data Format
+*********************
 
 Alyvix test case objects are stored as JSON files.  Each time you exit Designer by pressing the
 :guilabel:`OK` button, or modify an object in Editor, the JSON object representing the test case
-will be saved in the current directory under the file name:
+is saved in the current directory under the file name:
 
 :file:`<filename>.alyvix`
 
-where ``filename`` is the value of the ``-f`` parameter passed when starting Designer.
+where ``filename`` is the value of the ``-f`` parameter passed when starting Editor or Designer.
 
 If you then call Alyvix Robot with that file as a parameter, when it finishes it will create a new
 file based on the original test case, but with the resulting measures included.  The file name will
@@ -36,7 +35,7 @@ For example:
 
 
 
-.. _alyvix_designer_test_case_json:
+.. _test_case_data_format_json:
 
 .. topic:: Alyvix Test Case Object JSON Structure
 
@@ -85,5 +84,5 @@ The following JSON structure illustrates the high-level structure of the test ca
 
    * FM:  Why is there a second (or even third) screenshot in the .json file?  Is it a dump of the
      entire screen when a component was detected?
-   * FM:  Why is the word "protocol" used in "test case protocol"?  It's usually a word used
-     in networking, medicine or diplomacy, not data structures.
+     **A:  One SS for each test case object, always.  A regular dump as when Designer is called**
+

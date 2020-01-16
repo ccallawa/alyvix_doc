@@ -1,7 +1,7 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 10-01-2020
-:tags: robot
+:modified: 15-01-2020
+:tags: robot, execution, test cases
 :lang: en-US
 :translation: false
 :status: draft
@@ -26,15 +26,15 @@ There are two principal modes for interacting with Alyvix Robot:
 * Automatically call Robot, for instance via scripting, at regular intervals
 
 In both cases, the main idea is to execute one test case object at a time, typically
-:ref:`combining them in series <getting_started_example_settings_exec>`, treating them as
+:ref:`combining them in series <getting_started_example_settings>`, treating them as
 reusable building blocks.
 
 When executed manually, the test case object names are passed with the *object* (``-o``) option.
 In this case, the *verbosity* (``-v``) parameter can provide additional information that can
 help you should you need to debug your test cases.
 
-When scripting automatically, the :ref:`test case protocol object <test_case_protocol_top>`
-(``.alyvix`` file) can similarly have multiple case names in the ``script`` field in order to
+When scripting automatically, the :ref:`test case object <test_case_data_format_top>`
+(``.alyvix`` file) can similarly have multiple case names in its ``script`` field in order to
 call multiple test cases in sequence.
 
 

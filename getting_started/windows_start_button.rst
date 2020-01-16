@@ -54,7 +54,7 @@ using Alyvix.
       :target: ../../getting_started/images/gs_click_action.png
 
 #. Save the test case by clicking the :bbutton:`OK` button at the bottom left.  Since we started
-   Designer with the option ``-f start-test``, :ref:`the resulting file <test_case_protocol_top>`
+   Designer with the option ``-f start-test``, :ref:`the resulting file <test_case_data_format_top>`
    will be called :file:`start-test.alyvix`.
 
 #. Now call Alyvix Robot with the same parameters (file name and object name) as for Designer
