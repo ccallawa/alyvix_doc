@@ -1,7 +1,7 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 10-01-2020
-:tags: selector overview
+:modified: 15-01-2020
+:tags: selector, gui, overview
 :lang: en-US
 :translation: false
 :status: draft
@@ -14,9 +14,9 @@
 
 .. _alyvix_selector_top:
 
-***************************
-Selector Interface Overview
-***************************
+****************************
+Selector: Interface Overview
+****************************
 
 Alyvix Selector allows you to organize individual test cases, copy test case objects from one
 file to another, and visualize and change basic test case parameters.  Unlike Designer, you can
@@ -41,13 +41,9 @@ You can start Alyvix Selector by itself from the command prompt (you can find in
 
 You will then see the Selector interface as shown here:
 
-.. figure:: images/as_main_screen_numbered.png
-   :align: center
+.. image:: images/as_main_screen_numbered.png
    :alt: The Alyvix Selector interface.
-   :figwidth: 100%
    :target: ../../test_case_building/images/as_main_screen_numbered.png
-
-   Fig. 1:  The Alyvix Selector interface.
 
 The principle interface elements are:
 
@@ -55,7 +51,7 @@ The principle interface elements are:
 .. rst-class:: bignums
 
 #. The **file tabs** show the primary tab and any additional opened :file:`.alvyix`
-   :ref:`test case files <test_case_protocol_top>`.  Switching between tabs shows the existing
+   :ref:`test case files <test_case_data_format_top>`.  Switching between tabs shows the existing
    test case objects that each file contains.  New files can be loaded by clicking on the
    :nobutton:`+` button.  Similarly, the :nobutton:`x` button next to a non-primary tab will
    remove that tab (note that you cannot remove the primary tab).
@@ -72,7 +68,7 @@ The principle interface elements are:
 #. The **test case object actions** act on the
    :ref:`currently selected test case objects <alyvix_selector_interface_object_actions>`
    in the list.
-#. The :bbutton:`OK` and :nobutton:`Cancel` buttons will exit Alyvix Selector, either saving or
+#. The :bbutton:`OK` and :nobutton:`CANCEL` buttons will exit Alyvix Selector, either saving or
    discarding any changes, respectively.
 
 
@@ -81,15 +77,15 @@ The principle interface elements are:
    In the Selector interface main section:
 
    * FM: What happens if you accidentally open the same file twice (primary+secondary or
-     secondary+secondary tabs)?
+     secondary+secondary tabs)?  **A: Not a problem, by design**
    * FM:  Using "COPY" in (4), what is copied and how do you paste it?  How is it different
-     than the "DUPLICATE" button in (6)?
+     than the "DUPLICATE" button in (6)? **A: copy only copies the name**
    * FM:  Search seems to work only for the *Name* and *Date modified* fields, is that expected?
+     **A:  Yes**
    * FM:  Unlike Designer, you can right-click in Selector and Editor and it brings up a Chrome menu.
      Is Chrome required to run Alyvix?
-   * FM:  Why can't you remove the first tab?  If it's fundamental to how Selector works,
-     that should probably be mentioned in the Selector overview since the default idea of
-     tabs is that they are all equivalent.
+     **A:  No, known issue, don't mention**
+
 
 
 
@@ -125,9 +121,12 @@ The list headers have the following characteristics:
    In the Selector list headers section:
 
    * FM+CC:  What is a transaction group (2nd column)?  We need to describe it, Warning and Critical.
+     **Tgroup is a semantic human-readable note allowing you to group similar actions like Login pages, then Add Contact pages, then Pay pages**
+     **Then you can sort it by those groups**
    * FM:  You can set Warning and Critical in the interface, but it disappears after a few seconds
      (perhaps related to the break/measure reset we saw in our meeting on Editor?)  Is this the
      place you are supposed to set these values, not in Designer?
+     **A:  Being fixed, only need the description**
 
 
 
@@ -149,8 +148,8 @@ you have exited Selector by clicking on the :bbutton:`OK` button.
 
    The values of test case objects in secondary tabs cannot be changed.
 
-The *bars* icon :rawhtml:`<i class="fa fasmall fa-bars"></i>` at the start of each row allows you
-to (1) select that test case object, or (2) *drag-and-drop* the test case into the
+The *bars* icon :rawhtml:`<i class="fa fasmall fablack fa-bars"></i>` at the start of each row
+allows you to (1) select that test case object, or (2) *drag-and-drop* the test case into the
 :ref:`Editor scripting panel <alyvix_editor_interface_script>` when Selector is not being used
 as a standalone application.
 
@@ -166,8 +165,7 @@ background, and can then be used with the actions described in the next section 
      object then get automatically imported into the file of the primary tab?  When I did it,
      the new object didn't appear in the primary tab.  Is it also a requirement to use the
      Import button when doing this?
-   * CC: Need to update the screenshot to include the "three line" icon now at the left.  Make
-     sure no new changes are coming soon.
+     **A:  Being fixed as a future feature**
 
 
 

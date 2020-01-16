@@ -1,7 +1,7 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 10-01-2020
-:tags: editor overview
+:modified: 15-01-2020
+:tags: editor, gui, overview
 :lang: en-US
 :translation: false
 :status: draft
@@ -11,9 +11,9 @@
 
 .. _alyvix_editor_interface_top:
 
-*************************
-Editor Interface Overview
-*************************
+**************************
+Editor: Interface Overview
+**************************
 
 Alyvix Editor ... (description) ...
 
@@ -27,14 +27,9 @@ You can start Alyvix Editor by itself from the command prompt (you can find info
 
 You will then see the Editor interface as shown here, which includes Selector and Designer:
 
-.. figure:: images/ae_full_interface_numbered.png
-   :align: center
+.. image:: images/ae_full_interface_numbered.png
    :alt: Alyvix Editor with Designer and Selector.
-   :figwidth: 95%
    :target: ../../test_case_building/images/ae_full_interface_numbered.png
-
-   Fig. 1:  Alyvix Editor with Designer and Selector.
-
 
 .. rst-class:: bignums
 
@@ -48,28 +43,23 @@ You will then see the Editor interface as shown here, which includes Selector an
 
    * FM:  Renaming in Selector doesn't automatically rename in Editor Script window.  It changes color
      as if it thinks it were from "SECTIONS", but it's not in that section.  Bug or intentional?
+     **A: is a feature that will be added soon**
    * FM:  Deleting a section in Editor pops up a JavaScript Q with bad English:
      "Are you sure {you want} to delete section: [object Object]?"  Similarly for the "REMOVE"
      option which asks "Are you sure {you want} to delete steps?"  What's the procedure for informing
      the team about English errors in labels, buttons, and other GUI elements?
+     **A:  Informed for Delete in Editor**
    * FM:  And what happens if you delete a test case object in Selector that is used in Editor?
      Does that behavior depend on whether it is run standalone or as part of Editor?
-   * FM:  Is the Selector interface the same regardless of whether it is run standalone or
-     run as part of Editor?
    * CC:  Designer is updated when a Selector object is selected, but not when a script element
      is selected.
 
 
 The principle interface elements exclusive to the Editor (apart from Selector and Designer) are:
 
-.. figure:: images/ae_main_screen_numbered.png
-   :align: center
+.. image:: images/ae_main_screen_numbered.png
    :alt: The Alyvix Editor interface.
-   :figwidth: 90%
    :target: ../../test_case_building/images/ae_main_screen_numbered.png
-
-   Fig. 2:  The Alyvix Editor components.
-
 
 .. rst-class:: bignums
 

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 09-01-2020
+:modified: 15-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -11,25 +11,14 @@
 
 .. _alyvix_designer_options:
 
-**************************
-Designer Interface Options
-**************************
+***************************
+Designer: Interface Options
+***************************
 
-The parameters and settings for Alyvix Designer are divided into those that affect an entire
-test case, and those that affect a specific component type for a group or component.
+The parameters and settings for Alyvix Designer are divided into:
 
-All options shown in this panel are used during the :ref:`execution <test_case_execution_top>`
-of a test case, not when creating it.
-
-.. note::
-
-   When naming files and objects, you should follow the
-   `Python Naming Conventions <https://www.python.org/dev/peps/pep-0008/#naming-conventions>`_,
-   which basically boil down to the following rules:
-
-   * Use letters, numbers and underscores (instead of dashes)
-   * Start with a letter
-   * Names are case sensitive
+* **Test Case Options**, which affect an entire test case
+* **Component Options**, which affect a specific component type for a group or component
 
 
 
@@ -39,26 +28,15 @@ of a test case, not when creating it.
 Test Case Options
 =================
 
-At the top of the Alyvix Designer panel (see Figure 1) are the options for the test case as a whole.
+At the top of the Alyvix Designer panel are the options that pertain to the test case as a whole:
 
-.. figure:: images/ad_testcase_options_sized.png
-   :class: outline
+.. image:: images/ad_testcase_options_sized.png
+   :class: image-with-boxshadow
    :alt: The test case options.
-   :figwidth: 80%
    :target: ../../test_case_building/images/ad_testcase_options_sized.png
 
-   Fig. 1:  The test case options.
-
-
-.. todo::
-
-   * FM:  In the Designer interface, ``timeout (s)`` in English implies you're trying to say
-     either "timeout" or "timeouts".  If you mean seconds, you should put "sec" instead to
-     avoid the ambiguity.
-
-
-The **Object name** is the reference name (not the file name) of the test case object allowing the
-test case to be used in test case scripts.
+The :ref:`Object name <glossary_object_name>` is the reference name (not the file name)
+of the test case object allowing the test case to be used in test case scripts.
 
 There are also three **test case parameters** that affect how the
 :ref:`screen capture elements <alyvix_designer_component_tree_types>` in its component tree
@@ -70,21 +48,21 @@ are detected, regardless of their type, and what happens if they fail to be dete
    * **Appear:**  Alyvix will continuously try to detect any of the main group components (*image*
      or *rect*) on screen if it was not already there when the test case started
    * **AppearDisappear:**  Alyvix will see whether any of the main group components appears,
-     and then disappears
+     and then disappears within the timeout limit
    * **Disappear:**  If any of the main group components was present when the test case started,
      Alyvix will detect when one is no longer visible
 
-     .. figure:: images/appeardisappear.png
-        :class: outline
-        :alt: The test case options.
-        :figwidth: 56%
+     .. image:: images/appeardisappear.png
+        :class: image-with-boxshadow
+        :height: 120
+        :alt: Visual appearance and disappearance timeline.
         :target: ../../test_case_building/images/appeardisappear.png
 
-* **Timeout:**  The chosen detection condition will be continuously checked until this number
-  of seconds is reached
-* **Break:**  If this option is ticked, then a timeout will cause the test case to fail, and
-  if it is part of a series of test cases, then the entire series will fail.  If not ticked,
-  it will report failure but let the series of test cases continue.
+* **Timeout:**  The chosen detection condition will be continuously checked for this number
+  of seconds
+* **Break:**  If this option is checked, then a timeout will cause the test case to fail, and
+  if it is part of a series of test cases, then the entire series will fail.  If not checked,
+  it will report the failure but continue with the next test cases in the series.
 
 
 
@@ -94,9 +72,9 @@ are detected, regardless of their type, and what happens if they fail to be dete
 Component Options
 =================
 
-Below the component tree you can find the options that affect a specific instance of an component
+Below the component tree you can find the options that affect a specific instance of a component
 type used in an Alyvix test case.  Whenever you select a row in the component tree, these options
-will be updated to reflect the currently assigned options to that row's component.
+will be updated to reflect the options currently assigned to that row's component.
 
 
 
@@ -111,32 +89,30 @@ The *root* element corresponds to the :ref:`execution <test_case_execution_top>`
 be invoked when Alyvix Robot starts, before any detection algorithms are run.  This allows you
 to start or close a particular application before Alyvix begins looking for any graphical elements.
 
+
 .. todo::
 
    In Designer with the root node selected:
 
-   * FM:  What happens if the ``Run`` option is set with no path?
-   * FM:  What happens if the arguments aren't right?  Does it generate a runtime error?
-   * FM:  Are the arguments fixed, or can you include variables?
+   * FM:  Need to give CC a full list of allowed variables and their syntax so it can be included here
 
-.. figure:: images/ad_root_options_sized.png
-   :class: outline
+
+.. image:: images/ad_root_options_sized.png
+   :class: image-with-boxshadow
    :alt: Options for the root element.
-   :figwidth: 80%
    :target: ../../test_case_building/images/ad_root_options_sized.png
 
-   Fig. 2:  Options for the *root* element.
-
-The **Call** option shown in Figure 2 allows you to select an application either to start or
-terminate when the test case begins.
+The **Call** option allows you to select an application to start or to terminate at the moment
+test case execution begins.
 
 * The **Run** option lets you start a new application before beginning the test case.  For instance,
-  you could start a browser session with the URL as an argument.  The two parameters it takes are:
+  you could start a web session with a particular browser and with the URL as an argument.  Its
+  two parameters are:
 
-   * **Path:**  Either write the full path for an executable file in your environment, or use
-     the :nobutton:`SELECT` button to bring up a file selection dialog.
-   * **Arguments:**  Here you can enter zero or more arguments to pass to the application when
-     it starts up.
+   * **Path:**  Use the :nobutton:`SELECT` button to bring up a file selection dialog, or else
+     write the full path for an executable file in your environment
+   * **Arguments:**  Here you can enter any number of arguments to pass to the application when
+     it starts up (for instance, a URL for a browser)
 
 * The **Kill** option allows you instead to select a currently running process to terminate.
   It provides a dropdown named **Process**, populated with all running processes, and a filtering
@@ -153,30 +129,20 @@ Image Type Options
 .. rst-class:: fa fa-image
 
    The *image* component corresponds to a
-   :ref:`matchable image region <alyvix_designer_component_tree_types>`
-   on the captured screen, such as an icon.  As shown in Figure 3, it has the following
-   visual recognition parameters:
+   :ref:`matchable image region <alyvix_designer_component_tree_types>` on the captured screen,
+   such as an icon.  As shown here, it has the following visual recognition parameters:
 
-* **Match:**  Only recognize an image that is exactly the same as the one selected during screen capture.
-* **Color:**  Match a region that has the same color as the area selected in the screen capture.
-* **Shape:**  Match the same shape as a detailed object in the screen capture region.
-
-.. figure:: images/ad_type_submenu_image_sized.png
-   :class: outline
+.. image:: images/ad_type_submenu_image_sized.png
+   :class: image-with-boxshadow
    :alt: Options for the image type.
-   :figwidth: 80%
    :target: ../../test_case_building/images/ad_type_submenu_image_sized.png
 
-   Fig. 3:  Options for the *image* type.
-
-
-.. todo::
-
-   In Designer for the Image object type:
-
-   * FM:  For the color match, does it have to be exact?  Can it match a gradient?  The same size?
-   * FM:  For the shape match, is it done by openCV?  Are default parameters used?  Can we just
-     refer readers to the OpenCV documentation without repeating it here?
+* **Match:**  Only recognize an image that is exactly the same as the one selected during screen
+  capture
+* **Color:**  Match a region that has the same color (within a given tolerance determined by
+  OpenCV) as the area selected in the screen capture
+* **Shape:**  Match the same shape as the contours of the object in the screen capture region,
+  regardless of its color
 
 
 
@@ -190,20 +156,18 @@ Rectangle Type Options
 
    The *rect* component corresponds to a
    :ref:`matchable rectangular region <alyvix_designer_component_tree_types>`
-   on the captured screen, such as a button, text box, panel or window.  As shown in Figure 4,
+   on the captured screen, such as a button, text box, panel or window.  As shown here,
    it has the following visual recognition parameters:
 
-* **Button:**  Match a region with button-style edges and text in the middle.
-* **Box:**  Recognize a text field or box.
-* **Window:**  Locate a panel or a window.
-
-.. figure:: images/ad_type_submenu_rect_sized.png
-   :class: outline
+.. image:: images/ad_type_submenu_rect_sized.png
+   :class: image-with-boxshadow
    :alt: Options for the rect type.
-   :figwidth: 80%
    :target: ../../test_case_building/images/ad_type_submenu_rect_sized.png
 
-   Fig. 4:  Options for the *rect* type.
+* **Button:**  Match a region such as a button within a larger space
+* **Box:**  Match a horizontal region such as a text field where the space is filled up from the
+  left to the right
+* **Window:**  Locate a panel or a window, where the inner and outer space is the same
 
 
 .. todo::
@@ -211,7 +175,7 @@ Rectangle Type Options
    In Designer, for the Rectangle object type:
 
    * FM:  It's not clear what's the (operational) difference between a Button, Box and Window.
-     We'll need to explain it.
+     We'll need to explain it.  **A:  Box resizable one direction, window another.  Try it out.**
 
 
 
@@ -224,63 +188,63 @@ Text Type Options
 .. rst-class:: fa fa-font
 
    The *text* component corresponds to a
-   :ref:`matchable rectangular region <alyvix_designer_component_tree_types>`
-   on the captured screen, such as a label, title or input text.  As shown in Figure 5, it has the
-   following visual recognition parameters, which vary depending on the type selected.  For both
-   types, the :guilabel:`Scrape` field is the text that was automatically recognized in the screen
-   capture region.
+   :ref:`matchable region of interest <alyvix_designer_component_tree_types>` on the captured
+   screen, such as a label, title or text in an input field.  As shown below, it has the
+   following visual recognition parameters, which vary depending on the type selected.
 
-**Detect**
+For both the *Detect* and *Map* types, the :guilabel:`Scrape` field displays the text that was
+automatically recognized in the screen capture region.
 
-* **Mode:**  Determines how the text is interpreted, using these 3 methods:
+.. image:: images/ad_type_submenu_text_detect_sized.png
+   :class: image-with-boxshadow
+   :alt: Options for the detect text type.
+   :target: ../../test_case_building/images/ad_type_submenu_text_detect_sized.png
+
+
+.. _alyvix_designer_options_components_text_detect:
+.. topic:: **Detect**
+
+   The text *Detect* mode will determine that a match was correctly made if the text scraped from
+   the RoI matches the condition specified in the first two fields.
+
+* **Mode:**  Determines how the text is interpreted, setting the criterion to one of these
+  3 methods:
 
    * **Regex**  The recognized text is considered matched only if it satisfies the regular
-     expression in the :guilabel:`Regex` field.
+     expression in the :guilabel:`Regex` field
    * **Number**  The recognized text is considered matched only if it results in a number that
-     satisfy the condition selected in the :guilabel:`Logic` field (e.g., "more than zero")
+     satisfy the condition selected in the :guilabel:`Logic` field (e.g., "greater than zero")
    * **Date**  The recognized text is considered matched only if it results in day and time that
      satisfies the time interval selected in the :guilabel:`Logic` field  (e.g., "last hour",
      "last day", etc.)
-
-* **Scrape:**  This field contains the text detected ("scraped") by OCR in the selected capture region
 
 
 .. todo::
 
    In Designer, for the Text object type:
 
-   * FM:  The **Number** dropdown for ``Logic`` only has "more than zero" as an option
-     ("greater than zero").  Will there be more eventually?
    * FM:  What's the difference between *detect* and *map*?  (Is Map for autopopulating a
-     map in Editor with a set of scraped words?)
-   * FM:  "Scrap" is not the right word.  How about "Detected" or "Recognized"?  How do I report
-     English problems with GUI labels?
+     map in Editor with a set of scraped words?)  **A:  No, but similar.  Try it out.**
+     **There is a bug ATM that keeps it from populating.**
+   * FM:  What kind of reg-ex patterns are accepted?
 
 
-.. figure:: images/ad_type_submenu_text_detect_sized.png
-   :class: outline
-   :alt: Options for the detect text type.
-   :figwidth: 80%
-   :target: ../../test_case_building/images/ad_type_submenu_text_detect_sized.png
 
-   Fig. 5:  Options for the *detect* text type.
+.. _alyvix_designer_options_components_text_map:
+.. topic:: **Map**
 
-**Map**
+   The text *Map* mode will collect the individual words scraped from the region of interest
+   and make them available to the :ref:`map interface in Editor <alyvix_editor_interface_top>`.
 
-.. figure:: images/ad_type_submenu_text_map_sized.png
-   :class: outline
+.. image:: images/ad_type_submenu_text_map_sized.png
+   :class: image-with-boxshadow
    :alt: Options for the map text type.
-   :figwidth: 80%
    :target: ../../test_case_building/images/ad_type_submenu_text_map_sized.png
-
-   Fig. 6:  Options for the *map* text type.
 
 
 .. todo::
 
-   * FM:  The dropdown for ``Map`` shows "None" as the only option.   Is it a dropdown that will
-     be filled with later code work, or is it a reference to a map name in Editor?
-   * FM+CC:  Need to add a full description of map and detect
+   * CC:  Need to add a full description of map and detect
 
 
 
@@ -293,13 +257,10 @@ Common Options
 For all group and component object types, once a match on the screen has been found, you can
 optionally set up an immediate mouse action which is unique to each component.
 
-.. figure:: images/ad_action_string_sized.png
-   :class: outline
+.. image:: images/ad_action_string_sized.png
+   :class: image-with-boxshadow
    :alt: The mouse action selection dropdown.
-   :figwidth: 80%
    :target: ../../test_case_building/images/ad_action_string_sized.png
-
-   Fig. 7:  The mouse action selection dropdown.
 
 * **Action:**  Create a mouse event corresponding to one of the following types.  By default, the
   mouse position will be set to the center of the selected region.
@@ -331,13 +292,14 @@ optionally set up an immediate mouse action which is unique to each component.
    From the Designer Common Options section:
 
    * FM:  Does it make sense to have a string argument if the mouse action wasn't **Click**?
-   * FM:  Can these be chained together within a single test case to make combined actions?  I.e.,
+     **A:  Yes, other things like Map can use strings (with variables)**
+   * FM:  Can these be chained together within a single test case to make combined/multiple actions?  I.e.,
      if one region is detected it will hold, if another is detected it will release.  If so, does
      the order of the components imply the order of the events?  Is there a way to do combinations
      of events/strings if only one component is detected?
    * FM:   Can you do a release with both "Set Point" and a direction, or does "Set Point" only work
      if the direction is "None"?
-   * FM:  Do **Hold**/**Release** only work with the left mouse button?
+   * FM:  Do **Hold**/**Release** only work with the left mouse button?  **A: Yes**
    * FM:  Is the detection interval still set at 0.5 seconds as described in the 2.7.5 doc?  Is
      it still configurable?  It includes the 0.00s mark, right, not just starting at 0.5s?
 
