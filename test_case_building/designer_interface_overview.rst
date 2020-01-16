@@ -37,7 +37,7 @@ will track the mouse as shown here:
    :class: image-with-boxshadow
    :height: 150
    :alt: The initial Alyvix Designer selection cursor
-   :target: ../../test_case_building/images/ad_main_screen_edit_message.png
+   :target: ../_images/ad_main_screen_edit_message.png
 
 .. tip::  Having a second monitor will enable you to mark regions of interest with Alyvix on one
    screen, while the second screen can still be used for other applications.
@@ -53,7 +53,7 @@ screenshot.  The principle interface elements are:
 .. image:: images/ad_main_screen_initial_numbered.png
    :height: 500
    :alt: The empty Alyvix Designer interface
-   :target: ../../test_case_building/images/ad_main_screen_initial_numbered.png
+   :target: ../_images/ad_main_screen_initial_numbered.png
 
 .. rst-class:: bignums
 
@@ -89,7 +89,7 @@ Start button.  It should now be similar to the middle image here:
 
 .. image:: images/ad_screen_capture_combined.png
    :alt: Before and after selecting a rectangle in the screen capture.
-   :target: ../../test_case_building/images/ad_screen_capture_combined.png
+   :target: ../_images/ad_screen_capture_combined.png
 
 Next, select a new area in the search box to the right of the Start button, staying in the first
 (purple/red) group.  This time you will see two red boxes rather than one.  You can resize them
@@ -113,7 +113,7 @@ from :guilabel:`Image`):
 .. image:: images/ad_main_screen_new_component2.png
    :class: image-with-boxshadow
    :alt: Adding a first component in the Alyvix Designer interface
-   :target: ../../test_case_building/images/ad_main_screen_new_component2.png
+   :target: ../_images/ad_main_screen_new_component2.png
 
 Our first region selection automatically created this group, while our second selection created
 a component within that group.

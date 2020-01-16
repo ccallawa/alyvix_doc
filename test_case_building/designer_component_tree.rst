@@ -41,7 +41,7 @@ Structure of the Component Tree
 
 .. image:: images/ad_main_screen_initial_top.png
    :alt: An empty component tree
-   :target: ../../test_case_building/images/ad_main_screen_initial_top.png
+   :target: ../_images/ad_main_screen_initial_top.png
 
 When Alyvix Designer is first launched, it will capture the entire screen to use as a basis for
 locating visual elements.  This screen capture is represented in the component tree with the capital
@@ -55,7 +55,7 @@ or remove one.
 
 .. image:: images/ad_main_screen_components.png
    :alt: A tree with a single root, group and component
-   :target: ../../test_case_building/images/ad_main_screen_components.png
+   :target: ../_images/ad_main_screen_components.png
 
 If you now select a region, a copy of that region will appear in red in the component tree.  This
 region represents a potential *group* of subregions called *components*, although depending on
@@ -83,7 +83,7 @@ Alyvix's visual recognition capability is based on two well-known open source sy
 
 .. image:: images/ad_component_types.png
    :alt: A tree with a single root, group and component
-   :target: ../../test_case_building/images/ad_component_types.png
+   :target: ../_images/ad_component_types.png
 
 Alyvix uses these tools to visually detect three types of objects:
 

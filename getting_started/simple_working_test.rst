@@ -33,7 +33,7 @@ Testing that Alyvix is Working
    .. image:: ../test_case_building/images/ad_crosshairs.png
       :width: 40%
       :alt: Check that the Alyvix Designer crosshairs are visible.
-      :target: ../../test_case_building/images/ad_crosshairs.png
+      :target: ../_images/ad_crosshairs.png
 
    |
 
@@ -42,7 +42,7 @@ Testing that Alyvix is Working
 
    .. image:: ../test_case_building/images/ad_main_screen_initial.png
       :alt: Testing that Alyvix Designer is working.
-      :target: ../../test_case_building/images/ad_main_screen_initial.png
+      :target: ../_images/ad_main_screen_initial.png
 
 #. Finally, press :nobutton:`CANCEL` at the bottom of the interface to exit.  When you cancel
    a session, no files are saved.

@@ -35,7 +35,7 @@ when we look at Alyvix Editor.
 
    .. image:: images/as_getting_started_example_main.png
       :alt: The initial screen in Alyvix Selector
-      :target: ../../getting_started/images/as_getting_started_example_main.png
+      :target: ../_images/as_getting_started_example_main.png
 
 #. Now select the first row by clicking on the
    :rawhtml:`<i class="fa fasmall fablack fa-bars"></i>`
@@ -43,14 +43,14 @@ when we look at Alyvix Editor.
 
    .. image:: images/as_getting_started_example_selected.png
       :alt: Selecting a row in Alyvix Selector
-      :target: ../../getting_started/images/as_getting_started_example_selected.png
+      :target: ../_images/as_getting_started_example_selected.png
 
 #. Next click on the :wbutton:`DUPLICATE` button at the bottom right, which will copy the
    :guilabel:`settings` object and call it :guilabel:`settings_copy`:
 
    .. image:: images/as_getting_started_example_duplicated.png
       :alt: Duplicating a row in Alyvix Selector
-      :target: ../../getting_started/images/as_getting_started_example_duplicated.png
+      :target: ../_images/as_getting_started_example_duplicated.png
 
 #. Let's set a filter so only our new copy is visible.  Go to the :guilabel:`Search` field
    at the bottom and type ``copy``.  Right after you type the first letter ``c``, the objects
@@ -58,7 +58,7 @@ when we look at Alyvix Editor.
 
    .. image:: images/as_getting_started_example_filtered.png
       :alt: Duplicating a row in Alyvix Selector
-      :target: ../../getting_started/images/as_getting_started_example_filtered.png
+      :target: ../_images/as_getting_started_example_filtered.png
 
 #. Now remove this test case object by clicking on the :rbutton:`REMOVE` button.
 

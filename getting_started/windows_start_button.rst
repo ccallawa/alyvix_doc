@@ -35,14 +35,14 @@ using Alyvix.
    .. image:: images/gs_screen_capture_start_button.png
       :width: 55%
       :alt: Selecting the Windows Start button.
-      :target: ../../getting_started/images/gs_screen_capture_start_button.png
+      :target: ../_images/gs_screen_capture_start_button.png
 
 #. With our region still selected, press the :kbd:`Escape` key.  The Designer interface will
    appear with our region containing the Start button as shown:
 
    .. image:: images/gs_start_selected.png
       :alt: The Windows Start button in Alyvix Designer
-      :target: ../../getting_started/images/gs_start_selected.png
+      :target: ../_images/gs_start_selected.png
 
 #. Towards the bottom of the panel under the label :guilabel:`Action` there is a dropdown option
    with the value ``None``.  Change that value from ``None`` to ``Click``.  A small red dot will
@@ -51,7 +51,7 @@ using Alyvix.
 
    .. image:: images/gs_start_click_action.png
       :alt: The click point on the Windows Start button
-      :target: ../../getting_started/images/gs_click_action.png
+      :target: ../_images/gs_click_action.png
 
 #. Save the test case by clicking the :bbutton:`OK` button at the bottom left.  Since we started
    Designer with the option ``-f start-test``, :ref:`the resulting file <test_case_data_format_top>`

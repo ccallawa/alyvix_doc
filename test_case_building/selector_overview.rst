@@ -43,7 +43,7 @@ You will then see the Selector interface as shown here:
 
 .. image:: images/as_main_screen_numbered.png
    :alt: The Alyvix Selector interface.
-   :target: ../../test_case_building/images/as_main_screen_numbered.png
+   :target: ../_images/as_main_screen_numbered.png
 
 The principle interface elements are:
 

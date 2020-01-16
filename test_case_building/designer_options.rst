@@ -33,7 +33,7 @@ At the top of the Alyvix Designer panel are the options that pertain to the test
 .. image:: images/ad_testcase_options_sized.png
    :class: image-with-boxshadow
    :alt: The test case options.
-   :target: ../../test_case_building/images/ad_testcase_options_sized.png
+   :target: ../_images/ad_testcase_options_sized.png
 
 The :ref:`Object name <glossary_object_name>` is the reference name (not the file name)
 of the test case object allowing the test case to be used in test case scripts.
@@ -56,7 +56,7 @@ are detected, regardless of their type, and what happens if they fail to be dete
         :class: image-with-boxshadow
         :height: 120
         :alt: Visual appearance and disappearance timeline.
-        :target: ../../test_case_building/images/appeardisappear.png
+        :target: ../_images/appeardisappear.png
 
 * **Timeout:**  The chosen detection condition will be continuously checked for this number
   of seconds
@@ -100,7 +100,7 @@ to start or close a particular application before Alyvix begins looking for any 
 .. image:: images/ad_root_options_sized.png
    :class: image-with-boxshadow
    :alt: Options for the root element.
-   :target: ../../test_case_building/images/ad_root_options_sized.png
+   :target: ../_images/ad_root_options_sized.png
 
 The **Call** option allows you to select an application to start or to terminate at the moment
 test case execution begins.
@@ -135,7 +135,7 @@ Image Type Options
 .. image:: images/ad_type_submenu_image_sized.png
    :class: image-with-boxshadow
    :alt: Options for the image type.
-   :target: ../../test_case_building/images/ad_type_submenu_image_sized.png
+   :target: ../_images/ad_type_submenu_image_sized.png
 
 * **Match:**  Only recognize an image that is exactly the same as the one selected during screen
   capture
@@ -162,7 +162,7 @@ Rectangle Type Options
 .. image:: images/ad_type_submenu_rect_sized.png
    :class: image-with-boxshadow
    :alt: Options for the rect type.
-   :target: ../../test_case_building/images/ad_type_submenu_rect_sized.png
+   :target: ../_images/ad_type_submenu_rect_sized.png
 
 * **Button:**  Match a region such as a button within a larger space
 * **Box:**  Match a horizontal region such as a text field where the space is filled up from the
@@ -198,7 +198,7 @@ automatically recognized in the screen capture region.
 .. image:: images/ad_type_submenu_text_detect_sized.png
    :class: image-with-boxshadow
    :alt: Options for the detect text type.
-   :target: ../../test_case_building/images/ad_type_submenu_text_detect_sized.png
+   :target: ../_images/ad_type_submenu_text_detect_sized.png
 
 
 .. _alyvix_designer_options_components_text_detect:
@@ -239,7 +239,7 @@ automatically recognized in the screen capture region.
 .. image:: images/ad_type_submenu_text_map_sized.png
    :class: image-with-boxshadow
    :alt: Options for the map text type.
-   :target: ../../test_case_building/images/ad_type_submenu_text_map_sized.png
+   :target: ../_images/ad_type_submenu_text_map_sized.png
 
 
 .. todo::
@@ -260,7 +260,7 @@ optionally set up an immediate mouse action which is unique to each component.
 .. image:: images/ad_action_string_sized.png
    :class: image-with-boxshadow
    :alt: The mouse action selection dropdown.
-   :target: ../../test_case_building/images/ad_action_string_sized.png
+   :target: ../_images/ad_action_string_sized.png
 
 * **Action:**  Create a mouse event corresponding to one of the following types.  By default, the
   mouse position will be set to the center of the selected region.

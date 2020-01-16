@@ -46,7 +46,7 @@ is captured.  To do this:
 
    .. image:: images/ad_comptree_autodetect.png
       :alt: Setting up the Windows Settings button in Alyvix Designer
-      :target: ../../getting_started/images/ad_comptree_autodetect.png
+      :target: ../_images/ad_comptree_autodetect.png
 
 #. Assign a *left click* action as before by selecting our new Settings icon region in the
    component tree, and then changing the action from ``None`` to ``Click``.

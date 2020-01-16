@@ -36,7 +36,7 @@ create much more complex behaviors than we saw when calling Alyvix Robot in
 
    .. image:: images/ae_getting_started_example_main.png
       :alt: The initial screen in Alyvix Selector
-      :target: ../../getting_started/images/ae_getting_started_example_main.png
+      :target: ../_images/ae_getting_started_example_main.png
 
 #. Now *drag and drop* the :guilabel:`start` object (here it's on the second row) by clicking on
    the :rawhtml:`<i class="fa fasmall fablack fa-bars"></i>` icon at the left and dragging it to
@@ -44,14 +44,14 @@ create much more complex behaviors than we saw when calling Alyvix Robot in
 
    .. image:: images/ae_getting_started_example_drag01.png
       :alt: Selecting a row in Alyvix Selector
-      :target: ../../getting_started/images/ae_getting_started_example_drag02.png
+      :target: ../_images/ae_getting_started_example_drag02.png
 
 #. Next, repeat this procedure for the *settings* object, dragging it to the panel underneath
    the :guilabel:`start` scripting element:
 
    .. image:: images/ae_getting_started_example_drag02.png
       :alt: Duplicating a row in Alyvix Selector
-      :target: ../../getting_started/images/ae_getting_started_example_drag02.png
+      :target: ../_images/ae_getting_started_example_drag02.png
 
 #. Finally, click on the |runblue| button at the top left, which will call Alyvix Robot with
    the script we just created.
