@@ -50,7 +50,7 @@ The principle interface elements are:
 
 .. rst-class:: bignums
 
-#. The **file tabs** show the primary tab and any additional opened :file:`.alvyix`
+#. The **file tabs** show the primary tab and any opened secondary :file:`.alvyix`
    :ref:`test case files <test_case_data_format_top>`.  Switching between tabs shows the existing
    test case objects that each file contains.  New files can be loaded by clicking on the
    :nobutton:`+` button.  Similarly, the :nobutton:`x` button next to a non-primary tab will
@@ -60,7 +60,8 @@ The principle interface elements are:
    object at a glance.
 #. The **test case object list** :ref:`shows the principal properties <alyvix_selector_interface_list>`
    (excluding the component tree) of each test case object, with one line for each object.
-#. The **list actions** let you quickly select or deselect all test cases in the list.
+#. The **list actions** let you quickly select or deselect all test cases in the list, and copy
+   the name of a test case object.
 #. The **filtering and search** fields let you select all test case objects with a given resolution,
    or that contain a given text string in either the :guilabel:`Name` or :guilabel:`Date modified`
    fields.  The Search field uses a non-regex substring search, and the :nobutton:`x` action
@@ -70,22 +71,6 @@ The principle interface elements are:
    in the list.
 #. The :bbutton:`OK` and :nobutton:`CANCEL` buttons will exit Alyvix Selector, either saving or
    discarding any changes, respectively.
-
-
-.. todo::
-
-   In the Selector interface main section:
-
-   * FM: What happens if you accidentally open the same file twice (primary+secondary or
-     secondary+secondary tabs)?  **A: Not a problem, by design**
-   * FM:  Using "COPY" in (4), what is copied and how do you paste it?  How is it different
-     than the "DUPLICATE" button in (6)? **A: copy only copies the name**
-   * FM:  Search seems to work only for the *Name* and *Date modified* fields, is that expected?
-     **A:  Yes**
-   * FM:  Unlike Designer, you can right-click in Selector and Editor and it brings up a Chrome menu.
-     Is Chrome required to run Alyvix?
-     **A:  No, known issue, don't mention**
-
 
 
 
@@ -105,28 +90,18 @@ The list headers have the following characteristics:
 
 * **Name:**  The object name :ref:`assigned to the test case object <alyvix_designer_interface_descriptions>`
   in Director
-* **Transaction group:**
-* **Date modified:**  The last date and time automatically recorded when saved in Designer
+* **Transaction group:**  This is a user-definable field that can be used to group together test
+  case objects that have something in common (for instance a "login" group, "response check" group,
+  "purchase" group, etc.) and then used for sorting and searching
+* **Date modified:**  The date and time automatically recorded when the test case object was last
+  saved in Designer, Selector or Editor
 * **Timeout, Break, Measure:**  Displays the values of the corresponding
   :ref:`test case options <alyvix_designer_options_test_case>` in Designer
 * **Warning, Critical:**  The threshold values set for integration with monitoring
-* **Resolution:**  The horizontal and vertical pixel resolution, and the frequency (Hz) when the
-  screen capture was created
+* **Resolution:**  The horizontal and vertical pixel resolution, and the frequency (Hz) of the
+  test case object's screen capture
 * The **Screen** element serves as a visual "double check" that you have the correct test case,
   which is especially helpful when you have a large number of objects in a single file
-
-
-.. todo::
-
-   In the Selector list headers section:
-
-   * FM+CC:  What is a transaction group (2nd column)?  We need to describe it, Warning and Critical.
-     **Tgroup is a semantic human-readable note allowing you to group similar actions like Login pages, then Add Contact pages, then Pay pages**
-     **Then you can sort it by those groups**
-   * FM:  You can set Warning and Critical in the interface, but it disappears after a few seconds
-     (perhaps related to the break/measure reset we saw in our meeting on Editor?)  Is this the
-     place you are supposed to set these values, not in Designer?
-     **A:  Being fixed, only need the description**
 
 
 
@@ -156,16 +131,6 @@ as a standalone application.
 The :kbd:`Shift` and :kbd:`Control` keys work together with the mouse to select multiple rows
 in the standard way when using Windows applications.  Selected rows are shown with a light blue
 background, and can then be used with the actions described in the next section below.
-
-.. todo::
-
-   In the Selector test case list section:
-
-   * FM:  You can drag an object from a secondary tab into the Editor interface.  Does that
-     object then get automatically imported into the file of the primary tab?  When I did it,
-     the new object didn't appear in the primary tab.  Is it also a requirement to use the
-     Import button when doing this?
-     **A:  Being fixed as a future feature**
 
 
 

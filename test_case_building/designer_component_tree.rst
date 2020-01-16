@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 15-01-2020
+:modified: 16-01-2020
 :tags: designer, component, tree
 :lang: en-US
 :translation: false
@@ -40,8 +40,8 @@ Structure of the Component Tree
 ===============================
 
 .. image:: images/ad_main_screen_initial_top.png
+   :class: image-with-boxshadow
    :alt: An empty component tree
-   :target: ../_images/ad_main_screen_initial_top.png
 
 When Alyvix Designer is first launched, it will capture the entire screen to use as a basis for
 locating visual elements.  This screen capture is represented in the component tree with the capital
@@ -54,8 +54,8 @@ distinguish the three groups, and a group's elements may in fact change color if
 or remove one.
 
 .. image:: images/ad_main_screen_components.png
+   :class: image-with-boxshadow
    :alt: A tree with a single root, group and component
-   :target: ../_images/ad_main_screen_components.png
 
 If you now select a region, a copy of that region will appear in red in the component tree.  This
 region represents a potential *group* of subregions called *components*, although depending on
@@ -82,8 +82,8 @@ Alyvix's visual recognition capability is based on two well-known open source sy
   convert it to computer-readable text, regardless of the font and font size used
 
 .. image:: images/ad_component_types.png
+   :class: image-with-boxshadow
    :alt: A tree with a single root, group and component
-   :target: ../_images/ad_component_types.png
 
 Alyvix uses these tools to visually detect three types of objects:
 
@@ -141,7 +141,7 @@ panel to return to the screen capture.
 .. todo::
 
    * FM:  If a group with 4 components matches, can each of the components have an action?  If so,
-     do they all execute simultaneously?
+     do they all execute simultaneously?  (Related to a question at the bottom of the Options page.)
 
 
 

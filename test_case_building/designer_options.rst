@@ -36,7 +36,6 @@ At the top of the Alyvix Designer panel are the options that pertain to the test
 .. image:: images/ad_testcase_options_sized.png
    :class: image-with-boxshadow
    :alt: The test case options.
-   :target: ../_images/ad_testcase_options_sized.png
 
 The :ref:`Object name <glossary_object_name>` is the reference name (not the file name)
 of the test case object allowing the test case to be used in test case scripts.
@@ -59,13 +58,18 @@ are detected, regardless of their type, and what happens if they fail to be dete
         :class: image-with-boxshadow
         :height: 120
         :alt: Visual appearance and disappearance timeline.
-        :target: ../_images/appeardisappear.png
 
 * **Timeout:**  The chosen detection condition will be continuously checked for this number
   of seconds
 * **Break:**  If this option is checked, then a timeout will cause the test case to fail, and
   if it is part of a series of test cases, then the entire series will fail.  If not checked,
   it will report the failure but continue with the next test cases in the series.
+
+
+.. todo::
+
+   * FM:  Is the detection interval still set at 0.5 seconds as described in the 2.7.5 doc?  Is
+     it configurable?
 
 
 
@@ -103,7 +107,6 @@ to start or close a particular application before Alyvix begins looking for any 
 .. image:: images/ad_root_options_sized.png
    :class: image-with-boxshadow
    :alt: Options for the root element.
-   :target: ../_images/ad_root_options_sized.png
 
 The **Call** option allows you to select an application to start or to terminate at the moment
 test case execution begins.
@@ -138,7 +141,6 @@ Image Type Options
 .. image:: images/ad_type_submenu_image_sized.png
    :class: image-with-boxshadow
    :alt: Options for the image type.
-   :target: ../_images/ad_type_submenu_image_sized.png
 
 * **Match:**  Only recognize an image that is exactly the same as the one selected during screen
   capture
@@ -165,7 +167,6 @@ Rectangle Type Options
 .. image:: images/ad_type_submenu_rect_sized.png
    :class: image-with-boxshadow
    :alt: Options for the rect type.
-   :target: ../_images/ad_type_submenu_rect_sized.png
 
 * **Button:**  Match a region such as a button within a larger space
 * **Box:**  Match a horizontal region such as a text field, where the space is filled up from the
@@ -178,10 +179,11 @@ Rectangle Type Options
 
    In Designer, for the Rectangle object type:
 
-   * FM:  It's not clear what's the (operational) difference between a Button, Box and Window.
-     We'll need to explain it.  **A:  Box resizable one direction, window another.  Try it out.**
-   * FM:  What is the black box in the middle of a box or window
-   * FM:  Can you autodetect buttons, boxes and windows?  Right click doesn't work for me.
+   * FM:  After playing with button/box/window, it's still not clear to me what's the (operational)
+     difference between them, and I can't find an explanation in the 2.7.5 doc.  I'll need an
+     example for each one.
+   * FM:  What is the black box in the middle of a box or window when the Designer screen is open?
+   * FM:  Can you autodetect buttons, boxes and windows?  Right click doesn't seem to work.
    * FM:  Once you've detected a window, what actions make sense to do, move it?
 
 
@@ -204,7 +206,6 @@ automatically recognized in the screen capture region.
 .. image:: images/ad_type_submenu_text_detect_sized.png
    :class: image-with-boxshadow
    :alt: Options for the detect text type.
-   :target: ../_images/ad_type_submenu_text_detect_sized.png
 
 
 .. _alyvix_designer_options_components_text_detect:
@@ -222,18 +223,10 @@ automatically recognized in the screen capture region.
     expression in the :guilabel:`Regex` field.  The regular expression syntax is governed by
     the |python-regex-lib|.
   * **Number**  The recognized text is considered matched only if it results in a number that
-    satisfy the condition selected in the :guilabel:`Logic` field (e.g., "greater than zero").
+    satisfies the condition selected in the :guilabel:`Logic` field (e.g., "greater than zero").
   * **Date**  The recognized text is considered matched only if it results in day and time that
     satisfies the time interval selected in the :guilabel:`Logic` field  (e.g., "last hour",
     "last day", etc.)
-
-
-.. todo::
-
-   In Designer, for the Text object type:
-
-   * FM:  What kind of reg-ex patterns are accepted?
-
 
 
 .. _alyvix_designer_options_components_text_map:
@@ -245,7 +238,6 @@ automatically recognized in the screen capture region.
 .. image:: images/ad_type_submenu_text_map_sized.png
    :class: image-with-boxshadow
    :alt: Options for the map text type.
-   :target: ../_images/ad_type_submenu_text_map_sized.png
 
 
 .. todo::
@@ -266,7 +258,6 @@ optionally set up an immediate mouse action which is unique to each component.
 .. image:: images/ad_action_string_sized.png
    :class: image-with-boxshadow
    :alt: The mouse action selection dropdown.
-   :target: ../_images/ad_action_string_sized.png
 
 * **Action:**  Create a mouse event corresponding to one of the following types.  By default, the
   mouse position will be set to the center of the selected region.
@@ -297,13 +288,8 @@ optionally set up an immediate mouse action which is unique to each component.
 
    From the Designer Common Options section:
 
-   * FM:  Can these be chained together within a single test case to make combined/multiple actions?  I.e.,
-     if one region is detected it will hold, if another is detected it will release.  If so, does
-     the order of the components imply the order of the events?  Is there a way to do combinations
-     of events/strings if only one component is detected?
+   * FM:  When there are more than one components in a group that is successfully detected, are
+     the actions of all the components triggered?  If so does they occur all at once, or in order?
+     Can you make one component hold something and another release the same thing?
    * FM:   Can you do a release with both "Set Point" and a direction, or does "Set Point" only work
      if the direction is "None"?
-   * FM:  Do **Hold**/**Release** only work with the left mouse button?  **A: Yes**
-   * FM:  Is the detection interval still set at 0.5 seconds as described in the 2.7.5 doc?  Is
-     it still configurable?  It includes the 0.00s mark, right, not just starting at 0.5s?
-

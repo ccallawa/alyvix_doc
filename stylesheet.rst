@@ -471,6 +471,14 @@ to the figure declaration and :file:`custom.css` will add a thin-lined box aroun
 
       Fig. 1:  The indented structure becomes like a caption.
 
+When using the ``:target:`` parameter, internal paths should have the following format so that
+they work both on a local copy and on the hosted site:
+
+.. code-block:: rst
+   :class: short-code-block
+
+   :target: ../_images/<filename>.png
+
 Some support for figure numbering is available:  Add the line ``numfig = True`` to :file:`conf.py`
 and then before the figure add the line ``.. _label_fig1:``, and then the reference
 ``:refnum:`label_fig1`` where needed in the text.  Unfortunately for now, it inserts an HTML

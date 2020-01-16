@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 15-01-2020
+:modified: 16-01-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -37,7 +37,6 @@ will track the mouse as shown here:
    :class: image-with-boxshadow
    :height: 150
    :alt: The initial Alyvix Designer selection cursor
-   :target: ../_images/ad_main_screen_edit_message.png
 
 .. tip::  Having a second monitor will enable you to mark regions of interest with Alyvix on one
    screen, while the second screen can still be used for other applications.
@@ -113,7 +112,6 @@ from :guilabel:`Image`):
 .. image:: images/ad_main_screen_new_component2.png
    :class: image-with-boxshadow
    :alt: Adding a first component in the Alyvix Designer interface
-   :target: ../_images/ad_main_screen_new_component2.png
 
 Our first region selection automatically created this group, while our second selection created
 a component within that group.
