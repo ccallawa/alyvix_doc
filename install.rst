@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 13-01-2020
+:modified: 17-01-2020
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -54,9 +54,8 @@ Install Python as follows:
 
 .. rst-class:: bignums
 
-#. Download |python-download-link|.
-   Choose an installer for Windows x86-64 (zip, full or web-based, found at the bottom of
-   the page).  Alyvix is :warn:`not` compatible with 32-bit versions of Python.
+#. Download the |python-download-link|.
+   Alyvix is :warn:`not` compatible with 32-bit versions of Python.
 
 #. Install Python by right-clicking on the executable and selecting **"Run as administrator"**.
    The preferred location is :file:`C:\\Python37\\`.  Be sure that Python is added to your path
@@ -92,7 +91,7 @@ or simply reuse the same command prompt):
    .. code-block:: doscon
       :class: short-code-block
 
-      C:\> pip install alyvix3
+      C:\> pip install alyvix
 
 You should place your Alyvix test cases in a separate data directory.
 

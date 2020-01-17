@@ -305,3 +305,4 @@ The individual sections of the JSON structure are explained below.
 .. todo::
 
    * FM:  Are "exit" and "fail" official reserved words for sections?
+   * FM:  Do we need to describe elements any further down into the JSON data structure than this?
