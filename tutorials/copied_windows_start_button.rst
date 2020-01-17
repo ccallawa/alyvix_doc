@@ -57,8 +57,8 @@ Let's use Alyvix Designer to tell Alyvix what to do when it recognizes the Start
 
 With our rectangle from above still selected, press the :kbd:`Escape` key.  The Alyvix Designer
 interface will appear as in Figure 2, with our rectangle containing the Start button as the child
-node in the :ref:`Component Tree <alyvix_designer_component_tree>`, right below the node with the
-capital letter :greyblock:`S` that represents the entire screenshot.
+node in the :ref:`Component Tree <alyvix_designer_component_tree_top>`, right below the node with
+the capital letter :greyblock:`S` that represents the entire screenshot.
 
 .. figure:: ../getting_started/images/gs_start_selected.png
    :alt: The Windows Start button in Alyvix Designer

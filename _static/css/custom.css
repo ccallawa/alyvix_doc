@@ -36,6 +36,34 @@
 .rst-content .short-bignums { /* Add this :class: to make sure it doesn't overwrite a .sidebar */
     width: 55%;
 }
+.rst-content ol.backdarkbeige>li {
+    background-color: rgb(223,224,182);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 7px;
+    padding-bottom: 4px;
+}
+.rst-content ol.backmedbeige>li {
+    background-color: rgb(229,228,197);
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+.rst-content ol.backlightbeige {
+    margin-bottom: 4px;
+}
+.rst-content ol.backlightbeige>li {
+    background-color: rgb(235,232,213);
+    margin: 10px;
+}
+.rst-content ol.beige>li {
+    background-color: rgb(242,235,227);
+}
+.rst-content ol.nobignum>li::before {
+    content: none;
+}
+.rst-content ol.nobignum>li {
+    padding-top: 10px;
+}
 
 
 /* Allow some numbered lists to appear as very emphasized steps in a procedure */
@@ -138,6 +166,10 @@ div .medium-code-block {  /* A version that isn't full width */
 div .short-code-block {  /* A version that's much less wide' */
     width: 70%;
 }
+div .tiny-code-block {  /* A version that's much less wide' */
+    width: 50%;
+}
+
 
 /* Override the exaggerated amount of space between bullet point levels */
 p {
@@ -245,6 +277,10 @@ code.kbd, .rst-content tt.kbd, kbd {
     color: #000;
     font-size: 80%;
     padding: 3px 8px;
+}
+.bolditalic {
+    font-weight: bold;
+    font-style: italic;
 }
 
 

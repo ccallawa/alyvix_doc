@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 16-01-2020
+:modified: 17-01-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -60,7 +60,7 @@ screenshot.  The principle interface elements are:
    uniquely identify this test case in Alyvix Selector and Editor
 #. **Test case** :ref:`options <alyvix_designer_options_test_case>`, which affect all screen
    capture elements
-#. The **Screen capture** :ref:`Component Tree <alyvix_designer_component_tree>` that lists all
+#. The **Screen capture** :ref:`Component Tree <alyvix_designer_component_tree_top>` that lists all
    defined regions of interest on the screen that can be interacted with along with their type
    (image, region or text)
 #. **Component** :ref:`options <alyvix_designer_options_components>`, which depend on the type
@@ -100,12 +100,18 @@ Alyvix should look for, while the larger box represents the space in which it sh
 Making the larger box wider or taller can be very helpful for GUI elements that "float", such as
 when a browser window is resized.
 
+
+.. todo::
+
+   * FM:  Can two selection areas overlap?
+
+
 Note that there is an important distinction between the two types of selections we made:  the first
 selection only has one bounding box, which represents the Region of Interest.  It is used as
 the anchor of a group of one to four additional interaction areas.
 
 Now, press the :kbd:`Escape` key to bring up the Designer interface again.  You should see
-the new components you just selected in the :ref:`Component Tree <alyvix_designer_component_tree>`
+the new components you just selected in the :ref:`Component Tree <alyvix_designer_component_tree_top>`
 interface shown here (the type of the component has been manually changed to :guilabel:`Text`
 from :guilabel:`Image`):
 
@@ -136,7 +142,7 @@ For now, press the :nobutton:`CANCEL` button to exit without creating an object.
 .. topic:: Further Information
 
    To learn more about interacting with the visual elements and what they can do, see the
-   :ref:`Component Tree <alyvix_designer_component_tree>` page.
+   :ref:`Component Tree <alyvix_designer_component_tree_top>` page.
 
 You can find more information about the available options for test cases and components on the
 :ref:`Interface Options <alyvix_designer_options>` page.

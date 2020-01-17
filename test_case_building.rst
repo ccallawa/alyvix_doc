@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 15-01-2020
+:modified: 17-01-2020
 :tags: designer, test cases
 :lang: en-US
 :translation: false
@@ -22,11 +22,12 @@ are three main tools for building test cases:
 .. rst-class:: bignums-xl
 
 #. **Alyvix Designer:**  Define individual test cases consisting of matchable regions that can be
-   used by Alyvix Robot to scan for and act on visual elements of an interface
+   used by :ref:`Alyvix Robot <test_case_execution_top>` to scan for and act on visual elements
+   of an interface
 #. **Alyvix Selector:**  Easily manipulate (inspect, copy, edit, delete) those test cases as
-   objects and view, filter and sort their properties
-#. **Alyvix Editor:**  Script test cases (run, conditionals, and loops) defined in Alyvix Designer
-   and pulled in via Alyvix Selector
+   objects, as well as view, filter and sort their properties
+#. **Alyvix Editor:**  Script test cases (execution, conditionals, and loops) defined in Alyvix
+   Designer and chosen from Alyvix Selector
 
 Alyvix gives you two basic approaches to building test cases:
 
@@ -34,7 +35,7 @@ Alyvix gives you two basic approaches to building test cases:
   (:ref:`launching them <test_case_building_designer_launch>` individually from the command
   prompt), and then later integrate them with Alyvix Editor.
 * Use Alyvix Editor from the beginning, which unifies Designer and Selector into a single
-  interface, and lets you script test cases from the start.
+  interface and lets you script test cases from the start.
 
 The :ref:`Test Case Data Format <test_case_data_format_top>` page provides technical details on how
 Alyvix object files are organized and what they contain.
@@ -57,13 +58,13 @@ on how to use Alyvix Designer and Editor if you haven't used them before.
 .. topic:: Alyvix Editor
 
    Alyvix Editor helps you create scripted connections between individual test case objects,
-   allowing you to create more complicated interactions compared to using Designer alone.
+   allowing you to create more complex interactions compared to using Designer alone.
 
 The following sections of the Alyvix Guide present further information about Alyvix Editor:
 
 * The :ref:`Interface Overview <alyvix_editor_interface_top>` page describes the layout of
-  the panels and the interface controls.
-* The :ref:`Scripting Panel <alyvix_editor_scripting_panel_top>` page lets you create the
+  the panels and how to use the interface controls.
+* The :ref:`Scripting Panel <alyvix_editor_scripting_panel_top>` page explains how to create the
   scripted interactions between existing test cases.
 * The :ref:`Scripting Management <alyvix_editor_script_mgmt_top>` page lets you manipulate
   (view, copy, edit, delete) the scripts and scripting components you have created.
@@ -95,9 +96,9 @@ The following command line options are available for Editor:
 .. _test_case_building_designer:
 .. topic:: Alyvix Designer
 
-   Alyvix Designer lets you select patterns on a copy of the screen, whether they're images,
-   rectangles, or text.  You can then define triggers for actions when those patterns are
-   recognized later in a simulated interaction with an application.
+   Alyvix Designer lets you select regions on a copy of the screen to use as patterns, whether
+   they're images, rectangles, or text.  You can then define triggers and actions to apply when
+   those patterns are recognized later in a simulated interaction with an application.
 
 Designer will save the set of patterns as a single :ref:`test case <glossary_test_case>`, which
 you can then use as building blocks to compose more complicated objects and scripts using Alyvix
@@ -109,7 +110,7 @@ The following sections of the Alyvix Guide present further information on Alyvix
 * The :ref:`Interface Overview <alyvix_designer_interface_overview>` page provides a high-level
   overview and describes the general layout of the interface.
 * To learn more about interacting with specific visual elements and what they can do, see the
-  :ref:`Component Tree <alyvix_designer_component_tree>` page.
+  :ref:`Component Tree <alyvix_designer_component_tree_top>` page.
 * You can find more detailed information about the available options for test cases and components
   on the :ref:`Interface Options <alyvix_designer_options>` page.
 
@@ -186,7 +187,7 @@ The following command line options are available for Selector:
    test_case_building/designer_interface_overview.rst
    test_case_building/designer_options.rst
    test_case_building/designer_component_tree.rst
-   test_case_building/selector_overview.rst
-   test_case_building/editor_overview.rst
+   test_case_building/selector_interface_overview.rst
+   test_case_building/editor_interface_overview.rst
    test_case_building/editor_script_mgmt.rst
    test_case_building/editor_scripting_panel.rst

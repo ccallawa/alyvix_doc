@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 16-01-2020
+:modified: 17-01-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -12,7 +12,7 @@
    :format: html
 
 
-.. _alyvix_selector_top:
+.. _alyvix_selector_interface_top:
 
 ****************************
 Selector: Interface Overview
@@ -38,6 +38,8 @@ You can start Alyvix Selector by itself from the command prompt (you can find in
    :class: short-code-block
 
    C:\Alyvix\testcases> python alyvix_selector.py -f <file-name>
+
+.. _alyvix_selector_interface_screenshot:
 
 You will then see the Selector interface as shown here:
 

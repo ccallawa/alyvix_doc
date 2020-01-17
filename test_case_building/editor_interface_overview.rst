@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 16-01-2020
+:modified: 17-01-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -37,7 +37,7 @@ You will then see the Editor interface as shown here, which includes Selector an
 #. Editor, consisting of the :ref:`Management panel <alyvix_editor_interface_management>` and
    the :ref:`Script panel <alyvix_editor_interface_script>`
 #. :ref:`Designer <alyvix_designer_interface_overview>`.
-#. :ref:`Selector <alyvix_selector_top>`.
+#. :ref:`Selector <alyvix_selector_interface_top>`.
 
 
 .. todo::

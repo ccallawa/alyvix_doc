@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 09-01-2020
+:modified: 17-01-2020
 :tags: tutorial
 :lang: en-US
 :translation: false
@@ -26,7 +26,9 @@ Name                                  Description
 
 .. todo::
 
-   CC:  Get sample use cases from **Alyvix 2.7.5 > Test case building > Common transactions**
+   * CC:  Get sample use cases from **Alyvix 2.7.5 > Test case building > Common transactions**
+   * FM:  Is there standard advice, such as "Always make your screens the full screen size so that
+     GUI elements are in the same place each time"?
 
 
 

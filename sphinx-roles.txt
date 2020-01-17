@@ -28,6 +28,11 @@
    <a href="https://docs.python.org/3/library/re.html" target="_blank">
    Python Regular Expression library <i class="fa fa-small fa-external-link"></i></a>
 
+.. |base64-link| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">
+   Base64 <i class="fa fa-small fa-external-link"></i></a>
+
 .. |runblue| image:: /pictures/button_run_blue.png
    :class: inline-image-higher
    :height: 16
@@ -56,3 +61,6 @@
 
 .. role:: nobutton
    :class: nobutton
+
+.. role:: bolditalic
+   :class: bolditalic
