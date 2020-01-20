@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 15-01-2020
+:modified: 20-01-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -15,33 +15,42 @@
 Test Case Execution
 ###################
 
-Alyvix test cases you have built with Alyvix Designer can be run using Alyvix Robot.
-In a production environment, you will typically create a set of test cases once, and then
-repeatedly run those test cases.  An example could be monitoring the usability of web pages
-on a remote server, where the responsiveness must be measured every minute.
+Alyvix test cases you have built with Alyvix Editor or Designer can be run using Alyvix Robot.
+Robot can either be run from the command line, or directly within Alyvix Editor.
 
-There are two principal modes for interacting with Alyvix Robot:
+In a production environment, the typical use case is to create a set of test cases once, and then
+repeatedly run those test cases at regular intervals.  An example could be monitoring the usability
+of web pages on a remote server, where responsiveness must be measured every 5 minutes.
 
-* Manually call Robot with the Command Prompt, principally used intermittently for testing
+There are three principal modes for interacting with Alyvix Robot:
+
+* Manually call Robot with the Command Prompt, mainly to test that test case objects work in
+  isolation
+* Manually call Robot within Alyvix Editor, mainly to test scripting of test case objects
 * Automatically call Robot, for instance via scripting, at regular intervals
 
-In both cases, the main idea is to execute one test case object at a time, typically
-:ref:`combining them in series <getting_started_example_settings>`, treating them as
-reusable building blocks.
+In all three cases, the main idea is to execute one test case at a time, whether by creating
+scripts in Editor, or :ref:`combining them in series <getting_started_example_settings>` in
+Alyvix Robot.
+
+When Robot executes a test case, it first checks to see if one or more test case object names was
+passed via the ``-o`` parameter.  If so, Robot will execute those test case objects.  Otherwise,
+Robot will retrieve the script from the :file:`.alyvix` file's
+:ref:```script`` field <test_case_data_format_top>`.
+
+
+
+.. _alyvix_robot_cli_options:
+
+**********************************************
+Launching Alyvix Robot from the Command Prompt
+**********************************************
 
 When executed manually, the test case object names are passed with the *object* (``-o``) option.
 In this case, the *verbosity* (``-v``) parameter can provide additional information that can
 help you should you need to debug your test cases.
 
-When scripting automatically, the :ref:`test case object <test_case_data_format_top>`
-(``.alyvix`` file) can similarly have multiple case names in its ``script`` field in order to
-call multiple test cases in sequence.
-
-
-.. _alyvix_robot_cli_options:
-.. topic:: Launching Alyvix Robot
-
-   Alyvix Robot can be run with the following command:
+Alyvix Robot can be run with the following command:
 
 .. code-block:: doscon
    :class: medium-code-block
@@ -67,7 +76,7 @@ The following options are available:
 +---------------+----------+----------------------------------------------+
 | \-\\-help     | -h       | Display command help                         |
 +---------------+----------+----------------------------------------------+
-| \-\\-object   | -o       | Supply the Object name                       |
+| \-\\-object   | -o       | Supply the Object name(s)                    |
 +---------------+----------+----------------------------------------------+
 | *<none>*      | -v       | Verbosity:  0=low, 2=high                    |
 +---------------+----------+----------------------------------------------+
@@ -80,10 +89,32 @@ The following options are available:
 
 
 
-.. _alyvix_robot_cli_result:
-.. topic:: What Alyvix Robot Returns
+.. _alyvix_robot_editor:
 
-   Alyvix Robot will give you output like this if successful.
+*****************************************
+Launching Alyvix Robot from Alyvix Editor
+*****************************************
+
+When run manually from Alyvix Editor, the test case objects are executed as specified in the
+:ref:`scripting panel <alyvix_editor_scripting_panel_top>`.
+
+
+.. todo::
+
+   * Can you set verbosity for Robot within Editor?
+
+
+Alyvix Robot can be run ...
+
+
+
+.. _alyvix_robot_cli_result:
+
+*************************
+What Alyvix Robot Returns
+*************************
+
+Alyvix Robot will give you output like this if successful.
 
 .. code-block:: md
 
@@ -111,9 +142,9 @@ is not set, then the test case will instead be skipped after its timeout has exp
 
    .. _test_case_execution_measurements:
 
-   ============
+   ************
    Measurements
-   ============
+   ************
 
    * How measurement is done (get from v2.7 doc?)
    * How Alyvix is integrated with monitoring/ITOA (NetEye is one example of monitoring)
