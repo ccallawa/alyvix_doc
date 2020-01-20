@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 17-01-2020
+:modified: 20-01-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -33,9 +33,8 @@ The screen will turn white for a few seconds.  When it returns, you will see a c
 with the phrase :nobutton:`PRESS ESC TO OPEN DIALOG` at the top left, while purple/red crosshairs
 will track the mouse as shown here:
 
-.. image:: images/ad_main_screen_edit_message.png
+.. image:: images/ad_main_screen_edit_message_h150.png
    :class: image-with-boxshadow
-   :height: 150
    :alt: The initial Alyvix Designer selection cursor
 
 .. tip::  Having a second monitor will enable you to mark regions of interest with Alyvix on one

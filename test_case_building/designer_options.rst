@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 16-01-2020
+:modified: 20-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -54,9 +54,8 @@ are detected, regardless of their type, and what happens if they fail to be dete
    * **Disappear:**  If any of the main group components was present when the test case started,
      Alyvix will detect when one is no longer visible
 
-     .. image:: images/appeardisappear.png
+     .. image:: images/appeardisappear_h120.png
         :class: image-with-boxshadow
-        :height: 120
         :alt: Visual appearance and disappearance timeline.
 
 * **Timeout:**  The chosen detection condition will be continuously checked for this number

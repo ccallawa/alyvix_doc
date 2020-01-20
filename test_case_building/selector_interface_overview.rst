@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 17-01-2020
+:modified: 20-01-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -113,17 +113,40 @@ The list headers have the following characteristics:
 Test Case Object List
 =====================
 
-This list shows all test case objects contained in file of the currently selected tab.
+This list shows all test case objects contained in the :file:`.alyvix` file corresponding to the
+currently selected tab.
 
 The values for most fields in the primary tab can be changed directly without opening Designer
-(except for **Date modified**, **Resolution** and **Screen**).  This can be accomplished merely
-by clicking on the existing value (or blank space where it should go), entering the new value,
-and then clicking elsewhere in the list.  Remember that any changes will not be saved until
-you have exited Selector by clicking on the :bbutton:`OK` button.
+(except for **Date modified**, **Resolution** and **Screen**).  This can be accomplished by simply
+clicking on the existing value (or blank space where it should go), entering the new value, and
+then either pressing :kbd:`Enter` or clicking elsewhere in the list.
+
+.. note::
+
+   Remember that any changes will not be saved until you have exited Selector by clicking on
+   the :bbutton:`OK` button.
+
+All editable fields are *validated* in real time to ensure only new values of the correct type
+can be entered.  For example, test case object names must
+:ref:`follow standard Python naming conventions <glossary_object_name>`.
+If this is not the case, you will see an error message like this:
+
+.. image:: images/as_name_validation.png
+   :class: image-with-boxshadow
+   :alt: The Alyvix Selector interface.
+
+
+.. todo::
+
+   * FM:  If you rename an item in a column that is the sorted index, it will immediately be
+     re-sorted.  If you have a lot of test case objects, then that renamed item seems to suddenly
+     "disappear" since the column is immediately re-sorted.  Is that the desired behavior?
+
 
 .. note::
 
    The values of test case objects in secondary tabs cannot be changed.
+
 
 The *bars* icon :rawhtml:`<i class="fa fa-small fa-black fa-bars"></i>` at the start of each row
 allows you to (1) select that test case object, or (2) *drag-and-drop* the test case into the
