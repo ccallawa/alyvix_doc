@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 17-01-2020
+:modified: 20-01-2020
 :tags: test cases, data format
 :lang: en-US
 :translation: false
@@ -19,7 +19,7 @@ Test Case Data Format
 *********************
 
 Alyvix test cases are stored as JSON files, which are then used by all Alyvix applications.
-Alyvix file are the one and only mechanism for interchange between Alyvix modules, and each
+Alyvix files represent the unique mechanism for interchange between Alyvix modules, and each
 file is self-contained, without any external dependencies.
 
 
