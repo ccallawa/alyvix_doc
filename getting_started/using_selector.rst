@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 08-01-2020
-:modified: 14-01-2020
+:modified: 22-01-2020
 :tags: editor, gui
 :lang: en-US
 :translation: false
@@ -37,9 +37,8 @@ when we look at Alyvix Editor.
       :alt: The initial screen in Alyvix Selector
       :target: ../_images/as_getting_started_example_main.png
 
-#. Now select the first row by clicking on the
-   :rawhtml:`<i class="fa fa-small fa-black fa-bars"></i>`
-   icon to the left of the object name :guilabel:`settings`:
+#. Now select the first row by clicking on the |bars| icon to the left of the object name
+   :guilabel:`settings`:
 
    .. image:: images/as_getting_started_example_selected.png
       :alt: Selecting a row in Alyvix Selector

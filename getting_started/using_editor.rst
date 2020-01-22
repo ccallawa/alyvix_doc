@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 08-01-2020
-:modified: 14-01-2020
+:modified: 22-01-2020
 :tags: editor, gui
 :lang: en-US
 :translation: false
@@ -39,8 +39,8 @@ create much more complex behaviors than we saw when calling Alyvix Robot in
       :target: ../_images/ae_getting_started_example_main.png
 
 #. Now *drag and drop* the :guilabel:`start` object (here it's on the second row) by clicking on
-   the :rawhtml:`<i class="fa fa-small fa-black fa-bars"></i>` icon at the left and dragging it to
-   the large middle panel.  Its scripting element will appear:
+   the |bars| icon at the left and dragging it to the large middle panel.  Its scripting element
+   will appear:
 
    .. image:: images/ae_getting_started_example_drag01.png
       :alt: Selecting a row in Alyvix Selector

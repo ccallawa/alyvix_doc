@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 20-01-2020
+:modified: 22-01-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -48,7 +48,6 @@ You will then see the Selector interface as shown here:
    :target: ../_images/as_main_screen_numbered.png
 
 The principle interface elements are:
-
 
 .. rst-class:: bignums
 
@@ -148,10 +147,10 @@ If this is not the case, you will see an error message like this:
    The values of test case objects in secondary tabs cannot be changed.
 
 
-The *bars* icon :rawhtml:`<i class="fa fa-small fa-black fa-bars"></i>` at the start of each row
-allows you to (1) select that test case object, or (2) *drag-and-drop* the test case into the
-:ref:`Editor scripting panel <alyvix_editor_interface_script>` when Selector is not being used
-as a standalone application.
+The |bars| icon at the start of each row allows you to (1) select that test case object, or
+(2) *drag-and-drop* the test case into the
+:ref:`Editor scripting panel <alyvix_editor_scripting_panel_top>`
+when Selector is not being used as a standalone application.
 
 The :kbd:`Shift` and :kbd:`Control` keys work together with the mouse to select multiple rows
 in the standard way when using Windows applications.  Selected rows are shown with a light blue
