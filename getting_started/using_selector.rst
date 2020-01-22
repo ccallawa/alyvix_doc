@@ -37,7 +37,7 @@ when we look at Alyvix Editor.
       :alt: The initial screen in Alyvix Selector
       :target: ../_images/as_getting_started_example_main.png
 
-#. Now select the first row by clicking on the |bars| icon to the left of the object name
+#. Now select the first row by clicking on the |bar-icon| icon to the left of the object name
    :guilabel:`settings`:
 
    .. image:: images/as_getting_started_example_selected.png

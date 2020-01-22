@@ -54,7 +54,7 @@ The principle interface elements are:
 #. The **file tabs** show the primary tab and any opened secondary :file:`.alvyix`
    :ref:`test case files <test_case_data_format_top>`.  Switching between tabs shows the existing
    test case objects that each file contains.  New files can be loaded by clicking on the
-   :nobutton:`+` button.  Similarly, the :nobutton:`x` button next to a non-primary tab will
+   |plus-icon| button.  Similarly, the |times-icon| button next to a non-primary tab will
    remove that tab (note that you cannot remove the primary tab).
 #. The **list headers** :ref:`categorize the properties <alyvix_selector_interface_headers>` of each
    object, allowing you to sort on some fields and find the details of a particular test case
@@ -65,7 +65,7 @@ The principle interface elements are:
    the name of a test case object.
 #. The **filtering and search** fields let you select all test case objects with a given resolution,
    or that contain a given text string in either the :guilabel:`Name` or :guilabel:`Date modified`
-   fields.  The Search field uses a non-regex substring search, and the :nobutton:`x` action
+   fields.  The Search field uses a non-regex substring search, and the |times-icon| action
    clears the field.
 #. The **test case object actions** act on the
    :ref:`currently selected test case objects <alyvix_selector_interface_object_actions>`
@@ -147,7 +147,7 @@ If this is not the case, you will see an error message like this:
    The values of test case objects in secondary tabs cannot be changed.
 
 
-The |bars| icon at the start of each row allows you to (1) select that test case object, or
+The |bar-icon| icon at the start of each row allows you to (1) select that test case object, or
 (2) *drag-and-drop* the test case into the
 :ref:`Editor scripting panel <alyvix_editor_scripting_panel_top>`
 when Selector is not being used as a standalone application.

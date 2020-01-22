@@ -274,7 +274,15 @@ code.kbd, .rst-content tt.kbd, kbd {
     font-size: 80%;
     padding: 3px 8px;
 }
-.nobutton {  /* White background/border, black font */
+.greybutton {  /* White background/border, grey font, square block */
+    border: 1px solid #ddf;
+    background-color: #fff;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 80%;
+    padding: 3px 8px;
+}
+.nobutton {  /* White background/border, black font, square block */
     border: 0.1px solid #ddf;
     background-color: #fff;
     color: #000;
@@ -319,6 +327,7 @@ a:visited .fa::before {
 }
 .fa-black::before {
     color: black;    /* Override the blue color when necessary */
+    /* font-weight: normal;  Has no effect on thickness */
 }
 p.fa {
     line-height: 24px; /* Should inherit from 'p' */

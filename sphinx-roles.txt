@@ -33,7 +33,15 @@
    <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">
    Base64 <i class="fa fa-small fa-external-link"></i></a>
 
-.. |bars| raw:: html
+.. |bar-icon| raw:: html
+
+   &nbsp;<i class="fa fa-small fa-black fa-bars"></i>
+
+.. |plus-icon| raw:: html
+
+   &nbsp;<i class="fa fa-small fa-black fa-bars"></i>
+
+.. |times-icon| raw:: html
 
    &nbsp;<i class="fa fa-small fa-black fa-bars"></i>
 
@@ -63,9 +71,16 @@
 .. role:: rbutton
    :class: redbutton
 
+.. role:: gbutton
+   :class: greybutton
+
 .. role:: nobutton
    :class: nobutton
 
 .. role:: bolditalic
    :class: bolditalic
 
+.. |run| replace:: :greyblock:`RUN`
+.. |if-true| replace:: :greyblock:`IF TRUE`
+.. |if-false| replace:: :greyblock:`IF FALSE`
+.. |for| replace:: :greyblock:`FOR`
