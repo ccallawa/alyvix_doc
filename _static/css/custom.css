@@ -141,9 +141,12 @@
     position: absolute;
     text-align: center;
     left: 2.4px;  /* The offsets of the entire circle/number bullet */
-    top: 10.2px;
+    top: 10px;
     width: 28px;  /* The width of the bullet circle */
     height: 26px;  /* The height of the bullet circle */
+}
+.rst-content ol.onelinelist>li::before {
+    top: 0px;
 }
 
 

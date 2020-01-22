@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 16-01-2020
+:modified: 20-01-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -103,8 +103,8 @@ There are also enumerated lists:
       pound sign (``#.``), but it will affect the very first number at top even if put in
       a subpoint
 
-The Alyvix :file:`custom.css` files also supports the ``bignums``, ``bignums-xl`` and
-``bignums-xxl`` enumerated list styles:
+The Alyvix :file:`custom.css` files also supports the ``bignums``, ``bignums-xl`` (with
+``onelinelist`` CSS class option) and ``bignums-xxl`` enumerated list styles:
 
 .. rst-class:: bignums
 
@@ -271,6 +271,18 @@ You will then be able to use this new ``warn`` role within a paragraph as follow
 Which looks like this when you write it out:  "This is some text where we need to say :warn:`Don't`
 do something!" :hint:`(You can also make a hint with :hint:)`
 
+Note that you can assign multiple classes when declaring the ``role::`` directive, and you can also
+do it with the ``rst-class::`` directive.  Care should be taken as the ordering will affect
+which CSS properties are utilized and which are overwritten.
+
+.. code-block:: rst
+   :class: short-code-block
+
+   .. rst-class:: bignums-xl
+      :class: redbold bluebutton
+
+   .. rst-class:: redbold bluebutton bignums-xl
+
 
 
 .. _style_links+refs:
@@ -401,6 +413,44 @@ Built like so::
 
 
 
+Column widths and `other modifiers <https://docutils.sourceforge.io/docs/ref/rst/directives.html#tables>`_
+can be specified if you use the full table environment:  align (left, center, right), widths
+(auto, grid, list=100%) and width (current line width).
+
+.. table:: (Optional table title)
+   :widths: 60 40
+   :width: 75
+   :align: right
+
+   +-------------+---------------------+
+   | Color       | Description         |
+   +-------------+---------------------+
+   | Green       | Leaves on the trees |
+   +-------------+---------------------+
+
+|
+|
+|
+|
+|
+|
+
+.. code-block:: rst
+   :class: medium-code-block
+
+   .. table:: (Optional table title)
+      :widths: 60 40
+      :width: 75
+      :align: right
+
+      +-------------+---------------------+
+      | Color       | Description         |
+      +-------------+---------------------+
+      | Green       | Leaves on the trees |
+      +-------------+---------------------+
+
+
+
 .. _style_images:
 
 *************************
@@ -488,7 +538,7 @@ the numbering starts over again within each subsection, and these aren't numbere
 (Automatic section numbering is also possible with an extension to Sphinx:
 http://docutils.sourceforge.net/docs/ref/rst/directives.html#automatic-section-numbering)
 
-For Font Awesome icons, use the ``fa`` directive:
+For general Font Awesome icons, use the ``fa`` directive:
 
 .. rst-class:: fa fa-check
 
@@ -508,6 +558,18 @@ sentence/bullet:
 .. rst-class:: fa fa-small fa-play-circle
 
    I'm a ``play-circle`` Font Awesome icon
+
+Some Font Awesome icons have predefined roles:
+
++----------+----------------------+------------------+
+| Icon     | Usage                | Appearance       |
++----------+----------------------+------------------+
+| Download | \:download\:\`file\` | :download:`file` |
++----------+----------------------+------------------+
+
+.. note::
+
+   On compilation, Sphinx will check that the file actually exists at the path specified.
 
 Don't use RAW HTML to do it (unless required to circumvent the above to restrictions, but even
 then think hard about it due to the security concerns of raw HTML):
