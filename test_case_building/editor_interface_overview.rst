@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 17-01-2020
+:modified: 20-01-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -15,7 +15,18 @@
 Editor: Interface Overview
 **************************
 
-Alyvix Editor ... (description) ...
+Alyvix Editor allows you to create and execute scripts composed of multiple test case objects that
+are more complex than those can be created and executed by Alyvix Designer and Robot alone.  These
+scripts are composed of sequential, conditional and loop commands, including support for
+subroutines.
+
+The Editor interface includes Alyvix Selector and Designer as collapsible panels, which let you
+view and choose test case objects to include in the scripts.
+
+.. todo::
+
+   * CC:  Make sure the descriptions of Editor (and Designer and Selector) in other places don't
+     contradict the above and are xerox copies.
 
 You can start Alyvix Editor by itself from the command prompt (you can find information about its
 :ref:`command arguments here <test_case_building_editor_launch>`):
@@ -34,10 +45,13 @@ You will then see the Editor interface as shown here, which includes Selector an
 
 .. rst-class:: bignums
 
-#. Editor, consisting of the :ref:`Management panel <alyvix_editor_interface_management>` and
-   the :ref:`Script panel <alyvix_editor_interface_script>`
-#. :ref:`Designer <alyvix_designer_interface_overview>`.
-#. :ref:`Selector <alyvix_selector_interface_top>`.
+#. The Editor window, consisting of the
+   :ref:`Script Management panel <alyvix_editor_script_mgmt_top>`
+   and the :ref:`Scripting panel <alyvix_editor_scripting_panel_top>`
+#. The :ref:`Selector <alyvix_selector_interface_top>` window, where test case objects can be
+   dragged from, and then dropped into the scripting panel.
+#. The :ref:`Designer <alyvix_designer_interface_overview>` window, which shows the details of the
+   currently selected test case object.
 
 
 .. todo::
@@ -65,72 +79,45 @@ The principle interface elements exclusive to the Editor (apart from Selector an
 
 .. rst-class:: bignums
 
-#. The  :ref:`menu strip <alyvix_editor_interface_menu>`
-#. The main :ref:`script management panel <alyvix_editor_interface_management>`
-#. The user-defined Sections list (subroutines) to be added to scripts
-#. The user-defined Maps section (for loop over keys in a map) to be added to scripts
-#. Panel tab controls: scripting panel & monitor (don't need a full section)
-#. The :ref:`scripting panel <alyvix_editor_interface_script>`
-#. The script properties (don't need a full section)
-#. Panel resizing controls (don't need a full section)
+#. The :ref:`test case menu <alyvix_editor_interface_menu>`, described below, which contains
+   actions for Alyvix Editor and the current test case
+#. The main :ref:`scripting management panel <alyvix_editor_script_mgmt_top>`, used to select
+   the principal scripts to be edited
+#. The user-defined Sections list, containing named scripts that can be used as subroutines within
+   any of the principal scripts
+#. The user-defined Maps section, containing named maps where a script can be called multiple
+   times, once for each key in the map that is then passed as an argument to the named script
+#. The :ref:`scripting panel <alyvix_editor_scripting_panel_top>`, which shows the currently selected
+   script or map, along with the :guilabel:`Monitor` tab that shows the screen capture of
+   Selector's current test case object
+#. Individual scripting elements within the scripting panel, placed there using Selector
+#. The script property actions, which can enable, disable or remove individual script elements
+   that have been dragged into the scripting panel
+#. Panel resizing controls allowing you to resize, minimize, or restore the three peripheral
+   panels
 
 
 
 .. _alyvix_editor_interface_menu:
 
-==============
-The Menu Strip
-==============
+==================
+The Test Case Menu
+==================
+
+Alyvix Editor's menu has the following actions available:
+
+* |runblue|:  Execute the current script displayed in the scripting panel
+* **New:**  Throw away the current test case, replacing it with an empty one.  Be sure to save
+  the currently open test case before selecting this action as you will not be asked to confirm.
+* **Open:**  Throw away the current test case, replacing it with one chosen in the file dialog.
+* **Save:**  Save the current test case with its existing filename, overwriting the previous version.
+* **Save As:**  Create a copy of the current test case under a new file name.
+* **Exit:**  Exit Alyvix Editor.  Be sure to save the currently open test case before selecting this
+  action as you will not be asked to confirm.
 
 
+.. todo::
 
-* .. rst-class:: fa fa-small fa-play-circle
-
-     Run
-
-* New
-* Open
-* Save
-* Save As
-* Exit
-
-
-
-
-.. _alyvix_editor_interface_management:
-
-=======================
-Script Management Panel
-=======================
-
-Medium-level description here, full details on
-:ref:`another page <alyvix_editor_script_mgmt_top>`
-
-* Main
-* Fail
-* Exit
-
-Other parts:
-
-* Sections
-* Maps
-
-
-
-.. _alyvix_editor_interface_script:
-
-===================
-The Scripting Panel
-===================
-
-Medium-level description here, full details on
-:ref:`another page <alyvix_editor_scripting_panel_top>`
-
-* Script node types
-
-   * Run + Object
-   * If True + Object
-   * If False + Object
-   * For + Map
-
-* Drag and drop from Selector
+   * FM:  When NEW or EXIT is chosen, it doesn't seem to save the current test case, and doesn't ask
+     to save it.  Is that the desired behavior?
+   * FM:  When SAVE AS is selected, it starts saving the current test case before opening Explorer

@@ -45,6 +45,10 @@
 
    &nbsp;<i class="fa fa-small fa-black fa-bars"></i>
 
+.. |ban-icon| raw:: html
+
+   &nbsp;<i class="fa fa-small fa-black fa-ban"></i>
+
 .. |runblue| image:: /pictures/button_run_blue.png
    :class: inline-image-higher
    :height: 20
