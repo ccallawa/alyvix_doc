@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 17-01-2020
+:modified: 23-01-2020
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -67,7 +67,7 @@ Install Python as follows:
       :class: short-code-block
 
       C:\> python --version
-      Python 3.7.5
+      Python 3.7.6
 
 
 
@@ -77,10 +77,13 @@ Install Python as follows:
 Installing Alyvix
 =================
 
-Alyvix itself is installed via *pip*, the official Python package manager.  It places the
-Alyvix executables in the directory :file:`C:\\Python37\\Lib\\site-packages\\alyvix\\`.  Only a
-single step is required (as above, this command prompt must also be **run in Adminstrator mode**,
-or simply reuse the same command prompt):
+Alyvix itself is installed via *pip*, the official Python package manager.  *pip* will
+automatically detect that your system is running Python 3 and will install Alyvix 3,
+placing all executables in the directory
+:file:`C:\\Python37\\Lib\\site-packages\\alyvix\\`.
+
+As above, this command prompt must also be **run in Adminstrator mode** (or simply reuse the
+previous command prompt).  Only this single step is required:
 
 .. rst-class:: bignums
 
@@ -119,10 +122,10 @@ Only two steps are needed to upgrade to the latest version:
    * Run the following command to download and upgrade to the latest Alyvix master release along
      with all of its dependencies:
 
-   .. code-block:: doscon
-      :class: short-code-block
+     .. code-block:: doscon
+        :class: short-code-block
 
-      C:\> pip install --upgrade alyvix
+        C:\> pip install --upgrade alyvix
 
 
 

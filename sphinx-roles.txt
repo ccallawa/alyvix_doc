@@ -1,7 +1,7 @@
 .. |python-download-link| raw:: html
 
-   <a href="https://www.python.org/ftp/python/3.7.5/python-3.7.5-amd64.exe" target="_blank">
-   64-bit Windows installer for Python version 3.7.5  <i class="fa fa-small fa-external-link"></i></a>
+   <a href="https://www.python.org/ftp/python/3.7.6/python-3.7.6-amd64.exe" target="_blank">
+   64-bit Windows installer for Python version 3.7.6  <i class="fa fa-small fa-external-link"></i></a>
 
 .. |semantic-versioning-link| raw:: html
 
