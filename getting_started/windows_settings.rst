@@ -41,8 +41,8 @@ is captured.  To do this:
    Menu and then wait for Alyvix Designer to capture the screen.
 
 #. Next, use Designer to select a region around the *Settings* icon on the left side of the Start
-   Menu.  This time, *right click* on the icon to autocontour
-   :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`.
+   Menu.  This time, *right click* on the icon to **autocontour**
+   :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>
    it, and then press :kbd:`Escape`.  You should now see:
 
    .. image:: images/ad_comptree_autocontour.png

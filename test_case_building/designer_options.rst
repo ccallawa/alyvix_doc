@@ -134,8 +134,10 @@ Image Type Options
 .. rst-class:: fa fa-image
 
    The *image* component corresponds to a
-   :ref:`matchable image region <alyvix_designer_component_tree_types>` on the captured screen,
-   such as an icon.  As shown here, it has the following visual recognition parameters:
+   :ref:`matchable image region <alyvix_designer_component_tree_types>`
+   :rawhtml:`<a href="../glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   on the captured screen, such as an icon.  As shown here, it has the following visual
+   recognition parameters:
 
 .. image:: images/ad_type_submenu_image_sized.png
    :class: image-with-boxshadow
@@ -211,9 +213,7 @@ automatically recognized in the screen capture region.
 .. topic:: **Detect**
 
    The text *Detect* mode will determine that a match was correctly made if the text scraped from
-   the region of interest
-   :rawhtml:`<a href="../glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle"></i></a>`
-   matches the condition specified in the first two fields.
+   the region of interest matches the condition specified in the first two fields.
 
 * **Mode:**  Determines how the text is interpreted, setting the criterion to one of these
   3 methods:
