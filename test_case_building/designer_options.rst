@@ -212,7 +212,7 @@ automatically recognized in the screen capture region.
 
    The text *Detect* mode will determine that a match was correctly made if the text scraped from
    the region of interest
-   :rawhtml:`<a href="../basic_concepts/glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle" style="vertical-align:top;"></i></a>`
+   :rawhtml:`<a href="../glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle"></i></a>`
    matches the condition specified in the first two fields.
 
 * **Mode:**  Determines how the text is interpreted, setting the criterion to one of these

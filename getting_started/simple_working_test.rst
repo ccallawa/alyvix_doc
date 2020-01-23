@@ -52,5 +52,5 @@ As a next step, you can:
 * Continue on to the next section to try a more complete example with Alyvix to see how it works
 * Look at :ref:`more complex tutorials <tutorials_top>` for common use cases
 * Read more detailed, technical information on :ref:`building test cases <test_case_building_top>`
-* Read about the ideas behind Alyvix, and :ref:`find explanations <basic_concepts_top>`
+* Read about the ideas behind Alyvix, and :ref:`find explanations <glossary_top>`
   that will help you understand why Alyvix is structured the way it is

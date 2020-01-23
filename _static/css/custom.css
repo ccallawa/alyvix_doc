@@ -324,6 +324,7 @@ a:visited .fa::before {
 .fa-tiny::before {
     font-size: 12px;
     padding-right: 3px;
+    vertical-align:top;
 }
 .fa-black::before {
     color: black;    /* Override the blue color when necessary */

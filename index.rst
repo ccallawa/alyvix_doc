@@ -19,7 +19,7 @@
    test_case_building.rst
    test_case_execution.rst
    test_case_data_format.rst
-   basic_concepts.rst
+   glossary.rst
    tutorials.rst
    get_in_touch.rst
    stylesheet.rst

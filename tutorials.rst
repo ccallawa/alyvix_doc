@@ -15,6 +15,10 @@
 Tutorials
 *********
 
+Watch the tutorial video:
+
+|test-video-link|
+
 The following Tutorials are available:
 
 ====================================  ===================================

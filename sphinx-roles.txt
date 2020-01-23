@@ -33,6 +33,11 @@
    <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">
    Base64 <i class="fa fa-small fa-external-link"></i></a>
 
+.. |test-video-link| raw:: html
+
+   <iframe src="https://www.youtube.com/embed/wNxO-aXY5Yw" style="border: 0; height: 435px; width: 700px">
+   </iframe><p style="text-align: right;">Source: Alyvix@YouTube</p>
+
 .. |bar-icon| raw:: html
 
    &nbsp;<i class="fa fa-small fa-black fa-bars"></i>

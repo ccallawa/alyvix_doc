@@ -140,10 +140,9 @@ The individual sections of the JSON structure are explained below.
 
    #. :bolditalic:`objects` **---** A list of the individual test case objects created with
       Alyvix Designer.  Each test case object is identified uniquely in the list by its **object name**
-      :rawhtml:`<a href="basic_concepts/glossary.html#glossary-object-name"><i class="fa fa-tiny fa-question-circle" style="vertical-align:top;"></i></a>`.
+      :rawhtml:`<a href="glossary.html#glossary-object-name"><i class="fa fa-tiny fa-question-circle"></i></a>`.
    #. :bolditalic:`script` **---** The scripts created for a test case, both the main script and
       any section (subroutine) scripts.
-
 
 .. rst-class:: bignums
    :class: backdarkbeige nobignum
