@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 17-01-2020
+:modified: 23-01-2020
 :tags: designer, component, tree
 :lang: en-US
 :translation: false
@@ -126,7 +126,7 @@ a component in that group.
    must match a region on the screen before a match will be declared and any action(s) taken.
 
 In addition to manually selecting the bounds of the region, you can right-click on any point on
-the screen and Alyvix will try to automatically determine (autodetect) the appropriate rectangle
+the screen and Alyvix will try to automatically determine (autocontour) the appropriate rectangle
 to use.  You can also resize the bounding edges of any capture region by dragging them with the
 left mouse button.
 

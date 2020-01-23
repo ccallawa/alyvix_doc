@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 14-01-2020
+:modified: 23-01-2020
 :tags: getting, started, beginner, windows, settings
 :lang: en-US
 :translation: false
@@ -35,18 +35,18 @@ is captured.  To do this:
    .. code-block:: doscon
       :class: medium-code-block
 
-      C:\Alyvix\testcases> alyvix_designer -f start-test -o settings -d 3
+      C:\Alyvix\testcases> alyvix_designer -f start-test -o settings -d 5
 
-#. Once you see the line "Counting down" in the console, you'll have 3 seconds to open the Start
+#. Once you see the line "Counting down" in the console, you'll have 5 seconds to open the Start
    Menu and then wait for Alyvix Designer to capture the screen.
 
 #. Next, use Designer to select a region around the *Settings* icon on the left side of the Start
-   Menu.  This time, *right click* on the icon to *autodetect* the icon, and then press
+   Menu.  This time, *right click* on the icon to *autocontour* it, and then press
    :kbd:`Escape`.  You should now see:
 
-   .. image:: images/ad_comptree_autodetect.png
+   .. image:: images/ad_comptree_autocontour.png
       :alt: Setting up the Windows Settings button in Alyvix Designer
-      :target: ../_images/ad_comptree_autodetect.png
+      :target: ../_images/ad_comptree_autocontour.png
 
 #. Assign a *left click* action as before by selecting our new Settings icon region in the
    component tree, and then changing the action from ``None`` to ``Click``.

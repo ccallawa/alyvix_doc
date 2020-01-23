@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 20-01-2020
+:modified: 23-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -182,7 +182,7 @@ Rectangle Type Options
      difference between them, and I can't find an explanation in the 2.7.5 doc.  I'll need an
      example for each one.
    * FM:  What is the black box in the middle of a box or window when the Designer screen is open?
-   * FM:  Can you autodetect buttons, boxes and windows?  Right click doesn't seem to work.
+   * FM:  Can you autocontour buttons, boxes and windows?  Right click doesn't seem to work.
    * FM:  Once you've detected a window, what actions make sense to do, move it?
 
 

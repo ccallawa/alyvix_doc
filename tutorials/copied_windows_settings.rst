@@ -49,15 +49,15 @@ Once you see the line "Counting down" in the console, you'll have 3 seconds to o
 Menu and then wait for Alyvix Designer to capture the screen.  If that's not enough time for you,
 just change it to 5, 10, or any other number you like.
 
-.. figure:: ../getting_started/images/ad_comptree_autodetect.png
+.. figure:: ../getting_started/images/ad_comptree_autocontour.png
    :alt: Setting up the Windows Settings button in Alyvix Designer
    :name: label_edit_settings_button_copied
-   :target: ../_images/ad_comptree_autodetect.png
+   :target: ../_images/ad_comptree_autocontour.png
 
    Fig. 1:  Setting up the Settings button.
 
 When you've done that, select the *Settings* icon on the left side of the Start Menu.  Try using
-the right mouse button to autodetect the icon if you didn't in the
+the right mouse button to autocontour the icon if you didn't in the
 :ref:`previous tutorial <getting_started_example_start>`).  It creates minimized rectangles, which
 can speed up test execution, especially when it has to look for lots of rectangles.  Your new test
 case should look like Figure 1.

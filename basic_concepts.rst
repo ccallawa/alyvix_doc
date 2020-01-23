@@ -25,6 +25,7 @@ Basic concepts.
    :hidden:
 
    basic_concepts/glossary.rst
+   basic_concepts/concepts_set01.rst
 
 
 .. todo::

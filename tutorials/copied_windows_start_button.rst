@@ -27,7 +27,7 @@ example, the names used are not important.
 
 This time when you launch Alyvix Designer, use the mouse to select the Windows Start button.
 You can either *left-click-hold* to select a rectangle manually, or *right-click* on the Start
-button to let Alyvix autodetect the region.  When you're done, you should see something similar
+button to let Alyvix autocontour the region.  When you're done, you should see something similar
 to Figure 1.
 
 .. figure:: ../getting_started/images/gs_screen_capture_start_button.png
