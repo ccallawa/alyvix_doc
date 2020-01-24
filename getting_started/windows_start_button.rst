@@ -28,9 +28,11 @@ using Alyvix.
 
       C:\Alyvix\testcases> alyvix_designer -f start-test -o start
 
-#. Use the mouse to select the Windows Start button by *left-clicking* and *dragging* to create
-   a rectangular region (a :ref:`Region of Interest <glossary_region_of_interest>`) so that it
-   looks like the image here:
+#. Use the mouse to create a **selection**
+   :rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   around the Windows Start button by *left-clicking* and *dragging* so that it looks similar to
+   this screenshot (if you don't get it quite right the first time, just resize any of the edges
+   using the left mouse button):
 
    .. image:: images/gs_screen_capture_start_button.png
       :width: 55%

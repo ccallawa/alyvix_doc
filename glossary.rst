@@ -25,6 +25,11 @@ Glossary and Concepts
 :Component:  A *component* (Designer) (or component tree) is ...
    :ref:`Concept <concepts_test_case_components>`
 
+.. _glossary_component_tree:
+
+:Component Tree:  A *component tree* (Designer) (or component tree) is ...
+   :ref:`Concept <concepts_test_case_components>`
+
 .. _glossary_group:
 
 :Group:  A *group* (Designer) is ...

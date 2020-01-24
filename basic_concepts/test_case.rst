@@ -23,7 +23,7 @@ Test Case Concepts
 Test Case Objects
 =================
 
-:ref:`Region of Interest <glossary_region_of_interest>`
+:ref:`Test Case Objects <glossary_test_case_object>`
 
 
 
@@ -52,4 +52,6 @@ Object Names
 Components and Groups
 =====================
 
-:ref:`Component tree <glossary_autocontour>`
+:ref:`Component tree <glossary_component>`
+:ref:`Component tree <glossary_group>`
+
