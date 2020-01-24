@@ -34,7 +34,7 @@ Test Case Options
 At the top of the Alyvix Designer panel are the options that pertain to the test case as a whole:
 
 .. image:: images/ad_testcase_options_sized.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The test case options.
 
 The :ref:`Object name <glossary_object_name>` is the reference name (not the file name)
@@ -55,7 +55,7 @@ are detected, regardless of their type, and what happens if they fail to be dete
      Alyvix will detect when one is no longer visible
 
      .. image:: images/appeardisappear_h120.png
-        :class: image-with-boxshadow
+        :class: image-boxshadow
         :alt: Visual appearance and disappearance timeline.
 
 * **Timeout:**  The chosen detection condition will be continuously checked for this number
@@ -104,7 +104,7 @@ to start or close a particular application before Alyvix begins looking for any 
 
 
 .. image:: images/ad_root_options_sized.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: Options for the root element.
 
 The **Call** option allows you to select an application to start or to terminate at the moment
@@ -140,7 +140,7 @@ Image Type Options
    recognition parameters:
 
 .. image:: images/ad_type_submenu_image_sized.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: Options for the image type.
 
 * **Match:**  Only recognize an image that is exactly the same as the one selected during screen
@@ -166,7 +166,7 @@ Rectangle Type Options
    it has the following visual recognition parameters:
 
 .. image:: images/ad_type_submenu_rect_sized.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: Options for the rect type.
 
 * **Button:**  Match a region such as a button within a larger space
@@ -205,7 +205,7 @@ For both the *Detect* and *Map* types, the :guilabel:`Scrape` field displays the
 automatically recognized in the screen capture region.
 
 .. image:: images/ad_type_submenu_text_detect_sized.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: Options for the detect text type.
 
 
@@ -235,7 +235,7 @@ automatically recognized in the screen capture region.
    and make them available to the :ref:`map interface in Editor <alyvix_editor_interface_top>`.
 
 .. image:: images/ad_type_submenu_text_map_sized.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: Options for the map text type.
 
 
@@ -255,7 +255,7 @@ For all group and component object types, once a match on the screen has been fo
 optionally set up an immediate mouse action which is unique to each component.
 
 .. image:: images/ad_action_string_sized.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The mouse action selection dropdown.
 
 * **Action:**  Create a mouse event corresponding to one of the following types.  By default, the

@@ -28,7 +28,7 @@ When Editor is first started with a new test case, there are no scripted element
 scripting panel is empty:
 
 .. image:: images/ae_empty_script_panel.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The scripting panel when empty.
 
 .. todo::
@@ -41,7 +41,7 @@ indicating this test case object will be executed as if run directly by
 :ref:`Alyvix Robot <alyvix_robot_cli_options>` via the command prompt:
 
 .. image:: images/ae_single_script_panel.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The scripting panel with one scripting element.
 
 You can then begin to add more test case objects, by dragging them close to their correct position.
@@ -49,7 +49,7 @@ When an acceptable position is detected, the mouse pointer will switch from the 
 showing the name of the test case object and moving other objects out of the way if necessary:
 
 .. image:: images/ae_insert_test_case_object.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: Inserting a new script element in Alyvix Editor
 
 You can also replace an existing test case object by dragging a new one directly above it.
@@ -90,7 +90,7 @@ The following screenshot illustrates an example script, where the colors of the 
 explained in the table below.
 
 .. image:: images/ae_script_element_types.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The various types of script elements.
 
 .. table::

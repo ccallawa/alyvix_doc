@@ -131,7 +131,7 @@ can be entered.  For example, test case object names must
 If this is not the case, you will see an error message like this:
 
 .. image:: images/as_name_validation.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The Alyvix Selector interface.
 
 

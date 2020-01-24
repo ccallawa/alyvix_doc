@@ -39,7 +39,7 @@ You can start Alyvix Editor by itself from the command prompt (you can find info
 You will then see the Editor interface as shown here, which includes Selector and Designer:
 
 .. image:: images/ae_full_interface_numbered.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: Alyvix Editor with Designer and Selector.
    :target: ../_images/ae_full_interface_numbered.png
 
@@ -73,7 +73,7 @@ You will then see the Editor interface as shown here, which includes Selector an
 The principle interface elements exclusive to the Editor (apart from Selector and Designer) are:
 
 .. image:: images/ae_main_screen_numbered.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The Alyvix Editor interface.
    :target: ../_images/ae_main_screen_numbered.png
 

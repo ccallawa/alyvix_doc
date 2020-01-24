@@ -28,7 +28,7 @@ The script management panel is divided in three parts:
 These are found in the script management panel shown here:
 
 .. image:: images/ae_script_management_panel_h230.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The script management panel.
 
 The actions available from this panel are:
@@ -112,7 +112,7 @@ of its box will change from light green to dark green to indicate it is a sectio
 * |times-icon|
 
 .. image:: images/ae_basic_map_example.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The Map interface.
 
 * Cannot remove the ``value1`` column

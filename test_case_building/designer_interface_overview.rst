@@ -34,7 +34,7 @@ with the phrase :nobutton:`PRESS ESC TO OPEN DIALOG` at the top left, while purp
 will track the mouse as shown here:
 
 .. image:: images/ad_main_screen_edit_message_h150.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: The initial Alyvix Designer selection cursor
 
 .. tip::  Having a second monitor will enable you to mark regions of interest with Alyvix on one
@@ -115,7 +115,7 @@ interface shown here (the type of the component has been manually changed to :gu
 from :guilabel:`Image`):
 
 .. image:: images/ad_main_screen_new_component2.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: Adding a first component in the Alyvix Designer interface
 
 Our first region selection automatically created this group, while our second selection created

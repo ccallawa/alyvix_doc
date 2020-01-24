@@ -15,7 +15,7 @@
 Designer: Component Tree
 ************************
 
-You can use Alyvix Designer to create regions of interest on the screen.  When these regions are
+You can use Alyvix Designer to create selections on the screen.  When these regions are
 detected, whether as images or GUI objects, you can use additional neighboring screen elements to
 either confirm you have the correct region, or identify other areas that you can then act on,
 like a nearby button.
@@ -40,7 +40,7 @@ Structure of the Component Tree
 ===============================
 
 .. image:: images/ad_main_screen_initial_top.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: An empty component tree
 
 When Alyvix Designer is first launched, it will capture the entire screen to use as a basis for
@@ -54,7 +54,7 @@ distinguish the three groups, and a group's elements may in fact change color if
 or remove one.
 
 .. image:: images/ad_main_screen_components.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: A tree with a single root, group and component
 
 If you now select a region, a copy of that region will appear in red in the component tree.  This
@@ -82,7 +82,7 @@ Alyvix's visual recognition capability is based on two well-known open source sy
   convert it to computer-readable text, regardless of the font and font size used
 
 .. image:: images/ad_component_types.png
-   :class: image-with-boxshadow
+   :class: image-boxshadow
    :alt: A tree with a single root, group and component
 
 Alyvix uses these tools to visually detect three types of objects:
