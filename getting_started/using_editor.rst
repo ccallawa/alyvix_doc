@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 08-01-2020
-:modified: 22-01-2020
+:modified: 24-01-2020
 :tags: editor, gui
 :lang: en-US
 :translation: false
@@ -18,8 +18,8 @@
 Scripting a Test Case with Editor
 *********************************
 
-This task will introduce you to the scripting mechanism in Alyvix Editor.  It will allow you to
-create much more complex behaviors than we saw when calling Alyvix Robot in
+This task will introduce you to the scripting mechanism in Alyvix Editor, which allows you to
+create much more complex behaviors than we could do when just calling Alyvix Robot in
 :ref:`our prior task <getting_started_example_settings_robot>`.
 
 .. rst-class:: bignums
@@ -39,7 +39,7 @@ create much more complex behaviors than we saw when calling Alyvix Robot in
       :target: ../_images/ae_getting_started_example_main.png
 
 #. Now *drag and drop* the :guilabel:`start` object (here it's on the second row) by clicking on
-   the |bar-icon| icon at the left and dragging it to the large middle panel.  Its scripting element
+   its |bar-icon| icon at the left and moving it to the large middle panel.  Its scripting element
    will appear:
 
    .. image:: images/ae_getting_started_example_drag01.png

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 08-01-2020
-:modified: 22-01-2020
+:modified: 24-01-2020
 :tags: editor, gui
 :lang: en-US
 :translation: false
@@ -18,9 +18,8 @@
 Duplicating Objects with Selector
 *********************************
 
-This task is mostly just to explore Alyvix Selector.  We won't add anything to our running
-example, but we'll learn about how Selector works, which will be necessary for the next step
-when we look at Alyvix Editor.
+This task shows how Alyvix Selector works.  It won't add anything to our running example, but
+knowing how Selector works is necessary for the next step when we look at Alyvix Editor.
 
 .. rst-class:: bignums
 
@@ -44,7 +43,7 @@ when we look at Alyvix Editor.
       :alt: Selecting a row in Alyvix Selector
       :target: ../_images/as_getting_started_example_selected.png
 
-#. Next click on the :wbutton:`DUPLICATE` button at the bottom right, which will copy the
+#. Then click on the :wbutton:`DUPLICATE` button at the bottom right, which will copy the
    :guilabel:`settings` object and call it :guilabel:`settings_copy`:
 
    .. image:: images/as_getting_started_example_duplicated.png
@@ -61,9 +60,9 @@ when we look at Alyvix Editor.
 
 #. Now remove this test case object by clicking on the :rbutton:`REMOVE` button.
 
-#. Next, remove the Search filter by pressing the black :nobutton:`x` icon immediately to its
+#. Next, remove the Search filter by pressing the black |times-icon| icon immediately to its
    right.  Our original two test cases will reappear.
 
-#. Finally, let's exit without saving by pressing the :nobutton:`CANCEL` button.
+#. Finally, let's exit without saving our changes by pressing the :nobutton:`CANCEL` button.
 
-On the next page we'll see more about Selector when we use Alyvix Editor.
+During the next steps we'll find out more about Selector when we use Alyvix Editor.

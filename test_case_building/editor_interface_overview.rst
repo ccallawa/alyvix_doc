@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 20-01-2020
+:modified: 24-01-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -96,6 +96,9 @@ The principle interface elements exclusive to the Editor (apart from Selector an
 #. Panel resizing controls allowing you to resize, minimize, or restore the three peripheral
    panels
 
+.. todo::
+
+   CC:  The "Console" tab needs to be described
 
 
 .. _alyvix_editor_interface_menu:

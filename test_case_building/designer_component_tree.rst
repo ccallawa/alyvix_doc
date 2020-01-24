@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 23-01-2020
+:modified: 24-01-2020
 :tags: designer, component, tree
 :lang: en-US
 :translation: false
@@ -98,6 +98,10 @@ Alyvix uses these tools to visually detect three types of objects:
   component of a group.  Alyvix will always look for text near the already-located main component.
   the letter "A" icon above represents a *Text* object.
 
+
+.. todo::
+
+   CC:  Check "rectangle" is the right word
 
 
 .. _alyvix_designer_component_components:

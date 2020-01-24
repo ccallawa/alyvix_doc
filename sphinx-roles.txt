@@ -44,11 +44,11 @@
 
 .. |plus-icon| raw:: html
 
-   &nbsp;<i class="fa fa-small fa-black fa-bars"></i>
+   &nbsp;<i class="fa fa-small fa-black fa-plus"></i>
 
 .. |times-icon| raw:: html
 
-   &nbsp;<i class="fa fa-small fa-black fa-bars"></i>
+   &nbsp;<i class="fa fa-small fa-black fa-times"></i>
 
 .. |ban-icon| raw:: html
 
