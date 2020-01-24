@@ -24,10 +24,10 @@
 
 ..   tutorials.rst
 
+|
 
-.. image:: pictures/alyvix_logo_399x333.png
+.. image:: pictures/alyvix_logo_150x125.png
    :align: center
-   :width: 120pt
 
 
 .. _home:
