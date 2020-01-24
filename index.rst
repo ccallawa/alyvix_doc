@@ -20,11 +20,9 @@
    test_case_execution.rst
    test_case_data_format.rst
    glossary.rst
-   tutorials.rst
    get_in_touch.rst
-   stylesheet.rst
 
-..   concepts_glossary.rst
+..   tutorials.rst
 
 
 .. image:: pictures/alyvix_logo_399x333.png
@@ -70,8 +68,8 @@ and prepare you to implement Alyvix in your environment.
 .. If you want to understand the capabilities of Alyvix more in depth, the
    :ref:`Alyvix Concepts <concepts_top>` page is the place to start.
 
-For more extended examples of specific, real-world use cases that you can build upon to implement
-more sophisticated or targeted scenarios, take a look at the :ref:`Tutorials <tutorials_top>` page.
+.. For more extended examples of specific, real-world use cases that you can build upon to implement
+   more sophisticated or targeted scenarios, take a look at the :ref:`Tutorials <tutorials_top>` page.
 
 The sections on test cases contain detailed information about using the various Alyvix interfaces
 to create and execute them.
