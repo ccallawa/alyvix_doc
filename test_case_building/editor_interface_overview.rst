@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 24-01-2020
+:modified: 28-01-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -15,9 +15,9 @@
 Editor: Interface Overview
 **************************
 
-Alyvix Editor allows you to create and execute scripts composed of multiple test case objects that
-are more complex than those can be created and executed by Alyvix Designer and Robot alone.  These
-scripts are composed of sequential, conditional and loop commands, including support for
+Alyvix Editor allows you to create and execute scripts composed of multiple test case objects which
+are more complex than those that you can create and execute by Alyvix Designer and Robot alone.
+These scripts are composed of sequential, conditional and loop commands, including support for
 subroutines.
 
 The Editor interface includes Alyvix Selector and Designer as collapsible panels, which let you

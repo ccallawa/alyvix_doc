@@ -111,6 +111,8 @@ The following example JSON structure illustrates the high-level structure of the
    }
 
 
+.. _test_case_data_format_description:
+
 The individual sections of the JSON structure are explained below.
 
 .. rst-class:: bignums

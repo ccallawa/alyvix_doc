@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 20-01-2020
+:modified: 28-01-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -16,39 +16,40 @@ Test Case Execution
 ###################
 
 Alyvix test cases you have built with Alyvix Editor or Designer can be run using Alyvix Robot.
-Robot can either be run from the command line, or directly within Alyvix Editor.
+Robot can either be run from the command line, or directly within the Alyvix Editor itself.
 
 In a production environment, the typical use case is to create a set of test cases once, and then
 repeatedly run those test cases at regular intervals.  An example could be monitoring the usability
-of web pages on a remote server, where responsiveness must be measured every 5 minutes.
+of web pages on a remote server, where responsiveness must be measured every 2 minutes.
 
-There are three principal modes for interacting with Alyvix Robot:
+Before you can use Alyvix in a production environment, however, you will first need to iteratively
+develop and debug your test cases.  This is where Alyvix Robot can help you.  There are two
+principal modes for interacting with Alyvix Robot:
 
-* Manually call Robot with the Command Prompt, mainly to test that test case objects work in
-  isolation
-* Manually call Robot within Alyvix Editor, mainly to test scripting of test case objects
-* Automatically call Robot, for instance via scripting, at regular intervals
+* Calling Robot from the Command Prompt
+* Calling Robot from within Alyvix Editor via the |runblue| button
 
-In all three cases, the main idea is to execute one test case at a time, whether by creating
-scripts in Editor, or :ref:`combining them in series <getting_started_example_settings>` in
-Alyvix Robot.
-
-When Robot executes a test case, it first checks to see if one or more test case object names was
-passed via the ``-o`` parameter.  If so, Robot will execute those test case objects.  Otherwise,
-Robot will retrieve the script from the :file:`.alyvix` file's
-:ref:```script`` field <test_case_data_format_top>`.
+In both cases, one test case at a time is executed, the main script shown in Editor, or
+:ref:`one or more of the test case objects in series <getting_started_example_settings>` in
+the command prompt.
 
 
 
 .. _alyvix_robot_cli_options:
 
+
 **********************************************
 Launching Alyvix Robot from the Command Prompt
 **********************************************
 
-When executed manually, the test case object names are passed with the *object* (``-o``) option.
-In this case, the *verbosity* (``-v``) parameter can provide additional information that can
-help you should you need to debug your test cases.
+When Robot executes a test case, it first checks to see if one or more test case object names were
+passed via the ``-o`` parameter.  If so, Robot will execute those test case objects.  Otherwise, if
+the test case in the :file:`.alyvix` file
+:ref:`contains a script <test_case_data_format_description>` in its ``script`` field, then Robot
+will run that script.
+
+Adding the *verbosity* (``-v``) parameter will provide additional information that can help you
+should you need to debug your test cases.
 
 Alyvix Robot can be run with the following command:
 
@@ -57,24 +58,28 @@ Alyvix Robot can be run with the following command:
 
    C:\Alyvix\testcases> python alyvix_robot.py
 
-For instance, if you used Alyvix Designer to create a file :file:`my_test.alyvix` containing a
-test case with the object name "open", you can call:
+If you used Alyvix Editor to create a file :file:`start-test.alyvix` containing a a test case
+object named ``start``, you should run:
 
 .. code-block:: doscon
    :class: medium-code-block
 
-   C:\Alyvix\testcases> python alyvix_robot.py --filename my_test -o open
+   C:\Alyvix\testcases> python alyvix_robot.py --filename start-test -o start
+
+Robot allows you to execute multiple test case objects in sequence by putting all of them in order
+after the ``--object`` parameter:
+
+.. code-block:: doscon
+   :class: medium-code-block
+
+   C:\Alyvix\testcases> alyvix_robot -f start-test -o "start settings"
 
 The following options are available:
 
 +---------------+----------+----------------------------------------------+
 | Option        | Shortcut | Description                                  |
 +---------------+----------+----------------------------------------------+
-| \-\\-args     | -a       | Arguments to pass                            |
-+---------------+----------+----------------------------------------------+
 | \-\\-filename | -f       | Supply the file name with no extension       |
-+---------------+----------+----------------------------------------------+
-| \-\\-help     | -h       | Display command help                         |
 +---------------+----------+----------------------------------------------+
 | \-\\-object   | -o       | Supply the Object name(s)                    |
 +---------------+----------+----------------------------------------------+
@@ -86,6 +91,7 @@ The following options are available:
 
    * CC:  Add info here about multiple object names as described in the Windows Settings
      tutorial in Getting Started, then link here from there.
+   * CC:  The other commands have ``--verbose``, why not Robot?
 
 
 

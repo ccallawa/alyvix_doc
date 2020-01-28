@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 23-01-2020
+:modified: 28-01-2020
 :tags: getting, started, beginner, windows, settings
 :lang: en-US
 :translation: false
@@ -35,7 +35,7 @@ to give us time to set things up first.
 #. Once you see the line "Counting down" in the console, you will have 5 seconds to open the
    Windows Start Menu before Alyvix Designer captures the screen.
 
-#. Next, use Designer to select a region around the *Settings* icon on the left side of the Start
+#. Use Designer to select a region around the *Settings* icon on the left side of the Start
    Menu.  This time, *right click* on the icon to **autocontour**
    :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`
    it, and then press :kbd:`Escape`.  You should now see the selection in the Designer panel:
@@ -53,8 +53,8 @@ to give us time to set things up first.
 
    .. _getting_started_example_settings_robot:
 
-#. Now we can run the two test case objects in sequence by joining their names together after the
-   ``-o`` parameter as follows:
+#. Now run the two test case objects :ref:`in sequence <alyvix_robot_cli_options>` by
+   joining their names together after the ``-o`` parameter as follows:
 
    .. code-block:: doscon
       :class: medium-code-block

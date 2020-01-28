@@ -59,6 +59,9 @@
    :height: 20
    :width: 50
 
+.. role:: rawhtml(raw)
+   :format: html
+
 .. role:: warn
    :class: redbold
 
