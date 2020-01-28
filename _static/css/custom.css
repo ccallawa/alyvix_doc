@@ -1,3 +1,22 @@
+@keyframes example {
+    from { background-color: red; top: 0px; transform: rotate(0deg) scale(1,1) skew(0deg, 0deg); }
+    to { background-color: blue; top: 100px; transform: rotate(160deg) scale(2,2) skew(20deg, 10deg); }
+}
+.anim-test {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-fill-mode: none;
+}
+
+
 /* Allow some numbered lists to appear as steps in a procedure */
 .rst-content ol.bignums {
     counter-reset: li-counter;
@@ -413,6 +432,11 @@ a:visited .fa::before {
     font-size: 12px;
     padding-right: 3px;
     vertical-align:top;
+    transition: font-size 0.2s, padding-left 0.2s;
+}
+.fa-tiny:hover::before {
+    font-size: 20px;
+    padding-left: 0px;
 }
 .fa-blue::before {   /* The same blue as the RTD theme */
     color: #2980C9;
@@ -427,7 +451,7 @@ p.fa {
 
 
 
-/* Things to do only only on large screens (desktop and tablets, not phones)
+/* Things to do only only on large screens (desktop and tablets, not phones) */
 @media screen and (min-width: 769px) {  /* Responsive converts menu at 768px */
   /* Remove the horizontal scrollbars for larger screens in very wide tables */
   .wy-table-responsive table td {
