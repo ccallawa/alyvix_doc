@@ -131,7 +131,7 @@ test case execution begins.
 Image Type Options
 ------------------
 
-.. rst-class:: fa fa-image
+.. rst-class:: fa fa-image fa-blue
 
    The *image* component corresponds to a
    :ref:`matchable image region <alyvix_designer_component_tree_types>`
@@ -158,7 +158,7 @@ Image Type Options
 Rectangle Type Options
 ----------------------
 
-.. rst-class:: fa fa-retweet
+.. rst-class:: fa fa-retweet fa-blue
 
    The *rect* component corresponds to a
    :ref:`matchable rectangular region <alyvix_designer_component_tree_types>`
@@ -194,7 +194,7 @@ Rectangle Type Options
 Text Type Options
 -----------------
 
-.. rst-class:: fa fa-font
+.. rst-class:: fa fa-font fa-blue
 
    The *text* component corresponds to a
    :ref:`matchable region of interest <alyvix_designer_component_tree_types>` on the captured

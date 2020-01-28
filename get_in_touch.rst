@@ -41,7 +41,7 @@ read about the **Alyvix stories** currently under development.
 Support Email
 *************
 
-.. rst-class:: fa fa-at
+.. rst-class:: fa fa-at fa-blue
 
    \
 

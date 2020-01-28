@@ -83,8 +83,8 @@ Selector List Headers
 
 The test case object list headers describe the contents of their respective columns.
 The list can be sorted on the first three columns by clicking on the header name, with the
-:rawhtml:`<i class="fa fa-small fa-sort-up" style="vertical-align:bottom;"></i>` and
-:rawhtml:`<i class="fa fa-small fa-sort-down" style="vertical-align:top;"></i>`
+:rawhtml:`<i class="fa fa-small fa-blue fa-sort-up" style="vertical-align:bottom;"></i>` and
+:rawhtml:`<i class="fa fa-small fa-blue fa-sort-down" style="vertical-align:top;"></i>`
 icons indicating whether the sort is ascending or descending.
 
 The list headers have the following characteristics:
@@ -164,7 +164,7 @@ background, and can then be used with the actions described in the next section 
 Test Case Object Actions
 ========================
 
-The :wbutton:`DELAY [S] <n> ADD` control allows you to add a completely new test case by launching
+The :wbutton:`DELAY [SEC] <n> ADD` control allows you to add a completely new test case by launching
 Designer directly from the Selector interface with the specified countdown delay in seconds
 just as if you had used Designer's :file:`--delay` option from the command prompt.  This
 action is available regardless of whether a test case object is selected.

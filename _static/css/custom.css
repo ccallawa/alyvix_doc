@@ -294,64 +294,12 @@ code.kbd, .rst-content tt.kbd, kbd {
 }
 
 
-/* Remove the horizontal scrollbars for larger screens in very wide tables */
-@media screen and (min-width: 767px) {
-  .wy-table-responsive table td {
-    /* !important prevents the common CSS stylesheets from
-       overriding this as on RTD they are loaded after this stylesheet */
-    white-space: normal !important;
-  }
-  .wy-table-responsive {
-    overflow: visible !important;
-  }
-}
-
-
-/* Override the defaults for Font Awesome icons */
-.fa::before {
-    font-size: 40px;
-    padding-right: 10px;
-    color: #2980C9;    /* The same blue as the RTD theme */
-}
-a:visited .fa::before {
-    color: #9B59B6;
-}
-.fa-small::before {
-    font-size: 16px;
-    padding-right: 4px;
-}
-.fa-tiny::before {
-    font-size: 12px;
-    padding-right: 3px;
-    vertical-align:top;
-}
-.fa-black::before {
-    color: black;    /* Override the blue color when necessary */
-    /* font-weight: normal;  Has no effect on thickness */
-}
-p.fa {
-    line-height: 24px; /* Should inherit from 'p' */
-}
-
-
 /* Override the default style for figure captions */
 div.figure, p.caption, span.caption-text {
     font-style: normal;
     font-weight: bold;
     padding-top:  10px;
     /* padding-left:  10px; */
-}
-
-
-/* Narrow the default size of the left-side navigation bar */
-nav.wy-nav-side, div.wy-side-nav-search, div.wy-menu-vertical {
-    width: 260px;  /* Was 300px */
-}
-section.wy-nav-content-wrap {
-    margin-left: 260px; /* Match this to the width above */
-}
-div.wy-side-scroll { /* Hides the scroll bar under the main doc page */
-    width: 280px;  /* Was 320px */
 }
 
 
@@ -446,4 +394,59 @@ div.highlight pre::-webkit-scrollbar-track {
     padding-bottom: 0px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+
+/* Override the defaults for Font Awesome icons */
+.fa::before {
+    font-size: 40px;
+    padding-right: 10px;
+}
+a:visited .fa::before {
+    color: #9B59B6;
+}
+.fa-small::before {
+    font-size: 16px;
+    padding-right: 4px;
+}
+.fa-tiny::before {
+    font-size: 12px;
+    padding-right: 3px;
+    vertical-align:top;
+}
+.fa-blue::before {   /* The same blue as the RTD theme */
+    color: #2980C9;
+}
+.fa-black::before {
+    color: black;    /* Override the blue color when necessary */
+    /* font-weight: normal;  Has no effect on thickness */
+}
+p.fa {
+    line-height: 24px; /* Should inherit from 'p' */
+}
+
+
+
+/* Things to do only only on large screens (desktop and tablets, not phones)
+@media screen and (min-width: 769px) {  /* Responsive converts menu at 768px */
+  /* Remove the horizontal scrollbars for larger screens in very wide tables */
+  .wy-table-responsive table td {
+    /* !important prevents the common CSS stylesheets from
+       overriding this as on RTD they are loaded after this stylesheet */
+    white-space: normal !important;
+  }
+  .wy-table-responsive {
+    overflow: visible !important;
+  }
+  /* Narrow the default size of the left-side navigation bar, both were 300px */
+  nav.wy-nav-side, div.wy-side-nav-search, div.wy-menu-vertical {
+      width: 260px;
+  }
+  section.wy-nav-content-wrap {
+      margin-left: 260px;
+  }
+  /* Hides the vertical scroll bar under the main doc menu, was 320px */
+  div.wy-side-scroll {
+      width: 280px;
+  }
 }
