@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 23-01-2020
+:modified: 28-01-2020
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -58,10 +58,13 @@ Install Python as follows:
    Alyvix is :warn:`not` compatible with 32-bit versions of Python.
 
 #. Install Python by right-clicking on the executable and selecting **"Run as administrator"**.
-   The preferred location is :file:`C:\\Python37\\`.  Be sure that Python is added to your path
-   (i.e., the path containing the Python executable is in your *Environment variables* under
-   ``Path``).  The path is correct if the following command returns a version rather than an
-   error message:
+   Choose "Customize installation", then check all the options on the second page and click on
+   "Next".  On the third page, make sure "Add Python to environment variables" is checked.
+   Under "Customize install location", insert :file:`C:\\Python37\\` (recommended) and click
+   on "Install".
+
+   The path is correct if the following command returns a version rather than an error message
+   (if not, you will need to edit your *Environment variables* under ``Path``):
 
    .. code-block:: doscon
       :class: short-code-block
