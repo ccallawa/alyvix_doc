@@ -19,7 +19,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'alyvix_doc'
-copyright = '2019, Charles Callaway'
+copyright = '2020, Charles Callaway'
 author = 'Charles Callaway'
 
 # The full version, including alpha/beta/rc tags
@@ -54,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Alyvix'
-copyright = u'2019, Wuerth Phoenix Srl'
+copyright = u'2020, Wuerth Phoenix Srl'
 author = u'Charles Callaway'
 
 # The version info for the project you're documenting, acts as replacement for
