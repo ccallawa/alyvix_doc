@@ -82,14 +82,10 @@ using Alyvix.
       :alt: The start button script element in Alyvix Editor
 
 #. Now call Alyvix Robot by pressing the |runblue| button at the top left.  You should see the
-   mouse move over to the Windows Start button and click, causing the Start Menu to open.
+   mouse move over to the Windows Start button and click, causing the Start Menu to open.  Finally,
+   exit Alyvix Editor using the :nobutton:`EXIT` button at the top.
 
-If you saw the Start Menu appear , then you've successfully built and run
-your very first Alyvix test case!
+If you saw the Start Menu appear, then you've successfully built and run your very first Alyvix
+test case!
 
-
-
-..  drag the object into the scripting panel
-    run the test case through the editor, clicking on RUN and waiting for the interaction
-    save the test case, clicking on SAVE AS and type windows_menu as the file name
-    exit the editor, clicking on EXIT
+The following page will continue this example to create a more complex script.
