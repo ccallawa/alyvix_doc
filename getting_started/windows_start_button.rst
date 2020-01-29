@@ -1,7 +1,7 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 14-01-2020
-:tags: getting, started, beginner, windows, start
+:modified: 29-01-2020
+:tags: getting, started, beginner, windows, start, editor
 :lang: en-US
 :translation: false
 :status: draft
@@ -66,13 +66,13 @@ using Alyvix.
    Editor with the option ``-f start-test``, :ref:`the resulting file <test_case_data_format_top>`
    will be called :file:`start-test.alyvix`.
 
-#. In the panel at the bottom left, change the name of our **test case object**
+#. In the Selector panel at the bottom left, change the name of our **test case object**
    :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
    from the default name :guilabel:`VisualObject1` to a new one like :guilabel:`PressStartButton`:
 
    .. image:: images/as_rename_object.png
       :class: image-with-border
-      :alt: The start button test case in Alyvix Editor
+      :alt: The start button test case in Alyvix Selector
 
 #. Using the |bar-icon| icon, drag the new test case object and drop it into the Scripting panel
    marked :bbutton:`Script: MAIN`.

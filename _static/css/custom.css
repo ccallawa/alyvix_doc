@@ -415,6 +415,11 @@ div.highlight pre::-webkit-scrollbar-track {
     border-top-right-radius: 10px;
 }
 
+/* Vertical space for a single line break was too big (24px) */
+.rst-content .line-block {
+    margin-bottom: 6px;
+}
+
 
 /* Override the defaults for Font Awesome icons */
 .fa::before {

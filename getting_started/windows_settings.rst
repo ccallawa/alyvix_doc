@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 28-01-2020
+:modified: 29-01-2020
 :tags: getting, started, beginner, windows, settings
 :lang: en-US
 :translation: false
@@ -15,56 +15,76 @@
 Opening Windows Settings from the Start Menu
 ********************************************
 
-The :ref:`previous example <getting_started_example_start>` had you create an Alyvix test case
-consisting of a single test case object
-:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`.
-Most of the time though, you'll need to chain together multiple test case objects.  So let's
-extend that example to also open Windows Settings.  We'll start by delaying the screen capture
-to give us time to set things up first.
+In the :ref:`previous example <getting_started_example_start>` we created an Alyvix test case
+:rawhtml:`<a href="../glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`
+consisting of a single test case object.
+Most of the time though, you'll need to chain together multiple test case objects to synthesize
+more complex behavior in your apps.  So let's extend our previous example to run a second action:
+opening the Windows Settings app.
 
 .. rst-class:: bignums
 
-#. Add the ``-d`` parameter to set a delay in seconds as shown, and give the new test case a
-   different object name (it needs to have the same file name, however):
+#. Launch Alyvix Editor with the same file name from our previous example:
 
    .. code-block:: doscon
-      :class: medium-code-block
+      :class: short-code-block
 
-      C:\Alyvix\testcases> alyvix_designer -f start-test -o settings -d 5
+      C:\Alyvix\testcases> alyvix_editor -f start-test
 
-#. Once you see the line "Counting down" in the console, you will have 5 seconds to open the
-   Windows Start Menu before Alyvix Designer captures the screen.
+   Editor will load the :file:`start-test.alyvix` test case created in the previous example.
 
-#. Use Designer to select a region around the *Settings* icon on the left side of the Start
-   Menu.  This time, *right click* on the icon to **autocontour**
+#. We need to capture the screen once the Start menu has already opened, so change the delay
+   number in the :wbutton:`DELAY [SEC] 0 ADD` from ``0`` to something higher like ``5``, then click
+   on :bbutton:`ADD`:
+
+   .. image:: images/as_delay_five_seconds.png
+      :class: image-with-border
+      :alt: Setting up the 5 second delay before capturing the screen
+
+#. Once you click :bbutton:`ADD`, you'll have 5 seconds to open the Windows Start Menu (you'll
+   need to click on the Start button yourself) before Alyvix captures the screen.
+
+#. Next, *right click* on the *Settings* icon at the left side of the Start Menu.  This will **autocontour**
    :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`
-   it, and then press :kbd:`Escape`.  You should now see the selection in the Designer panel:
+   the icon.
 
-   .. image:: images/ad_comptree_autocontour.png
-      :alt: Setting up the Windows Settings button in Alyvix Designer
-      :target: ../_images/ad_comptree_autocontour.png
+   .. image:: images/ad_settings_selected.png
+      :class: image-with-border
+      :alt: Select Settings after the 5 second screen capture delay
 
-#. Assign a *left click* action as in the previous example by clicking on our new Settings icon
-   in the component tree
-   :rawhtml:`<a href="../glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
-   and then changing the value of the :guilabel:`Action` dropdown from ``None`` to ``Click``.
+#. Press :kbd:`Escape` to return you to Editor with the new selection in the Designer
+   panel at the right.  Assign a *left click* action as in the previous example by changing the
+   value of the :guilabel:`Action` dropdown from ``None`` to ``Click``:
 
-#. Save and exit by clicking on the :bbutton:`OK` button.
+   .. image:: images/ad_settings_click.png
+      :class: image-with-border
+      :alt: Select Settings after the 5 second screen capture delay
 
-   .. _getting_started_example_settings_robot:
+#. In the Selector panel at the bottom left, change the name of our new test case object
+   from :guilabel:`VisualObject1` to a new one like :guilabel:`PressSettingsIcon`:
 
-#. Now run the two test case objects :ref:`in sequence <alyvix_robot_cli_options>` by
-   joining their names together after the ``-o`` parameter as follows:
+   .. image:: images/as_rename_second_object.png
+      :class: image-with-border
+      :alt: The settings button test case in Alyvix Selector
 
-   .. code-block:: doscon
-      :class: medium-code-block
+#. Using its |bar-icon| icon, drag the new test case object into the Scripting panel
+   underneath the existing script element:
 
-      C:\Alyvix\testcases> alyvix_robot -f start-test -o "start settings"
+   .. image:: images/ae_second_script_element.png
+      :class: image-with-border
+      :alt: The settings button script element in Alyvix Editor
 
-   This tells Robot to start the ``settings`` test case object as soon as it finishes ``start``.
+#. Now call Alyvix Robot by pressing the |runblue| button at the top left.  You'll see the Start
+   Menu open, and then a few seconds later a click on the Settings icon, at which point the Windows
+   Settings app will open.
 
-#. When you run Alyvix Robot, you'll see the Start Menu open, and then a few seconds later a
-   click on the Settings icon, at which point the Windows Settings app will open.
+#. At the top of Editor, open the :nobutton:`Console` panel.  This contains the timing results
+   for each script element.
 
-#. Finally, take a look at the output in the command prompt, where Robot now reports the
-   combined run time of the two test cases.
+   .. image:: images/ae_console_panel_result.png
+      :class: image-with-border
+      :alt: The results of running the script in Alyvix Editor
+
+   |
+
+   Finally, exit Alyvix Editor using the :nobutton:`EXIT` button at the top.
