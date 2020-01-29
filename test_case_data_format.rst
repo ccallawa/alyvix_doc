@@ -179,7 +179,7 @@ The individual sections of the JSON structure are explained below.
 
       .. todo::
 
-         FM:  Need to more information on *measure*
+         * FM:  Need to more information on *measure*
 
 
 .. rst-class:: bignums

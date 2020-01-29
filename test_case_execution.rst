@@ -107,7 +107,7 @@ When run manually from Alyvix Editor, the test case objects are executed as spec
 
 .. todo::
 
-   * Can you set verbosity for Robot within Editor?
+   * FM: Can you set verbosity for Robot within Editor?
 
 
 Alyvix Robot can be run ...

@@ -101,7 +101,7 @@ Alyvix uses these tools to visually detect three types of objects:
 
 .. todo::
 
-   CC:  Check "rectangle" is the right word
+   * CC:  Check "rectangle" is the right word
 
 
 .. _alyvix_designer_component_components:

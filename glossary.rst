@@ -17,17 +17,23 @@ Glossary and Concepts
 
 .. _glossary_autocontour:
 
-:Autocontour:  *Autocontour* is ...
-   :ref:`Concept <concepts_screen_capture_autoc>`
+:Autocontour:  *Autocontour*
+   :rawhtml:`<a href="basic_concepts/screen_capture.html#autocontour"><i class="fa fa-tiny fa-comment"></i></a>`
+   is an Alyvix feature that can greatly speed up your interactions
+   with Alyvix Designer, as it's much quicker to *right-click* on an icon than to draw a box
+   around it.  Autocontour creates minimal selections.
 
 .. _glossary_component:
 
-:Component:  A *component* (Designer) (or component tree) is ...
-   :ref:`Concept <concepts_test_case_components>`
+:Component:  A *component* is a visual screen element that has a specific type (image, rect,
+   or text) and is either the *principle component* of a group or a *subcomponent*.
+   Components are arranged in the component tree.
+   :ref:`Concept <concepts_test_case_components>` (Designer)
 
 .. _glossary_component_tree:
 
-:Component Tree:  A *component tree* (Designer) (or component tree) is ...
+:Component Tree:  A *component tree* details the hierarchy of components in a given test case
+   object.
    :ref:`Concept <concepts_test_case_components>`
 
 .. _glossary_group:
@@ -37,22 +43,24 @@ Glossary and Concepts
 
 .. _glossary_object_name:
 
-:Object name:  A *object name* is ...
+:Object name:  An *object name* is the key identifer that distinguishes one test case object
+   from another within a single test case.
    :ref:`Concept <concepts_test_case_names>`
 
 .. _glossary_region_of_interest:
 
-:Region of Interest:  A *region of interest* (RoI) is ...
+:Region of Interest:  A *region of interest* (RoI) is the area around a subselection
    :ref:`Concept <concepts_screen_capture_roi>`
 
 .. _glossary_root:
 
-:Root element:  A *root element* (Designer) is ...
+:Root element:  The *root element* of a test case object is ...
    :ref:`Concept <concepts_test_case_components>`
 
 .. _glossary_selection:
 
-:Selection Area:  A *selection area* is ...
+:Selection:  A *selection* is ...
+   A *subselection* is ...
    :ref:`Concept <concepts_screen_capture_sel>`
 
 .. _glossary_test_case:
@@ -67,11 +75,6 @@ Glossary and Concepts
 
 
 
-
-
-.. todo::
-
-   * CC:  Everything still to do in the Glossary
 
 
 .. toctree::

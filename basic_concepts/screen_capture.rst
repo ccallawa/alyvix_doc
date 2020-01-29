@@ -44,3 +44,10 @@ Autocontour
 ===========
 
 * :ref:`Autocontour <glossary_autocontour>`
+
+.. todo::
+
+   CC: Show examples, including difference between autocontour and hand drawn
+
+Use the :kbd:`Space` shortcut to see ahead of time what autocontour thinks are
+relevant screen objects (pressing :kbd:`Space` again will remove the overlay).
