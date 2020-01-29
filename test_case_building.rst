@@ -58,6 +58,8 @@ section includes detailed mini-tutorials on how to use Alyvix Editor.
    in a single test file, and allows you to create more complex interactions compared to using
    Designer alone.
 
+.. _test_case_building_editor_launch:
+
 The following sections of the Alyvix Guide present further information about Alyvix Editor:
 
 * The :ref:`Editor Interface Overview <alyvix_editor_interface_top>` page describes the layout of
@@ -66,8 +68,6 @@ The following sections of the Alyvix Guide present further information about Aly
   scripted interactions between existing test cases
 * The :ref:`Scripting Management <alyvix_editor_script_mgmt_top>` page shows you how to manipulate
   (view, copy, edit, delete) the scripts and scripting components you have created
-
-.. _test_case_building_editor_launch:
 
 Alyvix Editor can be run as follows:
 
@@ -101,6 +101,8 @@ Designer will save the set of patterns as a single **test case object**
 which you can then use as a building block to compose more complicated objects and scripts using
 Alyvix Editor.
 
+.. _test_case_building_designer_launch:
+
 The following sections of the Alyvix Guide present further information on Alyvix Designer:
 
 * The :ref:`Designer Interface Overview <alyvix_designer_interface_overview>` page provides a
@@ -109,8 +111,6 @@ The following sections of the Alyvix Guide present further information on Alyvix
   test case object types available, including what they can do and how to interact with them
 * You can find more detailed information about the available options for test case objects and
   components on the :ref:`Interface Options <alyvix_designer_options>` page
-
-.. _test_case_building_designer_launch:
 
 Alyvix Designer can be run as follows:
 
@@ -144,12 +144,12 @@ with the following command line options:
    be distributed across multiple test case files.  It provides options to view, copy, edit and
    delete those test cases objects.
 
+.. _test_case_building_selector_launch:
+
 Selector is organized as a set of tabbed panels representing one or more test case files, and
 a list of test case objects within each tab.  This allows you to quickly switch between them and
 filter, search and edit within a single file, or copy test case objects across opened test case
 files.
-
-.. _test_case_building_selector_launch:
 
 Alyvix Selector can be run as follows:
 
