@@ -57,7 +57,7 @@
 .. |runblue| image:: /pictures/button_run_blue.png
    :class: inline-image-higher
    :height: 20
-   :width: 50
+   :width: 54
 
 .. role:: rawhtml(raw)
    :format: html

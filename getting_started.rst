@@ -28,25 +28,18 @@ keep your test cases, e.g.:
 
 Each subsequent example builds on the previous example, so it is important to try them in order.
 
-Once you've walked through the steps for all the examples below, you'll have a pretty good idea of
+Walking through the steps of the examples below will give you a pretty good idea of
 how the Alyvix interface works.
 
 .. rst-class:: bignums-xxl
 
-#. :ref:`Check that Alyvix is working <getting_started_example_test>` with a minimal test
-
-   .. * Show Python and Alyvix are working at the command prompt with ``--version``
-
-   * Launch Alyvix Designer from the command prompt with no arguments and exit
-
-#. Open the Windows :ref:`Start Menu <getting_started_example_start>` with Alyvix Designer and
-   Alyvix Robot
+#. Open the Windows :ref:`Start Menu <getting_started_example_start>` with Alyvix Editor
 
    * Build a simple test case that looks for and clicks on the Windows Start button
    * Run the test case, so that Alyvix actually opens the Window Start Menu
 
 #. Open the :ref:`Start Menu, then the Settings app <getting_started_example_settings>` as two
-   separate Designer test cases
+   separate test cases
 
    * Build two separate test cases, where the second depends on the results of the first
    * Join them together to create a combined action
@@ -76,7 +69,6 @@ how the Alyvix interface works.
    :name: toc_test
    :hidden:
 
-   getting_started/simple_working_test.rst
    getting_started/windows_start_button.rst
    getting_started/windows_settings.rst
    getting_started/using_selector.rst

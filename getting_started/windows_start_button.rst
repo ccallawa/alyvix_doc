@@ -20,54 +20,76 @@ using Alyvix.
 
 .. rst-class:: bignums
 
-#. Launch Alyvix Designer with a dummy file name and object name (for the purposes of this
-   example, the names used are not important):
+#. Launch Alyvix Editor, giving it a file name to use (the exact name is not important,
+   but we will reuse them in subsequent examples):
 
    .. code-block:: doscon
       :class: short-code-block
 
-      C:\Alyvix\testcases> alyvix_designer -f start-test -o start
+      C:\Alyvix\testcases> alyvix_editor -f start-test
 
-#. Use the mouse to create a **selection**
+   The Editor screen will appear:
+
+   .. image:: images/ae_empty_panel.png
+      :class: image-with-border
+      :alt: The Windows Start button in Alyvix Designer
+      :target: ../_images/ae_empty_panel.png
+
+#. Click on the :wbutton:`DELAY [SEC]  0  ADD` button at the bottom to create a screen capture.
+
+#. Next, use the mouse to create a **selection**
    :rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
    around the Windows Start button by *left-clicking* and *dragging* so that it looks similar to
    this screenshot (if you don't get it quite right the first time, just resize any of the edges
    using the left mouse button):
 
    .. image:: images/gs_screen_capture_start_button.png
-      :width: 55%
+      :class: image-with-border
       :alt: Selecting the Windows Start button.
-      :target: ../_images/gs_screen_capture_start_button.png
 
-#. With our region still selected, press the :kbd:`Escape` key.  The Designer interface will
-   appear with our region containing the Start button as shown:
+#. With our region still selected, press the :kbd:`Escape` key.  The Editor interface will return
+   with the region containing the Start button as shown in the panel at the right:
 
-   .. image:: images/gs_start_selected.png
-      :alt: The Windows Start button in Alyvix Designer
-      :target: ../_images/gs_start_selected.png
+   .. image:: images/ae_basic_designer_panel.png
+      :class: image-with-border
+      :alt: The Windows Start button in Alyvix Editor's Designer panel
 
-#. Towards the bottom of the panel under the label :guilabel:`Action` there is a dropdown option
-   with the value ``None``.  Change that value from ``None`` to ``Click``.  A small red dot will
-   appear in the center of the selected region, indicating that is where Alyvix Robot will click
-   when it recognizes the Start button image onscreen.
+#. At the bottom of that panel under the label :guilabel:`Action` there is a dropdown option
+   with the value ``None``.  Change that value from ``None`` to ``Click`` and keep its default
+   values.  A mouse icon to the right of the button image will confirm this with a red highlight.
 
-   .. image:: images/gs_start_click_action.png
-      :alt: The click point on the Windows Start button
-      :target: ../_images/gs_click_action.png
+   .. image:: images/ae_designer_panel_selection.png
+      :class: image-with-border
+      :alt: The click point added to the Windows Start button in the Designer panel
 
-#. Save the test case by clicking the :bbutton:`OK` button at the bottom left.  Since we started
-   Designer with the option ``-f start-test``, :ref:`the resulting file <test_case_data_format_top>`
+#. Save this new test case by clicking the :nobutton:`SAVE AS` button at the top.  Since we started
+   Editor with the option ``-f start-test``, :ref:`the resulting file <test_case_data_format_top>`
    will be called :file:`start-test.alyvix`.
 
-#. Now call Alyvix Robot with the same parameters (file name and object name) as for Designer
-   in Step #1 above:
+#. In the panel at the bottom left, change the name of our **test case object**
+   :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   from the default name :guilabel:`VisualObject1` to a new one like :guilabel:`PressStartButton`:
 
-   .. code-block:: doscon
-      :class: short-code-block
+   .. image:: images/as_rename_object.png
+      :class: image-with-border
+      :alt: The start button test case in Alyvix Editor
 
-      C:\Alyvix\testcases> alyvix_robot -f start-test -o start
+#. Using the |bar-icon| icon, drag the new test case object and drop it into the Scripting panel
+   marked :bbutton:`Script: MAIN`.
 
-   You should see the mouse move over to the Start button and click, causing the Start Menu to open.
+   .. image:: images/ae_basic_script_element.png
+      :class: image-with-border
+      :alt: The start button script element in Alyvix Editor
 
-If you saw the Start Menu appear after running Robot, then you've successfully built and run
+#. Now call Alyvix Robot by pressing the |runblue| button at the top left.  You should see the
+   mouse move over to the Windows Start button and click, causing the Start Menu to open.
+
+If you saw the Start Menu appear , then you've successfully built and run
 your very first Alyvix test case!
+
+
+
+..  drag the object into the scripting panel
+    run the test case through the editor, clicking on RUN and waiting for the interaction
+    save the test case, clicking on SAVE AS and type windows_menu as the file name
+    exit the editor, clicking on EXIT
