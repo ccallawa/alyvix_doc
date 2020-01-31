@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 23-01-2019
+:modified: 31-01-2019
 :tags: concept, glossary
 :lang: en-US
 :translation: false
@@ -41,12 +41,6 @@ Glossary and Concepts
 :Group:  A *group* (Designer) is ...
    :ref:`Concept <concepts_test_case_components>`
 
-.. _glossary_object_name:
-
-:Object name:  An *object name* is the key identifer that distinguishes one test case object
-   from another within a single test case.
-   :ref:`Concept <concepts_test_case_names>`
-
 .. _glossary_region_of_interest:
 
 :Region of Interest:  A *region of interest* (RoI) is the area around a subselection
@@ -81,12 +75,12 @@ Glossary and Concepts
 .. _glossary_test_case_object:
 
 :Test Case Object:  A *test case object* is ...
-   :ref:`Concept <concepts_test_case_names>`
+   :ref:`Concept <concepts_test_case_objects>`
 
 .. _glossary_test_case_script:
 
 :Test Case Script:  A *test case script* is ...
-   :ref:`Concept <concepts_test_case_names>`
+   :ref:`Concept <concepts_test_case_object_name>`
 
 
 

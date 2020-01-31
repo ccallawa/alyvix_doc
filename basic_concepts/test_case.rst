@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 23-01-2019
-:modified: 23-01-2019
+:modified: 31-01-2019
 :tags: concept, test case
 :lang: en-US
 :translation: false
@@ -23,17 +23,13 @@ Test Case Concepts
 Test Case Objects
 =================
 
-:ref:`Test Case Objects <glossary_test_case_object>`
 
 
-
-.. _concepts_test_case_names:
+.. _concepts_test_case_object_name:
 
 ============
 Object Names
 ============
-
-:ref:`Object Name <glossary_object_name>`
 
 .. note::
 
@@ -51,7 +47,3 @@ Object Names
 =====================
 Components and Groups
 =====================
-
-:ref:`Component tree <glossary_component>`
-:ref:`Component tree <glossary_group>`
-

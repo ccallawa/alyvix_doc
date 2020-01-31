@@ -127,7 +127,7 @@ then either pressing :kbd:`Enter` or clicking elsewhere in the list.
 
 All editable fields are *validated* in real time to ensure only new values of the correct type
 can be entered.  For example, test case object names must
-:ref:`follow standard Python naming conventions <glossary_object_name>`.
+:ref:`follow standard Python naming conventions <concepts_test_case_object_name>`.
 If this is not the case, you will see an error message like this:
 
 .. image:: images/as_name_validation.png

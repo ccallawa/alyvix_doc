@@ -15,7 +15,7 @@
 Editor: Interface Overview
 **************************
 
-Alyvix Editor allows you to create and execute complex scripts composed of multiple test case
+Alyvix Editor lets you create and execute complex scripts composed of multiple test case
 objects.  Each test case script is composed of sequential, conditional and loop commands,
 including support for subroutines and mapped templates.
 
@@ -110,7 +110,7 @@ The Test Case Menu
 
 Alyvix Editor's menu has the following actions available:
 
-* |runblue|:  Execute the current script displayed in the scripting panel
+* |runblue| ---  Execute the current script displayed in the scripting panel
 * **New:**  Throw away the current test case, replacing it with an empty one.  Be sure to save
   the currently open test case before selecting this action as you will not be asked to confirm.
 * **Open:**  Throw away the current test case, replacing it with one chosen in the file dialog.
