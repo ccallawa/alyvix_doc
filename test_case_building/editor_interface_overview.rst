@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 28-01-2020
+:modified: 31-01-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -15,28 +15,27 @@
 Editor: Interface Overview
 **************************
 
-Alyvix Editor allows you to create and execute scripts composed of multiple test case objects which
-are more complex than those that you can create and execute by Alyvix Designer and Robot alone.
-These scripts are composed of sequential, conditional and loop commands, including support for
-subroutines.
+Alyvix Editor allows you to create and execute complex scripts composed of multiple test case
+objects.  Each test case script is composed of sequential, conditional and loop commands,
+including support for subroutines and mapped templates.
 
-The Editor interface includes Alyvix Selector and Designer as collapsible panels, which let you
-view and choose test case objects to include in the scripts.
+The Editor interface includes Alyvix Selector and Designer as collapsible subpanels, which let you
+view and choose test case objects to include when building a script.
 
 .. todo::
 
    * CC:  Make sure the descriptions of Editor (and Designer and Selector) in other places don't
      contradict the above and are xerox copies.
 
-You can start Alyvix Editor by itself from the command prompt (you can find information about its
-:ref:`command arguments here <test_case_building_editor_launch>`):
+To :ref:`run Alyvix Editor from the command prompt <test_case_building_editor_launch>`,
+use the following command:
 
 .. code-block:: doscon
    :class: short-code-block
 
-   C:\Alyvix\testcases> python alyvix_editor.py -f <file-name>
+   C:\Alyvix\testcases> alyvix_editor -f <file-name>
 
-You will then see the Editor interface as shown here, which includes Selector and Designer:
+This loads the Editor interface, which has the following major components:
 
 .. image:: images/ae_full_interface_numbered.png
    :class: image-boxshadow
@@ -49,9 +48,9 @@ You will then see the Editor interface as shown here, which includes Selector an
    :ref:`Script Management panel <alyvix_editor_script_mgmt_top>`
    and the :ref:`Scripting panel <alyvix_editor_scripting_panel_top>`
 #. The :ref:`Selector <alyvix_selector_interface_top>` window, where test case objects can be
-   dragged from, and then dropped into the scripting panel.
+   dragged from, and then dropped into the scripting panel
 #. The :ref:`Designer <alyvix_designer_interface_overview>` window, which shows the details of the
-   currently selected test case object.
+   currently selected test case object
 
 
 .. todo::
@@ -83,13 +82,15 @@ The principle interface elements exclusive to the Editor (apart from Selector an
    actions for Alyvix Editor and the current test case
 #. The main :ref:`scripting management panel <alyvix_editor_script_mgmt_top>`, used to select
    the principal scripts to be edited
-#. The user-defined Sections list, containing named scripts that can be used as subroutines within
-   any of the principal scripts
-#. The user-defined Maps section, containing named maps where a script can be called multiple
-   times, once for each key in the map that is then passed as an argument to the named script
+#. The user-defined :ref:`Sections <alyvix_editor_interface_sections>` list, containing named
+   scripts that can be used as subroutines within any of the principal scripts
+#. The user-defined :ref:`Maps <alyvix_editor_interface_maps>` list, containing named maps where
+   a script can be called multiple times, once for each key in the map that is then passed as an
+   argument to the named script
 #. The :ref:`scripting panel <alyvix_editor_scripting_panel_top>`, which shows the currently selected
    script or map, along with the :guilabel:`Monitor` tab that shows the screen capture of
-   Selector's current test case object
+   Selector's current test case object and the :guilabel:`Console` tab showing the output of
+   Alyvix Robot after executing the test case
 #. Individual scripting elements within the scripting panel, placed there using Selector
 #. The script property actions, which can enable, disable or remove individual script elements
    that have been dragged into the scripting panel

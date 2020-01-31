@@ -252,7 +252,7 @@ The individual sections of the JSON structure are explained below.
    used to compose more complex interaction behaviors.
 
    .. code-block:: json
-      :class: tiny-code-block
+      :class: short-code-block
 
       { "case": [
            "<test-case-object-name>",

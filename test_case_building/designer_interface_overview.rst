@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 20-01-2020
+:modified: 31-01-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -15,13 +15,13 @@
 Designer: Interface Overview
 ****************************
 
-The interface for Alyvix Designer consists of two elements:
+The Alyvix Designer interface consists of two elements:
 
-* A screen capture image to use for selecting and resizing Regions of Interest
-* An editor panel for indicating how those regions should be interpreted and interacted with
+* A screen capture image for creating and sizing **selections** and **regions of interest**
+* A panel for indicating how those visual elements should be interpreted and interacted with
 
-To illustrate how it works, run Designer with no arguments from the command line as follows
-(you can find information about its
+Although Designer is intended to be used in conjunction with Alyvix Editor, you can also run it
+as a standalone component from the command line as follows (you can find information about its
 :ref:`command arguments here <test_case_building_designer_launch>`):
 
 .. code-block:: doscon
@@ -29,24 +29,26 @@ To illustrate how it works, run Designer with no arguments from the command line
 
    C:\Alyvix\testcases> python alyvix_designer.py
 
-The screen will turn white for a few seconds.  When it returns, you will see a copy of the screen
-with the phrase :nobutton:`PRESS ESC TO OPEN DIALOG` at the top left, while purple/red crosshairs
-will track the mouse as shown here:
+When Designer starts, it captures the current screen, turning it white for a few seconds to
+indicate the capture process is underway.  Once that's done, it displays the screen capture at
+full screen resolution with purple crosshairs that track the mouse, and the reminder
+:nobutton:`PRESS ESC TO OPEN DIALOG` overlaid at the top left as shown here:
 
 .. image:: images/ad_main_screen_edit_message_h150.png
    :class: image-boxshadow
    :alt: The initial Alyvix Designer selection cursor
 
-.. tip::  Having a second monitor will enable you to mark regions of interest with Alyvix on one
-   screen, while the second screen can still be used for other applications.
+.. tip::  Having a second monitor will enable you to mark selections and regions of interest with
+   Alyvix on one screen, while the second screen can still be used for other applications.
 
-In Alyvix Designer, the color of the crosshairs indicates whether you are working with the first
-(purple/red), second (green), or third (blue) object group.
+Each screen capture is part of a **test case object**, which can recognize and interact with up
+to three groups of visual elements.  The color of the crosshairs indicates whether you are working
+with the first (purple/red), second (green), or third (blue) group.
 
 .. _alyvix_designer_interface_descriptions:
 
-If you press :kbd:`Escape`, you will see the default Designer interface as in the following
-screenshot.  The principle interface elements are:
+Pressing :kbd:`Escape` will bring up the Designer interface as in the following screenshot, where
+no groups have yet been defined.  The principle interface elements are:
 
 .. image:: images/ad_main_screen_initial_numbered.png
    :height: 500
@@ -63,63 +65,78 @@ screenshot.  The principle interface elements are:
    defined regions of interest on the screen that can be interacted with along with their type
    (image, region or text)
 #. **Component** :ref:`options <alyvix_designer_options_components>`, which depend on the type
-   of the recognized object
+   you assign to the recognized object
 #. **Interface controls** that allow you to either
    :ref:`continue editing regions, or exit Designer <alyvix_designer_interface_controls>`.
 
-Since we started Designer above without any arguments, it assigned the default name
-:guilabel:`VisualObject1` to the object, along with the default options :guilabel:`Appear`,
-:guilabel:`Timeout(s): 10`, and :guilabel:`Break: Yes`.
+When Designer is started without any arguments as above, it assigns the default name
+:guilabel:`VisualObject1` to the test case object, along with the default
+:ref:`options <alyvix_designer_options_test_case>`
+:guilabel:`Appear`, :guilabel:`Timeout [sec]: 10`, and :guilabel:`Break: Yes`.
 
-Also, since we have yet to select any screen capture elements, the component tree has only a single
-root element marked :greyblock:`S` along with a thumbnail of the screen capture.
+Whenever there are no visual elements selected from the screen capture, the component tree is
+empty with only a single root element marked :greyblock:`S` and the thumbnail of the full
+screen capture.
 
 
 
 .. _alyvix_designer_region_bounding:
-.. topic:: Regions of Interest and Bounding Boxes
+.. topic:: Selections, Subselections and Regions of Interest
 
-   To add a visual component to the tree, press :wbutton:`EDIT` in the bottom right hand of the
-   Designer panel.  This will return us to the screen capture interface with the crosshairs.
+   To add a new visual component to the tree, you must be in capture mode.  If instead the
+   Designer panel is visible, press :wbutton:`EDIT` in the bottom right hand of the
+   panel to return to the screen capture interface with the crosshairs.
 
-Using the mouse, move to the bottom left of the screen and select the area around the Windows
-Start button.  It should now be similar to the middle image here:
+A selection is made with the mouse in one of two ways:
+
+* Hold the left mouse button down to draw a rectangle around the desired area, and then
+  release when done.
+* Right click on a visual element to **autocontour** it, using Alyvix's visual recognizer to
+  automatically determine the relevant rectangle.  Candidate elements can be shown by pressing
+  :kbd:`Space`, and then pressing it a second time to return to the standard screen capture.
+
+For instance, you can manually select the Windows Start button using the left mouse button as
+shown in the middle image here:
 
 .. image:: images/ad_screen_capture_combined.png
    :alt: Before and after selecting a rectangle in the screen capture.
    :target: ../_images/ad_screen_capture_combined.png
 
-Next, select a new area in the search box to the right of the Start button, staying in the first
-(purple/red) group.  This time you will see two red boxes rather than one.  You can resize them
-independently, although the smaller box will always remain contained with the larger one.
+After making a **selection**, you can then begin to make up to 4 **subselections** within a single
+group whose position will always be relative to the main selection.  For instance in the example
+image above, a subselection has been made containing the Windows Cortana search box.
 
-Place the smaller box over the word "Search", and size the larger box so that it almost fills up
-the search box as on the right side of the screenshot above.  The smaller box represents what
-Alyvix should look for, while the larger box represents the space in which it should search.
-Making the larger box wider or taller can be very helpful for GUI elements that "float", such as
-when a browser window is resized.
+Unlike the main selection, a subselection consists of two boxes rather than one.  You can
+resize the two boxes independently, although the smaller box, which is the subselection itself,
+will always remain contained within the larger one, known as the **Region of Interest**.  The
+smaller box represents what Alyvix should look for, while the region of interest represents the
+space in which it should search for that subselection.
+
+.. tip::
+
+   Making the larger box wider or taller can be very helpful for GUI elements that "float", such
+   as when a window or panel is resized.
+
+In order for a group to be considered **matched**, ALL selections and subselections (within their
+region of interest) must match the screen at the same time.
 
 
-.. todo::
 
-   * FM:  Can two selection areas overlap?
+.. _alyvix_designer_interface_return_from_sc_mode:
+.. topic:: Returning from Screen Capture Mode
 
-
-Note that there is an important distinction between the two types of selections we made:  the first
-selection only has one bounding box, which represents the Region of Interest.  It is used as
-the anchor of a group of one to four additional interaction areas.
-
-Now, press the :kbd:`Escape` key to bring up the Designer interface again.  You should see
-the new components you just selected in the :ref:`Component Tree <alyvix_designer_component_tree_top>`
-interface shown here (the type of the component has been manually changed to :guilabel:`Text`
-from :guilabel:`Image`):
+   When in screen capture mode, pressing the :kbd:`Escape` key will return you to either the Alyvix
+   Editor or Designer interface.  After making new selections and subselections, they will appear as
+   components within the :ref:`Component Tree <alyvix_designer_component_tree_top>` as shown here
+   (the type of the component has been :ref:`changed <alyvix_designer_component_tree_types>`
+   from :guilabel:`Image` to :guilabel:`Text`):
 
 .. image:: images/ad_main_screen_new_component2.png
    :class: image-boxshadow
    :alt: Adding a first component in the Alyvix Designer interface
 
-Our first region selection automatically created this group, while our second selection created
-a component within that group.
+The main selection (the Windows Start button) is automatically set as the group element, while
+the second selection (the Cortana search box) is set as a component within that group.
 
 
 
@@ -132,22 +149,3 @@ a component within that group.
   started Designer, it will use the value for :guilabel:`Object name` as the file name.
 * :nobutton:`CANCEL` --- Exit Designer without saving the test case.
 * :wbutton:`EDIT` --- Return to the screen capture interface.
-
-For now, press the :nobutton:`CANCEL` button to exit without creating an object.
-
-
-
-.. _alyvix_designer_interface_reading:
-.. topic:: Further Information
-
-   To learn more about interacting with the visual elements and what they can do, see the
-   :ref:`Component Tree <alyvix_designer_component_tree_top>` page.
-
-You can find more information about the available options for test cases and components on the
-:ref:`Interface Options <alyvix_designer_options>` page.
-
-The :ref:`Test Case Data Format <test_case_data_format_top>` page provides technical details on how
-Alyvix Designer files are organized and what they contain.
-
-Finally, the :ref:`Getting Started example <getting_started_example_start>` for Designer provides
-step-by-step instructions on using Designer as part of a simple workflow.

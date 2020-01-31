@@ -57,9 +57,19 @@ Glossary and Concepts
 :Root element:  The *root element* of a test case object is ...
    :ref:`Concept <concepts_test_case_components>`
 
+.. _glossary_section:
+
+:Selection:  A *section* (subroutine script) is ...
+
 .. _glossary_selection:
 
 :Selection:  A *selection* is ...
+   A *subselection* is ...
+   :ref:`Concept <concepts_screen_capture_sel>`
+
+.. _glossary_subselection:
+
+:Selection:  A *subselection* is ...
    A *subselection* is ...
    :ref:`Concept <concepts_screen_capture_sel>`
 
@@ -71,6 +81,11 @@ Glossary and Concepts
 .. _glossary_test_case_object:
 
 :Test Case Object:  A *test case object* is ...
+   :ref:`Concept <concepts_test_case_names>`
+
+.. _glossary_test_case_script:
+
+:Test Case Script:  A *test case script* is ...
    :ref:`Concept <concepts_test_case_names>`
 
 

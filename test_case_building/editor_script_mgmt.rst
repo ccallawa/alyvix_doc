@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 22-01-2020
+:modified: 31-01-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -15,28 +15,25 @@
 Editor: Scripting Management
 ****************************
 
-The purpose of the script management panel is to organize the various categories of scripts
-and the larger scale elements needed to create them.
-
-The script management panel is divided in three parts:
-
-* Top-level scripts that serve as the main entry points for Alyvix Robot
-* Sections, which are user-defined subroutines that can be used in top-level scripts
-* Maps, which are user-defined iterations over multiple elements from Designer, and that can
-  be used in both top-level scripts and sections
-
-These are found in the script management panel shown here:
+The script management panel organizes and provides quick access to the scripts and scripting
+components needed to create complex scripted behaviors.  The script management panel is divided
+into three parts:
 
 .. image:: images/ae_script_management_panel_h230.png
    :class: image-boxshadow
    :alt: The script management panel.
 
-The actions available from this panel are:
+* Top-level scripts that serve as the main entry points for execution with Alyvix Robot
+* Sections, which are user-defined subroutines that can be used in top-level scripts
+* Maps, which are definable iterations over multiple elements from Designer, and that can
+  be used in both top-level scripts and sections
 
-* Clicking on a script's name to show its contents in the
-  :ref:`scripting panel <alyvix_editor_scripting_panel_top>` to the right
-* **Adding** a new section or map element with the :nobutton:`ADD` action
-* **Removing** an existing section or map element with the :gbutton:`REMOVE` action
+From this panel you can:
+
+* Click on a script's name to show its contents in the
+  :ref:`scripting panel <alyvix_editor_scripting_panel_top>`
+* **Add** a new section or map element with the :nobutton:`ADD` action
+* **Delete** an existing section or map element with the :gbutton:`REMOVE` action
 * Use the |bar-icon| icon to drag a section or map element and drop it in the opened script
   in the scripting panel
 
@@ -51,18 +48,18 @@ The actions available from this panel are:
 .. rst-class:: bignums-xl
 
 #. **Main:**  The principal script that is executed when Alyvix Robot is invoked via the
-   |runblue| button.
+   |runblue| button
 #. **Fail:**  A script that is executed if one of the test case objects in the Main script with
-   the ``Break`` flag unset times out.
+   the :guilabel:`Break` flag *unset* times out, for instance a logout script
 #. **Exit:**  A separate script that is executed if one of the test case objects in the Main
-   script with the ``Break`` flag set times out.
+   script with the :guilabel:`Break` flag *set* times out
 
 
 .. todo::
 
    * CC+FM:  It would be helpful to have good examples explaining fail & exit
    * FM:  Are the above reserved keywords?  I.e., you can't define a section or map named
-     "main", "fail" or "exit"?
+     "main", "fail" or "exit"?  **A: No, they're in a different section in .alyvix.**
    * FM:  Are section and map names subject to the same restrictions of Python identifiers
      as test case object names are?
    * FM:  Editing names in the script management panel is very hard -- it keeps refreshing and
