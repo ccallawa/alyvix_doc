@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 23-01-2020
+:modified: 31-01-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -37,32 +37,36 @@ At the top of the Alyvix Designer panel are the options that pertain to the test
    :class: image-boxshadow
    :alt: The test case options.
 
-The :ref:`Object name <glossary_object_name>` is the reference name (not the file name)
-of the test case object allowing the test case to be used in test case scripts.
+The :ref:`Object name <concepts_test_case_object_name>` is the reference name of a particular
+**test case object**
+:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+within a given test case.  Each test case typically contains multiple test case objects which are
+used when building :ref:`scripts <alyvix_editor_scripting_panel_top>`, and thus need unique,
+descriptive names to easily distinguish them from other test case objects.
 
 There are also three **test case parameters** that affect how the
-:ref:`screen capture elements <alyvix_designer_component_tree_types>` in its component tree
+:ref:`selections and subselections <alyvix_designer_component_tree_types>` in the component tree
 are detected, regardless of their type, and what happens if they fail to be detected.
 
-* **Detection condition:**  One of the following conditions will be checked at a default
-  interval of every ``0.5`` seconds
+#. **Detection condition:**  One of the following conditions will be checked at a default
+   interval of every ``0.5`` seconds:
 
-   * **Appear:**  Alyvix will continuously try to detect any of the main group components (*image*
-     or *rect*) on screen if it was not already there when the test case started
-   * **AppearDisappear:**  Alyvix will see whether any of the main group components appears,
-     and then disappears within the timeout limit
-   * **Disappear:**  If any of the main group components was present when the test case started,
-     Alyvix will detect when one is no longer visible
+    * **Appear:**  Alyvix will continuously try to detect any of the main group components (*image*
+      or *rect*) on screen if it was not already there when the test case started
+    * **AppearDisappear:**  Alyvix will see whether any of the main group components appears,
+      and then disappears within the timeout limit
+    * **Disappear:**  If any of the main group components was present when the test case started,
+      Alyvix will detect when one is no longer visible
 
-     .. image:: images/appeardisappear_h120.png
-        :class: image-boxshadow
-        :alt: Visual appearance and disappearance timeline.
+      .. image:: images/appeardisappear_h120.png
+         :class: image-boxshadow
+         :alt: Visual appearance and disappearance timeline.
 
-* **Timeout:**  The chosen detection condition will be continuously checked for this number
-  of seconds
-* **Break:**  If this option is checked, then a timeout will cause the test case to fail, and
-  if it is part of a series of test cases, then the entire series will fail.  If not checked,
-  it will report the failure but continue with the next test cases in the series.
+#. **Timeout:**  The chosen detection condition will be continuously checked until this number
+   of seconds has elapsed.
+#. **Break:**  If this option is checked, then a timeout will cause the test case to fail, and
+   if it is part of a series of test cases, then the entire series will fail.  If not checked,
+   it will report the failure but continue with the next test cases in the series.
 
 
 .. todo::

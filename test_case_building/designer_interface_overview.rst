@@ -81,11 +81,14 @@ screen capture.
 
 
 .. _alyvix_designer_region_bounding:
-.. topic:: Selections, Subselections and Regions of Interest
 
-   To add a new visual component to the tree, you must be in capture mode.  If instead the
-   Designer panel is visible, press :wbutton:`EDIT` in the bottom right hand of the
-   panel to return to the screen capture interface with the crosshairs.
+=================================================
+Selections, Subselections and Regions of Interest
+=================================================
+
+To add a new visual component to the tree, you must be in capture mode.  If instead the
+Designer panel is visible, press :wbutton:`EDIT` in the bottom right hand of the
+panel to return to the screen capture interface with the crosshairs.
 
 A selection is made with the mouse in one of two ways:
 
@@ -123,13 +126,16 @@ region of interest) must match the screen at the same time.
 
 
 .. _alyvix_designer_interface_return_from_sc_mode:
-.. topic:: Returning from Screen Capture Mode
 
-   When in screen capture mode, pressing the :kbd:`Escape` key will return you to either the Alyvix
-   Editor or Designer interface.  After making new selections and subselections, they will appear as
-   components within the :ref:`Component Tree <alyvix_designer_component_tree_top>` as shown here
-   (the type of the component has been :ref:`changed <alyvix_designer_component_tree_types>`
-   from :guilabel:`Image` to :guilabel:`Text`):
+==================================
+Returning from Screen Capture Mode
+==================================
+
+When in screen capture mode, pressing the :kbd:`Escape` key will return you to either the Alyvix
+Editor or Designer interface.  After making new selections and subselections, they will appear as
+components within the :ref:`Component Tree <alyvix_designer_component_tree_top>` as shown here
+(the type of the component has been :ref:`changed <alyvix_designer_component_tree_types>`
+from :guilabel:`Image` to :guilabel:`Text`):
 
 .. image:: images/ad_main_screen_new_component2.png
    :class: image-boxshadow
@@ -141,9 +147,12 @@ the second selection (the Cortana search box) is set as a component within that 
 
 
 .. _alyvix_designer_interface_controls:
-.. topic:: Interface Controls
 
-   Below the component tree at the bottom of the Designer panel are three actions:
+==================
+Interface Controls
+==================
+
+Below the component tree at the bottom of the Designer panel are three actions:
 
 * :bbutton:`OK` --- Save the current test case and exit.  If you did not supply a file name when you
   started Designer, it will use the value for :guilabel:`Object name` as the file name.

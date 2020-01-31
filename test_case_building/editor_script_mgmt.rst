@@ -41,9 +41,11 @@ From this panel you can:
 
 .. _alyvix_editor_interface_top_level_scripts:
 
-.. topic:: Top level Scripts
+=================
+Top level Scripts
+=================
 
-   The following scripts are predefined and are executed by Alyvix Robot at the appropriate time:
+The following scripts are predefined and are executed by Alyvix Robot at the appropriate time:
 
 .. rst-class:: bignums-xl
 
@@ -70,10 +72,12 @@ From this panel you can:
 
 .. _alyvix_editor_interface_sections:
 
-.. topic:: Sections (Subroutines)
+======================
+Sections (Subroutines)
+======================
 
-   Sections are sub-scripts that can be called from top-level scripts, allowing you to improve
-   their readability when a large number of steps is involved.
+Sections are sub-scripts that can be called from top-level scripts, allowing you to improve
+their readability when a large number of steps is involved.
 
 When you insert or replace a test case object with a section in the scripting panel, the color
 of its box will change from light green to dark green to indicate it is a section.
@@ -98,11 +102,13 @@ of its box will change from light green to dark green to indicate it is a sectio
 
 .. _alyvix_editor_interface_maps:
 
-.. topic:: Map Interface
+=================
+The Map Interface
+=================
 
-   .. todo::
+.. todo::
 
-      * CC+FM:  Waiting for mapping to be fixed
+   * CC+FM:  Waiting for mapping to be fixed
 
 * :wbutton:`ADD ROW`
 * :nobutton:`ADD COLUMN`
