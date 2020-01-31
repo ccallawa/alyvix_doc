@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 29-01-2020
+:modified: 31-01-2020
 :tags: getting, started, beginner, windows, settings
 :lang: en-US
 :translation: false
@@ -11,11 +11,11 @@
 
 .. _getting_started_example_settings:
 
-********************************************
-Opening Windows Settings from the Start Menu
-********************************************
+******************************************************
+Example:  Opening Windows Settings from the Start Menu
+******************************************************
 
-In the :ref:`previous example <getting_started_example_start>` we created an Alyvix test case
+In the :ref:`previous example <getting_started_example_start>` we created an Alyvix **test case**
 :rawhtml:`<a href="../glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`
 consisting of a single test case object.
 Most of the time though, you'll need to chain together multiple test case objects to synthesize

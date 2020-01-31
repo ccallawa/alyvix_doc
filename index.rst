@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 24-01-2020
+:modified: 31-01-2020
 :tags: index
 :lang: en-US
 :translation: false
@@ -14,7 +14,6 @@
    :name: toc_master
    :hidden:
 
-   install.rst
    getting_started.rst
    test_case_building.rst
    test_case_execution.rst

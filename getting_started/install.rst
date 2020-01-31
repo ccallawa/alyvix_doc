@@ -1,23 +1,23 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 28-01-2020
+:modified: 31-01-2020
 :tags: install, python, pip
 :lang: en-US
 :translation: false
 :status: draft
 
-.. include:: sphinx-roles.txt
+.. include:: ../sphinx-roles.txt
 
 
 .. _install_release_top:
 
-############
+************
 Installation
-############
+************
 
 Before installing Alyvix, first check that your setup meets the system requirements.
-If this is the case, you will then need to install Python on your Windows machine
-before installing Alyvix itself.
+If it does, you will then need to install Python on your Windows machine before installing
+Alyvix itself.
 
 
 
@@ -150,4 +150,4 @@ each Alyvix release follows the |semantic-versioning-link| initiative.
    :name: toc_install
    :hidden:
 
-   install/release_notes.rst
+   release_notes.rst

@@ -11,9 +11,9 @@
 
 .. _getting_started_example_start:
 
-******************************
-Opening the Windows Start Menu
-******************************
+****************************************
+Example:  Opening the Windows Start Menu
+****************************************
 
 This short task will accomplish something simple, yet will show you the potential of
 using Alyvix.
