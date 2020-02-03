@@ -15,6 +15,8 @@
 Get in Touch
 ############
 
+Here are the ways you can get in contact with us:
+
 
 
 .. _getting_in_touch_pivotal_tracker:

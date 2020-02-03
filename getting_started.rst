@@ -19,7 +19,7 @@ Before using Alyvix, you'll first need to :ref:`take a minute to install it <ins
 
 For the examples in this section, you'll need to run the Windows Command Prompt
 (**Start > Windows System > Command Prompt**) and switch to the directory where you want to
-keep your test cases, e.g.:
+keep your test cases, for example:
 
 .. code-block:: doscon
    :class: short-code-block
@@ -36,7 +36,7 @@ how the Alyvix interface works.
    * Build a simple test case that looks for and clicks on the Windows Start button
    * Run the test case, so that Alyvix actually opens the Window Start Menu
 
-#. Example:  Open the Start Menu, :ref:`then the Settings app immediately afterwards <getting_started_example_settings>`.
+#. Example:  Open the Start Menu, :ref:`then the Settings app immediately afterwards <getting_started_example_settings>`
 
    * Build a second test case object, where the second depends on the results of the first
    * Join them together to create a combined action
