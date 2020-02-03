@@ -37,8 +37,9 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.todo',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
 ]
+#     'rinoh.frontend.sphinx'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
