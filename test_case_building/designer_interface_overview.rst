@@ -86,23 +86,24 @@ screen capture.
 Selections, Subselections and Regions of Interest
 =================================================
 
-To add a new visual component to the tree, you must be in capture mode.  If instead the
-Designer panel is visible, press :wbutton:`EDIT` in the bottom right hand of the
-panel to return to the screen capture interface with the crosshairs.
+To add a new visual component to the tree, you must be in capture mode.  If instead Designer or
+Editor is visible, press :wbutton:`EDIT` in the bottom right hand of the panel to return to the
+screen capture interface with the crosshairs.
 
 Selections and subselections are made with the mouse in one of two ways:
 
-* Hold the left mouse button down to draw a rectangle around the desired area, and then
-  release when done.
+* Hold the left mouse button down to create a selection or subselection (drawing a rectangle around
+  the desired area), and then release when done.
 * Right click on a visual element to **autocontour** it, using Alyvix's visual recognizer to
-  automatically determine the relevant rectangle.  Candidate elements can be shown by pressing
-  :kbd:`Space`, and then pressing it a second time to return to the standard screen capture.
+  automatically determine the relevant selection or subselection.  Candidate elements can be shown
+  by pressing :kbd:`Space`, and then pressing it a second time to return to the standard screen
+  capture.
 
 For instance, you can manually select the Windows Start button using the left mouse button as
 shown in the middle image here:
 
 .. image:: images/ad_screen_capture_combined.png
-   :alt: Before and after selecting a rectangle in the screen capture.
+   :alt: Before and after creating a selection in the screen capture.
    :target: ../_images/ad_screen_capture_combined.png
 
 After making a **selection**, you can then begin to make up to 4 **subselections** within a single

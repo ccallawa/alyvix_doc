@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 24-01-2020
+:modified: 03-02-2020
 :tags: designer, component, tree
 :lang: en-US
 :translation: false
@@ -87,9 +87,9 @@ Alyvix's visual recognition capability is based on two well-known open source sy
 
 Alyvix uses these tools to visually detect three types of objects:
 
-- **Image:**  Given a rectangle on the screen, Alyvix will look for a particular shape and/or
-  color within the matrix of pixels in that rectangle.  For instance, it may be a particular
-  system or application icon, a shape like a star regardless of its color, or a box that changes
+- **Image:**  Given a region of interest on the screen, Alyvix will look for a particular shape
+  and/or color within the matrix of pixels in that RoI.  For instance, it may be a particular
+  system or application icon, a shape like a circle regardless of its color, or a box that changes
   from one color to another.  The "photograph" icon above represents an *Image* object.
 - **Rectangle (Rect):**  Allows Alyvix to find buttons, boxes and windows that have a
   rectangular shape.  The "bounding box" icon represents a *Rect* object.
@@ -99,10 +99,6 @@ Alyvix uses these tools to visually detect three types of objects:
   the letter "A" icon above represents a *Text* object.
 
 
-.. todo::
-
-   * CC:  Check "rectangle" is the right word
-
 
 .. _alyvix_designer_component_components:
 
@@ -111,8 +107,8 @@ Creating Groups and Components
 ==============================
 
 When the Designer panel is not visible (you haven't pressed the :kbd:`ESC` key), the crosshairs
-show you where you can select a rectangular region on the screen.  The color will indicate which
-group any newly selected region will belong to.
+show you where you can create a selection or subselection on the screen.  The color will indicate
+which group any newly selected region will belong to.
 
 You can change to a new group simply by pressing the number associated with it (:kbd:`1`, :kbd:`2`
 or :kbd:`3`) at which point the crosshairs will change to indicate the color of the new group.
@@ -130,9 +126,9 @@ a component in that group.
    must match a region on the screen before a match will be declared and any action(s) taken.
 
 In addition to manually selecting the bounds of the region, you can right-click on any point on
-the screen and Alyvix will try to automatically determine (autocontour) the appropriate rectangle
-to use.  You can also resize the bounding edges of any capture region by dragging them with the
-left mouse button.
+the screen and Alyvix will try to automatically determine (:ref:`autocontour <glossary_autocontour>`)
+the appropriate selection.  You can also resize the bounding edges of any capture region by
+dragging them with the left mouse button.
 
 You can continue to add components and new groups using the mouse and keyboard shortcuts without
 showing the Designer panel.
