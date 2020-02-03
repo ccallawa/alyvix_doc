@@ -11,14 +11,13 @@
 
 .. _glossary_top:
 
-#####################
-Glossary and Concepts
-#####################
+########
+Glossary
+########
 
 .. _glossary_autocontour:
 
 :Autocontour:  *Autocontour*
-   :rawhtml:`<a href="basic_concepts/screen_capture.html#autocontour"><i class="fa fa-tiny fa-comment"></i></a>`
    is an Alyvix feature that can greatly speed up your interactions
    with Alyvix Designer, as it's much quicker to *right-click* on an icon than to draw a box
    around it.  Autocontour creates minimal selections.
@@ -85,11 +84,10 @@ Glossary and Concepts
 
 
 
+.. .. toctree::
+      :maxdepth: 2
+      :name: toc_designer
+      :hidden:
 
-.. toctree::
-   :maxdepth: 2
-   :name: toc_designer
-   :hidden:
-
-   basic_concepts/screen_capture.rst
-   basic_concepts/test_case.rst
+..   basic_concepts/screen_capture.rst
+     basic_concepts/test_case.rst
