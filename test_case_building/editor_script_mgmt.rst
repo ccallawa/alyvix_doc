@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 31-01-2020
+:modified: 03-02-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -106,20 +106,31 @@ of its box will change from light green to dark green to indicate it is a sectio
 The Map Interface
 =================
 
-.. todo::
+*Maps* let you insert a series of values into text fields, for instance to enter a user name in
+one field and a password in another.
 
-   * CC+FM:  Waiting for mapping to be fixed
+Add a new map by clicking on the :nobutton:`ADD` button next to **MAPS** in the script management
+panel, and then change the map name to one that helps you easily remember its purpose.
 
-* :wbutton:`ADD ROW`
-* :nobutton:`ADD COLUMN`
-* |times-icon|
+The first step after creating a map is to define the set of keys and values that can be
+inserted.  The map interface is shown here, with the available actions listed below:
 
 .. image:: images/ae_basic_map_example.png
    :class: image-boxshadow
    :alt: The Map interface.
 
-* Cannot remove the ``value1`` column
-* Can only be used in the FOR element, dragging it over an existing element will change its type
+.. todo::
+
+   * CC:  Link to or describe the (1) (2) (bla) (bla.extract) and (bla.text) features
+   * CC:  Link to the Designer options section for Text
+   * CC+FM:  Waiting for mapping to be fixed
+   * FM:  No undo if you delete a row or column?
+   * FM:  Can't delete an internal column?
+
+* :wbutton:`ADD ROW` --- Add a new row to the bottom of the table
+* :nobutton:`ADD COLUMN` --- Add a new column to the right of the table
+* |times-icon| --- Delete a column (if in the table header) or a row (if at the far right)
+
 
 .. todo::
 
@@ -127,7 +138,6 @@ The Map Interface
    * FM:  What is for-loop behavior when there is more than 1 row?  What is it used for, table data?
    * FM:  How are the values used?  Inserted as parameters to a script?  What are the inseration
      and ordering mechanisms?
-   * FM:  Can remove any row at any time, but only the rightmost column?
    * CC+FM:  How do you make the connection between *map* in Designer and the map section in
      Editor?  **A:  Try it out, but there is a bug ATM that keeps it from populating.**
    * CC:  Eventually link to the page that describes how looping is done (if it's not too large,
