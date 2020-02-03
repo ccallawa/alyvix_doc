@@ -53,7 +53,7 @@ Alyvix Robot can be run with the following command:
 .. code-block:: doscon
    :class: medium-code-block
 
-   C:\Alyvix\testcases> python alyvix_robot.py
+   C:\Alyvix\testcases> alyvix_robot
 
 If you used Alyvix Editor to create a file :file:`start-test.alyvix` containing a a test case
 object named ``start``, you can run it with this command:
@@ -61,10 +61,10 @@ object named ``start``, you can run it with this command:
 .. code-block:: doscon
    :class: medium-code-block
 
-   C:\Alyvix\testcases> python alyvix_robot.py --filename start-test -o start
+   C:\Alyvix\testcases> alyvix_robot -f start-test -o start
 
 Robot allows you to execute multiple test case objects in sequence by putting all of them in order
-after the ``--object`` parameter, as long as all the objects exist in the test case:
+after the ``--object`` parameter, as long as all those objects exist in the test case:
 
 .. code-block:: doscon
    :class: medium-code-block

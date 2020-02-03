@@ -27,7 +27,7 @@ as a standalone component from the command line as follows (you can find informa
 .. code-block:: doscon
    :class: short-code-block
 
-   C:\Alyvix\testcases> python alyvix_designer.py
+   C:\Alyvix\testcases> alyvix_designer
 
 When Designer starts, it captures the current screen, turning it white for a few seconds to
 indicate the capture process is underway.  Once that's done, it displays the screen capture at

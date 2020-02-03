@@ -37,7 +37,7 @@ You can start Alyvix Selector by itself from the command prompt (you can find in
 .. code-block:: doscon
    :class: short-code-block
 
-   C:\Alyvix\testcases> python alyvix_selector.py -f <file-name>
+   C:\Alyvix\testcases> alyvix_selector -f <file-name>
 
 .. _alyvix_selector_interface_screenshot:
 
