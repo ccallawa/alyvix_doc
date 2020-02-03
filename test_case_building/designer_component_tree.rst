@@ -22,7 +22,7 @@ like a nearby button.
 
 The *component tree* is composed of three types of components:
 
-- A :ref:`Root element <glossary_root>`, which holds a screen capture to serve as a basis for
+- A :ref:`Root element <glossary_root>`, which holds a captured screen to serve as a basis for
   visually recognizing parts of the screen.
 - :ref:`Groups <glossary_group>`, which indicate the principal component that needs to be
   recognized.  A maximum of three groups can be created per :ref:`test case <glossary_test_case>`.
@@ -43,12 +43,12 @@ Structure of the Component Tree
    :class: image-boxshadow
    :alt: An empty component tree
 
-When Alyvix Designer is first launched, it will capture the entire screen to use as a basis for
-locating visual elements.  This screen capture is represented in the component tree with the capital
-letter :greyblock:`S` as shown above.  Initially, before you have added any components, this
-*root element* will have no children.
+Alyvix Designer captures the entire screen to use as a basis for locating visual elements.  This
+screen capture is represented in the component tree with the capital letter :greyblock:`S` as
+shown above.  Initially, before you have added any components, this *root element* will have no
+children.
 
-Also when first started, Designer will default to the first of the three available groups,
+When first started, Designer will default to the first of the three available groups,
 indicated by the purple/red color.  The three color sets (red, green and blue) are only intended to
 distinguish the three groups, and a group's elements may in fact change color if you reorder
 or remove one.
