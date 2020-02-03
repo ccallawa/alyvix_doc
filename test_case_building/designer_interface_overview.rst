@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 31-01-2020
+:modified: 03-02-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -90,7 +90,7 @@ To add a new visual component to the tree, you must be in capture mode.  If inst
 Designer panel is visible, press :wbutton:`EDIT` in the bottom right hand of the
 panel to return to the screen capture interface with the crosshairs.
 
-A selection is made with the mouse in one of two ways:
+Selections and subselections are made with the mouse in one of two ways:
 
 * Hold the left mouse button down to draw a rectangle around the desired area, and then
   release when done.
@@ -117,12 +117,33 @@ space in which it should search for that subselection.
 
 .. tip::
 
-   Making the larger box wider or taller can be very helpful for GUI elements that "float", such
-   as when a window or panel is resized.
+   Making the Region of Interest wider or taller can be very helpful for GUI elements that "float",
+   such as when a window or panel is resized.
 
 In order for a group to be considered **matched**, ALL selections and subselections (within their
 region of interest) must match the screen at the same time.
 
+The following shortcuts are available:
+
+.. table::
+   :widths: 30 20 50
+
+   +---------------------------+--------------+----------------------------------------------------+
+   | **Shortcut**              | **Focus on** | **Resulting Action**                               |
+   +---------------------------+--------------+----------------------------------------------------+
+   | :kbd:`Right Click`        | ROI Edges    | Push the selected RoI's edge all the way to the    |
+   |                           |              | border of the screen.                              |
+   +---------------------------+--------------+----------------------------------------------------+
+   | :kbd:`Ctrl + Left Click`  | Subselection | Reset all RoI edges of the subselection to their   |
+   |                           |              | defaults.                                          |
+   +---------------------------+--------------+----------------------------------------------------+
+   | :kbd:`Ctrl + Right Click` | Component    | Remove an entire component (subselection and ROI). |
+   |                           |              | Remove a selection if it has no children.          |
+   +---------------------------+--------------+----------------------------------------------------+
+   | :kbd:`Ctrl + Z`           | Component    | Undo the most recently added component             |
+   +---------------------------+--------------+----------------------------------------------------+
+   | :kbd:`Ctrl + Y`           | Component    | Re-add the component just removed                  |
+   +---------------------------+--------------+----------------------------------------------------+
 
 
 .. _alyvix_designer_interface_return_from_sc_mode:
