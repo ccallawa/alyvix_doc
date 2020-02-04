@@ -288,6 +288,9 @@ code.kbd, .rst-content tt.kbd, kbd {
     font-size: 80%;
     padding: 3px 8px;
 }
+.button-boxshadow { /* A gradient box shadow around a button */
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+}
 .bolditalic {
     font-weight: bold;
     font-style: italic;

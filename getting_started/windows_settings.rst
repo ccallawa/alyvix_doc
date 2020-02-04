@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 31-01-2020
+:modified: 04-02-2020
 :tags: getting, started, beginner, windows, settings
 :lang: en-US
 :translation: false
@@ -42,9 +42,10 @@ opening the Windows Settings app.
       :alt: Setting up the 5 second delay before capturing the screen
 
 #. Once you click :bbutton:`ADD`, you'll have 5 seconds to open the Windows Start Menu (you'll
-   need to click on the Start button yourself) before Alyvix captures the screen.
+   need to click on the Start button yourself in that time) before Alyvix captures the screen.
 
-#. Next, *right click* on the *Settings* icon at the left side of the Start Menu.  This will **autocontour**
+#. After the screen flashes white, press :kbd:`Escape` to return to screen capture mode, and then
+   *right click* on the *Settings* icon at the left side of the Start Menu.  This will **autocontour**
    :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`
    the icon.
 
@@ -52,7 +53,7 @@ opening the Windows Settings app.
       :class: image-with-border
       :alt: Select Settings after the 5 second screen capture delay
 
-#. Press :kbd:`Escape` to return you to Editor with the new selection in the Designer
+#. Press :kbd:`Escape` again to return you to Editor with the new selection in the Designer
    panel at the right.  Assign a *left click* action as in the previous example by changing the
    value of the :guilabel:`Action` dropdown from ``None`` to ``Click``:
 
@@ -87,4 +88,5 @@ opening the Windows Settings app.
 
    |
 
-   Finally, exit Alyvix Editor using the :nobutton:`EXIT` button at the top.
+   Finally, save and exit Alyvix Editor using the :nobutton:`SAVE` and :nobutton:`EXIT` buttons
+   at the top.

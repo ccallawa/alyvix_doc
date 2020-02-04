@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 29-01-2020
+:modified: 04-02-2020
 :tags: getting, started, beginner, windows, start, editor
 :lang: en-US
 :translation: false
@@ -56,13 +56,13 @@ using Alyvix.
 
 #. At the bottom of that panel under the label :guilabel:`Action` there is a dropdown option
    with the value ``None``.  Change that value from ``None`` to ``Click`` and keep its default
-   values.  A mouse icon to the right of the button image will confirm this with a red highlight.
+   values.  A mouse icon to the right of the Start button will confirm this with a red highlight.
 
    .. image:: images/ae_designer_panel_selection.png
       :class: image-with-border
       :alt: The click point added to the Windows Start button in the Designer panel
 
-#. Save this new test case by clicking the :nobutton:`SAVE AS` button at the top.  Since we started
+#. Save this new test case by clicking the :nobutton:`SAVE` button at the top.  Since we started
    Editor with the option ``-f start-test``, :ref:`the resulting file <test_case_data_format_top>`
    will be called :file:`start-test.alyvix`.
 
@@ -74,16 +74,17 @@ using Alyvix.
       :class: image-with-border
       :alt: The start button test case in Alyvix Selector
 
-#. Using the |bar-icon| icon, drag the new test case object and drop it into the Scripting panel
-   marked :bbutton:`Script: MAIN`.
+#. Using the |bar-icon| icon next to :guilabel:`PressStartButton`, drag the new test case object
+   and drop it into the Scripting panel marked :bbutton:`Script: MAIN`.
 
    .. image:: images/ae_basic_script_element.png
       :class: image-with-border
       :alt: The start button script element in Alyvix Editor
 
-#. Now call Alyvix Robot by pressing the |runblue| button at the top left.  You should see the
-   mouse move over to the Windows Start button and click, causing the Start Menu to open.  Finally,
-   exit Alyvix Editor using the :nobutton:`EXIT` button at the top.
+#. Now start Alyvix Robot by pressing the |runblue| button at the top left.  The Editor window will
+   disappear and the mouse will move over to the Windows Start button and click, causing the Start
+   Menu to open.  Finally, save and exit Alyvix Editor using the :nobutton:`SAVE` and
+   :nobutton:`EXIT` buttons at the top.
 
 If you saw the Start Menu appear, then you've successfully built and run your very first Alyvix
 test case!

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 31-01-2019
+:modified: 04-02-2019
 :tags: concept, glossary
 :lang: en-US
 :translation: false
@@ -74,8 +74,8 @@ Glossary
 .. _glossary_selection:
 
 :Selection:  A *selection* is a rectangular area within a screen capture that serves as the
-   principal anchor for an entire group.  Unlike a *subselection*, there is no Region of Interest
-   necessary -- it can match anywhere on the screen.
+   principal anchor for an entire group.  Unlike a *subselection*, a *selection* has no Region of
+   Interest -- it can match anywhere on the screen.
 
 .. _glossary_subselection:
 

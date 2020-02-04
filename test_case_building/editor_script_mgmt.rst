@@ -121,6 +121,9 @@ inserted.  The map interface is shown here, with the available actions listed be
 
 .. todo::
 
+   * CC:  **FOR** MapMMM **RUN** *TestCaseObject* --- from 1 to #NumRows in MapMMM
+   * CC:  Rows are automatically sorted alphabetically by first column
+   * CC:  Scrape must match the text in the first column (column #0)
    * CC:  Link to or describe the (1) (2) (bla) (bla.extract) and (bla.text) features
    * CC:  Link to the Designer options section for Text
    * CC+FM:  Waiting for mapping to be fixed

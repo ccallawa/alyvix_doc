@@ -55,7 +55,7 @@
    &nbsp;<i class="fa fa-small fa-black fa-ban"></i>
 
 .. |runblue| image:: /pictures/button_run_blue.png
-   :class: inline-image-higher
+   :class: inline-image-higher button-boxshadow
    :height: 20
    :width: 54
 
