@@ -37,9 +37,14 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.todo',
-    'sphinx_rtd_theme',
+    'sphinx.ext.graphviz',
+    'sphinx_copybutton',       # pip install sphinx-copybutton
+    'sphinx_rtd_theme'         # pip install sphinx_rtd_theme
 ]
-#     'rinoh.frontend.sphinx'
+#    'sphinx.ext.mathjax'
+#    'rinoh.frontend.sphinx'
+
+copybutton_skip_text = "C:\\\Alyvix\\\\testcases> "
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

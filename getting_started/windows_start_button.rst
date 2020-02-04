@@ -35,7 +35,7 @@ using Alyvix.
       :alt: The Windows Start button in Alyvix Designer
       :target: ../_images/ae_empty_panel.png
 
-#. Click on the :wbutton:`DELAY [SEC]  0  ADD` button at the bottom to create a screen capture.
+#. Click on the :wbutton:`DELAY [SEC]  0  ADD` button at the bottom to trigger a screen capture.
 
 #. Next, use the mouse to create a **selection**
    :rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
@@ -47,8 +47,8 @@ using Alyvix.
       :class: image-with-border
       :alt: Selecting the Windows Start button.
 
-#. With our region still selected, press the :kbd:`Escape` key.  The Editor interface will return
-   with the region containing the Start button as shown in the panel at the right:
+#. With our graphic component still selected, press the :kbd:`Escape` key.  The Editor interface
+   will return with the area containing the Start button as shown in the panel at the right:
 
    .. image:: images/ae_basic_designer_panel.png
       :class: image-with-border

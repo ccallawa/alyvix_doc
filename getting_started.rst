@@ -39,7 +39,7 @@ how the Alyvix interface works.
 #. Example:  Open the Start Menu, :ref:`then the Settings app immediately afterwards <getting_started_example_settings>`
 
    * Build a second test case object, where the second depends on the results of the first
-   * Join them together to create a combined action
+   * Add the new step to the workflow from the previous example
    * Execute the test cases, checking that they work together
 
 

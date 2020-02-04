@@ -377,19 +377,6 @@ div.highlight pre::-webkit-scrollbar-track {
 }
 
 
-/* Vertically center the Previous/Next buttons at the bottom of each page */
-.btn {
-    margin: auto;
-    height: 70px;
-    align-items: center;
-    display: flex;
-}
-.btn span {
-    margin: auto;
-    padding-left: 10px;
-}
-
-
 /* Field lists should have an underlined border, not toplined */
 .rst-content dl:not(.docutils) dt {
     border-top: none;
@@ -441,7 +428,6 @@ p.fa {
 }
 
 
-
 /* Things to do only only on large screens (desktop and tablets, not phones) */
 @media screen and (min-width: 769px) {  /* Responsive converts menu at 768px */
   /* Remove the horizontal scrollbars for larger screens in very wide tables */
@@ -467,6 +453,17 @@ p.fa {
 }
 
 
+/* Vertically center the Previous/Next buttons at the bottom of each page */
+.btn {
+    margin: auto;
+    height: 70px;
+    align-items: center;
+    display: flex;
+}
+.btn span {
+    margin: auto;
+    padding-left: 10px;
+}
 
 
 /* Copy buttons
