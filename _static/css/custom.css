@@ -5,7 +5,7 @@
 .rst-content ol.bignums>li { /* Represents a single list element */
     list-style-type: none;
     margin: 24px 0;
-    padding: 8px 8px 8px 40px;
+    padding: 8px 18px 8px 40px;
     position: relative;
     background-color: #f2ebe3; /* Beige */
     border-radius: 12px;
@@ -201,6 +201,7 @@ p {
 }
 .image-with-border { /* A simple grey border around an image */
     border: thin #ddd solid;
+    margin-bottom: 12px;
 }
 .image-boxshadow { /* A gradient box shadow around an image */
     margin-left: 8px;
@@ -325,6 +326,15 @@ h3, h4 {
 /* Add more space at the bottom before the footer */
 .rst-footer-buttons {
     padding-top:  35px;
+}
+
+
+/* Change table style */
+tbody tr:first-child td {
+    background-color: #2980B9 !important;
+}
+tbody tr:first-child td p {
+    color: white;
 }
 
 

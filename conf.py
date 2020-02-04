@@ -44,8 +44,6 @@ extensions = [
 #    'sphinx.ext.mathjax'
 #    'rinoh.frontend.sphinx'
 
-copybutton_skip_text = "C:\\\Alyvix\\\\testcases> "
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
