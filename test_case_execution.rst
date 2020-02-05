@@ -81,6 +81,7 @@ The following options are available:
 | \-\\-object   | -o       | Supply the Object name(s)                    |
 +---------------+----------+----------------------------------------------+
 | \-\\-mode     | -m       | ``alyvix`` --- CLI output format for humans  |
+|               |          | (default)                                    |
 |               |          |                                              |
 |               |          | ``nagios`` ---  |nagios-pivotal-link|        |
 +---------------+----------+----------------------------------------------+
@@ -92,7 +93,6 @@ The following options are available:
 
    * CC:  Add info here about multiple object names as described in the Windows Settings
      tutorial in Getting Started, then link here from there.
-   * CC:  The other commands have ``--verbose``, why not Robot?
 
 
 
@@ -127,8 +127,8 @@ Currently the verbosity level for Alyvix Robot cannot be set within Editor.
 What Alyvix Robot Returns
 *************************
 
-Whether run from the command prompt or within Editor, Alyvix Robot will give you output like the
-following if successful:
+Whether run from the command prompt or within Editor with the default or ``-m alyvix`` parameter,
+Alyvix Robot will return output like the following when successful:
 
 .. code-block:: md
 
@@ -148,6 +148,12 @@ If you have enabled the :ref:`break flag <alyvix_designer_options_test_case>` in
 for a given test case, then if that test case fails, no more test cases will be executed.  If it
 is not set, then the test case will instead be skipped after its timeout has expired.
 
+
+.. todo::
+
+   * CC+FM:  Update this section with future -m parameters like ``nagios`` or ``email``
+   * CC+FM:  Really link to pivotal tracker, or summarize it in this section?
+   * CC:  How do you set the -m parameter when running from Editor?
 
 
 .. Hidden section on Measurement (wait on this for now, uncomment when ready)
