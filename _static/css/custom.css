@@ -330,10 +330,10 @@ h3, h4 {
 
 
 /* Change table style */
-tbody tr:first-child td {
+table.docutils tbody tr:first-child td {
     background-color: #2980B9 !important;
 }
-tbody tr:first-child td p {
+table.docutils tbody tr:first-child td p {
     color: white;
 }
 
