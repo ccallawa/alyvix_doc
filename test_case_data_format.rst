@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 20-01-2020
+:modified: 05-02-2020
 :tags: test cases, data format
 :lang: en-US
 :translation: false
@@ -64,6 +64,7 @@ Test Case JSON Structure
 The following example JSON structure illustrates the high-level structure of the test case object:
 
 .. code-block:: json
+   :linenos:
 
    {
       "maps": { },
