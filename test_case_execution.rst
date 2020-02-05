@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 31-01-2020
+:modified: 05-02-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -79,6 +79,10 @@ The following options are available:
 | \-\\-filename | -f       | Supply the file name with no extension       |
 +---------------+----------+----------------------------------------------+
 | \-\\-object   | -o       | Supply the Object name(s)                    |
++---------------+----------+----------------------------------------------+
+| \-\\-mode     | -m       | ``alyvix`` --- CLI output format for humans  |
+|               |          |                                              |
+|               |          | ``nagios`` ---  |nagios-pivotal-link|        |
 +---------------+----------+----------------------------------------------+
 | *<none>*      | -v       | Verbosity:  0=low, 2=high                    |
 +---------------+----------+----------------------------------------------+

@@ -30,6 +30,11 @@
    <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">
    Base64 <i class="fa fa-small fa-external-link"></i></a>
 
+.. |nagios-pivotal-link| raw:: html
+
+   <a href="https://www.pivotaltracker.com/n/projects/1533621/stories/170892854" target="_blank">
+   Nagios output format for monitoring <i class="fa fa-small fa-external-link"></i></a>
+
 .. |test-video-link| raw:: html
 
    <iframe src="https://www.youtube.com/embed/wNxO-aXY5Yw" style="border: 0; height: 435px; width: 700px">
