@@ -15,7 +15,10 @@
 Get in Touch
 ############
 
-Blah blah blah
+Find out how to :ref:`contact us <getting_in_touch_contact_us>`, or
+see what :ref:`we're developing <getting_in_touch_roadmap_top>`
+or have recently accomplished.
+
 
 
 
