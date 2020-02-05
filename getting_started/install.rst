@@ -129,25 +129,3 @@ Only two steps are needed to upgrade to the latest version:
         :class: short-code-block
 
         C:\> pip install --upgrade alyvix
-
-
-
-.. _install_release_notes:
-
-=============
-Release Notes
-=============
-
-The :ref:`release notes for each version <install_release_notes_top>` show all new features, bug
-fixes, and security patches contained in each release.  The version number sequence assigned to
-each Alyvix release follows the |semantic-versioning-link| initiative.
-
-
-
-
-.. toctree::
-   :maxdepth: 2
-   :name: toc_install
-   :hidden:
-
-   release_notes.rst
