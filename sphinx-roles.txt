@@ -33,12 +33,12 @@
 .. |nagios-pivotal-link| raw:: html
 
    <a href="https://www.pivotaltracker.com/n/projects/1533621/stories/170892854" target="_blank">
-   Nagios output format for monitoring <i class="fa fa-small fa-external-link"></i></a>
+   Nagios message format <i class="fa fa-small fa-external-link"></i></a>
 
-.. |test-video-link| raw:: html
+.. |nagios-format-link| raw:: html
 
-   <iframe src="https://www.youtube.com/embed/wNxO-aXY5Yw" style="border: 0; height: 435px; width: 700px">
-   </iframe><p style="text-align: right;">Source: Alyvix@YouTube</p>
+   <a href="http://nagios-plugins.org/doc/guidelines.html#PLUGOUTPUT"target="_blank">
+   Nagios message format <i class="fa fa-small fa-external-link"></i></a>
 
 .. |bar-icon| raw:: html
 
