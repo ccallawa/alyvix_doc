@@ -17,7 +17,8 @@ Designer: Interface Overview
 
 The Alyvix Designer interface consists of two elements:
 
-* A screen capture image for creating and sizing **selections** and **regions of interest**
+* A screen capture image to use for creating and resizing **selections** and **regions of interest**
+  around visual elements
 * A panel for indicating how those visual elements should be interpreted and interacted with
 
 Although Designer is intended to be used in conjunction with Alyvix Editor, you can also run it
@@ -56,12 +57,12 @@ no groups have yet been defined.  The principle interface elements are:
 
 .. rst-class:: bignums
 
-#. The **Object name** (title) of the test case object, which together with the filename is used to
-   uniquely identify this test case in Alyvix Selector and Editor
-#. **Test case** :ref:`options <alyvix_designer_options_test_case>`, which affect all screen
-   capture elements
-#. The **Screen capture** :ref:`Component Tree <alyvix_designer_component_tree_top>` that lists all
-   defined regions of interest on the screen that can be interacted with along with their type
+#. The **Object name** (title) of the test case object, which together with the file name is used
+   to uniquely identify this test case object in Alyvix Selector and Editor
+#. **Test case object** :ref:`options <alyvix_designer_options_test_case>`, which affect all
+   visual elements as a whole
+#. The **test case object** :ref:`Component Tree <alyvix_designer_component_tree_top>` that lists
+   all defined selections and regions of interest that can be interacted with along with their type
    (image, region or text)
 #. **Component** :ref:`options <alyvix_designer_options_components>`, which depend on the type
    you assign to the recognized object

@@ -21,16 +21,20 @@ tools for building test cases:
 
 .. rst-class:: bignums-xl
 
-#. **Alyvix Designer:**  Define individual *test case objects* that can scan for regions in your
-   app's interface, and assign interactive actions that are carried out when those regions are
-   detected
+#. **Alyvix Designer:**  Define individual *test case objects* that can scan for components in
+   your app's interface, and assign interactive actions that are carried out when those regions
+   are detected
 #. **Alyvix Selector:**  Easily manipulate (inspect, copy, edit, delete) test case objects created
    with Designer, as well as view, filter and sort their properties
 #. **Alyvix Editor:**  Script test case objects (execution, conditionals, and loops) to create
    complex behaviors to interact with any app
 
+.. todo::
+
+   * CC:  Review the above definitions, they need special attention
+
 For most use cases, Alyvix Editor (which includes Designer and Selector) is all that you will
-need.  Both Designer and Selector can also be run as separate modules for debugging.
+need.  Both Designer and Selector can also be run as separate modules.
 
 Once you have built a test case, you can let it interact with your chosen app by using
 :ref:`Alyvix Robot <test_case_execution_top>`.
@@ -92,9 +96,9 @@ with the following command line options:
 .. _test_case_building_designer:
 .. topic:: Alyvix Designer
 
-   Alyvix Designer is used to select regions on a screen capture to use as patterns, whether
-   they're images, rectangles, or text.  You can then define triggers and actions to apply when
-   those patterns are recognized later in a simulated interaction with an application.
+   Alyvix Designer is used to select graphic components on a screen capture to use as test case
+   objects, whether they're images, rectangles, or text.  You can then define triggers and actions
+   to apply when those patterns are recognized later in a simulated interaction with an application.
 
 Designer will save the set of patterns as a single **test case object**
 :rawhtml:`<a href="glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`,
@@ -141,7 +145,7 @@ with the following command line options:
 .. topic:: Alyvix Selector
 
    Alyvix Selector is used to centralize the management of all of your test case objects, which may
-   be distributed across multiple test case files.  It provides options to view, copy, edit and
+   be exported across multiple test case files.  It provides options to view, copy, edit and
    delete those test cases objects.
 
 .. _test_case_building_selector_launch:
