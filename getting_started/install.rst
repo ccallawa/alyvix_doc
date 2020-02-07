@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 31-01-2020
+:modified: 07-02-2020
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -57,13 +57,30 @@ Install Python as follows:
 #. Download the |python-download-link|.
    Alyvix is :warn:`not` compatible with 32-bit versions of Python.
 
-#. Install Python by right-clicking on the executable and selecting **"Run as administrator"**.
-   Choose "Customize installation", then on the second screen check all the option boxes.  On the
-   third screen, make sure "Add Python to environment variables" is checked.  Finally, under
-   "Customize install location", insert the recommended location :file:`C:\\Python37\\` and
-   click on "Install".
+#. Start the installation by right-clicking on the executable and selecting **"Run as administrator"**.
+   Check the box "Add Python 3.7 to PATH" and then choose **"Customize installation"**.
 
-   The installation is correct if the following command returns a version number rather than an
+   .. image:: images/python-install-01.png
+      :width: 75%
+      :alt: The first panel of the python installation process.
+
+#. On the second panel all the option boxes should already be checked.  Click **"Next"** to
+   continue.
+
+   .. image:: images/python-install-02.png
+      :width: 75%
+      :alt: The second panel of the python installation process.
+
+#. On the third panel, make sure the advanced options are set as shown below.  Then under
+   **"Customize install location"**, insert the recommended location :file:`C:\\Python37\\`.
+   Finally, click on **"Install"**.  At this point Python will begin installing, typically
+   requiring about 5 minutes.
+
+   .. image:: images/python-install-03.png
+      :width: 75%
+      :alt: The third panel of the python installation process.
+
+#. The installation is correct if the following command returns a version number rather than an
    error message (if not, you will need to edit your *Environment variables* under ``Path``):
 
    .. code-block:: doscon

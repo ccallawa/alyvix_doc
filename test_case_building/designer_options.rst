@@ -284,6 +284,7 @@ optionally set up an immediate mouse action which is unique to each component.
 
    From the Designer Common Options section:
 
+   * CC:  Expand the String description to an entire new page, with a link from **String** above
    * FM:  When there are more than one components in a group that is successfully detected, are
      the actions of all the components triggered?  If so does they occur all at once, or in order?
      Can you make one component hold something and another release the same thing?
