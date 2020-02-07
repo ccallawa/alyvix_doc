@@ -132,7 +132,7 @@ inserted.  The map interface is shown here, with the available actions listed be
 
 * :wbutton:`ADD ROW` --- Add a new row to the bottom of the table
 * :nobutton:`ADD COLUMN` --- Add a new column to the right of the table
-* |times-icon| --- Delete a column (if in the table header) or a row (if at the far right)
+* |times-icon| --- Delete a row or the rightmost column
 
 
 .. todo::

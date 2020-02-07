@@ -51,9 +51,8 @@ Pressing :kbd:`Escape` will bring up the Designer interface as in the following 
 no groups have yet been defined.  The principle interface elements are:
 
 .. image:: images/ad_main_screen_initial_numbered.png
-   :height: 500
    :alt: The empty Alyvix Designer interface
-   :target: ../_images/ad_main_screen_initial_numbered.png
+   :target: ../_static/targets/ad_main_screen_initial.png
 
 .. rst-class:: bignums
 

@@ -142,6 +142,8 @@ panel to return to the screen capture.
 
    * FM:  If a group with 4 components matches, can each of the components have an action?  If so,
      do they all execute simultaneously?  (Related to a question at the bottom of the Options page.)
+   * CC:  In Editor, the Designer panel updates when its Selector line is clicked on, not a
+     scripting panel click
 
 
 

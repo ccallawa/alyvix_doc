@@ -40,16 +40,16 @@ This loads the Editor interface, which has the following major components:
 .. image:: images/ae_full_interface_numbered.png
    :class: image-boxshadow
    :alt: Alyvix Editor with Designer and Selector.
-   :target: ../_images/ae_full_interface_numbered.png
+   :target: ../_static/targets/ae_full_interface.png
 
 .. rst-class:: bignums
 
-#. The Editor window, consisting of the
-   :ref:`Script Management panel <alyvix_editor_script_mgmt_top>`
-   and the :ref:`Scripting panel <alyvix_editor_scripting_panel_top>`
-#. The :ref:`Selector <alyvix_selector_interface_top>` window, where test case objects can be
+#. The Editor pane, consisting of the
+   :ref:`Script Management panel <alyvix_editor_script_mgmt_top>` (left)
+   and the :ref:`Scripting panel <alyvix_editor_scripting_panel_top>` (right)
+#. The :ref:`Selector <alyvix_selector_interface_top>` pane, where test case objects can be
    dragged from, and then dropped into the scripting panel
-#. The :ref:`Designer <alyvix_designer_interface_overview>` window, which shows the details of the
+#. The :ref:`Designer <alyvix_designer_interface_overview>` pane, which shows the details of the
    currently selected test case object
 
 
@@ -69,12 +69,15 @@ This loads the Editor interface, which has the following major components:
      is selected.
 
 
-The principle interface elements exclusive to the Editor (apart from Selector and Designer) are:
+.. topic:: Editor-Specific Features
+
+   The principle interface elements exclusive to the Editor (apart from Selector and Designer) are:
 
 .. image:: images/ae_main_screen_numbered.png
    :class: image-boxshadow
    :alt: The Alyvix Editor interface.
-   :target: ../_images/ae_main_screen_numbered.png
+   :width: 80%
+   :target: ../_static/targets/ae_main_screen.png
 
 .. rst-class:: bignums
 
@@ -116,7 +119,7 @@ Alyvix Editor's menu has the following actions available:
 * **Open:**  Throw away the current test case, replacing it with one chosen in the file dialog.
 * **Save:**  Save the current test case with its existing filename, overwriting the previous version.
 * **Save As:**  Create a copy of the current test case under a new file name.
-* **Exit:**  Exit Alyvix Editor.  Be sure to save the currently open test case before selecting this
+* **Exit:**  Close Alyvix Editor.  Be sure to save the currently open test case before selecting this
   action as you will not be asked to confirm.
 
 

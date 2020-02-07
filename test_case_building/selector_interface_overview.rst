@@ -44,8 +44,9 @@ You can start Alyvix Selector by itself from the command prompt (you can find in
 You will then see the Selector interface as shown here:
 
 .. image:: images/as_main_screen_numbered.png
+   :class: image-boxshadow
    :alt: The Alyvix Selector interface.
-   :target: ../_images/as_main_screen_numbered.png
+   :target: ../_static/targets/as_main_screen.png
 
 The principle interface elements are:
 
