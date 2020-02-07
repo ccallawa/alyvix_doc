@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 06-02-2020
+:modified: 07-02-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -79,22 +79,26 @@ test case:
 
 The following options are available:
 
-+---------------+-------+----------+-------------------------------------------------+
-| Option        | Alias | Argument | Description                                     |
-+---------------+-------+----------+-------------------------------------------------+
-| \-\\-filename | -f    | *<name>* | Supply the file name with no extension          |
-+---------------+-------+----------+-------------------------------------------------+
-| \-\\-object   | -o    | *<name>* | Supply the Object name(s)                       |
-+---------------+-------+----------+-------------------------------------------------+
-| \-\\-mode     | -m    | *<name>* | ``alyvix`` --- CLI output format for humans     |
-|               |       |          | (default)                                       |
-|               |       |          |                                                 |
-|               |       |          | ``nagios`` --- Nagios output                    |
-|               |       |          | :ref:`(see below) <alyvix_robot_result_nagios>` |
-+---------------+-------+----------+-------------------------------------------------+
-| \-\\-verbose  | -v    | *<n>*    | Set the verbosity level for debugging output    |
-|               |       |          | ranging from **0** (min) to **2** (max)         |
-+---------------+-------+----------+-------------------------------------------------+
++---------------+-------+----------+-----------------------------------------------------------+
+| Option        | Alias | Argument | Description                                               |
++---------------+-------+----------+-----------------------------------------------------------+
+| \-\\-args     | -a    | *<strs>* | Supply one or more strings to use in the                  |
+|               |       |          | :ref:`String <alyvix_designer_options_components_common>` |
+|               |       |          | field of a test case object in Designer                   |
++---------------+-------+----------+-----------------------------------------------------------+
+| \-\\-filename | -f    | *<name>* | Supply the file name with no extension                    |
++---------------+-------+----------+-----------------------------------------------------------+
+| \-\\-object   | -o    | *<name>* | Supply the Object name(s)                                 |
++---------------+-------+----------+-----------------------------------------------------------+
+| \-\\-mode     | -m    | *<name>* | ``alyvix`` --- CLI output format for humans               |
+|               |       |          | (default)                                                 |
+|               |       |          |                                                           |
+|               |       |          | ``nagios`` --- Nagios output                              |
+|               |       |          | :ref:`(see below) <alyvix_robot_result_nagios>`           |
++---------------+-------+----------+-----------------------------------------------------------+
+| \-\\-verbose  | -v    | *<n>*    | Set the verbosity level for debugging output              |
+|               |       |          | ranging from **0** (min) to **2** (max)                   |
++---------------+-------+----------+-----------------------------------------------------------+
 
 
 
