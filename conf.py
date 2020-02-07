@@ -127,6 +127,7 @@ html_css_files = [
 #     'js/custom.js',
 # ]
 
-html_logo = 'pictures/alyvix_logo_100x83.png'
+html_logo = 'pictures/alyvix_icon_100x107.png'
+html_favicon = 'pictures/alyvix_icon_100x107.png'
 
 html_output_encoding = 'utf-8'

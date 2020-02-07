@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 31-01-2020
+:modified: 07-02-2020
 :tags: index
 :lang: en-US
 :translation: false
@@ -25,8 +25,8 @@
 
 |
 
-.. image:: pictures/alyvix_logo_150x125.png
-   :align: center
+.. .. image:: pictures/alyvix_icon_150x160.png
+      :align: center
 
 
 .. _home:
@@ -53,9 +53,9 @@ are able to successfully complete a given application task.
 
 .. _home_what_next:
 
-==============
-What to Do Now
-==============
+================
+What to Do First
+================
 
 The first step is to check that your system has the minimum system requirements and then
 :ref:`install Python and Alyvix <install_release_top>`.
@@ -81,7 +81,3 @@ we can do to improve the Alyvix experience for you, let us know!
 .. todo::
 
    * CC:  Import any relevant text from the Alyvix 2.7.5 "Basic Principles" pages
-
-
-
-.. todolist::
