@@ -21,17 +21,13 @@ tools for building test cases:
 
 .. rst-class:: bignums-xl
 
-#. **Alyvix Designer:**  Define individual *test case objects* that can scan for components in
-   your app's interface, and assign interactive actions that are carried out when those regions
-   are detected
+#. **Alyvix Designer:**  Define individual *test case objects* to be dynamically matched with
+   visual components of your app's interface, and assign interactive actions that are carried
+   out when they are detected
 #. **Alyvix Selector:**  Easily manipulate (inspect, copy, edit, delete) test case objects created
    with Designer, as well as view, filter and sort their properties
-#. **Alyvix Editor:**  Script test case objects (execution, conditionals, and loops) to create
-   complex behaviors to interact with any app
-
-.. todo::
-
-   * CC:  Review the above definitions, they need special attention
+#. **Alyvix Editor:**  Create scripts using test case objects (execution, conditionals, and loops)
+   to interact with any app according to complex behaviors you can define
 
 For most use cases, Alyvix Editor (which includes Designer and Selector) is all that you will
 need.  Both Designer and Selector can also be run as separate modules.

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 05-02-2020
+:modified: 07-02-2020
 :tags: test cases, data format
 :lang: en-US
 :translation: false
@@ -124,22 +124,20 @@ The individual sections of the JSON structure are explained below.
    .. code-block:: json
       :class: tiny-code-block
 
-      { "maps": {  },
+      { "maps": {
+           "map-name":  { } },
         "objects": {
-           "<test-case-object-name>": { } },
+           "<test-case-object-name>":  { } },
         "script": {
-           "case": [],
-           "sections": { } }
+           "case":  [ ],
+           "sections":  { } }
       }
 
    .. rst-class:: bignums
       :class: backdarkbeige
 
-   #. :bolditalic:`maps` **---**
-
-      .. todo::
-
-         CC:  Need to finish Editor before writing this
+   #. :bolditalic:`maps` **---** An ordered set of values that a script can loop over, for
+      instance to insert a sequence of values in multiple test fields
 
    #. :bolditalic:`objects` **---** A list of the individual test case objects created with
       Alyvix Designer.  Each test case object is identified uniquely in the list by its **object name**
@@ -147,10 +145,32 @@ The individual sections of the JSON structure are explained below.
    #. :bolditalic:`script` **---** The scripts created for a test case, both the main script and
       any section (subroutine) scripts.
 
+
 .. rst-class:: bignums
    :class: backdarkbeige nobignum
 
-#. The value of each property contained within the :bolditalic:`objects` substructure (shown here
+#. .. rubric:: *Maps*
+
+   Each named map under the :bolditalic:`maps` field contains a set of named keys (rows) and a
+   fixed number of cell values, to represent a **m x n** matrix (columns cannot be named):
+
+   .. code-block:: json
+      :class: tiny-code-block
+
+      { "<map-name-1>": {
+           "key1": [ "key1-val1",
+                     "key1-val2" ],
+           "key2": [ "key2-val1",
+                     "key2-val2" ] }
+      }
+
+
+.. rst-class:: bignums
+   :class: backdarkbeige nobignum
+
+#. .. rubric:: *Objects*
+
+   The value of each property contained within the :bolditalic:`objects` substructure (shown here
    as "test-case-object-name") corresponds to a test case object created in Designer.
    Those values have the following meanings:
 
@@ -176,7 +196,8 @@ The individual sections of the JSON structure are explained below.
    #. :bolditalic:`detection` **---** The test case object's
       :ref:`detection conditions <alyvix_designer_options_test_case>` such as *timeout*, *break*,
       and *appear/disappear*
-   #. :bolditalic:`measure` **---**
+
+.. comment #. :bolditalic:`measure` **---**
 
       .. todo::
 
@@ -186,7 +207,9 @@ The individual sections of the JSON structure are explained below.
 .. rst-class:: bignums
    :class: backdarkbeige nobignum
 
-#. The *components* section represents the :ref:`component tree <alyvix_designer_component_tree_top>`
+#. .. rubric:: *Objects* >> *Components*
+
+   The *components* section represents the :ref:`component tree <alyvix_designer_component_tree_top>`
    of a test case object.  The example below shows how you can have one component tree at each
    distinct screen resolution.
 
@@ -248,7 +271,9 @@ The individual sections of the JSON structure are explained below.
 .. rst-class:: bignums
    :class: backdarkbeige nobignum
 
-#. The **script** parameter records the
+#. .. rubric:: *Script*
+
+   The **script** parameter records the
    :ref:`main script and any subroutines <alyvix_editor_scripting_panel_top>`
    used to compose more complex interaction behaviors.
 

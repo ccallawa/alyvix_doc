@@ -37,8 +37,7 @@ At the top of the Alyvix Designer panel are the options that pertain to the test
    :class: image-boxshadow
    :alt: The test case options.
 
-The :ref:`Object name <concepts_test_case_object_name>` is the reference name of a particular
-**test case object**
+The **Object name** is the reference name of a particular **test case object**
 :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
 within a given test case.  Each test case typically contains multiple test case objects which are
 used when building :ref:`scripts <alyvix_editor_scripting_panel_top>`, and thus need unique,
@@ -67,12 +66,6 @@ are detected, regardless of their type, and what happens if they fail to be dete
 #. **Break:**  If this option is checked, then a timeout will cause the test case to fail, and
    if it is part of a series of test cases, then the entire series will fail.  If not checked,
    it will report the failure but continue with the next test cases in the series.
-
-
-.. todo::
-
-   * FM:  Is the detection interval still set at 0.5 seconds as described in the 2.7.5 doc?  Is
-     it configurable?
 
 
 
