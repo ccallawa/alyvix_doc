@@ -8,9 +8,6 @@
 
 .. include:: ../sphinx-roles.txt
 
-.. role:: rawhtml(raw)
-   :format: html
-
 
 .. _alyvix_selector_interface_top:
 

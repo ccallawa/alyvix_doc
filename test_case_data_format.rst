@@ -8,9 +8,6 @@
 
 .. include:: sphinx-roles.txt
 
-.. role:: rawhtml(raw)
-   :format: html
-
 
 .. _test_case_data_format_top:
 

@@ -37,8 +37,13 @@
 
 .. |nagios-format-link| raw:: html
 
-   <a href="http://nagios-plugins.org/doc/guidelines.html#PLUGOUTPUT"target="_blank">
+   <a href="http://nagios-plugins.org/doc/guidelines.html#PLUGOUTPUT" target="_blank">
    Nagios message format <i class="fa fa-small fa-external-link"></i></a>
+
+.. |unicode-link| raw:: html
+
+   <a href="http://www.unicode.org/charts/" target="_blank">
+   unicode character <i class="fa fa-small fa-external-link"></i></a>
 
 .. |bar-icon| raw:: html
 

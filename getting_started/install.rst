@@ -50,7 +50,7 @@ Alyvix:
 Installing Python
 =================
 
-Install Python as follows:
+Follow this procedure to install Python on your system:
 
 .. rst-class:: bignums
 
@@ -81,7 +81,7 @@ Install Python as follows:
       :alt: The third panel of the python installation process.
 
 #. The installation is correct if the following command returns a version number rather than an
-   error message (if not, you will need to edit your *Environment variables* under ``Path``):
+   error message (if not, you will need to edit your ``Path`` environment variable):
 
    .. code-block:: doscon
       :class: short-code-block
@@ -102,8 +102,8 @@ automatically detect that your system is running Python 3 and will install Alyvi
 placing all executables in the directory
 :file:`C:\\Python37\\Lib\\site-packages\\alyvix\\`.
 
-As above, this command prompt must also be **run in Adminstrator mode** (or simply reuse the
-previous command prompt).  Only this single step is required:
+As with the installer, this command prompt must also be **started in Adminstrator mode**.  Only
+this single step is required:
 
 .. rst-class:: bignums
 
