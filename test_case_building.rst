@@ -92,11 +92,12 @@ with the following command line options:
 .. _test_case_building_designer:
 .. topic:: Alyvix Designer
 
-   Alyvix Designer is used to select graphic components on a screen capture to use as test case
+   Alyvix Designer is used to select graphic components on a captured screen to use as test case
    objects, whether they're images, rectangles, or text.  You can then define triggers and actions
-   to apply when those patterns are recognized later in a simulated interaction with an application.
+   to apply when those templates are recognized later in a simulated interaction with an
+   application.
 
-Designer will save the set of patterns as a single **test case object**
+Designer will save the set of templates (the component tree) as a single **test case object**
 :rawhtml:`<a href="glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`,
 which you can then use as a building block to compose more complicated objects and scripts using
 Alyvix Editor.

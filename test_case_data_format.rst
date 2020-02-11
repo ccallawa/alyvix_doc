@@ -194,11 +194,8 @@ The individual sections of the JSON structure are explained below.
       :ref:`detection conditions <alyvix_designer_options_test_case>` such as *timeout*, *break*,
       and *appear/disappear*
 
+
 .. comment #. :bolditalic:`measure` **---**
-
-      .. todo::
-
-         * FM:  Need to more information on *measure*
 
 
 .. rst-class:: bignums
@@ -323,10 +320,3 @@ The individual sections of the JSON structure are explained below.
          completed successfully.
       #. :bolditalic:`fail` **---** The (teardown) script to execute when a script has failed
          during the execution of its test case objects.
-
-
-
-.. todo::
-
-   * FM:  Are "exit" and "fail" official reserved words for sections?
-   * FM:  Do we need to describe elements any further down into the JSON data structure than this?

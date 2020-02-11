@@ -76,8 +76,3 @@ to create and execute them.
 For information on how to get in touch with us, as well as with the Alyvix community, the
 :ref:`Getting in Touch <getting_in_touch_top>` page has everything you need.  If there's anything
 we can do to improve the Alyvix experience for you, let us know!
-
-
-.. todo::
-
-   * CC:  Import any relevant text from the Alyvix 2.7.5 "Basic Principles" pages
