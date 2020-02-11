@@ -427,7 +427,7 @@ a:visited .fa::before {
 }
 */
 .fa-blue::before {   /* The same blue as the RTD theme */
-    color: #2980C9;
+    color: #2980B9;
 }
 .fa-black::before {
     color: black;    /* Override the blue color when necessary */
@@ -476,43 +476,10 @@ p.fa {
 }
 
 
-/* Copy buttons
-button.copy_btn {
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-  padding: 2px 6px;
-  position: absolute;
-  right: 4px;
-  top: 4px;
+/* In case the main icon logo has transparency issues */
+div.wy-side-nav-search a.icon {
+    background: #2980B9;
 }
-div.highlight:hover .copy_btn, div.highlight .copy_btn:focus {
-    opacity: 0.3;
+div.wy-side-nav-search a.icon img.logo {
+    background: #2980B9;
 }
-div.highlight .copy_btn:hover {
-    opacity: 1.0;
-}
-div.highlight {
-    position: relative;
-}
- */
-
-
-/*
-@keyframes example {
-    from { background-color: red; top: 0px; transform: rotate(0deg) scale(1,1) skew(0deg, 0deg); }
-    to { background-color: blue; top: 100px; transform: rotate(160deg) scale(2,2) skew(20deg, 10deg); }
-}
-.anim-test {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    background-color: red;
-    animation-name: example;
-    animation-duration: 3s;
-    animation-delay: 0.2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-fill-mode: none;
-}
-*/
