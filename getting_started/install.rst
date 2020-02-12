@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 07-02-2020
+:modified: 12-02-2020
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -18,6 +18,8 @@ Installation
 Before installing Alyvix, first check that your setup meets the system requirements.
 If it does, you will then need to install Python on your Windows machine before installing
 Alyvix itself.
+
+|
 
 
 
@@ -41,6 +43,8 @@ Alyvix:
    * Screen color depth:  24-bit RGB or 32-bit RGBA
    * OS: **Windows 64-bit** 10, 8, 7, Server 2012 or Server 2016 (32-bit versions of Windows
      are :warn:`not` compatible with Alyvix)
+
+|
 
 
 
@@ -89,6 +93,8 @@ Follow this procedure to install Python on your system:
       C:\> python --version
       Python 3.7.6
 
+|
+
 
 
 .. _install_release_alyvix_install:
@@ -118,6 +124,8 @@ this single step is required:
 
 You should place your Alyvix test cases in a separate data directory.
 
+|
+
 
 
 .. _install_upgrade:
@@ -146,3 +154,52 @@ Only two steps are needed to upgrade to the latest version:
         :class: short-code-block
 
         C:\> pip install --upgrade alyvix
+
+|
+
+
+
+.. _install_offline_install:
+
+====================
+Offline Installation
+====================
+
+The following steps will enable you to install Alyvix on a target machine without internet access,
+given a separate "source" machine with an existing Python 3 installation that does have internet
+access.
+
+.. rst-class:: bignums
+
+#. On the source Windows **64-bit** machine with an existing **Python 3** installation
+   (not Python 2):
+
+   * Create a new directory with appropriate permissions
+   * Download the |python-download-link| to that directory
+   * Download the Alyvix application and its dependencies with this command:
+
+     .. code-block:: doscon
+        :class: short-code-block
+
+        C:\...\MyFolder> pip download alyvix
+
+#. Copy the entire directory onto removable media, then copy the directory onto the target machine
+
+#. Use the Python installer in the directory on the target machine to install Python following
+   :ref:`the instructions above <install_release_python_install>`
+
+#. Open a command prompt in the directory on the target machine and run:
+
+   .. code-block:: doscon
+      :class: code-block
+
+      C:\...\MyFolder> pip install alyvix-3.0.0-cp37-cp37m-win_amd64.whl --no-index --find-links .
+
+#. Check that the installation was successful by starting Alyvix Editor:
+
+   .. code-block:: doscon
+      :class: tiny-code-block
+
+      C:\> alyvix_editor
+
+   If the Editor window appears, the installation was successful.
