@@ -113,9 +113,8 @@ this single step is required:
 
 .. rst-class:: bignums
 
-#. .. raw:: html
-
-      <br />
+#. Run the following command to download and install the latest Alyvix master release along
+   with all of its dependencies:
 
    .. code-block:: doscon
       :class: short-code-block
