@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 07-02-2020
+:modified: 13-02-2020
 :tags: test cases, data format
 :lang: en-US
 :translation: false
@@ -44,6 +44,11 @@ have the timestamp at the moment of execution appended:
 For example:
 
 :file:`logintest_20191220_145228_UTC+0100.alyvix`
+
+.. note::
+
+   This file is not produced when a test case is executed in Editor via |runblue|, only when
+   executed directly from Robot.
 
 
 
