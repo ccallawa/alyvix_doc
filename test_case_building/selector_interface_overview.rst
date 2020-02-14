@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 22-01-2020
+:modified: 11-02-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -21,14 +21,14 @@ file to another, and visualize and change basic test case parameters.
 When used with Alyvix Editor rather than as a standalone application, it allows you to quickly
 select test case objects to create scripted interactions.
 
-The Selector interface is centered around a list-based display of each test case, with a separate
-tab for each :file:`.alyvix` file.  The *primary* tab (the first one opened that has the blue
-background) is the only file whose objects can be changed.  All other *secondary* tabs are used
-for the purpose of viewing and filtering their test case objects, and potentially importing them
-into the primary tab.  The values of test case objects in secondary tabs cannot be changed.
+The Selector interface is centered around a list of all test case objects in a given test case,
+with a separate tab for each :file:`.alyvix` file.  The *primary* tab (the first one opened with
+the blue background) is the only file whose objects can be changed.  All other *secondary* tabs
+are used to view and filter their test case objects, and to import them into the primary tab.
+The values of test case objects in secondary tabs cannot be changed.
 
-You can start Alyvix Selector by itself from the command prompt (you can find information about its
-:ref:`command arguments here <test_case_building_selector_launch>`):
+You can start Alyvix Selector as a standalone module from the command prompt (you can find
+information about its :ref:`command arguments here <test_case_building_selector_launch>`):
 
 .. code-block:: doscon
    :class: short-code-block
@@ -37,7 +37,7 @@ You can start Alyvix Selector by itself from the command prompt (you can find in
 
 .. _alyvix_selector_interface_screenshot:
 
-You will then see the Selector interface as shown here:
+This will bring up the Selector interface as shown here:
 
 .. image:: images/as_main_screen_numbered.png
    :class: image-boxshadow
@@ -49,8 +49,8 @@ The principle interface elements are:
 .. rst-class:: bignums
 
 #. The **file tabs** show the primary tab and any opened secondary :file:`.alvyix`
-   :ref:`test case files <test_case_data_format_top>`.  Switching between tabs shows the existing
-   test case objects that each file contains.  New files can be loaded by clicking on the
+   :ref:`test case files <test_case_data_format_top>`.  Switching between tabs shows the
+   test case objects contained in each file.  A new file can be loaded by clicking on the
    |plus-icon| button.  Similarly, the |times-icon| button next to a non-primary tab will
    remove that tab (note that you cannot remove the primary tab).
 #. The **list headers** :ref:`categorize the properties <alyvix_selector_interface_headers>` of each
@@ -61,10 +61,10 @@ The principle interface elements are:
    one line for each object.
 #. The **list actions** let you quickly select or deselect all test case objects in the list, and
    copy the name of a test case object.
-#. The **filtering and search** fields let you select all test case objects with a given resolution,
-   or that contain a given text string in either the :guilabel:`Name` or :guilabel:`Date modified`
-   fields.  The Search field uses a non-regex substring search, and the |times-icon| action
-   clears the field.
+#. The **filtering and search** fields let you select all test case objects with a given resolution
+   and scaling factor, or that contain a given text string in either the :guilabel:`Name` or
+   :guilabel:`Date modified` fields.  The Search field uses a non-regex substring search, and the
+   |times-icon| action clears this field.
 #. The **test case object buttons** like :wbutton:`EDIT`, :wbutton:`DUPLICATE` and :rbutton:`REMOVE`
    act on the :ref:`currently selected test case objects <alyvix_selector_interface_object_actions>`
    in the list.  The :wbutton:`ADD` button will initiate a new screen capture (after a specified
@@ -84,7 +84,7 @@ The test case object list headers describe the contents of their respective colu
 The list can be sorted on the first three columns by clicking on the header name, with the
 :rawhtml:`<i class="fa fa-small fa-blue fa-sort-up" style="vertical-align:bottom;"></i>` and
 :rawhtml:`<i class="fa fa-small fa-blue fa-sort-down" style="vertical-align:top;"></i>`
-icons indicating whether the sort is ascending or descending.
+icons indicating whether the sort order is ascending or descending.
 
 The list headers have the following characteristics:
 
@@ -130,13 +130,6 @@ can be entered.  When a value is not valid you will see an error message like th
 .. image:: images/as_name_validation.png
    :class: image-boxshadow
    :alt: The Alyvix Selector interface.
-
-
-.. todo::
-
-   * FM:  If you rename an item in a column that is the sorted index, it will immediately be
-     re-sorted.  If you have a lot of test case objects, then that renamed item seems to suddenly
-     "disappear" since the column is immediately re-sorted.  Is that the desired behavior?
 
 
 .. note::
