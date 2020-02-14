@@ -115,11 +115,3 @@ The two buttons at the bottom of the scripting panel work as follows:
 * :wbutton:`DISABLE/ENABLE` :  Toggle whether a scripting node is enabled or disabled.  Disabling
   allows you to temporarily switch off a given node without having to delete it and later re-add it.
 * :rbutton:`REMOVE` :  Delete a scripting node
-
-
-.. todo::
-
-   * FM: Is Undo/Redo (Ctrl-Z/Y) planned for the scripting panel?
-   * FM: When cycling from IF TRUE -> IF FALSE -> RUN, RUN loses its argument, so it says again
-     "DROP HERE OBJECTS OR SECTIONS"
-   * FM: Once you drag a test case object to a scripting field, you can't edit it, only replace it?

@@ -138,14 +138,6 @@ key to open the Designer panel, and the :guilabel:`EDIT` button at the bottom le
 panel to return to the screen capture.
 
 
-.. todo::
-
-   * FM:  If a group with 4 components matches, can each of the components have an action?  If so,
-     do they all execute simultaneously?  (Related to a question at the bottom of the Options page.)
-   * CC:  In Editor, the Designer panel updates when its Selector line is clicked on, not a
-     scripting panel click
-
-
 
 .. _alyvix_designer_component_actions:
 
