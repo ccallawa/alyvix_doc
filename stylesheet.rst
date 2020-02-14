@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 05-02-2020
+:modified: 15-02-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -368,27 +368,29 @@ simple tables) and indicate a blank cell either with a comment (..) or a backsla
 
 Here is a simple table:
 
-=========  =============  =========
-Name       Syntax         Format
-=========  =============  =========
-Italics    \*             *Italics*
-Bold       \**            **Bold**
-Mono       \``            ``Monospace``
-Mixed      \\             *Ita*\ **Bol**\ ``Lit``\s
-Math       \:math:        :math:`\\\sum_{k=0}^{N-1} s_k`
----------  -------------  ---------
+===========  ==========================  =========
+Name         Syntax                      Format
+===========  ==========================  =========
+Italics      \*                          *Italics*
+Bold         \**                         **Bold**
+Mono         \``                         ``Monospace``
+Subscript    a\\ :subscript:\`sub\`      a\ :subscript:`super`
+Superscript  b\\ :superscript:\`super\`  b\ :superscript:`super`
+Mixed        \\                          *Ita*\ **Bol**\ ``Lit``\s
+Math         \:math:                     :math:`\\\sum_{k=0}^{N-1} s_k`
+-----------  --------------------------  ---------
 :caps:`Roles defined by Sphinx and DocUtils`
------------------------------------
-GUI        Role:guilabel  :guilabel:`File > Settings`
-Keys       Role:kbd       :kbd:`ctrl` + :kbd:`s`
-File       Role:file      :file:`/etc/passwd`
----------  -------------  ---------
+--------------------------------------------------
+GUI          Role:guilabel               :guilabel:`File > Settings`
+Keys         Role:kbd                    :kbd:`ctrl` + :kbd:`s`
+File         Role:file                   :file:`/etc/passwd`
+-----------  --------------------------  ---------
 :caps:`Roles defined by in-page directives and custom.css`
------------------------------------
-Warn       Role:warn      :warn:`Warn`
-Hint       Role:hint      :hint:`Hint`
-SmallCaps  Role:caps      :caps:`CamelCase`
-=========  =============  =========
+--------------------------------------------------
+Warn         Role:warn                   :warn:`Warn`
+Hint         Role:hint                   :hint:`Hint`
+SmallCaps    Role:caps                   :caps:`CamelCase`
+===========  ==========================  =========
 
 This is built as follows::
 

@@ -64,6 +64,9 @@
 .. |runblue| image:: /pictures/button_run_blue.png
    :class: inline-image-higher button-boxshadow
 
+.. |copy|   unicode:: U+000A9
+.. |trade|  unicode:: U+000AE .. REGISTERED SIGN
+
 .. role:: rawhtml(raw)
    :format: html
 
