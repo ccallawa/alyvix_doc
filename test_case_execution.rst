@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 07-02-2020
+:modified: 15-02-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -30,7 +30,7 @@ There are two principal modes for interacting with Alyvix Robot to ensure test c
 properly during the development phase:
 
 * Calling Robot from the Command Prompt, passing it the name of a test case object, using the
-  default **\-\\-mode** option
+  default **-\\-mode** option
 * Calling Robot from within Alyvix Editor via the |runblue| button to run the main script
 
 In either case, one test case is executed at a time.
@@ -68,8 +68,10 @@ object named ``start``, you can run it with this command:
 
    C:\Alyvix\testcases> alyvix_robot -f start-test -o start
 
+.. _alyvix_robot_cli_launch:
+
 Robot allows you to execute multiple test case objects in sequence by putting them in order in
-quotation marks after the **\-\\-object** parameter, as long as all those objects exist in the
+quotation marks after the **-\\-object** parameter, as long as all those objects exist in the
 test case:
 
 .. code-block:: doscon
@@ -82,21 +84,21 @@ The following options are available:
 +---------------+-------+----------+-----------------------------------------------------------+
 | Option        | Alias | Argument | Description                                               |
 +---------------+-------+----------+-----------------------------------------------------------+
-| \-\\-args     | -a    | *<strs>* | Supply one or more strings to use in the                  |
-|               |       |          | :ref:`String <alyvix_designer_options_components_common>` |
+| -\\-args      | -a    | *<strs>* | Supply one or more strings to use in the                  |
+|               |       |          | :ref:`String <alyvix_designer_options_strings>`           |
 |               |       |          | field of a test case object in Designer                   |
 +---------------+-------+----------+-----------------------------------------------------------+
-| \-\\-filename | -f    | *<name>* | Supply the file name with no extension                    |
+| -\\-filename  | -f    | *<name>* | Supply the file name with no extension                    |
 +---------------+-------+----------+-----------------------------------------------------------+
-| \-\\-object   | -o    | *<name>* | Supply the Object name(s)                                 |
+| -\\-object    | -o    | *<name>* | Supply the Object name(s)                                 |
 +---------------+-------+----------+-----------------------------------------------------------+
-| \-\\-mode     | -m    | *<name>* | ``alyvix`` --- CLI output format for humans               |
+| -\\-mode      | -m    | *<name>* | ``alyvix`` --- CLI output format for humans               |
 |               |       |          | (default)                                                 |
 |               |       |          |                                                           |
 |               |       |          | ``nagios`` --- Nagios output                              |
 |               |       |          | :ref:`(see below) <alyvix_robot_result_nagios>`           |
 +---------------+-------+----------+-----------------------------------------------------------+
-| \-\\-verbose  | -v    | *<n>*    | Set the verbosity level for debugging output              |
+| -\\-verbose   | -v    | *<n>*    | Set the verbosity level for debugging output              |
 |               |       |          | ranging from **0** (min) to **2** (max)                   |
 +---------------+-------+----------+-----------------------------------------------------------+
 
@@ -121,6 +123,10 @@ The output is the same as when run in the command prompt, but can be found in th
       :alt: The results of running the script in Alyvix Editor
 
 Currently the verbosity level for Alyvix Robot cannot be set within Editor.
+
+.. todo::
+
+   * CC:  Note that it does not create a .alyvix timestamp file
 
 
 
@@ -188,7 +194,7 @@ When run from the command prompt, you can access the return value as follows:
 Nagios Output Format
 ====================
 
-When Alyvix Robot is run from the command prompt, the **\-\\-mode nagios** command option
+When Alyvix Robot is run from the command prompt, the **-\\-mode nagios** command option
 will generate performance data in |nagios-format-link| as follows:
 
 +-----------------------------+----------------------------------------------------------------+
