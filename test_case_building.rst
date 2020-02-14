@@ -81,9 +81,9 @@ with the following command line options:
 +---------------+-------+----------+-----------------------------------------------+
 | Option        | Alias | Argument | Description                                   |
 +---------------+-------+----------+-----------------------------------------------+
-| \-\\-filename | -f    | *<name>* | The test case file name (with no extension)   |
+| -\\-filename  | -f    | *<name>* | The test case file name (with no extension)   |
 +---------------+-------+----------+-----------------------------------------------+
-| \-\\-verbose  | -v    | *<n>*    | Sets the verbosity level for debugging output |
+| -\\-verbose   | -v    | *<n>*    | Sets the verbosity level for debugging output |
 |               |       |          | ranging from **0** (min) to **2** (max)       |
 +---------------+-------+----------+-----------------------------------------------+
 
@@ -125,14 +125,14 @@ with the following command line options:
 +---------------+-------+----------+----------------------------------------------+
 | Option        | Alias | Argument | Description                                  |
 +---------------+-------+----------+----------------------------------------------+
-| \-\\-delay    | -d    | *<n>*    | Wait *n* seconds before grabbing the screen, |
+| -\\-delay     | -d    | *<n>*    | Wait *n* seconds before grabbing the screen, |
 |               |       |          | giving you time to move windows around       |
 +---------------+-------+----------+----------------------------------------------+
-| \-\\-filename | -f    | *<name>* | Supply the file name with no extension       |
+| -\\-filename  | -f    | *<name>* | Supply the file name with no extension       |
 +---------------+-------+----------+----------------------------------------------+
-| \-\\-object   | -o    | *<name>* | Supply the Object name                       |
+| -\\-object    | -o    | *<name>* | Supply the Object name                       |
 +---------------+-------+----------+----------------------------------------------+
-| \-\\-verbose  | -v    | *<n>*    | Set the verbosity level for debugging output |
+| -\\-verbose   | -v    | *<n>*    | Set the verbosity level for debugging output |
 |               |       |          | ranging from **0** (min) to **2** (max)      |
 +---------------+-------+----------+----------------------------------------------+
 
@@ -164,9 +164,9 @@ with the following command line options:
 +---------------+-------+----------+----------------------------------------------+
 | Option        | Alias | Argument | Description                                  |
 +---------------+-------+----------+----------------------------------------------+
-| \-\\-filename | -f    | *<name>* | Supply the file name with no extension       |
+| -\\-filename  | -f    | *<name>* | Supply the file name with no extension       |
 +---------------+-------+----------+----------------------------------------------+
-| \-\\-verbose  | -v    | *<n>*    | Set the verbosity level for debugging output |
+| -\\-verbose   | -v    | *<n>*    | Set the verbosity level for debugging output |
 |               |       |          | ranging from **0** (min) to **2** (max)      |
 +---------------+-------+----------+----------------------------------------------+
 
