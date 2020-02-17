@@ -134,7 +134,7 @@ scraped from a previous test case and insert the map's output value for that tex
 test case object's component (which must be of type text), the type must be set to :guilabel:`MAP`
 and the map's name must be chosen in the dropdown :guilabel:`Map`.  In the :guilabel:`String`
 field on the later test case object, the map's output value can be retrieved with the template
- ``{<nodename>.extract}``.
+``{<nodename>.extract}``.
 
 For instance, if the string ``Paris`` from the test case object ``city`` is read from the screen,
 and the selected map contains the pair ``Paris, France`` then the following template will generate
