@@ -1,7 +1,7 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 11-02-2020
-:tags: editor, script, management
+:modified: 17-02-2020
+:tags: editor, script, blocks, run, loop
 :lang: en-US
 :translation: false
 :status: draft
@@ -16,13 +16,12 @@ Editor: Script Building
 ***********************
 
 The scripting panel allows you to compose scripts using test case objects drawn from Selector,
-specifying the ordering and type of each element.  The panel uses the *blocks*-based approach to
-scripting, letting you drag and drop test case objects, sections and maps, and then reorder and
-edit them.
+specifying the ordering as well as the mode of use, whether *standard*, *conditional* or *loop*.
+The scripting panel uses the *blocks*-based approach to scripting, letting you drag and drop
+test case objects, sections and maps, and then reorder and edit them.
 
-When Alyvix Robot executes one of these scripts, it will interact with the web browser, other app,
-or even Windows itself, by following your script step by step, executing each test case object
-in turn.
+When Alyvix Robot executes a script, it will interact with the web browser, other app, or even
+Windows itself, by following your script step by step, executing each test case object in turn.
 
 When Editor is first started with a new test case, there are no scripted elements yet, and thus
 the scripting panel is empty:
@@ -32,83 +31,104 @@ the scripting panel is empty:
    :alt: The scripting panel when empty.
 
 To create a new script, drag a test case object from Selector using its |bar-icon| icon and drop
-it into the scripting panel.  This creates a new *scripting node* that appears in light green with
-a |run| icon to its left, indicating this test case object (or Section) will be executed as if
-run directly by :ref:`Alyvix Robot <alyvix_robot_cli_options>` via the command prompt:
+it into the scripting panel.  This will create a new *scripting node* that appears in light green
+with a |run| icon to its left, indicating this test case object will be executed when the
+:guilabel:`MAIN` script is invoked.
 
-.. image:: images/ae_single_script_panel.png
-   :class: image-boxshadow
-   :alt: The scripting panel with one scripting node.
+More test case objects can be added by dragging them towards their correct position in the
+scripting panel.  Two adjacent scripting nodes will be executed in sequence, with the lower
+node inheriting the state of the GUI that was modified by the node higher up.
 
-You can then begin to add more test case objects, by dragging them towards their correct position.
-Two adjacent |run| nodes will be executed in sequence, with the second node inheriting the state
-of the GUI that was modified by the first node.
-
-When you hover over an available position, the mouse pointer will switch from the |ban-icon| icon to
-showing the name of the test case object, even moving other script nodes out of the way if
-necessary:
+When you drag a test case object or section to the scripting panel and hover over an available
+position, the mouse pointer will switch from the |ban-icon| icon to showing the name of the test
+case object, moving other script nodes out of the way if necessary:
 
 .. image:: images/ae_insert_test_case_object.png
    :class: image-boxshadow
    :alt: Inserting a new script node in Alyvix Editor
 
-You can also replace an existing test case object by dragging a new one directly above it.
+You can replace an existing test case object by dragging a new one directly above it, and select
+multiple scripting nodes with the usual :kbd:`Ctrl` and :kbd:`Shift` key combinations.
 
-In addition to |run|, there are three other types of scripting nodes:
+
+
+.. _alyvix_editor_scripting_node_expressions:
+
+=======================
+Script Expression Modes
+=======================
+
+There are four modes for scripting nodes:
 
 .. rst-class:: bignums
 
-#. Conditionally *true* --- Execute the node only if, when executing the antecedent object,
-   **at least one** of its :ref:`groups was detected <alyvix_designer_component_tree_top>`.
+#. *Run* --- Run the test case object.
+
+#. *Conditionally true* --- Run the test case object in the first (antecedent) node as normal
+   (including any actions).  If it had at least one group where **all** of the
+   :ref:`subcomponents in that group matched <alyvix_designer_component_tree_top>`,
+   then also run the second (consequent) node.
 
    ..
 
-   |if-true| + Object + |run| + Object/Section
+   |if-true| + :file:`Object` + |run| + :file:`Object/Section`
 
-#. Conditionally *false* --- Execute the node only if, when executing the antecedent object,
-   **none** of its groups was detected.
+#. *Conditionally false* --- Run the test case object in the first (antecedent) node as normal
+   (including any actions).  If **none** of the groups matched, then also run the second
+   (consequent) node.
 
    ..
 
-   |if-false| + Object + |run| + Object/Section
+   |if-false| + :file:`Object` + |run| + :file:`Object/Section`
 
-#. *Loop* --- For each item contained in a map, execute the specified scripting node.
+   Note that **you should clear** the :guilabel:`Break` flag on the antecedent, or else Alyvix
+   will stop test case execution since that test case object failed, rather than continuing on
+   to process the consequent.
 
-   |for| + Map Name + |run| + Object
+#. *Loop* --- For each item contained in a map, execute the specified scripting node once for
+   each row in the :ref:`map's table <alyvix_editor_interface_maps>`.
 
-Double-clicking on a scripted node will cycle its type from |run| to the following in this order:
+   |for| + :file:`Map Name` + |run| + :file:`Object/Section`
+
+Double-clicking on a scripted node will cycle its mode from |run| to the following in this order:
 
 |run| **>** |if-true| **>** |if-false| **>** |run|
 
-Note that double-clicking on |for| won't change its type.
+Note that double-clicking on |for| won't change its use mode.
 
-You can select multiple scripting nodes with the usual Ctrl/Shift key combinations.
 
-The following screenshot illustrates an example script, where the colors of the boxes are
-explained in the table below.
+
+.. _alyvix_editor_scripting_node_legend:
+
+=====================
+Scripting Node Colors
+=====================
+
+Each color used in the scripting nodes has a particular meaning.  The following screenshot
+illustrates an example script with each color explained in the table below.
 
 .. image:: images/ae_script_element_types.png
    :class: image-boxshadow
-   :alt: The various types of script elements.
+   :alt: The various modes of script elements.
 
 .. table::
    :widths: 25 75
 
-   +-------------+------------------------------------------------------------------+
-   | **Color**   | **Description**                                                  |
-   +-------------+------------------------------------------------------------------+
-   | Green       | An enabled test case object pulled from Selector                 |
-   +-------------+------------------------------------------------------------------+
-   | Dark green  | An enabled Section script (subroutine)                           |
-   +-------------+------------------------------------------------------------------+
-   | Yellow      | An enabled test case object from Selector serving as a condition |
-   +-------------+------------------------------------------------------------------+
-   | Red         | An unspecified scripting element serving as a consequent         |
-   +-------------+------------------------------------------------------------------+
-   | Orange      | An enabled map element within a |for| scripting node             |
-   +-------------+------------------------------------------------------------------+
-   | Gray        | A disabled test case object of any type                          |
-   +-------------+------------------------------------------------------------------+
+   +-------------+--------------------------------------------------------------------+
+   | **Color**   | **Description**                                                    |
+   +-------------+--------------------------------------------------------------------+
+   | Gray        | A disabled test case object of any mode                            |
+   +-------------+--------------------------------------------------------------------+
+   | Green       | An enabled test case object pulled from Selector                   |
+   +-------------+--------------------------------------------------------------------+
+   | Yellow      | An enabled test case object from Selector serving as an antecedent |
+   +-------------+--------------------------------------------------------------------+
+   | Red         | An unspecified scripting element serving as a consequent           |
+   +-------------+--------------------------------------------------------------------+
+   | Orange      | An enabled map element within a |for| scripting node               |
+   +-------------+--------------------------------------------------------------------+
+   | Dark green  | An enabled Section script (subroutine)                             |
+   +-------------+--------------------------------------------------------------------+
 
 The two buttons at the bottom of the scripting panel work as follows:
 

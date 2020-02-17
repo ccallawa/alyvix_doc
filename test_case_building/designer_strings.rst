@@ -127,6 +127,8 @@ changing their order) by using the numbers of their original positions as follow
 
 
 
+.. _alyvix_designer_options_strings_map_extract:
+
 .. rubric:: Mapping Extracted Text
 
 Given a map with pairs of inputs to match and their corresponding output values, you can match text

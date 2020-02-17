@@ -43,6 +43,7 @@ section includes detailed mini-tutorials on how to use Alyvix Editor.
 
 
 .. _test_case_building_launch:
+
 .. topic:: Launching Alyvix Editor, Designer and Selector
 
    All three of these applications can be launched from the Windows Command Prompt or PowerShell.
@@ -90,6 +91,7 @@ with the following command line options:
 
 
 .. _test_case_building_designer:
+
 .. topic:: Alyvix Designer
 
    Alyvix Designer is used to select graphic components on a captured screen to use as test case
@@ -139,6 +141,7 @@ with the following command line options:
 
 
 .. _test_case_building_selector:
+
 .. topic:: Alyvix Selector
 
    Alyvix Selector is used to centralize the management of all of your test case objects, which may
