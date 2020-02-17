@@ -11,9 +11,9 @@
 
 .. _install_release_top:
 
-************
-Installation
-************
+************************
+Installation and Upgrade
+************************
 
 Before installing Alyvix, first check that your setup meets the system requirements.
 If it does, you will then need to install Python on your Windows machine before installing
@@ -164,13 +164,21 @@ Only two steps are needed to upgrade to the latest version:
 Offline Installation
 ====================
 
-The following steps will enable you to install Alyvix on a target machine without internet access,
-given a separate "source" machine with an existing Python 3 installation that does have internet
-access.
+In order to create an offline installation, you will need two machines:
+
+* An internet-connected *installer* machine with a working Python 3 installation to serve as a
+  source for downloading the required software packages
+* A second *target* machine that will serve as the offline probe
+
+Both machines must meet the second :ref:`system requirement <system_requirements_top>` above, and
+have access to removable media in order to physically transfer the software from the *installer*
+to the *target*.
+
+The following steps will then enable you to install Alyvix on the target machine:
 
 .. rst-class:: bignums
 
-#. On the source Windows **64-bit** machine with an existing **Python 3** installation
+#. On the *installer* Windows **64-bit** machine with an existing **Python 3** installation
    (not Python 2):
 
    * Create a new directory with appropriate permissions
@@ -182,12 +190,14 @@ access.
 
         C:\...\MyFolder> pip download alyvix
 
-#. Copy the entire directory onto removable media, then copy the directory onto the target machine
+#. Copy the entire directory onto the removable media, then copy that directory onto the target
+   machine
 
-#. Use the Python installer in the directory on the target machine to install Python following
-   :ref:`the instructions above <install_release_python_install>`
+#. Use the Python installer now on the target machine to
+   :ref:`install Python following the instructions above <install_release_python_install>`
 
-#. Open a command prompt in the directory on the target machine and run:
+#. Open a command prompt in the directory on the target machine and install Alyvix with this
+   command:
 
    .. code-block:: doscon
       :class: code-block
@@ -201,4 +211,5 @@ access.
 
       C:\> alyvix_editor
 
-   If the Editor window appears, the installation was successful.
+   If the :ref:`Editor window <alyvix_editor_interface_top>` appears, the installation was
+   successful.
