@@ -61,6 +61,10 @@
 
    &nbsp;<i class="fa fa-small fa-black fa-ban"></i>
 
+.. |tab| raw:: html
+
+   &nbsp; &nbsp; &nbsp;
+
 .. |runblue| image:: /pictures/button_run_blue.png
    :class: inline-image-higher button-boxshadow
 
