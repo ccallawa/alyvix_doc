@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 13-02-2020
+:modified: 18-02-2020
 :tags: test cases, data format
 :lang: en-US
 :translation: false
@@ -27,17 +27,18 @@ file is self-contained, without any external dependencies.
 Test Case Files
 ===============
 
-Each time you exit Designer or Selector by
-pressing the :bbutton:`OK` button, or save an object in Editor, the JSON object representing the
-test case is saved in the current directory under the file name:
+Each time you exit Designer or Selector by pressing the :bbutton:`OK` button, or save an object
+in Editor, the JSON object representing the test case is saved in the current directory under
+the file name:
 
 :file:`<filename>.alyvix`
 
 where ``filename`` is the value of the ``-f`` parameter passed when starting Editor or Designer.
 
-If you then call Alyvix Robot with that file as a parameter, when it finishes it will create a new
-file based on the original test case, but with the resulting measures included.  The file name will
-have the timestamp at the moment of execution appended:
+If you then call Alyvix Robot :ref:`via the command line <alyvix_robot_result_cli>` with that
+file as a parameter, when it finishes it will create a new file based on the original test case,
+but with the resulting measures included.  The file name will have the timestamp at the moment
+of execution appended:
 
 :file:`<filename>_<full-timestamp>.alyvix`
 

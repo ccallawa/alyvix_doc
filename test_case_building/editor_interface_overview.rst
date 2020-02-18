@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 17-02-2020
+:modified: 18-02-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -86,17 +86,38 @@ This loads the Editor interface, which has the following elements:
 
 .. _alyvix_editor_interface_menu:
 
-==================
-The Test Case Menu
-==================
+.. topic::  The Test Case Menu
 
-The following actions are available from Alyvix Editor's menu:
+   The following actions are available from Alyvix Editor's menu:
 
-* |runblue| --- Run the current script displayed in the scripting panel.  Editor will be minimized
-  until the scripted interaction has completed, after which Editor will reappear with the output
-  available in the Console tab.
-* **New** --- Throw away the current test case, replacing it with an empty one.
-* **Open** --- Replace the current test case with a new one chosen from the file dialog.
-* **Save** --- Save the current test case with its existing filename, overwriting the previous version.
-* **Save As** --- Create a copy of the current test case under a new file name.
-* **Exit** --- Close Alyvix Editor.
+* |runblue| --- Run the current script displayed in the scripting panel (see below)
+* **New** --- Throw away the current test case, replacing it with an empty one
+* **Open** --- Replace the current test case with a new one chosen from the file dialog
+* **Save** --- Save the current test case with its existing filename, overwriting the previous version
+* **Save As** --- Create a copy of the current test case under a new file name
+* **Exit** --- Close Alyvix Editor
+
+
+
+
+
+.. _alyvix_editor_run_script:
+
+.. topic::  Launching Alyvix Robot from Alyvix Editor
+
+   The script of the test case currently loaded in Editor can be run by pressing the |runblue|
+   button at the top left.  The starting point is the :nobutton:`MAIN` script specified in the
+   :ref:`scripting panel <alyvix_editor_script_mgmt_top>`.
+
+When run, Editor will be minimized until the scripted interaction has completed, after which
+Editor will reappear with the output available in the Console tab.
+
+The output is the same as when :ref:`run in the command prompt <alyvix_robot_result_cli>`, but
+can be found in the :bbutton:`Console` tab at the top of Editor's
+:ref:`scripting panel <alyvix_editor_scripting_panel_top>`:
+
+   .. image:: ../getting_started/images/ae_console_result.png
+      :class: image-with-border
+      :alt: The results of running the script in Alyvix Editor
+
+Currently the verbosity level for Alyvix Robot cannot be set within Editor.
