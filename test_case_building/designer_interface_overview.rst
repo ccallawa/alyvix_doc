@@ -30,9 +30,9 @@ as a standalone component from the command line as follows (you can find informa
 
    C:\Alyvix\testcases> alyvix_designer
 
-When Designer starts, it captures the current screen, turning it white for a few seconds to
-indicate the capture process is underway.  Once that's done, it displays the screen capture at
-full screen resolution with purple crosshairs that track the mouse, and the reminder
+When Designer starts, it captures the current screen, turning it white for a few seconds while
+the capture process is underway.  Once that's done, it displays the screen capture at full
+screen resolution with purple crosshairs that track the mouse, and the reminder
 :nobutton:`PRESS ESC TO OPEN DIALOG` overlaid at the top left as shown here:
 
 .. image:: images/ad_main_screen_edit_message_h150.png
@@ -70,13 +70,13 @@ no groups have yet been defined.  The principle interface elements are:
    :ref:`continue editing regions, or exit Designer <alyvix_designer_interface_controls>`.
 
 When Designer is started without any arguments as above, it assigns the default name
-:guilabel:`VisualObject1` to the test case object, along with the default
-:ref:`options <alyvix_designer_options_test_case>`
+:guilabel:`VisualObject1` to the test case object, along with the
+:ref:`default options <alyvix_designer_options_test_case>`
 :guilabel:`Appear`, :guilabel:`Timeout [sec]: 10`, and :guilabel:`Break: Yes`.
 
-Whenever there are no visual elements selected from the screen capture, the component tree is
-empty with only a single root element marked :greyblock:`S` and the thumbnail of the full
-screen capture.
+When no visual elements have been selected from the screen capture, the component tree will
+be empty with only a single root element marked :greyblock:`S`, along with the thumbnail of the
+full screen capture.
 
 
 
@@ -90,7 +90,7 @@ To add a new visual component to the tree, you must be in capture mode.  If inst
 Editor is visible, press :wbutton:`EDIT` in the bottom right hand of the panel to return to the
 screen capture interface with the crosshairs.
 
-Selections and subselections are made with the mouse in one of two ways:
+Selections and subselections can be made with the mouse in one of two ways:
 
 * Hold the left mouse button down to create a selection or subselection (drawing a rectangle around
   the desired area), and then release when done.
@@ -107,8 +107,8 @@ shown in the middle image here:
    :target: ../_images/ad_screen_capture_combined.png
 
 After making a **selection**, you can then begin to make up to 4 **subselections** within a single
-group whose position will always be relative to the main selection.  For instance in the example
-image above, a subselection has been made containing the Windows Cortana search box.
+group, where its position will always be relative to the main selection.  For instance in the
+example image above, a subselection has been made containing the Windows Cortana search box.
 
 Unlike the main selection, a subselection consists of two boxes rather than one.  You can
 resize the two boxes independently, although the smaller box, which is the subselection itself,
