@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 18-02-2020
+:modified: 19-02-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -17,11 +17,13 @@ Editor: Interface Overview
 
 Alyvix Editor lets you visually create, edit and run complex scripts allowing Alyvix to interact
 with your applications just like a human user would.  Each script consists of multiple test case
-objects, organized as sequential, conditional and loop commands, along with
-:ref:`Sections <alyvix_editor_interface_sections>` and :ref:`Maps <alyvix_editor_interface_maps>`.
+objects, organized as
+:ref:`sequential, conditional and loop commands <alyvix_editor_scripting_node_expressions>`,
+along with :ref:`Sections <alyvix_editor_interface_sections>`
+and :ref:`Maps <alyvix_editor_interface_maps>`.
 
-The Editor interface includes Alyvix Selector and Designer as collapsible panels, which lets
-you easily inspect and choose test case objects to include when building your scripts.
+The Editor interface includes the Alyvix Selector and Designer modules as collapsible panels,
+which lets you easily inspect and choose test case objects to include when building your scripts.
 
 To :ref:`run Alyvix Editor from the command prompt <test_case_building_editor_launch>`,
 use the following command:
@@ -29,7 +31,7 @@ use the following command:
 .. code-block:: doscon
    :class: short-code-block
 
-   C:\Alyvix\testcases> alyvix_editor -f <alyvix-file>
+   C:\Alyvix\testcases> alyvix_editor -f <alyvix-file-name>
 
 This loads the Editor interface, which has the following elements:
 
@@ -44,7 +46,7 @@ This loads the Editor interface, which has the following elements:
    :ref:`Script Management panel <alyvix_editor_script_mgmt_top>` (left)
    and the :ref:`Scripting panel <alyvix_editor_scripting_panel_top>` (right)
 #. The :ref:`Selector <alyvix_selector_interface_top>` pane, where test case objects can be
-   dragged from, and then dropped into the Scripting panel
+   dragged from and then dropped into the Scripting panel
 #. The :ref:`Designer <alyvix_designer_interface_overview>` pane, which shows the details of
    the currently selected test case object
 

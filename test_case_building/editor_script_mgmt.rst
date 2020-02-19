@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 17-02-2020
+:modified: 19-02-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -55,7 +55,9 @@ The following scripts are predefined and are executed by Alyvix Robot at the app
    Editor (via the |runblue| button) or Robot
 #. **Fail:**  A script that is executed if one of the test case objects in the Main script having
    the :guilabel:`Break` flag *unset* times out
-#. **Exit:**  A separate script that is always run once the Main script terminates
+#. **Exit:**  A separate script that is always run once the Main script terminates, allowing you
+   to restore your machine to its prior state (for instance, to shut down a browser that was
+   launched as part of a test case)
 
 
 

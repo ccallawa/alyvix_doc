@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 17-02-2020
+:modified: 19-02-2020
 :tags: editor, script, blocks, run, loop
 :lang: en-US
 :translation: false
@@ -16,8 +16,8 @@ Editor: Script Building
 ***********************
 
 The scripting panel allows you to compose scripts using test case objects drawn from Selector,
-specifying the ordering as well as the mode of use, whether *standard*, *conditional* or *loop*.
-The scripting panel uses the *blocks*-based approach to scripting, letting you drag and drop
+specifying the ordering as well as the mode of use, whether *sequential*, *conditional* or *loop*.
+The scripting panel uses the *blocks-based* approach to scripting, letting you drag and drop
 test case objects, sections and maps, and then reorder and edit them.
 
 When Alyvix Robot executes a script, it will interact with the web browser, other app, or even
@@ -36,10 +36,7 @@ with a |run| icon to its left, indicating this test case object will be executed
 :guilabel:`MAIN` script is invoked.
 
 More test case objects can be added by dragging them towards their correct position in the
-scripting panel.  Two adjacent scripting nodes will be executed in sequence, with the lower
-node inheriting the state of the GUI that was modified by the node higher up.
-
-When you drag a test case object or section to the scripting panel and hover over an available
+scripting panel.  When you drag a test case object, section or map and hover over an available
 position, the mouse pointer will switch from the |ban-icon| icon to showing the name of the test
 case object, moving other script nodes out of the way if necessary:
 
@@ -50,6 +47,11 @@ case object, moving other script nodes out of the way if necessary:
 You can replace an existing test case object by dragging a new one directly above it, and select
 multiple scripting nodes with the usual :kbd:`Ctrl` and :kbd:`Shift` key combinations.
 
+Two adjacent scripting nodes will be executed in sequence, with the lower node inheriting the
+state of the GUI that was modified by the node preceding it.  So for instance in the script
+above, the |run|:runblock:`enter_login` node would be executed before
+|run|:runblock:`check_login_success`.
+
 
 
 .. _alyvix_editor_scripting_node_expressions:
@@ -58,11 +60,15 @@ multiple scripting nodes with the usual :kbd:`Ctrl` and :kbd:`Shift` key combina
 Script Expression Modes
 =======================
 
-There are four modes for scripting nodes:
+There are four modes for scripting nodes that can be used in the scripting panel:
 
 .. rst-class:: bignums
 
-#. *Run* --- Run the test case object.
+#. *Run* --- Simply run the test case object in sequence, one after another.
+
+   ..
+
+   |run| + :file:`Object/Section`
 
 #. *Conditionally true* --- Run the test case object in the first (antecedent) node as normal
    (including any actions).  If it had at least one group where **all** of the
@@ -90,11 +96,12 @@ There are four modes for scripting nodes:
 
    |for| + :file:`Map Name` + |run| + :file:`Object/Section`
 
-Double-clicking on a scripted node will cycle its mode from |run| to the following in this order:
+Double-clicking on a scripted node's mode will cycle it through the other modes in this order:
 
 |run| **>** |if-true| **>** |if-false| **>** |run|
 
-Note that double-clicking on |for| won't change its use mode.
+Note that double-clicking on the |for| mode won't change it since it's based on a map rather
+than a test case object.
 
 
 
@@ -104,8 +111,8 @@ Note that double-clicking on |for| won't change its use mode.
 Scripting Node Colors
 =====================
 
-Each color used in the scripting nodes has a particular meaning.  The following screenshot
-illustrates an example script with each color explained in the table below.
+Each color used for the scripting nodes has a particular meaning.  The following screenshot
+illustrates an example script, where each color is explained in the table below.
 
 .. image:: images/ae_script_element_types.png
    :class: image-boxshadow
