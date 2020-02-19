@@ -247,7 +247,7 @@ code.kbd, .rst-content tt.kbd, kbd {
     font-variant: small-caps;
 }
 .greyblock {  /* Grey background, white font, square block */
-    background-color: #777;
+    background-color: #5E5E5E;
     color: #fff;
     padding: 3px 6px;
     font-size: 90%;
@@ -297,6 +297,13 @@ code.kbd, .rst-content tt.kbd, kbd {
 }
 .button-boxshadow { /* A gradient box shadow around a button */
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+}
+.greenblock { /* Light green background for RUN script node */
+    border: none;
+    background-color: #C7F0DB;
+    font-size: 95%;
+    padding: 3px 8px;
+    white-space: nowrap;
 }
 .bolditalic {
     font-weight: bold;
@@ -488,4 +495,17 @@ div.wy-side-nav-search a.icon {
 }
 div.wy-side-nav-search a.icon img.logo {
     background: #2980B9;
+}
+
+
+/* Columns (x2) */
+div.leftside-col {
+   width: 47%;
+   padding: 0px 3px 0px 0px;
+   float: left;
+   display: flex;
+}
+
+div.rightside-col {
+   margin-left: 53%;
 }

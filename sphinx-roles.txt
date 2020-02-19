@@ -101,6 +101,9 @@
 .. role:: nobutton
    :class: nobutton
 
+.. role:: runblock
+   :class: greenblock
+
 .. role:: bolditalic
    :class: bolditalic
 

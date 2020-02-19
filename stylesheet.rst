@@ -69,9 +69,9 @@ space should really be created with CSS.
 
 .. _style_bulleted_lists:
 
-************************************
-Bulleted and Enumerated Lists, HList
-************************************
+************************************************
+Bulleted and Enumerated Lists, HList and Columns
+************************************************
 
 Bulleted lists should:
 
@@ -132,7 +132,7 @@ Similarly, you can replace ``bignums`` with ``bignums-xxl`` to get a larger enum
 .. rubric:: Hlist
 
 A horizontal list (``.. hlist::``) has a fixed number of columns but is otherwise like a bulleted
-list.  It could be a lot prettier with CSS improvements.
+list.    It could be a lot prettier with CSS improvements.
 
 .. hlist::
    :columns: 3
@@ -144,6 +144,55 @@ list.  It could be a lot prettier with CSS improvements.
    * Item #5
    * Item #6
    * Item #7
+
+.. rubric:: Containers -> Columns
+
+You can also create a true column format by combining the ``.. container::`` role with the
+appropriate CSS.  (HTML5 column mode is also possible, but content automatically flows from the
+bottom of one column to the top of the other.)
+
+.. container:: twocol
+
+   .. container:: leftside-col
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation
+      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+   .. container:: rightside-col
+
+      .. image:: pictures/alyvix_logo_399x333.png
+         :width: 50pt
+
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+      nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+      deserunt mollit anim id est laborum.
+
+You may need to manually align the amount of content in each column as sometimes a subsequent
+paragraph not in column format will be used to fill out the bottom of the right column.
+
+.. code-block::
+
+   .. container:: twocol
+
+      .. container:: leftside-col
+
+         Text in the left side column
+
+      .. container:: rightside-col
+
+         Text in the right side column
+
+   div.leftside-col {
+       width: 47%;
+       padding: 0px 3px 0px 0px;
+       float: left;
+       display: flex;
+   }
+
+   div.rightside-col {
+       margin-left: 53%;
+   }
 
 |
 
