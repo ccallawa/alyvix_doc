@@ -4,7 +4,7 @@
 :tags: getting, started, beginner, windows, start, editor
 :lang: en-US
 :translation: false
-:status: draft
+:status: final
 
 .. include:: ../sphinx-roles.txt
 
