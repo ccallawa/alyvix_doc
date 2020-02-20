@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 03-02-2020
+:modified: 20-02-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -17,7 +17,10 @@ Designer: Interface Overview
 
 The Alyvix Designer interface consists of two elements:
 
-* A screen capture image to use for creating and resizing **selections** and **regions of interest**
+* A screen capture image to use for creating and resizing **selections**
+  :rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+  and **regions of interest**
+  :rawhtml:`<a href="../glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle"></i></a>`
   around visual elements
 * A panel for indicating how those visual elements should be interpreted and interacted with
 
@@ -30,9 +33,9 @@ as a standalone component from the command line as follows (you can find informa
 
    C:\Alyvix\testcases> alyvix_designer
 
-When Designer starts, it captures the current screen, turning it white for a few seconds while
-the capture process is underway.  Once that's done, it displays the screen capture at full
-screen resolution with purple crosshairs that track the mouse, and the reminder
+When Designer starts, it captures the current screen (it will turn white for a few seconds while
+the capture process is underway).  It then displays the screen capture at full resolution with
+purple crosshairs that track the mouse, and the reminder
 :nobutton:`PRESS ESC TO OPEN DIALOG` overlaid at the top left as shown here:
 
 .. image:: images/ad_main_screen_edit_message_h150.png
@@ -42,14 +45,16 @@ screen resolution with purple crosshairs that track the mouse, and the reminder
 .. tip::  Having a second monitor will enable you to mark selections and regions of interest with
    Alyvix on one screen, while the second screen can still be used for other applications.
 
-Each screen capture is part of a **test case object**, which can recognize and interact with up
-to three groups of visual elements.  The color of the crosshairs indicates whether you are working
-with the first (purple/red), second (green), or third (blue) group.
+Each screen capture is associated with a **test case object**
+:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+which can recognize and interact with up to three groups of visual elements.  The color of the
+crosshairs indicates whether you are working with the first (purple/red), second (green), or
+third (blue) group.
 
 .. _alyvix_designer_interface_descriptions:
 
 Pressing :kbd:`Escape` will bring up the Designer interface as in the following screenshot, where
-no groups have yet been defined.  The principle interface elements are:
+no groups (or components) have yet been defined.  The principle interface elements are:
 
 .. image:: images/ad_main_screen_initial_numbered.png
    :alt: The empty Alyvix Designer interface
@@ -59,19 +64,20 @@ no groups have yet been defined.  The principle interface elements are:
 
 #. The **Object name** (title) of the test case object, which together with the file name is used
    to uniquely identify this test case object in Alyvix Selector and Editor
-#. **Test case object** :ref:`options <alyvix_designer_options_test_case>`, which affect all
-   visual elements as a whole
-#. The **test case object** :ref:`Component Tree <alyvix_designer_component_tree_top>` that lists
-   all defined selections and regions of interest that can be interacted with along with their type
-   (image, region or text)
+#. **Test case object** :ref:`options <alyvix_designer_options_test_case_object>`, which affect
+   all visual elements in the component tree as a whole
+#. The **test case object** :ref:`component tree <alyvix_designer_component_tree_top>`
+   :rawhtml:`<a href="../glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   subpanel that shows all defined selections and regions of interest that can be interacted with
+   along with their type (image, region or text)
 #. **Component** :ref:`options <alyvix_designer_options_components>`, which depend on the type
-   you assign to the recognized object
+   you assign to the currently selected component in the component tree
 #. **Interface controls** that allow you to either
-   :ref:`continue editing regions, or exit Designer <alyvix_designer_interface_controls>`.
+   :ref:`continue editing on the screen capture, or exit Designer <alyvix_designer_interface_controls>`.
 
 When Designer is started without any arguments as above, it assigns the default name
 :guilabel:`VisualObject1` to the test case object, along with the
-:ref:`default options <alyvix_designer_options_test_case>`
+:ref:`default options <alyvix_designer_options_test_case_object>`
 :guilabel:`Appear`, :guilabel:`Timeout [sec]: 10`, and :guilabel:`Break: Yes`.
 
 When no visual elements have been selected from the screen capture, the component tree will
@@ -86,18 +92,18 @@ full screen capture.
 Selections, Subselections and Regions of Interest
 =================================================
 
-To add a new visual component to the tree, you must be in capture mode.  If instead Designer or
-Editor is visible, press :wbutton:`EDIT` in the bottom right hand of the panel to return to the
-screen capture interface with the crosshairs.
+To add a new visual component to the tree, you must be in capture mode.  If instead the Designer
+or Editor interface is visible, press :wbutton:`EDIT` in the bottom right hand of the panel to
+return to the screen capture interface containing the crosshairs.
 
-Selections and subselections can be made with the mouse in one of two ways:
+Selections (and subselections) can be made with the mouse in one of two ways:
 
-* Hold the left mouse button down to create a selection or subselection (drawing a rectangle around
-  the desired area), and then release when done.
-* Right click on a visual element to **autocontour** it, using Alyvix's visual recognizer to
-  automatically determine the relevant selection or subselection.  Candidate elements can be shown
-  by pressing :kbd:`Space`, and then pressing it a second time to return to the standard screen
-  capture.
+* **Manually:**  Hold the left mouse button down to create a selection or subselection (drawing a
+  rectangle around the desired area), and then release when done.
+* **Autocontour:**  Right click on a visual element to use Alyvix's visual recognizer to
+  automatically determine the relevant selection or subselection.  Candidate elements can be
+  discovered by pressing :kbd:`Space`, and then pressing it a second time to return to the
+  standard screen capture.
 
 For instance, you can manually select the Windows Start button using the left mouse button as
 shown in the middle image here:
@@ -106,45 +112,49 @@ shown in the middle image here:
    :alt: Before and after creating a selection in the screen capture.
    :target: ../_images/ad_screen_capture_combined.png
 
-After making a **selection**, you can then begin to make up to 4 **subselections** within a single
-group, where its position will always be relative to the main selection.  For instance in the
-example image above, a subselection has been made containing the Windows Cortana search box.
+After making a selection, you can then make up to 4 subselections within that group, where their
+positions will be relative to the main selection.  For instance in the example image above, a
+subselection has been made containing the Windows Cortana search box.
 
-Unlike the main selection, a subselection consists of two boxes rather than one.  You can
-resize the two boxes independently, although the smaller box, which is the subselection itself,
-will always remain contained within the larger one, known as the **Region of Interest**.  The
-smaller box represents what Alyvix should look for, while the region of interest represents the
-space in which it should search for that subselection.
+Unlike the main selection, a **subselection** consists of two overlapping areas rather than a
+single one.  You can resize the two areas independently, although the smaller box, which is the
+subselection itself, will always remain contained within the larger one, known as the
+**region of interest** (or RoI).
+
+The subselection represents what Alyvix should be looking for, while the region of interest
+represents the space in which it should search for that subselection, relative to the main
+selection.  The region of interest can be expanded to the edges of the screen if necessary,
+which is useful for example when windows or panels can change size dynamically.
 
 .. tip::
 
-   Making the Region of Interest wider or taller can be very helpful for GUI elements that "float",
-   such as when a window or panel is resized.
+   Making the region of interest wider or taller can be very helpful for GUI elements that "float",
+   such as the window controls when a window is resized.
 
-In order for a group to be considered **matched**, ALL selections and subselections (within their
-region of interest) must match the screen at the same time.
+In order for a group to be considered *matched*, **ALL** selections and subselections (within their
+respective regions of interest) must match the screen at the same time.
 
-The following shortcuts are available:
+The following keyboard shortcuts are available:
 
 .. table::
    :widths: 30 20 50
 
-   +---------------------------+--------------+----------------------------------------------------+
-   | **Shortcut**              | **Focus on** | **Resulting Action**                               |
-   +---------------------------+--------------+----------------------------------------------------+
-   | :kbd:`Right Click`        | ROI Edges    | Push the selected RoI's edge all the way to the    |
-   |                           |              | border of the screen.                              |
-   +---------------------------+--------------+----------------------------------------------------+
-   | :kbd:`Ctrl + Left Click`  | Subselection | Reset all RoI edges of the subselection to their   |
-   |                           |              | defaults.                                          |
-   +---------------------------+--------------+----------------------------------------------------+
-   | :kbd:`Ctrl + Right Click` | Component    | Remove an entire component (subselection and ROI). |
-   |                           |              | Remove a selection if it has no children.          |
-   +---------------------------+--------------+----------------------------------------------------+
-   | :kbd:`Ctrl + Z`           | Component    | Undo the most recently added component             |
-   +---------------------------+--------------+----------------------------------------------------+
-   | :kbd:`Ctrl + Y`           | Component    | Re-add the component just removed                  |
-   +---------------------------+--------------+----------------------------------------------------+
+   +---------------------------+-----------------+----------------------------------------------------+
+   | **Shortcut**              | **Focus is on** | **Resulting Action**                               |
+   +---------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Right Click`        | RoI Edges       | Push the edge of the RoI under the mouse all the   |
+   |                           |                 | way to the border of the screen.                   |
+   +---------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Ctrl + Left Click`  | Subselection    | Reset all RoI edges of the subselection to their   |
+   |                           |                 | defaults.                                          |
+   +---------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Ctrl + Right Click` | Component       | Remove an entire component (subselection and RoI). |
+   |                           |                 | Remove a selection if it has no children.          |
+   +---------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Ctrl + Z`           | Component       | Undo the most recently added component             |
+   +---------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Ctrl + Y`           | Component       | Re-add the component just removed                  |
+   +---------------------------+-----------------+----------------------------------------------------+
 
 
 .. _alyvix_designer_interface_return_from_sc_mode:
@@ -154,17 +164,16 @@ Returning from Screen Capture Mode
 ==================================
 
 When in screen capture mode, pressing the :kbd:`Escape` key will return you to either the Alyvix
-Editor or Designer interface.  After making new selections and subselections, they will appear as
-components within the :ref:`Component Tree <alyvix_designer_component_tree_top>` as shown here
-(the type of the component has been :ref:`changed <alyvix_designer_component_tree_types>`
-from :guilabel:`Image` to :guilabel:`Text`):
+Designer or Editor interface.  As you make new selections and subselections, they will appear as
+components within the :ref:`component tree <alyvix_designer_component_tree_top>` as shown here:
 
 .. image:: images/ad_main_screen_new_component2.png
    :class: image-boxshadow
    :alt: Adding a first component in the Alyvix Designer interface
 
-The main selection (the Windows Start button) is automatically set as the group element, while
-the second selection (the Cortana search box) is set as a component within that group.
+Continuing the example from above, the main selection (the Windows Start button) is automatically
+set as the group element since it was selected first, while the second selection (the Cortana
+search box) is set as a component within the second group.
 
 
 
@@ -174,9 +183,9 @@ the second selection (the Cortana search box) is set as a component within that 
 Interface Controls
 ==================
 
-Below the component tree at the bottom of the Designer panel are three actions:
+At the bottom of the Designer panel below the component tree are three actions:
 
-* :bbutton:`OK` --- Save the current test case and exit.  If you did not supply a file name when you
-  started Designer, it will use the value for :guilabel:`Object name` as the file name.
+* :bbutton:`OK` --- Save the current test case and exit.  If you did not supply a file name when
+  you started Designer, it will use the value for :guilabel:`Object name` as the file name.
 * :nobutton:`CANCEL` --- Exit Designer without saving the test case.
 * :wbutton:`EDIT` --- Return to the screen capture interface.

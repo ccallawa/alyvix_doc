@@ -14,9 +14,9 @@
 The String Field
 ================
 
-When a test case object matches the current screen, the mouse Action will be executed, and then
-the contents of the :guilabel:`String` field will be typed out as a sequence of keystrokes, one at
-a time, to the active window which has the focus when the test case object matches the screen.
+When a component in a test case object matches an area currently onscreen, its *Action* will
+be executed, and then the contents of its :guilabel:`String` field will be typed out as a
+sequence of keystrokes, one at a time, to the window in focus when the test case object matched.
 
 .. image:: images/ad_action_string_sized.png
    :class: image-boxshadow
@@ -25,14 +25,16 @@ a time, to the active window which has the focus when the test case object match
 The text that is inserted may come from multiple sources (in which case the :guilabel:`String`
 field specifies how they should be combined):
 
-* **Specified on the test case object itself**, inserted manually:
+* **Manually specified on the test case object itself:**
 
   * :bolditalic:`Regular characters:`  Normal letters and numbers, along with most punctuation
   * :bolditalic:`Special characters:`  Non-printable characters (see table below), such as
     :kbd:`Enter` and :kbd:`Control`, along with punctuation that has special meaning such as
     for regular expressions
+  * :bolditalic:`System keys:`  Special key combinations (see table below) for the operating
+    system, such as :kbd:`Win+E` to open a new Explorer window.
 
-* **Text read dynamically from the screen (scraped)** is computed by one test case object and
+* **Text read dynamically from the screen (scraped)**, computed by one test case object and
   then inserted as specified by another test case object that comes later in the script's
   execution:
 
@@ -46,7 +48,7 @@ field specifies how they should be combined):
 * **External sources:**
 
   * :bolditalic:`Directly mapped text:`  The source of the text is fields in the Map itself
-  * :bolditalic:`Mapped arguments:`  Text derived from command line parameters is passed to
+  * :bolditalic:`Mapped arguments:`  Text derived from command line parameters passed to
     Alyvix Robot
 
 
@@ -56,11 +58,11 @@ field specifies how they should be combined):
 .. topic:: Usage Examples
 
    The extraction and mapping functions have a common purpose:  to substitute text from source
-   source into a template string, and then send the resulting string to the application.
+   string into a template string, and then send the resulting string to the application.
 
-If the text should come from the screen, the pattern is typically to have two separate test case
-objects, one which acquires the text from the screen, and another containing the template which
-inserts it into the GUI object.  Otherwise, only a single test case is necessary.
+If the text is supposed to come from the screen, the pattern is typically to have two separate
+test case objects, one which acquires the text from the screen, and another containing the
+template which inserts it into the GUI object.  Otherwise, only a single test case is necessary.
 
 To indicate that content in the String field template is not regular text, it must be escaped
 with a pair of curly braces ``{ ... }``.  If you want to insert more than one template, each one

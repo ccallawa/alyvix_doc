@@ -182,10 +182,10 @@ If it fails instead, the output will appear like this:
    2019/12/12 18:37:51.762: settings FAILED after 10s
    2019/12/12 18:37:51.763: start-test ends FAILED because of settings, taking 10.315s.
 
-If you have enabled the :ref:`break flag <alyvix_designer_options_test_case>` in Alyvix Selector
-for a given test case object, then if that test case object fails, no further test case objects
-will be executed.  If it is not set, then the test case object will instead be skipped after
-its timeout has expired.
+If you have enabled the :ref:`break flag <alyvix_designer_options_test_case_object>` in Alyvix
+Selector for a given test case object, then if that test case object fails, no further test case
+objects will be executed.  If it is not set, then the test case object will instead be skipped
+after its timeout has expired.
 
 When run from the Windows command prompt, you can access the return value as follows:
 

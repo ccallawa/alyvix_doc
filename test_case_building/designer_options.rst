@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 14-02-2020
+:modified: 20-02-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -17,13 +17,14 @@ Designer: Interface Options
 
 The parameters and settings for Alyvix Designer are divided into:
 
-* **Test Case Options**, which affect an entire test case, like the name of a test case object
-  and how long to wait before timing out
-* **Component Options**, which affect a specific component type for a group or component,
-  describing how they should be recognized on the screen and interacted with
-* **The String Field**, a sophisticated component option that allows you to compose both simple
-  strings and complex templated strings, and either insert it into a GUI component like a text
-  field or simulate a menu action or pressing a special key
+* :ref:`Test Case Object Options <alyvix_designer_options_test_case_object>`, those which affect
+  the entire test case object, like its name and how long to wait before timing out
+* :ref:`Component Options <alyvix_designer_options_components>`, which are associated with a
+  particular visual component, describing how it should be recognized on the screen and
+  interacted with
+* The :ref:`String Field <alyvix_designer_options_strings>`, a sophisticated component option
+  that allows you to compose both simple strings and complex templated strings, and either insert
+  them into a GUI component like a text field, simulate a menu action or pressing a special key
 
 
 

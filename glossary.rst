@@ -18,6 +18,7 @@ Glossary
 .. todo::
 
    * CC:  Terminology:  scripting node, scripting element, antecedent? consequent?
+   * CC:  script, map, section, scripting mode
 
 .. _glossary_autocontour:
 
@@ -79,7 +80,8 @@ Glossary
 
 :Selection:  A *selection* is a rectangular area within a screen capture that serves as the
    principal anchor for an entire group.  Unlike a *subselection*, a *selection* has no Region of
-   Interest -- it can match anywhere on the screen.
+   Interest -- it can match anywhere on the screen.  For a more detailed description, see the
+   :ref:`Designer Interface Overview <alyvix_designer_region_bounding>`.
 
 .. _glossary_subselection:
 

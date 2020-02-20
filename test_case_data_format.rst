@@ -197,7 +197,7 @@ The individual sections of the JSON structure are explained below.
    #. :bolditalic:`date_modified` **---** The time the test case object was last modified,
       :ref:`displayed in Selector <alyvix_selector_interface_screenshot>`
    #. :bolditalic:`detection` **---** The test case object's
-      :ref:`detection conditions <alyvix_designer_options_test_case>` such as *timeout*, *break*,
+      :ref:`detection conditions <alyvix_designer_options_test_case_object>` such as *timeout*, *break*,
       and *appear/disappear*
 
 

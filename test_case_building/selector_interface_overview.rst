@@ -95,7 +95,7 @@ The list headers have the following characteristics:
 * **Date modified:**  The date and time automatically recorded when the test case object was last
   modified in Designer, Selector or Editor
 * **Timeout, Break, Measure:**  Displays the values of the corresponding
-  :ref:`test case options <alyvix_designer_options_test_case>` in Designer
+  :ref:`test case object options <alyvix_designer_options_test_case_object>` in Designer
 * **Warning, Critical:**  The threshold values set for integration with monitoring
 * **Resolution:**  The horizontal and vertical pixel resolution, and the scaling factor (Windows
   zoom) of the test case object's screen capture
