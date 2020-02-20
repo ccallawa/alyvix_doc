@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 11-02-2020
+:modified: 20-02-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -22,10 +22,10 @@ When used with Alyvix Editor rather than as a standalone application, it allows 
 select test case objects to create scripted interactions.
 
 The Selector interface is centered around a list of all test case objects in a given test case,
-with a separate tab for each :file:`.alyvix` file.  The *primary* tab (the first one opened with
-the blue background) is the only file whose objects can be changed.  All other *secondary* tabs
-are used to view and filter their test case objects, and to import them into the primary tab.
-The values of test case objects in secondary tabs cannot be changed.
+with a separate tab for each :file:`.alyvix` file.  The *primary* tab (the first one opened, with
+the blue background) is the only file whose objects can be changed.  Any other *secondary* tabs
+are used to view and filter their test case objects, and if desired, to import them into the
+primary tab.  The values of test case objects in secondary tabs cannot be changed.
 
 You can start Alyvix Selector as a standalone module from the command prompt (you can find
 information about its :ref:`command arguments here <test_case_building_selector_launch>`):
@@ -154,10 +154,11 @@ background, and can then be used with the actions described in the next section 
 Test Case Object Actions
 ========================
 
-The :wbutton:`DELAY [SEC] <n> ADD` control allows you to add a completely new test case by launching
-Designer directly from the Selector interface with the specified countdown delay in seconds
-just as if you had used Designer's :file:`--delay` option from the command prompt.  This
-action is available regardless of whether a test case object is selected.
+The :wbutton:`DELAY [SEC] <n> ADD` control allows you to add a completely new test case by
+launching Designer directly from the Selector interface with the specified countdown delay in
+seconds, just as if you had used Designer's :file:`--delay`
+:ref:`option <test_case_building_designer_launch>` from the command prompt.  This action is
+available regardless of whether a test case object is selected.
 
 The :wbutton:`EDIT` button appears when only a single test case object is selected.  Clicking on
 it launches Alyvix Designer with the currently selected test case file and object.
