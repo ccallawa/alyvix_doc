@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 19-02-2020
+:modified: 20-02-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -64,7 +64,7 @@ This loads the Editor interface, which has the following elements:
 
 .. rst-class:: bignums
 
-#. The :ref:`test case menu <alyvix_editor_interface_menu>`, described below, containing actions
+#. The :ref:`test case menu <alyvix_editor_interface_menu>` (described below), containing actions
    for Alyvix Editor and the current test case
 #. The main :ref:`Script Management panel <alyvix_editor_script_mgmt_top>`, used to select
    the principal scripts to be edited
@@ -73,10 +73,13 @@ This loads the Editor interface, which has the following elements:
 #. The :ref:`Maps <alyvix_editor_interface_maps>` list, containing user-defined maps where a
    script can be called multiple times, once for each key in the map that is then passed as an
    argument to the named script
-#. The scripting mode selector, containing the :guilabel:`Script` tab to display the currently
-   selected script or map, the :guilabel:`Monitor` tab to show the screen capture of Selector's
-   current test case object, and the :guilabel:`Console` tab to show the output after running
-   the test case script from within Alyvix Editor
+#. The scripting mode selector, containing the :guilabel:`Script` tab to
+   :ref:`display the currently selected script or map <alyvix_editor_scripting_panel_top>`,
+   the :guilabel:`Monitor` tab to
+   :ref:`show the screen capture <alyvix_editor_interface_monitor>`
+   of Selector's current test case object, and the :guilabel:`Console` tab to
+   :ref:`show the output <alyvix_editor_run_script>`
+   after running the test case script from within Alyvix Editor
 #. The :ref:`scripting panel <alyvix_editor_scripting_panel_top>`, which contains the individual
    scripting elements, placed there using Selector
 #. The script properties and actions, where you can enable, disable or remove individual script
@@ -101,6 +104,20 @@ This loads the Editor interface, which has the following elements:
 
 
 
+.. _alyvix_editor_interface_monitor:
+
+.. topic::  The Monitor Tab
+
+   When you need to quickly look at the positions of components in a test case object, the
+   fastest way is not to return to editing the test case object in Designer.  As long as you
+   don't need to change anything, you can use the monitor tab to see the screen capture for
+   the currently selected test case object.
+
+.. image:: images/ae_monitor_tab_sized.png
+   :class: image-with-border
+   :alt: The results of running the script in Alyvix Editor
+
+
 
 
 .. _alyvix_editor_run_script:
@@ -118,8 +135,12 @@ The output is the same as when :ref:`run in the command prompt <alyvix_robot_res
 can be found in the :bbutton:`Console` tab at the top of Editor's
 :ref:`scripting panel <alyvix_editor_scripting_panel_top>`:
 
-   .. image:: ../getting_started/images/ae_console_result.png
-      :class: image-with-border
-      :alt: The results of running the script in Alyvix Editor
+.. image:: ../getting_started/images/ae_console_result.png
+   :class: image-with-border
+   :alt: The results of running the script in Alyvix Editor
 
-Currently the verbosity level for Alyvix Robot cannot be set within Editor.
+In addition, if the a failure was caused by a simple sequential scripting node, then the
+annotated screenshot describing the failure will be displayed below the output in the
+Console tab.
+
+Note that currently the verbosity level for Alyvix Robot cannot be set within Editor.
