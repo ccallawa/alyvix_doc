@@ -1,5 +1,7 @@
 .. |python-download-link| replace:: :download:`64-bit Windows installer for Python version 3.7.6 <https://www.python.org/ftp/python/3.7.6/python-3.7.6-amd64.exe>`
 
+.. |python-remove-name| replace:: :file:`Python 3.7.6 (64-bit)`
+
 .. |semantic-versioning-link| raw:: html
 
    <a href="https://semver.org/" target="_blank">
@@ -45,6 +47,11 @@
    <a href="http://www.unicode.org/charts/" target="_blank">
    unicode character <i class="fa fa-small fa-external-link"></i></a>
 
+.. |vc-redist-link| raw:: html
+
+   <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">
+   https://aka.ms/vs/16/release/vc_redist.x64.exe <i class="fa fa-small fa-external-link"></i></a>
+
 .. |bar-icon| raw:: html
 
    &nbsp;<i class="fa fa-small fa-black fa-bars"></i>
@@ -61,9 +68,33 @@
 
    &nbsp;<i class="fa fa-small fa-black fa-ban"></i>
 
+.. |sort-up-icon| raw:: html
+
+   <i class="fa fa-small fa-blue fa-sort-up" style="vertical-align: bottom;"></i>
+
+.. |sort-down-icon| raw:: html
+
+   <i class="fa fa-small fa-blue fa-sort-down" style="vertical-align: top;"></i>
+
+.. |right-icon-white| raw:: html
+
+   <i class="fa fa-med fa-white fa-caret-right" style="vertical-align: top;"></i>
+
 .. |tab| raw:: html
 
    &nbsp; &nbsp; &nbsp;
+
+.. |accordion-entry| raw:: html
+
+   <button class="accordion">
+
+.. |accordion-middle| raw:: html
+
+   </button><div class="accordion">
+
+.. |accordion-end| raw:: html
+
+   </div>
 
 .. |runblue| image:: /pictures/button_run_blue.png
    :class: inline-image-higher button-boxshadow

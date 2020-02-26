@@ -82,9 +82,8 @@ Selector List Headers
 
 The test case object list headers describe the contents of their respective columns.
 The list can be sorted on the first three columns by clicking on the header name, with the
-:rawhtml:`<i class="fa fa-small fa-blue fa-sort-up" style="vertical-align:bottom;"></i>` and
-:rawhtml:`<i class="fa fa-small fa-blue fa-sort-down" style="vertical-align:top;"></i>`
-icons indicating whether the sort order is ascending or descending.
+|sort-up-icon| and |sort-down-icon| icons indicating whether the sort order is ascending or
+descending.
 
 The list headers have the following characteristics:
 

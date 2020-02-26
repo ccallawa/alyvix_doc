@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 15-02-2020
+:modified: 26-02-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -267,8 +267,20 @@ more options, you can use the ``code-block`` directive:
       This is the content of the code block.
       Sometimes it might even be actual code.
 
-In :file:`custom.css` there are classes available such as ``short-code-block`` and
-``medium-code-block`` that will make the block less wide at preset proportions (e.g. 70% and 85%).
+The clipboard copy icon is set by default on all code blocks.  To remove it in cases where it
+doesn't make sense, add the following class:
+
+.. code-block:: rst
+   :class: short-code-block nocopy
+
+   .. code-block::
+      :class: nocopy
+
+      Don't put a clipboard copy icon in this code block.
+
+In :file:`custom.css` there are classes available such as ``medium-code-block``,
+``short-code-block`` and ``tiny-code-block`` that will narrow the block at preset proportions
+(85%, 70% and 50%).
 
 Instead of pasting code into the .rst file, you can also include an entire external file like this:
 
@@ -959,9 +971,9 @@ Note that as of February 2020, Rinoh (``pip install rinohtype``) is not working 
 
 .. _style_sphinx_copybutton:
 
-===================
-Dynamic Copy Button
-===================
+==================================
+Dynamic Copy and Accordion Buttons
+==================================
 
 * Install the extension with ``pip install sphinx-copybutton``
 * Add ``'sphinx_copybutton'`` to the extension list in Sphinx's :file:`conf.py`
@@ -994,3 +1006,22 @@ and :file:`copybutton.css`
        'copy_success': 'Copied',
        'copy_failure': 'Failed to copy',
      },
+
+And the accordion-style expand/contract buttons are here as well since they use the same DOM
+approach as the copy buttons:
+
+.. code-block:: js
+
+   const addButtonToAccordionCells = () => {
+     // Add accordion buttons to all classes containing the 'accordion' class
+     const accordionCells = document.querySelectorAll('button.accordion')
+     accordionCells.forEach((accordionCell, index) => {
+       accordionCell.parentNode.replaceWith(accordionCell)
+       accordionCell.addEventListener("click", function() {
+         this.classList.toggle("active");
+         var panel = this.nextElementSibling;
+         if (panel.style.display === "block") { panel.style.display = "none"; }
+         else { panel.style.display = "block"; }
+       });
+     })
+   }

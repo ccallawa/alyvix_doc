@@ -423,6 +423,10 @@ div.highlight pre::-webkit-scrollbar-track {
 a:visited .fa::before {
     color: #9B59B6;
 }
+.fa-med::before {
+    font-size: 22px;
+    padding-right: 6px;
+}
 .fa-small::before {
     font-size: 16px;
     padding-right: 4px;
@@ -444,7 +448,9 @@ a:visited .fa::before {
 }
 .fa-black::before {
     color: black;    /* Override the blue color when necessary */
-    /* font-weight: normal;  Has no effect on thickness */
+}
+.fa-white::before {
+    color: white;    /* Override the blue color when necessary */
 }
 p.fa {
     line-height: 24px; /* Should inherit from 'p' */
@@ -500,12 +506,38 @@ div.wy-side-nav-search a.icon img.logo {
 
 /* Columns (x2) */
 div.leftside-col {
-   width: 47%;
-   padding: 0px 3px 0px 0px;
-   float: left;
-   display: flex;
+    width: 47%;
+    padding: 0px 3px 0px 0px;
+    float: left;
+    display: flex;
 }
 
 div.rightside-col {
-   margin-left: 53%;
+    margin-left: 53%;
+}
+
+
+/* Accordion buttons for troubleshooting section */
+button.accordion {
+    background-color: rgb(41,128,185);
+    color: #fff;
+    cursor: pointer;
+    padding: 7px 14px;
+    width: 94%;
+    border: none;
+    align: center;
+    text-align: left;
+    outline: none;
+    margin-top: 10px;
+}
+div.accordion {
+    padding: 15px 15px 2px 15px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    width: 94%;
+    border-style: solid;
+    border-color: rgb(41,128,185);
+    border-width: 1px;
+    margin-bottom: 4px;
 }
