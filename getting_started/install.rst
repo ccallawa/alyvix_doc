@@ -258,7 +258,7 @@ Installation Troubleshooting
 Below are some potential installation problems.
 
 |accordion-entry|
-|right-icon-white| Microsoft Store launches on Windows 10
+|right-icon-white| "Python" command does nothing or launches Microsoft Store on Windows 10
 |accordion-middle|
 This error occurs when during :ref:`installation steps #2 and #4 <install_release_python_install>`
 you did not check the boxes to add Python to the path and environment variables.  Typing the
