@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 12-02-2020
+:modified: 26-02-2020
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -213,3 +213,76 @@ The following steps will then enable you to install Alyvix on the target machine
 
    If the :ref:`Editor window <alyvix_editor_interface_top>` appears, the installation was
    successful.
+
+|
+
+
+
+.. _install_uninstall:
+
+==============================
+Uninstalling Alyvix and Python
+==============================
+
+To uninstall Alyvix, regardless of whether you also want to uninstall Python, run the following
+command in a Command Prompt or Power Shell **with Administrator privileges**:
+
+.. code-block:: doscon
+
+   C:\> pip uninstall alyvix
+
+Pip will list the packages to be removed, and then ask for confirmation.
+
+If you only use Python to run Alyvix, you can now also remove Python itself.  Go to
+**Start Menu > Windows Settings > Apps**, scroll down, and remove both |python-remove-name| and
+:file:`Python Launcher`.  The process may take up to 5 minutes.
+
+
+Once completed, you can also manually remove the :file:`C:\\Python37\\` directory (or whichever
+directory you specified during installation) and either archive or delete your test case
+directory.
+
+The Python installer does not remove environment variables, so if desired you can manually
+remove them at **System Properties > Environment Variables > System Variables > Path**.
+
+|
+
+
+
+.. _install_troubleshooting:
+
+============================
+Installation Troubleshooting
+============================
+
+Below are some potential installation problems.
+
+|accordion-entry|
+|right-icon-white| Microsoft Store launches on Windows 10
+|accordion-middle|
+This error occurs when during :ref:`installation steps #2 and #4 <install_release_python_install>`
+you did not check the boxes to add Python to the path and environment variables.  Typing the
+:command:`python` command in the command prompt under this condition will launch Microsoft Store
+in an attempt to install it from there.
+
+To correct this situation you will need to either (1) uninstall and then reinstall Python, or
+(2) manually add the appropriate paths in the **System Properties > Environment Variables** panel.
+|accordion-end|
+
+|accordion-entry|
+|right-icon-white| "ImportError: DLL load failed" --- Failure to Import Tesseract OCR
+|accordion-middle|
+This error is caused by a missing dependency of the Tesseract OCR module, which requires that the
+file :file:`vcomp140.dll` be present in Windows during installation by *pip*:
+
+.. code-block:: doscon
+   :class: nocopy
+
+   File "C:\Python37\lib\site-packages\alyvix\core\tesserocr\__init__.py", line 1, in <module> from ._tesserocr import *
+   ImportError: DLL load failed: The specified module could not be found.
+
+You can fix this problem by installing the **Microsoft Visual C++ Redistributable per Visual Studio**,
+which contains the required file.  It is available at |vc-redist-link|.
+|accordion-end|
+
+|
