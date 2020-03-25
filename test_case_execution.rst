@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 18-02-2020
+:modified: 25-03-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -102,6 +102,9 @@ The following options are available:
 |               |       |          |                                                           |
 |               |       |          | ``nagios`` --- Nagios output                              |
 |               |       |          | :ref:`(see below) <alyvix_robot_result_nagios>`           |
+|               |       |          |                                                           |
+|               |       |          | ``nats-influxdb`` --- NATS to InfluxDB                    |
+|               |       |          | :ref:`(see below) <alyvix_robot_result_nats_influxdb>`    |
 +---------------+-------+----------+-----------------------------------------------------------+
 | -\\-verbose   | -v    | *<n>*    | Set the verbosity level for debugging output              |
 |               |       |          | ranging from **0** (min) to **2** (max)                   |
@@ -255,6 +258,52 @@ The time measurements for Nagios are specified as follows (note that *object_tim
 .. code-block:: html
 
    NOT EXECUTED transactions: <not_executed_object_01_name>; <not_executed_object_02_name>
+
+
+
+.. _alyvix_robot_result_nats_influxdb:
+
+===========================
+NATS-InfluxDB Output Format
+===========================
+
+Publish all measures to an InfluxDB database through a NATS channel.  You will need the NATS
+server IP, port, subject name, and measurement name.
+
+.. code-block::
+
+   alyvix_robot -f vt -m "nats-influxdb <nats_streaming_server_ip>:<port> <influxdb_subject_name> <influxdb_measurement_name>"
+
+
+
+.. _alyvix_robot_cipher_encryption:
+
+============================
+Alyvix Cipher for Encryption
+============================
+
+Publish all measures to an InfluxDB database through a NATS channel.  You will need the NATS
+server IP, port, subject name, and measurement name.
+
+To encrypt a cipher, supply the text to be encrypted and your private key:
+
+.. code-block::
+
+   alyvix_cipher -e <text_string_to_encrypt> -k <private_key>
+
+You can also decrypt a cipher as follows:
+
+.. code-block::
+
+   alyvix_cipher -d <text_string_to_decrypt> -k <private_key>
+
+To use the encrypted text string, put it in the **string** box of an object component.
+
+You can then run a test case with encrypted strings by supplying the private key:
+
+.. code-block::
+
+   alyvix_robot -f <test_case_name> -k <private_key>
 
 
 
