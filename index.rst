@@ -35,7 +35,7 @@
 Alyvix and Visual Monitoring
 ############################
 
-Welcome to the official Guide for **Alyvix 3.0.0**.
+Welcome to the official Guide for **Alyvix 3.0.1**.
 
 `Alyvix <https://alyvix.com/>`_ is a **synthetic monitoring system based on computer vision
 technology**.  Alyvix simulates real users whose actions you can define, without being hardwired
