@@ -94,7 +94,8 @@ The following example JSON structure illustrates the high-level structure of the
                "type": "appear" },
             "measure": {
                "output": true,
-               "thresholds": {} }
+               "series": { },
+               "thresholds": { } }
          }
       },
       "script": {
@@ -104,15 +105,19 @@ The following example JSON structure illustrates the high-level structure of the
             { "flow": "<test-case-object-name>",
               "if-true": "<test-case-object-name>" },
             { "flow": "<test-case-object-name>",
-              "if-false": "<test-case-object-name>" } ],
+              "if-false": "<test-case-object-name>" },
+            { "flow": "<test-case-object-name>",
+              "for": "<test-case-map-name>" }
+         ],
          "sections": {
             "<section-name>": [
-               "<test-case-object-name"
+               "<test-case-object-name>"
             ],
             "exit": [],
             "fail": [] }
       }
    }
+
 
 
 .. _test_case_data_format_description:
@@ -140,7 +145,7 @@ The individual sections of the JSON structure are explained below.
       :class: backdarkbeige
 
    #. :bolditalic:`maps` **---** An ordered set of values that a script can loop over, for
-      instance to insert a sequence of values in multiple test fields
+      instance to insert a sequence of values in multiple text fields
 
    #. :bolditalic:`objects` **---** A list of the individual test case objects created with
       Alyvix Designer.  Each test case object is identified uniquely in the list by its **object name**
@@ -185,7 +190,9 @@ The individual sections of the JSON structure are explained below.
            "components": { },
            "date_modified": "<timestamp>",
            "detection": { },
-           "measure": { } }
+           "measure": {
+               "series": { } }
+        }
       }
 
    .. rst-class:: bignums
@@ -271,6 +278,43 @@ The individual sections of the JSON structure are explained below.
 .. rst-class:: bignums
    :class: backdarkbeige nobignum
 
+#. .. rubric:: *Objects* >> *Measure*
+
+   The *measure* section contains the recorded data of all runs by Alyvix Robot.
+
+   .. code-block:: json
+      :class: short-code-block
+
+      { "measure": {
+          "output": "<true/false>",
+          "series": [
+              {
+                  "accuracy_ms": "<ms_amount>",
+                  "annotation": "<base64>",
+                  "exit": "<true/false/fail/not_executed>",
+                  "performance_ms": "<ms_amount>",
+                  "records": {
+                      "check": "<true/false>",
+                      "extract": "<extracted_text>",
+                      "image": "<extracted_image>",
+                      "text": "<scraped_text>"
+                  },
+                  "resolution": {
+                      "height": "<pixel_amount>",
+                      "width": "<pixel_amount>"
+                  },
+                  "scaling_factor": "<zoom_amount>",
+                  "screenshot": "<base64>",
+                  "timestamp": "<epoch>"
+              }
+          ],
+          "thresholds": { } }
+      }
+
+
+.. rst-class:: bignums
+   :class: backdarkbeige nobignum
+
 #. .. rubric:: *Script*
 
    The **script** parameter records the
@@ -286,7 +330,9 @@ The individual sections of the JSON structure are explained below.
            { "flow": "<test-case-object-name>",
              "if-true": "<test-case-object-name>" },
            { "flow": "<test-case-object-name>",
-             "if-false": "<test-case-object-name>" }
+             "if-false": "<test-case-object-name>" },
+            { "flow": "<test-case-object-name>",
+              "for": "<test-case-map-name>" }
         ],
         "sections": {
            "<section-name>": [
@@ -309,11 +355,14 @@ The individual sections of the JSON structure are explained below.
          :class: backlightbeige
 
       #. :bolditalic:`disable` **---** Skip this test case object and continue with the next.
-      #. :bolditalic:`flow` **---** Indicates the test case object that is the value of this key
-         should be executed by Alyvix Robot if the condition listed in the second paramater is true.
+      #. :bolditalic:`flow` **---** Indicates the test case object or section that is the value
+         of this key should be executed by Alyvix Robot in the context of a conditional
+         (*if-true* or *if-false*) or a loop (*map*) .
       #. :bolditalic:`if-true` **---** Evaluates whether the detection part of a given test case
          object would match, but without executing its actions.
       #. :bolditalic:`if-false` **---** As above, but if the test case object would not match.
+      #. :bolditalic:`for` **---** Indicates there should be a loop over the values in the
+         specified :ref:`Map <alyvix_editor_interface_maps>`.
 
    #. :bolditalic:`sections` **---** Corresponds to the named subroutine scripts created in
       Alyvix Editor.  Each section is a parameter where its key is the name of the section and
@@ -323,6 +372,6 @@ The individual sections of the JSON structure are explained below.
          :class: backlightbeige
 
       #. :bolditalic:`exit` **---** The (teardown) script to execute when a script has
-         completed successfully.
+         completed, regardless of whether it succeeded or failed.
       #. :bolditalic:`fail` **---** The (teardown) script to execute when a script has failed
          during the execution of its test case objects.
