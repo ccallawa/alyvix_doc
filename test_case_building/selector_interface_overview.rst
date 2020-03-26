@@ -153,7 +153,7 @@ background, and can then be used with the actions described in the next section 
 Test Case Object Actions
 ========================
 
-The :wbutton:`DELAY [SEC] <n> ADD` control allows you to add a completely new test case by
+The :wbutton:`DELAY [SEC] <n> ADD` control allows you to add a completely new test case object by
 launching Designer directly from the Selector interface with the specified countdown delay in
 seconds, just as if you had used Designer's :file:`--delay`
 :ref:`option <test_case_building_designer_launch>` from the command prompt.  This action is

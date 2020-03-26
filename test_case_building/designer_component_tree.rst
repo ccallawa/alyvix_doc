@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 20-02-2020
+:modified: 26-03-2020
 :tags: designer, component, tree
 :lang: en-US
 :translation: false
@@ -25,7 +25,7 @@ The *component tree* is composed of three types of components:
 - A :ref:`Root element <glossary_root>`, which holds a captured screen to serve as a basis for
   visually recognizing parts of the screen.
 - :ref:`Groups <glossary_group>`, which indicate the principal component that needs to be
-  recognized.  A maximum of three groups can be created per :ref:`test case <glossary_test_case>`.
+  recognized.  A maximum of three groups can be created per :ref:`object <glossary_test_case_object>`.
 - :ref:`Components <glossary_component>` are the additional areas that can be used to confirm what
   is being recognized (especially when there are multiple similar target objects), such as a text
   label next to a button, or when the action can be on a separate GUI object, like a slider.  A
@@ -57,13 +57,14 @@ or remove one.
    :class: image-boxshadow
    :alt: A tree with a single root, group and component
 
-If you now select a region, a copy of that region will appear in red in the component tree.  This
-region represents a potential *group* of subregions called *components*, although depending on
-what you need to do, you may not need to create any components for a group.
+If you now create a selection, or a subselection with its corresponding region of interest,
+a thumbnail copy will appear in the component tree.  A selection can stand alone, or can
+head a *group* of *components* which are defined by their relationship to the main group
+selection.
 
-Each group and component is one row consisting of a `type` icon
+Each group or component is a single row consisting of an icon indicating its type
 (:ref:`see Object Types <alyvix_designer_component_tree_types>`)
-and an image of the area around the object.  A right-click on a row will display a
+and an image of the area around the object.  Right-clicking on a row will display a
 :ref:`menu of actions <alyvix_designer_component_actions>` for that object.
 
 
@@ -87,10 +88,10 @@ Alyvix's visual recognition capability is based on two well-known open source sy
 
 Alyvix uses these tools to visually detect three types of objects:
 
-- **Image:**  Given a region of interest on the screen, Alyvix will look for a particular shape
-  and/or color within the matrix of pixels in that RoI.  For instance, it may be a particular
-  system or application icon, a shape like a circle regardless of its color, or a box that changes
-  from one color to another.  The "photograph" icon above represents an *Image* object.
+- **Image:**  Given a region of interest on the screen, Alyvix will look for the defined
+  selection in that RoI.  For instance, it may be a particular system or application icon, a
+  shape like a circle regardless of its color, or a box that changes from one color to another.
+  The "photograph" icon above represents an *Image* object.
 - **Rectangle (Rect):**  Allows Alyvix to find buttons, boxes and windows that have a
   rectangular shape.  The "bounding box" icon represents a *Rect* object.
 - **Text:**  Looks for text near another located object.  Because text recognition over the entire
@@ -122,8 +123,8 @@ a component in that group.
 
 .. warning::
 
-   Although you can add up to add up to four components per group, all components in a given group
-   must match a region on the screen before a match will be declared and any action(s) taken.
+   Although you can add up to add up to four components per group, all components of all groups
+   must be detected before any action(s) will be taken.
 
 In addition to manually selecting the bounds of the region, you can right-click on any point on
 the screen and Alyvix will try to automatically determine (:ref:`autocontour <glossary_autocontour>`)
