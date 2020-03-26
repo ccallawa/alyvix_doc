@@ -20,6 +20,30 @@ Below you can find the release notes for Alyvix in reverse chronological order.
 
 
 
+.. _install_release_v3_0_2:
+
+-------------
+Version 3.0.2
+-------------
+
+**Release date:  March 25th, 2020**
+
+**Python 3.7.6 64-bit official distribution** is the recommended Python version to power Alyvix 3.
+
+Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
+system requirements for Alyvix, you can
+:ref:`install or upgrade it <getting_started_top>`.
+
+**Bug Fixes**
+
+* :ref:`NATS-InfluxDB output mode <alyvix_robot_result_nats_influxdb>` can now publish system
+  call objects (*i.e.*, without requiring visual components to detect)
+* Running single objects from test cases through Alyvix Robot now correctly saves their measures
+  in :file:`.alyvix` output files
+* The field name ``performance_ms``, a feature of ``measure`` in :file:`.alyvix` files, had a typo
+
+
+
 .. _install_release_v3_0_1:
 
 -------------
