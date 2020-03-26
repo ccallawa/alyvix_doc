@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 25-03-2020
+:modified: 26-03-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -20,10 +20,10 @@ also execute any individual test case objects you have created with Alyvix Desig
 Alyvix objects you have set up with Alyvix Selector.
 
 In a production environment, the typical use case is to create a set of test cases once, and then
-repeatedly run those test cases at regular intervals.  Examples include monitoring the usability
-of proprietary clients, streamed applications, and web pages on a remote server.  A test case
-may measure responsiveness every 5 minutes, for instance, and send timing and other data to
-a monitoring system in the output format it expects.
+repeatedly run those test cases continuously (ideally as quickly as possible).  Examples include
+monitoring the usability of proprietary clients, streamed applications, and web pages on a remote
+server.  A test case may measure responsiveness every 5 minutes, for instance, and send timing
+and other data to a monitoring system in the output format it expects.
 
 Before you can use Alyvix in a production environment, however, you will first need to iteratively
 develop and improve your test cases.  Here human readable output is more important, and accordingly
@@ -95,7 +95,7 @@ The following options are available:
 +---------------+-------+----------+-----------------------------------------------------------+
 | -\\-filename  | -f    | *<name>* | Supply the file name with or without extension            |
 +---------------+-------+----------+-----------------------------------------------------------+
-| -\\-object    | -o    | *<name>* | Supply the Object name(s)                                 |
+| -\\-key       | -k    | *<key>*  | Supply a private key for use with encryption              |
 +---------------+-------+----------+-----------------------------------------------------------+
 | -\\-mode      | -m    | *<name>* | ``alyvix`` --- CLI output format for humans               |
 |               |       |          | (default)                                                 |
@@ -106,6 +106,8 @@ The following options are available:
 |               |       |          | ``nats-influxdb`` --- NATS to InfluxDB                    |
 |               |       |          | :ref:`(see below) <alyvix_robot_result_nats_influxdb>`    |
 +---------------+-------+----------+-----------------------------------------------------------+
+| -\\-object    | -o    | *<name>* | Supply the Object name(s)                                 |
++---------------+-------+----------+-----------------------------------------------------------+
 | -\\-verbose   | -v    | *<n>*    | Set the verbosity level for debugging output              |
 |               |       |          | ranging from **0** (min) to **2** (max)                   |
 |               |       |          |                                                           |
@@ -114,8 +116,8 @@ The following options are available:
 |               |       |          |                                                           |
 |               |       |          | **1**:  Also logs Alyvix actions                          |
 |               |       |          |                                                           |
-|               |       |          | **2**:  Also creates annotated screenshots as             |
-|               |       |          | separate .png files in the same directory                 |
+|               |       |          | **2**:  Also creates screenshots and annotated            |
+|               |       |          | screenshots as separate .png files in the same directory  |
 +---------------+-------+----------+-----------------------------------------------------------+
 
 
@@ -128,16 +130,17 @@ What Alyvix Robot Returns
 
 Alyvix uses the following industry-standard return values for monitoring systems:
 
-+-------+--------------+-------------------------------------------------------------------------------+
-| Value | Label        | Meaning                                                                       |
-+-------+--------------+-------------------------------------------------------------------------------+
-| 0     | ``OK``       | The service responded and the results were within expectations                |
-+-------+--------------+-------------------------------------------------------------------------------+
-| 1     | ``WARNING``  | Action should be taken to prevent a likely near-term problem from becoming    |
-|       |              | more serious                                                                  |
-+-------+--------------+-------------------------------------------------------------------------------+
-| 2     | ``CRITICAL`` | A significant incident has already occurred and should be handled immediately |
-+-------+--------------+-------------------------------------------------------------------------------+
++-------------+--------------+-------------------------------------------------------------------------------+
+| Error Level | Label        | Meaning                                                                       |
++-------------+--------------+-------------------------------------------------------------------------------+
+| 0           | ``OK``       | The service responded and the results were within expectations                |
++-------------+--------------+-------------------------------------------------------------------------------+
+| 1           | ``WARNING``  | Action should be taken to prevent a likely near-term problem from becoming    |
+|             |              | more serious                                                                  |
++-------------+--------------+-------------------------------------------------------------------------------+
+| 2           | ``CRITICAL`` | A significant incident has already occurred and should be handled immediately |
++-------------+--------------+-------------------------------------------------------------------------------+
+
 
 Using the **-\\-mode** option, you can specify the format for the information returned (defaults
 to CLI output mode).
@@ -195,7 +198,7 @@ When run from the Windows command prompt, you can access the return value as fol
 .. code-block:: doscon
    :class: short-code-block
 
-   C:\Alyvix\testcases> %errorlevel%
+   C:\Alyvix\testcases> echo %errorlevel%
    0
 
 
@@ -282,8 +285,9 @@ server IP, port, subject name, and measurement name.
 Alyvix Cipher for Encryption
 ============================
 
-Publish all measures to an InfluxDB database through a NATS channel.  You will need the NATS
-server IP, port, subject name, and measurement name.
+You can use a combination of cipher and private key to protect sensitive information such as
+user names and passwords when for instance you need to log in to a login-protected application
+or web site.
 
 To encrypt a cipher, supply the text to be encrypted and your private key:
 
@@ -297,7 +301,8 @@ You can also decrypt a cipher as follows:
 
    alyvix_cipher -d <text_string_to_decrypt> -k <private_key>
 
-To use the encrypted text string, put it in the **string** box of an object component.
+To use the encrypted text string, put it in the :ref:`string box <alyvix_designer_options_strings>`
+of an object component.
 
 You can then run a test case with encrypted strings by supplying the private key:
 

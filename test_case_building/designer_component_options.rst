@@ -148,7 +148,7 @@ main component of a group cannot be of type Text.
 The :guilabel:`Mode` dropdown determines how the text is interpreted, setting the criterion to
 one of these 3 methods:
 
-  * **Regex**  The scraoed (recognized) text is considered matched only if it satisfies the
+  * **Regex**  The scraped (recognized) text is considered matched only if it satisfies the
     regular expression in the :guilabel:`Regex` field.  The regular expression syntax is governed
     by the |python-regex-lib|.
   * **Number**  The recognized text is considered matched only if it results in a number that
