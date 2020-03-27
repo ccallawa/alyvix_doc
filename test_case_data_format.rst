@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 18-02-2020
+:modified: 27-03-2020
 :tags: test cases, data format
 :lang: en-US
 :translation: false
@@ -331,8 +331,8 @@ The individual sections of the JSON structure are explained below.
              "if-true": "<test-case-object-name>" },
            { "flow": "<test-case-object-name>",
              "if-false": "<test-case-object-name>" },
-            { "flow": "<test-case-object-name>",
-              "for": "<test-case-map-name>" }
+           { "flow": "<test-case-object-name>",
+             "for": "<test-case-map-name>" }
         ],
         "sections": {
            "<section-name>": [

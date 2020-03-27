@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 20-02-2020
+:modified: 27-03-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -88,8 +88,8 @@ Image Type Options
 
 * **Match:**  Only recognize an area on the screen that is exactly the same as the one selected
   during screen capture
-* **Color:**  Match a region that has the same color (within a given tolerance determined by
-  OpenCV) as the area selected in the screen capture, regardless of its exact shape
+* **Color:**  Match a selection or subselection that has the same color, but tolerate
+  different pixels
 * **Shape:**  Match the same shape as the contours of the object in the screen capture region,
   regardless of its color
 
@@ -138,7 +138,7 @@ main component of a group cannot be of type Text.
 .. _alyvix_designer_options_components_text_detect:
 .. topic:: **Detect**
 
-   The text type's *Detect* mode will determine that a match was correctly made if the text
+   The text type's *Detect* option will determine that a match was correctly made if the text
    scraped from the region of interest matches the condition specified in the first two fields.
 
 .. image:: images/ad_type_submenu_text_detect_sized.png
@@ -149,8 +149,8 @@ The :guilabel:`Mode` dropdown determines how the text is interpreted, setting th
 one of these 3 methods:
 
   * **Regex**  The scraped (recognized) text is considered matched only if it satisfies the
-    regular expression in the :guilabel:`Regex` field.  The regular expression syntax is governed
-    by the |python-regex-lib|.
+    regular expression in the :guilabel:`Regex` field, once normalized as lower cased strings.
+    The regular expression syntax is governed by the |python-regex-lib|.
   * **Number**  The recognized text is considered matched only if it results in a number that
     satisfies the condition selected in the :guilabel:`Logic` field (e.g., "greater than zero").
   * **Date**  The recognized text is considered matched only if it results in day and time that
@@ -158,13 +158,16 @@ one of these 3 methods:
     "last day", etc.)
 
 
+.. The explanation below is wrong.  The scraped text will be mapped with the most similar
+   key of the selected map, and then extracted value is the key-related value defined in the map.
+
 .. _alyvix_designer_options_components_text_map:
 .. topic:: **Map**
 
-   The text type's *Map* mode will collect the individual words recognized from the subselection
-   and make them available to the :ref:`map interface in Editor <alyvix_editor_interface_top>`.
-   The :guilabel:`Map` dropdown allows you to choose any map that has already been defined.
-   Map will match any recognized text regardless of content.
+   When *Map* mode is selected, the scraped text will be mapped to the most similar key in
+   the selected Map (the Map can be chosen in the
+   :ref:`map interface in Editor <alyvix_editor_interface_top>`).  The extracted value will
+   be the map value associated with that key.
 
 .. image:: images/ad_type_submenu_text_map_sized.png
    :class: image-boxshadow
@@ -191,10 +194,10 @@ An **Action** creates a mouse event corresponding to one of the following types 
 mouse position will be set to the center of the component's selection or subselection):
 
     * **None (default):**  Don't perform any mouse action when a component is matched.
-    * **Move:**  Move the mouse to any point on the screen, without clicking.  The
+    * **Move:**  Hover the mouse over the component, without clicking.  The
       :guilabel:`SET POINT` button lets you select a point relative to the center of
       the component with the crosshairs.
-    * **Click:**  Move the mouse to any point on the screen (use :guilabel:`SET POINT` as with
+    * **Click:**  Move the mouse over the component (use :guilabel:`SET POINT` as with
       **Move**), and then click one or more times at that point.  You can choose the left or right
       mouse button and the number of times to click (*Units*).  If you select more than one click,
       you can then set the delay in milliseconds between each click.

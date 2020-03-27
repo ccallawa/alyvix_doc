@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 20-02-2020
+:modified: 27-03-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -47,8 +47,8 @@ field specifies how they should be combined):
 
 * **External sources:**
 
-  * :bolditalic:`Directly mapped text:`  The source of the text is fields in the Map itself
-  * :bolditalic:`Mapped arguments:`  Text derived from command line parameters passed to
+  * :bolditalic:`Map values:`  The source of the text is fields in the Map itself
+  * :bolditalic:`CLI arguments:`  Text derived from command line parameters passed to
     Alyvix Robot
 
 
@@ -62,7 +62,7 @@ field specifies how they should be combined):
 
 If the text is supposed to come from the screen, the pattern is typically to have two separate
 test case objects, one which acquires the text from the screen, and another containing the
-template which inserts it into the GUI object.  Otherwise, only a single test case is necessary.
+template which inserts it into the GUI object.  Otherwise, only a single object is necessary.
 
 To indicate that content in the String field template is not regular text, it must be escaped
 with a pair of curly braces ``{ ... }``.  If you want to insert more than one template, each one
@@ -151,7 +151,7 @@ the text ``Country:  France``.
 
 
 
-.. rubric:: Directly Mapped Text
+.. rubric:: Map values
 
 This option allows you to create a map with a table of values (where each row corresponds to one
 iteration of the loop).  For instance, you could insert three values per row into a table on a
@@ -164,7 +164,7 @@ web page or in a spreadsheet with this :guilabel:`String` field entry:
 
 
 
-.. rubric:: Arguments via the Alyvix Robot -\\-args parameter
+.. rubric:: CLI Arguments via the Alyvix Robot -\\-args parameter
 
 Text can also be inserted from a command line parameter passed to Alyvix Robot.
 

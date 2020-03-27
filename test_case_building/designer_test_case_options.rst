@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 20-02-2020
+:modified: 27-03-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -35,12 +35,13 @@ their type, and what happens if they fail to be detected:
 #. **Detection condition:**  One of the following conditions will be checked at a default
    interval of every ``0.5`` seconds:
 
-    * **Appear:**  Alyvix will continuously try to detect any of the main group components (*image*
-      or *rect*) on screen if it was not already there when the test case started
-    * **AppearDisappear:**  Alyvix will check whether any of the main group components appears,
-      and then also disappears within the timeout limit
-    * **Disappear:**  If any of the main group components was present when the test case started,
-      Alyvix will detect when one is no longer visible
+    * **Appear:**  Alyvix will continuously try to detect if the test case object as a whole
+      (i.e., all of its groups and components) appear simultaneously on screen when that was
+      previously not the case
+    * **AppearDisappear:**  Similarly, Alyvix will check whether all the groups and components
+      in the test case object appear, and then also disappear within the timeout limit
+    * **Disappear:**  If the groups and components of a test case object were initiallypresent,
+      Alyvix will detect when they are no longer visible
 
       .. image:: images/appeardisappear_h120.png
          :class: image-boxshadow
@@ -48,6 +49,6 @@ their type, and what happens if they fail to be detected:
 
 #. **Timeout:**  All the components will be regularly checked with the chosen detection condition
    until this number of seconds has elapsed.
-#. **Break:**  If this option is checked, then a timeout will cause the test case to fail, and
-   if it is part of a series of test cases, then the entire series will fail.  If the option is
-   not checked, it will report the failure, but continue with the next test cases in the series.
+#. **Break:**  If this option is checked, then timing out without the selected detection condition
+   having matched will cause the test case object to fail.  If the option is not checked, the
+   failure will simply be reported.
