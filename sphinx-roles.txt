@@ -32,6 +32,11 @@
    <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">
    Base64 <i class="fa fa-small fa-external-link"></i></a>
 
+.. |pivotal-link| raw:: html
+
+   <a href="https://www.pivotaltracker.com/n/projects/1533621" target="_blank">
+   https://www.pivotaltracker.com/n/projects/1533621 <i class="fa fa-small fa-external-link"></i></a>
+
 .. |nagios-pivotal-link| raw:: html
 
    <a href="https://www.pivotaltracker.com/n/projects/1533621/stories/170892854" target="_blank">
@@ -80,6 +85,10 @@
 
    <i class="fa fa-med fa-white fa-caret-right" style="vertical-align: top;"></i>
 
+.. |halftab| raw:: html
+
+   &nbsp; &nbsp;
+
 .. |tab| raw:: html
 
    &nbsp; &nbsp; &nbsp;
@@ -99,7 +108,14 @@
 .. |runblue| image:: /pictures/button_run_blue.png
    :class: inline-image-higher button-boxshadow
 
+.. |pivotal| image:: pictures/pt_logo.png
+   :height: 38px
+   :width: 38px
+   :alt: The logo for Pivotal Tracker.
+   :target: https://www.pivotaltracker.com/n/projects/1533621
+
 .. |copy|   unicode:: U+000A9
+
 .. |trade|  unicode:: U+000AE .. REGISTERED SIGN
 
 .. role:: rawhtml(raw)

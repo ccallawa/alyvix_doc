@@ -18,15 +18,13 @@
    test_case_building.rst
    test_case_execution.rst
    test_case_data_format.rst
+   videos_and_tutorials.rst
    glossary.rst
+   release_notes.rst
    get_in_touch.rst
-
-..   tutorials.rst
 
 |
 
-.. .. image:: pictures/alyvix_icon_150x160.png
-      :align: center
 
 
 .. _home:

@@ -1,30 +1,37 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 25-03-2020
+:modified: 30-03-2020
 :tags: how-to
 :lang: en-US
 :translation: false
 :status: updating
 
-.. include:: ../sphinx-roles.txt
+.. include:: sphinx-roles.txt
 
 
 
-.. _install_release_notes_top:
+.. _release_notes_top:
 
-=============
+#############
 Release Notes
-=============
+#############
 
-Below you can find the release notes for Alyvix in reverse chronological order.
+We work with **Agile methods**.  If you'd like to see what we're up to right now, you can
+read about the **Alyvix stories** currently under development:
+
+|pivotal| |halftab| |pivotal-link|
+
+The release notes below show all new features, bug fixes, and security patches
+contained in each release in reverse chronological order.  The version number sequence
+assigned to each Alyvix release follows the |semantic-versioning-link| initiative.
 
 
 
 .. _install_release_v3_0_2:
 
--------------
+=============
 Version 3.0.2
--------------
+=============
 
 **Release date:  March 25th, 2020**
 
@@ -46,9 +53,9 @@ system requirements for Alyvix, you can
 
 .. _install_release_v3_0_1:
 
--------------
+=============
 Version 3.0.1
--------------
+=============
 
 **Release date:  March 11th, 2020**
 
@@ -77,9 +84,9 @@ system requirements for Alyvix, you can
 
 .. _install_release_v3_0_0:
 
--------------
+=============
 Version 3.0.0
--------------
+=============
 
 **Release date:  February 3rd, 2020**
 

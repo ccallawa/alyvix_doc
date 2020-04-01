@@ -1,10 +1,10 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 07-02-2020
+:modified: 30-03-2020
 :tags: contact
 :lang: en-US
 :translation: false
-:status: final
+:status: draft
 
 .. include:: sphinx-roles.txt
 
@@ -15,18 +15,35 @@
 Get in Touch
 ############
 
-Find out how to :ref:`contact us <getting_in_touch_contact_us>`.
-
-Or you can see what :ref:`we're developing <getting_in_touch_roadmap_top>`
-and have recently accomplished.
-
+You can take a look at our
+:ref:`development roadmap and release notes <release_notes_top>`
+to see what we've accomplished recently, or reach us directly with either of the following:
 
 
+.. _getting_in_touch_support_email:
 
-.. toctree::
-   :maxdepth: 2
-   :name: toc_get_in_touch
-   :hidden:
+.. topic:: Support Email
 
-   get_in_touch/contact_us.rst
-   get_in_touch/roadmap.rst
+   .. rst-class:: fa fa-at fa-blue
+
+      \
+
+Would you like to **get in touch with the Alyvix team**?
+Write us an **email if you'd like custom support**, further clarifications, etc.
+Please, don't be shy: just ask if you need any help.  **We love questions and feedback**.
+
+    info@alyvix.com
+
+.. _getting_in_touch_slack_channel:
+
+.. topic:: Slack Channel
+
+   .. image:: pictures/slack_logo.png
+      :height: 38px
+      :width: 38px
+      :alt: The logo for Slack.
+
+**Chat directly with other Alyvix users** to ask for support or to share your solutions: join the
+Alyvix Slack channel.  Send a request to info@alyvix.com to get your **Alyvix Slack credentials**.
+
+    https://alyvix.slack.com/
