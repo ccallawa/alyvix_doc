@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 27-03-2020
+:modified: 02-04-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -22,8 +22,8 @@ sequence of keystrokes, one at a time, to the window in focus when the test case
    :class: image-boxshadow
    :alt: The mouse action selection dropdown.
 
-The text that is inserted may come from multiple sources (in which case the :guilabel:`String`
-field specifies how they should be combined):
+The text that is inserted may come from multiple sources, in which case the :guilabel:`String`
+field specifies how they should be combined (examples can be found in the next section below):
 
 * **Manually specified on the test case object itself:**
 
@@ -40,8 +40,8 @@ field specifies how they should be combined):
 
   * :bolditalic:`Full text:`  The source is the entire text found in a region of interest
     specified by the earlier test case object
-  * :bolditalic:`Grouped, extracted text:`  The text is derived from a *grouped regular expression*
-    operating over the string scraped from a region of interest
+  * :bolditalic:`Grouping with Regular Expressions:`  Insert substrings by applying a
+    *grouped regular expression* to the string scraped from a region of interest
   * :bolditalic:`Mapping extracted text:`  Given a Map, extract text from a region of interest,
     pass it to the map, and insert the map's output value as specified by a later test case object
 
@@ -51,32 +51,32 @@ field specifies how they should be combined):
   * :bolditalic:`CLI arguments:`  Text derived from command line parameters passed to
     Alyvix Robot
 
+The extraction and mapping functions have a common purpose:  to substitute text from source
+string into a template string, and then send the resulting string to the application.
+
+If the text is supposed to come from the screen, the pattern is typically to have two separate
+test case objects, one which acquires the text from the screen, and another containing the
+template which inserts it into the GUI object.  Otherwise, only a single object is necessary.
+
 
 
 .. _alyvix_designer_options_strings_functions:
 
 .. topic:: Usage Examples
 
-   The extraction and mapping functions have a common purpose:  to substitute text from source
-   string into a template string, and then send the resulting string to the application.
+   To indicate that content in the String field template is not regular text, it must be escaped
+   with a pair of curly braces ``{ ... }``.  If you want to insert more than one template, each one
+   must go in its own separate set of curly braces.
 
-If the text is supposed to come from the screen, the pattern is typically to have two separate
-test case objects, one which acquires the text from the screen, and another containing the
-template which inserts it into the GUI object.  Otherwise, only a single object is necessary.
+.. note::
 
-To indicate that content in the String field template is not regular text, it must be escaped
-with a pair of curly braces ``{ ... }``.  If you want to insert more than one template, each one
-must go in its own separate set of curly braces.
+   For the purposes of scraping and mapping text, matching is applied in a case insensitive
+   fashion.  However, the result is stored (and later retrieved) with the case of the original
+   characters.
 
-The following examples provide a quick illustration of how these string functions can be applied.
+The following examples provide an illustration of how these string functions can be applied.
 
 |
-
-.. todo::
-
-   * CC:  Scraping/Mapping is case insensitive by default in terms of matching, but not in terms
-     of inserting the text later
-   * CC:  These should be linked to tutorials when available and any other relevant info sections
 
 
 
@@ -85,9 +85,11 @@ The following examples provide a quick illustration of how these string function
 
 Regular letters and numbers, along with most punctuation and special characters can be inserted
 in the :guilabel:`String` field normally.  However, some special characters, editing keys, and
-key combinations must be escaped.  In the following example, a test case object with an
-Excel\ |trade| spreadsheet as a target would put the words *First*, *Second* and *Third* in three
-adjacent columns.
+key combinations must be escaped.  The :ref:`table below <alyvix_designer_options_strings_special>`
+lists an extensive set of special keys.
+
+In the following example, a test case object with an Excel\ |trade| spreadsheet as a target would
+put the words "First", "Second" and "Third" in three adjacent columns.
 
 .. code-block::
    :class: short-code-block
@@ -99,11 +101,11 @@ adjacent columns.
 .. rubric:: Full Text
 
 When a text component matches an area onscreen, all of the text in its Region of Interest is
-scraped and stored.  This text can be used by later scripting nodes to insert strings into GUI
-fields.  The entire text can be inserted using the syntax ``{<nodename>.text}``.  So if a
-test case object named ``temperature_read`` reads the string ``37 degrees`` in the application,
-it can be copied to another GUI field by putting the following in the :guilabel:`String` field
-of a later scripting node:
+scraped and stored.  This text can be used by the test case objects in later scripting nodes to
+insert strings into GUI fields.  The entire text can be inserted using the syntax
+``{<test-case-object-name>.text}``.  So if a test case object named ``temperature_read`` reads
+the string ``37 degrees`` in the application, it can be copied to another GUI field by putting
+the following expression in the :guilabel:`String` field of a later scripting node:
 
 .. code-block::
    :class: short-code-block
@@ -112,20 +114,17 @@ of a later scripting node:
 
 
 
-.. rubric:: Grouped, Extracted Text
+.. rubric:: Grouping with Regular Expressions
 
-More complex regular expressions can be used to select groups of subexpressions within the
-scraped text.  These subexpressions can then be embedded within a new string template (even
-changing their order) by using the numbers of their original positions as follows:
+More complex regular expressions can be used to select groups of subexpressions
+(like |python-regex-grouping|) within the scraped text.  These subexpressions can then be
+embedded within a new string template (even changing their relative order) by using the numbers
+of their original positions as follows:
 
 .. code-block::
    :class: short-code-block
 
    {2} found near {1}
-
-.. todo::
-
-   * CC: Be sure to link to the (:ref:`map interface section <alyvix_editor_interface_maps>`) when ready
 
 
 
@@ -136,9 +135,9 @@ changing their order) by using the numbers of their original positions as follow
 Given a map with pairs of inputs to match and their corresponding output values, you can match text
 scraped from a previous test case and insert the map's output value for that text.  On the first
 test case object's component (which must be of type text), the type must be set to :guilabel:`MAP`
-and the map's name must be chosen in the dropdown :guilabel:`Map`.  In the :guilabel:`String`
-field on the later test case object, the map's output value can be retrieved with the template
-``{<nodename>.extract}``.
+and the :ref:`map's name <alyvix_editor_interface_maps>` must be chosen in the dropdown
+:guilabel:`Map`.  In the :guilabel:`String` field on the later test case object, the map's output
+value can be retrieved with the template ``{<test-case-object-name>.extract}``.
 
 For instance, if the string ``Paris`` from the test case object ``city`` is read from the screen,
 and the selected map contains the pair ``Paris, France`` then the following template will generate

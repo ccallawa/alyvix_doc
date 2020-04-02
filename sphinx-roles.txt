@@ -24,8 +24,13 @@
 
 .. |python-regex-lib| raw:: html
 
-   <a href="https://docs.python.org/3/library/re.html" target="_blank">
+   <a href="https://docs.python.org/3.7/library/re.html" target="_blank">
    Python Regular Expression library <i class="fa fa-small fa-external-link"></i></a>
+
+.. |python-regex-grouping| raw:: html
+
+   <a href="https://docs.python.org/3.7/howto/regex.html#grouping" target="_blank">
+   Python's grouping mechanism <i class="fa fa-small fa-external-link"></i></a>
 
 .. |base64-link| raw:: html
 

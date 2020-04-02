@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 27-03-2020
+:modified: 02-04-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -158,16 +158,15 @@ one of these 3 methods:
     "last day", etc.)
 
 
-.. The explanation below is wrong.  The scraped text will be mapped with the most similar
-   key of the selected map, and then extracted value is the key-related value defined in the map.
-
 .. _alyvix_designer_options_components_text_map:
 .. topic:: **Map**
 
    When *Map* mode is selected, the scraped text will be mapped to the most similar key in
-   the selected Map (the Map can be chosen in the
-   :ref:`map interface in Editor <alyvix_editor_interface_top>`).  The extracted value will
-   be the map value associated with that key.
+   the chosen Map (the Map can be chosen in the
+   :ref:`map interface in Editor <alyvix_editor_interface_top>`), and the value that corresponds
+   to that key in the map will be both returned and cached in the test case object.  If the
+   ``{<object>.extract}`` :ref:`pattern is used later <alyvix_designer_options_strings_map_extract>`
+   in the String field of another test case, this cached value will be returned.
 
 .. image:: images/ad_type_submenu_text_map_sized.png
    :class: image-boxshadow
