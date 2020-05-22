@@ -147,7 +147,7 @@ list.    It could be a lot prettier with CSS improvements.
 
 .. rubric:: Containers -> Columns
 
-You can also create a true column format by combining the ``.. container::`` role with the
+You can also create a true text column format by combining the ``.. container::`` role with the
 appropriate CSS.  (HTML5 column mode is also possible, but content automatically flows from the
 bottom of one column to the top of the other.)
 
@@ -196,6 +196,9 @@ paragraph not in column format will be used to fill out the bottom of the right 
 
 |
 
+A column-styled menu of icons or images can be made by using a
+:ref:`table with no borders <style_columns_via_tables>`.
+
 
 
 .. _style_break_space:
@@ -218,7 +221,7 @@ Line Breaks and Vertical Space
 You can also make some empty vertical space just using the pipe character by itself.
 
 .. code-block::
-   :class: short-code-block
+   :class: short-code-block nocopy
 
    |
 
@@ -540,6 +543,25 @@ can be specified if you use the full table environment:  align (left, center, ri
       +-------------+---------------------+
       | Green       | Leaves on the trees |
       +-------------+---------------------+
+
+
+.. _style_columns_via_tables:
+
+Columns via a table having a *class* that removes borders
+
+.. table::
+   :widths: 33 33 33
+   :class: table-empty-no-borders
+
+   +---------+---------+---------+
+   | Item A1 | Item B1 | Item C1 |
+   +---------+---------+---------+
+   | Item A2 | Item B2 | Item C2 |
+   +---------+---------+---------+
+   | Item A3 | Item B3 | Item C3 |
+   +---------+---------+---------+
+
+|
 
 
 

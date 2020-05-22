@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 20-02-2020
+:modified: 22-05-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -17,9 +17,9 @@ Designer: Interface Overview
 
 The Alyvix Designer interface consists of two elements:
 
-* A screen capture image to use for creating and resizing **selections**
+* A screen capture image to use for creating and resizing :glossdef:`selections`
   :rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
-  and **regions of interest**
+  and :glossdef:`regions of interest`
   :rawhtml:`<a href="../glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle"></i></a>`
   around visual elements
 * A panel for indicating how those visual elements should be interpreted and interacted with
@@ -45,7 +45,7 @@ purple crosshairs that track the mouse, and the reminder
 .. tip::  Having a second monitor will enable you to mark selections and regions of interest with
    Alyvix on one screen, while the second screen can still be used for other applications.
 
-Each screen capture is associated with a **test case object**
+Each screen capture is associated with a :glossdef:`test case object`
 :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`,
 which can recognize and interact with up to three groups of visual elements.  The color of the
 crosshairs indicates whether you are working with the first (purple/red), second (green), or
@@ -66,10 +66,10 @@ no groups (or components) have yet been defined.  The principle interface elemen
    to uniquely identify this test case object in Alyvix Selector and Editor
 #. **Test case object** :ref:`options <alyvix_designer_options_test_case_object>`, which affect
    all visual elements in the component tree as a whole
-#. The **test case object** :ref:`component tree <alyvix_designer_component_tree_top>`
+#. The :glossdef:`component tree`
    :rawhtml:`<a href="../glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
-   subpanel that shows all defined selections and regions of interest that can be interacted with
-   along with their type (image, region or text)
+   :ref:`subpanel <alyvix_designer_component_tree_top>`, showing all defined selections and regions
+   of interest that can be interacted with along with their type (image, region or text)
 #. **Component** :ref:`options <alyvix_designer_options_components>`, which depend on the type
    you assign to the currently selected component in the component tree
 #. **Interface controls** that allow you to either

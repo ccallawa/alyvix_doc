@@ -98,6 +98,10 @@
 
    &nbsp; &nbsp; &nbsp;
 
+.. |br| raw:: html
+
+   <br><br>
+
 .. |accordion-entry| raw:: html
 
    <button class="accordion">
@@ -126,11 +130,17 @@
 .. role:: rawhtml(raw)
    :format: html
 
+.. role:: glossdef
+   :class: glossdef
+
 .. role:: warn
    :class: redbold
 
 .. role:: hint
-   :class: greybold
+   :class: lightgrey
+
+.. role:: shadow
+   :class: medgrey
 
 .. role:: caps
    :class: smallcaps
@@ -158,6 +168,12 @@
 
 .. role:: bolditalic
    :class: bolditalic
+
+.. role:: tablecell-name
+   :class: tablecell-name
+
+.. role:: tablecell-type
+   :class: tablecell-type
 
 .. |run| replace:: :greyblock:`RUN`
 .. |if-true| replace:: :greyblock:`IF TRUE`

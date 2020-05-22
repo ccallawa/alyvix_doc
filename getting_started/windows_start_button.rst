@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 04-02-2020
+:modified: 22-05-2020
 :tags: getting, started, beginner, windows, start, editor
 :lang: en-US
 :translation: false
@@ -17,6 +17,12 @@ Example:  Opening the Windows Start Menu
 
 This short task will accomplish something simple, yet will show you the potential of
 using Alyvix.
+
+
+.. note::  You can find video versions of this tutorial
+
+Tutorials similar to this one are also available in
+:ref:`video format <videos_and_tutorials_top>`.
 
 .. rst-class:: bignums
 
@@ -37,7 +43,7 @@ using Alyvix.
 
 #. Click on the :wbutton:`DELAY [SEC]  0  ADD` button at the bottom to trigger a screen capture.
 
-#. Next, use the mouse to create a **selection**
+#. Next, use the mouse to create a :glossdef:`selection`
    :rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
    around the Windows Start button by *left-clicking* and *dragging* so that it looks similar to
    this screenshot (if you don't get it quite right the first time, just resize any of the edges
@@ -66,7 +72,7 @@ using Alyvix.
    Editor with the option ``-f start-test``, :ref:`the resulting file <test_case_data_format_top>`
    will be called :file:`start-test.alyvix`.
 
-#. In the Selector panel at the bottom left, change the name of our **test case object**
+#. In the Selector panel at the bottom left, change the name of our :glossdef:`test case object`
    :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
    from the default name :guilabel:`VisualObject1` to a new one like :guilabel:`PressStartButton`:
 

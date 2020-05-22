@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 02-04-2020
+:modified: 22-05-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -57,6 +57,9 @@ URL as an argument.  To do this, select **Run** and set its two parameters:
   application in the file system, or else type the full path for an executable file in your system
 * **Arguments:**  Here you can enter the arguments the application expects when
   it starts up
+
+Note that if you launch an application with the **Run** option, you can still recognize child
+components in that application's initial interface in the same test case object.
 
 The **Kill** option instead allows you to select a currently running process to terminate, or
 type one in if it's not currently running:

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 26-03-2020
+:modified: 22-05-2020
 :tags: designer, component, tree
 :lang: en-US
 :translation: false
@@ -22,14 +22,17 @@ like a nearby button.
 
 The *component tree* is composed of three types of components:
 
-- A :ref:`Root element <glossary_root>`, which holds a captured screen to serve as a basis for
-  visually recognizing parts of the screen.
-- :ref:`Groups <glossary_group>`, which indicate the principal component that needs to be
-  recognized.  A maximum of three groups can be created per :ref:`object <glossary_test_case_object>`.
-- :ref:`Components <glossary_component>` are the additional areas that can be used to confirm what
-  is being recognized (especially when there are multiple similar target objects), such as a text
-  label next to a button, or when the action can be on a separate GUI object, like a slider.  A
-  maximum of four components can be assigned to each group.
+- A :glossdef:`root element` :rawhtml:`<a href="../glossary.html#glossary-root"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+  which holds a captured screen to serve as a basis for visually recognizing parts of the screen.
+- :glossdef:`Groups` :rawhtml:`<a href="../glossary.html#glossary-group"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+  which indicate the principal component that needs to be recognized.  A maximum of three groups
+  can be created per :glossdef:`test case object`
+  :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`.
+- :glossdef:`Components` :rawhtml:`<a href="../glossary.html#glossary-component"><i class="fa fa-tiny fa-question-circle"></i></a>`
+  are the additional areas that can be used to confirm what is being recognized (especially when
+  there are multiple similar target objects), such as a text label next to a button, or when the
+  action can be on a separate GUI object, like a slider.  A maximum of four components can be
+  assigned to each group.
 
 
 
@@ -127,7 +130,8 @@ a component in that group.
    must be detected before any action(s) will be taken.
 
 In addition to manually selecting the bounds of the region, you can right-click on any point on
-the screen and Alyvix will try to automatically determine (:ref:`autocontour <glossary_autocontour>`)
+the screen and Alyvix will try to automatically determine
+:glossdef:`autocontour` :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`
 the appropriate selection.  You can also resize the bounding edges of any capture region by
 dragging them with the left mouse button.
 

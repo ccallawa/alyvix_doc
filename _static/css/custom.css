@@ -234,14 +234,21 @@ code.kbd, .rst-content tt.kbd, kbd {
     padding: 0 0.3em;
     text-shadow: 0 1px 0 #fff;
 }
+.glossdef {
+    font-style: italic;
+    font-weight: bold;
+}
 .redbold {  /* An inline warning rather than a box */
     color: red;
     font-weight: bold;
     font-variant: small-caps;
     text-decoration: underline;
 }
-.greybold {  /* An inline light gray, e.g. for hints */
+.lightgrey {  /* An inline light gray, e.g. for hints */
     color: lightgray;
+}
+.medgrey {  /* An inline light gray, e.g. for hints */
+    color: #BBB;
 }
 .smallcaps {  /* For inline small caps */
     font-variant: small-caps;
@@ -348,6 +355,38 @@ table.docutils tbody tr:first-child td {
 }
 table.docutils tbody tr:first-child td p {
     color: white;
+}
+
+/* In case we eventually need a column-based NetEye style */
+table.table-empty-no-borders {
+    border: none !important;
+    padding: 20px !important;
+}
+table.table-empty-no-borders tbody tr {
+    padding: 40px !important;
+    margin: 40px !important;
+}
+table.table-empty-no-borders tbody tr td {
+    background-color: white !important;
+    border: none !important;
+    padding: 40px !important;
+    text-align: center !important;
+}
+table.table-empty-no-borders tbody tr:first-child td {
+    text-align: center !important;
+    background-color: white !important;
+}
+table.table-empty-no-borders tbody tr:first-child td p {
+    color: black !important;
+}
+.tablecell-name {
+   style: bold;
+   color: #222;
+   font-size: 16pt;
+}
+.tablecell-type {
+   color: #666;
+   font-size: 12pt;
 }
 
 

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-03-2020
-:modified: 30-03-2020
+:modified: 21-05-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -16,50 +16,39 @@
 Videos and Tutorials
 ####################
 
-This page contains all videos and tutorials about Alyvix 3, organized by type.
+This page presents all Alylvix 3 videos and tutorials, classified by task type.
+
+.. rst-class:: bignums-xxl
+
+#. :ref:`Basic Concepts <basic_concepts_tutorials_top>` tutorials that show how to use the
+   Alyvix interface
+
+   * A minimal test case :shadow:`(video #1 - 2'25")`
+   * Extending the above example to check the results :shadow:`(video #2 - 4'54")`
+   * A multi-step web form example :shadow:`(video #3 - 11'04")`
+
+#. :ref:`Production Systems <production_systems_tutorials_top>` tutorials describing techniques
+   based on real world production examples
+
+   * Secure RDC Login :shadow:`(video #5 - 4'31")`
+   * Secure Citrix Login :shadow:`(video #7 - 5'26")`
+
+#. :ref:`Operations <operations_tutorials_top>` tutorials with in-depth explanations of
+   specific interface elements
+
+   * Image Components :shadow:`(video #4 - 2'20")`
+   * Rectangle Components :shadow:`(video #6 - 3'28")`
+   * Text Components :shadow:`(video #8 - 5'15")`
+   * Component (Mouse) Actions :shadow:`(video #9 - 5'")`
 
 
 
-.. _videos_and_tutorials_general:
 
-====================================================
-Demonstrations of Alyvix's GUI with Sample Workflows
-====================================================
+.. toctree::
+   :maxdepth: 2
+   :name: toc_designer
+   :hidden:
 
-.. topic:: 2-Minute Video
-
-   This video gives you the quickest tour possible of the main features of Alyvix, including
-   how to:
-
-   * Build a bot to click a button on a web page
-   * Make the bot highlight text on the page
-   * Run the bot and watch it navigate
-   * Measure how long it took
-
-   .. youtube:: fU4d0DY-t0s
-
-
-
-.. topic:: 5-Minute Video
-
-   This more complete video provides further details and extends the task in the previous video to:
-
-   * Build a bot to navigate to and use a service on a web page
-   * Make the bot check that the service is actually working
-   * Run the bot and measure how long it took
-
-   .. youtube:: UlEjwDIpV1w
-
-
-
-.. topic:: 10-Minute Video
-
-   This in-depth video contains a complex example requiring many steps to:
-
-   * Build a bot to navigate across multiple web pages
-   * Have the bot recognize various component types
-   * Fill in a field in a web form, and submit that form to a server as a search
-   * Check the results of that search to ensure the service is working
-   * Measure availability and elapsed time at multiple points
-
-   .. youtube:: QJE-O7d8jJQ
+   videos_and_tutorials/basic_concept_tutorials.rst
+   videos_and_tutorials/production_systems_tutorials.rst
+   videos_and_tutorials/operations_tutorials.rst

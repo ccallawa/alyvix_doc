@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 04-02-2020
+:modified: 22-05-2020
 :tags: getting, started, beginner, windows, settings
 :lang: en-US
 :translation: false
@@ -15,7 +15,7 @@
 Example:  Opening Windows Settings from the Start Menu
 ******************************************************
 
-In the :ref:`previous example <getting_started_example_start>` we created an Alyvix **test case**
+In the :ref:`previous example <getting_started_example_start>` we created an Alyvix :glossdef:`test case`
 :rawhtml:`<a href="../glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`
 consisting of a single test case object.
 Most of the time though, you'll need to chain together multiple test case objects to synthesize
@@ -45,7 +45,7 @@ opening the Windows Settings app.
    need to click on the Start button yourself in that time) before Alyvix captures the screen.
 
 #. After the screen flashes white, press :kbd:`Escape` to return to screen capture mode, and then
-   *right click* on the *Settings* icon at the left side of the Start Menu.  This will **autocontour**
+   *right click* on the *Settings* icon at the left side of the Start Menu.  This will :glossdef:`autocontour`
    :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`
    the icon.
 

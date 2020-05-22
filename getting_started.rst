@@ -17,9 +17,9 @@ Getting Started
 
 Before using Alyvix, you'll first need to :ref:`take a minute to install it <install_release_top>`.
 
-For the examples in this section, you'll need to run the Windows Command Prompt
-(**Start > Windows System > Command Prompt**) and switch to the directory where you want to
-keep your test cases, for example:
+To follow along with the examples in this section on your own system, you'll need to run the
+Windows Command Prompt (**Start > Windows System > Command Prompt**) and switch to the directory
+where you want to keep your test cases, for example:
 
 .. code-block:: doscon
    :class: short-code-block
@@ -41,6 +41,10 @@ how the Alyvix interface works.
    * Build a second test case object, where the second depends on the results of the first
    * Add the new step to the workflow from the previous example
    * Execute the test cases, checking that they work together
+
+
+.. note::  You can find further examples, conceptual descriptions, and use cases on the
+           :ref:`Video and Tutorial <videos_and_tutorials_top>` page.
 
 
 .. toctree::

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 27-03-2020
+:modified: 22-05-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -22,7 +22,7 @@ a whole:
    :class: image-boxshadow
    :alt: The test case options.
 
-The **Object name** is the reference name of a particular **test case object**
+The **Object name** is the reference name of a particular :glossdef:`test case object`
 :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
 within a given test case.  A test case typically contains multiple test case objects which are
 used when building :ref:`scripts <alyvix_editor_scripting_panel_top>`, and thus it needs a unique,

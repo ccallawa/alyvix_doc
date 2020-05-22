@@ -19,17 +19,20 @@ When you build a test case, you're creating a set of visual templates that can b
 your app interfaces in real time, allowing Alyvix to interact with those interfaces just like a
 person would.
 
-.. Could talk about these here:
+
+.. todo::
+
    * Building TCs is the most important Alyvix task
    * Building TCs is done frequently
    * So it's worth investing time to learn it
    * TCs are made up of one or more TCOs (moving the glossary link up to here)
 
+
 There are three main tools for building test cases:
 
 .. rst-class:: bignums-xl
 
-#. **Alyvix Designer:**  Define individual *test case objects*
+#. **Alyvix Designer:**  Define individual :glossdef:`test case objects`
    :rawhtml:`<a href="glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
    to be dynamically matched against the visual components of your app's interface, and assign
    GUI actions that are carried out when those matches are detected
@@ -63,8 +66,8 @@ They inherit the permissions of the shell they were launched from.
    to apply when those templates are recognized later in a live interaction with an
    application.
 
-Designer will save the set of templates, called the component tree
-:rawhtml:`<a href="glossary.html#glossary_component_tree"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+Designer will save the set of templates, called the :glossdef:`component tree`
+:rawhtml:`<a href="glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`,
 as a single test case object, which you can then use as a building block to compose more
 complicated objects and scripts using Alyvix Editor.
 
