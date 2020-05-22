@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 07-02-2020
+:modified: 22-05-2020
 :tags: index
 :lang: en-US
 :translation: false
@@ -35,17 +35,12 @@ Alyvix and Visual Monitoring
 
 Welcome to the official Guide for **Alyvix 3.0.2**.
 
-`Alyvix <https://alyvix.com/>`_ is a **synthetic monitoring system based on computer vision
-technology**.  Alyvix simulates real users whose actions you can define, without being hardwired
-to any particular application engine.
+`Alyvix <https://alyvix.com/>`_ lets you build end-user bots that visually interact with any
+Windows application like ERPs, or any web app in your favorite browser.
 
-- Alyvix *automates any application*, interacting with GUIs exactly as a human would.
-- Alyvix *measures all UI transactions* and sends the resulting performance data to your
-  preferred monitoring system or graphing application.
-- Alyvix *creates HTML-based reports* containing fine-grained details of each test case step.
-
-Alyvix provides **guarantees on user perceived quality of IT services**, certifying that users
-are able to successfully complete a given application task.
+Run and measure business-critical workflows like a human would, but continuously.  Alyvix records
+the click-to-appearance responsiveness of each transaction so you can automatically report
+IT service quality to support technical and business actions.
 
 
 
@@ -62,14 +57,12 @@ Then if you want to just dive in and get something done with Alyvix, read the
 :ref:`Getting Started <getting_started_top>` page.  It will get you up and running
 and prepare you to implement Alyvix in your environment.
 
-.. If you want to understand the capabilities of Alyvix more in depth, the
-   :ref:`Alyvix Concepts <concepts_top>` page is the place to start.
+For more extended, video-based example tutorials on the basics of using Alyvix, real-world use
+cases you might use in production, and operations-oriented explanations of Alyvix features, take
+a look at the :ref:`Videos and Tutorials <videos_and_tutorials_top>` page.
 
-.. For more extended examples of specific, real-world use cases that you can build upon to implement
-   more sophisticated or targeted scenarios, take a look at the :ref:`Tutorials <tutorials_top>` page.
-
-The sections on test cases contain detailed information about using the various Alyvix interfaces
-to create and execute them.
+The sections on test case building and execution contain more in-depth details and explanations
+about using Alyvix Editor and Alyvix Robot to create and execute test cases.
 
 For information on how to get in touch with us, as well as with the Alyvix community, the
 :ref:`Getting in Touch <getting_in_touch_top>` page has everything you need.  If there's anything

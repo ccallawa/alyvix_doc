@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 26-02-2020
+:modified: 22-05-2020
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -108,8 +108,8 @@ automatically detect that your system is running Python 3 and will install Alyvi
 placing all executables in the directory
 :file:`C:\\Python37\\Lib\\site-packages\\alyvix\\`.
 
-As with the installer, this command prompt must also be **started in Adminstrator mode**.  Only
-this single step is required:
+The Alyvix installer is launched from the command prompt that, like the Python installer, must be
+**started in Adminstrator mode**.  Only this single step is required:
 
 .. rst-class:: bignums
 
@@ -121,7 +121,7 @@ this single step is required:
 
       C:\> pip install alyvix
 
-You should place your Alyvix test cases in a separate data directory.
+We recommend you place your Alyvix test cases in a separate data directory.
 
 |
 
@@ -255,7 +255,7 @@ remove them at **System Properties > Environment Variables > System Variables > 
 Installation Troubleshooting
 ============================
 
-Below are some potential installation problems.
+Below are some potential installation problems and their solutions.
 
 |accordion-entry|
 |right-icon-white| "Python" command does nothing or launches Microsoft Store on Windows 10

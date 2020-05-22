@@ -36,15 +36,16 @@ how the Alyvix interface works.
    * Build a simple test case that looks for and clicks on the Windows Start button
    * Run the test case, so that Alyvix actually opens the Window Start Menu
 
-#. Example:  Open the Start Menu, :ref:`then the Settings app immediately afterwards <getting_started_example_settings>`
+#. Example:  Open the Start Menu, then the :ref:`Settings app <getting_started_example_settings>`
+   immediately afterwards
 
    * Build a second test case object, where the second depends on the results of the first
    * Add the new step to the workflow from the previous example
    * Execute the test cases, checking that they work together
 
 
-.. note::  You can find further examples, conceptual descriptions, and use cases on the
-           :ref:`Video and Tutorial <videos_and_tutorials_top>` page.
+.. note::  You can find further examples, conceptual descriptions, and use production-centered
+           cases on the :ref:`Video and Tutorial <videos_and_tutorials_top>` page.
 
 
 .. toctree::
