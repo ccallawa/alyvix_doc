@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 19-02-2020
+:modified: 26-05-2020
 :tags: editor, script, blocks, run, loop
 :lang: en-US
 :translation: false
@@ -15,10 +15,17 @@
 Editor: Script Building
 ***********************
 
-The scripting panel allows you to compose scripts using test case objects drawn from Selector,
-specifying the ordering as well as the mode of use, whether *sequential*, *conditional* or *loop*.
-The scripting panel uses the *blocks-based* approach to scripting, letting you drag and drop
-test case objects, sections and maps, and then reorder and edit them.
+The scripting panel allows you to compose :glossdef:`scripts`
+:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
+using :glossdef:`test case objects`
+:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+drawn from Selector, specifying the ordering as well as the mode of use, whether *sequential*,
+*conditional* or *loop*.  The scripting panel uses the *blocks-based* approach to scripting,
+letting you drag and drop test case objects, :glossdef:`sections`
+:rawhtml:`<a href="../glossary.html#glossary-section"><i class="fa fa-tiny fa-question-circle"></i></a>`
+and :glossdef:`maps`
+:rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+and then reorder and edit them.
 
 When Alyvix Robot executes a script, it will interact with the web browser, other app, or even
 Windows itself, by following your script step by step, executing each test case object in turn.
@@ -126,7 +133,7 @@ illustrates an example script, where each color is explained in the table below.
    +-------------+--------------------------------------------------------------------+
    | Gray        | A disabled test case object of any mode                            |
    +-------------+--------------------------------------------------------------------+
-   | Green       | An enabled test case object pulled from Selector                   |
+   | Light Green | An enabled test case object pulled from Selector                   |
    +-------------+--------------------------------------------------------------------+
    | Yellow      | An enabled test case object from Selector serving as an antecedent |
    +-------------+--------------------------------------------------------------------+

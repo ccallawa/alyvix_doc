@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 22-05-2020
+:modified: 25-05-2020
 :tags: index
 :lang: en-US
 :translation: false
@@ -33,7 +33,8 @@
 Alyvix and Visual Monitoring
 ############################
 
-Welcome to the official Guide for **Alyvix 3.0.2**.
+Welcome to the official guide for **Alyvix 3.0.2**.  (The documentation for version 2 of
+Alyvix `can be found here <https://www.alyvix.com/v2/learn/>`_.)
 
 `Alyvix <https://alyvix.com/>`_ lets you build end-user bots that visually interact with any
 Windows application like ERPs, or any web app in your favorite browser.

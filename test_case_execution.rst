@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 26-03-2020
+:modified: 26-05-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -15,15 +15,18 @@
 Test Case Execution
 ###################
 
-Alyvix test cases you have built with Alyvix Editor can be run using Alyvix Robot.  Robot will
-also execute any individual test case objects you have created with Alyvix Designer along with
-Alyvix objects you have set up with Alyvix Selector.
+Alyvix :glossdef:`test cases`
+:rawhtml:`<a href="glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`
+you have built with :ref:`Alyvix Editor <alyvix_editor_interface_top>` can be run using Alyvix
+Robot.  Robot will also execute any individual test case objects you have created with Alyvix
+Designer along with Alyvix objects you have set up with Alyvix Selector.
 
-In a production environment, the typical use case is to create a set of test cases once, and then
-repeatedly run those test cases continuously (ideally as quickly as possible).  Examples include
-monitoring the usability of proprietary clients, streamed applications, and web pages on a remote
-server.  A test case may measure responsiveness every 5 minutes, for instance, and send timing
-and other data to a monitoring system in the output format it expects.
+In a :ref:`production environment<production_systems_tutorials_top>`, the typical use case is to
+create a set of test cases once, and then repeatedly run those test cases continuously (ideally as
+quickly as possible).  Examples include monitoring the usability of proprietary clients, streamed
+applications, and web pages on a remote server.  A test case may measure responsiveness every
+5 minutes, for instance, and send timing and other data to a monitoring system in the output
+format it expects.
 
 Before you can use Alyvix in a production environment, however, you will first need to iteratively
 develop and improve your test cases.  Here human readable output is more important, and accordingly
@@ -109,7 +112,7 @@ The following options are available:
 | -\\-object    | -o    | *<name>* | Supply the Object name(s)                                 |
 +---------------+-------+----------+-----------------------------------------------------------+
 | -\\-verbose   | -v    | *<n>*    | Set the verbosity level for debugging output              |
-|               |       |          | ranging from **0** (min) to **2** (max)                   |
+|               |       |          | ranging from **0** (min, default) to **2** (max)          |
 |               |       |          |                                                           |
 |               |       |          | **0**:  Records start/stop timestamps, state and time     |
 |               |       |          | measures for each object (with measure option enabled)    |
@@ -188,10 +191,10 @@ If it fails instead, the output will appear like this:
    2019/12/12 18:37:51.762: settings FAILED after 10s
    2019/12/12 18:37:51.763: start-test ends FAILED because of settings, taking 10.315s.
 
-If you have enabled the :ref:`break flag <alyvix_designer_options_test_case_object>` in Alyvix
-Selector for a given test case object, then if that test case object fails, no further test case
-objects will be executed.  If it is not set, then the test case object will instead be skipped
-after its timeout has expired.
+If you have enabled the :ref:`break flag <alyvix_designer_options_test_case_object>` in
+:ref:`Alyvix Selector <alyvix_selector_interface_top>` for a given test case object, then if that
+test case object fails, no further test case objects will be executed.  If it is not set, then
+the test case object will instead be skipped after its timeout has expired.
 
 When run from the Windows command prompt, you can access the return value as follows:
 
@@ -287,7 +290,8 @@ Alyvix Cipher for Encryption
 
 You can use a combination of cipher and private key to protect sensitive information such as
 user names and passwords when for instance you need to log in to a login-protected application
-or web site.
+or web site.  The :ref:`Videos and Tutorials <production_systems_tutorials_top>` section provides
+examples of how you can do this using Microsoft's RDC and Citrix.
 
 To encrypt a cipher, supply the text to be encrypted and your private key:
 

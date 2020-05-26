@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 22-05-2020
+:modified: 26-05-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -70,7 +70,9 @@ no groups (or components) have yet been defined.  The principle interface elemen
    :rawhtml:`<a href="../glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
    :ref:`subpanel <alyvix_designer_component_tree_top>`, showing all defined selections and regions
    of interest that can be interacted with along with their type (image, region or text)
-#. **Component** :ref:`options <alyvix_designer_options_components>`, which depend on the type
+#. **Component**
+   :rawhtml:`<a href="../glossary.html#glossary-component"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   :ref:`options <alyvix_designer_options_components>`, which depend on the type
    you assign to the currently selected component in the component tree
 #. **Interface controls** that allow you to either
    :ref:`continue editing on the screen capture, or exit Designer <alyvix_designer_interface_controls>`.
@@ -100,7 +102,8 @@ Selections (and subselections) can be made with the mouse in one of two ways:
 
 * **Manually:**  Hold the left mouse button down to create a selection or subselection (drawing a
   rectangle around the desired area), and then release when done.
-* **Autocontour:**  Right click on a visual element to use Alyvix's visual recognizer to
+* **Autocontour:** :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`
+  Right click on a visual element to use Alyvix's visual recognizer to
   automatically determine the relevant selection or subselection.  Candidate elements can be
   discovered by pressing :kbd:`Space`, and then pressing it a second time to return to the
   standard screen capture.
@@ -116,10 +119,11 @@ After making a selection, you can then make up to 4 subselections within that gr
 positions will be relative to the main selection.  For instance in the example image above, a
 subselection has been made containing the Windows Cortana search box.
 
-Unlike the main selection, a **subselection** consists of two overlapping areas rather than a
-single one.  You can resize the two areas independently, although the smaller box, which is the
-subselection itself, will always remain contained within the larger one, known as the
-**region of interest** (or RoI).
+Unlike the main selection, a :glossdef:`subselection`
+:rawhtml:`<a href="../glossary.html#glossary-subselection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+consists of two overlapping areas rather than a single one.  You can resize the two areas
+independently, although the smaller box, which is the subselection itself, will always remain
+contained within the larger one, known as the **region of interest** (or RoI).
 
 The subselection represents what Alyvix should be looking for, while the region of interest
 represents the space in which it should search for that subselection, relative to the main
@@ -128,19 +132,25 @@ which is useful for example when windows or panels can change size dynamically.
 
 .. tip::
 
-   Making the region of interest wider or taller can be very helpful for GUI elements that "float",
-   such as the window controls when a window is resized.
+   Making the region of interest wider or taller can be very helpful for GUI elements that "float"
+   relative to the anchoring selection, such as the window controls when a window is resized.
 
 In order for a group to be considered *matched*, **ALL** selections and subselections (within their
-respective regions of interest) must match the screen at the same time.
+respective regions of interest) must match the screen at the same time.  In turn, in order for a
+test case object to be considered *matched*, **ALL** of its groups must match the screen at the
+same time.
 
-The following keyboard shortcuts are available:
+When creating components, the following keyboard shortcuts are available:
 
 .. table::
    :widths: 30 20 50
 
    +---------------------------+-----------------+----------------------------------------------------+
    | **Shortcut**              | **Focus is on** | **Resulting Action**                               |
+   +---------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Left Click + Hold`  | <Nothing>       | Create a selection, subselection, or RoI           |
+   +---------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Right Click`        | <Nothing>       | Autocontour the screen element around the pointer  |
    +---------------------------+-----------------+----------------------------------------------------+
    | :kbd:`Right Click`        | RoI Edges       | Push the edge of the RoI under the mouse all the   |
    |                           |                 | way to the border of the screen.                   |
@@ -172,8 +182,8 @@ components within the :ref:`component tree <alyvix_designer_component_tree_top>`
    :alt: Adding a first component in the Alyvix Designer interface
 
 Continuing the example from above, the main selection (the Windows Start button) is automatically
-set as the group element since it was selected first, while the second selection (the Cortana
-search box) is set as a component within the second group.
+set as the group element since it was selected first, while the second area (the Cortana
+search box) is set as the first component (subselection) within that group.
 
 
 

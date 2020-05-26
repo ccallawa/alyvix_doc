@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 20-02-2020
+:modified: 25-05-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -16,8 +16,9 @@ Editor: Interface Overview
 **************************
 
 Alyvix Editor lets you visually create, edit and run complex scripts allowing Alyvix to interact
-with your applications just like a human user would.  Each script consists of multiple test case
-objects, organized as
+with your applications just like a human user would.  Each :glossdef:`script`
+:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
+consists of multiple test case objects, organized as
 :ref:`sequential, conditional and loop commands <alyvix_editor_scripting_node_expressions>`,
 along with :ref:`Sections <alyvix_editor_interface_sections>`
 and :ref:`Maps <alyvix_editor_interface_maps>`.
@@ -45,8 +46,9 @@ This loads the Editor interface, which has the following elements:
 #. The Editor panel, consisting of the
    :ref:`Script Management panel <alyvix_editor_script_mgmt_top>` (left)
    and the :ref:`Scripting panel <alyvix_editor_scripting_panel_top>` (right)
-#. The :ref:`Selector <alyvix_selector_interface_top>` pane, where test case objects can be
-   dragged from and then dropped into the Scripting panel
+#. The :ref:`Selector <alyvix_selector_interface_top>` pane, where :glossdef:`test case objects`
+   :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   can be dragged from and then dropped into the Scripting panel
 #. The :ref:`Designer <alyvix_designer_interface_overview>` pane, which shows the details of
    the currently selected test case object
 
@@ -65,14 +67,18 @@ This loads the Editor interface, which has the following elements:
 .. rst-class:: bignums
 
 #. The :ref:`test case menu <alyvix_editor_interface_menu>` (described below), containing actions
-   for Alyvix Editor and the current test case
+   for Alyvix Editor and the current :glossdef:`test case`
+   :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
 #. The main :ref:`Script Management panel <alyvix_editor_script_mgmt_top>`, used to select
    the principal scripts to be edited
-#. The :ref:`Sections <alyvix_editor_interface_sections>` list, containing  user-defined
-   scripts that can be used as subroutines within any of the principal scripts
-#. The :ref:`Maps <alyvix_editor_interface_maps>` list, containing user-defined maps where a
-   script can be called multiple times, once for each key in the map that is then passed as an
-   argument to the named script
+#. The :ref:`Sections <alyvix_editor_interface_sections>` list, containing user-defined
+   scripts (:glossdef:`sections`
+   :rawhtml:`<a href="../glossary.html#glossary-section"><i class="fa fa-tiny fa-question-circle"></i></a>`)
+   that can be used as subroutines within any of the principal scripts
+#. The :ref:`Maps <alyvix_editor_interface_maps>` list, containing user-defined :glossdef:`maps`
+   :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   where a script can be called multiple times, once for each key in the map that is then passed
+   as an argument to the named script
 #. The scripting mode selector, containing the :guilabel:`Script` tab to
    :ref:`display the currently selected script or map <alyvix_editor_scripting_panel_top>`,
    the :guilabel:`Monitor` tab to
@@ -93,7 +99,7 @@ This loads the Editor interface, which has the following elements:
 
 .. topic::  The Test Case Menu
 
-   The following actions are available from Alyvix Editor's menu:
+   The following actions are available from Editor's menu:
 
 * |runblue| --- Run the current script displayed in the scripting panel (see below)
 * **New** --- Throw away the current test case, replacing it with an empty one
@@ -108,10 +114,10 @@ This loads the Editor interface, which has the following elements:
 
 .. topic::  The Monitor Tab
 
-   When you need to quickly look at the positions of components in a test case object, the
-   fastest way is not to return to editing the test case object in Designer.  As long as you
-   don't need to change anything, you can use the monitor tab to see the screen capture for
-   the currently selected test case object.
+   When you need to quickly just look at the positions of components in a test case object
+   without making any changes, the fastest way isn't to return to editing the test case object
+   in Designer.  Instead you can use the monitor tab to see the screen capture for the currently
+   selected test case object.
 
 .. image:: images/ae_monitor_tab_sized.png
    :class: image-with-border

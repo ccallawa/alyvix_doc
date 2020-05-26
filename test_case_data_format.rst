@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 22-05-2020
+:modified: 26-05-2020
 :tags: test cases, data format
 :lang: en-US
 :translation: false
@@ -15,7 +15,9 @@
 Test Case Data Format
 *********************
 
-Alyvix test cases are stored as JSON files, which are then used by all Alyvix applications.
+Alyvix :glossdef:`test cases`
+:rawhtml:`<a href="glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`
+are stored as JSON files, which are then used by all Alyvix applications.
 Alyvix files represent the unique mechanism for interchange between Alyvix modules, and each
 file is self-contained, without any external dependencies.
 
@@ -27,9 +29,10 @@ file is self-contained, without any external dependencies.
 Test Case Files
 ===============
 
-Each time you exit Designer or Selector by pressing the :bbutton:`OK` button, or save an object
-in Editor, the JSON object representing the test case is saved in the current directory under
-the file name:
+Each time you exit :ref:`Designer <alyvix_designer_interface_overview>` or
+:ref:`Selector <alyvix_selector_interface_top>` by pressing the :bbutton:`OK` button, or save
+an object in :ref:`Editor <alyvix_editor_interface_top>`, the JSON object representing the test
+case is saved in the current directory under the file name:
 
 :file:`<filename>.alyvix`
 
@@ -49,7 +52,7 @@ For example:
 .. note::
 
    This file is not produced when a test case is executed in Editor via |runblue|, only when
-   executed directly from Robot.
+   executed directly from Alyvix Robot.
 
 
 
@@ -144,14 +147,18 @@ The individual sections of the JSON structure are explained below.
    .. rst-class:: bignums
       :class: backdarkbeige
 
-   #. :bolditalic:`maps` **---** An ordered set of values that a script can loop over, for
+   #. :bolditalic:`maps`
+      :rawhtml:`<a href="glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`
+      **---** An ordered set of values that a script can loop over, for
       instance to insert a sequence of values in multiple text fields
-
    #. :bolditalic:`objects` **---** A list of the individual test case objects created with
-      Alyvix Designer.  Each test case object is identified uniquely in the list by its :glossdef:`object name`
-      :rawhtml:`<a href="glossary.html#glossary-object-name"><i class="fa fa-tiny fa-question-circle"></i></a>`.
-   #. :bolditalic:`script` **---** The scripts created for a test case, both the main script and
-      any section (subroutine) scripts.
+      Alyvix Designer.  Each :glossdef:`test case object`
+      :rawhtml:`<a href="glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+      is identified uniquely in the list by its object name
+   #. :bolditalic:`script`
+      :rawhtml:`<a href="glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
+      **---** The scripts created for a test case, both the main script and any section
+      (subroutine) scripts.
 
 
 .. rst-class:: bignums
@@ -200,7 +207,9 @@ The individual sections of the JSON structure are explained below.
 
    #. :bolditalic:`call` **---** The recorded options to start or kill an external application
       when a test case object is :ref:`first called <alyvix_designer_options_components_root>`
-   #. :bolditalic:`components` **---** The representation for the component tree (detailed below)
+   #. :bolditalic:`components` **---** The representation for the :glossdef:`component tree`
+      :rawhtml:`<a href="glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
+      (detailed below)
    #. :bolditalic:`date_modified` **---** The time the test case object was last modified,
       :ref:`displayed in Selector <alyvix_selector_interface_screenshot>`
    #. :bolditalic:`detection` **---** The test case object's
@@ -249,7 +258,9 @@ The individual sections of the JSON structure are explained below.
       .. rst-class:: bignums
          :class: backmedbeige
 
-      #. :bolditalic:`groups` **---**  A JSON array of exactly 3 items, each of which corresponds
+      #. :bolditalic:`groups`
+         :rawhtml:`<a href="glossary.html#glossary-group"><i class="fa fa-tiny fa-question-circle"></i></a>`
+         **---**  A JSON array of exactly 3 items, each of which corresponds
          to one of the groups in the component tree.
 
          .. rst-class:: bignums
@@ -348,8 +359,9 @@ The individual sections of the JSON structure are explained below.
 
    #. :bolditalic:`case` **---** The main script that will be
       :ref:`executed by Alyvix Robot <test_case_execution_top>`.  The script is an ordered
-      list of scripting elements, where a simple, enabled element is just the name of a
-      test case object.  Other elements have the following meanings:
+      list of :ref:`scripting elements <alyvix_editor_scripting_node_expressions>`, where a simple,
+      enabled element is just the name of a test case object.  Other elements have the following
+      meanings:
 
       .. rst-class:: bignums
          :class: backlightbeige
@@ -364,9 +376,10 @@ The individual sections of the JSON structure are explained below.
       #. :bolditalic:`for` **---** Indicates there should be a loop over the values in the
          specified :ref:`Map <alyvix_editor_interface_maps>`.
 
-   #. :bolditalic:`sections` **---** Corresponds to the named subroutine scripts created in
-      Alyvix Editor.  Each section is a parameter where its key is the name of the section and
-      its value is the same as the :bolditalic:`case` value described above.
+   #. :bolditalic:`sections` **---** Corresponds to the
+      :ref:`named subroutine scripts <alyvix_editor_script_mgmt_top>` created in Alyvix Editor.
+      Each section is a parameter where its key is the name of the section and its value is the
+      same as the :bolditalic:`case` value described above.
 
       .. rst-class:: bignums
          :class: backlightbeige

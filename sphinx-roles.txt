@@ -90,6 +90,14 @@
 
    <i class="fa fa-med fa-white fa-caret-right" style="vertical-align: top;"></i>
 
+.. |play-icon| raw:: html
+
+   <i class="fa fa-small fa=black fa-play" style="vertical-align: top;"></i>
+
+.. |4arrows-icon| raw:: html
+
+   <i class="fa fa-small fa-black fa-arrows" style="vertical-align: top;"></i>
+
 .. |halftab| raw:: html
 
    &nbsp; &nbsp;

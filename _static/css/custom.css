@@ -163,6 +163,12 @@
 .rst-content .short-admonition {  /* A version that isn't full width */
     width: 80%;
 }
+.rst-content .right-short-admonition {
+    width: 50%;
+    /* float: right; */
+    margin-left:auto;
+    margin-right:0;
+}
 div .medium-code-block {  /* A version that isn't full width */
     width: 85%;
 }

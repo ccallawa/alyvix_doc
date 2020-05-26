@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 19-02-2020
+:modified: 26-05-2020
 :tags: designer, test cases
 :lang: en-US
 :translation: false
@@ -15,9 +15,10 @@
 Test Case Building
 ##################
 
-When you build a test case, you're creating a set of visual templates that can be matched against
-your app interfaces in real time, allowing Alyvix to interact with those interfaces just like a
-person would.
+When you build a :glossdef:`test case`
+:rawhtml:`<a href="glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+you're creating a set of visual templates that can be matched against your app interfaces in real
+time, allowing Alyvix to interact with those interfaces just like a person would.
 
 
 .. todo::
@@ -49,11 +50,13 @@ Once you've built a test case, you can let it interact with your chosen app eith
 
 The :ref:`Test Case Data Format <test_case_data_format_top>` page provides technical details on how
 Alyvix test case files are organized and what they contain, while the
-:ref:`Getting Started <getting_started_top>`
-section includes detailed mini-tutorials on how to use Alyvix Editor.
+:ref:`Getting Started <getting_started_top>` and :ref:`Videos and Tutorials <videos_and_tutorials_top>`
+sections include detailed mini-tutorials and topic-based videos on how to use Alyvix Editor and Robot.
 
-All three of these applications can be launched from the Windows Command Prompt or PowerShell.
-They inherit the permissions of the shell they were launched from.
+All of these applications can be launched from the Windows Command Prompt or PowerShell.
+Note that they inherit the permissions of the shell they were launched from.
+
+|
 
 
 
@@ -61,15 +64,18 @@ They inherit the permissions of the shell they were launched from.
 
 .. topic:: Alyvix Designer
 
-   Alyvix Designer lets you select graphic components on a captured screen to use as test case
-   objects, whether they're images, rectangles, or text.  You can then define triggers and actions
-   to apply when those templates are recognized later in a live interaction with an
-   application.
+   Alyvix Designer lets you select graphic :glossdef:`components`
+   :rawhtml:`<a href="glossary.html#glossary-component"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   on a captured screen to use as test case objects, whether they're images, rectangles, or text.
+   You can then define triggers and actions to apply when those templates are recognized later
+   in a live interaction with an application.
 
 Designer will save the set of templates, called the :glossdef:`component tree`
 :rawhtml:`<a href="glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`,
 as a single test case object, which you can then use as a building block to compose more
-complicated objects and scripts using Alyvix Editor.
+complicated behaviors with :glossdef:`scripts`
+:rawhtml:`<a href="glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
+using Alyvix Editor.
 
 .. _test_case_building_designer_launch:
 
@@ -82,7 +88,8 @@ The following sections of the guide present further information on Alyvix Design
 * You can find more detailed information about the available options for test case objects and
   components on the :ref:`Interface Options <alyvix_designer_options>` page
 
-Alyvix Designer can be run as follows:
+Although it is typically run together with Alyvix Editor, Designer can be run in standalone
+mode as follows:
 
 .. code-block:: doscon
    :class: short-code-block
@@ -105,6 +112,8 @@ with the following command line options:
 |               |       |          | ranging from **0** (min) to **2** (max)      |
 +---------------+-------+----------+----------------------------------------------+
 
+|
+
 
 
 .. _test_case_building_selector:
@@ -122,7 +131,8 @@ a list of test case objects within each tab.  This allows you to quickly switch 
 filter, search and edit within a single file, or copy test case objects across opened test case
 files.
 
-Alyvix Selector can be run as follows:
+Although it is typically run together with Alyvix Editor, Selector can be run in standalone
+mode as follows:
 
 .. code-block:: doscon
    :class: short-code-block
@@ -139,6 +149,8 @@ with the following command line options:
 | -\\-verbose   | -v    | *<n>*    | Set the verbosity level for debugging output |
 |               |       |          | ranging from **0** (min) to **2** (max)      |
 +---------------+-------+----------+----------------------------------------------+
+
+|
 
 
 

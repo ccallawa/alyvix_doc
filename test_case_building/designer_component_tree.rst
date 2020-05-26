@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 22-05-2020
+:modified: 26-05-2020
 :tags: designer, component, tree
 :lang: en-US
 :translation: false
@@ -15,10 +15,11 @@
 Designer: Component Tree
 ************************
 
-You can use Alyvix Designer to create selections on the screen.  When these regions are
-detected, whether as images or GUI objects, you can use additional neighboring screen elements to
-either confirm you have the correct region, or identify other areas that you can then act on,
-like a nearby button.
+You can use Alyvix Designer to create :glossdef:`selections`
+:rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+on the screen.  When these regions are detected, whether as images or GUI objects, you can use
+additional neighboring screen elements to either confirm you have the correct region, or identify
+other areas that you can then act on, like a nearby button.
 
 The *component tree* is composed of three types of components:
 
@@ -61,14 +62,12 @@ or remove one.
    :alt: A tree with a single root, group and component
 
 If you now create a selection, or a subselection with its corresponding region of interest,
-a thumbnail copy will appear in the component tree.  A selection can stand alone, or can
-head a *group* of *components* which are defined by their relationship to the main group
-selection.
+a thumbnail copy will appear in this *component tree*.  A selection can stand alone, or can
+head a group of components which are defined by their relationship to the main group selection.
 
-Each group or component is a single row consisting of an icon indicating its type
-(:ref:`see Object Types <alyvix_designer_component_tree_types>`)
+Each group or component is a single row consisting of an icon indicating its type (see below)
 and an image of the area around the object.  Right-clicking on a row will display a
-:ref:`menu of actions <alyvix_designer_component_actions>` for that object.
+:ref:`menu of actions <alyvix_designer_component_actions>` for that component.
 
 
 
@@ -89,7 +88,8 @@ Alyvix's visual recognition capability is based on two well-known open source sy
    :class: image-boxshadow
    :alt: A tree with a single root, group and component
 
-Alyvix uses these tools to visually detect three types of objects:
+Alyvix uses these tools to visually detect
+:ref:`three types of objects <alyvix_designer_options_components_image>`:
 
 - **Image:**  Given a region of interest on the screen, Alyvix will look for the defined
   selection in that RoI.  For instance, it may be a particular system or application icon, a
@@ -135,10 +135,10 @@ the screen and Alyvix will try to automatically determine
 the appropriate selection.  You can also resize the bounding edges of any capture region by
 dragging them with the left mouse button.
 
-You can continue to add components and new groups using the mouse and keyboard shortcuts without
-showing the Designer panel.
+If desired, you can continue to add components and new groups using the mouse and keyboard
+shortcuts without returning to the Designer panel.
 
-At any point you can switch between selecting regions and the Designer panel.  Use the :kbd:`ESC`
+At any point you can switch between selecting areas and the Designer panel.  Use the :kbd:`ESC`
 key to open the Designer panel, and the :guilabel:`EDIT` button at the bottom left corner of the
 panel to return to the screen capture.
 

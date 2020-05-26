@@ -16,10 +16,14 @@
 Operations Videos and Tutorials
 ===============================
 
+.. _operations_tutorials_image:
+
 .. topic:: Image Components Video
 
-   This video describes the options available for Image Components and illustrates with an
-   example of how Alyvix's logic works when there are multiple similar targets:
+   This video describes the
+   :ref:`options available for Image Components <alyvix_designer_options_components_image>`
+   and illustrates with an example of how Alyvix's logic works when there are multiple similar
+   targets:
 
    * Match - An exact match of both color and shape
    * Color - Match the main color (within some tolerance) regardless of shape
@@ -28,9 +32,13 @@ Operations Videos and Tutorials
    .. youtube:: rC_bjgXCcZ4
 
 
+
+.. _operations_tutorials_rect:
+
 .. topic:: Rectangle Components Video
 
-   The various rectangle component options are demonstrated also using an example showing
+   The various :ref:`rectangle component options <alyvix_designer_options_components_rect>`
+   are demonstrated also using an example showing
    how Alyvix's logic works when there are multiple similar targets:
 
    * Button - Match a small rectangle within a large space, where that rectangle may float
@@ -40,10 +48,13 @@ Operations Videos and Tutorials
    .. youtube:: JeAQZ2nzMnw
 
 
+
+.. _operations_tutorials_regex:
+
 .. topic:: Text Components Video
 
-   This video shows how to use the **RegEx** option for the **Detect** feature of text components,
-   using an example tht:
+   This video shows how to use the **RegEx** option for the **Detect** feature of
+   :ref:`text components <alyvix_designer_options_components_text_detect>`, using an example that:
 
    * Looks for a text string within a defined area
    * Uses a regular expression to find a code embedded in that text string
@@ -53,9 +64,12 @@ Operations Videos and Tutorials
    .. youtube:: g9D4LZ5DqhU
 
 
+.. _operations_tutorials_actions:
+
 .. topic:: Component Actions Video
 
-   Here the various mouse actions are shown using Windows Explorer as an example:
+   Here the various :ref:`mouse actions <alyvix_designer_options_components_common>` are shown
+   using Windows Explorer as an example:
 
    * Simple mouse actions such as Move and Click
    * Hold - similar to a Click but without the accompanying Release

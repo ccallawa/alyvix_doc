@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 22-05-2019
+:modified: 26-05-2019
 :tags: concept, glossary
 :lang: en-US
 :translation: false
@@ -57,6 +57,14 @@ Glossary
    .. :ref:`Group <alyvix_designer_component_components>`
    .. :ref:`Concept <concepts_test_case_components>`
 
+.. _glossary_map:
+
+:Map:  A *map* is a user-defined table of strings, consisting of a column of keys, and one or
+   more columns of values.  Maps can be used both for
+   :ref:`transforming an extracted value <alyvix_designer_options_strings_map_extract>` and for
+   :ref:`looping over a test case object <alyvix_editor_interface_maps>`
+   with the keys as parameters.
+
 .. _glossary_region_of_interest:
 
 :Region of Interest:  A *region of interest* (RoI) is the
@@ -73,6 +81,19 @@ Glossary
    groups and their subcomponents are dependent on it.
 
    .. :ref:`Concept <concepts_test_case_components>`
+
+.. _glossary_test_case_script:
+
+:Script:  A *test case script* is a sequence of instructions (each consisting of one
+   or more test case objects) describing, during the
+   execution phase:
+
+   * The order to :ref:`compare test case objects <alyvix_editor_scripting_panel_top>`
+     against the graphical interface of the application being run
+   * The :ref:`script expression mode <alyvix_editor_scripting_node_expressions>` for the node
+     (run, conditional, or loop)
+
+   .. :ref:`Concept <concepts_test_case_object_name>`
 
 .. _glossary_section:
 
@@ -115,18 +136,6 @@ Glossary
    used for creating scripts within their test case.
 
    .. :ref:`Concept <concepts_test_case_objects>`
-
-.. _glossary_test_case_script:
-
-:Test Case Script:  A *test case script* is a sequence of instructions describing, during the
-   execution phase:
-
-   * The order to :ref:`compare test case objects <alyvix_editor_scripting_panel_top>`
-     against the graphical interface of the application being run
-   * The :ref:`script expression mode <alyvix_editor_scripting_node_expressions>` for the node
-     (run, conditional, or loop)
-
-   .. :ref:`Concept <concepts_test_case_object_name>`
 
 |
 |

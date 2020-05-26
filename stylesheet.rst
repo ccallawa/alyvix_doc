@@ -735,6 +735,22 @@ The :file:`custom.css` file allows you to pass a class name to make it less than
 
       A short **Danger** box
 
+The *right-short-admonition* class does the same but aligns the shortened box to the right column.
+
+.. hint::
+   :class: right-short-admonition
+
+   A right-aligned, short **Hint** box
+
+.. code-block:: rst
+   :class: short-code-block
+
+   .. danger::
+      :class: right-short-admonition
+
+      A right-aligned, short **Hint** box
+
+
 .. topic:: Epigraphs and Pull Quotes
 
    Additional styles like ``epigraph`` and ``pull-quote`` can be tied to specific CSS classes
@@ -751,6 +767,7 @@ The :file:`custom.css` file allows you to pass a class name to make it less than
 A **topic** creates a simple box with a title above it.  In some themes, like the sphinx_rtd
 theme, it just creates this HTML structure, which is mapped to the CSS class *topic*:
 ``<div class="topic"><p class="topic-title first">Title</p><p>Box content</p></div>``
+
 
 .. topic:: Topic Titles
 
@@ -948,6 +965,7 @@ Usage examples:
    .. topic:: An Embedded Video
 
       .. youtube:: Qef7ExMoPz8
+
 
 .. topic:: An Embedded Video
 

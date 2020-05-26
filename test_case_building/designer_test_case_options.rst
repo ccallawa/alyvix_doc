@@ -25,12 +25,14 @@ a whole:
 The **Object name** is the reference name of a particular :glossdef:`test case object`
 :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
 within a given test case.  A test case typically contains multiple test case objects which are
-used when building :ref:`scripts <alyvix_editor_scripting_panel_top>`, and thus it needs a unique,
-descriptive name to easily distinguish it from other test case objects.
+used when building :ref:`scripts <alyvix_editor_scripting_panel_top>`
+:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+and thus it needs a unique, descriptive name to easily distinguish it from other test case objects.
 
-There are also three **test case parameters** that affect how the selections and subselections
-in the :ref:`component tree <alyvix_designer_component_tree_top>` are detected, regardless of
-their type, and what happens if they fail to be detected:
+There are also three **test case parameters** that affect how the :glossdef:`selections`
+:rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+and subselections in the :ref:`component tree <alyvix_designer_component_tree_top>` are detected,
+regardless of their type, and what happens if they fail to be detected:
 
 #. **Detection condition:**  One of the following conditions will be checked at a default
    interval of every ``0.5`` seconds:
@@ -40,7 +42,7 @@ their type, and what happens if they fail to be detected:
       previously not the case
     * **AppearDisappear:**  Similarly, Alyvix will check whether all the groups and components
       in the test case object appear, and then also disappear within the timeout limit
-    * **Disappear:**  If the groups and components of a test case object were initiallypresent,
+    * **Disappear:**  If the groups and components of a test case object were initially present,
       Alyvix will detect when they are no longer visible
 
       .. image:: images/appeardisappear_h120.png

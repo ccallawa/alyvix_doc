@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 22-05-2020
+:modified: 26-05-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -15,10 +15,13 @@
 Component Options
 =================
 
-Below the component tree in the Designer interface you can find the options that affect a specific
-instance of a component type used in an Alyvix test case object.  Whenever you select a row in the
-component tree, these options will be updated to reflect the options currently assigned to that
-row's component.
+Below the :glossdef:`component tree`
+:rawhtml:`<a href="../glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
+in the Designer interface you can find the options that affect a specific instance of a component
+type used in an Alyvix :glossdef:`test case object`
+:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`.
+Whenever you select a row in the component tree, these options will be updated to reflect the
+options currently assigned to that row's component.
 
 
 
@@ -28,8 +31,10 @@ row's component.
 Root Component Options
 ----------------------
 
-The *root element* options take effect when the test case object is
-:ref:`first executed <test_case_execution_top>`.  These options allow you to set up the proper
+The :glossdef:`root element`
+:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+options take effect when the test case object is :ref:`first executed <test_case_execution_top>`.
+These options allow you to set up the proper
 environment for the application you want to automate, which is especially helpful when a test
 case object will be the very first :ref:`scripted node <alyvix_editor_scripting_panel_top>`.
 For instance, you might want to start a particular application like a web browser before Alyvix
@@ -43,7 +48,7 @@ node :greyblock:`S` is selected:
    :class: image-boxshadow
    :alt: Options for the root element.
 
-The **Call** dropdown tells alyvix what action to perform when the test case object is executed:
+The **Call** dropdown tells Alyvix what action to perform when the test case object is executed:
 
 * **Run:**  Start a Windows application
 * **Kill:**  Terminate a running application
@@ -58,8 +63,10 @@ URL as an argument.  To do this, select **Run** and set its two parameters:
 * **Arguments:**  Here you can enter the arguments the application expects when
   it starts up
 
-Note that if you launch an application with the **Run** option, you can still recognize child
-components in that application's initial interface in the same test case object.
+.. note::
+
+   If you launch an application with the **Run** option, you can still recognize child
+   components in that application's initial interface in the same test case object.
 
 The **Kill** option instead allows you to select a currently running process to terminate, or
 type one in if it's not currently running:
@@ -81,9 +88,11 @@ Image Type Options
 
 .. rst-class:: fa fa-image fa-blue
 
-   The *image* component corresponds to the pixel-by-pixel representation of the selection or
-   subselection on the captured screen, such as an icon.  As shown here, it has the following
-   options to choose which visual aspect of the image to match against:
+   The *image* component corresponds to the pixel-by-pixel representation of the :glossdef:`selection`
+   :rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   or subselection on the captured screen, such as an icon.  As shown here, it has the following
+   options to choose which visual aspect of the image to match against (an Operations tutorial video
+   is available that :ref:`explains the image options <operations_tutorials_image>`):
 
 .. image:: images/ad_type_submenu_image_sized.png
    :class: image-boxshadow
@@ -104,10 +113,12 @@ Image Type Options
 Rectangle Type Options
 ----------------------
 
-.. rst-class:: fa fa-retweet fa-blue
+.. rst-class:: fa fa-square-o fa-blue
 
    The *rect* component corresponds to a rectangular region on the captured screen, such as
-   buttons, text boxes, panels or windows.  As shown here, it has the following options:
+   buttons, text boxes, panels or windows.  As shown here, it has the following options (an
+   Operations tutorial video is available that
+   :ref:`explains the rect options <operations_tutorials_rect>`):
 
 .. image:: images/ad_type_submenu_rect_sized.png
    :class: image-boxshadow
@@ -134,15 +145,18 @@ Text Type Options
    options, which vary depending on the type selected.
 
 For both the *Detect* and *Map* types, the :guilabel:`Scrape` field displays the text that was
-automatically recognized in the component's subselection on the screen capture.  Note that the
-main component of a group cannot be of type Text.
+automatically recognized in the component's :glossdef:`subselection`
+:rawhtml:`<a href="../glossary.html#glossary-subselection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+on the screen capture.  Note that the main component of a group cannot be of type Text.
 
 
 .. _alyvix_designer_options_components_text_detect:
 .. topic:: **Detect**
 
    The text type's *Detect* option will determine that a match was correctly made if the text
-   scraped from the region of interest matches the condition specified in the first two fields.
+   scraped from the :glossdef:`region of interest`
+   :rawhtml:`<a href="../glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   matches the condition specified in the first two fields.
 
 .. image:: images/ad_type_submenu_text_detect_sized.png
    :class: image-boxshadow
@@ -153,10 +167,12 @@ one of these 3 methods:
 
   * **Regex**  The scraped (recognized) text is considered matched only if it satisfies the
     regular expression in the :guilabel:`Regex` field, once normalized as lower cased strings.
-    The regular expression syntax is governed by the |python-regex-lib|.
+    (An Operations tutorial video is available that :ref:`explains the regex options
+    <operations_tutorials_regex>`).  The regular expression syntax is governed by the
+    |python-regex-lib|.
   * **Number**  The recognized text is considered matched only if it results in a number that
     satisfies the condition selected in the :guilabel:`Logic` field (e.g., "greater than zero").
-  * **Date**  The recognized text is considered matched only if it results in day and time that
+  * **Date**  The recognized text is considered matched only if it results in a day and time that
     satisfies the time interval selected in the :guilabel:`Logic` field  (e.g., "last hour",
     "last day", etc.)
 
@@ -165,10 +181,12 @@ one of these 3 methods:
 .. topic:: **Map**
 
    When *Map* mode is selected, the scraped text will be mapped to the most similar key in
-   the chosen Map (the Map can be chosen in the
-   :ref:`map interface in Editor <alyvix_editor_interface_top>`), and the value that corresponds
-   to that key in the map will be both returned and cached in the test case object.  If the
-   ``{<object>.extract}`` :ref:`pattern is used later <alyvix_designer_options_strings_map_extract>`
+   the chosen :glossdef:`Map`
+   :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   (the Map can be selected in the :ref:`map interface in Editor <alyvix_editor_interface_top>`),
+   and the value that corresponds to that key in the map will both be returned and be cached in the
+   test case object.  If the ``{<object>.extract}``
+   :ref:`pattern is used later <alyvix_designer_options_strings_map_extract>`
    in the String field of another test case, this cached value will be returned.
 
 .. image:: images/ad_type_submenu_text_map_sized.png
@@ -192,8 +210,10 @@ in the component tree.
    :class: image-boxshadow
    :alt: The mouse action selection dropdown.
 
-An **Action** creates a mouse event corresponding to one of the following types (by default, the
-mouse position will be set to the center of the component's selection or subselection):
+An **Action** creates a mouse event corresponding to one of the six types listed below (an
+Operations tutorial video is available which
+:ref:`explains the individual Action options <operations_tutorials_actions>`).  By default, the
+mouse position will be set to the center of the component's selection or subselection.
 
     * **None (default):**  Don't perform any mouse action when a component is matched.
     * **Move:**  Hover the mouse over the component, without clicking.  The

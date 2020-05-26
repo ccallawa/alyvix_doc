@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 19-02-2020
+:modified: 26-05-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -15,7 +15,10 @@
 Editor: Scripting Management
 ****************************
 
-The script management panel organizes and provides quick access to the scripts and subscripts
+The script management panel organizes and provides quick access to the :glossdef:`scripts`
+:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
+and :glossdef:`sections`
+:rawhtml:`<a href="../glossary.html#glossary-section"><i class="fa fa-tiny fa-question-circle"></i></a>`
 necessary for creating complex behaviors.  The script management panel is divided into three parts:
 
 .. image:: images/ae_script_management_panel_h230.png
@@ -25,10 +28,13 @@ necessary for creating complex behaviors.  The script management panel is divide
 * **Top-level scripts** that serve as the main entry points for execution with Alyvix Robot (MAIN,
   FAIL, and EXIT)
 * **Sections**, which are user-defined subroutines that can be used inside other scripts
-* **Maps**, which are user-defined tables of keys and values that can be used to *(a)* take a text
-  string scraped from the screen and map it to another string, or *(b)* loop over a test case
-  object (using the :ref:`FOR <alyvix_editor_scripting_node_expressions>` expression) for as many
-  rows as there are in the table
+* **Maps** :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+  which are user-defined tables of keys and values that can be used to *(a)* take a :ref:`text
+  string scraped from the screen <alyvix_designer_options_strings>` and map it to another string,
+  or *(b)* loop over a :glossdef:`test case object`
+  :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+  (using the :ref:`FOR <alyvix_editor_scripting_node_expressions>`
+  expression) for as many rows as there are in the map's table
 
 From the script management panel you can:
 
@@ -54,10 +60,10 @@ The following scripts are predefined and are executed by Alyvix Robot at the app
 #. **Main:**  The principal script that is invoked when launching a test case from either Alyvix
    Editor (via the |runblue| button) or Robot
 #. **Fail:**  A script that is executed if one of the test case objects in the Main script having
-   the :guilabel:`Break` flag *unset* times out
+   the :guilabel:`Break` flag *not set* times out
 #. **Exit:**  A separate script that is always run once the Main script terminates, allowing you
-   to restore your machine to its prior state (for instance, to shut down a browser that was
-   launched as part of a test case)
+   to restore your application and environment to its prior state (for instance, to shut down a
+   browser that was launched as part of a test case)
 
 
 
@@ -67,7 +73,7 @@ The following scripts are predefined and are executed by Alyvix Robot at the app
 Sections
 ========
 
-Sections are sub-scripts (subroutines) that can be called one or more times by name from other
+Sections are subscripts (subroutines) that can be called one or more times by name from other
 scripts or subscripts.  This can greatly help improve the readability of scripts, especially when
 they become very long.
 

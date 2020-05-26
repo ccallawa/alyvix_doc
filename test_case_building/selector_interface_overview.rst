@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 20-02-2020
+:modified: 26-05-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -15,17 +15,21 @@
 Selector: Interface Overview
 ****************************
 
-Alyvix Selector allows you to organize individual test cases, copy test case objects from one
-file to another, and visualize and change basic test case parameters.
+Alyvix Selector allows you to organize individual :glossdef:`test cases`
+:rawhtml:`<a href="../glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+copy test case objects from one file to another, and visualize and change basic test case parameters.
 
-When used with Alyvix Editor rather than as a standalone application, it allows you to quickly
-select test case objects to create scripted interactions.
+When used with :ref:`Alyvix Editor <alyvix_editor_interface_top>` rather than as a standalone
+application, it allows you to quickly select test case objects in order to create :glossdef:`scripted`
+:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
+interactions.
 
 The Selector interface is centered around a list of all test case objects in a given test case,
-with a separate tab for each :file:`.alyvix` file.  The *primary* tab (the first one opened, with
-the blue background) is the only file whose objects can be changed.  Any other *secondary* tabs
-are used to view and filter their test case objects, and if desired, to import them into the
-primary tab.  The values of test case objects in secondary tabs cannot be changed.
+with a separate tab for each :file:`.alyvix` :ref:`file <test_case_data_format_file>`.
+The *primary* tab (the first one opened, with the blue background) is the only file whose objects
+can be changed.  Any other *secondary* tabs are used to view and filter their test case objects,
+and if desired, to import them into the primary tab.  The values of test case objects in secondary
+tabs cannot be changed.
 
 You can start Alyvix Selector as a standalone module from the command prompt (you can find
 information about its :ref:`command arguments here <test_case_building_selector_launch>`):
@@ -37,7 +41,7 @@ information about its :ref:`command arguments here <test_case_building_selector_
 
 .. _alyvix_selector_interface_screenshot:
 
-This will bring up the Selector interface as shown here:
+This will bring up the Selector interface:
 
 .. image:: images/as_main_screen_numbered.png
    :class: image-boxshadow
@@ -50,9 +54,11 @@ The principle interface elements are:
 
 #. The **file tabs** show the primary tab and any opened secondary :file:`.alvyix`
    :ref:`test case files <test_case_data_format_top>`.  Switching between tabs shows the
-   test case objects contained in each file.  A new file can be loaded by clicking on the
-   |plus-icon| button.  Similarly, the |times-icon| button next to a non-primary tab will
-   remove that tab (note that you cannot remove the primary tab).
+   :glossdef:`test case objects`
+   :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   contained in each file.  A new file can be loaded by clicking on the |plus-icon| button.
+   Similarly, the |times-icon| button next to a non-primary tab will remove that tab (note that
+   you cannot remove the primary tab).
 #. The **list headers** :ref:`categorize the properties <alyvix_selector_interface_headers>` of each
    object, allowing you to sort on some fields and find the details of a particular test case
    object at a glance.
@@ -63,8 +69,8 @@ The principle interface elements are:
    copy the name of a test case object.
 #. The **filtering and search** fields let you select all test case objects with a given resolution
    and scaling factor, or that contain a given text string in either the :guilabel:`Name` or
-   :guilabel:`Date modified` fields.  The Search field uses a non-regex substring search, and the
-   |times-icon| action clears this field.
+   :guilabel:`Date modified` fields.  The :guilabel:`Search` field uses a non-regex substring
+   search, and the |times-icon| action clears this field.
 #. The **test case object buttons** like :wbutton:`EDIT`, :wbutton:`DUPLICATE` and :rbutton:`REMOVE`
    act on the :ref:`currently selected test case objects <alyvix_selector_interface_object_actions>`
    in the list.  The :wbutton:`ADD` button will initiate a new screen capture (after a specified
@@ -120,8 +126,9 @@ list.
 
 .. note::
 
-   Remember that any changes will not be saved until you have exited Selector by clicking on
-   the :bbutton:`OK` button.
+   Remember that in standalone mode, any changes will not be saved until you have exited
+   Selector by clicking on the :bbutton:`OK` button.  When used with Editor, changes from
+   Selector will be saved when the entire test case is saved in Editor.
 
 All editable fields are *validated* in real time to ensure that only new values of the correct type
 can be entered.  When a value is not valid you will see an error message like this:
@@ -166,7 +173,7 @@ Two other actions affect all test case objects currently selected:
 
 * :wbutton:`DUPLICATE` will create a new test case object(s) from each selected row.  The new
   name(s) will be the same name(s) as the currently selected object(s), but with the string
-  *_copy* appended at the end.  The new objects will appear at the bottom of the list.
+  ``_copy`` appended at the end.  The new objects will appear at the bottom of the list.
 * :rbutton:`REMOVE` will delete all currently selected test case objects.  A confirmation
   request dialog will appear to make sure test cases aren't accidentally deleted.
 
@@ -174,6 +181,9 @@ When an additional file tab is open, only the :wbutton:`IMPORT` action will appe
 Any objects selected will be copied just as for :wbutton:`DUPLICATE`, except that the new
 object(s) are copied to the primary tab rather than to the currently opened tab.
 
-Remember that any changes you make to test case objects in the primary tab are not saved unless
-you exit Selector by pressing the :bbutton:`OK` button.  (No changes will be made to any objects
-in any additional tabs).
+.. note::
+
+   Remember that in standalone mode, any changes will not be saved until you have exited
+   Selector by clicking on the :bbutton:`OK` button.  When used with Editor, changes from
+   Selector will be saved when the entire test case is saved in Editor.  (No changes will be
+   made to any objects in any secondary tabs).
