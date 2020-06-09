@@ -34,14 +34,14 @@ opening the Windows Settings app.
    Editor will load the :file:`start-test.alyvix` test case created in the previous example.
 
 #. We need to capture the screen once the Start menu has already opened, so change the delay
-   number in the :wbutton:`DELAY [SEC] 0 ADD` from ``0`` to something higher like ``5``, then click
-   on :bbutton:`ADD`:
+   number in :nobutton:`Delay [sec] 0` from ``0`` to something higher like ``5``, then click
+   on :wbutton:`ADD`:
 
    .. image:: images/as_delay_five_seconds.png
       :class: image-with-border
       :alt: Setting up the 5 second delay before capturing the screen
 
-#. Once you click :bbutton:`ADD`, you'll have 5 seconds to open the Windows Start Menu (you'll
+#. Once you click :wbutton:`ADD`, you'll have 5 seconds to open the Windows Start Menu (you'll
    need to click on the Start button yourself in that time) before Alyvix captures the screen.
 
 #. After the screen flashes white, press :kbd:`Escape` to return to screen capture mode, and then
@@ -68,8 +68,9 @@ opening the Windows Settings app.
       :class: image-with-border
       :alt: The settings button test case in Alyvix Selector
 
-#. Using its |bar-icon| icon, drag the new test case object into the Scripting panel
-   underneath the existing script element:
+#. Using its |4arrows-icon| icon seen above, drag the new test case object into the Scripting panel
+   underneath the existing script element (similarly, clicking the |lineadd-icon| icon will add it
+   to the end of the script):
 
    .. image:: images/ae_second_script_element.png
       :class: image-with-border
