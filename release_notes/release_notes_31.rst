@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 08-06-2020
-:modified: 08-06-2020
+:modified: 10-06-2020
 :tags: release notes
 :lang: en-US
 :translation: false
@@ -32,14 +32,14 @@ Alyvix 3.1.x.
 
 **New Features**
 
-* :ref:`Multiple Measures <install_release_v3_1_0>`:  Description
-* :ref:`Faster Testing <install_release_v3_1_0>`:  Description
-* :ref:`Regrab Screen Captures <install_release_v3_1_0>`:  Description
+* :ref:`Multiple Measures <release_notes_v3_1_0>`:  Description
+* :ref:`Faster Testing <release_notes_v3_1_0>`:  Description
+* :ref:`Regrab Screen Captures <release_notes_v3_1_0>`:  Description
 
 **Improvements**
 
-* *Restructured CLI and Map Arguments:*  :ref:`Description <install_release_v3_1_0>`
-* *Better Interface Controls:*  :ref:`Description <install_release_v3_1_0>`
+* *Restructured CLI and Map Arguments:*  :ref:`Description <release_notes_v3_1_0>`
+* *Better Interface Controls:*  :ref:`Description <release_notes_v3_1_0>`
 * *Improved User Experience:*  Description
 
 **Bug Fixes**

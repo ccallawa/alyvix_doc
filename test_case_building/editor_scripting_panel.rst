@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 26-05-2020
+:modified: 10-06-2020
 :tags: editor, script, blocks, run, loop
 :lang: en-US
 :translation: false
@@ -71,7 +71,7 @@ There are four modes for scripting nodes that can be used in the scripting panel
 
 .. rst-class:: bignums
 
-#. *Run* --- Simply run the test case object in sequence, one after another.
+#. *Sequential Run* --- Simply run the test case object, then continue to the next one.
 
    ..
 

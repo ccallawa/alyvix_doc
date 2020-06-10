@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 26-05-2020
+:modified: 10-06-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -30,7 +30,7 @@ necessary for creating complex behaviors.  The script management panel is divide
 * **Sections**, which are user-defined subroutines that can be used inside other scripts
 * **Maps** :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`,
   which are user-defined tables of keys and values that can be used to *(a)* take a :ref:`text
-  string scraped from the screen <alyvix_designer_options_strings>` and map it to another string,
+  string scraped from the screen <alyvix_designer_options_strings_top>` and map it to another string,
   or *(b)* loop over a :glossdef:`test case object`
   :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
   (using the :ref:`FOR <alyvix_editor_scripting_node_expressions>`

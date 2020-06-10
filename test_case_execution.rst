@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 26-05-2020
+:modified: 10-06-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -93,7 +93,7 @@ The following options are available:
 | Option        | Alias | Argument | Description                                               |
 +---------------+-------+----------+-----------------------------------------------------------+
 | -\\-args      | -a    | *<strs>* | Supply one or more strings to use in the                  |
-|               |       |          | :ref:`String <alyvix_designer_options_strings>`           |
+|               |       |          | :ref:`String <alyvix_designer_options_strings_top>`       |
 |               |       |          | field of a test case object in Designer                   |
 +---------------+-------+----------+-----------------------------------------------------------+
 | -\\-filename  | -f    | *<name>* | Supply the file name with or without extension            |
@@ -305,8 +305,8 @@ You can also decrypt a cipher as follows:
 
    alyvix_cipher -d <text_string_to_decrypt> -k <private_key>
 
-To use the encrypted text string, put it in the :ref:`string box <alyvix_designer_options_strings>`
-of an object component.
+To use the encrypted text string, put it in the
+:ref:`string box <alyvix_designer_options_strings_top>` of an object component.
 
 You can then run a test case with encrypted strings by supplying the private key:
 

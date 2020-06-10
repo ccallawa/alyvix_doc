@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 25-05-2020
+:modified: 10-06-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -34,7 +34,7 @@ use the following command:
 
    C:\Alyvix\testcases> alyvix_editor -f <alyvix-file-name>
 
-This loads the Editor interface, which has the following elements:
+This loads the Editor interface, whose layout has the following elements:
 
 .. image:: images/ae_full_interface_numbered.png
    :class: image-boxshadow
@@ -46,9 +46,9 @@ This loads the Editor interface, which has the following elements:
 #. The Editor panel, consisting of the
    :ref:`Script Management panel <alyvix_editor_script_mgmt_top>` (left)
    and the :ref:`Scripting panel <alyvix_editor_scripting_panel_top>` (right)
-#. The :ref:`Selector <alyvix_selector_interface_top>` pane, where :glossdef:`test case objects`
+#. The :ref:`Selector <alyvix_selector_interface_top>` pane, containing :glossdef:`test case objects`
    :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
-   can be dragged from and then dropped into the Scripting panel
+   that can be dragged to the Scripting panel
 #. The :ref:`Designer <alyvix_designer_interface_overview>` pane, which shows the details of
    the currently selected test case object
 
@@ -77,20 +77,21 @@ This loads the Editor interface, which has the following elements:
    that can be used as subroutines within any of the principal scripts
 #. The :ref:`Maps <alyvix_editor_interface_maps>` list, containing user-defined :glossdef:`maps`
    :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`
-   where a script can be called multiple times, once for each key in the map that is then passed
-   as an argument to the named script
+   (consisting of keys and one or more values for each key) that can be used either by a script
+   via :ref:`looping <alyvix_editor_scripting_node_expressions>`, or to insert values in a
+   :ref:`String <alyvix_designer_options_strings_top>` field.
 #. The scripting mode selector, containing the :guilabel:`Script` tab to
    :ref:`display the currently selected script or map <alyvix_editor_scripting_panel_top>`,
    the :guilabel:`Monitor` tab to
-   :ref:`show the screen capture <alyvix_editor_interface_monitor>`
-   of Selector's current test case object, and the :guilabel:`Console` tab to
-   :ref:`show the output <alyvix_editor_run_script>`
+   :ref:`show the screen capture <alyvix_editor_interface_monitor>` of Selector's current test case
+   object, and the :guilabel:`Console` tab to
+   :ref:`show the output along with any potential failure causes<alyvix_editor_run_script>`
    after running the test case script from within Alyvix Editor
-#. The :ref:`scripting panel <alyvix_editor_scripting_panel_top>`, which contains the individual
-   scripting elements, placed there using Selector
+#. The :ref:`scripting panel <alyvix_editor_scripting_panel_top>`, containing the individual
+   scripting nodes
 #. The script properties and actions, where you can enable, disable or remove individual script
    elements that have been dropped into the scripting panel
-#. Panel resizing controls allowing you to resize, minimize, or restore the three peripheral
+#. Panel resizing controls, allowing you to resize, minimize, or restore the three peripheral
    panels
 
 
@@ -125,7 +126,6 @@ This loads the Editor interface, which has the following elements:
 
 
 
-
 .. _alyvix_editor_run_script:
 
 .. topic::  Launching Alyvix Robot from Alyvix Editor
@@ -145,8 +145,15 @@ can be found in the :bbutton:`Console` tab at the top of Editor's
    :class: image-with-border
    :alt: The results of running the script in Alyvix Editor
 
-In addition, if the a failure was caused by a simple sequential scripting node, then the
+In addition, if a failure was caused by a simple sequential scripting node, then the
 annotated screenshot describing the failure will be displayed below the output in the
 Console tab.
+
+.. todo::  Example + description of when there is a failure
+
+   * Include screenshot
+   * Selection doesn't appear
+   * Subselection does appear with a box and "!"
+   * What about subselection on a different group, is the color different?
 
 Note that currently the verbosity level for Alyvix Robot cannot be set within Editor.
