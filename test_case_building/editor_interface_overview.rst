@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 10-06-2020
+:modified: 16-06-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -89,8 +89,9 @@ This loads the Editor interface, whose layout has the following elements:
    after running the test case script from within Alyvix Editor
 #. The :ref:`scripting panel <alyvix_editor_scripting_panel_top>`, containing the individual
    scripting nodes
-#. The script properties and actions, where you can enable, disable or remove individual script
-   elements that have been dropped into the scripting panel
+#. The script properties and actions that work both for single nodes and subsets of nodes, where
+   you can enable, disable, run, or remove the scripted elements that have been placed in the
+   scripting panel
 #. Panel resizing controls, allowing you to resize, minimize, or restore the three peripheral
    panels
 
@@ -123,6 +124,8 @@ This loads the Editor interface, whose layout has the following elements:
 .. image:: images/ae_monitor_tab_sized.png
    :class: image-with-border
    :alt: The results of running the script in Alyvix Editor
+
+.. todo:: More detail here
 
 
 

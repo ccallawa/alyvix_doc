@@ -32,7 +32,7 @@ web browser, other app, or even Windows itself, by following your script step by
 each test case object in the order indicated by the script.
 
 When Editor is first started with a new test case, there are no scripted elements yet, and thus
-the scripting panel is empty:
+the scripting panel is empty (the Monitor tab appears once a test case object has been created):
 
 .. image:: images/ae_empty_script_panel.png
    :class: image-boxshadow

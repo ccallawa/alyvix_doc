@@ -204,8 +204,10 @@ once, best practice is to use Selector :ref:`to duplicate it <alyvix_selector_in
 (this will improve any data visualizations used with the data).
 
 The exception is when a test case object appears in a loop.  In this case, the timing results
-will be output for each key in the loop's map.  For instance, the following example might be
-output after running the script |for|:forblock:`my_map`\ |run|:runblock:`dataentry`, using the
+will be output :ref:`for each key in the loop's map <alyvix_editor_interface_maps>`.
+For instance, the following example might be
+output after running :ref:`the script <alyvix_editor_scripting_panel_top>`
+|for|:forblock:`my_map`\ |run|:runblock:`dataentry`, using the
 pattern *<object_name>_<map_name>-<key_name>*:
 
 .. code-block:: md
