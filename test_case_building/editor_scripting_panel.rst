@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 10-06-2020
+:modified: 16-06-2020
 :tags: editor, script, blocks, run, loop
 :lang: en-US
 :translation: false
@@ -27,8 +27,9 @@ and :glossdef:`maps`
 :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`,
 and then reorder and edit them.
 
-When Alyvix Robot executes a script, it will interact with the web browser, other app, or even
-Windows itself, by following your script step by step, executing each test case object in turn.
+When Alyvix Robot :ref:`executes a script <test_case_execution_top>`, it will interact with the
+web browser, other app, or even Windows itself, by following your script step by step, executing
+each test case object in the order indicated by the script.
 
 When Editor is first started with a new test case, there are no scripted elements yet, and thus
 the scripting panel is empty:

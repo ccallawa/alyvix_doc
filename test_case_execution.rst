@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 10-06-2020
+:modified: 16-06-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -19,14 +19,15 @@ Alyvix :glossdef:`test cases`
 :rawhtml:`<a href="glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`
 you have built with :ref:`Alyvix Editor <alyvix_editor_interface_top>` can be run using Alyvix
 Robot.  Robot will also execute any individual test case objects you have created with Alyvix
-Designer along with Alyvix objects you have set up with Alyvix Selector.
+Designer, along with test case objects you have duplicated with Alyvix Selector.
 
-In a :ref:`production environment<production_systems_tutorials_top>`, the typical use case is to
-create a set of test cases once, and then repeatedly run those test cases continuously (ideally as
-quickly as possible).  Examples include monitoring the usability of proprietary clients, streamed
-applications, and web pages on a remote server.  A test case may measure responsiveness every
-5 minutes, for instance, and send timing and other data to a monitoring system in the output
-format it expects.
+In a production environment
+:rawhtml:`<a href="videos_and_tutorials/production_systems_tutorials.html#production-systems-tutorials-top"><i class="fa fa-tiny fa-play-circle"></i></a>`
+the typical use case is to create a set of test cases once, and then repeatedly run those test
+cases continuously (ideally as quickly as possible).  Examples include monitoring the usability
+of proprietary clients, streamed applications, and web pages on a remote server.  A test case may
+measure responsiveness every 5 minutes, for instance, and send timing and other data to a
+monitoring system in the standardized output format it expects.
 
 Before you can use Alyvix in a production environment, however, you will first need to iteratively
 develop and improve your test cases.  Here human readable output is more important, and accordingly
@@ -35,10 +36,10 @@ there is no output format option within Alyvix Editor.
 There are two principal modes for interacting with Alyvix Robot to ensure test cases work
 properly during the development phase:
 
-* Calling Robot from the Command Prompt, passing it the name of a test case object, using the
-  default **-\\-mode** option
 * Calling Robot from :ref:`within Alyvix Editor <alyvix_editor_run_script>` via the |runblue|
   button to run the main script
+* Calling Robot from the Command Prompt, passing it the name of a test case object, and using the
+  default **-\\-mode** option (alyvix/CLI)
 
 In either case, one test case is executed at a time.
 
@@ -51,25 +52,27 @@ In either case, one test case is executed at a time.
 Launching Alyvix Robot from the Command Prompt
 **********************************************
 
-When Robot executes a test case via the command prompt, it first checks to see if one or more test
-case object names were passed via the **-o** parameter.  If so, Robot will execute those test case
-objects in sequence.  Otherwise, if the **-o** parameter is not specified and the :file:`.alyvix`
-file test case :ref:`contains a script previously defined by Editor <test_case_data_format_description>`
-in its ``script`` field, then Robot will run that script.
+When Robot is run in the command prompt, it first checks to see if one or more test case object
+names were passed via the **-o** parameter.  If so, Robot will execute those test case objects
+in sequence.  Otherwise, if the **-o** parameter is not specified, but the :file:`.alyvix`
+test case file named by the **-f** parameter
+:ref:`contains a script previously defined in Editor <test_case_data_format_script>`,
+then Robot will run that script.
 
 Adding the *verbosity* (**-v**) parameter will provide additional information that can help you
 should you need to debug your test cases (see the section
 :ref:`CLI Output Format <alyvix_robot_result_cli>` below).
 
-Alyvix Robot can be run with the following command:
+Alyvix Robot will execute an Alyvix file's test case script when run with the following command
+(without the :file:`.alyvix` suffix):
 
 .. code-block:: doscon
    :class: medium-code-block
 
-   C:\Alyvix\testcases> alyvix_robot
+   C:\Alyvix\testcases> alyvix_robot -f <alyvix-file-name>
 
-If you used Alyvix Editor to create a file named :file:`start-test.alyvix` containing a a test
-case object named ``start``, you can run it with this command:
+If you used Alyvix Editor to create a file named :file:`start-test.alyvix` containing a test
+case object named ``start``, you can run just that test case object with this command:
 
 .. code-block:: doscon
    :class: medium-code-block
@@ -89,39 +92,39 @@ test case:
 
 The following options are available:
 
-+---------------+-------+----------+-----------------------------------------------------------+
-| Option        | Alias | Argument | Description                                               |
-+---------------+-------+----------+-----------------------------------------------------------+
-| -\\-args      | -a    | *<strs>* | Supply one or more strings to use in the                  |
-|               |       |          | :ref:`String <alyvix_designer_options_strings_top>`       |
-|               |       |          | field of a test case object in Designer                   |
-+---------------+-------+----------+-----------------------------------------------------------+
-| -\\-filename  | -f    | *<name>* | Supply the file name with or without extension            |
-+---------------+-------+----------+-----------------------------------------------------------+
-| -\\-key       | -k    | *<key>*  | Supply a private key for use with encryption              |
-+---------------+-------+----------+-----------------------------------------------------------+
-| -\\-mode      | -m    | *<name>* | ``alyvix`` --- CLI output format for humans               |
-|               |       |          | (default)                                                 |
-|               |       |          |                                                           |
-|               |       |          | ``nagios`` --- Nagios output                              |
-|               |       |          | :ref:`(see below) <alyvix_robot_result_nagios>`           |
-|               |       |          |                                                           |
-|               |       |          | ``nats-influxdb`` --- NATS to InfluxDB                    |
-|               |       |          | :ref:`(see below) <alyvix_robot_result_nats_influxdb>`    |
-+---------------+-------+----------+-----------------------------------------------------------+
-| -\\-object    | -o    | *<name>* | Supply the Object name(s)                                 |
-+---------------+-------+----------+-----------------------------------------------------------+
-| -\\-verbose   | -v    | *<n>*    | Set the verbosity level for debugging output              |
-|               |       |          | ranging from **0** (min, default) to **2** (max)          |
-|               |       |          |                                                           |
-|               |       |          | **0**:  Records start/stop timestamps, state and time     |
-|               |       |          | measures for each object (with measure option enabled)    |
-|               |       |          |                                                           |
-|               |       |          | **1**:  Also logs Alyvix actions                          |
-|               |       |          |                                                           |
-|               |       |          | **2**:  Also creates screenshots and annotated            |
-|               |       |          | screenshots as separate .png files in the same directory  |
-+---------------+-------+----------+-----------------------------------------------------------+
++---------------+-------+--------------+-----------------------------------------------------------+
+| Option        | Alias | Argument     | Description                                               |
++---------------+-------+--------------+-----------------------------------------------------------+
+| -\\-args      | -a    | *<strings>*  | Supply one or more strings to use in the                  |
+|               |       |              | :ref:`String <alyvix_designer_options_strings_top>`       |
+|               |       |              | field of a test case object in Designer                   |
++---------------+-------+--------------+-----------------------------------------------------------+
+| -\\-filename  | -f    | *<name>*     | Supply the file name with or without extension            |
++---------------+-------+--------------+-----------------------------------------------------------+
+| -\\-key       | -k    | *<key>*      | Supply a private key for use with encryption              |
++---------------+-------+--------------+-----------------------------------------------------------+
+| -\\-mode      | -m    | *<name>*     | ``alyvix`` --- CLI output format for humans               |
+|               |       |              | (default)                                                 |
+|               |       |              |                                                           |
+|               |       |              | ``nagios`` --- Nagios output                              |
+|               |       |              | :ref:`(see below) <alyvix_robot_result_nagios>`           |
+|               |       |              |                                                           |
+|               |       |              | ``nats-influxdb`` --- NATS to InfluxDB                    |
+|               |       |              | :ref:`(see below) <alyvix_robot_result_nats_influxdb>`    |
++---------------+-------+--------------+-----------------------------------------------------------+
+| -\\-object    | -o    | *<name>*     | Supply the Object name(s)                                 |
++---------------+-------+--------------+-----------------------------------------------------------+
+| -\\-verbose   | -v    | *<n>*        | Set the verbosity level for debugging output              |
+|               |       |              | ranging from **0** (min, default) to **2** (max)          |
+|               |       |              |                                                           |
+|               |       |              | **0**:  Records start/stop timestamps, state and time     |
+|               |       |              | measures for each object (with measure option enabled)    |
+|               |       |              |                                                           |
+|               |       |              | **1**:  Also logs Alyvix actions                          |
+|               |       |              |                                                           |
+|               |       |              | **2**:  Also creates screenshots and annotated            |
+|               |       |              | screenshots as separate .png files in the same directory  |
++---------------+-------+--------------+-----------------------------------------------------------+
 
 
 
@@ -156,16 +159,10 @@ to CLI output mode).
 CLI Output Format
 =================
 
-When run from the command prompt like this:
-
-.. code-block:: doscon
-   :class: medium-code-block
-
-   C:\Alyvix\testcases> alyvix_robot -f start-test
-
-Alyvix Robot will both *(a)* display a short log describing basic events and timing data, and
-*(b)* create a new file based on the original test case, but with more detailed time measures
-added.  A timestamp corresponding to the moment of execution will be appended to the file name:
+When run from the command prompt with the default **-\\-mode** parameter, Alyvix Robot will both
+*(a)* display a short log describing basic events and timing data, and *(b)* create a new file
+based on the original test case, but with more detailed time measures added.  A timestamp
+corresponding to the moment of execution will be appended to the file name:
 
 :file:`<filename>_<full-timestamp>.alyvix`
 
@@ -178,6 +175,7 @@ When run from the command prompt with the default **-m alyvix** parameter, Alyvi
 return human-readable output like the following when successful:
 
 .. code-block:: md
+   :class: nocopy
 
    2019/12/12 18:24:20.405: start starts
    2019/12/12 18:24:21.949: open DETECTED in 0.0s (+/-0.060)
@@ -186,6 +184,7 @@ return human-readable output like the following when successful:
 If it fails instead, the output will appear like this:
 
 .. code-block:: md
+   :class: nocopy
 
    2019/12/12 18:37:41.448: start-test starts
    2019/12/12 18:37:51.762: settings FAILED after 10s
@@ -196,7 +195,29 @@ If you have enabled the :ref:`break flag <alyvix_designer_options_test_case_obje
 test case object fails, no further test case objects will be executed.  If it is not set, then
 the test case object will instead be skipped after its timeout has expired.
 
-When run from the Windows command prompt, you can access the return value as follows:
+If a given test case object is run more than one time in a single script, regardless of whether
+it appears in a sequential node, a conditional or inside a section, only the output of the
+object's last run will be displayed.  However, all results
+:ref:`are still stored <test_case_data_format_measure>` on the **series** element of the test case
+object.  Should you need to see the output of a single test case object when it runs more than
+once, best practice is to use Selector :ref:`to duplicate it <alyvix_selector_interface_object_actions>`
+(this will improve any data visualizations used with the data).
+
+The exception is when a test case object appears in a loop.  In this case, the timing results
+will be output for each key in the loop's map.  For instance, the following example might be
+output after running the script |for|:forblock:`my_map`\ |run|:runblock:`dataentry`, using the
+pattern *<object_name>_<map_name>-<key_name>*:
+
+.. code-block:: md
+   :class: nocopy
+
+   2020/06/03 10:17:08.732: start-test starts
+   2020/06/03 10:17:10.993: dataentry_loop-key1 DETECTED in 0.0s (+/-0.062)
+   2020/06/03 10:17:13.370: dataentry_loop-key2 DETECTED in 0.0s (+/-0.060)
+   2020/06/03 10:17:13.372: start-test ends OK, taking 4.640s.
+
+When run from the Windows command prompt, you can access the return value programmatically as
+follows:
 
 .. code-block:: doscon
    :class: short-code-block
@@ -250,18 +271,21 @@ The time measurements for Nagios are specified as follows (note that *object_tim
 **First nagios output line:**
 
 .. code-block:: html
+   :class: nocopy
 
    <test_case_output_status>: <test_case_output_message> | duration=<test_case_duration_s>s;;; <object_01_name>=<object_01_performance_ms>ms;<object_01_warning_s>s;<object_01_critical_s>s;; <object_02_name>=<object_02_performance_ms>ms;<object_02_warning_s>s;<object_02_critical_s>s;;
 
 **Second nagios output line:**
 
 .. code-block:: html
+   :class: nocopy
 
    FAILED transactions (from first to last): <failed_object_01_name>; <failed_object_02_name>
 
 **Third nagios output line:**
 
 .. code-block:: html
+   :class: nocopy
 
    NOT EXECUTED transactions: <not_executed_object_01_name>; <not_executed_object_02_name>
 
@@ -273,12 +297,12 @@ The time measurements for Nagios are specified as follows (note that *object_tim
 NATS-InfluxDB Output Format
 ===========================
 
-Publish all measures to an InfluxDB database through a NATS channel.  You will need the NATS
-server IP, port, subject name, and measurement name.
+This will publish all measures to an InfluxDB database through a NATS channel.  You will need the
+NATS server IP, port, subject name, and measurement name.
 
 .. code-block::
 
-   alyvix_robot -f vt -m "nats-influxdb <nats_streaming_server_ip>:<port> <influxdb_subject_name> <influxdb_measurement_name>"
+   C:\Alyvix\testcases> alyvix_robot -f vt -m "nats-influxdb <nats_streaming_server_ip>:<port> <influxdb_subject_name> <influxdb_measurement_name>"
 
 
 
@@ -297,13 +321,13 @@ To encrypt a cipher, supply the text to be encrypted and your private key:
 
 .. code-block::
 
-   alyvix_cipher -e <text_string_to_encrypt> -k <private_key>
+   C:\Alyvix\testcases> alyvix_cipher -e <text_string_to_encrypt> -k <private_key>
 
 You can also decrypt a cipher as follows:
 
 .. code-block::
 
-   alyvix_cipher -d <text_string_to_decrypt> -k <private_key>
+   C:\Alyvix\testcases> alyvix_cipher -d <text_string_to_decrypt> -k <private_key>
 
 To use the encrypted text string, put it in the
 :ref:`string box <alyvix_designer_options_strings_top>` of an object component.
@@ -312,7 +336,7 @@ You can then run a test case with encrypted strings by supplying the private key
 
 .. code-block::
 
-   alyvix_robot -f <test_case_name> -k <private_key>
+   C:\Alyvix\testcases> alyvix_robot -f <test_case_name> -k <private_key>
 
 
 

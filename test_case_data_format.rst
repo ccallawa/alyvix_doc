@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 26-05-2020
+:modified: 16-06-2020
 :tags: test cases, data format
 :lang: en-US
 :translation: false
@@ -62,7 +62,7 @@ For example:
 Test Case JSON Structure
 ========================
 
-.. topic:: Alyvix Test Case Object JSON Structure
+.. topic:: Alyt Case Objecvix Test JSON Structure
 
    A single ``.alyvix`` file stores the entire test case and holds all measures resulting from
    a single execution run.
@@ -96,6 +96,7 @@ The following example JSON structure illustrates the high-level structure of the
                "timeout_s": 10,
                "type": "appear" },
             "measure": {
+               "group": "<transaction-group-name>",
                "output": true,
                "series": { },
                "thresholds": { } }
@@ -149,15 +150,15 @@ The individual sections of the JSON structure are explained below.
 
    #. :bolditalic:`maps`
       :rawhtml:`<a href="glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`
-      **---** An ordered set of values that a script can loop over, for
+      **---**  An ordered set of values that a script can loop over, for
       instance to insert a sequence of values in multiple text fields
-   #. :bolditalic:`objects` **---** A list of the individual test case objects created with
+   #. :bolditalic:`objects`  **---**  A list of the individual test case objects created with
       Alyvix Designer.  Each :glossdef:`test case object`
       :rawhtml:`<a href="glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
       is identified uniquely in the list by its object name
    #. :bolditalic:`script`
       :rawhtml:`<a href="glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
-      **---** The scripts created for a test case, both the main script and any section
+      **---**  The scripts created for a test case, both the main script and any section
       (subroutine) scripts.
 
 
@@ -197,37 +198,38 @@ The individual sections of the JSON structure are explained below.
            "components": { },
            "date_modified": "<timestamp>",
            "detection": { },
-           "measure": {
-               "series": { } }
+           "measure": { }
         }
       }
 
    .. rst-class:: bignums
       :class: backdarkbeige
 
-   #. :bolditalic:`call` **---** The recorded options to start or kill an external application
+   #. :bolditalic:`call`  **---**  The recorded options to start or kill an external application
       when a test case object is :ref:`first called <alyvix_designer_options_components_root>`
-   #. :bolditalic:`components` **---** The representation for the :glossdef:`component tree`
+   #. :bolditalic:`components`  **---**  The representation for the :glossdef:`component tree`
       :rawhtml:`<a href="glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
-      (detailed below)
-   #. :bolditalic:`date_modified` **---** The time the test case object was last modified,
-      :ref:`displayed in Selector <alyvix_selector_interface_screenshot>`
-   #. :bolditalic:`detection` **---** The test case object's
+      (:ref:`detailed below <test_case_data_format_components>`)
+   #. :bolditalic:`date_modified`  **---**  The time the test case object was last modified
+      (:ref:`also displayed in Selector <alyvix_selector_interface_screenshot>`)
+   #. :bolditalic:`detection`  **---**  The test case object's
       :ref:`detection conditions <alyvix_designer_options_test_case_object>` such as *timeout*, *break*,
       and *appear/disappear*
+   #. :bolditalic:`measure`  **---**  Details of the last execution via Alyvix Editor or Robot
+      (:ref:`see below <test_case_data_format_measure>`), along with the settings for transaction
+      group, output, and thresholds.
 
 
-.. comment #. :bolditalic:`measure` **---**
-
+.. _test_case_data_format_components:
 
 .. rst-class:: bignums
    :class: backdarkbeige nobignum
 
-#. .. rubric:: *Objects* >> *Components*
+#. .. rubric:: *Objects* > *{object}* > *Components*
 
    The *components* section represents the :ref:`component tree <alyvix_designer_component_tree_top>`
-   of a test case object.  The example below shows how you can have one component tree at each
-   distinct screen resolution.
+   of a given test case object.  The example below shows how you can have one component tree at
+   each distinct screen resolution.
 
    .. code-block:: json
       :class: tiny-code-block
@@ -247,81 +249,146 @@ The individual sections of the JSON structure are explained below.
               "screen": "<base64>" } }
       }
 
-   .. rst-class:: bignums
-      :class: backdarkbeige
+   :bolditalic:`<resolution>`  **---**  The resolution of a screen capture as shown in
+   :ref:`Alyvix Selector <alyvix_selector_interface_screenshot>`.  This value is not selected by
+   the user, but is dependent on the hardware and the settings in use when the screen is
+   captured.
 
-   #. :bolditalic:`<resolution>` **---**  The resolution of a screen capture as shown in
-      :ref:`Alyvix Selector <alyvix_selector_interface_screenshot>`.  This value is not selected by
-      the user, but is dependent on the hardware and the settings in use when the screen is
-      captured.
+   .. rst-class:: bignums
+      :class: backmedbeige
+
+   #. :bolditalic:`groups`
+      :rawhtml:`<a href="glossary.html#glossary-group"><i class="fa fa-tiny fa-question-circle"></i></a>`
+      **---**  A JSON array of exactly 3 items, each of which corresponds
+      to one of the groups in the component tree.
 
       .. rst-class:: bignums
-         :class: backmedbeige
+         :class: backlightbeige
 
-      #. :bolditalic:`groups`
-         :rawhtml:`<a href="glossary.html#glossary-group"><i class="fa fa-tiny fa-question-circle"></i></a>`
-         **---**  A JSON array of exactly 3 items, each of which corresponds
-         to one of the groups in the component tree.
+      #. :bolditalic:`main`  **---**  The main component in a group.
 
          .. rst-class:: bignums
             :class: backlightbeige
 
-         #. :bolditalic:`main` **---** The main component in a group.
+         #. :bolditalic:`detection`  **---**  Information about the match method to use when
+            trying to detect the region of interest.
+         #. :bolditalic:`interactions`  **---**  Details on any mouse or keyboard actions to
+            initiate in the event of a positive detection.
+         #. :bolditalic:`visuals`  **---**  Information about the region of interest and the
+            selection box laid over the screen capture.
 
-            .. rst-class:: bignums
-               :class: backlightbeige
+      #. :bolditalic:`subs`  **---**  A JSON array of exactly 4 items, each of which corresponds
+         to one of the subcomponents in a group.  The structure of each element is identical to
+         the structure of the main component above.
 
-            #. :bolditalic:`detection` **---** Information about the match method to use when
-               trying to detect the region of interest.
-            #. :bolditalic:`interactions` **---** Details on any mouse or keyboard actions to
-               initiate in the event of a positive detection.
-            #. :bolditalic:`visuals` **---** Information about the region of interest and the
-               selection box laid over the screen capture.
+   #. :bolditalic:`screen`  **---**  The |base64-link| representation of the screen capture.
+      There is exactly one screen capture for each resolution in a test case object.
 
-         #. :bolditalic:`subs` **---**  A JSON array of exactly 4 items, each of which corresponds
-            to one of the subcomponents in a group.  The structure of each element is identical to
-            the structure of the main component above.
 
-      #. :bolditalic:`screen` **---** The |base64-link| representation of the screen capture.
-         There is exactly one screen capture for each resolution in a test case object.
-
+.. _test_case_data_format_measure:
 
 .. rst-class:: bignums
    :class: backdarkbeige nobignum
 
-#. .. rubric:: *Objects* >> *Measure*
+#. .. rubric:: *Objects* > *{object}* > *Measure*
 
-   The *measure* section contains the recorded data of all runs by Alyvix Robot.
+   The *measure* structure holds some of the user-selected options
+   :ref:`visible in Selector <alyvix_selector_interface_headers>` for a given test case object,
+   along with the **series** array, which contains recorded data resulting from each run of the
+   test case object by Alyvix Robot in the test case's script within a single session.
+
+   When a test case is executed, its :file:`.alyvix` file is taken as the starting point, and thus
+   the **series** structure for all of its test case objects are empty.  Each time a test case
+   object is called by the test case script, the results and auxiliary data are added to **series**
+   as a new array element.
+
+   This example shows the structure and some default values:
 
    .. code-block:: json
       :class: short-code-block
 
       { "measure": {
+          "group": "<transaction-group-name>",
           "output": "<true/false>",
           "series": [
               {
-                  "accuracy_ms": "<ms_amount>",
+                  "accuracy_ms": "<ms-amount>",
                   "annotation": "<base64>",
                   "exit": "<true/false/fail/not_executed>",
-                  "performance_ms": "<ms_amount>",
+                  "performance_ms": "<ms-amount>",
                   "records": {
                       "check": "<true/false>",
-                      "extract": "<extracted_text>",
-                      "image": "<extracted_image>",
-                      "text": "<scraped_text>"
+                      "extract": "<extracted-text>",
+                      "image": "<base64>",
+                      "text": "<scraped-text>"
                   },
                   "resolution": {
-                      "height": "<pixel_amount>",
-                      "width": "<pixel_amount>"
+                      "height": "<pixel-amount>",
+                      "width": "<pixel-amount>"
                   },
-                  "scaling_factor": "<zoom_amount>",
+                  "scaling_factor": "<zoom-amount>",
                   "screenshot": "<base64>",
                   "timestamp": "<epoch>"
               }
           ],
-          "thresholds": { } }
+          "thresholds": {
+              "critical_s": 5,
+              "warning_s": 3 }
       }
 
+   .. rst-class:: bignums
+      :class: backdarkbeige
+
+   #. :bolditalic:`group`  **---**  The transaction group assigned to the test case object.
+
+   #. :bolditalic:`output`  **---**  Whether the test case object's "Measure" checkbox is marked.
+
+   #. :bolditalic:`series`  **---**  An array containing the results and auxiliary data for each
+      run of the parent test case object.  It contains the following information:
+
+      .. rst-class:: bignums
+         :class: backmedbeige
+
+      #. :bolditalic:`accuracy_ms`  **---**  Given the performance measurement from the same run
+         (see below), this is the interval (+/-) over which that measurement is guaranteed to have
+         occurred.
+
+      #. :bolditalic:`annotation`  **---**  The |base64-link| representation of the screen when the
+         test case object was being run, overlaid with graphic annotations to indicate those
+         components that matched, and potentially the first component that did not match.
+
+      #. :bolditalic:`exit`  **---**  The result type of the most recent run.  If the test case
+         object did not match, then the type ``false`` or ``fail`` is determined by whether the
+         :guilabel:`break` flag was set.
+
+      #. :bolditalic:`performance_ms`  **---**  The number of milliseconds that elapsed from when
+         the run of a test case object began until a match was confirmed, subject to the accuracy
+         interval described above; otherwise ``-1``.
+
+      #. :bolditalic:`records`  **---**  Temporary variables that are computed during the matching
+         process, such as a text string extracted by a text component.
+
+      #. :bolditalic:`resolution`  **---**  The screen resolution at which the test case object
+         was executed.
+
+      #. :bolditalic:`scaling_factor`  **---**  The Windows zoom level at the time when the test
+         case object was executed.
+
+      #. :bolditalic:`screenshot`  **---**  The |base64-link| representation of the screen during
+         the test case object run.  It's similar to the main screen capture, but is made during
+         the execution phase, rather than during the building phase.
+
+      #. :bolditalic:`timestamp`  **---**  The time (Unix epoch) when this series element
+         was run; otherwise ``-1``.
+
+   #. :bolditalic:`thresholds`  **---**  The number of elapsed seconds after the test case object
+      has been started until a ``warning`` and/or ``critical`` alert should be triggered.  If no
+      values are specified, no alerts will be triggered.
+
+   |
+
+
+.. _test_case_data_format_script:
 
 .. rst-class:: bignums
    :class: backdarkbeige nobignum
@@ -357,7 +424,7 @@ The individual sections of the JSON structure are explained below.
    .. rst-class:: bignums
       :class: backdarkbeige
 
-   #. :bolditalic:`case` **---** The main script that will be
+   #. :bolditalic:`case`  **---**  The main script that will be
       :ref:`executed by Alyvix Robot <test_case_execution_top>`.  The script is an ordered
       list of :ref:`scripting elements <alyvix_editor_scripting_node_expressions>`, where a simple,
       enabled element is just the name of a test case object.  Other elements have the following
@@ -366,17 +433,17 @@ The individual sections of the JSON structure are explained below.
       .. rst-class:: bignums
          :class: backlightbeige
 
-      #. :bolditalic:`disable` **---** Skip this test case object and continue with the next.
-      #. :bolditalic:`flow` **---** Indicates the test case object or section that is the value
+      #. :bolditalic:`disable`  **---**  Skip this test case object and continue with the next.
+      #. :bolditalic:`flow`  **---**  Indicates the test case object or section that is the value
          of this key should be executed by Alyvix Robot in the context of a conditional
          (*if-true* or *if-false*) or a loop (*map*) .
-      #. :bolditalic:`if-true` **---** Evaluates whether the detection part of a given test case
+      #. :bolditalic:`if-true`  **---**  Evaluates whether the detection part of a given test case
          object would match, but without executing its actions.
-      #. :bolditalic:`if-false` **---** As above, but if the test case object would not match.
-      #. :bolditalic:`for` **---** Indicates there should be a loop over the values in the
+      #. :bolditalic:`if-false`  **---**  As above, but if the test case object would not match.
+      #. :bolditalic:`for`  **---**  Indicates there should be a loop over the values in the
          specified :ref:`Map <alyvix_editor_interface_maps>`.
 
-   #. :bolditalic:`sections` **---** Corresponds to the
+   #. :bolditalic:`sections`  **---**  Corresponds to the
       :ref:`named subroutine scripts <alyvix_editor_script_mgmt_top>` created in Alyvix Editor.
       Each section is a parameter where its key is the name of the section and its value is the
       same as the :bolditalic:`case` value described above.
@@ -384,7 +451,7 @@ The individual sections of the JSON structure are explained below.
       .. rst-class:: bignums
          :class: backlightbeige
 
-      #. :bolditalic:`exit` **---** The (teardown) script to execute when a script has
+      #. :bolditalic:`exit`  **---**  The (teardown) script to execute when a script has
          completed, regardless of whether it succeeded or failed.
-      #. :bolditalic:`fail` **---** The (teardown) script to execute when a script has failed
+      #. :bolditalic:`fail`  **---**  The (teardown) script to execute when a script has failed
          during the execution of its test case objects.

@@ -177,6 +177,9 @@
 .. role:: runblock
    :class: greenblock
 
+.. role:: forblock
+   :class: orangeblock
+
 .. role:: bolditalic
    :class: bolditalic
 
