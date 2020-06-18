@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 10-06-2020
+:modified: 18-06-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -38,12 +38,14 @@ necessary for creating complex behaviors.  The script management panel is divide
 
 From the script management panel you can:
 
-* Click on a script's name to show its contents in the
+* Click on the name of a script or map to show its contents in the
   :ref:`scripting panel <alyvix_editor_scripting_panel_top>`
 * **Add** a new Section or Map element (see below) with the :nobutton:`ADD` action
 * **Delete** an existing section or map element with the :gbutton:`REMOVE` action
-* Use the |bar-icon| icon to drag a section or map element and drop it in the currently opened
-  script in the scripting panel
+* Use the |4arrows-icon| icon to drag a section or map element and drop it at any desired point
+  in the currently opened script in the scripting panel
+* Use the |lineadd-icon| icon to add a Section (as a |run| expression) or a Map (as a |for|
+  expression) to the bottom of the currently opened script in the scripting panel
 
 
 
@@ -82,8 +84,8 @@ will become dark green to indicate it is a section.
 
 .. note::
 
-   You cannot use a section as the condition in an |if-true| or |if-false| expression,
-   although you can use it as the argument of a conditional or a |for| expression.
+   You cannot use a section as the antecedent (condition) in an |if-true| or |if-false| expression,
+   although you can use it as the consequent, or as the argument of a |for| expression.
 
 .. tip::
 

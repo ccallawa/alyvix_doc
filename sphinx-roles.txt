@@ -98,6 +98,9 @@
 
    <i class="fa fa-small fa-black fa-arrows" style="vertical-align: top;"></i>
 
+.. |lineadd-icon| image:: /pictures/lineadd_icon.png
+   :class: inline-image-higher
+
 .. |halftab| raw:: html
 
    &nbsp; &nbsp;
@@ -124,9 +127,6 @@
 
 .. |runblue| image:: /pictures/button_run_blue.png
    :class: inline-image-higher button-boxshadow
-
-.. |lineadd-icon| image:: /pictures/lineadd_icon.png
-   :class: inline-image-higher
 
 .. |pivotal| image:: pictures/pt_logo.png
    :height: 38px

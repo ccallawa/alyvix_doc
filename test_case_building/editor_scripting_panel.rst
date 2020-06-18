@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 16-06-2020
+:modified: 18-06-2020
 :tags: editor, script, blocks, run, loop
 :lang: en-US
 :translation: false
@@ -31,34 +31,60 @@ When Alyvix Robot :ref:`executes a script <test_case_execution_top>`, it will in
 web browser, other app, or even Windows itself, by following your script step by step, executing
 each test case object in the order indicated by the script.
 
-When Editor is first started with a new test case, there are no scripted elements yet, and thus
-the scripting panel is empty (the Monitor tab appears once a test case object has been created):
+When Editor is first started with a new test case, there are no *scripting nodes* (elements that
+can appear in a script) yet, and thus the scripting panel is empty (the Monitor tab appears once
+a test case object has been created):
 
 .. image:: images/ae_empty_script_panel.png
    :class: image-boxshadow
    :alt: The scripting panel when empty.
 
-To create a new script, drag a test case object from Selector using its |bar-icon| icon and drop
-it into the scripting panel.  This will create a new *scripting node* that appears in light green
-with a |run| icon to its left, indicating this test case object will be executed when the
-:guilabel:`MAIN` script is invoked.
 
-More test case objects can be added by dragging them towards their correct position in the
-scripting panel.  When you drag a test case object, section or map and hover over an available
-position, the mouse pointer will switch from the |ban-icon| icon to showing the name of the test
-case object, moving other script nodes out of the way if necessary:
 
-.. image:: images/ae_insert_test_case_object.png
-   :class: image-boxshadow
-   :alt: Inserting a new script node in Alyvix Editor
+.. _alyvix_editor_scripting_node_add:
 
-You can replace an existing test case object by dragging a new one directly above it, and select
-multiple scripting nodes with the usual :kbd:`Ctrl` and :kbd:`Shift` key combinations.
+======================
+Adding Scripting Nodes
+======================
+
+There are several methods you can use to create a new scripting node in the scripting panel:
+
+* **Immediately insert a node at the bottom** of the currently displayed script in the scripting
+  panel with the |lineadd-icon| action:
+
+  * In Selector, |lineadd-icon| adds the associated test case object as a new |run| scripting node.
+  * Clicking on |lineadd-icon| of a section will add it as a |run| expresion, while a map will
+    appear as a |for| scripting node.
+
+* **Drag and Drop to any location** in the scripting panel with the |4arrows-icon| action:
+
+  * Drag a test case object from Selector to create a new *scripting node* (see below) that
+    appears as a |run| expression :ref:`in light green <alyvix_editor_scripting_node_legend>`,
+    indicating this test case object will be executed when its script is invoked.
+  * Drag a :ref:`section or map into the script management panel <alyvix_editor_script_mgmt_top>`.
+    As above, a section or map will show up as a |run| or |for| expression respectively.
+
+
+  When you drag a test case object, section or map and hover over an available position, the mouse
+  pointer will switch from the |ban-icon| icon to showing the name of the test case object, moving
+  other scripting nodes out of the way if necessary:
+
+  .. image:: images/ae_insert_test_case_object.png
+     :class: image-boxshadow
+     :alt: Inserting a new scripting node in Alyvix Editor
+
+Multiple test case objects can be added with the above methods to create scripts as large as
+necessary for the task.
+
+You can replace an existing test case object by dragging a new one directly above it.  You can
+also select multiple scripting nodes as usual in Windows with the usual :kbd:`Ctrl` and
+:kbd:`Shift` key combinations.
 
 Two adjacent scripting nodes will be executed in sequence, with the lower node inheriting the
 state of the GUI that was modified by the node preceding it.  So for instance in the script
 above, the |run|:runblock:`enter_login` node would be executed before
-|run|:runblock:`check_login_success`.
+|run|:runblock:`check_login_success`.  The other types of scripting nodes are explained in the
+following section.
 
 
 
@@ -72,7 +98,8 @@ There are four modes for scripting nodes that can be used in the scripting panel
 
 .. rst-class:: bignums
 
-#. *Sequential Run* --- Simply run the test case object, then continue to the next one.
+#. *Sequential Run* --- Simply run the test case object corresponding to that scripting node, then
+   continue to the next one.  If there are no more nodes left, the execution phase stops.
 
    ..
 
@@ -104,7 +131,7 @@ There are four modes for scripting nodes that can be used in the scripting panel
 
    |for| + :file:`Map Name` + |run| + :file:`Object/Section`
 
-Double-clicking on a scripted node's mode will cycle it through the other modes in this order:
+Double-clicking on a scripting node's mode will cycle it through the other modes in this order:
 
 |run| **>** |if-true| **>** |if-false| **>** |run|
 

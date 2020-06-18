@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 26-05-2020
+:modified: 18-06-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -119,7 +119,7 @@ Test Case Object List
 This list shows all test case objects contained in the :file:`.alyvix` file corresponding to the
 currently selected tab.
 
-The values for most fields in the primary tab can be changed directly without opening Designer.
+The values for many fields in the primary tab can be changed directly without opening Designer.
 This can be accomplished by simply clicking on the existing value (or blank space where it should
 go), entering the new value, and then either pressing :kbd:`Enter` or clicking elsewhere in the
 list.
@@ -142,11 +142,11 @@ can be entered.  When a value is not valid you will see an error message like th
 
    The values of test case objects in secondary tabs cannot be changed.
 
-
-The |bar-icon| icon at the start of each row allows you to (1) select that test case object, or
-(2) *drag-and-drop* the test case into the
-:ref:`Editor scripting panel <alyvix_editor_scripting_panel_top>`
-when Selector is not being used as a standalone application.
+When Selector is being used as part of Alyvix Editor, the |4arrows-icon| and |lineadd-icon| icons
+at the start of each row allow you to
+:ref:`add the corresponding test case object to the scripting panel <>`
+by using *drag-and-drop* or appending  it to the
+:ref:`scripting panel <alyvix_editor_scripting_panel_top>`.
 
 The :kbd:`Shift` and :kbd:`Control` keys work together with the mouse to select multiple rows
 in the standard way when using Windows applications.  Selected rows are shown with a light blue

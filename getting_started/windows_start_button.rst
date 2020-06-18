@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 03-01-2020
-:modified: 22-05-2020
+:modified: 18-08-2020
 :tags: getting, started, beginner, windows, start, editor
 :lang: en-US
 :translation: false
@@ -80,8 +80,8 @@ Tutorials similar to this one are also available in
       :class: image-with-border
       :alt: The start button test case in Alyvix Selector
 
-#. Using the |bar-icon| icon next to :guilabel:`PressStartButton`, drag the new test case object
-   and drop it into the Scripting panel marked :bbutton:`Script: MAIN`.
+#. Click on the |lineadd-icon| action next to :guilabel:`PressStartButton` shown in the screenshot
+   above to insert the new test case object into the Scripting panel marked :bbutton:`Script: MAIN`:
 
    .. image:: images/ae_basic_script_element.png
       :class: image-with-border

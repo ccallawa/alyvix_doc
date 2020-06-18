@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 16-06-2020
+:modified: 18-06-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -23,7 +23,8 @@ consists of multiple test case objects, organized as
 along with :ref:`Sections <alyvix_editor_interface_sections>`
 and :ref:`Maps <alyvix_editor_interface_maps>`.
 
-The Editor interface includes the Alyvix Selector and Designer modules as collapsible panels,
+The Editor interface includes the Alyvix :ref:`Selector <alyvix_selector_interface_top>`
+and :ref:`Designer <alyvix_designer_interface_overview>` modules as collapsible panels,
 which lets you easily inspect and choose test case objects to include when building your scripts.
 
 To :ref:`run Alyvix Editor from the command prompt <test_case_building_editor_launch>`,
@@ -48,7 +49,7 @@ This loads the Editor interface, whose layout has the following elements:
    and the :ref:`Scripting panel <alyvix_editor_scripting_panel_top>` (right)
 #. The :ref:`Selector <alyvix_selector_interface_top>` pane, containing :glossdef:`test case objects`
    :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
-   that can be dragged to the Scripting panel
+   that can be added to the Scripting panel
 #. The :ref:`Designer <alyvix_designer_interface_overview>` pane, which shows the details of
    the currently selected test case object
 
@@ -87,8 +88,8 @@ This loads the Editor interface, whose layout has the following elements:
    object, and the :guilabel:`Console` tab to
    :ref:`show the output along with any potential failure causes<alyvix_editor_run_script>`
    after running the test case script from within Alyvix Editor
-#. The :ref:`scripting panel <alyvix_editor_scripting_panel_top>`, containing the individual
-   scripting nodes
+#. The :ref:`scripting panel <alyvix_editor_scripting_panel_top>`, containing individual
+   scripting nodes and the logic connecting them
 #. The script properties and actions that work both for single nodes and subsets of nodes, where
    you can enable, disable, run, or remove the scripted elements that have been placed in the
    scripting panel
