@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 18-06-2020
+:modified: 19-06-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -55,9 +55,13 @@ This loads the Editor interface, whose layout has the following elements:
 
 
 
-.. topic:: Editor-Specific Features
+.. _alyvix_editor_interface_features:
 
-   The principle interface elements specific to Alyvix Editor are:
+========================
+Editor-Specific Features
+========================
+
+The principle interface elements specific to Alyvix Editor are:
 
 .. image:: images/ae_main_screen_numbered.png
    :class: image-boxshadow
@@ -91,8 +95,8 @@ This loads the Editor interface, whose layout has the following elements:
 #. The :ref:`scripting panel <alyvix_editor_scripting_panel_top>`, containing individual
    scripting nodes and the logic connecting them
 #. The script properties and actions that work both for single nodes and subsets of nodes, where
-   you can enable, disable, run, or remove the scripted elements that have been placed in the
-   scripting panel
+   you can :ref:`enable, disable, run, or remove <alyvix_editor_scripting_node_actions>` the
+   scripted elements that have been placed in the scripting panel
 #. Panel resizing controls, allowing you to resize, minimize, or restore the three peripheral
    panels
 
@@ -100,9 +104,11 @@ This loads the Editor interface, whose layout has the following elements:
 
 .. _alyvix_editor_interface_menu:
 
-.. topic::  The Test Case Menu
+==================
+The Test Case Menu
+==================
 
-   The following actions are available from Editor's menu:
+The following actions are available from Editor's menu:
 
 * |runblue| --- Run the current script displayed in the scripting panel (see below)
 * **New** --- Throw away the current test case, replacing it with an empty one
@@ -115,12 +121,14 @@ This loads the Editor interface, whose layout has the following elements:
 
 .. _alyvix_editor_interface_monitor:
 
-.. topic::  The Monitor Tab
+===============
+The Monitor Tab
+===============
 
-   When you need to quickly just look at the positions of components in a test case object
-   without making any changes, the fastest way isn't to return to editing the test case object
-   in Designer.  Instead you can use the monitor tab to see the screen capture for the currently
-   selected test case object.
+When you need to quickly just look at the positions of components in a test case object
+without making any changes, the fastest way isn't to return to editing the test case object
+in Designer.  Instead you can use the monitor tab to see the screen capture for the currently
+selected test case object.
 
 .. image:: images/ae_monitor_tab_sized.png
    :class: image-with-border
@@ -132,11 +140,13 @@ This loads the Editor interface, whose layout has the following elements:
 
 .. _alyvix_editor_run_script:
 
-.. topic::  Launching Alyvix Robot from Alyvix Editor
+=========================================
+Launching Alyvix Robot from Alyvix Editor
+=========================================
 
-   The script of the test case currently loaded in Editor can be run by pressing the |runblue|
-   button at the top left.  The starting point is the :nobutton:`MAIN` script specified in the
-   :ref:`scripting panel <alyvix_editor_script_mgmt_top>`.
+The script of the test case currently loaded in Editor can be run by pressing the |runblue|
+button at the top left.  The starting point is the :nobutton:`MAIN` script specified in the
+:ref:`scripting panel <alyvix_editor_script_mgmt_top>`.
 
 When run, Editor will be minimized until the scripted interaction has completed, after which
 Editor will reappear with the output available in the Console tab.

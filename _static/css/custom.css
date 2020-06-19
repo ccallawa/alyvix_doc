@@ -483,6 +483,10 @@ a:visited .fa::before {
     font-size: 16px;
     padding-right: 4px;
 }
+.fa-smaller::before {
+    font-size: 13px;
+    padding: 0 0 0 2px;
+}
 .fa-tiny::before {
     font-size: 12px;
     padding-right: 0px;

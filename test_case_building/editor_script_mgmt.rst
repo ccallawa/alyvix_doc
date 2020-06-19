@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 18-06-2020
+:modified: 19-06-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -11,9 +11,9 @@
 
 .. _alyvix_editor_script_mgmt_top:
 
-****************************
-Editor: Scripting Management
-****************************
+************************
+Editor: Managing Scripts
+************************
 
 The script management panel organizes and provides quick access to the :glossdef:`scripts`
 :rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
@@ -42,10 +42,13 @@ From the script management panel you can:
   :ref:`scripting panel <alyvix_editor_scripting_panel_top>`
 * **Add** a new Section or Map element (see below) with the :nobutton:`ADD` action
 * **Delete** an existing section or map element with the :gbutton:`REMOVE` action
-* Use the |4arrows-icon| icon to drag a section or map element and drop it at any desired point
+* Use the |4arrows-icon| icon to **drag** a section or map element and drop it at any desired point
   in the currently opened script in the scripting panel
-* Use the |lineadd-icon| icon to add a Section (as a |run| expression) or a Map (as a |for|
+* Use the |lineadd-icon| action to **add** a Section (as a |run| expression) or a Map (as a |for|
   expression) to the bottom of the currently opened script in the scripting panel
+* Use the |play-icon| action to immediately :ref:`run a Section script <alyvix_editor_interface_debug>`
+  against the current interface as though :ref:`you had pressed <alyvix_editor_run_script>` the
+  |runblue| button
 
 
 
@@ -126,3 +129,42 @@ inserted.  The map interface is shown here, with the available actions listed be
 * :wbutton:`ADD ROW` --- Add a new row to the bottom of the table
 * :nobutton:`ADD COLUMN` --- Add a new column to the right of the table
 * |times-icon| --- Delete a row or the rightmost column
+
+
+
+.. _alyvix_editor_interface_debug:
+
+=================
+Debugging Scripts
+=================
+
+When composing scripts, you often need to check that one or more of the test case objects you've
+just created work correctly before proceeding to build the following one.  As your scripts get
+longer or more complex, regularly testing objects becomes more important.  Without it you risk
+losing significant time when you have to modify later objects in the script because an intermediate
+one was built incorrectly.
+
+There are two main problems to overcome when debugging scripts:
+
+* Executing a script either via the |runblue| :ref:`button in Editor <alyvix_editor_run_script>` or
+  via :ref:`Alyvix Robot <alyvix_robot_cli_options>` will launch the script from the very first
+  node, although what you often need during debugging is to start at an intermediate stage
+* When starting at an intermediate stage, the application or browser's interface must match the
+  expectations of the (first) test case object being debugged
+
+There are several methods you can use to debug both individual nodes and parts of scripts, as
+opposed to the entire script:
+
+* Use the **Disable/Enable** functionality to temporarily turn off nodes in the scripting panel
+  that don't need to be tested, and then press the |runblue| button.  Note that when done, you
+  must remember to re-enable the scripting nodes.
+* Use the |play-icon| action :ref:`in Selector <alyvix_selector_interface_top>` to either run a
+  single test case object or to run a single :ref:`section <alyvix_editor_interface_sections>`.
+  (Note that running a section this way will run every enabled scripting node in that section.)
+* Select one or more scripting nodes with the mouse and then use the :wbutton:`Run Selection`
+  button to run just those nodes.  Unlike disabling, you do not need to remember to re-enable
+  them later.
+
+When using both the disable/enable and run selection strategies, you can select the starting
+point of the script to match the current state of the application or browser's interface.
+

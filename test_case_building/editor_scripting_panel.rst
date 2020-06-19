@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 18-06-2020
+:modified: 19-06-2020
 :tags: editor, script, blocks, run, loop
 :lang: en-US
 :translation: false
@@ -172,8 +172,20 @@ illustrates an example script, where each color is explained in the table below.
    | Dark green  | An enabled Section script (subroutine)                             |
    +-------------+--------------------------------------------------------------------+
 
-The two buttons at the bottom of the scripting panel work as follows:
+
+
+.. _alyvix_editor_scripting_node_actions:
+
+======================
+Scripting Node Actions
+======================
+
+The two buttons at the :ref:`bottom of the scripting panel <alyvix_editor_interface_features>`
+work as follows:
 
 * :wbutton:`DISABLE/ENABLE` :  Toggle whether a scripting node is enabled or disabled.  Disabling
-  allows you to temporarily switch off a given node without having to delete it and later re-add it.
-* :rbutton:`REMOVE` :  Delete a scripting node
+  allows you to temporarily switch off a given node without having to delete it and later re-add it,
+  which may be useful for example when :ref:`debugging scripts <alyvix_editor_interface_debug>`.
+* :wbutton:`RUN SELECTION` : Immediately execute the set of scripting nodes selected with the
+  mouse, which again can be useful when debugging scripts.
+* :rbutton:`REMOVE` :  Delete a scripting node.

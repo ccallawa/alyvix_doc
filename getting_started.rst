@@ -17,7 +17,7 @@ Getting Started
 
 Before using Alyvix, you'll first need to :ref:`take a minute to install it <install_release_top>`.
 
-To follow along with the examples in this section on your own system, you'll need to run the
+To follow along with the examples in this section on your own system, you'll need to open the
 Windows Command Prompt (**Start > Windows System > Command Prompt**) and switch to the directory
 where you want to keep your test cases, for example:
 

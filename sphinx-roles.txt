@@ -92,11 +92,11 @@
 
 .. |play-icon| raw:: html
 
-   <i class="fa fa-small fa=black fa-play" style="vertical-align: top;"></i>
+   <i class="fa fa-smaller fa-play"></i>
 
 .. |4arrows-icon| raw:: html
 
-   <i class="fa fa-small fa-black fa-arrows" style="vertical-align: top;"></i>
+   <i class="fa fa-smaller fa-arrows"></i>
 
 .. |lineadd-icon| image:: /pictures/lineadd_icon.png
    :class: inline-image-higher

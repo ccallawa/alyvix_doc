@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 16-06-2020
+:modified: 19-06-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -42,6 +42,11 @@ properly during the development phase:
   default **-\\-mode** option (alyvix/CLI)
 
 In either case, one test case is executed at a time.
+
+.. note::
+
+   You can also :ref:`run individual elements <alyvix_editor_interface_debug>` of a test case's
+   script which can be especially useful when debugging them.
 
 
 
