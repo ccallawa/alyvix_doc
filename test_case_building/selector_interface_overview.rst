@@ -67,14 +67,16 @@ The principle interface elements are:
    one line for each object.
 #. The **list actions** let you quickly select or deselect all test case objects in the list, and
    copy the name of a test case object.
-#. The **filtering and search** fields let you select all test case objects with a given resolution
-   and scaling factor, or that contain a given text string in either the :guilabel:`Name` or
-   :guilabel:`Date modified` fields.  The :guilabel:`Search` field uses a non-regex substring
-   search, and the |times-icon| action clears this field.
-#. The **test case object buttons** like :wbutton:`EDIT`, :wbutton:`DUPLICATE` and :rbutton:`REMOVE`
-   act on the :ref:`currently selected test case objects <alyvix_selector_interface_object_actions>`
-   in the list.  The :wbutton:`ADD` button will initiate a new screen capture (after a specified
-   *DELAY* in seconds) to define a new test case object.
+#. The **filtering and search** fields let you select all test case objects with a given
+   :ref:`screen resolution <alyvix_selector_interface_grab_resolution>` and scaling factor, or
+   that contain a given text string in either the :guilabel:`Name` or :guilabel:`Date modified`
+   fields.  The :guilabel:`Search` field uses a non-regex substring search, and the |times-icon|
+   action clears this field.
+#. The **test case object buttons**, :wbutton:`GRAB`, :wbutton:`EDIT`,
+   :wbutton:`DUPLICATE` and :rbutton:`REMOVE` act on the :ref:`currently selected test case
+   objects <alyvix_selector_interface_object_actions>` in the list.  The :wbutton:`ADD` button
+   will initiate a new screen capture (after a specified :nobutton:`Delay` in seconds) to define
+   a new test case object.
 #. The :bbutton:`OK` and :nobutton:`CANCEL` buttons will exit Alyvix Selector, either saving or
    discarding any changes, respectively.
 
@@ -103,7 +105,7 @@ The list headers have the following characteristics:
   :ref:`test case object options <alyvix_designer_options_test_case_object>` in Designer
 * **Warning, Critical:**  The threshold values set for integration with monitoring
 * **Resolution:**  The horizontal and vertical pixel resolution, and the scaling factor (Windows
-  zoom) of the test case object's screen capture
+  zoom) of the test case object's :ref:`screen capture <alyvix_selector_interface_grab_resolution>`
 * The **Screen** element is a thumbnail of the frame on which that test case object is defined,
   which can be especially helpful distinguishing between them when you have a large number of
   objects in a single file
@@ -142,15 +144,19 @@ can be entered.  When a value is not valid you will see an error message like th
 
    The values of test case objects in secondary tabs cannot be changed.
 
-When Selector is being used as part of Alyvix Editor, the |4arrows-icon| and |lineadd-icon| icons
-at the start of each row allow you to
+When Selector is being used as part of Alyvix Editor, the |4arrows-icon| and |lineadd-icon| action
+icons at the start of each row allow you to
 :ref:`add the corresponding test case object to the scripting panel <alyvix_editor_scripting_node_add>`
 by using *drag-and-drop* or appending  it to the
-:ref:`scripting panel <alyvix_editor_scripting_panel_top>`.
+:ref:`scripting panel <alyvix_editor_scripting_panel_top>`.  The |play-icon| action will
+:ref:`execute that test case object <alyvix_editor_interface_debug>`
+as if it were the only scripted element in its test case.
 
 The :kbd:`Shift` and :kbd:`Control` keys work together with the mouse to select multiple rows
 in the standard way when using Windows applications.  Selected rows are shown with a light blue
 background, and can then be used with the actions described in the next section below.
+
+.. todo::  Generalize this as it's also used in other places
 
 
 
@@ -160,20 +166,28 @@ background, and can then be used with the actions described in the next section 
 Test Case Object Actions
 ========================
 
-The :wbutton:`DELAY [SEC] <n> ADD` control allows you to add a completely new test case object by
-launching Designer directly from the Selector interface with the specified countdown delay in
-seconds, just as if you had used Designer's :file:`--delay`
+The :nobutton:`Delay [sec] <n>` control together with the  :wbutton:`ADD` button allows you to
+add a completely new test case object by launching Designer directly from the Selector interface
+with the specified countdown delay in seconds, just as if you had used Designer's :file:`--delay`
 :ref:`option <test_case_building_designer_launch>` from the command prompt.  This action is
-available regardless of whether a test case object is selected.
+available regardless of whether any test case objects are selected.
+
+The :wbutton:`GRAB` button allows you to (1) replace the existing screen capture of the current
+test case object with a new one from the current interface, or (2) add a new screen capture at a
+different resolution.  See :ref:`the section below <alyvix_selector_interface_grab_resolution>`
+for a more complete description.
+
+.. todo:: Link to 3.1.0 release notes video?
 
 The :wbutton:`EDIT` button appears when only a single test case object is selected.  Clicking on
-it launches Alyvix Designer with the currently selected test case file and object.
+it launches :ref:`Alyvix Designer <alyvix_designer_interface_overview>` with the currently
+selected test case file and object, allowing you to modify that object.
 
 Two other actions affect all test case objects currently selected:
 
 * :wbutton:`DUPLICATE` will create a new test case object(s) from each selected row.  The new
   name(s) will be the same name(s) as the currently selected object(s), but with the string
-  ``_copy`` appended at the end.  The new objects will appear at the bottom of the list.
+  ``_copy`` appended at the end.
 * :rbutton:`REMOVE` will delete all currently selected test case objects.  A confirmation
   request dialog will appear to make sure test cases aren't accidentally deleted.
 
@@ -187,3 +201,30 @@ object(s) are copied to the primary tab rather than to the currently opened tab.
    Selector by clicking on the :bbutton:`OK` button.  When used with Editor, changes from
    Selector will be saved when the entire test case is saved in Editor.  (No changes will be
    made to any objects in any secondary tabs).
+
+
+
+.. _alyvix_selector_interface_grab_resolution:
+
+========================================
+Regrabbing and Adding Screen Resolutions
+========================================
+
+The :wbutton:`GRAB` button described above has two principal uses, to replace the existing
+screen capture with a new one, and to add an additional screen capture at a different resolution
+than the existing one.
+
+When the resolution of the Windows desktop matches one of the resolutions recorded in the test case
+object, Selector will overwrite that :ref:`screen capture <test_case_data_format_components>`
+in the object with the new version.
+
+.. todo::  Add a link to a video/tutorial, such as the 3.1.0 release notes video
+
+This replacement allows you to keep a test case up-to-date, which can be useful for instance when
+a website or webapp has been fixed or improved.  In addition to simple replacement, you can also
+use regrabbing to build new test cases faster by using the :wbutton:`DUPLICATE` button to copy
+the test case object, and then just changing the screen.
+
+When the resolution of the Windows desktop does not match any of the screen grabs stored in the
+test case object, then a grab of the current screen will be added to its existing screen grabs,
+annotated with the current screen resolution and zoom factor.

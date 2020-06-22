@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 19-06-2020
+:modified: 22-06-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -158,7 +158,7 @@ opposed to the entire script:
 * Use the **Disable/Enable** functionality to temporarily turn off nodes in the scripting panel
   that don't need to be tested, and then press the |runblue| button.  Note that when done, you
   must remember to re-enable the scripting nodes.
-* Use the |play-icon| action :ref:`in Selector <alyvix_selector_interface_top>` to either run a
+* Use the |play-icon| action :ref:`in Selector <alyvix_selector_interface_list>` to either run a
   single test case object or to run a single :ref:`section <alyvix_editor_interface_sections>`.
   (Note that running a section this way will run every enabled scripting node in that section.)
 * Select one or more scripting nodes with the mouse and then use the :wbutton:`Run Selection`

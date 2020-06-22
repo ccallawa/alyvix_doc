@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 26-05-2020
+:modified: 22-06-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -209,6 +209,8 @@ in the component tree.
 .. image:: images/ad_action_string_sized.png
    :class: image-boxshadow
    :alt: The mouse action selection dropdown.
+
+.. todo:: Convert the bullet list into a table with images of the action icons and set point ?
 
 An **Action** creates a mouse event corresponding to one of the six types listed below (an
 Operations tutorial video is available which
