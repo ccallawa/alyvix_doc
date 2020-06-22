@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 19-06-2020
+:modified: 22-06-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -144,20 +144,22 @@ selected test case object.
 Launching Alyvix Robot from Alyvix Editor
 =========================================
 
-The script of the test case currently loaded in Editor can be run by pressing the |runblue|
-button at the top left.  The starting point is the :nobutton:`MAIN` script specified in the
-:ref:`scripting panel <alyvix_editor_script_mgmt_top>`.
+The script of the currently loaded  test case can be run directly in Editor by pressing
+the |runblue| button at the top left.  The default starting point is the :nobutton:`MAIN` script
+in the :ref:`scripting panel <alyvix_editor_script_mgmt_top>` (you can
+:ref:`use the debugging methods <alyvix_editor_interface_debug>` available in Alyvix Editor to
+change this starting point).
 
 When run, Editor will be minimized until the scripted interaction has completed, after which
-Editor will reappear with the output available in the Console tab.
-
-The output is the same as when :ref:`run in the command prompt <alyvix_robot_result_cli>`, but
-can be found in the :bbutton:`Console` tab at the top of Editor's
+the Editor window will return, and the output will appear in the Console tab at the top of the
 :ref:`scripting panel <alyvix_editor_scripting_panel_top>`:
 
 .. image:: ../getting_started/images/ae_console_result.png
    :class: image-with-border
    :alt: The results of running the script in Alyvix Editor
+
+The structure of the output is the same regardless of whether the test case is started in Editor or
+:ref:`run in the command prompt <alyvix_robot_result_cli>`.
 
 In addition, if a failure was caused by a simple sequential scripting node, then the
 annotated screenshot describing the failure will be displayed below the output in the

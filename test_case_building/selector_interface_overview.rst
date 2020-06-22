@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 18-06-2020
+:modified: 22-06-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -144,7 +144,7 @@ can be entered.  When a value is not valid you will see an error message like th
 
 When Selector is being used as part of Alyvix Editor, the |4arrows-icon| and |lineadd-icon| icons
 at the start of each row allow you to
-:ref:`add the corresponding test case object to the scripting panel <>`
+:ref:`add the corresponding test case object to the scripting panel <alyvix_editor_scripting_node_add>`
 by using *drag-and-drop* or appending  it to the
 :ref:`scripting panel <alyvix_editor_scripting_panel_top>`.
 
