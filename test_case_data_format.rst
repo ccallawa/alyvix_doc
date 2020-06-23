@@ -62,10 +62,8 @@ For example:
 Test Case JSON Structure
 ========================
 
-.. topic:: Alyt Case Objecvix Test JSON Structure
-
-   A single ``.alyvix`` file stores the entire test case and holds all measures resulting from
-   a single execution run.
+A single ``.alyvix`` file stores the entire test case and holds all measures resulting from
+a single execution run.
 
 The following example JSON structure illustrates the high-level structure of the test case object:
 

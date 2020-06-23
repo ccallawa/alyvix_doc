@@ -138,6 +138,9 @@
 
 .. |trade|  unicode:: U+000AE .. REGISTERED SIGN
 
+.. |ndash|   unicode:: U+02013 .. en dash
+.. |mdash|   unicode:: U+02014 .. em dash
+
 .. role:: rawhtml(raw)
    :format: html
 
@@ -193,3 +196,26 @@
 .. |if-true| replace:: :greyblock:`IF TRUE`
 .. |if-false| replace:: :greyblock:`IF FALSE`
 .. |for| replace:: :greyblock:`FOR`
+
+
+.. |rn31-impr-a-link| image:: ../pictures/pt_logo.png
+   :class: small-img-li
+   :height: 18px
+   :width: 18px
+   :alt: Pivotal Tracker issue number 171460651
+   :target: https://www.pivotaltracker.com/n/projects/1533621/stories/171460651
+
+.. |rn31-impr-b-link| image:: ../pictures/pt_logo.png
+   :class: small-img-li
+   :height: 18px
+   :width: 18px
+   :alt: Pivotal Tracker issue number 171438457
+   :target: https://www.pivotaltracker.com/n/projects/1533621/stories/171438457
+
+.. |rn31-impr-c-link| image:: ../pictures/pt_logo.png
+   :class: small-img-li
+   :height: 18px
+   :width: 18px
+   :alt: Pivotal Tracker issue number 171433507
+   :target: https://www.pivotaltracker.com/n/projects/1533621/stories/171433507
+

@@ -513,6 +513,12 @@ p.fa {
     line-height: 24px; /* Should inherit from 'p' */
 }
 
+.small-img-li {
+    vertical-align: -0.2em;
+    margin-top: 16px;
+    padding-top: 0px;
+}
+
 
 /* Things to do only only on large screens (desktop and tablets, not phones) */
 @media screen and (min-width: 769px) {  /* Responsive converts menu at 768px */
