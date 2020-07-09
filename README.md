@@ -55,7 +55,7 @@ Once Sphinx is installed, you should then install the following extensions:
 > pip install -U sphinx-copybutton
 ```
 
-Next, clone or download [the source repository]( https://github.com/ccallawa/alyvix_doc) to your
+Next, clone or download [the source repository](https://github.com/ccallawa/alyvix_doc) to your
 computer.  Both of the following two methods are available on multiple platforms.
 
 You can use [Git](https://git-scm.com/downloads):
@@ -64,7 +64,6 @@ You can use [Git](https://git-scm.com/downloads):
 ```
 
 Or [download the ZIP file](https://github.com/ccallawa/alyvix_doc/archive/master.zip)
-```
 
 
 
