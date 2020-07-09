@@ -1,6 +1,6 @@
-# Welcome to the Alyvix 3.1 Documentation Project
+# Welcome to the Alyvix 3 Documentation Project
 
-This repository contains only the documentation for the Alyvix 3.1 project.
+This repository contains only the documentation for the Alyvix 3 project.
 
 [Alyvix](http://alyvix.com) is an open source APM tool for visual monitoring.  Its easy-to-use
 interface lets you build graphical representations (a test case) of your streamed or GUI-based
@@ -46,7 +46,7 @@ using *pip* with this command:
 > pip install -U sphinx
 ```
 
-As of Alyvix 3.1.0, the user guide can be built with either Sphinx 2 or Sphinx 3.
+The user guide can be built with either Sphinx 2 or Sphinx 3.
 
 Once Sphinx is installed, you should then install the following extensions:
 
