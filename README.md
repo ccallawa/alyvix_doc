@@ -22,8 +22,9 @@ As Alyvix is written in Python, the documentation is written in
 [Sphinx](https://pypi.org/project/Sphinx/) to build a set of static web pages.
 It also employs the *sphinx-rtd-theme* which includes support for local search and mobile layouts.
 
-The Alyvix documentation is licensed under GNU GPL v3.  If you have any contributions you wish
-to make, feel free to send them to us via a GitHub issue.
+The Alyvix documentation is licensed under GNU GPL v3.  If you have any contributions
+you wish to make, feel free to send them to us via a
+[GitHub issue](https://github.com/ccallawa/alyvix_doc/issues).
 
 The Alyvix documentation, like the Alyvix project itself, follows the
 [Semantic Versioning Initiative](https://semver.org/).  The file structure follows the
@@ -52,10 +53,20 @@ Once Sphinx is installed, you should then install the following extensions:
 ```
 > pip install -U sphinx-rtd-theme
 > pip install -U sphinx-copybutton
-? pip install -U urllib3
 ```
 
-TODO:  linkcheck requires urllib3, try install without manually installing urllib3
+Next, clone or download [the source repository]( https://github.com/ccallawa/alyvix_doc) to your
+computer.  Both of the following two methods are available on multiple platforms.
+
+You can use [Git](https://git-scm.com/downloads):
+```
+> git clone https://github.com/ccallawa/alyvix_doc.git <destination-directory>
+```
+
+Or ZIP:
+```
+https://github.com/ccallawa/alyvix_doc/archive/master.zip
+```
 
 
 
