@@ -70,7 +70,7 @@ Or [download the ZIP file](https://github.com/ccallawa/alyvix_doc/archive/master
 ## Compilation
 
 We typically build the user guide with the following command.  You will need to change the
-directory names according to your environment.
+executable and source/build directory names according to your environment.
 
 ```
 > C:\Python37\python.exe -m sphinx.__main__ -E -a -b html C:\projects\alyvix_doc C:\projects\alyvix_doc\_build
