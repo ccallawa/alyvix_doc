@@ -9,13 +9,9 @@ click-to-appearance responsiveness by running that test case against your applic
 with it just as a human would.
 
 Alyvix maintains a [Twitter account](https://twitter.com/AlyvixInfo) and
-[YouTube channel](https://www.youtube.com/channel/UCsfsO764sZ55r556ATj3Owg), and uses Pivotal to
-[track progress](https://www.pivotaltracker.com/n/projects/1533621) for both the code and
-this documentation.
-
-The Alyvix Editor interface used to build test cases is shown here:
-
-![Alyvix Editor](getting_started/images/ae_empty_panel.png)
+[YouTube channel](https://www.youtube.com/channel/UCsfsO764sZ55r556ATj3Owg) with tutorials, and
+uses Pivotal to [track progress](https://www.pivotaltracker.com/n/projects/1533621) for both the
+code and this documentation.
 
 
 
