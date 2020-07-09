@@ -15,14 +15,15 @@
 Test Case Execution
 ###################
 
-Alyvix :glossdef:`test cases`
-:rawhtml:`<a href="glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`
-you have built with :ref:`Alyvix Editor <alyvix_editor_interface_top>` can be run using Alyvix
-Robot.  Robot will also execute any individual test case objects you have created with Alyvix
-Designer, along with test case objects you have duplicated with Alyvix Selector.
+Alyvix :iconlink:`gloss|test cases|glossary.html#glossary-test-case` you have built with
+:ref:`Alyvix Editor <alyvix_editor_interface_top>` can be run using Alyvix Robot.  Robot will also
+execute any individual test case objects you have created with Alyvix Designer, along with test
+case objects you have duplicated with Alyvix Selector.
+
+Blah :iconlink:`video|foo|production-systems-tutorials-top`
 
 In a production environment
-:rawhtml:`<a href="videos_and_tutorials/production_systems_tutorials.html#production-systems-tutorials-top"><i class="fa fa-tiny fa-play-circle"></i></a>`
+:iconlink:`video||videos_and_tutorials/production_systems_tutorials.html#production-systems-tutorials-top`
 the typical use case is to create a set of test cases once, and then repeatedly run those test
 cases continuously (ideally as quickly as possible).  Examples include monitoring the usability
 of proprietary clients, streamed applications, and web pages on a remote server.  A test case may
@@ -241,8 +242,9 @@ Nagios Output Format
 ====================
 
 When Alyvix Robot is run from the command prompt, the **-\\-mode nagios** command option
-will generate performance data in |nagios-format-link|.  The main status result for the
-monitoring check will be one of the following values:
+will generate performance data in
+:iconlink:`ext|Nagios message format|http://nagios-plugins.org/doc/guidelines.html#PLUGOUTPUT`.
+The main status result for the monitoring check will be one of the following values:
 
 +-----------------------------+----------------------------------------------------------------+
 | **test_case_output_status** | **Description**                                                |

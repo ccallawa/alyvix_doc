@@ -95,17 +95,17 @@
     border-radius: 35%;
     content: counter(li-counter,  decimal);
     counter-increment: li-counter;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     line-height: 36px;
     margin: 6px 24px 0 0;
-    padding-top: 3px;
+    padding-top: 4px;
     position: absolute;
     text-align: center;
     left: 2.4px;
     top: 7.2px;
-    width: 36px;
-    height: 36px;
+    width: 52px;
+    height: 52px;
 }
 
 
@@ -142,8 +142,8 @@
     text-align: center;
     left: 2.4px;  /* The offsets of the entire circle/number bullet */
     top: 10px;
-    width: 28px;  /* The width of the bullet circle */
-    height: 26px;  /* The height of the bullet circle */
+    width: 35px;  /* The width of the bullet circle */
+    height: 36px;  /* The height of the bullet circle */
 }
 .rst-content ol.onelinelist>li::before {
     top: 0px;
@@ -453,12 +453,10 @@ div.highlight pre::-webkit-scrollbar-track {
 
 
 /* Field lists should have an underlined border, not toplined */
-.rst-content dl:not(.docutils) dt {
-    border-top: none;
-    border-bottom: solid 3px #6ab0de;
-    padding-bottom: 0px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.rst-content dl.field-list dt {
+    border: none;
+    color: #1970A9;
+    font-style:  bolditalic;
 }
 
 /* Vertical space for a single line break was too big (24px) */
@@ -517,6 +515,8 @@ p.fa {
     vertical-align: -0.2em;
     margin-top: 16px;
     padding-top: 0px;
+    height: 18px;
+    width: 18px;
 }
 
 

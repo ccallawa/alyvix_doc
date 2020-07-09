@@ -22,11 +22,11 @@ system requirements for Alyvix, you can :ref:`install or upgrade it <getting_sta
 We work with **Agile methods**.  If you'd like to see what we're up to right now, you can
 read about the **Alyvix stories** currently under development:
 
-|pivotal| |halftab| |pivotal-link|
+|pivotal| |halftab| :iconlink:`ext|https://www.pivotaltracker.com/n/projects/1533621|https://www.pivotaltracker.com/n/projects/1533621`
 
 The release notes list all new features, improvements, bug fixes and security patches contained
 in each release in reverse chronological order.  The version number sequence assigned to each
-Alyvix release follows the |semantic-versioning-link| initiative.
+Alyvix release follows the :iconlink:`ext|Semantic Versioning|https://semver.org/` initiative.
 
 Current and past releases:
 

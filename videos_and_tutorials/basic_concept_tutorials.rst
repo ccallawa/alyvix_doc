@@ -26,8 +26,12 @@ Basic Concepts Video Tutorials
    * Run the bot and watch it navigate
    * Measure how long it took
 
-   .. youtube:: fU4d0DY-t0s
+.. image:: images/basics-2mintutorial-302.png
+   :class: image-boxshadow
+   :alt: Basic 2 minute tutorial video, version 3.0.2
+   :target: https://youtu.be/fU4d0DY-t0s
 
+|source-youtube|
 
 
 .. topic:: 5-Minute Video
@@ -38,8 +42,12 @@ Basic Concepts Video Tutorials
    * Make the bot check that the service is actually working
    * Run the bot and measure how long it took
 
-   .. youtube:: UlEjwDIpV1w
+.. image:: images/basics-5mintutorial-302.png
+   :class: image-boxshadow
+   :alt: Basic 5 minute tutorial video, version 3.0.2
+   :target: https://youtu.be/UlEjwDIpV1w
 
+|source-youtube|
 
 
 .. topic:: 10-Minute Video
@@ -52,4 +60,9 @@ Basic Concepts Video Tutorials
    * Check the results of that search to ensure the service is working
    * Measure availability and elapsed time at multiple points
 
-   .. youtube:: QJE-O7d8jJQ
+.. image:: images/basics-10mintutorial-302.png
+   :class: image-boxshadow
+   :alt: Basic 10 minute tutorial video, version 3.0.2
+   :target: https://youtu.be/QJE-O7d8jJQ
+
+|source-youtube|

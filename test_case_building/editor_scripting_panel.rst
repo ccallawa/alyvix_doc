@@ -15,17 +15,13 @@
 Editor: Script Building
 ***********************
 
-The scripting panel allows you to compose :glossdef:`scripts`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
-using :glossdef:`test case objects`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+The scripting panel allows you to compose
+:iconlink:`gloss|scripts|../glossary.html#glossary-test-case-script` using
+:iconlink:`gloss|test case objects|../glossary.html#glossary-test-case-object`
 drawn from Selector, specifying the ordering as well as the mode of use, whether *sequential*,
 *conditional* or *loop*.  The scripting panel uses the *blocks-based* approach to scripting,
-letting you drag and drop test case objects, :glossdef:`sections`
-:rawhtml:`<a href="../glossary.html#glossary-section"><i class="fa fa-tiny fa-question-circle"></i></a>`
-and :glossdef:`maps`
-:rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`,
-and then reorder and edit them.
+letting you drag and drop test case objects, :iconlink:`gloss|sections|../glossary.html#glossary-section`
+and :iconlink:`gloss|maps|../glossary.html#glossary-map`, and then reorder and edit them.
 
 When Alyvix Robot :ref:`executes a script <test_case_execution_top>`, it will interact with the
 web browser, other app, or even Windows itself, by following your script step by step, executing

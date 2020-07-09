@@ -385,7 +385,7 @@ will still put the (unlinked) link text there.
 
    :ref:`Getting Started <getting_started_top>`
 
-For external links, add an icon to it as in this example:  |base64-link|
+For external links, add an icon to it as in this example:  :iconlink:`ext|Base64|https://en.wikipedia.org/wiki/Base64`
 
 All external links are currently defined a single time using ``:rawhtml:`` in the file
 :file:`sphinx-roles.txt` in the root directory, e.g.:
@@ -875,21 +875,113 @@ Here are some examples:
    <kbd style="background-color: rgb(252,252,252);border-color: rgb(204,204,204);border-style: solid;border-width: 1px;border-radius: 3px;box-shadow: rgb(187,187,187) 0px -1px 0px 0px inset;color: rgb(85,85,85);display: inline;font-family: Consolas, Menlo, Courier;font-weight: 400;overflow-wrap: break-word;padding: 3px 5px 3px 5px;vertical-align: middle;">Test + Text pqj</kbd>
    </li></ul>
 
-And don't forget that you can alias and reuse all of these:
+And don't forget that you can :ref:`alias and reuse <style_links+refs>` all of these:
 
 .. |enterkey| raw:: html
 
    <kbd style="background-color: rgba(62,155,161); color: #fff; font-weight: 400; padding-left: 6px; padding-right: 6px; border-style: none; border-radius: 7px;">Enter</kbd>
 
-Like pressing the |enterkey| many times:  |enterkey| |enterkey| |enterkey|
+Like pressing the |enterkey| key many times:  |enterkey| |enterkey| |enterkey|
+
+.. code-block::
+
+   .. |enterkey| raw:: html
+
+      <kbd style="background-color: rgba(62,155,161); color: #fff; font-weight: 400; padding-left: 6px; padding-right: 6px; border-style: none; border-radius: 7px;">Enter</kbd>
 
 
 
 .. _style_sphinx_extensions:
 
-****************************
-Additional Sphinx Extensions
-****************************
+*************************************
+Additional Optional Sphinx Extensions
+*************************************
+
+The following extensions can be installed as desired.  Only the copy/accordion button extension
+is installed by default in this distribution.
+
+
+
+.. _style_sphinx_copybutton:
+
+==================================
+Dynamic Copy and Accordion Buttons
+==================================
+
+This extension improves the usability of the copy-to-clipboard function for code blocks and adds
+accordion buttons.  To use it:
+
+* Install the extension with ``pip install sphinx-copybutton``
+* Add ``'sphinx_copybutton'`` to the extension list in Sphinx's :file:`conf.py`
+
+Then modify the imported files to filter out command prompts when copying from code blocks by
+changing the *copyTargetText* function at the bottom of
+:file:`Python37/Lib/site-packages/sphinx_copybutton/static/copybutton.js_t` and the English
+messages at the top:
+
+.. code-block:: js
+
+   const messages = {
+     'en': {
+       'copy': 'Copy to clipboard',
+       'copy_to_clipboard': 'Copy to clipboard',
+       'copy_success': 'Copied',
+       'copy_failure': 'Failed to copy',
+     },
+
+.. code-block:: js
+
+   var copyTargetText = (trigger) => {
+     var target = document.querySelector(trigger.attributes['data-clipboard-target'].value);
+     var textContent = target.textContent.split('\n');
+     if (textContent[0].startsWith('C:\\> ')) { return textContent[0].slice(5); } // Added by Charles@WP
+     if (textContent[0].startsWith('C:\\Alyvix\\testcases> ')) { return textContent[0].slice(21); } // Added by Charles@WP
+     textContent.forEach((line, index) => {
+       if (line.startsWith(copybuttonSkipText)) {
+         textContent[index] = line.slice(copybuttonSkipText.length)
+       }
+     });
+     return textContent.join('\n');
+   }
+
+And the accordion-style expand/contract buttons are here as well since they use the same DOM
+approach as the copy buttons:
+
+.. code-block:: js
+
+   const addButtonToAccordionCells = () => {
+     // Add accordion buttons to all classes containing the 'accordion' class
+     const accordionCells = document.querySelectorAll('button.accordion')
+     accordionCells.forEach((accordionCell, index) => {
+       accordionCell.parentNode.replaceWith(accordionCell)
+       accordionCell.addEventListener("click", function() {
+         this.classList.toggle("active");
+         var panel = this.nextElementSibling;
+         if (panel.style.display === "block") { panel.style.display = "none"; }
+         else { panel.style.display = "block"; }
+       });
+     })
+   }
+   runWhenDOMLoaded(addButtonToAccordionCells)
+
+
+Also add the accordion CSS class to the file
+:file:`Python37/Lib/site-packages/sphinx_copybutton/static/copybutton.css`:
+
+.. code-block:: css
+
+   button.accordion {
+       background-color: rgb(41,128,185);
+       color: #fff;
+       cursor: pointer;
+       padding: 7px 14px;
+       width: 94%;
+       border: none;
+       align: center;
+       text-align: left;
+       outline: none;
+       margin-top: 10px;
+   }
 
 
 
@@ -933,16 +1025,6 @@ if it's not in the specification.
        padding: 5px;
    }
 
-.. graphviz::
-   :alt: alt-text
-   :align: center
-   :caption: graphviz-caption
-
-   digraph foo {
-      bgcolor="#ffffff00"
-      "bar" -> "baz";
-   }
-
 
 
 .. _style_sphinx_youtube:
@@ -967,10 +1049,6 @@ Usage examples:
       .. youtube:: Qef7ExMoPz8
 
 
-.. topic:: An Embedded Video
-
-   .. youtube:: Qef7ExMoPz8
-
 Note that we currently modify the default files to change the CSS and use the proper HTML:
 :file:`Python37/Lib/site-packages/sphinxcontrib/youtube/youtube.py`
 
@@ -991,9 +1069,9 @@ Note that we currently modify the default files to change the CSS and use the pr
 
 .. _style_sphinx_pdf:
 
-====================
-(Bad) PDF Conversion
-====================
+==============
+PDF Conversion
+==============
 
 The following steps are required:
 
@@ -1003,65 +1081,6 @@ The following steps are required:
   ``-E -a -b pdf C:\projects\alyvix_doc C:\projects\alyvix_doc\_build``
 
 The result will be a file called :file:`Python.pdf` in the :file:`_build` directory.  The
-quality isn't that great, but it's complete (including the todo's even when turned off).
+quality isn't that great, but it's complete (including the todo's even when they are turned off).
 
 Note that as of February 2020, Rinoh (``pip install rinohtype``) is not working in Python 3.7.
-
-
-
-.. _style_sphinx_copybutton:
-
-==================================
-Dynamic Copy and Accordion Buttons
-==================================
-
-* Install the extension with ``pip install sphinx-copybutton``
-* Add ``'sphinx_copybutton'`` to the extension list in Sphinx's :file:`conf.py`
-
-Note that we currently modify the default files to change the CSS and filter out
-command prompts:  :file:`Python37/Lib/site-packages/sphinx_copybutton/static/copybutton.js`
-and :file:`copybutton.css`
-
-.. code-block:: js
-
-   var copyTargetText = (trigger) => {
-     var target = document.querySelector(trigger.attributes['data-clipboard-target'].value);
-     var textContent = target.textContent.split('\n');
-     if (textContent[0].startsWith('C:\\> ')) { return textContent[0].slice(5); } // Added by Charles@WP
-     if (textContent[0].startsWith('C:\\Alyvix\\testcases> ')) { return textContent[0].slice(21); } // Added by Charles@WP
-     textContent.forEach((line, index) => {
-       if (line.startsWith(copybuttonSkipText)) {
-         textContent[index] = line.slice(copybuttonSkipText.length)
-       }
-     });
-     return textContent.join('\n');
-   }
-
-.. code-block:: js
-
-   const messages = {
-     'en': {
-       'copy': 'Copy to clipboard',
-       'copy_to_clipboard': 'Copy to clipboard',
-       'copy_success': 'Copied',
-       'copy_failure': 'Failed to copy',
-     },
-
-And the accordion-style expand/contract buttons are here as well since they use the same DOM
-approach as the copy buttons:
-
-.. code-block:: js
-
-   const addButtonToAccordionCells = () => {
-     // Add accordion buttons to all classes containing the 'accordion' class
-     const accordionCells = document.querySelectorAll('button.accordion')
-     accordionCells.forEach((accordionCell, index) => {
-       accordionCell.parentNode.replaceWith(accordionCell)
-       accordionCell.addEventListener("click", function() {
-         this.classList.toggle("active");
-         var panel = this.nextElementSibling;
-         if (panel.style.display === "block") { panel.style.display = "none"; }
-         else { panel.style.display = "block"; }
-       });
-     })
-   }

@@ -15,12 +15,11 @@
 Example:  Opening Windows Settings from the Start Menu
 ******************************************************
 
-In the :ref:`previous example <getting_started_example_start>` we created an Alyvix :glossdef:`test case`
-:rawhtml:`<a href="../glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`
-consisting of a single test case object.
-Most of the time though, you'll need to chain together multiple test case objects to synthesize
-more complex behavior in your apps.  So let's extend our previous example to run a second action:
-opening the Windows Settings app.
+In the :ref:`previous example <getting_started_example_start>` we created an Alyvix
+:iconlink:`gloss|test case|../glossary.html#glossary-test-case` consisting of a single test case
+object.  Most of the time though, you'll need to chain together multiple test case objects to
+synthesize more complex behavior in your apps.  So let's extend our previous example to run a
+second action: opening the Windows Settings app.
 
 .. rst-class:: bignums
 
@@ -45,9 +44,8 @@ opening the Windows Settings app.
    need to click on the Start button yourself in that time) before Alyvix captures the screen.
 
 #. After the screen flashes white, press :kbd:`Escape` to return to screen capture mode, and then
-   *right click* on the *Settings* icon at the left side of the Start Menu.  This will :glossdef:`autocontour`
-   :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`
-   the icon.
+   *right click* on the *Settings* icon at the left side of the Start Menu.  This will
+   :iconlink:`gloss|autocontour|../glossary.html#glossary-autocontour` the icon.
 
    .. image:: images/ad_settings_selected.png
       :class: image-with-border

@@ -15,10 +15,9 @@
 Editor: Managing Scripts
 ************************
 
-The script management panel organizes and provides quick access to the :glossdef:`scripts`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
-and :glossdef:`sections`
-:rawhtml:`<a href="../glossary.html#glossary-section"><i class="fa fa-tiny fa-question-circle"></i></a>`
+The script management panel organizes and provides quick access to the
+:iconlink:`gloss|scripts|../glossary.html#glossary-test-case-script` and
+:iconlink:`gloss|sections|../glossary.html#glossary-section`
 necessary for creating complex behaviors.  The script management panel is divided into three parts:
 
 .. image:: images/ae_script_management_panel_h230.png
@@ -28,11 +27,10 @@ necessary for creating complex behaviors.  The script management panel is divide
 * **Top-level scripts** that serve as the main entry points for execution with Alyvix Robot (MAIN,
   FAIL, and EXIT)
 * **Sections**, which are user-defined subroutines that can be used inside other scripts
-* **Maps** :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+* **Maps** :iconlink:`gloss||../glossary.html#glossary-map`,
   which are user-defined tables of keys and values that can be used to *(a)* take a :ref:`text
   string scraped from the screen <alyvix_designer_options_strings_top>` and map it to another string,
-  or *(b)* loop over a :glossdef:`test case object`
-  :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+  or *(b)* loop over a :iconlink:`gloss|test case object|../glossary.html#glossary-test-case-object`
   (using the :ref:`FOR <alyvix_editor_scripting_node_expressions>`
   expression) for as many rows as there are in the map's table
 

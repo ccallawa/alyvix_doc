@@ -15,11 +15,9 @@
 Component Options
 =================
 
-Below the :glossdef:`component tree`
-:rawhtml:`<a href="../glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
+Below the :iconlink:`gloss|component tree|../glossary.html#glossary-component-tree`
 in the Designer interface you can find the options that affect a specific instance of a component
-type used in an Alyvix :glossdef:`test case object`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`.
+type used in an Alyvix :iconlink:`gloss|test case object|../glossary.html#glossary-test-case-object`.
 Whenever you select a row in the component tree, these options will be updated to reflect the
 options currently assigned to that row's component.
 
@@ -31,12 +29,12 @@ options currently assigned to that row's component.
 Root Component Options
 ----------------------
 
-The :glossdef:`root element`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
-options take effect when the test case object is :ref:`first executed <test_case_execution_top>`.
-These options allow you to set up the proper
-environment for the application you want to automate, which is especially helpful when a test
-case object will be the very first :ref:`scripted node <alyvix_editor_scripting_panel_top>`.
+The :iconlink:`gloss|root element|../glossary.html#glossary-root` options take effect when the
+test case object is :ref:`first executed <test_case_execution_top>`.  These options allow you to
+set up the proper environment for the application you want to automate, which is especially
+helpful when a test case object will be the very first
+:ref:`scripted node <alyvix_editor_scripting_panel_top>`.
+
 For instance, you might want to start a particular application like a web browser before Alyvix
 begins looking for any particular components on the current screen, and then close the browser
 with the final test case object.
@@ -88,8 +86,8 @@ Image Type Options
 
 .. rst-class:: fa fa-image fa-blue
 
-   The *image* component corresponds to the pixel-by-pixel representation of the :glossdef:`selection`
-   :rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   The *image* component corresponds to the pixel-by-pixel representation of the
+   :iconlink:`gloss|selection|../glossary.html#glossary-selection`
    or subselection on the captured screen, such as an icon.  As shown here, it has the following
    options to choose which visual aspect of the image to match against (an Operations tutorial video
    is available that :ref:`explains the image options <operations_tutorials_image>`):
@@ -145,8 +143,8 @@ Text Type Options
    options, which vary depending on the type selected.
 
 For both the *Detect* and *Map* types, the :guilabel:`Scrape` field displays the text that was
-automatically recognized in the component's :glossdef:`subselection`
-:rawhtml:`<a href="../glossary.html#glossary-subselection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+automatically recognized in the component's
+:iconlink:`gloss|subselection|../glossary.html#glossary-subselection`
 on the screen capture.  Note that the main component of a group cannot be of type Text.
 
 
@@ -154,8 +152,7 @@ on the screen capture.  Note that the main component of a group cannot be of typ
 .. topic:: **Detect**
 
    The text type's *Detect* option will determine that a match was correctly made if the text
-   scraped from the :glossdef:`region of interest`
-   :rawhtml:`<a href="../glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   scraped from the :iconlink:`gloss|region-of-interest|../glossary.html#glossary-region-of-interest`
    matches the condition specified in the first two fields.
 
 .. image:: images/ad_type_submenu_text_detect_sized.png
@@ -169,7 +166,7 @@ one of these 3 methods:
     regular expression in the :guilabel:`Regex` field, once normalized as lower cased strings.
     (An Operations tutorial video is available that :ref:`explains the regex options
     <operations_tutorials_regex>`).  The regular expression syntax is governed by the
-    |python-regex-lib|.
+    :iconlink:`ext|Python Regular Expression library|https://docs.python.org/3.7/library/re.html`.
   * **Number**  The recognized text is considered matched only if it results in a number that
     satisfies the condition selected in the :guilabel:`Logic` field (e.g., "greater than zero").
   * **Date**  The recognized text is considered matched only if it results in a day and time that
@@ -181,8 +178,7 @@ one of these 3 methods:
 .. topic:: **Map**
 
    When *Map* mode is selected, the scraped text will be mapped to the most similar key in
-   the chosen :glossdef:`Map`
-   :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   the chosen :iconlink:`gloss|map|../glossary.html#glossary-map`
    (the Map can be selected in the :ref:`map interface in Editor <alyvix_editor_interface_top>`),
    and the value that corresponds to that key in the map will both be returned and be cached in the
    test case object.  If the ``{<object>.extract}``

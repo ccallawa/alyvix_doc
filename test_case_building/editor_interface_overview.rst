@@ -16,8 +16,8 @@ Editor: Interface Overview
 **************************
 
 Alyvix Editor lets you visually create, edit and run complex scripts allowing Alyvix to interact
-with your applications just like a human user would.  Each :glossdef:`script`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
+with your applications just like a human user would.  Each
+:iconlink:`gloss|script|../glossary.html#glossary-test-case-script`
 consists of multiple test case objects, organized as
 :ref:`sequential, conditional and loop commands <alyvix_editor_scripting_node_expressions>`,
 along with :ref:`Sections <alyvix_editor_interface_sections>`
@@ -47,8 +47,8 @@ This loads the Editor interface, whose layout has the following elements:
 #. The Editor panel, consisting of the
    :ref:`Script Management panel <alyvix_editor_script_mgmt_top>` (left)
    and the :ref:`Scripting panel <alyvix_editor_scripting_panel_top>` (right)
-#. The :ref:`Selector <alyvix_selector_interface_top>` pane, containing :glossdef:`test case objects`
-   :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+#. The :ref:`Selector <alyvix_selector_interface_top>` pane, containing
+   :iconlink:`gloss|test case objects|../glossary.html#glossary-test-case-object`
    that can be added to the Scripting panel
 #. The :ref:`Designer <alyvix_designer_interface_overview>` pane, which shows the details of
    the currently selected test case object
@@ -72,18 +72,16 @@ The principle interface elements specific to Alyvix Editor are:
 .. rst-class:: bignums
 
 #. The :ref:`test case menu <alyvix_editor_interface_menu>` (described below), containing actions
-   for Alyvix Editor and the current :glossdef:`test case`
-   :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   for Alyvix Editor and the current :iconlink:`gloss|test case|../glossary.html#glossary-test-case`
 #. The main :ref:`Script Management panel <alyvix_editor_script_mgmt_top>`, used to select
    the principal scripts to be edited
 #. The :ref:`Sections <alyvix_editor_interface_sections>` list, containing user-defined
-   scripts (:glossdef:`sections`
-   :rawhtml:`<a href="../glossary.html#glossary-section"><i class="fa fa-tiny fa-question-circle"></i></a>`)
+   scripts (:iconlink:`gloss|sections|../glossary.html#glossary-section`)
    that can be used as subroutines within any of the principal scripts
-#. The :ref:`Maps <alyvix_editor_interface_maps>` list, containing user-defined :glossdef:`maps`
-   :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`
-   (consisting of keys and one or more values for each key) that can be used either by a script
-   via :ref:`looping <alyvix_editor_scripting_node_expressions>`, or to insert values in a
+#. The :ref:`Maps <alyvix_editor_interface_maps>` list, containing user-defined
+   :iconlink:`gloss|maps|../glossary.html#glossary-map` (consisting of keys and one or more
+   values for each key) that can be used either by a script via
+   :ref:`looping <alyvix_editor_scripting_node_expressions>`, or to insert values in a
    :ref:`String <alyvix_designer_options_strings_top>` field.
 #. The scripting mode selector, containing the :guilabel:`Script` tab to
    :ref:`display the currently selected script or map <alyvix_editor_scripting_panel_top>`,

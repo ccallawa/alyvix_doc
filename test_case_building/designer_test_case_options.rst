@@ -22,17 +22,17 @@ a whole:
    :class: image-boxshadow
    :alt: The test case options.
 
-The **Object name** is the reference name of a particular :glossdef:`test case object`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+The **Object name** is the reference name of a particular
+:iconlink:`gloss|test case object|../glossary.html#glossary-test-case-object`
 within a given test case.  A test case typically contains multiple test case objects which are
-used when building :ref:`scripts <alyvix_editor_scripting_panel_top>`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+:ref:`used when building <alyvix_editor_scripting_panel_top>`
+:iconlink:`gloss|scripts|../glossary.html#glossary-test-case-script`,
 and thus it needs a unique, descriptive name to easily distinguish it from other test case objects.
 
-There are also three **test case parameters** that affect how the :glossdef:`selections`
-:rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
-and subselections in the :ref:`component tree <alyvix_designer_component_tree_top>` are detected,
-regardless of their type, and what happens if they fail to be detected:
+There are also three **test case parameters** that affect how the
+:iconlink:`gloss|selections|../glossary.html#glossary-selection` and subselections in
+the :ref:`component tree <alyvix_designer_component_tree_top>` are detected, regardless of their
+type, and what happens if they fail to be detected:
 
 #. **Detection condition:**  One of the following conditions will be checked at a default
    interval of every ``0.5`` seconds:

@@ -15,10 +15,9 @@
 Test Case Building
 ##################
 
-When you build a :glossdef:`test case`
-:rawhtml:`<a href="glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`,
-you're creating a set of visual templates that can be matched against your app interfaces in real
-time, allowing Alyvix to interact with those interfaces just like a person would.
+When you build a :iconlink:`gloss|test case|glossary.html#glossary-test-case`, you're creating
+a set of visual templates that can be matched against your app interfaces in real time, allowing
+Alyvix to interact with those interfaces just like a person would.
 
 
 .. todo::
@@ -33,8 +32,8 @@ There are three main tools for building test cases:
 
 .. rst-class:: bignums-xl
 
-#. **Alyvix Designer:**  Define individual :glossdef:`test case objects`
-   :rawhtml:`<a href="glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+#. **Alyvix Designer:**  Define individual
+   :iconlink:`gloss|test case objects|glossary.html#glossary-test-case-object`
    to be dynamically matched against the visual components of your app's interface, and assign
    GUI actions that are carried out when those matches are detected
 #. **Alyvix Selector:**  Easily manipulate (inspect, copy, edit, delete) large numbers of test
@@ -64,18 +63,15 @@ Note that they inherit the permissions of the shell they were launched from.
 
 .. topic:: Alyvix Designer
 
-   Alyvix Designer lets you select graphic :glossdef:`components`
-   :rawhtml:`<a href="glossary.html#glossary-component"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   Alyvix Designer lets you select graphic :iconlink:`gloss|components|glossary.html#glossary-component`
    on a captured screen to use as test case objects, whether they're images, rectangles, or text.
    You can then define triggers and actions to apply when those templates are recognized later
    in a live interaction with an application.
 
-Designer will save the set of templates, called the :glossdef:`component tree`
-:rawhtml:`<a href="glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`,
-as a single test case object, which you can then use as a building block to compose more
-complicated behaviors with :glossdef:`scripts`
-:rawhtml:`<a href="glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
-using Alyvix Editor.
+Designer will save the set of templates, called the
+:iconlink:`gloss|component tree|glossary.html#glossary-component-tree` as a single test case
+object, which you can then use as a building block to compose more complicated behaviors with
+:iconlink:`gloss|scripts|glossary.html#glossary-test-case-script` using Alyvix Editor.
 
 .. _test_case_building_designer_launch:
 

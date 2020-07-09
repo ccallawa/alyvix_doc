@@ -10,10 +10,11 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+
+import os
+import sys
 import sphinx_rtd_theme
+sys.path.append(os.path.abspath("./_ext"))
 
 
 # -- Project information -----------------------------------------------------
@@ -37,11 +38,9 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.todo',
-    'sphinx.ext.graphviz',
-    'sphinxcontrib.youtube',
-    'rst2pdf.pdfbuilder',
     'sphinx_copybutton',       # pip install sphinx-copybutton
-    'sphinx_rtd_theme'         # pip install sphinx_rtd_theme
+    'sphinx_rtd_theme',        # pip install sphinx-rtd-theme
+    'iconlink'                 # Our custom theme for links with embedded icons at _ext/iconlink.py
 ]
 #    'sphinx.ext.mathjax'
 #    'rinoh.frontend.sphinx'  # pip install rinohtype
@@ -82,7 +81,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', '_ext', 'pictures']
 
 # The name of the Pygments (syntax highlighting) style to use.
 # pygments_style = 'sphinx'

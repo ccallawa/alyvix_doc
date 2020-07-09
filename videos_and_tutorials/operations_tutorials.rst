@@ -29,7 +29,12 @@ Operations Videos and Tutorials
    * Color - Match the main color (within some tolerance) regardless of shape
    * Shape - Matches when the shape is the same, regardless of color
 
-   .. youtube:: rC_bjgXCcZ4
+.. image:: images/operations-imagecomp-302.png
+   :class: image-boxshadow
+   :alt: Image Components tutorial video, version 3.0.2
+   :target: https://youtu.be/rC_bjgXCcZ4
+
+|source-youtube|
 
 
 
@@ -45,7 +50,12 @@ Operations Videos and Tutorials
    * Box - Match a rectangle like a text field that stretches horizontally
    * Window - Match a panel or window both horizontally and vertically
 
-   .. youtube:: JeAQZ2nzMnw
+.. image:: images/operations-rectcomp-302.png
+   :class: image-boxshadow
+   :alt: Rectangle Components tutorial video, version 3.0.2
+   :target: https://youtu.be/JeAQZ2nzMnw
+
+|source-youtube|
 
 
 
@@ -61,7 +71,13 @@ Operations Videos and Tutorials
    * Save that code
    * Insert that code later in a separate location
 
-   .. youtube:: g9D4LZ5DqhU
+.. image:: images/operations-textcomp-302.png
+   :class: image-boxshadow
+   :alt: Text Components tutorial video, version 3.0.2
+   :target: https://youtu.be/g9D4LZ5DqhU
+
+|source-youtube|
+
 
 
 .. _operations_tutorials_actions:
@@ -76,5 +92,9 @@ Operations Videos and Tutorials
    * Release - letting go after a Hold action was performed
    * Scroll - vertically moving an object's container
 
-   .. youtube:: JW00UCXK8PA
+.. image:: images/operations-compactions-302.png
+   :class: image-boxshadow
+   :alt: Component Actions tutorial video, version 3.0.2
+   :target: https://youtu.be/JW00UCXK8PA
 
+|source-youtube|

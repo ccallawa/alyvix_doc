@@ -17,10 +17,9 @@ Designer: Interface Overview
 
 The Alyvix Designer interface consists of two elements:
 
-* A screen capture image to use for creating and resizing :glossdef:`selections`
-  :rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
-  and :glossdef:`regions of interest`
-  :rawhtml:`<a href="../glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle"></i></a>`
+* A screen capture image to use for creating and resizing
+  :iconlink:`gloss|selections|../glossary.html#glossary-selection`
+  and :iconlink:`gloss|regions of interest|../glossary.html#glossary-region-of-interest`
   around visual elements
 * A panel for indicating how those visual elements should be interpreted and interacted with
 
@@ -45,8 +44,8 @@ purple crosshairs that track the mouse, and the reminder
 .. tip::  Having a second monitor will enable you to mark selections and regions of interest with
    Alyvix on one screen, while the second screen can still be used for other applications.
 
-Each screen capture is associated with a :glossdef:`test case object`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+Each screen capture is associated with a
+:iconlink:`gloss|test case object|../glossary.html#glossary-test-case-object`,
 which can recognize and interact with up to three groups of visual elements.  The color of the
 crosshairs indicates whether you are working with the first (purple/red), second (green), or
 third (blue) group.
@@ -66,12 +65,10 @@ no groups (or components) have yet been defined.  The principle interface elemen
    to uniquely identify this test case object in Alyvix Selector and Editor
 #. **Test case object** :ref:`options <alyvix_designer_options_test_case_object>`, which affect
    all visual elements in the component tree as a whole
-#. The :glossdef:`component tree`
-   :rawhtml:`<a href="../glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
+#. The :iconlink:`gloss|component tree|../glossary.html#glossary-component-tree`
    :ref:`subpanel <alyvix_designer_component_tree_top>`, showing all defined selections and regions
    of interest that can be interacted with along with their type (image, region or text)
-#. **Component**
-   :rawhtml:`<a href="../glossary.html#glossary-component"><i class="fa fa-tiny fa-question-circle"></i></a>`
+#. :iconlink:`gloss|Component|../glossary.html#glossary-component`
    :ref:`options <alyvix_designer_options_components>`, which depend on the type
    you assign to the currently selected component in the component tree
 #. **Interface controls** that allow you to either
@@ -102,7 +99,7 @@ Selections (and subselections) can be made with the mouse in one of two ways:
 
 * **Manually:**  Hold the left mouse button down to create a selection or subselection (drawing a
   rectangle around the desired area), and then release when done.
-* **Autocontour:** :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`
+* :iconlink:`gloss|Autocontour|../glossary.html#glossary-autocontour`
   Right click on a visual element to use Alyvix's visual recognizer to
   automatically determine the relevant selection or subselection.  Candidate elements can be
   discovered by pressing :kbd:`Space`, and then pressing it a second time to return to the
@@ -119,8 +116,7 @@ After making a selection, you can then make up to 4 subselections within that gr
 positions will be relative to the main selection.  For instance in the example image above, a
 subselection has been made containing the Windows Cortana search box.
 
-Unlike the main selection, a :glossdef:`subselection`
-:rawhtml:`<a href="../glossary.html#glossary-subselection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+Unlike the main selection, a :iconlink:`gloss|subselection|../glossary.html#glossary-subselection`
 consists of two overlapping areas rather than a single one.  You can resize the two areas
 independently, although the smaller box, which is the subselection itself, will always remain
 contained within the larger one, known as the **region of interest** (or RoI).

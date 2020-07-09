@@ -2,65 +2,9 @@
 
 .. |python-remove-name| replace:: :file:`Python 3.7.6 (64-bit)`
 
-.. |semantic-versioning-link| raw:: html
+.. |source-youtube| raw:: html
 
-   <a href="https://semver.org/" target="_blank">
-   Semantic Versioning <i class="fa fa-small fa-external-link"></i></a>
-
-.. |open-cv-link| raw:: html
-
-   <a href="https://opencv.org/" target="_blank">
-   OpenCV <i class="fa fa-small fa-external-link"></i></a>
-
-.. |tesseract-link| raw:: html
-
-   <a href="https://github.com/tesseract-ocr/tesseract" target="_blank">
-   Tesseract <i class="fa fa-small fa-external-link"></i></a>
-
-.. |python-naming-link| raw:: html
-
-   <a href="https://www.python.org/dev/peps/pep-0008/#naming-conventions" target="_blank">
-   Python Naming Conventions <i class="fa fa-small fa-external-link"></i></a>
-
-.. |python-regex-lib| raw:: html
-
-   <a href="https://docs.python.org/3.7/library/re.html" target="_blank">
-   Python Regular Expression library <i class="fa fa-small fa-external-link"></i></a>
-
-.. |python-regex-grouping| raw:: html
-
-   <a href="https://docs.python.org/3.7/howto/regex.html#grouping" target="_blank">
-   Python's grouping mechanism <i class="fa fa-small fa-external-link"></i></a>
-
-.. |base64-link| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">
-   Base64 <i class="fa fa-small fa-external-link"></i></a>
-
-.. |pivotal-link| raw:: html
-
-   <a href="https://www.pivotaltracker.com/n/projects/1533621" target="_blank">
-   https://www.pivotaltracker.com/n/projects/1533621 <i class="fa fa-small fa-external-link"></i></a>
-
-.. |nagios-pivotal-link| raw:: html
-
-   <a href="https://www.pivotaltracker.com/n/projects/1533621/stories/170892854" target="_blank">
-   Nagios message format <i class="fa fa-small fa-external-link"></i></a>
-
-.. |nagios-format-link| raw:: html
-
-   <a href="http://nagios-plugins.org/doc/guidelines.html#PLUGOUTPUT" target="_blank">
-   Nagios message format <i class="fa fa-small fa-external-link"></i></a>
-
-.. |unicode-link| raw:: html
-
-   <a href="http://www.unicode.org/charts/" target="_blank">
-   unicode character <i class="fa fa-small fa-external-link"></i></a>
-
-.. |vc-redist-link| raw:: html
-
-   <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">
-   https://aka.ms/vs/16/release/vc_redist.x64.exe <i class="fa fa-small fa-external-link"></i></a>
+   <div style="text-align: right; padding: 0; margin: 0;">Source:  Alyvix@YouTube &nbsp; <i class="fa fa-small fa-external-link"></i></div>
 
 .. |bar-icon| raw:: html
 
@@ -101,6 +45,15 @@
 .. |lineadd-icon| image:: /pictures/lineadd_icon.png
    :class: inline-image-higher
 
+.. |runblue| image:: /pictures/button_run_blue.png
+   :class: inline-image-higher button-boxshadow
+
+.. |pivotal| image:: pictures/pt_logo.png
+   :height: 38px
+   :width: 38px
+   :alt: The logo for Pivotal Tracker.
+   :target: https://www.pivotaltracker.com/n/projects/1533621
+
 .. |halftab| raw:: html
 
    &nbsp; &nbsp;
@@ -125,21 +78,12 @@
 
    </div>
 
-.. |runblue| image:: /pictures/button_run_blue.png
-   :class: inline-image-higher button-boxshadow
-
-.. |pivotal| image:: pictures/pt_logo.png
-   :height: 38px
-   :width: 38px
-   :alt: The logo for Pivotal Tracker.
-   :target: https://www.pivotaltracker.com/n/projects/1533621
-
 .. |copy|   unicode:: U+000A9
 
 .. |trade|  unicode:: U+000AE .. REGISTERED SIGN
 
-.. |ndash|   unicode:: U+02013 .. en dash
-.. |mdash|   unicode:: U+02014 .. em dash
+.. |ndash|  unicode:: U+02013 .. en dash
+.. |mdash|  unicode:: U+02014 .. em dash
 
 .. role:: rawhtml(raw)
    :format: html
@@ -196,26 +140,3 @@
 .. |if-true| replace:: :greyblock:`IF TRUE`
 .. |if-false| replace:: :greyblock:`IF FALSE`
 .. |for| replace:: :greyblock:`FOR`
-
-
-.. |rn31-impr-a-link| image:: ../pictures/pt_logo.png
-   :class: small-img-li
-   :height: 18px
-   :width: 18px
-   :alt: Pivotal Tracker issue number 171460651
-   :target: https://www.pivotaltracker.com/n/projects/1533621/stories/171460651
-
-.. |rn31-impr-b-link| image:: ../pictures/pt_logo.png
-   :class: small-img-li
-   :height: 18px
-   :width: 18px
-   :alt: Pivotal Tracker issue number 171438457
-   :target: https://www.pivotaltracker.com/n/projects/1533621/stories/171438457
-
-.. |rn31-impr-c-link| image:: ../pictures/pt_logo.png
-   :class: small-img-li
-   :height: 18px
-   :width: 18px
-   :alt: Pivotal Tracker issue number 171433507
-   :target: https://www.pivotaltracker.com/n/projects/1533621/stories/171433507
-

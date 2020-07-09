@@ -14,8 +14,7 @@
 The String Field
 ================
 
-When a component in a :glossdef:`test case object`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+When a component in a :iconlink:`gloss|test case object|../glossary.html#glossary-test-case-object`
 matches an area currently onscreen, its *Action* will be executed, and then the contents of its
 :guilabel:`String` field will be typed out as a sequence of keystrokes, one at a time, to the
 window in focus when the test case object matched.
@@ -39,16 +38,14 @@ the :guilabel:`String` field, in which case that field specifies how they should
 
 * **Text read dynamically from the screen (scraped)**, computed by one test case object and
   then inserted as specified by another test case object that comes later in the execution
-  of the :glossdef:`test case script`
-  :rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`:
+  of the :iconlink:`gloss|test case script|../glossary.html#glossary-test-case-script`:
 
-  * :bolditalic:`Full text:`  The source is the entire text found in a :glossdef:`region of interest`
-    :rawhtml:`<a href="../glossary.html#glossary-region-of-interest"><i class="fa fa-tiny fa-question-circle"></i></a>`
+  * :bolditalic:`Full text:`  The source is the entire text found in a
+    :iconlink:`gloss|region of interest|../glossary.html#glossary-region-of-interest`
     specified by the earlier test case object
   * :bolditalic:`Grouping with Regular Expressions:`  Insert substrings by applying a
     *grouped regular expression* to the string scraped from a region of interest
-  * :bolditalic:`Mapping extracted text:`  Given a :glossdef:`Map`
-    :rawhtml:`<a href="../glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+  * :bolditalic:`Mapping extracted text:`  Given a :iconlink:`gloss|map|../glossary.html#glossary-map`
     extract text from a region of interest, pass it to the map, and insert the map's output value
     as specified by a later test case object
 
@@ -124,9 +121,9 @@ the following expression in the :guilabel:`String` field of a later scripting no
 .. rubric:: Grouping with Regular Expressions
 
 More complex regular expressions can be used to select groups of subexpressions
-(like |python-regex-grouping|) within the scraped text.  These subexpressions can then be
-embedded within a new string template (even changing their relative order) by using the numbers
-of their original positions as follows:
+(see the :iconlink:`ext|Python Regular Expression library|https://docs.python.org/3.7/library/re.html`)
+within the scraped text.  These subexpressions can then be embedded within a new string template
+(even changing their relative order) by using the numbers of their original positions as follows:
 
 .. code-block::
    :class: short-code-block
@@ -193,87 +190,88 @@ appearing in the target text field of the application.
 
    The following table details which keys and characters require escaping when used:
 
-+-----------------------------------+--------------------------------------------------------------+
-| Key Sequence                      | Result                                                       |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Enter}``                       | **Enter** key                                                |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Space}``                       | **Space** key (this is only needed at the beginning or the   |
-|                                   | end of a string)                                             |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Tab}``                         | **Tab** key                                                  |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Shift Down}``, ``{Shift Up}``  | ``{Shift Down}`` holds the Shift key down until              |
-|                                   | ``{Shift Up}`` is encountered, so that all letters between   |
-|                                   | them are shifted to upper case.   ``{LShift}`` specifies the |
-|                                   | left Shift key and ``{RShift}`` specifies the right one.     |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Shift}``                       | Press and immediately release the **Shift** key, without     |
-|                                   | applying it to the letters that come next.                   |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Ctrl Down}``, ``{Ctrl Up}``    | ``{Ctrl Down}`` holds the Control key down until             |
-|                                   | ``{Ctrl Up}`` is encountered, so that all characters in      |
-|                                   | between have the Control function applied. ``{LCtrl}``       |
-|                                   | specifies the left Control key, and ``{RCtrl}`` the right.   |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Ctrl}``                        | Press and immediately release the **Control** key, without   |
-|                                   | applying it to the characters that come next.                |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Alt Down}``, ``{Alt Up}``      | ``{Alt Down}`` holds the Alt key down until ``{Alt Up}``     |
-|                                   | is encountered, so that all characters in between have the   |
-|                                   | Control function applied. ``{LCtrl}`` specifies the left     |
-|                                   | Control key, and ``{RCtrl}`` specifies the right one.        |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Alt}``                         | Press and immediately release the **Alt** key, without       |
-|                                   | applying it to the characters that come next.                |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{LWin Down}``, ``{LWin Up}``    | ``{LWin Down}`` holds the left **WindowsLogo** key down      |
-|                                   | until ``{LWin Up}`` is encountered                           |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Backspace}``                   | **Backspace** key                                            |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Del}``                         | **Delete** key                                               |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Esc}``                         | **Escape** key                                               |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{F1}`` - ``{F24}``              | **Function** keys                                            |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Up}``                          | **Up arrow** key                                             |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Down}``                        | **Down arrow** key                                           |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Left}``                        | **Left arrow** key                                           |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Right}``                       | **Right arrow** key                                          |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{Home}``                        | **Home** key                                                 |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{End}``                         | **End** key                                                  |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{PgUp}``                        | **Page Up** key                                              |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{PgDn}``                        | **Page Down** key                                            |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{U+nnnn}``                      | A |unicode-link|, where ``nnnn`` is its hexadecimal value,   |
-|                                   | excluding the ``0x`` prefix                                  |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{U+0060}``                      | **`**                                                        |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{U+0026}``                      | **&**                                                        |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{U+0022}``                      | **"**                                                        |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{!}``                           | **!**                                                        |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{#}``                           | **#**                                                        |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{^}``                           | **^**                                                        |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{+}``                           | **\+**                                                       |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{{}``                           | **{**                                                        |
-+-----------------------------------+--------------------------------------------------------------+
-| ``{}}``                           | **}**                                                        |
-+-----------------------------------+--------------------------------------------------------------+
++-----------------------------------+-----------------------------------------------------------------+
+| Key Sequence                      | Result                                                          |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Enter}``                       | **Enter** key                                                   |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Space}``                       | **Space** key (this is only needed at the beginning or the      |
+|                                   | end of a string)                                                |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Tab}``                         | **Tab** key                                                     |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Shift Down}``, ``{Shift Up}``  | ``{Shift Down}`` holds the Shift key down until                 |
+|                                   | ``{Shift Up}`` is encountered, so that all letters between      |
+|                                   | them are shifted to upper case.   ``{LShift}`` specifies the    |
+|                                   | left Shift key and ``{RShift}`` specifies the right one.        |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Shift}``                       | Press and immediately release the **Shift** key, without        |
+|                                   | applying it to the letters that come next.                      |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Ctrl Down}``, ``{Ctrl Up}``    | ``{Ctrl Down}`` holds the Control key down until                |
+|                                   | ``{Ctrl Up}`` is encountered, so that all characters in         |
+|                                   | between have the Control function applied. ``{LCtrl}``          |
+|                                   | specifies the left Control key, and ``{RCtrl}`` the right.      |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Ctrl}``                        | Press and immediately release the **Control** key, without      |
+|                                   | applying it to the characters that come next.                   |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Alt Down}``, ``{Alt Up}``      | ``{Alt Down}`` holds the Alt key down until ``{Alt Up}``        |
+|                                   | is encountered, so that all characters in between have the      |
+|                                   | Control function applied. ``{LCtrl}`` specifies the left        |
+|                                   | Control key, and ``{RCtrl}`` specifies the right one.           |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Alt}``                         | Press and immediately release the **Alt** key, without          |
+|                                   | applying it to the characters that come next.                   |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{LWin Down}``, ``{LWin Up}``    | ``{LWin Down}`` holds the left **WindowsLogo** key down         |
+|                                   | until ``{LWin Up}`` is encountered                              |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Backspace}``                   | **Backspace** key                                               |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Del}``                         | **Delete** key                                                  |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Esc}``                         | **Escape** key                                                  |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{F1}`` - ``{F24}``              | **Function** keys                                               |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Up}``                          | **Up arrow** key                                                |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Down}``                        | **Down arrow** key                                              |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Left}``                        | **Left arrow** key                                              |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Right}``                       | **Right arrow** key                                             |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{Home}``                        | **Home** key                                                    |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{End}``                         | **End** key                                                     |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{PgUp}``                        | **Page Up** key                                                 |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{PgDn}``                        | **Page Down** key                                               |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{U+nnnn}``                      | A :iconlink:`ext|unicode link|http://www.unicode.org/charts/`,  |
+|                                   | where ``nnnn`` is its hexadecimal value, excluding the ``0x``   |
+|                                   | prefix                                                          |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{U+0060}``                      | **`**                                                           |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{U+0026}``                      | **&**                                                           |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{U+0022}``                      | **"**                                                           |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{!}``                           | **!**                                                           |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{#}``                           | **#**                                                           |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{^}``                           | **^**                                                           |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{+}``                           | **\+**                                                          |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{{}``                           | **{**                                                           |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{}}``                           | **}**                                                           |
++-----------------------------------+-----------------------------------------------------------------+
 
 All other printable keys not found in the above list can be used normally.

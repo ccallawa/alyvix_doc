@@ -282,7 +282,8 @@ file :file:`vcomp140.dll` be present in Windows during installation by *pip*:
    ImportError: DLL load failed: The specified module could not be found.
 
 You can fix this problem by installing the **Microsoft Visual C++ Redistributable per Visual Studio**,
-which contains the required file.  It is available at |vc-redist-link|.
+which contains the required file.  It's available at
+:iconlink:`ext|https://aka.ms/vs/16/release/vc_redist.x64.exe|https://aka.ms/vs/16/release/vc_redist.x64.exe`.
 |accordion-end|
 
 |

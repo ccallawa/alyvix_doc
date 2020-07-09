@@ -15,11 +15,10 @@
 Test Case Data Format
 *********************
 
-Alyvix :glossdef:`test cases`
-:rawhtml:`<a href="glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`
-are stored as JSON files, which are then used by all Alyvix applications.
-Alyvix files represent the unique mechanism for interchange between Alyvix modules, and each
-file is self-contained, without any external dependencies.
+Alyvix :iconlink:`gloss|test cases|glossary.html#glossary-test-case` are stored as JSON files,
+which are then used by all Alyvix applications.  Alyvix files represent the unique mechanism for
+interchange between Alyvix modules, and each file is self-contained, without any external
+dependencies.
 
 
 
@@ -146,18 +145,14 @@ The individual sections of the JSON structure are explained below.
    .. rst-class:: bignums
       :class: backdarkbeige
 
-   #. :bolditalic:`maps`
-      :rawhtml:`<a href="glossary.html#glossary-map"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   #. :iconlink:`gloss|maps|glossary.html#glossary-map`
       **---**  An ordered set of values that a script can loop over, for
       instance to insert a sequence of values in multiple text fields
    #. :bolditalic:`objects`  **---**  A list of the individual test case objects created with
-      Alyvix Designer.  Each :glossdef:`test case object`
-      :rawhtml:`<a href="glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+      Alyvix Designer.  Each :iconlink:`gloss|test case object|glossary.html#glossary-test-case-object`
       is identified uniquely in the list by its object name
-   #. :bolditalic:`script`
-      :rawhtml:`<a href="glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
-      **---**  The scripts created for a test case, both the main script and any section
-      (subroutine) scripts.
+   #. :iconlink:`gloss|script|glossary.html#glossary-test-case-script`  **---**  The scripts
+      created for a test case, both the main script and any section (subroutine) scripts.
 
 
 .. rst-class:: bignums
@@ -205,8 +200,8 @@ The individual sections of the JSON structure are explained below.
 
    #. :bolditalic:`call`  **---**  The recorded options to start or kill an external application
       when a test case object is :ref:`first called <alyvix_designer_options_components_root>`
-   #. :bolditalic:`components`  **---**  The representation for the :glossdef:`component tree`
-      :rawhtml:`<a href="glossary.html#glossary-component-tree"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   #. :bolditalic:`components`  **---**  The representation for the
+      :iconlink:`gloss|component tree|glossary.html#glossary-component-tree`
       (:ref:`detailed below <test_case_data_format_components>`)
    #. :bolditalic:`date_modified`  **---**  The time the test case object was last modified
       (:ref:`also displayed in Selector <alyvix_selector_interface_screenshot>`)
@@ -255,10 +250,8 @@ The individual sections of the JSON structure are explained below.
    .. rst-class:: bignums
       :class: backmedbeige
 
-   #. :bolditalic:`groups`
-      :rawhtml:`<a href="glossary.html#glossary-group"><i class="fa fa-tiny fa-question-circle"></i></a>`
-      **---**  A JSON array of exactly 3 items, each of which corresponds
-      to one of the groups in the component tree.
+   #. :iconlink:`gloss|groups|glossary.html#glossary-group`  **---**  A JSON array of exactly
+      3 items, each of which corresponds to one of the groups in the component tree.
 
       .. rst-class:: bignums
          :class: backlightbeige
@@ -279,8 +272,9 @@ The individual sections of the JSON structure are explained below.
          to one of the subcomponents in a group.  The structure of each element is identical to
          the structure of the main component above.
 
-   #. :bolditalic:`screen`  **---**  The |base64-link| representation of the screen capture.
-      There is exactly one screen capture for each resolution in a test case object.
+   #. :bolditalic:`screen`  **---**  The :iconlink:`ext|Base64|https://en.wikipedia.org/wiki/Base64`
+      representation of the screen capture.  There is exactly one screen capture for each
+      resolution in a test case object.
 
 
 .. _test_case_data_format_measure:
@@ -351,9 +345,10 @@ The individual sections of the JSON structure are explained below.
          (see below), this is the interval (+/-) over which that measurement is guaranteed to have
          occurred.
 
-      #. :bolditalic:`annotation`  **---**  The |base64-link| representation of the screen when the
-         test case object was being run, overlaid with graphic annotations to indicate those
-         components that matched, and potentially the first component that did not match.
+      #. :bolditalic:`annotation`  **---**  The :iconlink:`ext|Base64|https://en.wikipedia.org/wiki/Base64`
+         representation of the screen when the test case object was being run, overlaid with
+         graphic annotations to indicate those components that matched, and potentially the first
+         component that did not match.
 
       #. :bolditalic:`exit`  **---**  The result type of the most recent run.  If the test case
          object did not match, then the type ``false`` or ``fail`` is determined by whether the
@@ -372,9 +367,10 @@ The individual sections of the JSON structure are explained below.
       #. :bolditalic:`scaling_factor`  **---**  The Windows zoom level at the time when the test
          case object was executed.
 
-      #. :bolditalic:`screenshot`  **---**  The |base64-link| representation of the screen during
-         the test case object run.  It's similar to the main screen capture, but is made during
-         the execution phase, rather than during the building phase.
+      #. :bolditalic:`screenshot`  **---**  The :iconlink:`ext|Base64|https://en.wikipedia.org/wiki/Base64`
+         representation of the screen during the test case object run.  It's similar to the main
+         screen capture, but is made during the execution phase, rather than during the building
+         phase.
 
       #. :bolditalic:`timestamp`  **---**  The time (Unix epoch) when this series element
          was run; otherwise ``-1``.

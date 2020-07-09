@@ -15,21 +15,19 @@
 Designer: Component Tree
 ************************
 
-You can use Alyvix Designer to create :glossdef:`selections`
-:rawhtml:`<a href="../glossary.html#glossary-selection"><i class="fa fa-tiny fa-question-circle"></i></a>`
+You can use Alyvix Designer to create :iconlink:`gloss|selections|../glossary.html#glossary-selection`
 on the screen.  When these regions are detected, whether as images or GUI objects, you can use
 additional neighboring screen elements to either confirm you have the correct region, or identify
 other areas that you can then act on, like a nearby button.
 
 The *component tree* is composed of three types of components:
 
-- A :glossdef:`root element` :rawhtml:`<a href="../glossary.html#glossary-root"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+- A :iconlink:`gloss|root element|../glossary.html#glossary-root`,
   which holds a captured screen to serve as a basis for visually recognizing parts of the screen.
-- :glossdef:`Groups` :rawhtml:`<a href="../glossary.html#glossary-group"><i class="fa fa-tiny fa-question-circle"></i></a>`,
-  which indicate the principal component that needs to be recognized.  A maximum of three groups
-  can be created per :glossdef:`test case object`
-  :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`.
-- :glossdef:`Components` :rawhtml:`<a href="../glossary.html#glossary-component"><i class="fa fa-tiny fa-question-circle"></i></a>`
+- :iconlink:`gloss|Groups|../glossary.html#glossary-group`, which indicate the principal component
+  that needs to be recognized.  A maximum of three groups can be created per
+  :iconlink:`gloss|test case object|../glossary.html#glossary-test-case-object`
+- :iconlink:`gloss|Components|../glossary.html#glossary-component`
   are the additional areas that can be used to confirm what is being recognized (especially when
   there are multiple similar target objects), such as a text label next to a button, or when the
   action can be on a separate GUI object, like a slider.  A maximum of four components can be
@@ -79,10 +77,11 @@ Object Recognition Types
 
 Alyvix's visual recognition capability is based on two well-known open source systems:
 
-- The |open-cv-link| computer vision project, which allows Alyvix to compare screen regions
-  graphically
-- The |tesseract-link| text recognition project, which lets Alyvix find writing in regions and
-  convert it to computer-readable text, regardless of the font and font size used
+- The :iconlink:`ext|OpenCV|https://opencv.org/` computer vision project, which allows Alyvix
+  to compare screen regions graphically
+- The :iconlink:`ext|Tesseract|https://github.com/tesseract-ocr/tesseract` text recognition
+  project, which lets Alyvix find writing in regions and convert it to computer-readable text,
+  regardless of the font and font size used
 
 .. image:: images/ad_component_types.png
    :class: image-boxshadow
@@ -126,14 +125,18 @@ a component in that group.
 
 .. warning::
 
-   Although you can add up to add up to four components per group, all components of all groups
+   Although you can add up to four components per group, all components of all groups
    must be detected before any action(s) will be taken.
+
+
+.. todo::  Still true it's four components per group?
+
 
 In addition to manually selecting the bounds of the region, you can right-click on any point on
 the screen and Alyvix will try to automatically determine
-:glossdef:`autocontour` :rawhtml:`<a href="../glossary.html#glossary-autocontour"><i class="fa fa-tiny fa-question-circle"></i></a>`
-the appropriate selection.  You can also resize the bounding edges of any capture region by
-dragging them with the left mouse button.
+:iconlink:`gloss|autocontour|../glossary.html#glossary-autocontour` the appropriate selection.
+You can also resize the bounding edges of any capture region by dragging them with the left
+mouse button.
 
 If desired, you can continue to add components and new groups using the mouse and keyboard
 shortcuts without returning to the Designer panel.

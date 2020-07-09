@@ -15,14 +15,12 @@
 Selector: Interface Overview
 ****************************
 
-Alyvix Selector allows you to organize individual :glossdef:`test cases`
-:rawhtml:`<a href="../glossary.html#glossary-test-case"><i class="fa fa-tiny fa-question-circle"></i></a>`,
+Alyvix Selector allows you to organize individual :iconlink:`gloss|test case|../glossary.html#glossary-test-case`
 copy test case objects from one file to another, and visualize and change basic test case parameters.
 
 When used with :ref:`Alyvix Editor <alyvix_editor_interface_top>` rather than as a standalone
-application, it allows you to quickly select test case objects in order to create :glossdef:`scripted`
-:rawhtml:`<a href="../glossary.html#glossary-test-case-script"><i class="fa fa-tiny fa-question-circle"></i></a>`
-interactions.
+application, it allows you to quickly select test case objects in order to create
+:iconlink:`gloss|scripted|../glossary.html#glossary-test-case-script` interactions.
 
 The Selector interface is centered around a list of all test case objects in a given test case,
 with a separate tab for each :file:`.alyvix` :ref:`file <test_case_data_format_file>`.
@@ -54,8 +52,7 @@ The principle interface elements are:
 
 #. The **file tabs** show the primary tab and any opened secondary :file:`.alvyix`
    :ref:`test case files <test_case_data_format_top>`.  Switching between tabs shows the
-   :glossdef:`test case objects`
-   :rawhtml:`<a href="../glossary.html#glossary-test-case-object"><i class="fa fa-tiny fa-question-circle"></i></a>`
+   :iconlink:`gloss|test case objects|../glossary.html#glossary-test-case-object`
    contained in each file.  A new file can be loaded by clicking on the |plus-icon| button.
    Similarly, the |times-icon| button next to a non-primary tab will remove that tab (note that
    you cannot remove the primary tab).

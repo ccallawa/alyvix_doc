@@ -25,7 +25,12 @@ Production Systems Videos and Tutorials
    * Locating the fields for entering credentials
    * Entering decrypted credentials in those fields
 
-   .. youtube:: sAmV1GVX-Y4
+.. image:: images/production-rdc-302.png
+   :class: image-boxshadow
+   :alt: RDC production tutorial video, version 3.0.2
+   :target: https://youtu.be/sAmV1GVX-Y4
+
+|source-youtube|
 
 
 .. topic:: Secure Citrix Login Video
@@ -36,4 +41,9 @@ Production Systems Videos and Tutorials
    * Locating the fields for entering credentials
    * Entering decrypted credentials in those fields
 
-   .. youtube:: KNfB_pVijX4
+.. image:: images/production-citrix-302.png
+   :class: image-boxshadow
+   :alt: Citrix production tutorial video, version 3.0.2
+   :target: https://youtu.be/KNfB_pVijX4
+
+|source-youtube|
