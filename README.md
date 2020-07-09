@@ -63,9 +63,7 @@ You can use [Git](https://git-scm.com/downloads):
 > git clone https://github.com/ccallawa/alyvix_doc.git <destination-directory>
 ```
 
-Or ZIP:
-```
-https://github.com/ccallawa/alyvix_doc/archive/master.zip
+Or [download the ZIP file](https://github.com/ccallawa/alyvix_doc/archive/master.zip)
 ```
 
 
