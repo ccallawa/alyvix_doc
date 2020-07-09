@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 19-06-2020
+:modified: 09-07-2020
 :tags: editor, script, blocks, run, loop
 :lang: en-US
 :translation: false
@@ -123,7 +123,10 @@ There are four modes for scripting nodes that can be used in the scripting panel
    to process the consequent.
 
 #. *Loop* --- For each item contained in a map, execute the specified scripting node once for
-   each row in the :ref:`map's table <alyvix_editor_interface_maps>`.
+   each row in the :ref:`map's table <alyvix_editor_interface_maps>`.  When run in
+   :bolditalic:`CLI output mode`, the
+   :ref:`measures for each iteration <alyvix_robot_result_cli_measures>` will appear in the output.
+
 
    |for| + :file:`Map Name` + |run| + :file:`Object/Section`
 

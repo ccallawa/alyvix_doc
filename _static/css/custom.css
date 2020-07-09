@@ -354,7 +354,9 @@ h3, h4 {
     margin-left: -3px;
     font-size: 22px;
 }
-
+.rst-content p.rubric {
+    font-size: 18px;
+}
 
 /* Add more space at the bottom before the footer */
 .rst-footer-buttons {

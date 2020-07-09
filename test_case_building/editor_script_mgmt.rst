@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 22-06-2020
+:modified: 09-07-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -127,6 +127,10 @@ inserted.  The map interface is shown here, with the available actions listed be
 * :wbutton:`ADD ROW` --- Add a new row to the bottom of the table
 * :nobutton:`ADD COLUMN` --- Add a new column to the right of the table
 * |times-icon| --- Delete a row or the rightmost column
+
+When a test case containing a map is executed, measurements are collected for each iteration
+of the map.  :ref:`These measurements are output <alyvix_robot_result_cli_measures>` when
+execution in CLI mode has completed.
 
 
 

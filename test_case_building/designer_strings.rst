@@ -167,7 +167,7 @@ web page or in a spreadsheet with this :guilabel:`String` field entry:
 
 
 
-.. rubric:: CLI Arguments via the Alyvix Robot -\\-args parameter
+.. rubric:: CLI Arguments via the Alyvix Robot -\ -args parameter
 
 Text can also be inserted from a command line parameter passed to Alyvix Robot.
 

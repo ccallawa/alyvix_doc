@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 19-06-2020
+:modified: 09-07-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -20,8 +20,6 @@ Alyvix :iconlink:`gloss|test cases|glossary.html#glossary-test-case` you have bu
 execute any individual test case objects you have created with Alyvix Designer, along with test
 case objects you have duplicated with Alyvix Selector.
 
-Blah :iconlink:`video|foo|production-systems-tutorials-top`
-
 In a production environment
 :iconlink:`video||videos_and_tutorials/production_systems_tutorials.html#production-systems-tutorials-top`
 the typical use case is to create a set of test cases once, and then repeatedly run those test
@@ -40,7 +38,7 @@ properly during the development phase:
 * Calling Robot from :ref:`within Alyvix Editor <alyvix_editor_run_script>` via the |runblue|
   button to run the main script
 * Calling Robot from the Command Prompt, passing it the name of a test case object, and using the
-  default **-\\-mode** option (alyvix/CLI)
+  default **-\ -mode** option (alyvix/CLI)
 
 In either case, one test case is executed at a time.
 
@@ -88,7 +86,7 @@ case object named ``start``, you can run just that test case object with this co
 .. _alyvix_robot_cli_launch:
 
 Robot also allows you to execute multiple test case objects in sequence by putting them in order
-in quotation marks after the **-\\-object** parameter, as long as all those objects exist in the
+in quotation marks after the **-\ -object** parameter, as long as all those objects exist in the
 test case:
 
 .. code-block:: doscon
@@ -101,15 +99,15 @@ The following options are available:
 +---------------+-------+--------------+-----------------------------------------------------------+
 | Option        | Alias | Argument     | Description                                               |
 +---------------+-------+--------------+-----------------------------------------------------------+
-| -\\-args      | -a    | *<strings>*  | Supply one or more strings to use in the                  |
+| -\ -args      | -a    | *<strings>*  | Supply one or more strings to use in the                  |
 |               |       |              | :ref:`String <alyvix_designer_options_strings_top>`       |
 |               |       |              | field of a test case object in Designer                   |
 +---------------+-------+--------------+-----------------------------------------------------------+
-| -\\-filename  | -f    | *<name>*     | Supply the file name with or without extension            |
+| -\ -filename  | -f    | *<name>*     | Supply the file name with or without extension            |
 +---------------+-------+--------------+-----------------------------------------------------------+
-| -\\-key       | -k    | *<key>*      | Supply a private key for use with encryption              |
+| -\ -key       | -k    | *<key>*      | Supply a private key for use with encryption              |
 +---------------+-------+--------------+-----------------------------------------------------------+
-| -\\-mode      | -m    | *<name>*     | ``alyvix`` --- CLI output format for humans               |
+| -\ -mode      | -m    | *<name>*     | ``alyvix`` --- CLI output format for humans               |
 |               |       |              | (default)                                                 |
 |               |       |              |                                                           |
 |               |       |              | ``nagios`` --- Nagios output                              |
@@ -118,9 +116,9 @@ The following options are available:
 |               |       |              | ``nats-influxdb`` --- NATS to InfluxDB                    |
 |               |       |              | :ref:`(see below) <alyvix_robot_result_nats_influxdb>`    |
 +---------------+-------+--------------+-----------------------------------------------------------+
-| -\\-object    | -o    | *<name>*     | Supply the Object name(s)                                 |
+| -\ -object    | -o    | *<name>*     | Supply the Object name(s)                                 |
 +---------------+-------+--------------+-----------------------------------------------------------+
-| -\\-verbose   | -v    | *<n>*        | Set the verbosity level for debugging output              |
+| -\ -verbose   | -v    | *<n>*        | Set the verbosity level for debugging output              |
 |               |       |              | ranging from **0** (min, default) to **2** (max)          |
 |               |       |              |                                                           |
 |               |       |              | **0**:  Records start/stop timestamps, state and time     |
@@ -154,7 +152,7 @@ Alyvix uses the following industry-standard return values for monitoring systems
 +-------------+--------------+-------------------------------------------------------------------------------+
 
 
-Using the **-\\-mode** option, you can specify the format for the information returned (defaults
+Using the **-\ -mode** option, you can specify the format for the information returned (defaults
 to CLI output mode).
 
 
@@ -165,7 +163,7 @@ to CLI output mode).
 CLI Output Format
 =================
 
-When run from the command prompt with the default **-\\-mode** parameter, Alyvix Robot will both
+When run from the command prompt with the default **-\ -mode** parameter, Alyvix Robot will both
 *(a)* display a short log describing basic events and timing data, and *(b)* create a new file
 based on the original test case, but with more detailed time measures added.  A timestamp
 corresponding to the moment of execution will be appended to the file name:
@@ -201,6 +199,20 @@ If you have enabled the :ref:`break flag <alyvix_designer_options_test_case_obje
 test case object fails, no further test case objects will be executed.  If it is not set, then
 the test case object will instead be skipped after its timeout has expired.
 
+.. _alyvix_robot_result_cli_measures:
+
+When run from the Windows command prompt, you can access the return value programmatically as
+follows:
+
+.. code-block:: doscon
+   :class: short-code-block
+
+   C:\Alyvix\testcases> echo %errorlevel%
+   0
+
+
+.. rubric:: Multiple Measures in CLI Output Mode
+
 If a given test case object is run more than one time in a single script, regardless of whether
 it appears in a sequential node, a conditional or inside a section, only the output of the
 object's last run will be displayed.  However, all results
@@ -224,15 +236,6 @@ pattern *<object_name>_<map_name>-<key_name>*:
    2020/06/03 10:17:13.370: dataentry_loop-key2 DETECTED in 0.0s (+/-0.060)
    2020/06/03 10:17:13.372: start-test ends OK, taking 4.640s.
 
-When run from the Windows command prompt, you can access the return value programmatically as
-follows:
-
-.. code-block:: doscon
-   :class: short-code-block
-
-   C:\Alyvix\testcases> echo %errorlevel%
-   0
-
 
 
 .. _alyvix_robot_result_nagios:
@@ -241,7 +244,7 @@ follows:
 Nagios Output Format
 ====================
 
-When Alyvix Robot is run from the command prompt, the **-\\-mode nagios** command option
+When Alyvix Robot is run from the command prompt, the **-\ -mode nagios** command option
 will generate performance data in
 :iconlink:`ext|Nagios message format|http://nagios-plugins.org/doc/guidelines.html#PLUGOUTPUT`.
 The main status result for the monitoring check will be one of the following values:

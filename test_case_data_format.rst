@@ -128,7 +128,9 @@ The individual sections of the JSON structure are explained below.
 .. rst-class:: bignums
    :class: backdarkbeige nobignum
 
-#. The **top level** corresponds to the elements used in Alyvix Editor:
+#. .. rubric:: *Top level*
+
+   The top level corresponds to the principal elements of Alyvix Editor:
 
    .. code-block:: json
       :class: tiny-code-block
