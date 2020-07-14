@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 22-06-2020
+:modified: 14-07-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -145,15 +145,18 @@ Text Type Options
 For both the *Detect* and *Map* types, the :guilabel:`Scrape` field displays the text that was
 automatically recognized in the component's
 :iconlink:`gloss|subselection|../glossary.html#glossary-subselection`
-on the screen capture.  Note that the main component of a group cannot be of type Text.
+on the screen capture.  There are some limitations to note:
+
+* The main component of a group cannot be of type Text
+* The  :iconlink:`gloss|region-of-interest|../glossary.html#glossary-region-of-interest`
+  must contain at least 2 characters (recognition improves as the amount of text increases)
 
 
 .. _alyvix_designer_options_components_text_detect:
 .. topic:: **Detect**
 
    The text type's *Detect* option will determine that a match was correctly made if the text
-   scraped from the :iconlink:`gloss|region-of-interest|../glossary.html#glossary-region-of-interest`
-   matches the condition specified in the first two fields.
+   scraped from the region of interest  matches the condition specified in the first two fields.
 
 .. image:: images/ad_type_submenu_text_detect_sized.png
    :class: image-boxshadow
