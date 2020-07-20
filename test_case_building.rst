@@ -115,7 +115,7 @@ with the following command line options:
 .. _test_case_building_selector:
 
 .. topic:: Alyvix Selector
-
+d
    Alyvix Selector is used to :ref:`centralize the management <alyvix_selector_interface_top>`
    of all of your test case objects, such as exporting them to other Alyvix files.  It also
    provides options to view, copy, edit and delete test cases objects.

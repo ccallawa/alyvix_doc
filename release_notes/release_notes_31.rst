@@ -39,7 +39,7 @@ Alyvix 3.1.x.
 * :iconlink:`pivotal|Pivotal Tracker Issue #172976968|172976968` |mdash| **Quick testing:**
   Alyvix provides a :ref:`quick test for single objects <alyvix_editor_interface_debug>`,
   single sections or multiple selected rows from the scripting panel
-* :iconlink:`pivotal|Pivotal Tracker Issue #172976987|172976987` |mdash| ***Regrabbing objects:**
+* :iconlink:`pivotal|Pivotal Tracker Issue #172976987|172976987` |mdash| **Regrabbing objects:**
   Alyvix can :ref:`grab a new frame <alyvix_selector_interface_grab_resolution>` for an
   existing object to redefine it or to define it at a different screen resolution
 
