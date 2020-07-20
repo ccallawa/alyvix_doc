@@ -45,7 +45,7 @@ how the Alyvix interface works.
 
 
 .. note::  You can find further examples, conceptual descriptions, and use production-centered
-           cases on the :ref:`Video and Tutorial <videos_and_tutorials_top>` page.
+           cases on the :ref:`Video and Tutorial <video_tutorials_top>` page.
 
 
 .. toctree::

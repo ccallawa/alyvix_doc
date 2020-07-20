@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 08-06-2020
-:modified: 23-06-2020
+:modified: 20-07-2020
 :tags: release notes
 :lang: en-US
 :translation: false
@@ -13,7 +13,7 @@
 .. _release_notes_v3_1_0:
 
 =======================
-Version 3.1.0 - Current
+Version 3.1.0 (Current)
 =======================
 
 Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
@@ -24,55 +24,66 @@ Alyvix 3.1.x.
 
 
 
-.. _install_release_v3_0_2:
+.. _install_release_v3_1_0:
 
 .. topic:: Version 3.1.0
 
-   **Release date:**  August 26th, 2020  :warn:`(temporary date)`
+   **Release date:**  July 21st, 2020
 
-**New Features**  :warn:`(missing the pivotal tracker links)`
+**New Features**
 
-* When running a test case, whether via Alyvix Robot or Alyvix Editor, the CLI output
-  :ref:`now reports measurements <alyvix_robot_result_cli>`
-  for every loop iteration, or else for the last execution of a test case object.  The format of
-  the :ref:`Measure and Series <test_case_data_format_measure>` data structures supporting this
-  have been udpated with more detailed information.
-* It is now
-  :ref:`faster and easier to debug <alyvix_editor_interface_debug>`
-  both individual test case objects and partial scripts with the addition of dedicated
-  interface controls.
-* We've introduced a new interface control which will
-  :ref:`grab a new screen capture <alyvix_selector_interface_grab_resolution>`
-  (either to replace an existing one or use in conjunction with Duplicate) or add an additional
-  screen capture at a different resolution than those already contained in the test case object.
+* :iconlink:`pivotal|Pivotal Tracker Issue #172976962|172976962` |mdash| **Multiple measures:**
+  Alyvix :ref:`reports all the measures <alyvix_robot_result_cli>` of the
+  :ref:`same object <test_case_data_format_measure>`
+  that runs more than one time (e.g., multiple inserts, in loops)
+* :iconlink:`pivotal|Pivotal Tracker Issue #172976968|172976968` |mdash| **Quick testing:**
+  Alyvix provides a :ref:`quick test for single objects <alyvix_editor_interface_debug>`,
+  single sections or multiple selected rows from the scripting panel
+* :iconlink:`pivotal|Pivotal Tracker Issue #172976987|172976987` |mdash| ***Regrabbing objects:**
+  Alyvix can :ref:`grab a new frame <alyvix_selector_interface_grab_resolution>` for an
+  existing object to redefine it or to define it at a different screen resolution
 
-**Improvements**  :warn:`(currently may have wrong pivotal tracker links)`
+**Improvements and Bug Fixes**
 
-* :iconlink:`pivotal|Pivotal Tracker Issue #171460651|171460651` |mdash| **Restructured CLI and Map Arguments:**
+* **User Experience:**
 
-  Better organization for default, CLI and Map arguments, including a default value for
-  String insertions when there are more loop iterations than supplied values.
+  * Use :ref:`default, CLI and map arguments <alyvix_robot_cli_options>`, including for run calls and decryption
+  * Directly :ref:`insert objects, sections and maps <alyvix_editor_script_mgmt_top>` (for looping) at the bottom of the scripting panel
+  * Drag and drop :ref:`objects, sections and maps <alyvix_editor_scripting_node_add>` to substitute parts of conditional and loop elements
+  * Re-sort scripting blocks :ref:`without substituting them <alyvix_editor_scripting_node_add>` (they are now indented and lighter in color when dragged)
+  * A blue bar is displayed on the left of :ref:`selected scripting blocks <alyvix_editor_interface_debug>`
+  * Renaming or removing scripted objects, sections and maps displays a confirmation request
+  * Scripting section blocks shows a :ref:`link icon <alyvix_editor_scripting_node_legend>` to the related section
+  * :ref:`Renaming an object <alyvix_selector_interface_list>` does not move the cursor focus away due to re-sorting
+  * Add an :ref:`interaction point icon <alyvix_designer_options_components_common>` to object components that do not interact centrally (by default)
+  * Select a file (through file explorer) for :ref:`run call arguments <alyvix_designer_options_components_root>`
+  * The console tab :ref:`echoes the Alyvix Robot output <alyvix_editor_run_script>` and when complete displays an annotated screenshot of the first failed object
+  * Clicking on an object in a multiple selection displays just that object
+  * Naming controls are applied to :ref:`section and map names <alyvix_editor_script_mgmt_top>`, where you cannot use reserved names such as "main", "fail", "exit"
+  * The object "Edit" button now also appears for groups with 5 components
+  * ``greater than zero`` is an option of the :ref:`detect logic for text components <alyvix_designer_options_components_text_detect>`
+  * The "Cancel" button for the "Open" editor option now really cancels the operation
+  * Pressing the "Exit" button when in an empty test case just shuts down the editor
+  * Valid argument syntax (eventually with default value) paints :ref:`the regex edit box <alyvix_designer_options_components_text_detect>` in yellow
+  * Renaming objects that are in a script provides several options to manage the change
+  * Deselecting all rows in the Selector panel will empty the Designer panel
+  * Clicking the "X" window button exits the editor with a warning message to avoid losing any unsaved work
+  * Renaming maps can now also be concluded by pressing the enter key or moving the cursor focus away
+  * Changes to objects are validated whenever action buttons are pressed (e.g., run, drag, append, grab, add, duplicate, and edit)
+  * Duplicating an object selects both of them, and neither one will be displayed in Designer
+  * Removing a scripted section no longer pops up a warning alert
+  * Enlarged the Sections panel to provide more space for section and map names
+  * An object's individual run button will not trigger the "fail" and "exit" sections of the main script
+  * Running an executable without arguments (void field) no longer triggers errors
+  * You can now click the "X" filter button in Selector to list objects defined for the working resolution
+  * Regrabbed objects will process new regex's for their new scrapes
 
-* :iconlink:`pivotal|Pivotal Tracker Issue #171438457|171438457` |mdash| **Better Interface Controls:**
+* **Output:**
 
-  Easier to use interface controls for script management, including:
+  * Alyvix Robot outputs a :ref:`clearer result message <alyvix_editor_run_script>` after a test case execution
+  * :file:`.alyvix` output files also report "arguments", "alias" and Nagios "state" within the "run" section
+  * Alyvix Robot provides compliant Nagios output: thresholds have the same measurement unit as that of the related value
 
-  * Added hover confirmation via a blue bar in the scripting panel
-  * Multi-selection over scripting nodes
-  * New Drag, Insert and Run controls employed by the new debugging capabilities
+* **System:**
 
-* :iconlink:`pivotal|Pivotal Tracker Issue #171433507|171433507` |mdash| **Improved User Experience:**
-
-  Improved the user experience throughout the UI, such as:
-
-  * Confirm/cancel dialog boxes
-  * Annotations of failed objects in the Console tab
-  * Better drag-and-drop support for scripting
-  * Checks employed on scripts when renaming and deleting the underlying test case objects
-  * Renamed objects in Selector are no longer sorted out of focus
-
-**Bug Fixes**  :warn:`(waiting for information)`
-
-* *Bugfix #1:*  Description
-* *Bugfix #2:*  Description
-* *Bugfix #3:*  Description
+  * Alyvix can be installed on Windows 8 64-bit machines: the *numpy* version is now compatible

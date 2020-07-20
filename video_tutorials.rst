@@ -10,11 +10,11 @@
 
 
 
-.. _videos_and_tutorials_top:
+.. _video_tutorials_top:
 
-####################
-Videos and Tutorials
-####################
+###############
+Video Tutorials
+###############
 
 This page presents all Alylvix 3 videos and tutorials, classified by task type.
 

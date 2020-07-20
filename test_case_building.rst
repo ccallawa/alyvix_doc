@@ -49,7 +49,7 @@ Once you've built a test case, you can let it interact with your chosen app eith
 
 The :ref:`Test Case Data Format <test_case_data_format_top>` page provides technical details on how
 Alyvix test case files are organized and what they contain, while the
-:ref:`Getting Started <getting_started_top>` and :ref:`Videos and Tutorials <videos_and_tutorials_top>`
+:ref:`Getting Started <getting_started_top>` and :ref:`Videos and Tutorials <video_tutorials_top>`
 sections include detailed mini-tutorials and topic-based videos on how to use Alyvix Editor and Robot.
 
 All of these applications can be launched from the Windows Command Prompt or PowerShell.

@@ -18,7 +18,7 @@
    test_case_building.rst
    test_case_execution.rst
    test_case_data_format.rst
-   videos_and_tutorials.rst
+   video_tutorials.rst
    glossary.rst
    release_notes.rst
    get_in_touch.rst
@@ -60,7 +60,7 @@ and prepare you to implement Alyvix in your environment.
 
 For more extended, video-based example tutorials on the basics of using Alyvix, real-world use
 cases you might use in production, and operations-oriented explanations of Alyvix features, take
-a look at the :ref:`Videos and Tutorials <videos_and_tutorials_top>` page.
+a look at the :ref:`Videos and Tutorials <video_tutorials_top>` page.
 
 The sections on test case building and execution contain more in-depth details and explanations
 about using Alyvix Editor and Alyvix Robot to create and execute test cases.

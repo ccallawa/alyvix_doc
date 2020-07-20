@@ -18,7 +18,7 @@ Example:  Opening the Windows Start Menu
 This short task will accomplish something simple, yet will show you the potential of
 using Alyvix.
 
-Tutorials similar to this one are also available in :ref:`video format <videos_and_tutorials_top>`.
+Tutorials similar to this one are also available in :ref:`video format <video_tutorials_top>`.
 
 .. rst-class:: bignums
 

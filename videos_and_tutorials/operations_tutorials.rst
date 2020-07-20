@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 21-05-2020
-:modified: 21-05-2020
+:modified: 20-07-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -12,9 +12,9 @@
 
 .. _operations_tutorials_top:
 
-===============================
-Operations Videos and Tutorials
-===============================
+==========================
+Operations Video Tutorials
+==========================
 
 .. _operations_tutorials_image:
 

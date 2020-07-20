@@ -42,6 +42,10 @@
 
    <i class="fa fa-smaller fa-arrows"></i>
 
+.. |link-icon| raw:: html
+
+   <i class="fa fa-smaller fa-link"></i>
+
 .. |lineadd-icon| image:: /pictures/lineadd_icon.png
    :class: inline-image-higher
 
