@@ -155,21 +155,22 @@ illustrates an example script, where each color is explained in the table below.
 .. table::
    :widths: 25 75
 
-   +-------------+--------------------------------------------------------------------+
-   | **Color**   | **Description**                                                    |
-   +-------------+--------------------------------------------------------------------+
-   | Gray        | A disabled test case object of any mode                            |
-   +-------------+--------------------------------------------------------------------+
-   | Light Green | An enabled test case object pulled from Selector                   |
-   +-------------+--------------------------------------------------------------------+
-   | Yellow      | An enabled test case object from Selector serving as an antecedent |
-   +-------------+--------------------------------------------------------------------+
-   | Red         | An unspecified scripting element serving as a consequent           |
-   +-------------+--------------------------------------------------------------------+
-   | Orange      | An enabled map element within a |for| scripting node               |
-   +-------------+--------------------------------------------------------------------+
-   | Dark green  | An enabled Section script (subroutine)                             |
-   +-------------+--------------------------------------------------------------------+
+   +-------------+---------------------------------------------------------------------+
+   | **Color**   | **Description**                                                     |
+   +-------------+---------------------------------------------------------------------+
+   | Gray        | A disabled test case object of any mode                             |
+   +-------------+---------------------------------------------------------------------+
+   | Light Green | An enabled test case object pulled from Selector                    |
+   +-------------+---------------------------------------------------------------------+
+   | Yellow      | An enabled test case object from Selector serving as an antecedent  |
+   +-------------+---------------------------------------------------------------------+
+   | Red         | An unspecified scripting element serving as a consequent            |
+   +-------------+---------------------------------------------------------------------+
+   | Orange      | An enabled map element within a |for| scripting node                |
+   +-------------+---------------------------------------------------------------------+
+   | Dark green  | An enabled Section script (subroutine)  ---  Clicking on the "link" |
+   |             | icon will switch to the scripting panel for that Section            |
+   +-------------+---------------------------------------------------------------------+
 
 
 

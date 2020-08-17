@@ -19,14 +19,9 @@ When you build a :iconlink:`gloss|test case|glossary.html#glossary-test-case`, y
 a set of visual templates that can be matched against your app interfaces in real time, allowing
 Alyvix to interact with those interfaces just like a person would.
 
-
-.. todo::
-
-   * Building TCs is the most important Alyvix task
-   * Building TCs is done frequently
-   * So it's worth investing time to learn it
-   * TCs are made up of one or more TCOs (moving the glossary link up to here)
-
+When setting up Alyvix to work with your applications, you will spend most of your time creating
+test cases and their test case objects, so it's worth some time to learn how to do it the right way
+and understand from the beginning what the available options are.
 
 There are three main tools for building test cases:
 
@@ -115,7 +110,7 @@ with the following command line options:
 .. _test_case_building_selector:
 
 .. topic:: Alyvix Selector
-d
+
    Alyvix Selector is used to :ref:`centralize the management <alyvix_selector_interface_top>`
    of all of your test case objects, such as exporting them to other Alyvix files.  It also
    provides options to view, copy, edit and delete test cases objects.

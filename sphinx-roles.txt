@@ -6,6 +6,10 @@
 
    <div style="text-align: right; padding: 0; margin: 0;">Source:  Alyvix@YouTube &nbsp; <i class="fa fa-small fa-external-link"></i></div>
 
+.. |source-youtube-left| raw:: html
+
+   <div style="text-align: left; padding: 0; margin: 0;">Source:  Alyvix@YouTube &nbsp; <i class="fa fa-small fa-external-link"></i></div>
+
 .. |bar-icon| raw:: html
 
    &nbsp;<i class="fa fa-small fa-black fa-bars"></i>

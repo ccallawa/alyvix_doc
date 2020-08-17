@@ -16,7 +16,25 @@
 Production Systems Video Tutorials
 ==================================
 
-.. topic:: Secure RDC Login Video
+.. topic:: Multi-Factor Authentication (MFA) Service Monitoring Login
+
+   If you need to test that your multi-factor authentication system is up and running, this video
+   uses LinkedIn and the Authy app to show you how to set everything up and test it by directly
+   logging in:
+
+   * Setting up the Authy multi-platform 2FA app
+   * Setting up LinkedIn to use 2FA
+   * Using Alyvix to scrape the 2FA code from Authy and give it to LinkedIn
+
+.. image:: images/production-mfa-310.png
+   :class: image-boxshadow
+   :alt: Multi-factor authentication service monitoring login tutorial video, version 3.1.0
+   :target: https://youtu.be/RdvamQAG3oI
+
+|source-youtube|
+
+
+.. topic:: Secure RDC Login
 
    If you need to access an application through Remote Desktop Connection, this video will show
    you how to securely log in by:
@@ -33,9 +51,9 @@ Production Systems Video Tutorials
 |source-youtube|
 
 
-.. topic:: Secure Citrix Login Video
+.. topic:: Secure Citrix Login
 
-   Similarly,, this video shows you how to securely log in via Citrix:
+   Similarly, this video shows you how to securely log in via Citrix:
 
    * Encrypting your credentials
    * Locating the fields for entering credentials

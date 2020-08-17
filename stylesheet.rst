@@ -434,7 +434,7 @@ Here is a simple table:
 
 ===========  ==========================  =========
 Name         Syntax                      Format
-===========  ==========================  =========
+-----------  --------------------------  ---------
 Italics      \*                          *Italics*
 Bold         \**                         **Bold**
 Mono         \``                         ``Monospace``
@@ -449,7 +449,7 @@ GUI          Role:guilabel               :guilabel:`File > Settings`
 Keys         Role:kbd                    :kbd:`ctrl` + :kbd:`s`
 File         Role:file                   :file:`/etc/passwd`
 -----------  --------------------------  ---------
-:caps:`Roles defined by in-page directives and custom.css`
+:caps:`Roles defined by in-page directives (sphinx-roles.txt) and custom.css`
 --------------------------------------------------
 Warn         Role:warn                   :warn:`Warn`
 Hint         Role:hint                   :hint:`Hint`
@@ -460,20 +460,20 @@ This is built as follows::
 
    =========  =============  =========
    Name       Syntax         Format
-   =========  =============  =========
+   --------  --------------  ---------
    Italics    \*             *Italics*
    Bold       \**            **Bold**
    Mono       \``            ``Monospace``
    Mixed      \\             *Ita*\ **Bol**\ ``Lit``\s
    Math       \:math:        :math:`\\\sum_{k=0}^{N-1} s_k`
    ---------  -------------  ---------
-   ``Roles defined by Sphinx``
+   :caps:`Roles defined by Sphinx`
    -----------------------------------
    GUI        Role:guilabel  :guilabel:`File > Settings`
    Keys       Role:kbd       :kbd:`ctrl` + :kbd:`s`
    File       Role:file      :file:`/etc/passwd`
    ---------  -------------  ---------
-   ``Roles defined by in-page directives and custom.css``
+   :caps:`Roles defined by in-page directives (sphinx-roles.txt) and custom.css`
    -----------------------------------
    Warn       Role:warn      :warn:`Warn`
    Hint       Role:hint      :hint:`Hint`
@@ -489,7 +489,7 @@ And here is a complex table:
 +------------------------+------------+----------+----------+
 | Header row, column 1   | Header 2   | Header 3 | Header 4 |
 | (header rows optional) |            |          |          |
-+========================+============+==========+==========+
++------------------------+------------+----------+----------+
 | body row 1, column 1   | column 2   | column 3 | column 4 |
 +------------------------+------------+----------+----------+
 | body row 2             | ...        | ...Spanning text... |
@@ -500,7 +500,7 @@ Built like so::
    +------------------------+------------+----------+----------+
    | Header row, column 1   | Header 2   | Header 3 | Header 4 |
    | (header rows optional) |            |          |          |
-   +========================+============+==========+==========+
+   +------------------------+------------+----------+----------+
    | body row 1, column 1   | column 2   | column 3 | column 4 |
    +------------------------+------------+----------+----------+
    | body row 2             | ...        | ...Spanning text... |
@@ -544,10 +544,11 @@ can be specified if you use the full table environment:  align (left, center, ri
       | Green       | Leaves on the trees |
       +-------------+---------------------+
 
+|
 
 .. _style_columns_via_tables:
 
-Columns via a table having a *class* that removes borders
+Here's an example of columns via a table having a *class* that removes borders
 
 .. table::
    :widths: 33 33 33
@@ -560,6 +561,21 @@ Columns via a table having a *class* that removes borders
    +---------+---------+---------+
    | Item A3 | Item B3 | Item C3 |
    +---------+---------+---------+
+
+.. code-block:: rst
+   :class: medium-code-block
+
+   .. table::
+      :widths: 33 33 33
+      :class: table-empty-no-borders
+
+      +---------+---------+---------+
+      | Item A1 | Item B1 | Item C1 |
+      +---------+---------+---------+
+      | Item A2 | Item B2 | Item C2 |
+      +---------+---------+---------+
+      | Item A3 | Item B3 | Item C3 |
+      +---------+---------+---------+
 
 |
 
@@ -602,7 +618,7 @@ as follows (note that figures and images have different options):
    :class: short-code-block
 
    .. image:: pictures/alyvix_logo_399x333.png
-        :class: image-with-boxshadow
+      :class: image-with-boxshadow
 
 You can also make a more structured figure.  It assumes you want an image at the top with the
 basic options above.  A paragraph at the same indentation level as the options will be treated as
@@ -908,16 +924,20 @@ is installed by default in this distribution.
 Dynamic Copy and Accordion Buttons
 ==================================
 
-This extension improves the usability of the copy-to-clipboard function for code blocks and adds
-accordion buttons.  To use it:
+This extension to Sphinx's ``sphinx-copybutton`` extension improves the usability of the
+copy-to-clipboard function for code blocks and adds accordion buttons.  To use it:
 
 * Install the extension with ``pip install sphinx-copybutton``
 * Add ``'sphinx_copybutton'`` to the extension list in Sphinx's :file:`conf.py`
 
-Then modify the imported files to filter out command prompts when copying from code blocks by
-changing the *copyTargetText* function at the bottom of
-:file:`Python37/Lib/site-packages/sphinx_copybutton/static/copybutton.js_t` and the English
-messages at the top:
+Then modify the file :file:`Python37/Lib/site-packages/sphinx_copybutton/static/copybutton.js_t`
+to allow disabling the copy button for a code block by adding ``:class: nocopy`` to the RST
+directive, and to filter out command prompts when copying from code blocks.  In that file you'll
+need to modify these parts as shown below:
+
+* The English messages at the top
+* The ``addCopyButtonToCodeCells`` function
+* The ``copyTargetText`` function
 
 .. code-block:: js
 
@@ -931,11 +951,38 @@ messages at the top:
 
 .. code-block:: js
 
+   const addCopyButtonToCodeCells = () => {
+     // If ClipboardJS hasn't loaded, wait a bit and try again. This
+     // happens because we load ClipboardJS asynchronously.
+     if (window.ClipboardJS === undefined) {
+       setTimeout(addCopyButtonToCodeCells, 250)
+       return
+     }
+
+     // Add copybuttons to all of our code cells
+     const codeCells = document.querySelectorAll('{{ copybutton_selector }}')
+     codeCells.forEach((codeCell, index) => {
+       const id = codeCellId(index)
+       codeCell.setAttribute('id', id)
+       const pre_bg = getComputedStyle(codeCell).backgroundColor;
+
+       const clipboardButton = id =>
+       `<a class="copybtn o-tooltip--left" style="background-color: ${pre_bg}" data-tooltip="${messages[locale]['copy']}" data-clipboard-target="#${id}">
+         <img src="${DOCUMENTATION_OPTIONS.URL_ROOT}_static/{{ copybutton_image_path }}" alt="${messages[locale]['copy_to_clipboard']}">
+       </a>`
+       grandparent = codeCell.parentElement.parentElement;  // Line added by Charles@WP  ---  Don't add a copy button when the code block doesn't want it
+       if ((grandparent.getAttribute('class') == null) || (grandparent.getAttribute('class').search('nocopy') < 0)) {  // Conditional added by Charles@WP
+           codeCell.insertAdjacentHTML('afterend', clipboardButton(id))
+       }
+     })
+
+.. code-block:: js
+
    var copyTargetText = (trigger) => {
      var target = document.querySelector(trigger.attributes['data-clipboard-target'].value);
      var textContent = target.textContent.split('\n');
-     if (textContent[0].startsWith('C:\\> ')) { return textContent[0].slice(5); } // Added by Charles@WP
-     if (textContent[0].startsWith('C:\\Alyvix\\testcases> ')) { return textContent[0].slice(21); } // Added by Charles@WP
+     if (textContent[0].startsWith('C:\\> ')) { return textContent[0].slice(5); } // Line added by Charles@WP
+     if (textContent[0].startsWith('C:\\Alyvix\\testcases> ')) { return textContent[0].slice(21); } // Line added by Charles@WP
      textContent.forEach((line, index) => {
        if (line.startsWith(copybuttonSkipText)) {
          textContent[index] = line.slice(copybuttonSkipText.length)
@@ -1029,11 +1076,13 @@ if it's not in the specification.
 
 .. _style_sphinx_youtube:
 
-=======
-YouTube
-=======
+=======================
+Embedded YouTube Videos
+=======================
 
-Add a YouTube video using the  with the whole URL or just the code
+Add a YouTube video specifying the whole URL or just the code.  We have tested this with no
+problems, but currently have decided not to embed videos, so we use thumbnails to external
+links instead.
 
 * Install in Python with ``pip install sphinxcontrib.youtube``
 * Add ``'sphinxcontrib.youtube'`` to the extension list in Sphinx's :file:`conf.py`

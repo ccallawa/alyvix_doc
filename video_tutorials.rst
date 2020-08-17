@@ -30,6 +30,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
 #. :ref:`Production Systems <production_systems_tutorials_top>` tutorials describing techniques
    based on real world production examples
 
+   * Multi-Factor Authentication Login |halftab| :shadow:`(video #13 - 9'54")`
    * Secure RDC Login |halftab| :shadow:`(video #5 - 4'31")`
    * Secure Citrix Login |halftab| :shadow:`(video #7 - 5'26")`
 

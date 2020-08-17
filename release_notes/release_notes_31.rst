@@ -30,14 +30,25 @@ Alyvix 3.1.x.
 
    **Release date:**  July 21st, 2020
 
+
+.. image:: images/rel-notes-310-play.png
+   :width: 200
+   :class: image-boxshadow
+   :alt: Release notes video, version 3.1.0
+   :target: https://youtu.be/5WWbx3homho
+
+|source-youtube-left|
+
+|
+
 **New Features**
 
 * :iconlink:`pivotal|Pivotal Tracker Issue #172976962|172976962` |mdash| **Multiple measures:**
-  Alyvix :ref:`reports all the measures <alyvix_robot_result_cli>` of the
+  Alyvix :ref:`reports all the measures <alyvix_robot_result_cli_measures>` of the
   :ref:`same object <test_case_data_format_measure>`
   that runs more than one time (e.g., multiple inserts, in loops)
 * :iconlink:`pivotal|Pivotal Tracker Issue #172976968|172976968` |mdash| **Quick testing:**
-  Alyvix provides a :ref:`quick test for single objects <alyvix_editor_interface_debug>`,
+  Alyvix now provides a :ref:`quick test for single objects <alyvix_editor_interface_debug>`,
   single sections or multiple selected rows from the scripting panel
 * :iconlink:`pivotal|Pivotal Tracker Issue #172976987|172976987` |mdash| **Regrabbing objects:**
   Alyvix can :ref:`grab a new frame <alyvix_selector_interface_grab_resolution>` for an

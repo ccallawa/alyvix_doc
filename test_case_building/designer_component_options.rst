@@ -209,14 +209,13 @@ in the component tree.
    :class: image-boxshadow
    :alt: The mouse action selection dropdown.
 
-.. todo:: Convert the bullet list into a table with images of the action icons and set point ?
-
 An **Action** creates a mouse event corresponding to one of the six types listed below (an
 Operations tutorial video is available which
 :ref:`explains the individual Action options <operations_tutorials_actions>`).  By default, the
 mouse position will be set to the center of the component's selection or subselection.
 
-    * **None (default):**  Don't perform any mouse action when a component is matched.
+    * **None (default):**  Don't perform any mouse action when a component is matched.  No mouse
+      icon will be displayed to the right of the component.
     * **Move:**  Hover the mouse over the component, without clicking.  The
       :guilabel:`SET POINT` button lets you select a point relative to the center of
       the component with the crosshairs.
@@ -236,8 +235,50 @@ mouse position will be set to the center of the component's selection or subsele
       position indicated by the :guilabel:`SET POINT` button.  Otherwise choose a direction
       (up, down, left or right) and the distance in pixels to move before releasing the mouse button.
 
-The **String** option enters text into a text field that currently has the focus (including after
-an **Action**), for instance in a login/password field.  It can also emit special characters
-such as the Windows key.
+The **String** option enters text into the text field in the interface that currently has focus
+(it will occur after the effect of any **Action** above), for instance in a login/password field.
+It can also emit special characters such as the Windows key.  For more detailed information, see
+:ref:`the following page <alyvix_designer_options_strings_top>` that describes the **String** field.
 
-See the next page for more detailed information on the **String** field.
+When one of these options is selected, an icon will appear to the right of the component as a
+quick indication of that option and its parameters.  The following table illustrates the icons
+used and their meanings.
+
+.. table::  Mouse and Keyboard Action Icons
+   :widths: 20 80
+   :width: 100%
+   :class: no-header-row
+
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_move.png              |  Move the mouse to a new position                 |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_click_left.png        |  Click the left mouse button                      |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_click_right.png       |  Click the right mouse button                     |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_scroll_down.png       |  Scroll downwards                                 |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_scroll_up.png         |  Scroll upwards                                   |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_hold.png              |  Hold the object under the mouse                  |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_release_none.png      |  Release the held object where it is              |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_release_up.png        |  Release the held object upwards                  |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_release_down.png      |  Release the held object downwards                |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_release_left.png      |  Release the held object leftwards                |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_mouse_release_right.png     |  Release the held object rightwards               |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_keyboard.png                |  Enter text into the field in focus               |
+   +-------------------------------------------------------+---------------------------------------------------+
+   | .. image:: /pictures/icon_keyboard_paren.png          |  Enter parameterized text into the field in focus |
+   +-------------------------------------------------------+---------------------------------------------------+
+
+.. tip::
+
+   When using :guilabel:`SET POINT`, the direction of the arrow to the right of the icon is
+   indicative of the direction of the point that was set compared to the center of the selection
+   or subselection.
