@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 22-06-2020
+:modified: 18-08-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -215,13 +215,18 @@ When the resolution of the Windows desktop matches one of the resolutions record
 object, Selector will overwrite that :ref:`screen capture <test_case_data_format_components>`
 in the object with the new version.
 
-.. todo::  Add a link to a video/tutorial, such as the 3.1.0 release notes video
-
-This replacement allows you to keep a test case up-to-date, which can be useful for instance when
-a website or webapp has been fixed or improved.  In addition to simple replacement, you can also
+This replacement allows you to keep a test case up-to-date, which can be useful for times when
+a web site or web app has been fixed or updated.  In addition to simple replacement, you can also
 use regrabbing to build new test cases faster by using the :wbutton:`DUPLICATE` button to copy
 the test case object, and then just changing the screen.
 
 When the resolution of the Windows desktop does not match any of the screen grabs stored in the
 test case object, then a grab of the current screen will be added to its existing screen grabs,
 annotated with the current screen resolution and zoom factor.
+
+.. note::
+
+   When you regrab a test case object that includes a text component in detect mode with a
+   :ref:`regular expression <alyvix_designer_options_components_text_detect>`, the scraped
+   expression will automatically be reprocessed under the existing regular expression and the
+   new value stored.
