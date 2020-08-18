@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 26-05-2020
+:modified: 18-08-2020
 :tags: designer, component, tree
 :lang: en-US
 :translation: false
@@ -30,7 +30,7 @@ The *component tree* is composed of three types of components:
 - :iconlink:`gloss|Components|../glossary.html#glossary-component`
   are the additional areas that can be used to confirm what is being recognized (especially when
   there are multiple similar target objects), such as a text label next to a button, or when the
-  action can be on a separate GUI object, like a slider.  A maximum of four components can be
+  action can be on a separate GUI object, like a slider.  A maximum of five components can be
   assigned to each group.
 
 
@@ -115,7 +115,7 @@ which group any newly selected region will belong to.
 
 You can change to a new group simply by pressing the number associated with it (:kbd:`1`, :kbd:`2`
 or :kbd:`3`) at which point the crosshairs will change to indicate the color of the new group.
-Designer will automatically switch to a new group after you add a fourth component.
+Designer will automatically switch to a new group after you add a fifth component.
 
 If the component tree is empty, the first region you select will become the first group in
 the tree.  As mentioned in the section
@@ -125,12 +125,8 @@ a component in that group.
 
 .. warning::
 
-   Although you can add up to four components per group, all components of all groups
+   Although you can add up to five components per group, all components of all groups
    must be detected before any action(s) will be taken.
-
-
-.. todo::  Still true it's four components per group?
-
 
 In addition to manually selecting the bounds of the region, you can right-click on any point on
 the screen and Alyvix will try to automatically determine

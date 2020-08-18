@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 09-07-2020
+:modified: 18-08-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -68,6 +68,7 @@ The following scripts are predefined and are executed by Alyvix Robot at the app
    to restore your application and environment to its prior state (for instance, to shut down a
    browser that was launched as part of a test case)
 
+These three names are reserved -- you cannot use them as names for your sections or maps.
 
 
 .. _alyvix_editor_interface_sections:
