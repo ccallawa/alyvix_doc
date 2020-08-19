@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 14-07-2020
+:modified: 19-08-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -170,6 +170,10 @@ one of these 3 methods:
     (An Operations tutorial video is available that :ref:`explains the regex options
     <operations_tutorials_regex>`).  The regular expression syntax is governed by the
     :iconlink:`ext|Python Regular Expression library|https://docs.python.org/3.7/library/re.html`.
+
+    A green background color in the Regex field indicates the regex matches the scraped text, red
+    means it does not match, and yellow indicates a syntactically well-formed special construct
+    that will potentially match a to-be-determined external value.
   * **Number**  The recognized text is considered matched only if it results in a number that
     satisfies the condition selected in the :guilabel:`Logic` field (e.g., "greater than zero").
   * **Date**  The recognized text is considered matched only if it results in a day and time that

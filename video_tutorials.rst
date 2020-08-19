@@ -23,6 +23,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
 #. :ref:`Basic Concepts <basic_concepts_tutorials_top>` tutorials that show how to use the
    Alyvix interface
 
+   * Introduction to version 3.1.0 |halftab| :shadow:`(video #10 - 5'58")`
    * A minimal test case |halftab| :shadow:`(video #1 - 2'25")`
    * Extending the above example to check the results |halftab| :shadow:`(video #2 - 4'54")`
    * A multi-step web form example |halftab| :shadow:`(video #3 - 11'04")`

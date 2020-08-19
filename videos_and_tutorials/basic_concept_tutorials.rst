@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 21-05-2020
-:modified: 21-05-2020
+:modified: 19-08-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -15,6 +15,22 @@
 ==============================
 Basic Concepts Video Tutorials
 ==============================
+
+.. topic:: Introduction to Version 3.1.0
+
+   This introduction to version 3.1.0 of Alyvix shows how you can use Alyvix to visually monitor
+   your applications by defining what a set of interaction sequences should look like and then
+   executing it to measure the latency between each step in the interaction.  An initial video
+   shows the typical Alyvix workflow in broad strokes, followed by a second, more in-depth
+   description of the same task.
+
+.. image:: images/basics-5min-introduction-310.png
+   :class: image-boxshadow
+   :alt: Introduction to Alyvix tutorial video, version 3.1.0
+   :target: https://youtu.be/KnQT7U8Fxoo
+
+|source-youtube|
+
 
 .. topic:: 2-Minute Video
 
