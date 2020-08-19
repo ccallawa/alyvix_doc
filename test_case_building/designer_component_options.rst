@@ -244,6 +244,14 @@ The **String** option enters text into the text field in the interface that curr
 It can also emit special characters such as the Windows key.  For more detailed information, see
 :ref:`the following page <alyvix_designer_options_strings_top>` that describes the **String** field.
 
+
+
+.. _alyvix_designer_options_components_common_icons:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Mouse and Keyboard Action Icons
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 When one of these options is selected, an icon will appear to the right of the component as a
 quick indication of that option and its parameters.  The following table illustrates the icons
 used and their meanings.
@@ -285,4 +293,5 @@ used and their meanings.
 
    When using :guilabel:`SET POINT`, the direction of the arrow to the right of the icon is
    indicative of the direction of the point that was set compared to the center of the selection
-   or subselection.
+   or subselection.  For instance, an arrow like |smalltab| |mousearrow| |smalltab| means the click
+   point will be below and slightly to the left of the selection.

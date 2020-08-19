@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 18-08-2020
+:modified: 19-08-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -112,15 +112,16 @@ each row (top to bottom) in the map.
 
 .. note::
 
-   Rows are automatically sorted alphabetically by the key, so if order is important, it should
-   be reflected in how the keys are named.
+   Rows in a map are automatically sorted alphabetically by the key, so if order is important,
+   it should be reflected in how the keys are named.
 
 You can add a new map by clicking on the :nobutton:`ADD` button next to **MAPS** in the script
 management panel.  You should then change the name of the map from the default to something
 that helps you easily remember what it's used for.
 
-The first step after creating a map is to define the set of keys and values that can be
-inserted.  The map interface is shown here, with the available actions listed below:
+The first step after creating a map is to define the set of keys and values that can be inserted.
+(When used as part of a |for| loop, the number of iterations will always be equal to the number of
+keys in the map.)  The map interface is shown here, with the available actions listed below:
 
 .. image:: images/ae_basic_map_example.png
    :class: image-boxshadow

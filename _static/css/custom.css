@@ -202,6 +202,9 @@ p {
 }
 
 /* Extra effects for images  */
+inline-image { /* Images inline with the text are a bit too low.  */
+    height:  10px;
+}
 .inline-image-higher { /* Images inline with the text are a bit too low.  */
     margin-top: -3px;
 }
