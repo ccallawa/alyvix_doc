@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 18-08-2020
+:modified: 21-08-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -188,7 +188,8 @@ appearing in the target text field of the application.
 
 .. topic:: Table of Special Characters
 
-   The following table details which keys and characters require escaping when used:
+   The following table details which keys and characters require escaping when used.  The key
+   sequences are case insensitive.
 
 +-----------------------------------+-----------------------------------------------------------------+
 | Key Sequence                      | Result                                                          |
@@ -200,29 +201,29 @@ appearing in the target text field of the application.
 +-----------------------------------+-----------------------------------------------------------------+
 | ``{Tab}``                         | **Tab** key                                                     |
 +-----------------------------------+-----------------------------------------------------------------+
+| ``{Shift}``                       | Press and immediately release the **Shift** key, without        |
+|                                   | applying it to the letters that come next.                      |
++-----------------------------------+-----------------------------------------------------------------+
 | ``{Shift Down}``, ``{Shift Up}``  | ``{Shift Down}`` holds the Shift key down until                 |
 |                                   | ``{Shift Up}`` is encountered, so that all letters between      |
 |                                   | them are shifted to upper case.   ``{LShift}`` specifies the    |
 |                                   | left Shift key and ``{RShift}`` specifies the right one.        |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Shift}``                       | Press and immediately release the **Shift** key, without        |
-|                                   | applying it to the letters that come next.                      |
+| ``{Ctrl}``                        | Press and immediately release the **Control** key, without      |
+|                                   | applying it to the characters that come next.                   |
 +-----------------------------------+-----------------------------------------------------------------+
 | ``{Ctrl Down}``, ``{Ctrl Up}``    | ``{Ctrl Down}`` holds the Control key down until                |
 |                                   | ``{Ctrl Up}`` is encountered, so that all characters in         |
 |                                   | between have the Control function applied. ``{LCtrl}``          |
 |                                   | specifies the left Control key, and ``{RCtrl}`` the right.      |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Ctrl}``                        | Press and immediately release the **Control** key, without      |
+| ``{Alt}``                         | Press and immediately release the **Alt** key, without          |
 |                                   | applying it to the characters that come next.                   |
 +-----------------------------------+-----------------------------------------------------------------+
 | ``{Alt Down}``, ``{Alt Up}``      | ``{Alt Down}`` holds the Alt key down until ``{Alt Up}``        |
 |                                   | is encountered, so that all characters in between have the      |
 |                                   | Control function applied. ``{LCtrl}`` specifies the left        |
 |                                   | Control key, and ``{RCtrl}`` specifies the right one.           |
-+-----------------------------------+-----------------------------------------------------------------+
-| ``{Alt}``                         | Press and immediately release the **Alt** key, without          |
-|                                   | applying it to the characters that come next.                   |
 +-----------------------------------+-----------------------------------------------------------------+
 | ``{LWin Down}``, ``{LWin Up}``    | ``{LWin Down}`` holds the left **WindowsLogo** key down         |
 |                                   | until ``{LWin Up}`` is encountered                              |
@@ -234,6 +235,8 @@ appearing in the target text field of the application.
 | ``{Esc}``                         | **Escape** key                                                  |
 +-----------------------------------+-----------------------------------------------------------------+
 | ``{F1}`` - ``{F24}``              | **Function** keys                                               |
++-----------------------------------+-----------------------------------------------------------------+
+| ``{NumPad0}`` - ``{NumPad9}``     | **Number pad** keys                                             |
 +-----------------------------------+-----------------------------------------------------------------+
 | ``{Up}``                          | **Up arrow** key                                                |
 +-----------------------------------+-----------------------------------------------------------------+
