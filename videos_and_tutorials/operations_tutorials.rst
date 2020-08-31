@@ -106,14 +106,15 @@ Operations Video Tutorials
 
 .. topic:: Time Measurement Video
 
-   This video explains in detail how time is measured when a
-   :ref:`test case is executed <alyvix_robot_result_cli>`, including the following terminology:
+   This video explains in detail how :ref:`time is measured <test_case_execution_measurements>`
+   when a :ref:`test case is executed <alyvix_robot_result_cli>`, including the following
+   terminology:
 
    * Frame Grabbing - How screen capture is performed and measured
    * Object Detection - How and when components are recognized in those frames
    * Transaction - The object detection phase together with any interactions undertaken
      after components are recognized
-   * Transaction Peformance - The time needed to complete the object detection phase
+   * Transaction Performance - The time needed to complete the object detection phase
    * Accuracy - The span of time from the frame before to the frame after the object
      was first detected
 

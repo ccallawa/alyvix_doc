@@ -42,6 +42,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
    * Rectangle Components |halftab| :shadow:`(video #6 - 3'28")`
    * Text Components |halftab| :shadow:`(video #8 - 5'15")`
    * Component (Mouse) Actions |halftab| :shadow:`(video #9 - 5'00")`
+   * Measuring Time |halftab| :shadow:`(video #14 - 3'53")`
 
 
 
