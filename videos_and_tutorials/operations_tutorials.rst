@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 21-05-2020
-:modified: 20-07-2020
+:modified: 31-08-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -96,5 +96,30 @@ Operations Video Tutorials
    :class: image-boxshadow
    :alt: Component Actions tutorial video, version 3.0.2
    :target: https://youtu.be/JW00UCXK8PA
+
+|source-youtube|
+
+|
+
+
+.. _operations_tutorials_measurement:
+
+.. topic:: Time Measurement Video
+
+   This video explains in detail how time is measured when a
+   :ref:`test case is executed <alyvix_robot_result_cli>`, including the following terminology:
+
+   * Frame Grabbing - How screen capture is performed and measured
+   * Object Detection - How and when components are recognized in those frames
+   * Transaction - The object detection phase together with any interactions undertaken
+     after components are recognized
+   * Transaction Peformance - The time needed to complete the object detection phase
+   * Accuracy - The span of time from the frame before to the frame after the object
+     was first detected
+
+.. image:: images/operations-measurement-310.png
+   :class: image-boxshadow
+   :alt: Time measurement tutorial video, version 3.1.0
+   :target: https://youtu.be/4AJz-LzXwmE
 
 |source-youtube|

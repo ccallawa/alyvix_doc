@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 09-07-2020
+:modified: 31-08-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -351,17 +351,61 @@ You can then run a test case with encrypted strings by supplying the private key
    C:\Alyvix\testcases> alyvix_robot -f <test_case_name> -k <private_key>
 
 
+.. _test_case_execution_measurements:
+
+************************
+How Alyvix Measures Time
+************************
+
+Alyvix makes a series of screen captures multiple times a second in a process called
+:glossdef:`frame grabbing`.  The system hardware determines exactly when a frame is grabbed.
+
+At regular intervals, Alyvix takes one of those frames and tries to :glossdef:`detect objects`
+within it.  The set of objects to look for is defined in the test case object that is currently
+running in the script.
+
+A :glossdef:`transaction` is the object detection phase plus the interaction phase and
+corresponds to the execution of the component tree including its actions.
+
+:glossdef:`Transaction performance` is the amount of time it takes to complete the object
+detection phase.  It's :ref:`the number that's displayed <alyvix_robot_result_cli>` as the result
+in Alyvix's output.
+
+Because frame grabs aren't continuous, there is a span of time between them when you can't
+be sure exactly when an object appeared.  The :glossdef:`accuracy` reported by Alyvix is the
+greater of the differences before and after the frames when the object is first detected.
+
+The following animation shows the interrelationship between these concepts:
+
+.. image:: pictures/measurement.gif
+   :class: image-boxshadow
+   :alt: Measurement animation
+
+The object detector looks at the first in a set of frames to see if all the objects in the
+component tree are present.  When the component tree matches, Alyvix will begin looking backwards
+through recent frames to find the first frame that matched.  The time between the last user
+interaction and the match is the transaction performance.
+
+When measuring transaction performance, Alyvix starts counting at the moment the previous
+interaction sequence ends and the new object detection phase begins.  It stops counting as soon
+as it's able to match the current set of objects it's looking for.  At the end of each run, Alyvix
+then reports all of the measured transactions for which the measure flag was set in the test case
+object.
+
+.. image:: pictures/transaction.png
+   :class: image-boxshadow-80
+   :alt: Transaction diagram
+
+The amount of available hardware resources greatly affects how accurate Alyvix can be.  Because
+frame grabbing in the underlying hardware is performed by Windows, you can add resources like
+RAM and CPU to increase the number of frames grabbed per second, which will decrease the amount
+of time between each frame and thus improve accuracy.
 
 
-.. Hidden section on Measurement (wait on this for now, uncomment when ready)
 
-   .. _test_case_execution_measurements:
+.. todo::
 
-   ************
-   Measurements
-   ************
-
-   * How measurement is done (get from v2.7 doc?)
+   * Conceptual:  What gets measured and how (appear + disappear + appeardisappear)
+   * Conceptual:  Checkboxes for Measure and Timeout
    * How Alyvix is integrated with monitoring/ITOA (NetEye is one example of monitoring)
-   * Conceptual:  what gets measured and how (appear + disappear)
-   * See keynote slides with frame grabber / transaction performance slide
+

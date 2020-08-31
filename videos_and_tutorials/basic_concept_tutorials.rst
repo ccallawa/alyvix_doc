@@ -16,6 +16,8 @@
 Basic Concepts Video Tutorials
 ==============================
 
+.. _basic_concepts_tutorials_310_intro:
+
 .. topic:: Introduction to Version 3.1.0
 
    This introduction to version 3.1.0 of Alyvix shows how you can use Alyvix to visually monitor
@@ -31,6 +33,8 @@ Basic Concepts Video Tutorials
 
 |source-youtube|
 
+
+.. _basic_concepts_tutorials_300_2min:
 
 .. topic:: 2-Minute Video
 
@@ -50,6 +54,8 @@ Basic Concepts Video Tutorials
 |source-youtube|
 
 
+.. _basic_concepts_tutorials_300_5min:
+
 .. topic:: 5-Minute Video
 
    This more complete video provides further details and extends the task in the previous video to:
@@ -65,6 +71,8 @@ Basic Concepts Video Tutorials
 
 |source-youtube|
 
+
+.. _basic_concepts_tutorials_300_10min:
 
 .. topic:: 10-Minute Video
 

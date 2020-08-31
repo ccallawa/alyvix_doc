@@ -169,7 +169,9 @@ with the specified countdown delay in seconds, just as if you had used Designer'
 :ref:`option <test_case_building_designer_launch>` from the command prompt.  This action is
 available regardless of whether any test case objects are selected.
 
-The :wbutton:`GRAB` button allows you to (1) replace the existing screen capture of the current
+The :wbutton:`GRAB` button
+:iconlink:`video||https://youtu.be/5WWbx3homho?t=281`
+allows you to (1) replace the existing screen capture of the current
 test case object with a new one from the current interface, or (2) add a new screen capture at a
 different resolution.  See :ref:`the section below <alyvix_selector_interface_grab_resolution>`
 for a more complete description.

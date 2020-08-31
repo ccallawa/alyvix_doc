@@ -125,8 +125,9 @@ Rectangle Type Options
 * **Button:**  Match a region such as a button containing text, within a larger space
 * **Box:**  Match a horizontal region such as a text field, where the space is filled up from the
   left edge to the right edge
-* **Window:**  Match a panel or a window, both horizontally and vertically, where the region of
-  interest and the selection is the same
+* **Window:**  Match a panel or a window, both horizontally and vertically, where the
+  :iconlink:`gloss|region of interest|../glossary.html#glossary-region of interest` and the
+  selection are the same
 
 
 
@@ -148,8 +149,9 @@ automatically recognized in the component's
 on the screen capture.  There are some limitations to note:
 
 * The main component of a group cannot be of type Text
-* The  :iconlink:`gloss|region-of-interest|../glossary.html#glossary-region-of-interest`
-  must contain at least 2 characters (recognition improves as the amount of text increases)
+* The region-of-interest must contain at least 2 characters (in general, text recognition
+  improves as the amount of text in the RoI increases, and with larger fonts and increased
+  screen resolution)
 
 
 .. _alyvix_designer_options_components_text_detect:
