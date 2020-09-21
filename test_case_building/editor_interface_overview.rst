@@ -158,7 +158,7 @@ the Editor window will return, and the output will appear in the Console tab at 
    :alt: The results of running the script in Alyvix Editor
 
 The structure of the output is the same regardless of whether the test case is started in Editor or
-run in the command prompt.  The effect of the *Break* and *Measure flags are described in detail in
+run in the command prompt.  The effect of the *Break* and *Measure* flags are described in detail in
 the :ref:`Test Execution <alyvix_robot_result_cli>` section.
 
 In addition, if a failure was caused by a simple sequential scripting node, then the

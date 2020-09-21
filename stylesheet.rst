@@ -438,7 +438,7 @@ Name         Syntax                      Format
 Italics      \*                          *Italics*
 Bold         \**                         **Bold**
 Mono         \``                         ``Monospace``
-Subscript    a\\ :subscript:\`sub\`      a\ :subscript:`super`
+Subscript    a\\ :subscript:\`sub\`      a\ :subscript:`sub`
 Superscript  b\\ :superscript:\`super\`  b\ :superscript:`super`
 Mixed        \\                          *Ita*\ **Bol**\ ``Lit``\s
 Math         \:math:                     :math:`\\\sum_{k=0}^{N-1} s_k`
@@ -576,6 +576,20 @@ Here's an example of columns via a table having a *class* that removes borders
       +---------+---------+---------+
       | Item A3 | Item B3 | Item C3 |
       +---------+---------+---------+
+
+And the same table with the *table-body-no-borders* class applied:
+
+.. table::
+   :widths: 33 33 33
+   :class: table-body-no-borders
+
+   +---------+---------+---------+
+   | Item A1 | Item B1 | Item C1 |
+   +---------+---------+---------+
+   | Item A2 | Item B2 | Item C2 |
+   +---------+---------+---------+
+   | Item A3 | Item B3 | Item C3 |
+   +---------+---------+---------+
 
 |
 

@@ -250,6 +250,16 @@ code.kbd, .rst-content tt.kbd, kbd {
     padding: 0 0.3em;
     text-shadow: 0 1px 0 #fff;
 }
+.deflabel {
+    border: 1px solid #7fbbe3;
+    background: #e7f2fa;
+    font-size: 90%;
+    font-weight: 800;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 3px 5px;
+    margin: auto 1px;
+}
 .glossdef {
     font-style: italic;
     font-weight: bold;
@@ -380,6 +390,20 @@ table.docutils tbody tr:first-child td {
 }
 table.docutils tbody tr:first-child td p {
     color: white;
+}
+
+
+table.table-body-no-borders {
+    border: none !important;
+}
+table.table-body-no-borders tbody tr td {
+    vertical-align: top !important;
+    padding: 20px 20px 20px 20px !important;
+    border: none !important;
+}
+table.table-body-no-borders tbody tr td p {
+    line-height: 24px !important;
+    font-size: 16px !important;
 }
 
 table.no-header-row tbody tr td {

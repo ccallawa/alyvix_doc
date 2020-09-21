@@ -103,6 +103,9 @@
 .. role:: rawhtml(raw)
    :format: html
 
+.. role:: deflabel
+   :class: deflabel
+
 .. role:: glossdef
    :class: glossdef
 
