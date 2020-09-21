@@ -910,11 +910,26 @@ Like pressing the |enterkey| key many times:  |enterkey| |enterkey| |enterkey|
 .. _style_sphinx_extensions:
 
 *************************************
-Additional Optional Sphinx Extensions
+Sphinx and Optional Sphinx Extensions
 *************************************
 
-The following extensions can be installed as desired.  Only the copy/accordion button extension
-is installed by default in this distribution.
+The required Python modules (we recommend you install them via *pip*) for building the
+documentation are:
+
+* ``sphinx``
+* ``sphinx_rtd_theme``
+* ``sphinx-copybutton``
+
+We typically build the user guide with the following command.  You will need to change the
+executable and source/build directory names according to your environment.
+
+.. code-block::
+   :class: nocopy
+
+   > C:\Python37\python.exe -m sphinx.__main__ -E -a -b html C:\projects\alyvix_doc C:\projects\alyvix_doc\_build
+
+The extensions below can be installed as desired.  Only the copy/accordion button extension
+is included by default in this repository.
 
 
 
@@ -935,9 +950,10 @@ to allow disabling the copy button for a code block by adding ``:class: nocopy``
 directive, and to filter out command prompts when copying from code blocks.  In that file you'll
 need to modify these parts as shown below:
 
-* The English messages at the top
-* The ``addCopyButtonToCodeCells`` function
-* The ``copyTargetText`` function
+* Change the English messages at the top
+* Replace the ``addCopyButtonToCodeCells`` function
+* Replace the ``copyTargetText`` function
+* Add and call the ``addButtonToAccordionCells`` function
 
 .. code-block:: js
 

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-03-2020
-:modified: 18-06-2020
+:modified: 21-09-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -31,6 +31,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
 #. :ref:`Production Systems <production_systems_tutorials_top>` tutorials describing techniques
    based on real world production examples
 
+   * Microsoft Dynamics AX 2012 R3 Full Example |halftab| :shadow:`(video #15 - 9'55")`
    * Multi-Factor Authentication Login |halftab| :shadow:`(video #13 - 9'54")`
    * Secure RDC Login |halftab| :shadow:`(video #5 - 4'31")`
    * Secure Citrix Login |halftab| :shadow:`(video #7 - 5'26")`

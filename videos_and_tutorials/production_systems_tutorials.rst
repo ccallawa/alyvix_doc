@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 21-05-2020
-:modified: 20-07-2020
+:modified: 21-09-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -15,6 +15,25 @@
 ==================================
 Production Systems Video Tutorials
 ==================================
+
+.. topic:: Microsoft Dynamics AX 2012 R3 Full Example
+
+   You can use Alyvix to monitor streamed applications such as Dynamics AX/365.  This video
+   provides a completely worked example showing you how you can build a test case in AX,
+   featuring the following elements:
+
+   * Launching AX and window maximization
+   * Invoice print preview in Accounts Payable
+   * Looping over inventory items
+   * Appropriate Fail/Exit strategies
+
+.. image:: images/production-dax2012-310.png
+   :class: image-boxshadow
+   :alt: Microsoft Dynamics AX 2012 R3 full example login tutorial video, version 3.1.0
+   :target: https://youtu.be/UhZMxzINe6k
+
+|source-youtube|
+
 
 .. topic:: Multi-Factor Authentication (MFA) Service Monitoring Login
 

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 21-05-2020
-:modified: 31-08-2020
+:modified: 21-09-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -99,7 +99,6 @@ Operations Video Tutorials
 
 |source-youtube|
 
-|
 
 
 .. _operations_tutorials_measurement:

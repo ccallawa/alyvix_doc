@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 22-06-2020
+:modified: 21-09-2020
 :tags: editor, gui, overview
 :lang: en-US
 :translation: false
@@ -123,16 +123,17 @@ The following actions are available from Editor's menu:
 The Monitor Tab
 ===============
 
-When you need to quickly just look at the positions of components in a test case object
+When you just need to quickly look at the positions of components in a test case object
 without making any changes, the fastest way isn't to return to editing the test case object
 in Designer.  Instead you can use the monitor tab to see the screen capture for the currently
 selected test case object.
 
 .. image:: images/ae_monitor_tab_sized.png
    :class: image-with-border
-   :alt: The results of running the script in Alyvix Editor
+   :alt: An example Monitor tab screenshot
 
-.. todo:: More detail here
+The monitor tab displays a read-only, full-size, instantly available copy of the screen grab
+for the test case object currently opened in the Designer panel.
 
 
 
@@ -144,7 +145,7 @@ Launching Alyvix Robot from Alyvix Editor
 
 The script of the currently loaded  test case can be run directly in Editor by pressing
 the |runblue| button at the top left.  The default starting point is the :nobutton:`MAIN` script
-in the :ref:`scripting panel <alyvix_editor_script_mgmt_top>` (you can
+in the :ref:`script management panel <alyvix_editor_script_mgmt_top>` (you can
 :ref:`use the debugging methods <alyvix_editor_interface_debug>` available in Alyvix Editor to
 change this starting point).
 
@@ -157,17 +158,26 @@ the Editor window will return, and the output will appear in the Console tab at 
    :alt: The results of running the script in Alyvix Editor
 
 The structure of the output is the same regardless of whether the test case is started in Editor or
-:ref:`run in the command prompt <alyvix_robot_result_cli>`.
+run in the command prompt.  The effect of the *Break* and *Measure flags are described in detail in
+the :ref:`Test Execution <alyvix_robot_result_cli>` section.
 
 In addition, if a failure was caused by a simple sequential scripting node, then the
 annotated screenshot describing the failure will be displayed below the output in the
-Console tab.
+Console tab:
 
-.. todo::  Example + description of when there is a failure
+.. image:: images/ae_console_tab_error.png
+   :class: image-with-border
+   :alt: A matching error displayed in the console tab
 
-   * Include screenshot
-   * Selection doesn't appear
-   * Subselection does appear with a box and "!"
-   * What about subselection on a different group, is the color different?
+The annotation indicates the position, size and group of the first component that could
+not be matched during execution.  In the PowerPoint example shown above, the Paste icon
+was marked as a subselection in the first group without an enlarged region of interest,
+so reducing the window horizontally means the Paste icon no longer fell within that region.
+The exclamation mark inside the red square representing the color of the first group
+indicates where Alyvix expected to find the Paste icon.
 
-Note that currently the verbosity level for Alyvix Robot cannot be set within Editor.
+.. note::
+
+   Note that currently
+   :ref:`arguments such as a private key and the verbosity level <alyvix_robot_cli_launch>`
+   for Alyvix Robot cannot be set within Editor.
