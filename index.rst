@@ -33,11 +33,13 @@
 Alyvix and Visual Monitoring
 ############################
 
-Welcome to the official guide for **Alyvix 3.1.0**.  (The documentation for version 2 of
-Alyvix `can be found here <https://www.alyvix.com/v2/learn/>`_.)
+Welcome to the official guide for **Alyvix 3.1.0** :iconlink:`video||https://youtu.be/KnQT7U8Fxoo`
+(the documentation for version 2 of Alyvix `can be found here <https://www.alyvix.com/v2/learn/>`_).
 
 `Alyvix <https://alyvix.com/>`_ lets you build end-user bots that visually interact with any
-Windows application like ERPs, or any web app in your favorite browser.
+Windows application like ERPs
+:iconlink:`video||videos_and_tutorials/production_systems_tutorials.html#production-systems-tutorials-top`,
+or any web app in your favorite browser.
 
 Run and measure business-critical workflows like a human would, but continuously.  Alyvix records
 the click-to-appearance responsiveness of each transaction so you can automatically report

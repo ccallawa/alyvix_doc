@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 19-08-2020
+:modified: 05-10-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -86,7 +86,9 @@ Image Type Options
 
 .. rst-class:: fa fa-image fa-blue
 
-   The *image* component corresponds to the pixel-by-pixel representation of the
+   The *image* component
+   :iconlink:`video||https://youtu.be/rC_bjgXCcZ4`
+   corresponds to the pixel-by-pixel representation of the
    :iconlink:`gloss|selection|../glossary.html#glossary-selection`
    or subselection on the captured screen, such as an icon.  As shown here, it has the following
    options to choose which visual aspect of the image to match against (an Operations tutorial video
@@ -113,7 +115,9 @@ Rectangle Type Options
 
 .. rst-class:: fa fa-square-o fa-blue
 
-   The *rect* component corresponds to a rectangular region on the captured screen, such as
+   The *rect* component
+   :iconlink:`video||https://youtu.be/JeAQZ2nzMnw`
+   corresponds to a rectangular region on the captured screen, such as
    buttons, text boxes, panels or windows.  As shown here, it has the following options (an
    Operations tutorial video is available that
    :ref:`explains the rect options <operations_tutorials_rect>`):
@@ -139,7 +143,9 @@ Text Type Options
 
 .. rst-class:: fa fa-font fa-blue
 
-   The *text* component corresponds to an area on the captured screen containing characters,
+   The *text* component
+   :iconlink:`video||https://youtu.be/g9D4LZ5DqhU`
+   corresponds to an area on the captured screen containing characters,
    such as a label, title or text in an input field.  As shown below, it has the following
    options, which vary depending on the type selected.
 
@@ -215,7 +221,8 @@ in the component tree.
    :class: image-boxshadow
    :alt: The mouse action selection dropdown.
 
-An **Action** creates a mouse event corresponding to one of the six types listed below (an
+An **Action** :iconlink:`video||https://youtu.be/JW00UCXK8PA`
+creates a mouse event corresponding to one of the six types listed below (an
 Operations tutorial video is available which
 :ref:`explains the individual Action options <operations_tutorials_actions>`).  By default, the
 mouse position will be set to the center of the component's selection or subselection.

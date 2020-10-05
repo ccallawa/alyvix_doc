@@ -47,7 +47,7 @@ Alyvix test case files are organized and what they contain, while the
 :ref:`Getting Started <getting_started_top>` and :ref:`Videos and Tutorials <video_tutorials_top>`
 sections include detailed mini-tutorials and topic-based videos on how to use Alyvix Editor and Robot.
 
-All of these applications can be launched from the Windows Command Prompt or PowerShell.
+All of the Alyvix applications can be launched from the Windows Command Prompt or PowerShell.
 Note that they inherit the permissions of the shell they were launched from.
 
 |

@@ -357,8 +357,9 @@ You can then run a test case with encrypted strings by supplying the private key
 How Alyvix Measures Time
 ************************
 
-Alyvix makes a series of screen captures multiple times a second in a process called
-:glossdef:`frame grabbing`.  The system hardware determines exactly when a frame is grabbed.
+Alyvix makes a series of screen captures :iconlink:`video||https://youtu.be/4AJz-LzXwmE`
+multiple times a second in a process called :glossdef:`frame grabbing`.  The system hardware
+determines exactly when a frame is grabbed.
 
 At regular intervals, Alyvix takes one of those frames and tries to :glossdef:`detect objects`
 within it.  The set of objects to look for is defined in the test case object that is currently
