@@ -11,7 +11,7 @@ Sphinx/docutils extension to create inline links with FontAwesome icons.
         type -- Selects the Font Awesome icon and HTML/CSS attributes to use, and browser behavior
                 "ext" will select the external icon and open a new tab in the browser
                 "gloss" will use the (?) icon and not switch tabs
-                "video" will sue the (>) icon and not switch tabs
+                "video" will use the (>) icon and not switch tabs
                 "pivotal" will insert the Pivotal logo and open a new browser tab
         link text -- The string to display on the web page wrapped in <a href="">...</a>
                      If the link is blank, only the icon will appear
@@ -19,6 +19,7 @@ Sphinx/docutils extension to create inline links with FontAwesome icons.
 
     More information:  https://docutils.readthedocs.io/en/sphinx-docs/howto/rst-roles.html
     Potentially modified:  ..\site-packages\docutils\writers\_html_base.py
+                Function:  ???
 
 '''
 

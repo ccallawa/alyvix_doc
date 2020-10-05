@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 26-02-2020
+:modified: 05-10-2020
 :tags: stylesheet, guide
 :lang: en-US
 :translation: false
@@ -369,7 +369,7 @@ which CSS properties are utilized and which are overwritten.
 .. _style_links+refs:
 
 **************************************
-Links, Anchors, Aliases and References
+Links, Anchors, References and Aliases
 **************************************
 
 Link and anchor names must use Python variable syntax.  For automatic link generation, any
@@ -385,21 +385,15 @@ will still put the (unlinked) link text there.
 
    :ref:`Getting Started <getting_started_top>`
 
-For external links, add an icon to it as in this example:  :iconlink:`ext|Base64|https://en.wikipedia.org/wiki/Base64`
+All external links, glossary links, video links and pivotal links
+:ref:`use icons generated with the <style_sphinx_iconlink>` inbuilt :file:`iconlink.py` extension.
 
-All external links are currently defined a single time using ``:rawhtml:`` in the file
-:file:`sphinx-roles.txt` in the root directory, e.g.:
 
-.. code-block:: rst
+.. topic:: Aliases
 
-   .. |base64-link| raw:: html
-
-      <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">
-      Base64 <i class="fa fa-small fa-external-link"></i></a>
-
-You can create aliases where you want, and use them repeatedly using the ``|<alias>|`` syntax.
-It does not matter where on the page you define it; it can even be placed at the bottom of the
-page.
+   You can create aliases where you want, and use them repeatedly using the ``|<alias>|`` syntax.
+   It does not matter where on the page you define it; it can even be placed at the bottom of the
+   page.
 
 .. |logo| image:: pictures/alyvix_logo_399x333.png
    :align: middle
@@ -944,6 +938,66 @@ executable and source/build directory names according to your environment.
 
 The extensions below can be installed as desired.  Only the copy/accordion button extension
 is included by default in this repository.
+
+
+
+.. _style_sphinx_iconlink:
+
+=============================
+The Custom IconLink Extension
+=============================
+
+The IconLink extension (included by default) standardizes a single format for
+:ref:`links <style_links+refs>` that are external, that should have the link be placed on an icon
+rather than a text string, or both.  Here's a prototype and two examples:
+
+.. code-block::
+
+   :iconlink:`type|link text|URL`
+
+   :iconlink:`ext|The OpenCV project|https://opencv.org/`
+   :iconlink:`video||http://youtu.be/KnQT7U8Fxoo`
+
+Each instance consists of three arguments separated by vertical bars " | ":
+
+* :bolditalic:`type` -- Selects the (free) Font Awesome icon to use and various HTML/CSS attributes,
+  along with the browser tab behavior:
+
+  .. table::
+     :widths: 15 30 20 35
+
+     +----------+-------------------------------------------------+---------+-----------------------------------------------------+
+     | Type     | Example with Icon                               | New Tab | RST encoding                                        |
+     +----------+-------------------------------------------------+---------+-----------------------------------------------------+
+     | External | :iconlink:`ext|external link|stylesheet.html`   | Yes     | ``:iconlink:`ext|external link|stylesheet.html```   |
+     +----------+-------------------------------------------------+---------+-----------------------------------------------------+
+     | Glossary | :iconlink:`gloss|glossary link|stylesheet.html` | No      | ``:iconlink:`gloss|glossary link|stylesheet.html``` |
+     +----------+-------------------------------------------------+---------+-----------------------------------------------------+
+     | Video    | :iconlink:`video|video link|stylesheet.html`    | No      | ``:iconlink:`video|video link|stylesheet.html```    |
+     +----------+-------------------------------------------------+---------+-----------------------------------------------------+
+     | Pivotal  | :iconlink:`pivotal|Issue #174064572|174064572`  | Yes     | ``:iconlink:`ext|Issue #174064572|174064572```      |
+     +----------+-------------------------------------------------+---------+-----------------------------------------------------+
+
+* :bolditalic:`link text` -- The string to display on the web page wrapped in the ``href`` HTML
+  tag.  If the link text is empty, only the icon will appear.
+
+* :bolditalic:`URL` -- The URL to use as the link in the HTML ``href`` attribute
+
+The extension itself is stored in the repository as the single file
+:file:`alyvix_doc\\_ext\\iconlink.py`.  The icon used can be changed in this python file, while
+the appearance can be changed in :file:`allyvix_doc\\_static\\css\\custom.css`.
+
+While this extension is included by default, it does require one change in the DocUtils file
+:file:`Python\\Lib\\site-packages\\docutils\\writers\\_html_base.py` to ensure the icon CSS
+and class parameters are appropriately inserted.  Simple replace the following function in that
+file with this version:
+
+.. code-block::
+
+   def visit_emphasis(self, node):
+       icon = node.attributes.get('class')
+       if icon is None: icon = ''
+       self.body.append(self.starttag(node, 'em', CLASS=icon))
 
 
 
