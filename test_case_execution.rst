@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 31-08-2020
+:modified: 05-10-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -63,12 +63,20 @@ test case file named by the **-f** parameter
 :ref:`contains a script previously defined in Editor <test_case_data_format_script>`,
 then Robot will run that script.
 
+Multiple test case objects are run in sequence by putting them in order in quotation marks,
+as long as all those objects exist in the test case:
+
+.. code-block:: doscon
+   :class: medium-code-block
+
+   C:\Alyvix\testcases> alyvix_robot -f start-test -o "start settings"
+
 Adding the *verbosity* (**-v**) parameter will provide additional information that can help you
 should you need to debug your test cases (see the section
 :ref:`CLI Output Format <alyvix_robot_result_cli>` below).
 
 Alyvix Robot will execute an Alyvix file's test case script when run with the following command
-(without the :file:`.alyvix` suffix):
+(with or without the :file:`.alyvix` suffix):
 
 .. code-block:: doscon
    :class: medium-code-block
@@ -85,16 +93,11 @@ case object named ``start``, you can run just that test case object with this co
 
 .. _alyvix_robot_cli_launch:
 
-Robot also allows you to execute multiple test case objects in sequence by putting them in order
-in quotation marks after the **-\ -object** parameter, as long as all those objects exist in the
-test case:
+Finally, the *args* (**-a**) parameter allows you to pass values to
+:ref:`insert into the String field <alyvix_designer_options_strings_map_extract>`
+of a component, and thus insert them into the user interface itself, such as a text field.
 
-.. code-block:: doscon
-   :class: medium-code-block
-
-   C:\Alyvix\testcases> alyvix_robot -f start-test -o "start settings"
-
-The following options are available:
+These options are summarized in the following table:
 
 +---------------+-------+--------------+-----------------------------------------------------------+
 | Option        | Alias | Argument     | Description                                               |
