@@ -109,7 +109,7 @@ Alyvix uses these tools to visually detect
 Creating Groups and Components
 ==============================
 
-When the Designer panel is not visible (you haven't pressed the :kbd:`ESC` key), the crosshairs
+When the Designer panel is not visible (you haven't pressed the :kbd:`Escape` key), the crosshairs
 show you where you can create a selection or subselection on the screen.  The color will indicate
 which group any newly selected region will belong to.
 
@@ -137,7 +137,7 @@ mouse button.
 If desired, you can continue to add components and new groups using the mouse and keyboard
 shortcuts without returning to the Designer panel.
 
-At any point you can switch between selecting areas and the Designer panel.  Use the :kbd:`ESC`
+At any point you can switch between selecting areas and the Designer panel.  Use the :kbd:`Escape`
 key to open the Designer panel, and the :guilabel:`EDIT` button at the bottom left corner of the
 panel to return to the screen capture.
 
@@ -155,25 +155,25 @@ be used given the current configuration of the tree).
 
 Descriptions of these actions, along with their keyboard shortcuts, can be found in the table below.
 
-+---------------------+-------------------+---------------+---------------------------------------------------------------+
-| Action              | Objects           | Shortcut      | Description                                                   |
-+---------------------+-------------------+---------------+---------------------------------------------------------------+
-| **New**             |All objects        | :kbd:`CTRL+N` | Create a **new component** in the current group, in the next  |
-|                     |                   |               | group *if* the current group is full, or a **new group** *if* |
-|                     |                   |               | no groups exist yet                                           |
-+---------------------+-------------------+---------------+---------------------------------------------------------------+
-| **Remove**          | All objects       | :kbd:`CTRL-X` | **Remove** the selected component, an entire group, or all    |
-|                     |                   |               | groups at once *if* the root is selected                      |
-+---------------------+-------------------+---------------+---------------------------------------------------------------+
-| **Duplicate**       | Group, Component  | :kbd:`CTRL-D` | Create a **duplicate** of the selected object *if* there is   |
-|                     |                   |               | space available for more at that level                        |
-+---------------------+-------------------+---------------+---------------------------------------------------------------+
-| **Detect as Image** | Group, Component  | :kbd:`CTRL-I` | Change the object's detection type to **Image**               |
-+---------------------+-------------------+---------------+---------------------------------------------------------------+
-| **Detect as Rect**  | Group, Component  | :kbd:`CTRL-R` | Change the object's detection type to **Rectangle**           |
-+---------------------+-------------------+---------------+---------------------------------------------------------------+
-| **Detect as Text**  | Component         | :kbd:`CTRL-T` | Change the Component type to **Text**                         |
-+---------------------+-------------------+---------------+---------------------------------------------------------------+
-| **Set as Main**     | Component         | :kbd:`CTRL-M` | Make the selected component the main group component (the     |
-|                     |                   |               | component cannot be a text region)                            |
-+---------------------+-------------------+---------------+---------------------------------------------------------------+
++---------------------+-------------------+-------------------------+---------------------------------------------------------------+
+| Action              | Objects           | Shortcut                | Description                                                   |
++---------------------+-------------------+-------------------------+---------------------------------------------------------------+
+| **New**             |All objects        | :kbd:`CTRL` + :kbd:`N`  | Create a **new component** in the current group, in the next  |
+|                     |                   |                         | group *if* the current group is full, or a **new group** *if* |
+|                     |                   |                         | no groups exist yet                                           |
++---------------------+-------------------+-------------------------+---------------------------------------------------------------+
+| **Remove**          | All objects       | :kbd:`CTRL` + :kbd:`X`  | **Remove** the selected component, an entire group, or all    |
+|                     |                   |                         | groups at once *if* the root is selected                      |
++---------------------+-------------------+-------------------------+---------------------------------------------------------------+
+| **Duplicate**       | Group, Component  | :kbd:`CTRL` + :kbd:`D`  | Create a **duplicate** of the selected object *if* there is   |
+|                     |                   |                         | space available for more at that level                        |
++---------------------+-------------------+-------------------------+---------------------------------------------------------------+
+| **Detect as Image** | Group, Component  | :kbd:`CTRL` + :kbd:`I`  | Change the object's detection type to **Image**               |
++---------------------+-------------------+-------------------------+---------------------------------------------------------------+
+| **Detect as Rect**  | Group, Component  | :kbd:`CTRL` + :kbd:`R`  | Change the object's detection type to **Rectangle**           |
++---------------------+-------------------+-------------------------+---------------------------------------------------------------+
+| **Detect as Text**  | Component         | :kbd:`CTRL` + :kbd:`T`  | Change the Component type to **Text**                         |
++---------------------+-------------------+-------------------------+---------------------------------------------------------------+
+| **Set as Main**     | Component         | :kbd:`CTRL` + :kbd:`M`  | Make the selected component the main group component (the     |
+|                     |                   |                         | component cannot be a text region)                            |
++---------------------+-------------------+-------------------------+---------------------------------------------------------------+

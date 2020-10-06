@@ -975,7 +975,7 @@ Each instance consists of three arguments separated by vertical bars " | ":
      +----------+-------------------------------------------------+---------+-----------------------------------------------------+
      | Video    | :iconlink:`video|video link|stylesheet.html`    | No      | ``:iconlink:`video|video link|stylesheet.html```    |
      +----------+-------------------------------------------------+---------+-----------------------------------------------------+
-     | Pivotal  | :iconlink:`pivotal|Issue #174064572|174064572`  | Yes     | ``:iconlink:`ext|Issue #174064572|174064572```      |
+     | Pivotal  | :iconlink:`pivotal||174064572`                  | Yes     | ``:iconlink:`ext||174064572```                      |
      +----------+-------------------------------------------------+---------+-----------------------------------------------------+
 
 * :bolditalic:`link text` -- The string to display on the web page wrapped in the ``href`` HTML

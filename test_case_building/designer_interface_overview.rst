@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 26-05-2020
+:modified: 06-10-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -141,26 +141,26 @@ When creating components, the following keyboard shortcuts are available:
 .. table::
    :widths: 30 20 50
 
-   +---------------------------+-----------------+----------------------------------------------------+
-   | **Shortcut**              | **Focus is on** | **Resulting Action**                               |
-   +---------------------------+-----------------+----------------------------------------------------+
-   | :kbd:`Left Click + Hold`  | <Nothing>       | Create a selection, subselection, or RoI           |
-   +---------------------------+-----------------+----------------------------------------------------+
-   | :kbd:`Right Click`        | <Nothing>       | Autocontour the screen element around the pointer  |
-   +---------------------------+-----------------+----------------------------------------------------+
-   | :kbd:`Right Click`        | RoI Edges       | Push the edge of the RoI under the mouse all the   |
-   |                           |                 | way to the border of the screen.                   |
-   +---------------------------+-----------------+----------------------------------------------------+
-   | :kbd:`Ctrl + Left Click`  | Subselection    | Reset all RoI edges of the subselection to their   |
-   |                           |                 | defaults.                                          |
-   +---------------------------+-----------------+----------------------------------------------------+
-   | :kbd:`Ctrl + Right Click` | Component       | Remove an entire component (subselection and RoI). |
-   |                           |                 | Remove a selection if it has no children.          |
-   +---------------------------+-----------------+----------------------------------------------------+
-   | :kbd:`Ctrl + Z`           | Component       | Undo the most recently added component             |
-   +---------------------------+-----------------+----------------------------------------------------+
-   | :kbd:`Ctrl + Y`           | Component       | Re-add the component just removed                  |
-   +---------------------------+-----------------+----------------------------------------------------+
+   +------------------------------------+-----------------+----------------------------------------------------+
+   | **Shortcut**                       | **Focus is on** | **Resulting Action**                               |
+   +------------------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`LeftClick+Hold`              | <Nothing>       | Create a selection, subselection, or RoI           |
+   +------------------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Right\ Click`                | <Nothing>       | Autocontour the screen element around the pointer  |
+   +------------------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`RightClick`                  | RoI Edges       | Push the edge of the RoI under the mouse all the   |
+   |                                    |                 | way to the border of the screen.                   |
+   +------------------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Ctrl` + :kbd:`LeftClick`     | Subselection    | Reset all RoI edges of the subselection to their   |
+   |                                    |                 | defaults.                                          |
+   +------------------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Ctrl` + :kbd:`RightClick`    | Component       | Remove an entire component (subselection and RoI). |
+   |                                    |                 | Remove a selection if it has no children.          |
+   +------------------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Ctrl` + :kbd:`Z`             | Component       | Undo the most recently added component             |
+   +------------------------------------+-----------------+----------------------------------------------------+
+   | :kbd:`Ctrl` + :kbd:`Y`             | Component       | Re-add the component just removed                  |
+   +------------------------------------+-----------------+----------------------------------------------------+
 
 
 .. _alyvix_designer_interface_return_from_sc_mode:

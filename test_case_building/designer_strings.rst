@@ -34,7 +34,7 @@ the :guilabel:`String` field, in which case that field specifies how they should
     :kbd:`Enter` and :kbd:`Control`, along with punctuation that has special meaning such as
     for regular expressions
   * :bolditalic:`System keys:`  Special key combinations (see table below) for the operating
-    system, such as :kbd:`Win+E` to open a new Explorer window.
+    system, such as :kbd:`Win` + :kbd:`E` to open a new Explorer window.
 
 * **Text read dynamically from the screen (scraped)**, computed by one test case object and
   then inserted as specified by another test case object that comes later in the execution
