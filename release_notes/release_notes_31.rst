@@ -12,15 +12,38 @@
 
 .. _release_notes_v3_1_0:
 
-=======================
-Version 3.1.0 (Current)
-=======================
+===============================
+Version 3.1.0 - 3.1.1 (Current)
+===============================
 
 Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
 system requirements for Alyvix, you can :ref:`install or upgrade it <getting_started_top>`.
 
 **Python 3.7.6 64-bit official distribution** is the recommended Python version to power
 Alyvix 3.1.x.
+
+
+
+.. _install_release_v3_1_1:
+
+.. topic:: Version 3.1.1
+
+   **Release date:**  October 6th, 2020
+
+**Improvements**
+
+* *Runtime behavior:*  Alyvix moves the cursor to the top left desktop corner at the start of
+  every test case run
+* *Alyvix Server* can now asynchronously control each Alyvix Client that is running Alyvix Robot
+* *Screenshot compression:*  Alyvix can record compressed screenshots and annotations, including
+  optionally just for broken tests
+
+**Bug Fixes**
+
+* Alyvix now accepts and inserts any unicode characters as part of component text strings
+* Alyvix Robot no longer passes through NATS measurements for which the *measure* option has
+  been disabled
+* Alyvix Robot now properly shows its help description with the **-h** flag in the CLI
 
 
 
