@@ -153,8 +153,6 @@ The :kbd:`Shift` and :kbd:`Control` keys work together with the mouse to select 
 in the standard way when using Windows applications.  Selected rows are shown with a light blue
 background, and can then be used with the actions described in the next section below.
 
-.. todo::  Generalize this as it's also used in other places
-
 
 
 .. _alyvix_selector_interface_object_actions:
@@ -175,8 +173,6 @@ allows you to (1) replace the existing screen capture of the current
 test case object with a new one from the current interface, or (2) add a new screen capture at a
 different resolution.  See :ref:`the section below <alyvix_selector_interface_grab_resolution>`
 for a more complete description.
-
-.. todo:: Link to 3.1.0 release notes video?
 
 The :wbutton:`EDIT` button appears when only a single test case object is selected.  Clicking on
 it launches :ref:`Alyvix Designer <alyvix_designer_interface_overview>` with the currently
