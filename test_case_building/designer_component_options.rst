@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 05-10-2020
+:modified: 08-10-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -61,11 +61,6 @@ URL as an argument.  To do this, select **Run** and set its two parameters:
 * **Arguments:**  Here you can enter the arguments the application expects when
   it starts up
 
-.. note::
-
-   If you launch an application with the **Run** option, you can still recognize child
-   components in that application's initial interface in the same test case object.
-
 The **Kill** option instead allows you to select a currently running process to terminate, or
 type one in if it's not currently running:
 
@@ -75,6 +70,12 @@ type one in if it's not currently running:
 
 It provides a filtered dropdown named **Process**, populated with all currently running Windows
 processes, allowing you to make a quick selection with just a few keystrokes.
+
+.. note::
+
+   If you launch an application with the **Run** or **Kill** option, you can still recognize child
+   components in the application's interface within the same test case object.  The path should
+   not be set within quotation marks.
 
 
 

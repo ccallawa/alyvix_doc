@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 21-09-2020
+:modified: 08-10-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -120,8 +120,9 @@ management panel.  You should then change the name of the map from the default t
 that helps you easily remember what it's used for.
 
 The first step after creating a map is to define the set of keys and values that can be inserted.
-(When used as part of a |for| loop, the number of iterations will always be equal to the number of
-keys in the map.)  The map interface is shown here, with the available actions listed below:
+(When used as part of a |for| loop, the number of iterations is fixed, and will always be equal to
+the number of keys in the map.)  The map interface is shown here, with the available actions
+listed below:
 
 .. image:: images/ae_basic_map_example.png
    :class: image-boxshadow
