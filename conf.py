@@ -28,9 +28,9 @@ author = 'Charles Callaway'
 # built documents.
 #
 # The short X.Y version.
-version = u'3.1.1'
+version = u'3.1.2'
 # The full version, including alpha/beta/rc tags.
-release = u'3.1.1'
+release = u'3.1.2'
 
 
 # -- General configuration ---------------------------------------------------

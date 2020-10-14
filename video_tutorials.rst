@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-03-2020
-:modified: 21-09-2020
+:modified: 14-10-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -33,8 +33,8 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
 
    * Microsoft Dynamics AX 2012 R3 Full Example |halftab| :shadow:`(video #15 - 9'55")`
    * Multi-Factor Authentication Login |halftab| :shadow:`(video #13 - 9'54")`
-   * Secure RDC Login |halftab| :shadow:`(video #5 - 4'31")`
    * Secure Citrix Login |halftab| :shadow:`(video #7 - 5'26")`
+   * Secure RDC Login |halftab| :shadow:`(video #5 - 4'31")`
 
 #. :ref:`Operations <operations_tutorials_top>` tutorials with in-depth explanations of
    specific interface elements
@@ -44,6 +44,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
    * Text Components |halftab| :shadow:`(video #8 - 5'15")`
    * Component (Mouse) Actions |halftab| :shadow:`(video #9 - 5'00")`
    * Measuring Time |halftab| :shadow:`(video #14 - 3'53")`
+   * Output Composition |halftab| :shadow:`(video #16 - 8'18")`
 
 
 

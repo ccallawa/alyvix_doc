@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 21-05-2020
-:modified: 21-09-2020
+:modified: 14-10-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -120,6 +120,32 @@ Operations Video Tutorials
 .. image:: images/operations-measurement-310.png
    :class: image-boxshadow
    :alt: Time measurement tutorial video, version 3.1.0
+   :target: https://youtu.be/4AJz-LzXwmE
+
+|source-youtube|
+
+
+
+.. _operations_tutorials_outputcomposition:
+
+.. topic:: Output Composition Video
+
+   This video explains how Alyvix :ref:`displays timing results in the console <alyvix_robot_result_cli>`
+   after completing a test case, and how the :ref:`timeout, break and measure <alyvix_selector_interface_headers>`
+   flags contribute to both Alyvix's behavior and that output.
+
+   * Timeout - The number of seconds that Alyvix attempts to detect objects onscreen.  If this
+     value is exceeded, then the break flag will determine what should happen next.
+   * Break flag - Tells Alyvix either to continue on to the next object if the timeout was
+     exceeded, or else to stop the currently running script and switch instead to running the
+     fail script.
+   * Measure flag - Tells Robot whether or not to output the measurement data of the current step
+     in the console output.  When a test case has completed execution, only test case objects
+     whose measure flag is set will have their timing data included.
+
+.. image:: images/operations-outputcomposition-311.png
+   :class: image-boxshadow
+   :alt: Output composition tutorial video, version 3.1.1
    :target: https://youtu.be/4AJz-LzXwmE
 
 |source-youtube|

@@ -46,6 +46,11 @@ node :greyblock:`S` is selected:
    :class: image-boxshadow
    :alt: Options for the root element.
 
+.. todo::
+
+   Update this screenshot, which should include SELECT for the Arguments field; how do you use
+   the SELECT button for arguments, rather than typing them in?
+
 The **Call** dropdown tells Alyvix what action to perform when the test case object is executed:
 
 * **Run:**  Start a Windows application
@@ -61,6 +66,9 @@ URL as an argument.  To do this, select **Run** and set its two parameters:
 * **Arguments:**  Here you can enter the arguments the application expects when
   it starts up
 
+If you paste a path into the **Path** field instead of using the :nobutton:`SELECT` button, you
+should not include any quotation marks even if there are spaces in the path.
+
 The **Kill** option instead allows you to select a currently running process to terminate, or
 type one in if it's not currently running:
 
@@ -74,8 +82,7 @@ processes, allowing you to make a quick selection with just a few keystrokes.
 .. note::
 
    If you launch an application with the **Run** or **Kill** option, you can still recognize child
-   components in the application's interface within the same test case object.  The path should
-   not be set within quotation marks.
+   components in the application's interface within the same test case object.
 
 
 
