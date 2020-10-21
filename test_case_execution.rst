@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 05-10-2020
+:modified: 15-10-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -179,7 +179,12 @@ For example:
 
 
 When run from the command prompt with the default **-m alyvix** parameter, Alyvix Robot will
-return human-readable output like the following when successful:
+return human-readable output :iconlink:`video||https://youtu.be/KS0oKjWCDUU`
+like the following when successful:
+
+.. todo::
+
+   It would be better if the link pointed to our specific video tutorial rather than YouTube directly
 
 .. code-block:: md
    :class: nocopy

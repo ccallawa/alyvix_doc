@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 06-10-2020
+:modified: 15-10-2020
 :tags: designer, gui, overview
 :lang: en-US
 :translation: false
@@ -64,7 +64,9 @@ no groups (or components) have yet been defined.  The principle interface elemen
 #. The **Object name** (title) of the test case object, which together with the file name is used
    to uniquely identify this test case object in Alyvix Selector and Editor
 #. **Test case object** :ref:`options <alyvix_designer_options_test_case_object>`, which affect
-   all visual elements in the component tree as a whole
+   all visual elements in the component tree as a whole; when run from Alyvix Editor, the
+   *Timeout* and *Break* options will be shown instead in the
+   :ref:`Selector panel <alyvix_selector_interface_screenshot>`
 #. The :iconlink:`gloss|component tree|../glossary.html#glossary-component-tree`
    :ref:`subpanel <alyvix_designer_component_tree_top>`, showing all defined selections and regions
    of interest that can be interacted with along with their type (image, region or text)

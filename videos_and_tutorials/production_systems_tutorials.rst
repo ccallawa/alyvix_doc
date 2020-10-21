@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 21-05-2020
-:modified: 21-09-2020
+:modified: 21-10-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -16,10 +16,29 @@
 Production Systems Video Tutorials
 ==================================
 
+.. topic:: Microsoft Dynamics AX 2012 R3 General Ledger
+
+   You can use Alyvix to monitor streamed applications such as Microsoft Dynamics AX/365.  This
+   video an example using the General Ledger section to show you how you can build a test case
+   in AX, featuring the following elements:
+
+   * Launching AX and drilling down to details
+   * Filtering selection
+   * Using groups and why
+   * Appropriate Fail/Exit strategies
+
+.. image:: images/production-dax2012-ledger-312.png
+   :class: image-boxshadow
+   :alt: Microsoft Dynamics AX 2012 R3 General Ledger tutorial video, version 3.1.2
+   :target: https://youtu.be/cW87feKJbAU
+
+|source-youtube|
+
+
 .. topic:: Microsoft Dynamics AX 2012 R3 Full Example
 
-   You can use Alyvix to monitor streamed applications such as Dynamics AX/365.  This video
-   provides a completely worked example showing you how you can build a test case in AX,
+   You can use Alyvix to monitor streamed applications such as Microsoft Dynamics AX/365.  This
+   video provides a completely worked example showing you how you can build a test case in AX,
    featuring the following elements:
 
    * Launching AX and window maximization

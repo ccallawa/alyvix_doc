@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 08-10-2020
+:modified: 15-10-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -46,11 +46,6 @@ node :greyblock:`S` is selected:
    :class: image-boxshadow
    :alt: Options for the root element.
 
-.. todo::
-
-   Update this screenshot, which should include SELECT for the Arguments field; how do you use
-   the SELECT button for arguments, rather than typing them in?
-
 The **Call** dropdown tells Alyvix what action to perform when the test case object is executed:
 
 * **Run:**  Start a Windows application
@@ -63,8 +58,9 @@ URL as an argument.  To do this, select **Run** and set its two parameters:
 
 * **Path:**  Use the :nobutton:`SELECT` button to bring up a file selection dialog to find the
   application in the file system, or else type the full path for an executable file in your system
-* **Arguments:**  Here you can enter the arguments the application expects when
-  it starts up
+* **Arguments:**  Here you can enter the arguments the application expects when it starts up --
+  the :nobutton:`SELECT` button will let you insert a file with its full path, but replaces the
+  existing content, so use it first before adding any other arguments
 
 If you paste a path into the **Path** field instead of using the :nobutton:`SELECT` button, you
 should not include any quotation marks even if there are spaces in the path.

@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 21-08-2020
+:modified: 15-10-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -58,9 +58,11 @@ the :guilabel:`String` field, in which case that field specifies how they should
 The extraction and mapping functions have a common purpose:  to substitute text from a source
 string into a template string, and then send the resulting string to the application.
 
-If the text is supposed to come from the screen, the typical approach is to have two separate
+If the text is extracted directly from the screen, you will typically need to have two separate
 test case objects:  one which acquires the text from the screen, and another containing the
-template which inserts the text into the GUI object.  Otherwise, only a single object is necessary.
+template which inserts the text into the GUI object (the second object must occur chronologically
+after the first, ore else the text string will not yet have been scraped).  If the text comes
+from one of the two external sources (map or arguments), only a single test caseobject is necessary.
 
 
 
@@ -172,7 +174,7 @@ web page or in a spreadsheet with this :guilabel:`String` field entry:
 Text can also be inserted from a command line parameter passed to Alyvix Robot.
 
 To use this capability, :ref:`pass Alyvix Robot the argument <alyvix_robot_cli_launch>` as a
-simple keyword after the ``-a`` parameter to, and type the ``{<number>}`` notation into the
+simple keyword after the ``-a`` parameter, and type the ``{<number>}`` notation into the
 :guilabel:`String` field of the test case object that should insert the text.  For instance in
 the string below, passing the parameter ``-a Red`` will result in the text ``Color: Red``
 appearing in the target text field of the application.

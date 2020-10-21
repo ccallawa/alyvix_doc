@@ -146,6 +146,6 @@ Operations Video Tutorials
 .. image:: images/operations-outputcomposition-311.png
    :class: image-boxshadow
    :alt: Output composition tutorial video, version 3.1.1
-   :target: https://youtu.be/4AJz-LzXwmE
+   :target: https://youtu.be/KS0oKjWCDUU
 
 |source-youtube|
