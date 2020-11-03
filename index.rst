@@ -22,6 +22,7 @@
    glossary.rst
    release_notes.rst
    get_in_touch.rst
+   Alyvix Server User Manual <https://alyvix.com/learn/server/>
 
 |
 
@@ -33,7 +34,7 @@
 Alyvix and Visual Monitoring
 ############################
 
-Welcome to the official guide for **Alyvix 3.1.2** :iconlink:`video||https://youtu.be/KnQT7U8Fxoo`
+Welcome to the official guide for **Alyvix 3.1.3** :iconlink:`video||https://youtu.be/KnQT7U8Fxoo`
 (the documentation for version 2 of Alyvix `can be found here <https://www.alyvix.com/v2/learn/>`_).
 
 `Alyvix <https://alyvix.com/>`_ lets you build end-user bots that visually interact with any

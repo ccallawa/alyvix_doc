@@ -19,7 +19,7 @@ sys.path.append(os.path.abspath("./_ext"))
 
 # -- Project information -----------------------------------------------------
 
-project = 'alyvix_doc'
+project = 'Alyvix User Manual'
 copyright = '2020, Charles Callaway'
 author = 'Charles Callaway'
 
@@ -28,9 +28,9 @@ author = 'Charles Callaway'
 # built documents.
 #
 # The short X.Y version.
-version = u'3.1.2'
+version = u'3.1.3'
 # The full version, including alpha/beta/rc tags.
-release = u'3.1.2'
+release = u'3.1.3'
 
 
 # -- General configuration ---------------------------------------------------

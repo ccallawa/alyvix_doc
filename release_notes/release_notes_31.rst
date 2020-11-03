@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 08-06-2020
-:modified: 20-07-2020
+:modified: 03-11-2020
 :tags: release notes
 :lang: en-US
 :translation: false
@@ -13,7 +13,7 @@
 .. _release_notes_v3_1_0:
 
 ===============================
-Version 3.1.0 - 3.1.2 (Current)
+Version 3.1.0 - 3.1.3 (Current)
 ===============================
 
 Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
@@ -24,6 +24,19 @@ Alyvix 3.1.x.
 
 
 
+.. _install_release_v3_1_3:
+
+.. topic:: Version 3.1.3
+
+   **Release date:**  November 3rd, 2020
+
+**Improvements**
+
+* Alyvix Server works through the HTTPS communication protocol
+* The Alyvix install procedure is now up-to-date with the latest dependency requirements
+  (e.g., *nats-python*)
+
+
 .. _install_release_v3_1_2:
 
 .. topic:: Version 3.1.2
@@ -32,7 +45,8 @@ Alyvix 3.1.x.
 
 **Improvements**
 
-* The Alyvix install procedure is now up-to-date with the latest dependency requirements (e.g., *greenlet*)
+* The Alyvix install procedure is now up-to-date with the latest dependency requirements
+  (e.g., *greenlet*)
 
 
 
