@@ -21,8 +21,8 @@
    video_tutorials.rst
    glossary.rst
    release_notes.rst
-   get_in_touch.rst
    Alyvix Server User Manual <https://alyvix.com/learn/server/>
+   get_in_touch.rst
 
 |
 

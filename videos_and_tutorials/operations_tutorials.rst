@@ -149,3 +149,23 @@ Operations Video Tutorials
    :target: https://youtu.be/KS0oKjWCDUU
 
 |source-youtube|
+
+
+
+.. _operations_tutorials_conditionalsandloops:
+
+.. topic:: Conditionals and Loops Video
+
+   This video tutorial explains how :ref:`conditionals <alyvix_editor_scripting_node_expressions>`
+   and :ref:`loops <alyvix_editor_interface_maps>` work in Alyvix through
+   a simplified example that manipulates objects in PowerPoint to run a simulated car race.
+
+   The video introduces how the IF_TRUE and IF_FALSE conditionals, and map-based loops are used
+   in Alyvix using an example of a racing car that goes around a race track in Powerpoint.
+
+.. image:: images/operations-conditionalsandloops-311.png
+   :class: image-boxshadow
+   :alt: Conditionals and loops tutorial video, version 3.1.2
+   :target: https://youtu.be/gwaZjmSzOkw
+
+|source-youtube|
