@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 15-10-2020
+:modified: 12-11-2020
 :tags: robot, execution, test cases
 :lang: en-US
 :translation: false
@@ -93,45 +93,48 @@ case object named ``start``, you can run just that test case object with this co
 
 .. _alyvix_robot_cli_launch:
 
-Finally, the *args* (**-a**) parameter allows you to pass values to
-:ref:`insert into the String field <alyvix_designer_options_strings_map_extract>`
-of a component, and thus insert them into the user interface itself, such as a text field.
+Finally, the *args* (**-a**) parameter allows you to pass one or more values (each treated as
+a string) to :ref:`insert into the String field <alyvix_designer_options_strings_map_extract>`
+of a component, and thus insert them into the user interface, for example in a text field.  If you
+need more than one argument, they should be enclosed in double quotation marks.  If an argument
+contains a space, that argument should be enclosed with single quotation marks (in general,
+follow the rules of Python for string management within the command line).
 
 These options are summarized in the following table:
 
-+---------------+-------+--------------+-----------------------------------------------------------+
-| Option        | Alias | Argument     | Description                                               |
-+---------------+-------+--------------+-----------------------------------------------------------+
-| -\ -args      | -a    | *<strings>*  | Supply one or more strings to use in the                  |
-|               |       |              | :ref:`String <alyvix_designer_options_strings_top>`       |
-|               |       |              | field of a test case object in Designer                   |
-+---------------+-------+--------------+-----------------------------------------------------------+
-| -\ -filename  | -f    | *<name>*     | Supply the file name with or without extension            |
-+---------------+-------+--------------+-----------------------------------------------------------+
-| -\ -key       | -k    | *<key>*      | Supply a private key for use with encryption              |
-+---------------+-------+--------------+-----------------------------------------------------------+
-| -\ -mode      | -m    | *<name>*     | ``alyvix`` --- CLI output format for humans               |
-|               |       |              | (default)                                                 |
-|               |       |              |                                                           |
-|               |       |              | ``nagios`` --- Nagios output                              |
-|               |       |              | :ref:`(see below) <alyvix_robot_result_nagios>`           |
-|               |       |              |                                                           |
-|               |       |              | ``nats-influxdb`` --- NATS to InfluxDB                    |
-|               |       |              | :ref:`(see below) <alyvix_robot_result_nats_influxdb>`    |
-+---------------+-------+--------------+-----------------------------------------------------------+
-| -\ -object    | -o    | *<name>*     | Supply the Object name(s)                                 |
-+---------------+-------+--------------+-----------------------------------------------------------+
-| -\ -verbose   | -v    | *<n>*        | Set the verbosity level for debugging output              |
-|               |       |              | ranging from **0** (min, default) to **2** (max)          |
-|               |       |              |                                                           |
-|               |       |              | **0**:  Records start/stop timestamps, state and time     |
-|               |       |              | measures for each object (with measure option enabled)    |
-|               |       |              |                                                           |
-|               |       |              | **1**:  Also logs Alyvix actions                          |
-|               |       |              |                                                           |
-|               |       |              | **2**:  Also creates screenshots and annotated            |
-|               |       |              | screenshots as separate .png files in the same directory  |
-+---------------+-------+--------------+-----------------------------------------------------------+
++---------------+-------+----------------+-----------------------------------------------------------+
+| Option        | Alias | Argument       | Description                                               |
++---------------+-------+----------------+-----------------------------------------------------------+
+| -\ -args      | -a    | *<string(s)>*  | Supply one or more strings to use in the                  |
+|               |       |                | :ref:`String <alyvix_designer_options_strings_top>`       |
+|               |       |                | field of a test case object in Designer                   |
++---------------+-------+----------------+-----------------------------------------------------------+
+| -\ -filename  | -f    | *<name>*       | Supply the file name with or without extension            |
++---------------+-------+----------------+-----------------------------------------------------------+
+| -\ -key       | -k    | *<key>*        | Supply a private key for use with encryption              |
++---------------+-------+----------------+-----------------------------------------------------------+
+| -\ -mode      | -m    | *<name>*       | ``alyvix`` --- CLI output format for humans               |
+|               |       |                | (default)                                                 |
+|               |       |                |                                                           |
+|               |       |                | ``nagios`` --- Nagios output                              |
+|               |       |                | :ref:`(see below) <alyvix_robot_result_nagios>`           |
+|               |       |                |                                                           |
+|               |       |                | ``nats-influxdb`` --- NATS to InfluxDB                    |
+|               |       |                | :ref:`(see below) <alyvix_robot_result_nats_influxdb>`    |
++---------------+-------+----------------+-----------------------------------------------------------+
+| -\ -object    | -o    | *<name>*       | Supply the Object name(s)                                 |
++---------------+-------+----------------+-----------------------------------------------------------+
+| -\ -verbose   | -v    | *<n>*          | Set the verbosity level for debugging output              |
+|               |       |                | ranging from **0** (min, default) to **2** (max)          |
+|               |       |                |                                                           |
+|               |       |                | **0**:  Records start/stop timestamps, state and time     |
+|               |       |                | measures for each object (with measure option enabled)    |
+|               |       |                |                                                           |
+|               |       |                | **1**:  Also logs Alyvix actions                          |
+|               |       |                |                                                           |
+|               |       |                | **2**:  Also creates screenshots and annotated            |
+|               |       |                | screenshots as separate .png files in the same directory  |
++---------------+-------+----------------+-----------------------------------------------------------+
 
 
 

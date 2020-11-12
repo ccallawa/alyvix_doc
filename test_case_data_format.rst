@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 16-06-2020
+:modified: 12-11-2020
 :tags: test cases, data format
 :lang: en-US
 :translation: false
@@ -174,6 +174,12 @@ The individual sections of the JSON structure are explained below.
            "key2": [ "key2-val1",
                      "key2-val2" ] }
       }
+
+   When arguments are passed to Alyvix Robot in the
+   :ref:`command line interface <alyvix_robot_cli_launch>`, a new map structure
+   will be added under the name ":bolditalic:`cli`", and
+   :ref:`containing the arguments as keys <alyvix_designer_options_strings_map_cli>`.  Because
+   of this, the ":bolditalic:`cli`" map name is reserved.
 
 
 .. rst-class:: bignums

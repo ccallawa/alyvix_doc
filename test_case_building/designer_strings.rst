@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 15-10-2020
+:modified: 12-11-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -68,11 +68,13 @@ from one of the two external sources (map or arguments), only a single test case
 
 .. _alyvix_designer_options_strings_functions:
 
-.. topic:: Usage Examples
+--------------
+Usage Examples
+--------------
 
-   To indicate that content in the String field template is not regular text, it must be escaped
-   with a pair of curly braces ``{ ... }``.  If you want to insert more than one template, each one
-   must go in its own separate set of curly braces.
+To indicate that content in the String field template is not regular text, it must be escaped
+with a pair of curly braces ``{ ... }``.  If you want to insert more than one template, each one
+must go in its own separate set of curly braces.
 
 .. note::
 
@@ -98,9 +100,9 @@ In the following example, a test case object with an Excel\ |trade| spreadsheet 
 put the words "First", "Second" and "Third" in three adjacent columns.
 
 .. code-block::
-   :class: short-code-block
+   :class: tiny-code-block nocopy
 
-   First{Tab}Second{Tab}Third
+   First{tab}Second{tab}Third
 
 
 
@@ -114,7 +116,7 @@ the string ``37 degrees`` in the application, it can be copied to another GUI fi
 the following expression in the :guilabel:`String` field of a later scripting node:
 
 .. code-block::
-   :class: short-code-block
+   :class: tiny-code-block nocopy
 
    {temperature_read.text}
 
@@ -128,7 +130,7 @@ within the scraped text.  These subexpressions can then be embedded within a new
 (even changing their relative order) by using the numbers of their original positions as follows:
 
 .. code-block::
-   :class: short-code-block
+   :class: tiny-code-block nocopy
 
    {2} found near {1}
 
@@ -150,7 +152,7 @@ and the selected map contains the pair ``Paris, France`` then the following temp
 the text ``Country:  France``.
 
 .. code-block::
-   :class: short-code-block
+   :class: tiny-code-block nocopy
 
    Country:  {city.extract}
 
@@ -158,105 +160,144 @@ the text ``Country:  France``.
 
 .. rubric:: Map values
 
-This option allows you to create a map with a table of values (where each row corresponds to one
-iteration of the loop).  For instance, you could insert three values per row into a table on a
-web page or in a spreadsheet with this :guilabel:`String` field entry:
+This option allows you to create a map with a table of values (where each row in the table
+corresponds to one iteration of the loop).  For instance, you could insert three values per row
+into a table on a web page or in a spreadsheet with this :guilabel:`String` field entry:
 
 .. code-block::
-   :class: short-code-block
+   :class: tiny-code-block nocopy
 
-   {1}{Tab}{2}{Tab}{3}
+   {1}{tab}{2}{tab}{3}
 
 
 
-.. rubric:: CLI Arguments via the Alyvix Robot -\ -args parameter
+.. _alyvix_designer_options_strings_map_cli:
 
-Text can also be inserted from a command line parameter passed to Alyvix Robot.
+.. rubric:: CLI Arguments via the Alyvix Robot *-\ -args* parameter
 
-To use this capability, :ref:`pass Alyvix Robot the argument <alyvix_robot_cli_launch>` as a
-simple keyword after the ``-a`` parameter, and type the ``{<number>}`` notation into the
-:guilabel:`String` field of the test case object that should insert the text.  For instance in
-the string below, passing the parameter ``-a Red`` will result in the text ``Color: Red``
-appearing in the target text field of the application.
+Text can also be inserted from a command line parameter passed to Alyvix Robot.  To use this
+capability, :ref:`pass Alyvix Robot the argument <alyvix_robot_cli_launch>` as a simple keyword
+after the ``-a`` parameter, and type the ``{<number>}`` notation into the :guilabel:`String` field
+of the test case object that should insert the text.  For instance in the string below, passing the
+parameter ``-a Red`` will result in the text ``Color: Red`` appearing in the target text field of
+the application.
 
 .. code-block::
-   :class: short-code-block
+   :class: tiny-code-block nocopy
 
    Color: {1}
 
 
 
+.. rubric:: {<n>} Key Precedence and Defaults
+
+You may have noticed that both *map loops* and *CLI arguments* share the {<n>} notation.  In fact,
+this notation is just a shortcut, since it's rare to use both at the same time.  If you were to
+have both CLI arguments passed and a loop running, then the {<n>} notation will return the
+:ref:`map value <test_case_data_format_description>` before retuning the value from the CLI.
+
+If you are using both at the same time, then a key such as {1} will use the *map loop* value
+instead of the *CLI* value.  To ensure you are inserting the string you intended, you can use the
+following expanded notation:
+
++---------+-------------------------+-----------------+-----------------+
+| Source  | Format                  | First Argument  | Second Argument |
++---------+-------------------------+-----------------+-----------------+
+| CLI     | {cli.arg<n>}            | {cli.arg1}      | {cli.arg2}      |
++---------+-------------------------+-----------------+-----------------+
+| Map     | {<map-name>.<key-name>} | {map1.key1}     | {map1.key2}     |
++---------+-------------------------+-----------------+-----------------+
+
+Both the map loops and CLI arguments also use the same default notation:
+
+.. code-block::
+   :class: tiny-code-block nocopy
+
+   {<key>,<default-value}
+
+So, for instance, you can use the following to insert the first CLI argument if it exists (and
+you are not in a map loop), but insert the string "abc" if no arguments were passed:
+
+.. code-block::
+   :class: tiny-code-block nocopy
+
+   {1,abc}
+
+
+
 .. _alyvix_designer_options_strings_special:
 
-.. topic:: Table of Special Characters
+------------------
+Special Characters
+------------------
 
-   The following table details which keys and characters require escaping when used.  The key
-   sequences are case insensitive.
+The following table details which keys and characters require escaping when used.  Although our
+standard is to always use lower case, the key sequences are case insensitive.
 
 +-----------------------------------+-----------------------------------------------------------------+
 | Key Sequence                      | Result                                                          |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Enter}``                       | **Enter** key                                                   |
+| ``{enter}``                       | **Enter** key                                                   |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Space}``                       | **Space** key (this is only needed at the beginning or the      |
+| ``{space}``                       | **Space** key (this is only needed at the beginning or the      |
 |                                   | end of a string)                                                |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Tab}``                         | **Tab** key                                                     |
+| ``{tab}``                         | **Tab** key                                                     |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Shift}``                       | Press and immediately release the **Shift** key, without        |
+| ``{shift}``                       | Press and immediately release the **Shift** key, without        |
 |                                   | applying it to the letters that come next.                      |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Shift Down}``, ``{Shift Up}``  | ``{Shift Down}`` holds the Shift key down until                 |
-|                                   | ``{Shift Up}`` is encountered, so that all letters between      |
-|                                   | them are shifted to upper case.   ``{LShift}`` specifies the    |
-|                                   | left Shift key and ``{RShift}`` specifies the right one.        |
+| ``{shift down}``, ``{shift up}``  | ``{shift down}`` holds the Shift key down until                 |
+|                                   | ``{shift up}`` is encountered, so that all letters between      |
+|                                   | them are shifted to upper case.   ``{lshift}`` specifies the    |
+|                                   | left Shift key and ``{rshift}`` specifies the right one.        |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Ctrl}``                        | Press and immediately release the **Control** key, without      |
+| ``{ctrl}``                        | Press and immediately release the **Control** key, without      |
 |                                   | applying it to the characters that come next.                   |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Ctrl Down}``, ``{Ctrl Up}``    | ``{Ctrl Down}`` holds the Control key down until                |
-|                                   | ``{Ctrl Up}`` is encountered, so that all characters in         |
-|                                   | between have the Control function applied. ``{LCtrl}``          |
-|                                   | specifies the left Control key, and ``{RCtrl}`` the right.      |
+| ``{ctrl down}``, ``{ctrl up}``    | ``{ctrl down}`` holds the Control key down until                |
+|                                   | ``{ctrl up}`` is encountered, so that all characters in         |
+|                                   | between have the Control function applied. ``{lctrl}``          |
+|                                   | specifies the left Control key, and ``{rctrl}`` the right.      |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Alt}``                         | Press and immediately release the **Alt** key, without          |
+| ``{alt}``                         | Press and immediately release the **Alt** key, without          |
 |                                   | applying it to the characters that come next.                   |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Alt Down}``, ``{Alt Up}``      | ``{Alt Down}`` holds the Alt key down until ``{Alt Up}``        |
+| ``{alt down}``, ``{alt up}``      | ``{alt down}`` holds the Alt key down until ``{alt up}``        |
 |                                   | is encountered, so that all characters in between have the      |
-|                                   | Control function applied. ``{LCtrl}`` specifies the left        |
-|                                   | Control key, and ``{RCtrl}`` specifies the right one.           |
+|                                   | Control function applied. ``{lctrl}`` specifies the left        |
+|                                   | Control key, and ``{rctrl}`` specifies the right one.           |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{LWin Down}``, ``{LWin Up}``    | ``{LWin Down}`` holds the left **WindowsLogo** key down         |
-|                                   | until ``{LWin Up}`` is encountered                              |
+| ``{lwin down}``, ``{lwin up}``    | ``{lwin down}`` holds the left **WindowsLogo** key down         |
+|                                   | until ``{lwin up}`` is encountered                              |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Backspace}``                   | **Backspace** key                                               |
+| ``{backspace}``                   | **Backspace** key                                               |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Del}``                         | **Delete** key                                                  |
+| ``{del}``                         | **Delete** key                                                  |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Esc}``                         | **Escape** key                                                  |
+| ``{esc}``                         | **Escape** key                                                  |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{F1}`` - ``{F24}``              | **Function** keys                                               |
+| ``{f1}`` - ``{f24}``              | **Function** keys                                               |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{NumPad0}`` - ``{NumPad9}``     | **Number pad** keys                                             |
+| ``{numpad0}`` - ``{numpad9}``     | **Number pad** keys                                             |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Up}``                          | **Up arrow** key                                                |
+| ``{up}``                          | **Up arrow** (cursor) key                                       |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Down}``                        | **Down arrow** key                                              |
+| ``{down}``                        | **Down arrow** key                                              |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Left}``                        | **Left arrow** key                                              |
+| ``{left}``                        | **Left arrow** key                                              |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Right}``                       | **Right arrow** key                                             |
+| ``{right}``                       | **Right arrow** key                                             |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{Home}``                        | **Home** key                                                    |
+| ``{home}``                        | **Home** key                                                    |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{End}``                         | **End** key                                                     |
+| ``{end}``                         | **End** key                                                     |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{PgUp}``                        | **Page Up** key                                                 |
+| ``{pgup}``                        | **Page Up** key                                                 |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{PgDn}``                        | **Page Down** key                                               |
+| ``{pgdn}``                        | **Page Down** key                                               |
 +-----------------------------------+-----------------------------------------------------------------+
-| ``{U+nnnn}``                      | A :iconlink:`ext|unicode link|http://www.unicode.org/charts/`,  |
+| ``{u+nnnn}``                      | A :iconlink:`ext|unicode link|http://www.unicode.org/charts/`,  |
 |                                   | where ``nnnn`` is its hexadecimal value, excluding the ``0x``   |
 |                                   | prefix                                                          |
 +-----------------------------------+-----------------------------------------------------------------+
