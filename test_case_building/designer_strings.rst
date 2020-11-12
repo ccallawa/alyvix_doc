@@ -43,8 +43,6 @@ the :guilabel:`String` field, in which case that field specifies how they should
   * :bolditalic:`Full text:`  The source is the entire text found in a
     :iconlink:`gloss|region of interest|../glossary.html#glossary-region-of-interest`
     specified by the earlier test case object
-  * :bolditalic:`Grouping with Regular Expressions:`  Insert substrings by applying a
-    *grouped regular expression* to the string scraped from a region of interest
   * :bolditalic:`Mapping extracted text:`  Given a :iconlink:`gloss|map|../glossary.html#glossary-map`
     extract text from a region of interest, pass it to the map, and insert the map's output value
     as specified by a later test case object
@@ -68,9 +66,9 @@ from one of the two external sources (map or arguments), only a single test case
 
 .. _alyvix_designer_options_strings_functions:
 
---------------
-Usage Examples
---------------
+-----------------------
+Escaped String Examples
+-----------------------
 
 To indicate that content in the String field template is not regular text, it must be escaped
 with a pair of curly braces ``{ ... }``.  If you want to insert more than one template, each one
@@ -119,20 +117,6 @@ the following expression in the :guilabel:`String` field of a later scripting no
    :class: tiny-code-block nocopy
 
    {temperature_read.text}
-
-
-
-.. rubric:: Grouping with Regular Expressions
-
-More complex regular expressions can be used to select groups of subexpressions
-(see the :iconlink:`ext|Python Regular Expression library|https://docs.python.org/3.7/library/re.html`)
-within the scraped text.  These subexpressions can then be embedded within a new string template
-(even changing their relative order) by using the numbers of their original positions as follows:
-
-.. code-block::
-   :class: tiny-code-block nocopy
-
-   {2} found near {1}
 
 
 
@@ -191,32 +175,32 @@ the application.
 
 .. rubric:: {<n>} Key Precedence and Defaults
 
-You may have noticed that both *map loops* and *CLI arguments* share the {<n>} notation.  In fact,
-this notation is just a shortcut, since it's rare to use both at the same time.  If you were to
-have both CLI arguments passed and a loop running, then the {<n>} notation will return the
-:ref:`map value <test_case_data_format_description>` before retuning the value from the CLI.
+You may have noticed that both :bolditalic:`map loops` and :bolditalic:`CLI arguments` share the
+``{<n>}`` notation.  In fact, this notation is just a shortcut, which can be very useful since
+it's rare to have to use both at the same time.  Still, should you need to insert an indexed key
+when both a loop is running and you passed arguments via the command line, then the ``{<n>}``
+notation will return the :ref:`map value <test_case_data_format_description>` before it would
+return the value from the CLI argument list.  To ensure you are inserting the string from the
+source you intended, you can use the following expanded notation:
 
-If you are using both at the same time, then a key such as {1} will use the *map loop* value
-instead of the *CLI* value.  To ensure you are inserting the string you intended, you can use the
-following expanded notation:
-
-+---------+-------------------------+-----------------+-----------------+
-| Source  | Format                  | First Argument  | Second Argument |
-+---------+-------------------------+-----------------+-----------------+
-| CLI     | {cli.arg<n>}            | {cli.arg1}      | {cli.arg2}      |
-+---------+-------------------------+-----------------+-----------------+
-| Map     | {<map-name>.<key-name>} | {map1.key1}     | {map1.key2}     |
-+---------+-------------------------+-----------------+-----------------+
++---------+-------------------------+----------------------+----------------------+
+| Source  | Format                  | First Argument: {1}  | Second Argument: {2} |
++---------+-------------------------+----------------------+----------------------+
+| CLI     | {cli.arg<n>}            | {cli.arg1}           | {cli.arg2}           |
++---------+-------------------------+----------------------+----------------------+
+| Map     | {<map-name>.<key-name>} | {map1.key1}          | {map1.key2}          |
++---------+-------------------------+----------------------+----------------------+
 
 Both the map loops and CLI arguments also use the same default notation:
 
 .. code-block::
    :class: tiny-code-block nocopy
 
-   {<key>,<default-value}
+   {<key>,<default-value>}
 
 So, for instance, you can use the following to insert the first CLI argument if it exists (and
-you are not in a map loop), but insert the string "abc" if no arguments were passed:
+you are not in a map loop), but insert the string "abc" if no arguments were passed to Alyvix
+Robot:
 
 .. code-block::
    :class: tiny-code-block nocopy
