@@ -71,6 +71,7 @@ def make_param_link(name, rawtext, text, lineno, inliner, options={}, content=[]
             base_uri = 'https://www.pivotaltracker.com/n/projects/1533621/stories/'
             node = nodes.reference(rawtext, ' ', refuri=base_uri+ref, **options)
             node.attributes.__setitem__('target', '_blank')
+            # The following path needs to be relative to the path of the file
             node2 = nodes.image(uri='../pictures/pt_logo_small.png', alt=linktext)
             node.append(node2)
         else:
