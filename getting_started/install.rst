@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 24-11-2020
+:modified: 25-11-2020
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -258,33 +258,30 @@ Installation Troubleshooting
 
 Below are some potential installation problems and their solutions.
 
-|accordion-entry|
-|right-icon-white| "Python" command does nothing or launches Microsoft Store on Windows 10
-|accordion-middle|
-This error occurs when during :ref:`installation steps #2 and #4 <install_release_python_install>`
-you did not check the boxes to add Python to the path and environment variables.  Typing the
-:command:`python` command in the command prompt under this condition will launch Microsoft Store
-in an attempt to install it from there.
+.. admonition::  "Python" command does nothing or launches Microsoft Store on Windows 10
 
-To correct this situation you will need to either (1) uninstall and then reinstall Python, or
-(2) manually add the appropriate paths in the **System Properties > Environment Variables** panel.
-|accordion-end|
+   This error occurs when during :ref:`installation steps #2 and #4 <install_release_python_install>`
+   you did not check the boxes to add Python to the path and environment variables.  Typing the
+   :command:`python` command in the command prompt under this condition will launch Microsoft Store
+   in an attempt to install it from there.
 
-|accordion-entry|
-|right-icon-white| "ImportError: DLL load failed" --- Failure to Import Tesseract OCR
-|accordion-middle|
-This error is caused by a missing dependency of the Tesseract OCR module, which requires that the
-file :file:`vcomp140.dll` be present in Windows during installation by *pip*:
+   To correct this situation you will need to either (1) uninstall and then reinstall Python, or
+   (2) manually add the appropriate paths in the **System Properties > Environment Variables** panel.
 
-.. code-block:: doscon
-   :class: nocopy
 
-   File "C:\Python37\lib\site-packages\alyvix\core\tesserocr\__init__.py", line 1, in <module> from ._tesserocr import *
-   ImportError: DLL load failed: The specified module could not be found.
+.. admonition::  "ImportError: DLL load failed" --- Failure to Import Tesseract OCR
 
-You can fix this problem by installing the **Microsoft Visual C++ Redistributable per Visual Studio**,
-which contains the required file.  It's available at
-:iconlink:`ext|https://aka.ms/vs/16/release/vc_redist.x64.exe|https://aka.ms/vs/16/release/vc_redist.x64.exe`.
-|accordion-end|
+   This error is caused by a missing dependency of the Tesseract OCR module, which requires that the
+   file :file:`vcomp140.dll` be present in Windows during installation by *pip*:
+
+   .. code-block:: doscon
+      :class: nocopy
+
+      File "C:\Python37\lib\site-packages\alyvix\core\tesserocr\__init__.py", line 1, in <module> from ._tesserocr import *
+      ImportError: DLL load failed: The specified module could not be found.
+
+   You can fix this problem by installing the **Microsoft Visual C++ Redistributable for Visual Studio**,
+   which contains the required file.  It's available at
+   :iconlink:`ext|https://aka.ms/vs/16/release/vc_redist.x64.exe|https://aka.ms/vs/16/release/vc_redist.x64.exe`.
 
 |
