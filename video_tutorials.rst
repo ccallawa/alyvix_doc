@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-03-2020
-:modified: 21-10-2020
+:modified: 25-11-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -31,6 +31,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
 #. :ref:`Production Systems <production_systems_tutorials_top>` tutorials describing techniques
    based on real world production examples
 
+   * Microsoft Dynamics AX 2012 R3 Warehouse |halftab| :shadow:`(video #19 - 5'42")`
    * Microsoft Dynamics AX 2012 R3 General Ledger |halftab| :shadow:`(video #17 - 6'27")`
    * Microsoft Dynamics AX 2012 R3 Full Example |halftab| :shadow:`(video #15 - 9'55")`
    * Multi-Factor Authentication Login |halftab| :shadow:`(video #13 - 9'54")`
@@ -46,6 +47,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
    * Component (Mouse) Actions |halftab| :shadow:`(video #9 - 5'00")`
    * Measuring Time |halftab| :shadow:`(video #14 - 3'53")`
    * Output Composition |halftab| :shadow:`(video #16 - 8'18")`
+   * Conditionals and Loops |halftab| :shadow:`(video #18 - 6'14")`
 
 
 

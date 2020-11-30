@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 21-05-2020
-:modified: 21-10-2020
+:modified: 25-11-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -15,6 +15,24 @@
 ==================================
 Production Systems Video Tutorials
 ==================================
+
+.. topic:: Microsoft Dynamics AX 2012 R3 Warehouse Management
+
+   This video tutorial shows the creation and execution of a complete visual monitoring run
+   of Alyvix on the Warehouse Management Module of Microsoft Dynamics AX 2012.  It includes
+   the following elements:
+
+   * Launching AX and drilling down to details
+   * Advanced filtering
+   * Command line arguments as parameters (with defaults)
+   * Appropriate Fail/Exit strategies
+
+.. image:: images/production-dax2012-warehouse-313.png
+   :class: image-boxshadow
+   :alt: Microsoft Dynamics AX 2012 R3 Warehouse Management tutorial video, version 3.1.3
+   :target: https://youtu.be/vGNgr7LJkm0
+
+|source-youtube|
 
 .. topic:: Microsoft Dynamics AX 2012 R3 General Ledger
 

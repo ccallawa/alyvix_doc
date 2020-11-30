@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-12-2019
-:modified: 18-08-2020
+:modified: 30-11-2020
 :tags: selector, gui, overview
 :lang: en-US
 :translation: false
@@ -92,20 +92,30 @@ descending.
 
 The list headers have the following characteristics:
 
-* **Name:**  The object name :ref:`assigned to the test case object <alyvix_designer_interface_descriptions>`
+* **Name:**  The object name :ref:`assigned to the test case object <alyvix_designer_interface_descriptions>`.
 * **Transaction group:**  This is a user-definable field that can be used to group together test
   case objects that have something in common (for instance a "login" group, "response check" group,
-  "purchase" group, etc.) and then used for sorting and searching
+  "purchase" group, etc.) and then used for sorting and searching.
 * **Date modified:**  The date and time automatically recorded when the test case object was last
-  modified in Designer, Selector or Editor
-* **Timeout, Break, Measure:**  Displays the values of the corresponding
-  :ref:`test case object options <alyvix_designer_options_test_case_object>` in Designer
-* **Warning, Critical:**  The threshold values set for integration with monitoring
+  modified in Designer, Selector or Editor.
+* **Timeout:**  The timeout value is the number of seconds that Alyvix attempts to detect objects
+  onscreen.  If this value is exceeded, then the break flag will determine what happens next
+  (note that the *timeout* and *break* parameters can also be set
+  :ref:`in Designer <alyvix_designer_options_test_case_object>`).
+* **Break:**  If this flag is set, then when the *timeout* is exceeded Alyvix will stop the
+  currently running script and switch instead to running the fail script.  If unset, Alyvix will
+  instead continue on to the next object if the timeout is exceeded (the relationship between
+  *timeout*, *break* and *measure* is
+  :ref:`described in further detail below <alyvix_selector_interface_time_measure_break>`.
+* **Measure:**  Tells Robot whether or not to output the measurement data of a given step in the
+  console output.  When a test case has completed execution, only test case objects whose measure
+  flag is set will have their :ref:`timing data <alyvix_robot_result_cli>` included.
+* **Warning, Critical:**  The threshold values set for integration with a monitoring system
 * **Resolution:**  The horizontal and vertical pixel resolution, and the scaling factor (Windows
-  zoom) of the test case object's :ref:`screen capture <alyvix_selector_interface_grab_resolution>`
+  zoom) of the test case object's :ref:`screen capture <alyvix_selector_interface_grab_resolution>`.
 * The **Screen** element is a thumbnail of the frame on which that test case object is defined,
   which can be especially helpful distinguishing between them when you have a large number of
-  objects in a single file
+  objects in a single file.
 
 
 
@@ -228,3 +238,67 @@ annotated with the current screen resolution and zoom factor.
    :ref:`regular expression <alyvix_designer_options_components_text_detect>`, the scraped
    expression will automatically be reprocessed under the existing regular expression and the
    new value stored.
+
+
+
+.. _alyvix_selector_interface_time_measure_break:
+
+======================================
+Interactions - Timeout, Measure, Break
+======================================
+
+The user interface elements for *timeout*, *break* and *measure* are described in
+:ref:`the List Headers section above <alyvix_selector_interface_headers>`.  Briefly, *timeout*
+and *break* affect Alyvix's behavior
+:iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-outputcomposition`,
+while *measure* serves to indicate that Alyvix should
+:ref:`measure <test_case_execution_measurements>` and :ref:`report <alyvix_robot_result_cli>`
+the time until detection at the end of the test case run.  These three parameters can help you
+judge availability and responsiveness.
+
+Each application you use with Alyvix will likely have a number of different types of behavioral
+and measurement requirements.  Past experience has shown that the following three scenarios are
+the most frequent.  Each is suited to a particular combination of these three parameters:
+
+* **Heavy resource usage:**  |halftab| |tmo|:runblock:`high`
+  |smalltab| |brk|:runblock:`set`   |smalltab| |mea|:runblock:`set`
+
+  *Examples:* Loading an application, loading a full new web page, or initiating an action that
+  results in a search or database request
+
+  This first situation happens whenever you expect it will take some time for an action to run to
+  completion.  If that doesn't occur within a certain time limit, then it doesn't make sense to
+  continue running the test case.  Steps with potentially large wait times are one of the main
+  reasons you are monitoring an application in the first place, so it makes sense to report the
+  measurements for steps like these.
+
+* **Light resource usage:**   |halftab| |tmo|:runblock:`low`
+  |smalltab| |brk|:runblock:`set`  |smalltab| |mea|:runblock:`unset`
+
+  *Examples:*  Navigating through an application via menus or buttons, entering values in fields,
+  or an intermediate check where the timing results are unimportant
+
+  In the second case you may need to perform a series of steps to put the application in a state
+  where you can measure what you need.  This may include navigating to a particular interface,
+  or adding or changing values in an interface that is already displayed, especially when there's
+  no need to worry about network latency or remote resources.  A series of these steps is typically
+  followed by a *heavy resource usage* step.  Here the timeout can be low since we don't expect
+  each individual step to take too long, and we don't usually need to see the resulting measurements
+  (e.g., how long it takes to enter text into a field), but we should still fail if the change
+  couldn't be made, since it would not be possible to perform a subsequent measurement step.
+  Although you can measure these steps, note that measuring too many will clutter the results,
+  especially if you import them into graphical analysis software.
+
+* **Optional actions:**  |halftab| |tmo|:runblock:`low`
+  |smalltab| |brk|:runblock:`unset`  |smalltab| |mea|:runblock:`unset`
+
+  *Examples:*  Remove a cookie/popup notice, or put an interface into a standard format
+
+  Finally, you sometimes need to interact with an interface only if a certain condition is met,
+  like when there are cookie notices or popups overlaid intermittently on a web page that may cover
+  a button you need to press, or an application retains persistent state (especially in a multi-user
+  scenario) so that window size or position may differ over time.  Using a test case object that
+  looks for them, in conjunction with an |if-false| scripting element and an action that
+  standardizes the interface, such as removing a cookie notice or maximizing a window.
+
+|

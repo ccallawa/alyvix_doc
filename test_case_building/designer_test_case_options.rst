@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 05-12-2019
-:modified: 22-05-2020
+:modified: 25-11-2020
 :tags: designer
 :lang: en-US
 :translation: false
@@ -49,8 +49,15 @@ type, and what happens if they fail to be detected:
          :class: image-boxshadow
          :alt: Visual appearance and disappearance timeline.
 
-#. **Timeout:**  All the components will be regularly checked with the chosen detection condition
-   until this number of seconds has elapsed.
-#. **Break:**  If this option is checked, then timing out without the selected detection condition
-   having matched will cause the test case object to fail.  If the option is not checked, the
-   failure will simply be reported.
+#. **Timeout:**  This value represents the number of seconds that Alyvix attempts to detect objects
+   onscreen.  If this value is exceeded then the *break* flag will determine what happens next.
+
+#. **Break:**  If this option is checked, then once the *timeout* is exceeded Alyvix will stop
+   the currently running script and switch instead to running the
+   :ref:`fail script <alyvix_editor_interface_top_level_scripts>`.
+   Otherwise it will continue on to the next node in the script.
+
+The *timeout* and *break* parameters are discussed in further detail in the
+:ref:`Selector section <alyvix_selector_interface_headers>` together with the *measure* parameter.
+
+|
