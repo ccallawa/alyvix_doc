@@ -24,9 +24,10 @@ necessary for creating complex behaviors.  The script management panel is divide
    :class: image-boxshadow
    :alt: The script management panel.
 
-* **Top-level scripts** that serve as the main entry points for execution with Alyvix Robot (MAIN,
-  FAIL, and EXIT)
-* **Sections**, which are user-defined subroutines that can be used inside other scripts
+* **Top-level sections**, the three scripts that serve as the main entry points for execution with
+  Alyvix Robot (MAIN, FAIL, and EXIT)
+* **User-defined Sections**  :iconlink:`gloss||../glossary.html#glossary-section`, which are
+  subroutines that can be used inside other top-level and user-defined sections
 * **Maps** :iconlink:`gloss||../glossary.html#glossary-map`,
   which are user-defined tables of keys and values that can be used to *(a)* take a :ref:`text
   string scraped from the screen <alyvix_designer_options_strings_top>` and map it to another string,
@@ -44,7 +45,7 @@ From the script management panel you can:
   in the currently opened script in the scripting panel
 * Use the |lineadd-icon| action to **add** a Section (as a |run| expression) or a Map (as a |for|
   expression) to the bottom of the currently opened script in the scripting panel
-* Use the |play-icon| action to immediately :ref:`run a Section script <alyvix_editor_interface_debug>`
+* Use the |play-icon| action to immediately :ref:`debug a Section script <alyvix_editor_interface_debug>`
   against the current interface as though :ref:`you had pressed <alyvix_editor_run_script>` the
   |runblue| button
 

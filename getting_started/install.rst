@@ -41,7 +41,7 @@ Alyvix:
    :class: warning
 
    * Screen color depth:  24-bit RGB or 32-bit RGBA
-   * OS: **Windows 64-bit** 10, 8, 7, Server 2012 or Server 2016 (32-bit versions of Windows
+   * OS: **Windows 64-bit** 10, 8, Server 2012. 2016 smf 3-20 (32-bit versions of Windows
      are :warn:`not` compatible with Alyvix)
    * Hardware:  2 CPUs and 4GB RAM
 
