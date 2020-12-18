@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 07-01-2020
-:modified: 08-10-2020
+:modified: 18-12-2020
 :tags: editor, script, management
 :lang: en-US
 :translation: false
@@ -57,19 +57,43 @@ From the script management panel you can:
 Top level Scripts
 =================
 
-The following scripts are predefined and are executed by Alyvix Robot at the appropriate time:
+The following scripts are predefined and are
+:ref:`executed by Alyvix Robot <test_case_execution_top>`:
 
 .. rst-class:: bignums-xl
 
 #. **Main:**  The principal script that is invoked when launching a test case from either Alyvix
    Editor (via the |runblue| button) or Robot
 #. **Fail:**  A script that is executed if one of the test case objects in the Main script having
-   the :guilabel:`Break` flag *not set* times out
+   the :guilabel:`Break` flag **set** exceeds its timeout
 #. **Exit:**  A separate script that is always run once the Main script terminates, allowing you
    to restore your application and environment to its prior state (for instance, to shut down a
    browser that was launched as part of a test case)
 
-These three names are reserved -- you cannot use them as names for your sections or maps.
+These three names are reserved -- you cannot use them as names for your own sections or maps.
+
+When Alyvix Robot starts, it first executes the **Main** section.
+Each scripting node in the Main section or one of its subsections is then matched in turn against
+the current screen.  If the timeout is exceeded for one of those test case objects whose *break*
+flag is set, then Alyvix will stop running the Main section
+:iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-sectionlogic`
+and begin running the Fail section.
+
+The Fail section should then perform any actions needed to clean up the partially completed
+application state, such as closing windows that might be left open.  Once the Main (or Fail)
+section has completed, your Exit section should log out if necessary and hard kill any opened
+applications that were used during the test case.
+
+.. note::
+
+   When you construct both your Fail and Exit sections, you should unset the *break* flag in all
+   of their test case objects to ensure that every one of them executes.  Since they will run
+   consecutively and without triggering another break, they shouldn't contain any of the same steps.
+
+The goal when constructing Fail and Exit sections is that every time Alyvix Robot runs a test case,
+the operating system and application state should be just as clean as the first time it was
+executed.
+
 
 
 .. _alyvix_editor_interface_sections:

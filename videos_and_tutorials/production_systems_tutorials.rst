@@ -16,6 +16,8 @@
 Production Systems Video Tutorials
 ==================================
 
+.. _production_tutorials_warehouse:
+
 .. topic:: Microsoft Dynamics AX 2012 R3 Warehouse Management
 
    This video tutorial shows the creation and execution of a complete visual monitoring run
@@ -33,6 +35,9 @@ Production Systems Video Tutorials
    :target: https://youtu.be/vGNgr7LJkm0
 
 |source-youtube|
+
+
+.. _production_tutorials_ledger:
 
 .. topic:: Microsoft Dynamics AX 2012 R3 General Ledger
 
@@ -53,6 +58,8 @@ Production Systems Video Tutorials
 |source-youtube|
 
 
+.. _production_tutorials_dynamicsax:
+
 .. topic:: Microsoft Dynamics AX 2012 R3 Full Example
 
    You can use Alyvix to monitor streamed applications such as Microsoft Dynamics AX/365.  This
@@ -72,6 +79,8 @@ Production Systems Video Tutorials
 |source-youtube|
 
 
+.. _production_tutorials_mfa:
+
 .. topic:: Multi-Factor Authentication (MFA) Service Monitoring Login
 
    If you need to test that your multi-factor authentication system is up and running, this video
@@ -90,6 +99,8 @@ Production Systems Video Tutorials
 |source-youtube|
 
 
+.. _production_tutorials_rdclogin:
+
 .. topic:: Secure RDC Login
 
    If you need to access an application through Remote Desktop Connection, this video will show
@@ -106,6 +117,8 @@ Production Systems Video Tutorials
 
 |source-youtube|
 
+
+.. _production_tutorials_citrixlogin:
 
 .. topic:: Secure Citrix Login
 

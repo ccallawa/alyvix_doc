@@ -263,7 +263,7 @@ more options, you can use the ``code-block`` directive:
    :name: _style_code_block_example
 
    .. code-block:: <language>
-      :caption: How to create a code block
+      :caption: How to create a code block with options
       :class: short-code-block
       :name: _style_code_block_example
 
@@ -699,11 +699,11 @@ sentence/bullet:
 
 Some Font Awesome icons have predefined roles:
 
-+----------+----------------------+------------------+
-| Icon     | Usage                | Appearance       |
-+----------+----------------------+------------------+
-| Download | \:download\:\`file\` | :download:`file` |
-+----------+----------------------+------------------+
++----------+--------------------------+----------------------+
+| Icon     | Usage                    | Appearance           |
++----------+--------------------------+----------------------+
+| Download | \:download\:\`file.txt\` | :download:`file.txt` |
++----------+--------------------------+----------------------+
 
 .. note::
 
@@ -952,6 +952,7 @@ The IconLink extension (included by default) standardizes a single format for
 rather than a text string, or both.  Here's a prototype and two examples:
 
 .. code-block::
+   :class: nocopy
 
    :iconlink:`type|link text|URL`
 

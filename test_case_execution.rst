@@ -61,7 +61,8 @@ names were passed via the **-o** parameter.  If so, Robot will execute those tes
 in sequence.  Otherwise, if the **-o** parameter is not specified, but the :file:`.alyvix`
 test case file named by the **-f** parameter
 :ref:`contains a script previously defined in Editor <test_case_data_format_script>`,
-then Robot will run that script.
+then Robot will run that script
+(:ref:`see the -f option below for details <alyvix_robot_cli_launch>`).
 
 Multiple test case objects are run in sequence by putting them in order in quotation marks,
 as long as all those objects exist in the test case:
@@ -109,7 +110,14 @@ These options are summarized in the following table:
 |               |       |                | :ref:`String <alyvix_designer_options_strings_top>`       |
 |               |       |                | field of a test case object in Designer                   |
 +---------------+-------+----------------+-----------------------------------------------------------+
-| -\ -filename  | -f    | *<name>*       | Supply the file name with or without extension            |
+| -\ -filename  | -f    | *<name>*       | Supply the file name with or without extension.  Alyvix   |
+|               |       |                | assumes that if no path is included with the file name,   |
+|               |       |                | then the original test case is stored in the current  n   |
+|               |       |                | directory which Alyvix was launched from.  If you include |
+|               |       |                | an absolute with the file name, then it will look in that |
+|               |       |                | path for the named file, and store the log file in that   |
+|               |       |                | same path, not in the current path.  You should not use   |
+|               |       |                | relative paths.                                           |
 +---------------+-------+----------------+-----------------------------------------------------------+
 | -\ -key       | -k    | *<key>*        | Supply a private key for use with encryption              |
 +---------------+-------+----------------+-----------------------------------------------------------+
@@ -171,8 +179,9 @@ CLI Output Format
 
 When run from the command prompt with the default **-\ -mode** parameter, Alyvix Robot will both
 *(a)* display a short log describing basic events and timing data, and *(b)* create a new file
-based on the original test case, but with more detailed time measures added.  A timestamp
-corresponding to the moment of execution will be appended to the file name:
+based on the original test case :ref:`(see the -f option for details) <alyvix_robot_cli_launch>`,
+but with the detailed time measures added from that particular run.  A timestamp corresponding to
+the moment of execution will be appended to the file name:
 
 :file:`<filename>_<full-timestamp>.alyvix`
 
@@ -180,9 +189,9 @@ For example:
 
 :file:`start-test_20191220_145228_UTC+0100.alyvix`
 
-
 When run from the command prompt with the default **-m alyvix** parameter, Alyvix Robot will
-return human-readable output :iconlink:`video||https://youtu.be/KS0oKjWCDUU`
+return human-readable output
+:iconlink:`video||videos_and_tutorials/operations_tutorials.html#operations-tutorials-outputcomposition`
 like the following when successful:
 
 .. todo::
@@ -368,7 +377,8 @@ You can then run a test case with encrypted strings by supplying the private key
 How Alyvix Measures Time
 ************************
 
-Alyvix makes a series of screen captures :iconlink:`video||https://youtu.be/4AJz-LzXwmE`
+Alyvix makes a series of screen captures
+:iconlink:`video||videos_and_tutorials/operations_tutorials.html#operations-tutorials-measurement`
 multiple times a second in a process called :glossdef:`frame grabbing`.  The system hardware
 determines exactly when a frame is grabbed.
 

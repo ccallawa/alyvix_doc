@@ -91,7 +91,7 @@ Image Type Options
 .. rst-class:: fa fa-image fa-blue
 
    The *image* component
-   :iconlink:`video||https://youtu.be/rC_bjgXCcZ4`
+   :iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-image`
    corresponds to the pixel-by-pixel representation of the
    :iconlink:`gloss|selection|../glossary.html#glossary-selection`
    or subselection on the captured screen, such as an icon.  As shown here, it has the following
@@ -120,7 +120,7 @@ Rectangle Type Options
 .. rst-class:: fa fa-square-o fa-blue
 
    The *rect* component
-   :iconlink:`video||https://youtu.be/JeAQZ2nzMnw`
+   :iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-rect`
    corresponds to a rectangular region on the captured screen, such as
    buttons, text boxes, panels or windows.  As shown here, it has the following options (an
    Operations tutorial video is available that
@@ -148,7 +148,7 @@ Text Type Options
 .. rst-class:: fa fa-font fa-blue
 
    The *text* component
-   :iconlink:`video||https://youtu.be/g9D4LZ5DqhU`
+   :iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-regex`
    corresponds to an area on the captured screen containing characters,
    such as a label, title or text in an input field.  As shown below, it has the following
    options, which vary depending on the type selected.
@@ -225,7 +225,8 @@ in the component tree.
    :class: image-boxshadow
    :alt: The mouse action selection dropdown.
 
-An **Action** :iconlink:`video||https://youtu.be/JW00UCXK8PA`
+An **Action**
+:iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-actions`
 creates a mouse event corresponding to one of the six types listed below (an
 Operations tutorial video is available which
 :ref:`explains the individual Action options <operations_tutorials_actions>`).  By default, the

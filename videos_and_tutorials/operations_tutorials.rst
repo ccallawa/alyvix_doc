@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 21-05-2020
-:modified: 14-10-2020
+:modified: 18-12-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -157,15 +157,33 @@ Operations Video Tutorials
 .. topic:: Conditionals and Loops Video
 
    This video tutorial explains how :ref:`conditionals <alyvix_editor_scripting_node_expressions>`
-   and :ref:`loops <alyvix_editor_interface_maps>` work in Alyvix through
-   a simplified example that manipulates objects in PowerPoint to run a simulated car race.
+   and :ref:`loops <alyvix_editor_interface_maps>` work in Alyvix through a simplified example
+   that manipulates objects in PowerPoint to run a simulated car race.
 
-   The video introduces how the IF_TRUE and IF_FALSE conditionals, and map-based loops are used
-   in Alyvix using an example of a racing car that goes around a race track in Powerpoint.
+   The video introduces how the |if-true| and |if-false| conditionals, and map-based loops are
+   used in Alyvix using an example of a racing car that goes around a race track in Powerpoint.
 
-.. image:: images/operations-conditionalsandloops-311.png
+.. image:: images/operations-conditionalsandloops-312.png
    :class: image-boxshadow
-   :alt: Conditionals and loops tutorial video, version 3.1.2
+   :alt: Conditions and Loops tutorial video, version 3.1.2
    :target: https://youtu.be/gwaZjmSzOkw
+
+|source-youtube|
+
+
+
+.. _operations_tutorials_sectionlogic:
+
+.. topic:: Section Logic Video
+
+   This video tutorial presents a detailed explanation of how to use
+   :ref:`sections <alyvix_editor_script_mgmt_top>` and employ
+   :ref:`section logic <alyvix_editor_interface_top_level_scripts>`,
+   particularly the proper use of the Main, Fail and Exit sections.
+
+.. image:: images/operations-sectionlogic-314.png
+   :class: image-boxshadow
+   :alt: Section Logic tutorial video, version 3.1.2
+   :target: https://youtu.be/5jlelr0YlhI
 
 |source-youtube|

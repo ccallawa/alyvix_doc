@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 30-03-2020
-:modified: 25-11-2020
+:modified: 18-12-2020
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
@@ -48,6 +48,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
    * Measuring Time |halftab| :shadow:`(video #14 - 3'53")`
    * Output Composition |halftab| :shadow:`(video #16 - 8'18")`
    * Conditionals and Loops |halftab| :shadow:`(video #18 - 6'14")`
+   * Section Logic |halftab| :shadow:`(video #20 - 4'38")`
 
 
 
