@@ -44,7 +44,7 @@ how the Alyvix interface works.
    * Execute the test cases, checking that they work together
 
 
-.. note::  You can find further examples, conceptual descriptions, and use production-centered
+.. note::  You can find further examples, conceptual descriptions, and production-centered use
            cases on the :ref:`Video and Tutorial <video_tutorials_top>` page.
 
 

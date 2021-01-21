@@ -651,3 +651,15 @@ div.accordion {
     border-width: 1px;
     margin-bottom: 4px;
 }
+
+/* For the Sphinx-Panels extension */
+.bg-alyvix-primary {
+  background-color: #2980B9 !important;
+}
+.bg-alyvix-outline-primary {
+  background-color: #2980B9 !important;
+}
+.badge-alyvix-primary {
+  background-color: #2980B9 !important;
+  color: #fff;
+}

@@ -19,7 +19,7 @@ Sphinx/docutils extension to create inline links with FontAwesome icons.
 
     More information:  https://docutils.readthedocs.io/en/sphinx-docs/howto/rst-roles.html
     Potentially modified:  ..\site-packages\docutils\writers\_html_base.py
-                Function:  ???
+                           ..\site-packages\docutils\nodes.py
 
 '''
 
@@ -71,8 +71,8 @@ def make_param_link(name, rawtext, text, lineno, inliner, options={}, content=[]
             base_uri = 'https://www.pivotaltracker.com/n/projects/1533621/stories/'
             node = nodes.reference(rawtext, ' ', refuri=base_uri+ref, **options)
             node.attributes.__setitem__('target', '_blank')
-            # The following path needs to be relative to the path of the file
-            node2 = nodes.image(uri='../pictures/pt_logo_small.png', alt=linktext)
+            # This should make it relative to the _build/ directory
+            node2 = nodes.image(uri='/pictures/pt_logo_small.png', alt=linktext)
             node.append(node2)
         else:
             print("\033[93mError:  no type found for :iconlink:\033[0m")

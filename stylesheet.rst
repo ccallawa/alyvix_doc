@@ -28,7 +28,6 @@ characters except when:
 `See additional Sphinx roles <https://www.sphinx-doc.org/en/1.5/markup/inline.html>`_ not listed below.
 
 
-
 .. _style_sections:
 
 ******************************
@@ -676,13 +675,14 @@ the numbering starts over again within each subsection, and these aren't numbere
 (Automatic section numbering is also possible with an extension to Sphinx:
 http://docutils.sourceforge.net/docs/ref/rst/directives.html#automatic-section-numbering)
 
-For general Font Awesome icons, use the ``fa`` directive:
+For general `Font Awesome <https://fontawesome.com/icons?d=gallery>`_ icons, use the ``fa`` directive:
 
 .. rst-class:: fa fa-check
 
    With text, or use the ``|`` by itself for just the icon
 
-Just append ``fa-`` to the name of the Font Awesome icon you want.
+Just append ``fa-`` to the name of the Font Awesome icon you want (or use the notation in the
+*sphinx-panels* extension at the bottom of this page):
 
 .. code-block:: rst
 
@@ -961,8 +961,8 @@ rather than a text string, or both.  Here's a prototype and two examples:
 
 Each instance consists of three arguments separated by vertical bars " | ":
 
-* :bolditalic:`type` -- Selects the (free) Font Awesome icon to use and various HTML/CSS attributes,
-  along with the browser tab behavior:
+* :bolditalic:`type` -- Selects the (free) `Font Awesome <https://fontawesome.com/icons?d=gallery>`_
+  icon to use and various HTML/CSS attributes, along with the browser tab behavior:
 
   .. table::
      :widths: 15 30 20 35
@@ -1068,11 +1068,7 @@ need to modify these parts as shown below:
      var textContent = target.textContent.split('\n');
      if (textContent[0].startsWith('C:\\> ')) { return textContent[0].slice(5); } // Line added by Charles@WP
      if (textContent[0].startsWith('C:\\Alyvix\\testcases> ')) { return textContent[0].slice(21); } // Line added by Charles@WP
-     textContent.forEach((line, index) => {
-       if (line.startsWith(copybuttonSkipText)) {
-         textContent[index] = line.slice(copybuttonSkipText.length)
-       }
-     });
+     if (textContent[0].startsWith('C:\\...\\MyFolder> ')) { return textContent[0].slice(17); } // Line added by Charles@WP
      return textContent.join('\n');
    }
 
@@ -1114,6 +1110,282 @@ Also add the accordion CSS class to the file
        outline: none;
        margin-top: 10px;
    }
+
+|
+
+
+.. _style_sphinx_panels:
+
+=============
+Sphinx Panels
+=============
+
+The `Sphinx Panels extension <https://sphinx-panels.readthedocs.io/>`_ adds the following features:
+
+* Card panels
+* Tabbed panels
+* Button style links that can also serve as links for a whole panel
+* Dropdown boxes that can hide content like FAQ answers
+* Github `Opticons <https://octicons-git-v2.primer.now.sh/octicons/>`_ and improved
+  `FontAwesome <https://fontawesome.com/icons?d=gallery>`_ support
+
+------
+Badges
+------
+
+Let's start with the simplest first, **badges**, a kind of text version of the GitHub repo
+status badge:
+
+.. tabbed:: Appearance
+
+   :badge:`primary,badge-alyvix-primary`  :badge:`secondary,badge-secondary badge-pill`
+
+.. tabbed:: RST code
+
+   .. code-block:: rst
+
+      :badge:`primary,badge-alyvix-primary`
+      :badge:`secondary,badge-secondary badge-pill`
+
+-----------
+Card Panels
+-----------
+
+**Card panels** are containers that use Bootstrap to size and position themselves appropriately (see
+the linked page above for additional formatting options):
+
+.. tabbed:: Appearance
+
+   .. panels::
+
+      Panel #1
+      ^^^^^^^^
+
+      :badge:`badge1,badge-alyvix-primary`
+      :badge:`New!,badge-warning`
+
+      ---
+
+      Panel #2
+
+      A link to :link-badge:`https://www.alyvix.com/,"Alyvix",tooltip=A Tooltip` with tooltip
+
+      ---
+      :body: text-center
+
+      Panel #3
+
+      ++++++++++
+      * List #3A
+      * List #3B
+
+      ---
+
+      Panel #4
+      ^^^^^^^^
+
+      .. dropdown:: :fa:`arrow-circle-right` Panel #4 Button
+
+         Hidden content
+
+      There's hidden content above me
+
+      ---
+      :img-top: pictures/alyvix_logo_399x333.png
+
+      Panel #5 with Image at Top
+
+      .. dropdown:: Panel #5 Button
+
+         The content below is a *link-button*:
+
+         .. link-button::  https://www.alyvix.com
+            :text: www.alyvix.com
+            :classes: bluebutton
+
+.. tabbed:: RST code
+
+   .. code-block:: rst
+
+      .. panels::
+
+         Panel #1
+         ^^^^^^^^
+
+         :badge:`badge1,badge-alyvix-primary`
+         :badge:`New!,badge-warning`
+
+         ---
+
+         Panel #2
+
+         A link to :link-badge:`https://www.alyvix.com/,"Alyvix",tooltip=A Tooltip` with tooltip
+
+         ---
+         :body: text-center
+
+         Panel #3
+
+         ++++++++++
+         * List #3A
+         * List #3B
+
+         ---
+
+         Panel #4
+         ^^^^^^^^
+
+         .. dropdown:: :fa:`arrow-circle-right` Panel #4 Button
+
+            Hidden content
+
+         There's hidden content above me
+
+         ---
+
+         Panel #5 with Image at Top
+
+         .. dropdown:: Panel #5 Button
+
+            The content below is a *link-button*:
+
+            .. link-button::  https://www.alyvix.com
+               :text: www.alyvix.com
+               :classes: bluebutton
+
+-------------
+Tabbed Panels
+-------------
+
+**Tabbed panels** (used to show the RST code above) let you overlay multiple content elements
+in the same space, allowing the user to choose which one to see.  You can use the ``:new-group:``
+parameter after a new tab to start a new set of tabbed panels, ``:selected:`` to select a default
+tab, and ``:class-label:`` and ``:class-content:`` among other formatting options.
+
+We've changed the default blue color in tab panels to match our Alyvix blue, which
+is done by setting the appropriate variable in ``panels_css_variables`` in
+:file:`conf.py`.
+
+.. tabbed:: Tab #1 (Appearance)
+   :class-label: smallcaps
+   :class-content: redbold
+
+   Text in tab panel #1
+
+.. tabbed:: Tab #2 (RST code)
+
+   .. code-block:: rst
+
+      .. tabbed:: Tab #1 (Appearance)
+         :class-label: smallcaps
+         :class-content: redbold
+
+         Text in tab panel #1
+
+------------
+Link Buttons
+------------
+
+**Link buttons** let you easily create a button linking to a URL, including making an entire panel
+part of the link.  Some examples:
+
+.. link-button:: style_sphinx_panels
+   :type: ref
+   :text: Link to the Sphinx Panels section
+   :classes: btn-success stretched-link
+
+.. code-block:: rst
+
+   .. link-button:: sphinx/panels
+      :type: ref
+      :text: Link to the Sphinx Panels section
+      :classes: btn-success stretched-link
+
+
+.. tabbed:: Simple Button with Tooltip
+
+   .. link-button:: https://www.alyvix.com/
+      :classes: btn-success
+      :type: url
+      :text: Link to Alyvix
+      :tooltip: I go to Alyvix
+
+   .. code-block:: rst
+
+      .. link-button:: https://www.alyvix.com/
+         :classes: btn-success
+         :type: url
+         :text: Link to Alyvix
+         :tooltip: I go to Alyvix
+
+.. tabbed:: Default Tab
+   :selected:
+
+   .. link-button:: https://www.alyvix.com/
+      :type: url
+      :text: Another link to Alyvix
+      :tooltip: I also go to Alyvix
+      :classes: btn-alyvix-outline-primary btn-block
+
+   .. code-block:: rst
+
+      .. link-button:: https://www.alyvix.com/
+         :type: url
+         :text: Another link to Alyvix
+         :tooltip: I also go to Alyvix
+         :classes: btn-alyvix-outline-primary btn-block
+
+--------
+Dropdown
+--------
+
+A **dropdown** creates a hidden box of content which is initially invisible.  When the user clicks
+on the button, space is added below the button and filled with that content.  Clicking a second
+time makes it disappear again.  You can use the ``:animate:`` keyword and the ``fade-in`` or
+``fade-in-slide-down`` values on the content in the box.
+
+.. tabbed:: Appearance
+
+   .. dropdown:: :fa:`eye` Bottom-left panel
+      :animate: fade-in-slide-down
+      :container: + shadow
+      :title: bg-alyvix-primary text-white font-weight-bold
+
+      Hidden content
+
+      Hidden content
+
+      Hidden content
+
+
+.. tabbed:: RST code
+
+   .. code-block:: rst
+
+      .. dropdown:: :fa:`eye` Bottom-left panel
+         :animate: fade-in-slide-down
+         :container: + shadow
+         :title: bg-alyvix-primary text-white font-weight-bold
+
+         Hidden content
+
+         Hidden content
+
+         Hidden content
+
+----------
+Font Icons
+----------
+
+**Font icons**, whether Github's *Opticons* or the more traditional Font Awesome icons, are now
+supported with *RST directives*, although you will probably need to add CSS to the
+:file:`css/custom.css` file:
+
+Opticon (screen-full): |halftab| :opticon:`screen-full,,size=16` |tab|
+FA (bars): |halftab| :fa:`bars,fa-small` |tab|
+Opticon (x-circle): |halftab| :opticon:`x-circle,text-white bg-danger,size=24`
+
+|
 
 
 
@@ -1157,6 +1429,8 @@ if it's not in the specification.
        padding: 5px;
    }
 
+|
+
 
 
 .. _style_sphinx_youtube:
@@ -1198,6 +1472,8 @@ Note that we currently modify the default files to change the CSS and use the pr
      </iframe></div>'''.format(video_id)
 
        self.body.append(tag)
+
+|
 
 
 

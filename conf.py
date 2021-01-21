@@ -46,10 +46,16 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx_copybutton',       # pip install sphinx-copybutton
     'sphinx_rtd_theme',        # pip install sphinx-rtd-theme
+    'sphinx_panels',           # The panels/tabs/dropdown/link-button theme
     'iconlink'                 # Our custom theme for links with embedded icons at _ext/iconlink.py
 ]
 #    'sphinx.ext.mathjax'
 #    'rinoh.frontend.sphinx'  # pip install rinohtype
+
+# -- CSS options for Sphinx-Panels extension
+panels_css_variables = {
+    "tabs-color-label-active": "#2980B9"
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -112,6 +118,7 @@ html_static_path = ['_static']
 # or fully qualified paths (eg. https://...)
 html_css_files = [
     'css/custom.css'
+    #'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
 ]
 
 # html_js_files = [

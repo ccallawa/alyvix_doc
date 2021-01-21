@@ -53,6 +53,7 @@ Once Sphinx is installed, you should then install the following extensions:
 ```
 > pip install -U sphinx-rtd-theme
 > pip install -U sphinx-copybutton
+> pip install -U sphinx-panels
 ```
 
 Next, clone or download [the source repository](https://github.com/ccallawa/alyvix_doc) to your
@@ -65,6 +66,22 @@ You can use [Git](https://git-scm.com/downloads):
 
 Or [download the ZIP file](https://github.com/ccallawa/alyvix_doc/archive/master.zip)
 
+Once the files are in place, edit the *conf.py* file to include your own information, the
+names of the installed extensions, and the CSS file:
+
+```
+extensions = [
+    ...
+    'sphinx_copybutton',       # pip install sphinx-copybutton
+    'sphinx_rtd_theme',        # pip install sphinx-rtd-theme
+    'sphinx_panels',           # The panels/tabs/dropdown/link-button theme
+    'iconlink'                 # Our custom theme for links with embedded icons at _ext/iconlink.py
+]
+
+html_css_files = [
+    'css/custom.css'
+]
+```
 
 
 ## Compilation
