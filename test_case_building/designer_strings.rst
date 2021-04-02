@@ -218,6 +218,9 @@ Special Characters
 The following table details which keys and characters require escaping when used.  Although our
 standard is to always use lower case, the key sequences are case insensitive.
 
+Note that this list does not include mouse events like
+:ref:`scroll actions <alyvix_designer_options_components_common>` for browsers.
+
 +-----------------------------------+-----------------------------------------------------------------+
 | Key Sequence                      | Result                                                          |
 +-----------------------------------+-----------------------------------------------------------------+

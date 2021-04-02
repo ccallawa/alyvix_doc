@@ -4,7 +4,7 @@
 :tags: release notes
 :lang: en-US
 :translation: false
-:status: updating
+:status: final
 
 .. include:: ../sphinx-roles.txt
 
