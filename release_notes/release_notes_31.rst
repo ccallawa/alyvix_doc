@@ -28,7 +28,7 @@ Alyvix 3.1.x.
 
 .. topic:: Version 3.1.5
 
-   **Release date:**  April 2nd, 2020
+   **Release date:**  April 2nd, 2021
 
 **Bug Fixes**
 
