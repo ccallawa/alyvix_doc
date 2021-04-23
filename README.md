@@ -35,7 +35,7 @@ index structure shown at the left side of the documentation.
 ## Installation
 
 The Alyvix documentation does not require a particular operating system, but does assume you
-are using the same version of Python as Alyvix itself (currently 3.7.6).  You will need to
+are using the same version of Python as Alyvix itself (currently 3.7.9).  You will need to
 [download Python](https://www.python.org/downloads/) and then run the installer (the *pip*
 package installer should be included).
 

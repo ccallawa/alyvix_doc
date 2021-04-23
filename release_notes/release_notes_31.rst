@@ -19,7 +19,7 @@ Version 3.1.0 - 3.1.5 (Current)
 Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
 system requirements for Alyvix, you can :ref:`install or upgrade it <getting_started_top>`.
 
-**Python 3.7.6 64-bit official distribution** is the recommended Python version to power
+**Python 3.7.9 64-bit official distribution** is the recommended Python version to power
 Alyvix 3.1.x.
 
 

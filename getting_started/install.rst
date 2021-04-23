@@ -62,8 +62,11 @@ Follow this procedure to install Python on your system:
 #. Download the |python-download-link|.
    Alyvix is :warn:`not` compatible with 32-bit versions of Python.
 
-#. Start the installation by right-clicking on the executable and selecting **"Run as administrator"**.
-   Check the box "Add Python 3.7 to PATH" and then choose **"Customize installation"**.
+#. Start the installation:
+
+   1. Right-click on the downloaded executable and select **"Run as administrator"**
+   2. Check the box **"Add Python 3.7 to PATH"** at the bottom
+   3. Choose the option **"Customize installation"**
 
    .. image:: images/python-install-01.png
       :width: 75%
@@ -92,7 +95,7 @@ Follow this procedure to install Python on your system:
       :class: short-code-block
 
       C:\> python --version
-      Python 3.7.6
+      Python 3.7.9
 
 |
 
