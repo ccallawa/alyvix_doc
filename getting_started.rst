@@ -50,7 +50,7 @@ how the Alyvix interface works.
 
 .. toctree::
    :maxdepth: 2
-   :name: toc_test
+   :name: toc_getting_started
    :hidden:
 
    getting_started/install.rst

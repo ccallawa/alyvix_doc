@@ -187,7 +187,7 @@ with the following command line options:
 
 .. toctree::
    :maxdepth: 2
-   :name: toc_designer
+   :name: toc_test_case_building
    :hidden:
 
    test_case_building/editor_interface_overview.rst

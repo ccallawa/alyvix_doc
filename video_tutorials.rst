@@ -55,7 +55,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
 
 .. toctree::
    :maxdepth: 2
-   :name: toc_designer
+   :name: toc_videos_and_tutorials
    :hidden:
 
    videos_and_tutorials/basic_concept_tutorials.rst

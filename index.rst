@@ -18,6 +18,7 @@
    test_case_building.rst
    test_case_execution.rst
    test_case_data_format.rst
+   monitoring_integrations.rst
    video_tutorials.rst
    glossary.rst
    release_notes.rst

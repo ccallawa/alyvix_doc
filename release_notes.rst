@@ -37,7 +37,7 @@ Current and past releases:
 
 .. toctree::
    :maxdepth: 2
-   :name: toc_test
+   :name: toc_release_notes
    :hidden:
 
    release_notes/release_notes_31.rst

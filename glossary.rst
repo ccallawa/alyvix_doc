@@ -108,10 +108,3 @@ Glossary
 |
 |
 |
-
-
-
-.. .. toctree::
-      :maxdepth: 2
-      :name: toc_designer
-      :hidden:
