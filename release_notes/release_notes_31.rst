@@ -13,7 +13,7 @@
 .. _release_notes_v3_1_0:
 
 ===============================
-Version 3.1.0 - 3.1.5 (Current)
+Version 3.1.0 - 3.1.6 (Current)
 ===============================
 
 Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
@@ -21,6 +21,27 @@ system requirements for Alyvix, you can :ref:`install or upgrade it <getting_sta
 
 **Python 3.7.9 64-bit official distribution** is the recommended Python version to power
 Alyvix 3.1.x.
+
+
+
+.. _install_release_v3_1_6:
+
+.. topic:: Version 3.1.6
+
+   **Release date:**  April 28th, 2021
+
+**Improvements**
+
+* A command line option has been added governing the
+  :ref:`output screenshot and annotation saving parameters <alyvix_robot_cli_launch>`
+
+**Bug Fixes**
+
+* Text strings and extracted text strings of previous objects can now be typed into the current
+  object interaction even if the source object has been named with hyphens or spaces
+  (*e.g.*, ``{object_ready ver-01.extract}``)
+* Map values can be typed into the current object interaction, even if the source map keys have
+  been named with hyphens or spaces (*e.g.*, ``{map.key_name env-01}``)
 
 
 

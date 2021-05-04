@@ -206,7 +206,7 @@ The following steps will then enable you to install Alyvix on the target machine
    .. code-block:: doscon
       :class: code-block
 
-      C:\...\MyFolder> pip install alyvix-3.1.5-cp37-cp37m-win_amd64.whl --no-index --find-links .
+      C:\...\MyFolder> pip install alyvix-3.1.6-cp37-cp37m-win_amd64.whl --no-index --find-links .
 
 #. Check that the installation was successful by starting Alyvix Editor:
 

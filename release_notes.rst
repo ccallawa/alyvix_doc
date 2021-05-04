@@ -30,7 +30,7 @@ Alyvix release follows the :iconlink:`ext|Semantic Versioning|https://semver.org
 
 Current and past releases:
 
-* :ref:`Version 3.1.x <release_notes_v3_1_0>` June 26th, 2020 - April 2nd, 2021 (Current)
+* :ref:`Version 3.1.x <release_notes_v3_1_0>` June 26th, 2020 - April 28th, 2021 (Current)
 * :ref:`Version 3.0.x <release_notes_v3_0_0>` February 3rd, 2020 - March 25th, 2020
 
 
