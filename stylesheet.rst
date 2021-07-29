@@ -507,7 +507,7 @@ can be specified if you use the full table environment:  align (left, center, ri
 
 .. table:: (Optional table title)
    :widths: 60 40
-   :width: 75
+   :width: 75%
    :align: right
 
    +-------------+---------------------+
@@ -1126,7 +1126,7 @@ The `Sphinx Panels extension <https://sphinx-panels.readthedocs.io/>`_ adds the 
 * Tabbed panels
 * Button style links that can also serve as links for a whole panel
 * Dropdown boxes that can hide content like FAQ answers
-* Github `Opticons <https://octicons-git-v2.primer.now.sh/octicons/>`_ and improved
+* Github `Octicons <https://primer.style/octicons/>`_ and improved
   `FontAwesome <https://fontawesome.com/icons?d=gallery>`_ support
 
 ------
@@ -1377,15 +1377,35 @@ time makes it disappear again.  You can use the ``:animate:`` keyword and the ``
 Font Icons
 ----------
 
-**Font icons**, whether Github's *Opticons* or the more traditional Font Awesome icons, are now
+**Font icons**, whether Github's *Octicons* or the more traditional Font Awesome icons, are now
 supported with *RST directives*, although you will probably need to add CSS to the
 :file:`css/custom.css` file:
 
-Opticon (screen-full): |halftab| :opticon:`screen-full,,size=16` |tab|
-FA (bars): |halftab| :fa:`bars,fa-small` |tab|
-Opticon (x-circle): |halftab| :opticon:`x-circle,text-white bg-danger,size=24`
+.. tabbed:: Appearance
+
+   Octicon (screen-full): |halftab| :opticon:`screen-full,,size=16` |tab|
+   FA (bars): |halftab| :fa:`bars,fa-small` |tab|
+   Octicon (x-circle): |halftab| :opticon:`x-circle,text-white bg-danger,size=24`
+
+.. tabbed:: RST code
+
+   .. code-block:: rst
+
+      Octicon (screen-full): |halftab| :opticon:`screen-full,,size=16` |tab|
+      FA (bars): |halftab| :fa:`bars,fa-small` |tab|
+      Octicon (x-circle): |halftab| :opticon:`x-circle,text-white bg-danger,size=24`
+
+**Note** that although they are called *Octicons*, the sphinx-panel RST role calls them *Opticons*.
 
 |
+
+
+
+.. _style_sphinx_potential:
+
+***************************************
+Optional Sphinx Extensions and HTML/CSS
+***************************************
 
 
 
@@ -1494,3 +1514,118 @@ The result will be a file called :file:`Python.pdf` in the :file:`_build` direct
 quality isn't that great, but it's complete (including the todo's even when they are turned off).
 
 Note that as of February 2020, Rinoh (``pip install rinohtype``) is not working in Python 3.7.
+
+
+
+.. _style_sphinx_htmlcss:
+
+===================================
+Potential HTML and CSS Integrations
+===================================
+
+
+
+--------------------
+Scroll-to-Top Button
+--------------------
+
+.. raw:: html
+
+   <button onclick="topFunction()" id="topButton" title="Go to top">Top</button>
+
+.. code-block:: rst
+
+   .. raw:: html
+
+      <button onclick="topFunction()" id="topButton" title="Go to top">Top</button>
+
+
+
+---------------------------
+Text Superimposed on Images
+---------------------------
+
+Let's create a background image, and then overlay some text on top of it:
+
+.. raw:: html
+
+   <div class="demo-image">
+     <img src="_images/alyvix_logo_399x333.png" style="width:50%; height:50%;"/>
+     <div class="demo-text" height="100%">
+       <br />
+       <h1>Here is some Text</h1><br />
+       <p><b>Some more text</b></p><br />
+       <p><b>Icons! <i class="fa fa-inbox"></i></b></p><br />
+     </div>
+   </div>
+
+
+.. code-block:: rst
+   :class: short-code-block
+
+   .. raw:: html
+
+      <div class="demo-image">
+        <img src="_images/alyvix_logo_399x333.png" style="width:50%; height:50%;"/>
+        <div class="demo-text" height="100%">
+          <br />
+          <h1>Here is some Text</h1><br />
+          <p><b>Some more text</b></p><br />
+          <p><b>Icons! <i class="fa fa-inbox"></i></b></p><br />
+        </div>
+      </div>
+
+
+
+------------------------------
+Overlay on Darkened Background
+------------------------------
+
+Button
+
+.. raw:: html
+
+   <div id="overlay" onClick="overlayOff()" style="display: none;">Some Overlay Text<br>
+   <button onclick="overlayOn()" style="display: inline-block;">Button</button></div>
+
+.. code-block:: rst
+   :class: short-code-block
+
+   .. raw:: html
+
+      <div id="overlay">Some Text</div>
+
+
+
+-------------
+Image "Cards"
+-------------
+
+.. raw:: html
+
+   <div class="card-row">
+   <div class="card-col" style="width:49%;float:left;">
+      <div class="card">
+         <img src="_images/alyvix_logo_100x83.png" alt="card1" style="width:100%;opacity:0.85;border-radius:5px;" />
+         <div class="card-container">
+            <h4><b>Alyvix #1</b></h4>
+            <p>Software Architect</p>
+         </div>
+      </div>
+      <div class="card">
+         <img src="_images/alyvix_logo_100x83.png" alt="card2" style="width:100%;opacity:0.85;border-radius:5px;" />
+         <div class="card-container">
+            <h4><b>Alyvix #2</b></h4>
+            <p>Video Producer</p>
+         </div>
+      </div>
+   </div></div>
+
+.. code-block:: rst
+   :class: short-code-block
+
+   .. raw:: html
+
+      <div id="overlay">Some Text</div>
+
+

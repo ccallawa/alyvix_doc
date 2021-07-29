@@ -16,6 +16,92 @@
 Production Systems Video Tutorials
 ==================================
 
+.. _production_tutorials_salesforce_deep:
+
+.. rubric:: SalesForce Service Console Deep View
+
+Here we show how to visually monitor SalesForce Cloud Edition's Service
+Console in depth.  As opposed to the panoramic test case for SalesForce below
+which looks at a number of different modules in a shallow manner, this deep test
+case looks only at Service Console, but in extended detail.
+
+The test case we construct in the video can serve as a template for building
+additional, wide-ranging checks on the availability and responsiveness across
+multiple features, with interactive objects like menus, lists, buttons, search
+filters, and hover panels.
+
+.. image:: images/production-salesforce-serviceconsole-315.png
+   :class: image-boxshadow image-very-large
+   :alt: SalesForce Service Console deep dive tutorial video, version 3.1.5
+   :target: https://youtu.be/QyZ-o4KIhZw
+
+|source-youtube|
+
+|
+
+
+.. _production_tutorials_salesforce_panorama:
+
+.. rubric:: SalesForce Cloud Panoramic View
+
+This video tutorial shows how you can create a panoramic Alyvix test case to
+visually monitor the Sales module of SalesForce Cloud Edition (Lightning).
+Given the regularity of the user interface, it uses a loop to checks for functionality,
+availability and performance of multiple tasks like Contacts, Dashboards, and Reports
+rather than monitoring any single module in great detail.
+
+.. image:: images/production-salesforce-panorama-315.png
+   :class: image-boxshadow image-very-large
+   :alt: SalesForce panoramic tutorial video, version 3.1.5
+   :target: https://youtu.be/Ykw3oc3Swoo
+
+|source-youtube|
+
+|
+
+
+.. _production_tutorials_crm_introduction:
+
+.. rubric:: Microsoft Dynamics 365 CRM Sales Hub
+
+See how with Alyvix you can monitor any application, in this specific case how to monitor
+Microsoft Dynamics 365 CRM.  This video tutorial presents an example test case for the Sales
+Hub CRM module, including an example run and explanation of the resulting measurements.
+
+* Building a Dynamics 365 CRM test case
+* A full example run
+* Safe exit strategy
+* How to forward measurements for later analysis
+
+.. image:: images/production-crm-introduction-314.png
+   :class: image-boxshadow image-very-large
+   :alt: Microsoft Dynamics 365 CRM introduction tutorial video, version 3.1.4
+   :target: https://youtu.be/U_ZqNIvktk8
+
+|source-youtube|
+
+|
+
+
+.. _production_tutorials_sap_workitems:
+
+.. rubric:: SAP Work Items Monitoring
+
+Here we look at how to visually monitor Work Items in SAP under the role of a Solution Architect.
+We create an Alyvix test case that uses Solution Manager's existing user interface to try out
+a series of interactions.  Alyvix acts like a human user, and since it uses the existing
+interface, you don't need to make any changes to your SAP software to use it.
+
+.. image:: images/production-sap-workitems-314.png
+   :class: image-boxshadow image-very-large
+   :alt: SAP Workitems tutorial video, version 3.1.4
+   :target: https://youtu.be/qU7Lwwn8Bvc
+
+|source-youtube|
+
+|
+
+
 .. _production_tutorials_warehouse:
 
 .. topic:: Microsoft Dynamics AX 2012 R3 Warehouse Management

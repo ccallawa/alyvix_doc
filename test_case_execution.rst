@@ -103,47 +103,57 @@ follow the rules of Python for string management within the command line).
 
 These options are summarized in the following table:
 
-+-----------------------+-------+----------------+-----------------------------------------------------------+
-| Option                | Alias | Argument       | Description                                               |
-+-----------------------+-------+----------------+-----------------------------------------------------------+
-| -\ -args              | -a    | *<string(s)>*  | Supply one or more strings to use in the                  |
-|                       |       |                | :ref:`String <alyvix_designer_options_strings_top>`       |
-|                       |       |                | field of a test case object in Designer                   |
-+-----------------------+-------+----------------+-----------------------------------------------------------+
-| -\ -filename          | -f    | *<name>*       | Supply the file name with or without extension.  Alyvix   |
-|                       |       |                | assumes that if no path is included with the file name,   |
-|                       |       |                | then the original test case is stored in the current  n   |
-|                       |       |                | directory which Alyvix was launched from.  If you include |
-|                       |       |                | an absolute with the file name, then it will look in that |
-|                       |       |                | path for the named file, and store the log file in that   |
-|                       |       |                | same path, not in the current path.  You should not use   |
-|                       |       |                | relative paths.                                           |
-+-----------------------+-------+----------------+-----------------------------------------------------------+
-| -\ -key               | -k    | *<key>*        | Supply a private key for use with encryption              |
-+-----------------------+-------+----------------+-----------------------------------------------------------+
-| -\ -mode              | -m    | *<name>*       | ``alyvix`` --- CLI output format for humans               |
-|                       |       |                | (default)                                                 |
-|                       |       |                |                                                           |
-|                       |       |                | ``nagios`` --- Nagios output                              |
-|                       |       |                | :ref:`(see below) <alyvix_robot_result_nagios>`           |
-|                       |       |                |                                                           |
-|                       |       |                | ``nats-influxdb`` --- NATS to InfluxDB                    |
-|                       |       |                | :ref:`(see below) <alyvix_robot_result_nats_influxdb>`    |
-+-----------------------+-------+----------------+-----------------------------------------------------------+
-| -\ -object            | -o    | *<name>*       | Supply the Object name(s)                                 |
-+-----------------------+-------+----------------+-----------------------------------------------------------+
-| -\ -screenshot-saving | -ss   | -\             | Save screenshot and annotation PNG files (or JPG          |
-|                       |       |                | depending on the screenshot compression argument) in the  |
-|                       |       |                | test case folder.                                         |
-+-----------------------+-------+----------------+-----------------------------------------------------------+
-| -\ -verbose           | -v    | *<n>*          | Set the verbosity level for debugging output              |
-|                       |       |                | ranging from **0** (min, default) to **1** (max)          |
-|                       |       |                |                                                           |
-|                       |       |                | **0**:  Records start/stop timestamps, state and time     |
-|                       |       |                | measures for each object (with measure option enabled)    |
-|                       |       |                |                                                           |
-|                       |       |                | **1**:  Also logs Alyvix actions                          |
-+-----------------------+-------+----------------+-----------------------------------------------------------+
++----------------------------+-------+-----------------+------------------------------------------------------------+
+| Option                     | Alias | Argument        | Description                                                |
++----------------------------+-------+-----------------+------------------------------------------------------------+
+| -\ -args                   | -a    | *<string(s)>*   | Supply one or more strings to use in the                   |
+|                            |       |                 | :ref:`String <alyvix_designer_options_strings_top>`        |
+|                            |       |                 | field of a test case object in Designer.                   |
++----------------------------+-------+-----------------+------------------------------------------------------------+
+| -\ -filename               | -f    | *<name>*        | Supply the file name with or without extension.  Alyvix    |
+|                            |       |                 | assumes that if no path is included with the file name,    |
+|                            |       |                 | then the original test case is stored in the current       |
+|                            |       |                 | directory which Alyvix was launched from.  If you include  |
+|                            |       |                 | an absolute with the file name, then it will look in that  |
+|                            |       |                 | path for the named file, and store the log file in that    |
+|                            |       |                 | same path, not in the current path.  You should not use    |
+|                            |       |                 | relative paths.                                            |
++----------------------------+-------+-----------------+------------------------------------------------------------+
+| -\ -key                    | -k    | *<key>*         | Supply a private key for use with encryption.              |
++----------------------------+-------+-----------------+------------------------------------------------------------+
+| -\ -mode                   | -m    | *<name>*        | Specifies the desired output format.                       |
+|                            |       |                 |                                                            |
+|                            |       |                 | ``alyvix`` --- [*default*] CLI output format for humans    |
+|                            |       |                 |                                                            |
+|                            |       |                 | ``nagios`` --- Nagios output                               |
+|                            |       |                 | :ref:`(see below) <alyvix_robot_result_nagios>`            |
+|                            |       |                 |                                                            |
+|                            |       |                 | ``nats-influxdb`` --- NATS to InfluxDB                     |
+|                            |       |                 | :ref:`(see below) <alyvix_robot_result_nats_influxdb>`     |
++----------------------------+-------+-----------------+------------------------------------------------------------+
+| -\ -object                 | -o    | *<name>*        | Supply the Object name(s).                                 |
++----------------------------+-------+-----------------+------------------------------------------------------------+
+| -\ -screenshot-saving      | -ss   | -\              | Save screenshot and annotation PNG files (or JPG           |
+|                            |       |                 | depending on the screenshot compression argument) in the   |
+|                            |       |                 | test case folder.                                          |
++----------------------------+-------+-----------------+------------------------------------------------------------+
+| -\ -screenshot-compression | -sc   | *<type*>        | Select the type of compression to use.                     |
+|                            |       |                 |                                                            |
+|                            |       |                 | ``lossless`` --- [*default*] Records screenshots and       |
+|                            |       |                 | annotations in PNG format.                                 |
+|                            |       |                 |                                                            |
+|                            |       |                 | ``compressed`` --- Records screenshots and annotations in  |
+|                            |       |                 | JPG 30% format.                                            |
++----------------------------+-------+-----------------+------------------------------------------------------------+
+| -\ -verbose                | -v    | *<n>*           | Set the verbosity level for debugging output ranging       |
+|                            |       |                 | from **0** (min) to **1** (max).                           |
+|                            |       |                 |                                                            |
+|                            |       |                 | ``0`` --- [*default*] Records start/stop timestamps, state |
+|                            |       |                 | and time measures for each object (with measure option     |
+|                            |       |                 | enabled)                                                   |
+|                            |       |                 |                                                            |
+|                            |       |                 | ``1`` --- Also logs Alyvix actions                         |
++----------------------------+-------+-----------------+------------------------------------------------------------+
 
 
 
