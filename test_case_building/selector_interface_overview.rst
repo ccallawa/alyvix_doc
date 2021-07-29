@@ -33,7 +33,7 @@ You can start Alyvix Selector as a standalone module from the command prompt (yo
 information about its :ref:`command arguments here <test_case_building_selector_launch>`):
 
 .. code-block:: doscon
-   :class: short-code-block
+   :class: medium-code-block
 
    C:\Alyvix\testcases> alyvix_selector -f <file-name>
 
@@ -42,7 +42,7 @@ information about its :ref:`command arguments here <test_case_building_selector_
 This will bring up the Selector interface:
 
 .. image:: images/as_main_screen_numbered.png
-   :class: image-boxshadow
+   :class: image-boxshadow image-very-large zoomable-image
    :alt: The Alyvix Selector interface.
    :target: ../_static/targets/as_main_screen.png
 
@@ -143,7 +143,7 @@ All editable fields are *validated* in real time to ensure that only new values 
 can be entered.  When a value is not valid you will see an error message like this:
 
 .. image:: images/as_name_validation.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: The Alyvix Selector interface.
 
 

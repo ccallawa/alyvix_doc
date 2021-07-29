@@ -84,19 +84,17 @@ processes, allowing you to make a quick selection with just a few keystrokes.
 
 .. _alyvix_designer_options_components_image:
 
-------------------
-Image Type Options
-------------------
+----------------------------------------
+|image-img| |halftab| Image Type Options
+----------------------------------------
 
-.. rst-class:: fa fa-image fa-blue
-
-   The *image* component
-   :iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-image`
-   corresponds to the pixel-by-pixel representation of the
-   :iconlink:`gloss|selection|../glossary.html#glossary-selection`
-   or subselection on the captured screen, such as an icon.  As shown here, it has the following
-   options to choose which visual aspect of the image to match against (an Operations tutorial video
-   is available that :ref:`explains the image options <operations_tutorials_image>`):
+The *image* component
+:iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-image`
+corresponds to the pixel-by-pixel representation of the
+:iconlink:`gloss|selection|../glossary.html#glossary-selection`
+or subselection on the captured screen, such as an icon.  As shown here, it has the following
+options to choose which visual aspect of the image to match against (an Operations tutorial video
+is available that :ref:`explains the image options <operations_tutorials_image>`):
 
 .. image:: images/ad_type_submenu_image_sized.png
    :class: image-boxshadow
@@ -113,18 +111,16 @@ Image Type Options
 
 .. _alyvix_designer_options_components_rect:
 
-----------------------
-Rectangle Type Options
-----------------------
+-------------------------------------------
+|rect-img| |halftab| Rectangle Type Options
+-------------------------------------------
 
-.. rst-class:: fa fa-square-o fa-blue
-
-   The *rect* component
-   :iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-rect`
-   corresponds to a rectangular region on the captured screen, such as
-   buttons, text boxes, panels or windows.  As shown here, it has the following options (an
-   Operations tutorial video is available that
-   :ref:`explains the rect options <operations_tutorials_rect>`):
+The *rect* component
+:iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-rect`
+corresponds to a rectangular region on the captured screen, such as
+buttons, text boxes, panels or windows.  As shown here, it has the following options (an
+Operations tutorial video is available that
+:ref:`explains the rect options <operations_tutorials_rect>`):
 
 .. image:: images/ad_type_submenu_rect_sized.png
    :class: image-boxshadow
@@ -141,17 +137,15 @@ Rectangle Type Options
 
 .. _alyvix_designer_options_components_text:
 
------------------
-Text Type Options
------------------
+--------------------------------------
+|font-img| |halftab| Text Type Options
+--------------------------------------
 
-.. rst-class:: fa fa-font fa-blue
-
-   The *text* component
-   :iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-regex`
-   corresponds to an area on the captured screen containing characters,
-   such as a label, title or text in an input field.  As shown below, it has the following
-   options, which vary depending on the type selected.
+The *text* component
+:iconlink:`video||../videos_and_tutorials/operations_tutorials.html#operations-tutorials-regex`
+corresponds to an area on the captured screen containing characters,
+such as a label, title or text in an input field.  As shown below, it has the following
+options, which vary depending on the type selected.
 
 For both the *Detect* and *Map* types, the :guilabel:`Scrape` field displays the text that was
 automatically recognized in the component's
@@ -165,10 +159,11 @@ on the screen capture.  There are some limitations to note:
 
 
 .. _alyvix_designer_options_components_text_detect:
-.. topic:: **Detect**
 
-   The text type's *Detect* option will determine that a match was correctly made if the text
-   scraped from the region of interest  matches the condition specified in the first two fields.
+.. rubric:: **Detect**
+
+The text type's *Detect* option will determine that a match was correctly made if the text
+scraped from the region of interest  matches the condition specified in the first two fields.
 
 .. image:: images/ad_type_submenu_text_detect_sized.png
    :class: image-boxshadow
@@ -194,15 +189,15 @@ one of these 3 methods:
 
 
 .. _alyvix_designer_options_components_text_map:
-.. topic:: **Map**
+.. rubric:: **Map**
 
-   When *Map* mode is selected, the scraped text will be mapped to the most similar key in
-   the chosen :iconlink:`gloss|map|../glossary.html#glossary-map`
-   (the Map can be selected in the :ref:`map interface in Editor <alyvix_editor_interface_top>`),
-   and the value that corresponds to that key in the map will both be returned and be cached in the
-   test case object.  If the ``{<object>.extract}``
-   :ref:`pattern is used later <alyvix_designer_options_strings_map_extract>`
-   in the String field of another test case, this cached value will be returned.
+When *Map* mode is selected, the scraped text will be mapped to the most similar key in
+the chosen :iconlink:`gloss|map|../glossary.html#glossary-map`
+(the Map can be selected in the :ref:`map interface in Editor <alyvix_editor_interface_top>`),
+and the value that corresponds to that key in the map will both be returned and be cached in the
+test case object.  If the ``{<object>.extract}``
+:ref:`pattern is used later <alyvix_designer_options_strings_map_extract>`
+in the String field of another test case, this cached value will be returned.
 
 .. image:: images/ad_type_submenu_text_map_sized.png
    :class: image-boxshadow
@@ -270,11 +265,14 @@ When one of these options is selected, an icon will appear to the right of the c
 quick indication of that option and its parameters.  The following table illustrates the icons
 used and their meanings.
 
-.. table::  Mouse and Keyboard Action Icons
-   :widths: 20 80
-   :width: 100%
-   :class: no-header-row
+**Mouse and Keyboard Action Icons**
 
+.. table::
+   :widths: 10 140
+   :width: 100%
+
+   +-------------------------------------------------------+---------------------------------------------------+
+   | **Icon**                                              |  **Description**                                  |
    +-------------------------------------------------------+---------------------------------------------------+
    | .. image:: /pictures/icon_mouse_move.png              |  Move the mouse to a new position                 |
    +-------------------------------------------------------+---------------------------------------------------+
@@ -302,6 +300,9 @@ used and their meanings.
    +-------------------------------------------------------+---------------------------------------------------+
    | .. image:: /pictures/icon_keyboard_paren.png          |  Enter parameterized text into the field in focus |
    +-------------------------------------------------------+---------------------------------------------------+
+
+|
+|
 
 .. tip::
 

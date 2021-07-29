@@ -27,7 +27,7 @@ Although Designer is intended to be used in conjunction with Alyvix Editor, you 
 as a standalone component from the command line as follows (you can find information about its
 :ref:`command arguments here <test_case_building_designer_launch>`):
 
-.. code-block:: doscon
+.. code-block:: bat
    :class: short-code-block
 
    C:\Alyvix\testcases> alyvix_designer
@@ -56,6 +56,7 @@ Pressing :kbd:`Escape` will bring up the Designer interface as in the following 
 no groups (or components) have yet been defined.  The principle interface elements are:
 
 .. image:: images/ad_main_screen_initial_numbered.png
+   :class: image-boxshadow zoomable-image
    :alt: The empty Alyvix Designer interface
    :target: ../_static/targets/ad_main_screen_initial.png
 
@@ -111,6 +112,7 @@ For instance, you can manually select the Windows Start button using the left mo
 shown in the middle image here:
 
 .. image:: images/ad_screen_capture_combined.png
+   :class: zoomable-image
    :alt: Before and after creating a selection in the screen capture.
    :target: ../_images/ad_screen_capture_combined.png
 
@@ -146,7 +148,7 @@ When creating components, the following keyboard shortcuts are available:
    +------------------------------------+-----------------+----------------------------------------------------+
    | **Shortcut**                       | **Focus is on** | **Resulting Action**                               |
    +------------------------------------+-----------------+----------------------------------------------------+
-   | :kbd:`LeftClick+Hold`              | <Nothing>       | Create a selection, subselection, or RoI           |
+   | :kbd:`LeftClick(Hold)`             | <Nothing>       | Create a selection, subselection, or RoI           |
    +------------------------------------+-----------------+----------------------------------------------------+
    | :kbd:`Right\ Click`                | <Nothing>       | Autocontour the screen element around the pointer  |
    +------------------------------------+-----------------+----------------------------------------------------+
@@ -176,7 +178,7 @@ Designer or Editor interface.  As you make new selections and subselections, the
 components within the :ref:`component tree <alyvix_designer_component_tree_top>` as shown here:
 
 .. image:: images/ad_main_screen_new_component2.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: Adding a first component in the Alyvix Designer interface
 
 Continuing the example from above, the main selection (the Windows Start button) is automatically

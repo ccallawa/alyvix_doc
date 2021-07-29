@@ -13,14 +13,15 @@
 
 import os
 import sys
-import sphinx_rtd_theme
+import time
+current_year = time.strftime('%Y')
 sys.path.append(os.path.abspath("./_ext"))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'Alyvix User Manual'
-copyright = '2020-2021, Charles Callaway'
+project = 'Alyvix User Guide'
+copyright = 'Documentation &copy; 2020-%s, Charles Callaway' %(current_year)
 author = 'Charles Callaway'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -45,20 +46,15 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.todo',
     'sphinx_copybutton',       # pip install sphinx-copybutton
-    'sphinx_rtd_theme',        # pip install sphinx-rtd-theme
+    #'sphinx_rtd_theme',        # pip install sphinx-rtd-theme
     'sphinx_panels',           # The panels/tabs/dropdown/link-button theme
     'iconlink'                 # Our custom theme for links with embedded icons at _ext/iconlink.py
 ]
 #    'sphinx.ext.mathjax'
 #    'rinoh.frontend.sphinx'  # pip install rinohtype
 
-# -- CSS options for Sphinx-Panels extension
-panels_css_variables = {
-    "tabs-color-label-active": "#2980B9"
-}
-
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_themes/neteye/templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -82,14 +78,15 @@ language = None
 exclude_patterns = ['_build', '_ext', 'pictures']
 
 # The name of the Pygments (syntax highlighting) style to use.
-# pygments_style = 'sphinx'
+# pygments_style = 'trac'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
+todo_link_only = False
 
 # If true, the `numfig` option will produce numbered labels
 # Also:  `numfig_format`, `numfig_secnum_depth`
-numfig = False
+numfig = True
 numfig_secnum_depth = 0
 
 
@@ -98,21 +95,18 @@ numfig_secnum_depth = 0
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'neteye'
+html_theme_path = ["_themes"]
 
 # Options for the Read the Docs (rtd) theme.
-html_theme_options = {
-    'display_version': True,                  # Show the version below the logo
-    'prev_next_buttons_location': 'bottom',   # Where to put "Previous" and "Next" buttons
-    'style_external_links': False,            # Don't add an icon to distinguish external from internal links
-    'sticky_navigation': True,                # Don't scroll the left side of the page
-    'includehidden': True                     # Show hidden ToC trees
-}
+html_theme_options = { }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_additional_pages = {'index': 'index.html'}
 
 # These paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
@@ -125,7 +119,11 @@ html_css_files = [
 #     'js/custom.js',
 # ]
 
+html_title = "%s" %(project)
 html_logo = 'pictures/alyvix_icon_white_100x100.png'
 html_favicon = 'pictures/alyvix_icon_100x107.png'
 
 html_output_encoding = 'utf-8'
+
+# Output file base name for HTML help builder.
+htmlhelp_basename = 'AlyvixUserGuidedoc'

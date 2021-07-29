@@ -19,20 +19,22 @@ Version 3.1.0 - 3.1.6 (Current)
 Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
 system requirements for Alyvix, you can :ref:`install or upgrade it <getting_started_top>`.
 
-**Python 3.7.9 64-bit official distribution** is the recommended Python version to power
-Alyvix 3.1.x.
+:ref:`Python 3.7.9 64-bit official distribution <install_release_python_install>` is the recommended
+Python version to power Alyvix 3.1.x.
 
+|
 
 
 .. _install_release_v3_1_6:
 
-.. topic:: Version 3.1.6
+.. rubric:: Version 3.1.6
 
-   **Release date:**  April 28th, 2021
+**Release date:**  April 28th, 2021
 
 **Improvements**
 
-* A command line option has been added governing the
+* :iconlink:`pivotal|Pivotal Tracker Issue #177720908|177720908` |mdash|
+  A command line option has been added governing the
   :ref:`output screenshot and annotation saving parameters <alyvix_robot_cli_launch>`
 
 **Bug Fixes**
@@ -43,13 +45,14 @@ Alyvix 3.1.x.
 * Map values can be typed into the current object interaction, even if the source map keys have
   been named with hyphens or spaces (*e.g.*, ``{map.key_name env-01}``)
 
+|
 
 
 .. _install_release_v3_1_5:
 
-.. topic:: Version 3.1.5
+.. rubric:: Version 3.1.5
 
-   **Release date:**  April 2nd, 2021
+**Release date:**  April 2nd, 2021
 
 **Bug Fixes**
 
@@ -59,60 +62,66 @@ Alyvix 3.1.x.
 * An annotated screenshot is now shown in the console editor tab when a test case
   breaks during a loop
 
+|
 
 
 .. _install_release_v3_1_4:
 
-.. topic:: Version 3.1.4
+.. rubric:: Version 3.1.4
 
-   **Release date:**  November 23rd, 2020
+**Release date:**  November 23rd, 2020
 
 **Bug Fixes**
 
 * Alyvix Server will not retain or display data from test cases that have been manually broken
   with the break or stop controls
 
+|
 
 
 .. _install_release_v3_1_3:
 
-.. topic:: Version 3.1.3
+.. rubric:: Version 3.1.3
 
-   **Release date:**  November 3rd, 2020
+**Release date:**  November 3rd, 2020
 
 **Improvements**
 
-* Alyvix Server works through the HTTPS communication protocol
+* :iconlink:`pivotal|Pivotal Tracker Issue #175123238|175123238` |mdash| Alyvix Server works
+  through the HTTPS communication protocol
 * The Alyvix install procedure is now up-to-date with the latest dependency requirements
   (e.g., *nats-python*)
 
+|
 
 
 .. _install_release_v3_1_2:
 
-.. topic:: Version 3.1.2
+.. rubric:: Version 3.1.2
 
-   **Release date:**  October 14th, 2020
+**Release date:**  October 14th, 2020
 
 **Improvements**
 
 * The Alyvix install procedure is now up-to-date with the latest dependency requirements
   (e.g., *greenlet*)
 
+|
 
 
 .. _install_release_v3_1_1:
 
-.. topic:: Version 3.1.1
+.. rubric:: Version 3.1.1
 
-   **Release date:**  October 6th, 2020
+**Release date:**  October 6th, 2020
 
 **Improvements**
 
-* *Runtime behavior:*  Alyvix moves the cursor to the top left desktop corner at the start of
-  every test case run
+* :iconlink:`pivotal|Pivotal Tracker Issue #174421475|174421475` |mdash| *Runtime behavior:*
+  Alyvix moves the cursor to the top left desktop corner at the start of every test case run
 * *Alyvix Server* can now asynchronously control each Alyvix Client that is running Alyvix Robot
-* *Screenshot compression:*  Alyvix can record compressed screenshots and annotations, including
+* :iconlink:`pivotal|Pivotal Tracker Issue #174212221|174212221` |mdash| *Screenshot compression:*
+  Alyvix can record compressed screenshots and annotations, including
   optionally just for broken tests
 
 **Bug Fixes**
@@ -122,18 +131,19 @@ Alyvix 3.1.x.
   been disabled
 * Alyvix Robot now properly shows its help description with the **-h** flag in the CLI
 
+|
 
 
 .. _install_release_v3_1_0:
 
-.. topic:: Version 3.1.0
+.. rubric:: Version 3.1.0
 
-   **Release date:**  July 21st, 2020
+**Release date:**  July 21st, 2020
 
 
 .. image:: images/rel-notes-310-play.png
    :width: 200
-   :class: image-boxshadow
+   :class: image-boxshadow image-very-small
    :alt: Release notes video, version 3.1.0
    :target: https://youtu.be/5WWbx3homho
 

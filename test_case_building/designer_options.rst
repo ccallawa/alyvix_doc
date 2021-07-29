@@ -29,9 +29,7 @@ The parameters and settings for Alyvix Designer are divided into:
 
 
 .. toctree::
-   :maxdepth: 2
    :name: toc_designer
-   :hidden:
 
    designer_test_case_options.rst
    designer_component_options.rst

@@ -26,9 +26,9 @@ Alyvix 3.0.x.
 
 .. _install_release_v3_0_2:
 
-.. topic:: Version 3.0.2
+.. rubric:: Version 3.0.2
 
-   **Release date:**  March 25th, 2020
+**Release date:**  March 25th, 2020
 
 **Bug Fixes**
 
@@ -42,9 +42,9 @@ Alyvix 3.0.x.
 
 .. _install_release_v3_0_1:
 
-.. topic:: Version 3.0.1
+.. rubric:: Version 3.0.1
 
-   **Release date:**  March 11th, 2020
+**Release date:**  March 11th, 2020
 
 **New Features**
 
@@ -65,9 +65,9 @@ Alyvix 3.0.x.
 
 .. _install_release_v3_0_0:
 
-.. topic:: Version 3.0.0
+.. rubric:: Version 3.0.0
 
-   **Release date:**  February 3rd, 2020
+**Release date:**  February 3rd, 2020
 
 Alyvix 3 is a major product release, but it shares only the core concept with the previous
 version (https://v2.alyvix.com/doc): it has been totally re-designed, re-engineered and

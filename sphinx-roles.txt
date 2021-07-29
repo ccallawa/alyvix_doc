@@ -1,14 +1,45 @@
-.. |python-download-link| replace:: :download:`64-bit Windows installer for Python version 3.7.9 <https://www.python.org/ftp/python/3.7.9/python-3.7.9-amd64.exe>`
+.. |chevron| image:: /icons/chevron.ico
+   :width: 12
+.. |reload| image:: /icons/reload.ico
+   :width: 12
+.. |edit| image:: /icons/edit.ico
+   :width: 12
+.. |trashbin| image:: /icons/trash-bin.ico
+   :width: 12
+.. |uparrow| image:: /icons/up-arrow.ico
+   :width: 8
+.. |downarrow| image:: /icons/down-arrow.ico
+   :width: 8
+.. |gear| image:: /icons/gear.ico
+   :width: 8
+.. |font-img| image:: ../_static/img/font.png
+   :width: 60
+.. |image-img| image:: ../_static/img/image.png
+   :width: 60
+.. |rect-img| image:: ../_static/img/rect.png
+   :width: 60
+.. |email-small-img| image:: _static/img/email_40.png
+   :width: 40
+   :class: no-scaled-link
+.. |slack-small-img| image:: pictures/slack_logo.png
+   :width: 38
+   :class: no-scaled-link
+
+.. |python-download-link| replace:: `64-bit Windows installer for Python version 3.7.9 <https://www.python.org/ftp/python/3.7.9/python-3.7.9-amd64.exe>`__
 
 .. |python-remove-name| replace:: :file:`Python 3.7.9 (64-bit)`
 
+.. |font-a| raw:: html
+
+   <span style="color: #2980B9; font-size: 42px;">A </span>
+
 .. |source-youtube| raw:: html
 
-   <div style="text-align: right; padding: 0; margin: 0;">Source:  Alyvix@YouTube &nbsp; <i class="fa fa-small fa-external-link"></i></div>
+   <div style="text-align: right; padding: 0; margin: 0;">Source:  Alyvix@YouTube &nbsp; <i class="fas fa-small fa-external-link-alt"></i></div>
 
 .. |source-youtube-left| raw:: html
 
-   <div style="text-align: left; padding: 0; margin: 0;">Source:  Alyvix@YouTube &nbsp; <i class="fa fa-small fa-external-link"></i></div>
+   <div style="text-align: left; padding: 0; margin: 0;">Source:  Alyvix@YouTube &nbsp; <i class="fas fa-small fa-external-link-alt"></i></div>
 
 .. |bar-icon| raw:: html
 
@@ -32,7 +63,7 @@
 
 .. |sort-down-icon| raw:: html
 
-   <i class="fa fa-small fa-blue fa-sort-down" style="vertical-align: top;"></i>
+   <i class="fas fa-blue fa-sort-down" style="vertical-align: top;"></i>
 
 .. |right-icon-white| raw:: html
 
@@ -40,11 +71,19 @@
 
 .. |play-icon| raw:: html
 
-   <i class="fa fa-smaller fa-play"></i>
+   <i class="fas fa-play fa-smaller"></i>
+
+.. |example-icon| raw:: html
+
+   <i class="bi-check2-square"></i>
 
 .. |4arrows-icon| raw:: html
 
-   <i class="fa fa-smaller fa-arrows"></i>
+   <i class="fas fa-arrows-alt fa-smaller"></i>
+
+.. |mail-icon| raw:: html
+
+   <i class="fa fa-envelope fa-blue"></i>
 
 .. |link-icon| raw:: html
 

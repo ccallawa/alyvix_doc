@@ -26,7 +26,6 @@ second action: opening the Windows Settings app.
 #. Launch Alyvix Editor with the same file name from our previous example:
 
    .. code-block:: doscon
-      :class: short-code-block
 
       C:\Alyvix\testcases> alyvix_editor -f start-test
 
@@ -37,7 +36,7 @@ second action: opening the Windows Settings app.
    on :wbutton:`ADD`:
 
    .. image:: images/as_delay_five_seconds.png
-      :class: image-with-border
+      :class: image-boxshadow
       :alt: Setting up the 5 second delay before capturing the screen
 
 #. Once you click :wbutton:`ADD`, you'll have 5 seconds to open the Windows Start Menu (you'll
@@ -48,7 +47,7 @@ second action: opening the Windows Settings app.
    :iconlink:`gloss|autocontour|../glossary.html#glossary-autocontour` the icon.
 
    .. image:: images/ad_settings_selected.png
-      :class: image-with-border
+      :class: image-boxshadow
       :alt: Select Settings after the 5 second screen capture delay
 
 #. Press :kbd:`Escape` again to return you to Editor with the new selection in the Designer
@@ -56,14 +55,14 @@ second action: opening the Windows Settings app.
    value of the :guilabel:`Action` dropdown from ``None`` to ``Click``:
 
    .. image:: images/ad_settings_click.png
-      :class: image-with-border
+      :class: image-boxshadow image-very-large
       :alt: Select Settings after the 5 second screen capture delay
 
 #. In the Selector panel at the bottom left, change the name of our new test case object
    from :guilabel:`VisualObject1` to a new one like :guilabel:`PressSettingsIcon`:
 
    .. image:: images/as_rename_second_object.png
-      :class: image-with-border
+      :class: image-boxshadow image-very-large
       :alt: The settings button test case in Alyvix Selector
 
 #. Using its |4arrows-icon| icon seen above, drag the new test case object into the Scripting panel
@@ -71,7 +70,7 @@ second action: opening the Windows Settings app.
    to the end of the script):
 
    .. image:: images/ae_second_script_element.png
-      :class: image-with-border
+      :class: image-boxshadow image-very-large
       :alt: The settings button script element in Alyvix Editor
 
 #. Now call Alyvix Robot by pressing the |runblue| button at the top left.  You'll see the Start
@@ -82,7 +81,7 @@ second action: opening the Windows Settings app.
    for each script element.
 
    .. image:: images/ae_console_panel_result.png
-      :class: image-with-border
+      :class: image-boxshadow image-very-large
       :alt: The results of running the script in Alyvix Editor
 
    |

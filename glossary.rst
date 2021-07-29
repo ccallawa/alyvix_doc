@@ -17,7 +17,10 @@ Glossary
 
 .. todo::
 
-   * CC:  Terminology:  scripting node, scripting element, script, map, section, scripting mode
+   * Terminology to add:  scripting node, scripting element, scripting mode
+
+|
+|
 
 .. table::
    :class: table-body-no-borders

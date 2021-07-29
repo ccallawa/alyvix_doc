@@ -33,12 +33,18 @@ Current and past releases:
 * :ref:`Version 3.1.x <release_notes_v3_1_0>` June 26th, 2020 - April 28th, 2021 (Current)
 * :ref:`Version 3.0.x <release_notes_v3_0_0>` February 3rd, 2020 - March 25th, 2020
 
+|
+|
+|
+
+-----
+
+|
+
 
 
 .. toctree::
-   :maxdepth: 2
    :name: toc_release_notes
-   :hidden:
 
    release_notes/release_notes_31.rst
    release_notes/release_notes_30.rst

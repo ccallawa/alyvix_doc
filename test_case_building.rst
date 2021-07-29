@@ -50,18 +50,16 @@ sections include detailed mini-tutorials and topic-based videos on how to use Al
 All of the Alyvix applications can be launched from the Windows Command Prompt or PowerShell.
 Note that they inherit the permissions of the shell they were launched from.
 
-|
-
 
 
 .. _test_case_building_designer:
 
-.. topic:: Alyvix Designer
+.. rubric:: Alyvix Designer
 
-   Alyvix Designer lets you select graphic :iconlink:`gloss|components|glossary.html#glossary-component`
-   on a captured screen to use as test case objects, whether they're images, rectangles, or text.
-   You can then define triggers and actions to apply when those templates are recognized later
-   in a live interaction with an application.
+Alyvix Designer lets you select graphic :iconlink:`gloss|components|glossary.html#glossary-component`
+on a captured screen to use as test case objects, whether they're images, rectangles, or text.
+You can then define triggers and actions to apply when those templates are recognized later
+in a live interaction with an application.
 
 Designer will save the set of templates, called the
 :iconlink:`gloss|component tree|glossary.html#glossary-component-tree` as a single test case
@@ -109,11 +107,11 @@ with the following command line options:
 
 .. _test_case_building_selector:
 
-.. topic:: Alyvix Selector
+.. rubric:: Alyvix Selector
 
-   Alyvix Selector is used to :ref:`centralize the management <alyvix_selector_interface_top>`
-   of all of your test case objects, such as exporting them to other Alyvix files.  It also
-   provides options to view, copy, edit and delete test cases objects.
+Alyvix Selector is used to :ref:`centralize the management <alyvix_selector_interface_top>`
+of all of your test case objects, such as exporting them to other Alyvix files.  It also
+provides options to view, copy, edit and delete test cases objects.
 
 .. _test_case_building_selector_launch:
 
@@ -147,11 +145,11 @@ with the following command line options:
 
 .. _test_case_building_editor:
 
-.. topic:: Alyvix Editor
+.. rubric:: Alyvix Editor
 
-   Alyvix Editor helps you create scripts using the individual test case objects in a single
-   test case file, and allows you to create more complex interactions compared to using
-   Designer alone.
+Alyvix Editor helps you create scripts using the individual test case objects in a single
+test case file, and allows you to create more complex interactions compared to using
+Designer alone.
 
 .. _test_case_building_editor_launch:
 
@@ -182,13 +180,18 @@ with the following command line options:
 |               |       |          | ranging from **0** (min) to **2** (max)       |
 +---------------+-------+----------+-----------------------------------------------+
 
+|
+|
+|
+
+-----
+
+|
 
 
 
 .. toctree::
-   :maxdepth: 2
    :name: toc_test_case_building
-   :hidden:
 
    test_case_building/editor_interface_overview.rst
    test_case_building/editor_script_mgmt.rst

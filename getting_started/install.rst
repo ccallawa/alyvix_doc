@@ -19,8 +19,6 @@ Before installing Alyvix, first check that your setup meets the system requireme
 If it does, you will then need to install Python on your Windows machine before installing
 Alyvix itself.
 
-|
-
 
 
 .. _system_requirements_top:
@@ -45,8 +43,6 @@ Alyvix:
      (32-bit versions of Windows are :warn:`not` compatible with Alyvix)
    * Hardware:  2 CPUs and 4GB RAM
 
-|
-
 
 
 .. _install_release_python_install:
@@ -60,7 +56,7 @@ Follow this procedure to install Python on your system:
 .. rst-class:: bignums
 
 #. Download the |python-download-link|.
-   Alyvix is :warn:`not` compatible with 32-bit versions of Python.
+   Note that Alyvix is :warn:`not` compatible with 32-bit versions of Python.
 
 #. Start the installation:
 
@@ -69,14 +65,14 @@ Follow this procedure to install Python on your system:
    3. Choose the option **"Customize installation"**
 
    .. image:: images/python-install-01.png
-      :width: 75%
+      :class: image-boxshadow image-very-large zoomable-image
       :alt: The first panel of the python installation process.
 
 #. On the second panel all the option boxes should already be checked.  Click **"Next"** to
    continue.
 
    .. image:: images/python-install-02.png
-      :width: 75%
+      :class: image-boxshadow image-very-large zoomable-image
       :alt: The second panel of the python installation process.
 
 #. On the third panel, make sure the advanced options are set as shown below.  Then under
@@ -85,7 +81,7 @@ Follow this procedure to install Python on your system:
    requiring about 5 minutes.
 
    .. image:: images/python-install-03.png
-      :width: 75%
+      :class: image-boxshadow image-very-large zoomable-image
       :alt: The third panel of the python installation process.
 
 #. The installation is correct if the following command returns a version number rather than an
@@ -96,8 +92,6 @@ Follow this procedure to install Python on your system:
 
       C:\> python --version
       Python 3.7.9
-
-|
 
 
 
@@ -127,8 +121,6 @@ The Alyvix installer is launched from the command prompt that, like the Python i
 
 We recommend you place your Alyvix test cases in a separate data directory.
 
-|
-
 
 
 .. _install_upgrade:
@@ -157,8 +149,6 @@ Only two steps are needed to upgrade to the latest version:
         :class: short-code-block
 
         C:\> pip install --upgrade alyvix
-
-|
 
 
 
@@ -218,8 +208,6 @@ The following steps will then enable you to install Alyvix on the target machine
    If the :ref:`Editor window <alyvix_editor_interface_top>` appears, the installation was
    successful.
 
-|
-
 
 
 .. _install_uninstall:
@@ -249,8 +237,6 @@ directory.
 The Python installer does not remove environment variables, so if desired you can manually
 remove them at **System Properties > Environment Variables > System Variables > Path**.
 
-|
-
 
 
 .. _install_troubleshooting:
@@ -264,9 +250,9 @@ Below are some potential installation problems and their solutions.
 .. admonition::  "Python" command does nothing or launches Microsoft Store on Windows 10
 
    This error occurs when during :ref:`installation steps #2 and #4 <install_release_python_install>`
-   you did not check the boxes to add Python to the path and environment variables.  Typing the
+   you forgot to check the boxes to add Python to the path and environment variables.  Typing the
    :command:`python` command in the command prompt under this condition will launch Microsoft Store
-   in an attempt to install it from there.
+   in an attempt to install it that way.
 
    To correct this situation you will need to either (1) uninstall and then reinstall Python, or
    (2) manually add the appropriate paths in the **System Properties > Environment Variables** panel.
@@ -286,5 +272,3 @@ Below are some potential installation problems and their solutions.
    You can fix this problem by installing the **Microsoft Visual C++ Redistributable for Visual Studio**,
    which contains the required file.  It's available at
    :iconlink:`ext|https://aka.ms/vs/16/release/vc_redist.x64.exe|https://aka.ms/vs/16/release/vc_redist.x64.exe`.
-
-|

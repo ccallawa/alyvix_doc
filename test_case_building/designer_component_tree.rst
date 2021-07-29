@@ -42,7 +42,7 @@ Structure of the Component Tree
 ===============================
 
 .. image:: images/ad_main_screen_initial_top.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: An empty component tree
 
 Alyvix Designer captures the entire screen to use as a basis for locating visual elements.  This
@@ -56,7 +56,7 @@ distinguish the three groups, and a group's elements may in fact change color if
 or remove one.
 
 .. image:: images/ad_main_screen_components.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: A tree with a single root, group and component
 
 If you now create a selection, or a subselection with its corresponding region of interest,
@@ -84,7 +84,7 @@ Alyvix's visual recognition capability is based on two well-known open source sy
   regardless of the font and font size used
 
 .. image:: images/ad_component_types.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: A tree with a single root, group and component
 
 Alyvix uses these tools to visually detect
@@ -130,7 +130,7 @@ a component in that group.
 
 In addition to manually selecting the bounds of the region, you can right-click on any point on
 the screen and Alyvix will try to automatically determine
-:iconlink:`gloss|autocontour|../glossary.html#glossary-autocontour` the appropriate selection.
+(:iconlink:`gloss|autocontour|../glossary.html#glossary-autocontour`) the appropriate selection.
 You can also resize the bounding edges of any capture region by dragging them with the left
 mouse button.
 

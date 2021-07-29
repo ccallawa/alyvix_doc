@@ -44,14 +44,21 @@ how the Alyvix interface works.
    * Execute the test cases, checking that they work together
 
 
-.. note::  You can find further examples, conceptual descriptions, and production-centered use
+.. note::  You can find further examples, conceptual descriptions, and production-oriented use
            cases on the :ref:`Video and Tutorial <video_tutorials_top>` page.
+
+|
+|
+|
+
+-----
+
+|
+
 
 
 .. toctree::
-   :maxdepth: 2
    :name: toc_getting_started
-   :hidden:
 
    getting_started/install.rst
    getting_started/windows_start_button.rst

@@ -102,6 +102,8 @@ put the words "First", "Second" and "Third" in three adjacent columns.
 
    First{tab}Second{tab}Third
 
+|
+
 
 
 .. rubric:: Full Text
@@ -117,6 +119,8 @@ the following expression in the :guilabel:`String` field of a later scripting no
    :class: tiny-code-block nocopy
 
    {temperature_read.text}
+
+|
 
 
 
@@ -140,6 +144,8 @@ the text ``Country:  France``.
 
    Country:  {city.extract}
 
+|
+
 
 
 .. rubric:: Map values
@@ -152,6 +158,8 @@ into a table on a web page or in a spreadsheet with this :guilabel:`String` fiel
    :class: tiny-code-block nocopy
 
    {1}{tab}{2}{tab}{3}
+
+|
 
 
 
@@ -170,6 +178,8 @@ the application.
    :class: tiny-code-block nocopy
 
    Color: {1}
+
+|
 
 
 
@@ -292,5 +302,7 @@ Note that this list does not include mouse events like
 +-----------------------------------+-----------------------------------------------------------------+
 | ``{}}``                           | **}**                                                           |
 +-----------------------------------+-----------------------------------------------------------------+
+
+|
 
 All other printable keys not found in the above list can be used normally.

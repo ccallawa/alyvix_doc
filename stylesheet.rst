@@ -1287,19 +1287,20 @@ Link Buttons
 ------------
 
 **Link buttons** let you easily create a button linking to a URL, including making an entire panel
-part of the link.  Some examples:
+part of the link.  (Watch out if adding the *stretched-link* CSS element which can make your entire
+page a link.)  Some examples:
 
 .. link-button:: style_sphinx_panels
    :type: ref
    :text: Link to the Sphinx Panels section
-   :classes: btn-success stretched-link
+   :classes: btn-success
 
 .. code-block:: rst
 
    .. link-button:: sphinx/panels
       :type: ref
       :text: Link to the Sphinx Panels section
-      :classes: btn-success stretched-link
+      :classes: btn-success
 
 
 .. tabbed:: Simple Button with Tooltip

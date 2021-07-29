@@ -111,7 +111,7 @@ These options are summarized in the following table:
 |                            |       |                 | field of a test case object in Designer.                   |
 +----------------------------+-------+-----------------+------------------------------------------------------------+
 | -\ -filename               | -f    | *<name>*        | Supply the file name with or without extension.  Alyvix    |
-|                            |       |                 | assumes that if no path is included with the file name,    |
+|                            |       |                 | assumes that if no patm h is included with the file name,  |
 |                            |       |                 | then the original test case is stored in the current       |
 |                            |       |                 | directory which Alyvix was launched from.  If you include  |
 |                            |       |                 | an absolute with the file name, then it will look in that  |
@@ -411,7 +411,7 @@ greater of the differences before and after the frames when the object is first 
 The following animation shows the interrelationship between these concepts:
 
 .. image:: pictures/measurement.gif
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: Measurement animation
 
 The object detector looks at the first in a set of frames to see if all the objects in the
@@ -426,19 +426,10 @@ then reports all of the measured transactions for which the measure flag was set
 object.
 
 .. image:: pictures/transaction.png
-   :class: image-boxshadow-80
+   :class: image-boxshadow-80 zoomable-image
    :alt: Transaction diagram
 
 The amount of available hardware resources greatly affects how accurate Alyvix can be.  Because
 frame grabbing in the underlying hardware is performed by Windows, you can add resources like
 RAM and CPU to increase the number of frames grabbed per second, which will decrease the amount
 of time between each frame and thus improve accuracy.
-
-
-
-.. todo::
-
-   * Conceptual:  What gets measured and how (appear + disappear + appeardisappear)
-   * Conceptual:  Checkboxes for Measure and Timeout
-   * How Alyvix is integrated with monitoring/ITOA (NetEye is one example of monitoring)
-

@@ -150,7 +150,7 @@ the number of keys in the map.)  The map interface is shown here, with the avail
 listed below:
 
 .. image:: images/ae_basic_map_example.png
-   :class: image-boxshadow
+   :class: image-boxshadow image-very-large zoomable-image
    :alt: The Map interface.
 
 * :wbutton:`ADD ROW` --- Add a new row to the bottom of the table

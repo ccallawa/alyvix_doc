@@ -31,14 +31,13 @@ To :ref:`run Alyvix Editor from the command prompt <test_case_building_editor_la
 use the following command:
 
 .. code-block:: doscon
-   :class: short-code-block
 
    C:\Alyvix\testcases> alyvix_editor -f <alyvix-file-name>
 
 This loads the Editor interface, whose layout has the following elements:
 
 .. image:: images/ae_full_interface_numbered.png
-   :class: image-boxshadow
+   :class: image-boxshadow image-very-large zoomable-image
    :alt: Alyvix Editor with Designer and Selector.
    :target: ../_static/targets/ae_full_interface.png
 
@@ -64,7 +63,7 @@ Editor-Specific Features
 The principle interface elements specific to Alyvix Editor are:
 
 .. image:: images/ae_main_screen_numbered.png
-   :class: image-boxshadow
+   :class: image-boxshadow image-very-large zoomable-image
    :alt: The Alyvix Editor interface.
    :width: 80%
    :target: ../_static/targets/ae_main_screen.png
@@ -129,7 +128,7 @@ in Designer.  Instead you can use the monitor tab to see the screen capture for 
 selected test case object.
 
 .. image:: images/ae_monitor_tab_sized.png
-   :class: image-with-border
+   :class: image-boxshadow zoomable-image
    :alt: An example Monitor tab screenshot
 
 The monitor tab displays a read-only, full-size, instantly available copy of the screen grab
@@ -154,7 +153,7 @@ the Editor window will return, and the output will appear in the Console tab at 
 :ref:`scripting panel <alyvix_editor_scripting_panel_top>`:
 
 .. image:: ../getting_started/images/ae_console_result.png
-   :class: image-with-border
+   :class: image-boxshadow image-very-large zoomable-image
    :alt: The results of running the script in Alyvix Editor
 
 The structure of the output is the same regardless of whether the test case is started in Editor or
@@ -166,7 +165,7 @@ annotated screenshot describing the failure will be displayed below the output i
 Console tab:
 
 .. image:: images/ae_console_tab_error.png
-   :class: image-with-border
+   :class: image-boxshadow image-very-large zoomable-image
    :alt: A matching error displayed in the console tab
 
 The annotation indicates the position, size and group of the first component that could

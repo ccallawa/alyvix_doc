@@ -20,6 +20,9 @@ which are then used by all Alyvix applications.  Alyvix files represent the uniq
 interchange between Alyvix modules, and each file is self-contained, without any external
 dependencies.
 
+Alyvix and its data structures are open source.  The entire JSON file format is described in
+detail below.
+
 
 
 .. _test_case_data_format_file:
@@ -126,14 +129,14 @@ The following example JSON structure illustrates the high-level structure of the
 The individual sections of the JSON structure are explained below.
 
 .. rst-class:: bignums
-   :class: backdarkbeige nobignum
+   :class: darkbackground nobignum
 
 #. .. rubric:: *Top level*
 
    The top level corresponds to the principal elements of Alyvix Editor:
 
    .. code-block:: json
-      :class: tiny-code-block
+      :class: medium-code-block
 
       { "maps": {
            "map-name":  { } },
@@ -145,7 +148,7 @@ The individual sections of the JSON structure are explained below.
       }
 
    .. rst-class:: bignums
-      :class: backdarkbeige
+      :class: darkbackground
 
    #. :iconlink:`gloss|maps|glossary.html#glossary-map`
       **---**  An ordered set of values that a script can loop over, for
@@ -158,7 +161,7 @@ The individual sections of the JSON structure are explained below.
 
 
 .. rst-class:: bignums
-   :class: backdarkbeige nobignum
+   :class: darkbackground nobignum
 
 #. .. rubric:: *Maps*
 
@@ -166,7 +169,7 @@ The individual sections of the JSON structure are explained below.
    fixed number of cell values, to represent a **m x n** matrix (columns cannot be named):
 
    .. code-block:: json
-      :class: tiny-code-block
+      :class: medium-code-block
 
       { "<map-name-1>": {
            "key1": [ "key1-val1",
@@ -177,13 +180,13 @@ The individual sections of the JSON structure are explained below.
 
    When arguments are passed to Alyvix Robot in the
    :ref:`command line interface <alyvix_robot_cli_launch>`, a new map structure
-   will be added under the name ":bolditalic:`cli`", and
+   will be added under the name :bolditalic:`cli`, and
    :ref:`containing the arguments as keys <alyvix_designer_options_strings_map_cli>`.  Because
-   of this, the ":bolditalic:`cli`" map name is reserved.
+   of this, the map name :bolditalic:`cli` is reserved.
 
 
 .. rst-class:: bignums
-   :class: backdarkbeige nobignum
+   :class: darkbackground nobignum
 
 #. .. rubric:: *Objects*
 
@@ -192,7 +195,7 @@ The individual sections of the JSON structure are explained below.
    Those values have the following meanings:
 
    .. code-block:: json
-      :class: tiny-code-block
+      :class: medium-code-block
 
       { "<test-case-object-name>": {
            "call": { },
@@ -204,7 +207,7 @@ The individual sections of the JSON structure are explained below.
       }
 
    .. rst-class:: bignums
-      :class: backdarkbeige
+      :class: darkbackground
 
    #. :bolditalic:`call`  **---**  The recorded options to start or kill an external application
       when a test case object is :ref:`first called <alyvix_designer_options_components_root>`
@@ -224,7 +227,7 @@ The individual sections of the JSON structure are explained below.
 .. _test_case_data_format_components:
 
 .. rst-class:: bignums
-   :class: backdarkbeige nobignum
+   :class: darkbackground nobignum
 
 #. .. rubric:: *Objects* > *{object}* > *Components*
 
@@ -233,7 +236,7 @@ The individual sections of the JSON structure are explained below.
    each distinct screen resolution.
 
    .. code-block:: json
-      :class: tiny-code-block
+      :class: medium-code-block
 
       { "components": {
            "<resolution>": {
@@ -256,18 +259,18 @@ The individual sections of the JSON structure are explained below.
    captured.
 
    .. rst-class:: bignums
-      :class: backmedbeige
+      :class: mediumbackground
 
    #. :iconlink:`gloss|groups|glossary.html#glossary-group`  **---**  A JSON array of exactly
       3 items, each of which corresponds to one of the groups in the component tree.
 
       .. rst-class:: bignums
-         :class: backlightbeige
+         :class: lightbackground
 
       #. :bolditalic:`main`  **---**  The main component in a group.
 
          .. rst-class:: bignums
-            :class: backlightbeige
+            :class: lightbackground
 
          #. :bolditalic:`detection`  **---**  Information about the match method to use when
             trying to detect the region of interest.
@@ -288,7 +291,7 @@ The individual sections of the JSON structure are explained below.
 .. _test_case_data_format_measure:
 
 .. rst-class:: bignums
-   :class: backdarkbeige nobignum
+   :class: darkbackground nobignum
 
 #. .. rubric:: *Objects* > *{object}* > *Measure*
 
@@ -305,7 +308,6 @@ The individual sections of the JSON structure are explained below.
    This example shows the structure and some default values:
 
    .. code-block:: json
-      :class: short-code-block
 
       { "measure": {
           "group": "<transaction-group-name>",
@@ -337,7 +339,7 @@ The individual sections of the JSON structure are explained below.
       }
 
    .. rst-class:: bignums
-      :class: backdarkbeige
+      :class: darkbackground
 
    #. :bolditalic:`group`  **---**  The transaction group assigned to the test case object.
 
@@ -347,7 +349,7 @@ The individual sections of the JSON structure are explained below.
       run of the parent test case object.  It contains the following information:
 
       .. rst-class:: bignums
-         :class: backmedbeige
+         :class: mediumbackground
 
       #. :bolditalic:`accuracy_ms`  **---**  Given the performance measurement from the same run
          (see below), this is the interval (+/-) over which that measurement is guaranteed to have
@@ -393,7 +395,7 @@ The individual sections of the JSON structure are explained below.
 .. _test_case_data_format_script:
 
 .. rst-class:: bignums
-   :class: backdarkbeige nobignum
+   :class: darkbackground nobignum
 
 #. .. rubric:: *Script*
 
@@ -402,7 +404,6 @@ The individual sections of the JSON structure are explained below.
    used to compose more complex interaction behaviors.
 
    .. code-block:: json
-      :class: short-code-block
 
       { "case": [
            "<test-case-object-name>",
@@ -424,7 +425,7 @@ The individual sections of the JSON structure are explained below.
       }
 
    .. rst-class:: bignums
-      :class: backdarkbeige
+      :class: darkbackground
 
    #. :bolditalic:`case`  **---**  The main script that will be
       :ref:`executed by Alyvix Robot <test_case_execution_top>`.  The script is an ordered
@@ -433,7 +434,7 @@ The individual sections of the JSON structure are explained below.
       meanings:
 
       .. rst-class:: bignums
-         :class: backlightbeige
+         :class: lightbackground
 
       #. :bolditalic:`disable`  **---**  Skip this test case object and continue with the next.
       #. :bolditalic:`flow`  **---**  Indicates the test case object or section that is the value
@@ -451,7 +452,7 @@ The individual sections of the JSON structure are explained below.
       same as the :bolditalic:`case` value described above.
 
       .. rst-class:: bignums
-         :class: backlightbeige
+         :class: lightbackground
 
       #. :bolditalic:`exit`  **---**  The (teardown) script to execute when a script has
          completed, regardless of whether it succeeded or failed.
