@@ -227,7 +227,7 @@ dl, ol, ul {
 /* Tables */
 #content .document .body table {
     background-color: #FFFFFF;
-    display: block;
+    /* display: block; */
     margin-left: -1rem;
     overflow-x: auto;
     padding: 1rem 2rem;
@@ -419,7 +419,7 @@ dl, ol, ul {
 
 /* TOC */
 #document .body .toctree-wrapper {
-    display: none;
+    visibility: hidden;
     padding-top: 0.5em;
 }
 
@@ -489,7 +489,7 @@ div.highlight pre::-webkit-scrollbar-track {
 }
 
 #content .document .reference .xref {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-style: italic;
     color: #393939;
 }

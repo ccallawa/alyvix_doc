@@ -28,6 +28,7 @@ characters except when:
 `See additional Sphinx roles <https://www.sphinx-doc.org/en/1.5/markup/inline.html>`_ not listed below.
 
 
+
 .. _style_sections:
 
 ******************************
@@ -253,8 +254,8 @@ Which looks like this in the .rst file:
 
       Simple code blocks only have the default options.
 
-As soon as you return to the previous indentation level, the code block will end.  If you want
-more options, you can use the ``code-block`` directive:
+As soon as you return to the previous indentation level, the code block (or preformatted section)
+will end.  If you want more options, you can use the ``code-block`` directive:
 
 .. code-block:: rst
    :caption: How to create a code block with options
@@ -268,6 +269,44 @@ more options, you can use the ``code-block`` directive:
 
       This is the content of the code block.
       Sometimes it might even be actual code.
+
+When code blocks are used for syntax highlighting, simply put the Pygment code for the programming
+language to the right of the directive.  Note that Pygment will first check that the syntax is
+valid before adding highlighting!  Bad syntax means the code block appears without highlighting.
+The console output will then show something like ``WARNING: Could not lex literal_block as "json".``
+
+You can see `a complete list of languages <https://pygments.org/docs/lexers/>`_ recognized by Pygment.
+
+Here's an example for JSON:
+
+.. code-block:: json
+   :class: tiny-code-block
+   :emphasize-lines: 4
+
+   { "maps": {
+        "map-name":  { } },
+     "objects": {
+        "<test-case-object-name>":  { } },
+     "script": {
+        "case":  [ ],
+        "sections":  { } }
+   }
+
+.. code-block:: rst
+   :class: short-code-block
+
+   .. code-block:: json
+      :class: tiny-code-block
+      :emphasize-lines: 4
+
+      { "maps": {
+           "map-name":  { } },
+        "objects": {
+           "<test-case-object-name>":  { } },
+        "script": {
+           "case":  [ ],
+           "sections":  { } }
+      }
 
 The clipboard copy icon is set by default on all code blocks.  To remove it in cases where it
 doesn't make sense, add the following class:
@@ -368,7 +407,7 @@ which CSS properties are utilized and which are overwritten.
 .. _style_links+refs:
 
 **************************************
-Links, Anchors, References and Aliases
+Links, Anchors, Aliases and References
 **************************************
 
 Link and anchor names must use Python variable syntax.  For automatic link generation, any
@@ -384,15 +423,29 @@ will still put the (unlinked) link text there.
 
    :ref:`Getting Started <getting_started_top>`
 
-All external links, glossary links, video links and pivotal links
-:ref:`use icons generated with the <style_sphinx_iconlink>` inbuilt :file:`iconlink.py` extension.
+For one-off external links, add an icon to it as in this example:
+:iconlink:`ext|Base64|https://en.wikipedia.org/wiki/Base64`
+
+.. code-block:: rst
+
+   :iconlink:`ext|Base64|https://en.wikipedia.org/wiki/Base64`
+
+If instead the link will be reused, try to define it as an *alias* just once using ``:rawhtml:``
+in the file :file:`sphinx-roles.txt` in the root directory, e.g.:
+
+.. code-block:: rst
+
+   .. |base64-link| raw:: html
+
+      <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">
+      Base64 <i class="fa fa-small fa-external-link"></i></a>
 
 
-.. topic:: Aliases
+.. rubric:: Aliases
 
-   You can create aliases where you want, and use them repeatedly using the ``|<alias>|`` syntax.
-   It does not matter where on the page you define it; it can even be placed at the bottom of the
-   page.
+You can create aliases where you want, and use them repeatedly using the ``|<alias>|`` syntax.
+It does not matter where on the page you define it; it can even be placed at the bottom of the
+page.
 
 .. |logo| image:: pictures/alyvix_logo_399x333.png
    :align: middle
@@ -507,7 +560,7 @@ can be specified if you use the full table environment:  align (left, center, ri
 
 .. table:: (Optional table title)
    :widths: 60 40
-   :width: 75%
+   :width: 75
    :align: right
 
    +-------------+---------------------+
@@ -625,7 +678,7 @@ as follows (note that figures and images have different options):
    :class: short-code-block
 
    .. image:: pictures/alyvix_logo_399x333.png
-      :class: image-with-boxshadow
+      :class: image-boxshadow
 
 You can also make a more structured figure.  It assumes you want an image at the top with the
 basic options above.  A paragraph at the same indentation level as the options will be treated as
@@ -689,6 +742,9 @@ Just append ``fa-`` to the name of the Font Awesome icon you want (or use the no
    .. rst-class:: fa fa-check
 
       With text, or use the ``|`` by itself for just the icon (it's always placed as ``::before``)
+
+Note that only **free** icons are available, and that there is a difference between FA version
+4 and FA version 5.
 
 A single inline icon is also possible by adding ``fa-small`` as long as it's at the start of a
 sentence/bullet:
@@ -775,10 +831,10 @@ The *right-short-admonition* class does the same but aligns the shortened box to
       A right-aligned, short **Hint** box
 
 
-.. topic:: Epigraphs and Pull Quotes
+.. rubric:: Epigraphs and Pull Quotes
 
-   Additional styles like ``epigraph`` and ``pull-quote`` can be tied to specific CSS classes
-   with those names.
+Additional styles like ``epigraph`` and ``pull-quote`` can be tied to specific CSS classes
+with those names.
 
 .. epigraph::
 
@@ -788,25 +844,33 @@ The *right-short-admonition* class does the same but aligns the shortened box to
 
    “Followed by a test pull-quote„
 
+.. code-block::
+
+   .. pull-quote::
+
+      “Followed by a test pull-quote„
+
 A **topic** creates a simple box with a title above it.  In some themes, like the sphinx_rtd
 theme, it just creates this HTML structure, which is mapped to the CSS class *topic*:
 ``<div class="topic"><p class="topic-title first">Title</p><p>Box content</p></div>``
 
 
-.. topic:: Topic Titles
+.. rubric:: Rubric Titles
 
-   Here is the content of the topic box.  It's normal text, but has to be indented
-   in the source.  Note also the restyled horizontal scrollbar.
+Here is the content of the rubric (topic box), for when you need a section with title that
+shouldn't be included in the index (e.g., it's too small).  Note the restyled horizontal scrollbar
+coded in CSS.
 
 .. code-block:: rst
    :class: short-code-block
    :caption: How you can create a topic box
    :name: _style_topic_example
 
-   .. topic:: Topic Titles
+   .. rubric:: Rubric Titles
 
-      Here is the content of the topic box.  It's normal text, but has to be indented
-      in the source.  Note also the restyled horizontal scrollbar.
+   Here is the content of the rubric (topic box), for when you need a section with title that
+   shouldn't be included in the index (e.g., it's too small).  Note the restyled horizontal
+   scrollbar coded in CSS.
 
 .. rubric:: Rubric Titles
 
@@ -819,7 +883,8 @@ This is like a topic or rubric, but centered.
 
 .. rubric:: Sidebar Title
 
-A **sidebar** creates a box that floats to the left.  Other elements will tend to wrap around it:
+A **sidebar** creates a box that floats to the left.  Other elements will tend to wrap around it
+(not recommended for tablets or smartphones).
 
 .. sidebar:: Sidebar Title
    :subtitle: *Optional Sidebar Subtitle*
@@ -1068,7 +1133,11 @@ need to modify these parts as shown below:
      var textContent = target.textContent.split('\n');
      if (textContent[0].startsWith('C:\\> ')) { return textContent[0].slice(5); } // Line added by Charles@WP
      if (textContent[0].startsWith('C:\\Alyvix\\testcases> ')) { return textContent[0].slice(21); } // Line added by Charles@WP
-     if (textContent[0].startsWith('C:\\...\\MyFolder> ')) { return textContent[0].slice(17); } // Line added by Charles@WP
+     textContent.forEach((line, index) => {
+       if (line.startsWith(copybuttonSkipText)) {
+         textContent[index] = line.slice(copybuttonSkipText.length)
+       }
+     });
      return textContent.join('\n');
    }
 

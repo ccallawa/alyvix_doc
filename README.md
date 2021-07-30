@@ -20,7 +20,7 @@ code and this documentation.
 As Alyvix is written in Python, the documentation is written in
 [ReStructuredText](https://docutils.sourceforge.io/rst.html) and uses
 [Sphinx](https://pypi.org/project/Sphinx/) to build a set of static web pages.
-It also employs the *sphinx-rtd-theme* which includes support for local search and mobile layouts.
+It employs the *bootstrap theme* which includes support for local search and mobile/responsive layouts.
 
 The Alyvix documentation is licensed under GNU GPL v3.  If you have any contributions
 you wish to make, feel free to send them to us via a
@@ -46,12 +46,13 @@ using *pip* with this command:
 > pip install -U sphinx
 ```
 
-The user guide can be built with either Sphinx 2 or Sphinx 3.
+The user guide can be built with either Sphinx 2 or Sphinx 3.  The
+[bootstrap theme](https://readthedocs.org/projects/sphinx-bootstrap-theme/) is included within
+the distribution.
 
 Once Sphinx is installed, you should then install the following extensions:
 
 ```
-> pip install -U sphinx-rtd-theme
 > pip install -U sphinx-copybutton
 > pip install -U sphinx-panels
 ```
@@ -66,14 +67,14 @@ You can use [Git](https://git-scm.com/downloads):
 
 Or [download the ZIP file](https://github.com/ccallawa/alyvix_doc/archive/master.zip)
 
-Once the files are in place, edit the *conf.py* file to include your own information, the
-names of the installed extensions, and the CSS file:
+Once the files are in place, either use the included *conf.py* file, or edit it to
+include your own information, the names of the installed extensions, and the CSS file:
+
 
 ```
 extensions = [
     ...
     'sphinx_copybutton',       # pip install sphinx-copybutton
-    'sphinx_rtd_theme',        # pip install sphinx-rtd-theme
     'sphinx_panels',           # The panels/tabs/dropdown/link-button theme
     'iconlink'                 # Our custom theme for links with embedded icons at _ext/iconlink.py
 ]
@@ -102,8 +103,9 @@ the interactive experience with the user guide.  These are described at the bott
 [stylesheet](https://alyvix.com/learn/stylesheet.html), which is included with the distribution
 but is not directly available from the user guide index.
 
-Our CSS customizations can be found in the file *_static/css/custom.css*.  Customized RST roles,
-directives, aliases and specialized styles can be found in the file *sphinx-roles.txt*
+Our CSS customizations can be found in the file *_static/css/custom.css* and the *_themes*
+directory.  Customized RST roles, directives, aliases and specialized styles can be found
+in the file *sphinx-roles.txt*
 
 We've added an extension to customize parameterized links with icons based on their type
 (internal vs. external, glossary, video).  The extension and its documentation can be found at

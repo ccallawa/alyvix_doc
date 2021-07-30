@@ -7,7 +7,7 @@
     padding: 0;
     position: absolute;
     right: 100vw;
-    transition: right 0.5s cubic-bezier(0.2, 0, 0.38, 0.9);
+    /* transition: right 0.5s cubic-bezier(0.2, 0, 0.38, 0.9); */
     z-index: 9;
 }
 
@@ -19,6 +19,7 @@
 #menu .global-toc-wrapper {
     top: 48px;
     bottom: 0;
+    width: 300px;
     max-width: 300px;
     border-right: solid 1px #E0E0E0;
 }
@@ -61,7 +62,7 @@
 }
 
 #menu .sidebartoctree ul > li > ul {
-    transition: max-height 0.5s;
+    /* transition: max-height 0.5s; */
     max-height: 0;
     overflow: hidden;
 }
@@ -195,7 +196,7 @@
 
 #menu .sidebartoctree > ul:not(:last-child) > li > a::after,
 #menu .sidebartoctree li.toctree-l2.has-3rd-level > a::after,
-#menu .sidebartoctree > ul:last-child > li:not(:last-child) > a::after {
+#menu .sidebartoctree > ul:last-child > li:not(:last-child) > a:not(:only-child)::after {
     background-image: url('./icons/chevron-down.svg');
     content: "";
     width: 20px;
@@ -207,8 +208,8 @@
     right: 1rem;
     margin-right: 0;
     top: 7px;
-    transition: transform 0.5s cubic-bezier(0.2, 0, 0.38, 0.9);
-    transform: rotate(0deg);
+    /* transition: transform 0.5s cubic-bezier(0.2, 0, 0.38, 0.9); */
+    /* transform: rotate(0deg); */
 }
 
 #menu .sidebartoctree li.toctree-l2.has-3rd-level > a::after {
