@@ -19,7 +19,7 @@ At the top of the Alyvix Designer panel are the options relating to the test cas
 a whole:
 
 .. image:: images/ad_testcase_options_sized.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: The test case options.
 
 The **Object name** is the reference name of a particular
@@ -46,7 +46,7 @@ type, and what happens if they fail to be detected:
       Alyvix will detect when they are no longer visible
 
       .. image:: images/appeardisappear_h120.png
-         :class: image-boxshadow
+         :class: image-boxshadow zoomable-image
          :alt: Visual appearance and disappearance timeline.
 
 #. **Timeout:**  This value represents the number of seconds that Alyvix attempts to detect objects

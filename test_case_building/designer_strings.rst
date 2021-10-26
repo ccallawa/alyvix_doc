@@ -20,7 +20,7 @@ matches an area currently onscreen, its *Action* will be executed, and then the 
 window in focus when the test case object matched.
 
 .. image:: images/ad_action_string_sized.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: The mouse action selection dropdown.
 
 The text that is inserted may come from more than one source, not just what is typed in by hand in

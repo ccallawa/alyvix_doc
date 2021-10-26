@@ -43,7 +43,7 @@ The root component options can be found at the bottom of the Designer interface 
 node :greyblock:`S` is selected:
 
 .. image:: images/ad_root_options_run.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: Options for the root element.
 
 The **Call** dropdown tells Alyvix what action to perform when the test case object is executed:
@@ -69,7 +69,7 @@ The **Kill** option instead allows you to select a currently running process to 
 type one in if it's not currently running:
 
 .. image:: images/ad_root_options_kill.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: Options for the root element.
 
 It provides a filtered dropdown named **Process**, populated with all currently running Windows
@@ -97,7 +97,7 @@ options to choose which visual aspect of the image to match against (an Operatio
 is available that :ref:`explains the image options <operations_tutorials_image>`):
 
 .. image:: images/ad_type_submenu_image_sized.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: Options for the image type.
 
 * **Match:**  Only recognize an area on the screen that is exactly the same as the one selected
@@ -123,7 +123,7 @@ Operations tutorial video is available that
 :ref:`explains the rect options <operations_tutorials_rect>`):
 
 .. image:: images/ad_type_submenu_rect_sized.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: Options for the rect type.
 
 * **Button:**  Match a region such as a button containing text, within a larger space
@@ -166,7 +166,7 @@ The text type's *Detect* option will determine that a match was correctly made i
 scraped from the region of interest  matches the condition specified in the first two fields.
 
 .. image:: images/ad_type_submenu_text_detect_sized.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: Options for the detect text type.
 
 The :guilabel:`Mode` dropdown determines how the text is interpreted, setting the criterion to
@@ -200,7 +200,7 @@ test case object.  If the ``{<object>.extract}``
 in the String field of another test case, this cached value will be returned.
 
 .. image:: images/ad_type_submenu_text_map_sized.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: Options for the map text type.
 
 
@@ -217,7 +217,7 @@ The actions on all components in a group will be performed in the top-to-bottom 
 in the component tree.
 
 .. image:: images/ad_action_string_sized.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: The mouse action selection dropdown.
 
 An **Action**

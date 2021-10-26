@@ -32,7 +32,7 @@ can appear in a script) yet, and thus the scripting panel is empty (the Monitor 
 a test case object has been created):
 
 .. image:: images/ae_empty_script_panel.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: The scripting panel when empty.
 
 
@@ -66,7 +66,7 @@ There are several methods you can use to create a new scripting node in the scri
   other scripting nodes out of the way if necessary:
 
   .. image:: images/ae_insert_test_case_object.png
-     :class: image-boxshadow
+     :class: image-boxshadow zoomable-image
      :alt: Inserting a new scripting node in Alyvix Editor
 
 Multiple test case objects can be added with the above methods to create scripts as large as
@@ -149,7 +149,7 @@ Each color used for the scripting nodes has a particular meaning.  The following
 illustrates an example script, where each color is explained in the table below.
 
 .. image:: images/ae_script_element_types.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: The various modes of script elements.
 
 .. table::

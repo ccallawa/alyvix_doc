@@ -12,7 +12,7 @@
 .. _style_top:
 
 ################
-Style Guidelines`
+Style Guidelines
 ################
 
 This document provides the style guide for Alyvix with examples of more advanced features and

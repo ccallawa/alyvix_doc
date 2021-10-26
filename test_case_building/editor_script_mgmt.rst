@@ -21,7 +21,7 @@ The script management panel organizes and provides quick access to the
 necessary for creating complex behaviors.  The script management panel is divided into three parts:
 
 .. image:: images/ae_script_management_panel_h230.png
-   :class: image-boxshadow
+   :class: image-boxshadow zoomable-image
    :alt: The script management panel.
 
 * **Top-level sections**, the three scripts that serve as the main entry points for execution with

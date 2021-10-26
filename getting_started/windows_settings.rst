@@ -47,7 +47,7 @@ second action: opening the Windows Settings app.
    :iconlink:`gloss|autocontour|../glossary.html#glossary-autocontour` the icon.
 
    .. image:: images/ad_settings_selected.png
-      :class: image-boxshadow
+      :class: image-boxshadow zoomable-image
       :alt: Select Settings after the 5 second screen capture delay
 
 #. Press :kbd:`Escape` again to return you to Editor with the new selection in the Designer
@@ -55,7 +55,7 @@ second action: opening the Windows Settings app.
    value of the :guilabel:`Action` dropdown from ``None`` to ``Click``:
 
    .. image:: images/ad_settings_click.png
-      :class: image-boxshadow image-very-large
+      :class: image-boxshadow zoomable-image
       :alt: Select Settings after the 5 second screen capture delay
 
 #. In the Selector panel at the bottom left, change the name of our new test case object

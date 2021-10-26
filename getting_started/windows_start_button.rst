@@ -51,7 +51,7 @@ Tutorials similar to this one are also available in :ref:`video format <video_tu
    will return with the area containing the Start button as shown in the panel at the right:
 
    .. image:: images/ae_basic_designer_panel.png
-      :class: image-boxshadow image-very-large
+      :class: image-boxshadow zoomable-image
       :alt: The Windows Start button in Alyvix Editor's Designer panel
 
 #. At the bottom of that panel under the label :guilabel:`Action` there is a dropdown option
@@ -59,7 +59,7 @@ Tutorials similar to this one are also available in :ref:`video format <video_tu
    values.  A mouse icon to the right of the Start button will confirm this with a red highlight.
 
    .. image:: images/ae_designer_panel_selection.png
-      :class: image-boxshadow image-very-large
+      :class: image-boxshadow zoomable-image
       :alt: The click point added to the Windows Start button in the Designer panel
 
 #. Save this new test case by clicking the :nobutton:`SAVE` button at the top.  Since we started
@@ -78,7 +78,7 @@ Tutorials similar to this one are also available in :ref:`video format <video_tu
    above to insert the new test case object into the Scripting panel marked :bbutton:`Script: MAIN`:
 
    .. image:: images/ae_basic_script_element.png
-      :class: image-boxshadow image-very-large
+      :class: image-boxshadow image-very-large zoomable-image
       :alt: The start button script element in Alyvix Editor
 
 #. Now start Alyvix Robot by pressing the |runblue| button at the top left.  The Editor window will
