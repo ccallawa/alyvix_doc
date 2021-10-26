@@ -12,7 +12,7 @@
 .. _style_top:
 
 ################
-Style Guidelines
+Style Guidelines`
 ################
 
 This document provides the style guide for Alyvix with examples of more advanced features and
@@ -49,8 +49,8 @@ increases.  Because they can be easily broken, they should be changed as infrequ
 possible.  :ref:`See here for linking to them.<style_links+refs>` They look like this:
 
 .. code-block:: bash
-   :caption: How to create a linkable section reference
-   :class: short-code-block
+   :caption: [Optional] section reference
+   :class: tiny-code-block
    :name: _style_section_header_example
 
    .. _style_sections:
@@ -59,7 +59,7 @@ You can use ``-----`` (four or more hyphens) to create a horizontal rule:
 
 -----
 
-And you can add a line of :ref:`blank space <style_break_space>` (like a <br />) with a pipe
+You can also add a line of :ref:`blank space <style_break_space>` (like a <br />) with a pipe
 character with a blank line both above and below.  Use this sparingly, though, since vertical
 space should really be created with CSS.
 
@@ -102,37 +102,42 @@ There are also enumerated lists:
       pound sign (``#.``), but it will affect the very first number at top even if put in
       a subpoint
 
-The Alyvix :file:`custom.css` files also supports the ``bignums``, ``bignums-xl`` (with
-``onelinelist`` CSS class option) and ``bignums-xxl`` enumerated list styles:
+The Alyvix :file:`custom.css` files also supports three alternate enumerated list styles:
+``bignums``, ``bignums-xl`` (with the ``onelinelist`` CSS class option) and ``bignums-xxl``:
 
 .. rst-class:: bignums
 
-#. Creates white numbers in black circles
+#. ``bignums`` creates white numbers in black circles
 #. Can be used together with interface screenshots
 
 This is defined as follows:
 
-.. code-block::
+.. code-block:: rst
    :class: short-code-block
 
    .. rst-class:: bignums
 
-   #. Creates white numbers in black circles
+   #. ``bignums`` creates white numbers in black circles
    #. Can be used together with interface screenshots
 
-Similarly, you can replace ``bignums`` with ``bignums-xxl`` to get a larger enumerated list:
+The other two are defined similarly, and have this appearance:
+
+.. rst-class:: bignums-xl
+
+#. ``bignums-xl`` creates black numbers in grey/white rounded rectangles with a thick border
+#. Useful for overviews of very complex elements
 
 .. rst-class:: bignums-xxl
 
-#. Creates black numbers in grey/white circles and a thick horizontal separator
-#. Very useful for step-by-step procedures
+#. ``bignums-xxl`` creates larger numbers and adds a thick horizontal separator
+#. Very useful for lengthy step-by-step procedures when the item content is extensive
 
 |
 
 .. rubric:: Hlist
 
 A horizontal list (``.. hlist::``) has a fixed number of columns but is otherwise like a bulleted
-list.    It could be a lot prettier with CSS improvements.
+list.
 
 .. hlist::
    :columns: 3
@@ -144,6 +149,8 @@ list.    It could be a lot prettier with CSS improvements.
    * Item #5
    * Item #6
    * Item #7
+
+|
 
 .. rubric:: Containers -> Columns
 
@@ -161,9 +168,6 @@ bottom of one column to the top of the other.)
 
    .. container:: rightside-col
 
-      .. image:: pictures/alyvix_logo_399x333.png
-         :width: 50pt
-
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
       nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
       deserunt mollit anim id est laborum.
@@ -171,7 +175,7 @@ bottom of one column to the top of the other.)
 You may need to manually align the amount of content in each column as sometimes a subsequent
 paragraph not in column format will be used to fill out the bottom of the right column.
 
-.. code-block::
+.. code-block:: rst
 
    .. container:: twocol
 
@@ -183,20 +187,9 @@ paragraph not in column format will be used to fill out the bottom of the right 
 
          Text in the right side column
 
-   div.leftside-col {
-       width: 47%;
-       padding: 0px 3px 0px 0px;
-       float: left;
-       display: flex;
-   }
-
-   div.rightside-col {
-       margin-left: 53%;
-   }
-
 |
 
-A column-styled menu of icons or images can be made by using a
+A column-styled set of menu tiles (icons/images + text) can be made by using a
 :ref:`table with no borders <style_columns_via_tables>`.
 
 
@@ -250,7 +243,7 @@ Which looks like this in the .rst file:
    :name: _style_simple_code_block_example
    :class: short-code-block
 
-   to the left of the page::
+   aligned to the left of the page::
 
       Simple code blocks only have the default options.
 
@@ -280,7 +273,7 @@ You can see `a complete list of languages <https://pygments.org/docs/lexers/>`_ 
 Here's an example for JSON:
 
 .. code-block:: json
-   :class: tiny-code-block
+   :class: short-code-block
    :emphasize-lines: 4
 
    { "maps": {
@@ -358,7 +351,7 @@ Text Properties with Custom Roles
 You can create a custom role and map it to a custom CSS class in :file:`_static/css/custom.css`,
 allowing you to change font color and other properties for selected text within a paragraph.
 For example, you can add the following CSS to get a large, fixed green font inheriting other
-:guilabel:`Read The Docs` CSS features:
+:guilabel:`Bootstrap` CSS features:
 
 .. code-block:: css
    :class: short-code-block
@@ -386,6 +379,7 @@ You will then be able to use this new ``warn`` role within a paragraph as follow
    :class: medium-code-block
 
    This is some text where we need to say :warn:`Don't` do something!
+   :hint:`(You can also make a hint with :hint:)`
 
 Which looks like this when you write it out:  "This is some text where we need to say :warn:`Don't`
 do something!" :hint:`(You can also make a hint with :hint:)`
@@ -440,6 +434,10 @@ in the file :file:`sphinx-roles.txt` in the root directory, e.g.:
       <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">
       Base64 <i class="fa fa-small fa-external-link"></i></a>
 
+For external links, glossary links, video links and pivotal links which have icons attached to
+the link of the text, :ref:`use icons generated with the <style_sphinx_iconlink>` inbuilt
+:file:`iconlink.py` extension.
+
 
 .. rubric:: Aliases
 
@@ -449,22 +447,25 @@ page.
 
 .. |logo| image:: pictures/alyvix_logo_399x333.png
    :align: middle
-   :width: 30pt
-   :height: 10pt
+   :width: 25pt
+   :height: 18pt
 
 The code for the alias:
 
 .. code-block:: rst
    :class: short-code-block
-   :caption: Creating an alias for the text string ``|logo|``
 
    .. |logo| image:: pictures/alyvix_logo_399x333.png
       :align: middle
-      :width: 30pt
-      :height: 10pt
+      :width: 25pt
+      :height: 18pt
 
 And then you can reuse it whenever you want:  |logo| |logo| |logo|
 
+.. code-block:: rst
+   :class: tiny-code-block
+
+   |logo| |logo| |logo|
 
 
 .. _style_tables:
@@ -474,57 +475,59 @@ Tables
 ******
 
 There are simple, complex, CSV and list-type tables.  You can span multiple columns (even in
-simple tables) and indicate a blank cell either with a comment (..) or a backslash (\).
+simple tables) and indicate a blank cell either with a comment ( .. ) or a backslash ( \\ ).
 
 Here is a simple table:
 
-===========  ==========================  =========
-Name         Syntax                      Format
------------  --------------------------  ---------
-Italics      \*                          *Italics*
-Bold         \**                         **Bold**
-Mono         \``                         ``Monospace``
-Subscript    a\\ :subscript:\`sub\`      a\ :subscript:`sub`
-Superscript  b\\ :superscript:\`super\`  b\ :superscript:`super`
-Mixed        \\                          *Ita*\ **Bol**\ ``Lit``\s
-Math         \:math:                     :math:`\\\sum_{k=0}^{N-1} s_k`
------------  --------------------------  ---------
+===========  ======================================  =========
+Name         Syntax                                  Format
+-----------  --------------------------------------  ---------
+Italics      \*                                      *Italics*
+Bold         \**                                     **Bold**
+Mono         \``                                     ``Monospace``
+Subscript    a\\ :subscript:\`sub\`                  a\ :subscript:`sub`
+Superscript  b\\ :superscript:\`super\`              b\ :superscript:`super`
+Mixed        \*Ita\*\\ \*\*Bol\*\*\\ \`\`Lit\`\`\\s  *Ita*\ **Bol**\ ``Lit``\s
+Math         \:math:\`...\`                          :math:`\\\sum_{k=0}^{N-1} s_k`
+-----------  --------------------------------------  ---------
 :caps:`Roles defined by Sphinx and DocUtils`
---------------------------------------------------
-GUI          Role:guilabel               :guilabel:`File > Settings`
-Keys         Role:kbd                    :kbd:`ctrl` + :kbd:`s`
-File         Role:file                   :file:`/etc/passwd`
------------  --------------------------  ---------
-:caps:`Roles defined by in-page directives (sphinx-roles.txt) and custom.css`
---------------------------------------------------
-Warn         Role:warn                   :warn:`Warn`
-Hint         Role:hint                   :hint:`Hint`
-SmallCaps    Role:caps                   :caps:`CamelCase`
-===========  ==========================  =========
+--------------------------------------------------------------
+GUI          \:guilabel\:\`File > Settings\`         :guilabel:`File > Settings`
+Keys         \:kbd\:\`ctrl\` + \`\:kbd\:\`s\`        :kbd:`ctrl` + :kbd:`s`
+File         \:file\:\`/etc/passwd\`                 :file:`/etc/passwd`
+-----------  --------------------------------------  ---------
+:caps:`Roles defined by in-page directives (`:file:`/sphinx-roles.txt`:caps:`) and` :file:`custom.css`
+--------------------------------------------------------------
+Warn         \:warn\:\`Warn\`                        :warn:`Warn`
+Hint         \:hint\:\`Hint\`                        :hint:`Hint`
+SmallCaps    \:caps\:\`CamelCase`                    :caps:`CamelCase`
+===========  ======================================  =========
 
 This is built as follows::
 
-   =========  =============  =========
-   Name       Syntax         Format
-   --------  --------------  ---------
-   Italics    \*             *Italics*
-   Bold       \**            **Bold**
-   Mono       \``            ``Monospace``
-   Mixed      \\             *Ita*\ **Bol**\ ``Lit``\s
-   Math       \:math:        :math:`\\\sum_{k=0}^{N-1} s_k`
-   ---------  -------------  ---------
-   :caps:`Roles defined by Sphinx`
-   -----------------------------------
-   GUI        Role:guilabel  :guilabel:`File > Settings`
-   Keys       Role:kbd       :kbd:`ctrl` + :kbd:`s`
-   File       Role:file      :file:`/etc/passwd`
-   ---------  -------------  ---------
-   :caps:`Roles defined by in-page directives (sphinx-roles.txt) and custom.css`
-   -----------------------------------
-   Warn       Role:warn      :warn:`Warn`
-   Hint       Role:hint      :hint:`Hint`
-   SmallCaps  Role:caps      :caps:`CamelCase`
-   =========  =============  =========
+   ===========  ======================================  =========
+   Name         Syntax                                  Format
+   -----------  --------------------------------------  ---------
+   Italics      \*                                      *Italics*
+   Bold         \**                                     **Bold**
+   Mono         \``                                     ``Monospace``
+   Subscript    a\\ :subscript:\`sub\`                  a\ :subscript:`sub`
+   Superscript  b\\ :superscript:\`super\`              b\ :superscript:`super`
+   Mixed        \*Ita\*\\ \*\*Bol\*\*\\ \`\`Lit\`\`\\s  *Ita*\ **Bol**\ ``Lit``\s
+   Math         \:math:\`...\`                          :math:`\\\sum_{k=0}^{N-1} s_k`
+   -----------  --------------------------------------  ---------
+   :caps:`Roles defined by Sphinx and DocUtils`
+   --------------------------------------------------------------
+   GUI          \:guilabel\:\`File > Settings\`         :guilabel:`File > Settings`
+   Keys         \:kbd\:\`ctrl\` + `\:kbd\:\`s\`         :kbd:`ctrl` + :kbd:`s`
+   File         \:file\:\`/etc/passwd\`                 :file:`/etc/passwd`
+   -----------  --------------------------------------  ---------
+   :caps:`Roles defined by in-page directives (`:file:`/sphinx-roles.txt`:caps:`) and` :file:`custom.css`
+   --------------------------------------------------------------
+   Warn         \:warn\:\`Warn\`                        :warn:`Warn`
+   Hint         \:hint\:\`Hint\`                        :hint:`Hint`
+   SmallCaps    \:caps\:\`CamelCase`                    :caps:`CamelCase`
+   ===========  ======================================  =========
 
 
 **Note:** ``sphinx-build`` will complain if there is text in between the defined columns (but not
@@ -555,13 +558,13 @@ Built like so::
 
 
 Column widths and `other modifiers <https://docutils.sourceforge.io/docs/ref/rst/directives.html#tables>`_
-can be specified if you use the full table environment:  align (left, center, right), widths
-(auto, grid, list=100%) and width (current line width).
+can be specified if you use the full table environment.  Note however that themes based on bootstrap
+don't currently have 100% CSS compatibility with Sphinx.  The **widths** (percentage widths of the
+column tables) parameter works, but for alignment use a special CSS class.
 
-.. table:: (Optional table title)
-   :widths: 60 40
-   :width: 75
-   :align: right
+.. table::
+   :class: table-justify-right
+   :widths: 20 40
 
    +-------------+---------------------+
    | Color       | Description         |
@@ -570,19 +573,13 @@ can be specified if you use the full table environment:  align (left, center, ri
    +-------------+---------------------+
 
 |
-|
-|
-|
-|
-|
 
 .. code-block:: rst
    :class: medium-code-block
 
-   .. table:: (Optional table title)
-      :widths: 60 40
-      :width: 75
-      :align: right
+   .. table::
+      :class: table-justify-right
+      :widths: 20 40
 
       +-------------+---------------------+
       | Color       | Description         |
@@ -594,7 +591,7 @@ can be specified if you use the full table environment:  align (left, center, ri
 
 .. _style_columns_via_tables:
 
-Here's an example of columns via a table having a *class* that removes borders
+Here's an example of apparent columns via a table adding a *class* that removes borders:
 
 .. table::
    :widths: 33 33 33
@@ -636,6 +633,8 @@ And the same table with the *table-body-no-borders* class applied:
    +---------+---------+---------+
    | Item A3 | Item B3 | Item C3 |
    +---------+---------+---------+
+   | Item A4 | Item B4 | Item C4 |
+   +---------+---------+---------+
 
 |
 
@@ -652,9 +651,14 @@ keyword will allow text to wrap around the sides; to place an image on the left 
 allowing wrapping on the right, just leave out the parameter altogether.  Clicking on the image
 in the browser will load the image by itself into the browser window.
 
+Bootstrap for Sphinx doesn't support every standard Sphinx/ReST parameter.  A case in point is
+alignment:  use the classes "mx-auto d-block" as described
+:iconlink:`ext|in the Bootstrap doc|https://getbootstrap.com/docs/4.0/content/images/`
+to center rather than the ``:align:`` keyword.
+
 .. image:: pictures/alyvix_logo_399x333.png
+   :class: mx-auto d-block
    :width: 200px
-   :align: center
    :height: 100px
    :alt: This is alternate text.
 
@@ -662,12 +666,11 @@ This is built as follows:
 
 .. code-block:: rst
    :class: short-code-block
-   :caption: How to include a simple image
    :name: _style_image_example
 
    .. image:: pictures/alyvix_logo_399x333.png
+      :class: mx-auto d-block
       :width: 200px
-      :align: center
       :height: 100px
       :alt: This is alternate text.
 
@@ -686,12 +689,12 @@ a caption, and any additional indented structures will be treated as a figure le
 
 You can set an empty caption by using the standard ``..`` paragraph comment.  but can also put an
 entire (indented) RST structure within the figure space.  You can add the class ``:class: outline``
-to the figure declaration and :file:`custom.css` will add a thin-lined box around the entire thing:
+to the figure declaration and :file:`custom.css` will add a thin-lined box around the image
+(but not the caption):
 
 .. figure:: pictures/alyvix_logo_399x333.png
-   :class: outline
+   :class: outline mx-auto d-block
    :scale: 40 %
-   :align: center
    :alt: This is alternate text.
    :figwidth: 50 %
    :target: http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure
@@ -699,12 +702,10 @@ to the figure declaration and :file:`custom.css` will add a thin-lined box aroun
    Fig. 1:  The indented structure becomes like a caption.
 
 .. code-block:: rst
-   :class: medium-code-block
 
    .. figure:: pictures/alyvix_logo_399x333.png
-      :class: outline
+      :class: outline mx-auto d-block
       :scale: 40 %
-      :align: center
       :alt: This is alternate text.
       :figwidth: 50 %
       :target: http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure
@@ -728,9 +729,10 @@ the numbering starts over again within each subsection, and these aren't numbere
 (Automatic section numbering is also possible with an extension to Sphinx:
 http://docutils.sourceforge.net/docs/ref/rst/directives.html#automatic-section-numbering)
 
-For general `Font Awesome <https://fontawesome.com/icons?d=gallery>`_ icons, use the ``fa`` directive:
+For freely available `Font Awesome <https://fontawesome.com/icons?d=gallery>`_ *5.x* icons,
+use the ``far`` directive:
 
-.. rst-class:: fa fa-check
+.. rst-class:: far fa-med fa-check-circle
 
    With text, or use the ``|`` by itself for just the icon
 
@@ -739,19 +741,24 @@ Just append ``fa-`` to the name of the Font Awesome icon you want (or use the no
 
 .. code-block:: rst
 
-   .. rst-class:: fa fa-check
+   .. rst-class:: far fa-med fa-check-circle
 
-      With text, or use the ``|`` by itself for just the icon (it's always placed as ``::before``)
+      With text, or use the ``|`` by itself for just
+      the icon (it's always placed as ``::before``)
 
 Note that only **free** icons are available, and that there is a difference between FA version
-4 and FA version 5.
+4 and FA version 5 (older Sphinx themes use 4.x, newer ones like *sphinx-bootstrap-theme*
+use version 5).
 
 A single inline icon is also possible by adding ``fa-small`` as long as it's at the start of a
-sentence/bullet:
+sentence/bullet (see :file:`_static/css/custom.css` for other sizes):
 
 .. rst-class:: fa fa-small fa-play-circle
 
    I'm a ``play-circle`` Font Awesome icon
+
+If you want the icon in the middle of the text instead of at the beginning, define a custom
+alias in :file:`./sphinx-roles.rst`, although this requires raw HTML (see the warning below).
 
 Some Font Awesome icons have predefined roles:
 
@@ -786,13 +793,13 @@ Here's a naughty example of using a role directive to pass through raw HTML to c
 
 .. _style_info_boxes:
 
-*****************************************************
-Info Boxes, Pull Quotes, Topics, Rubrics and Sidebars
-*****************************************************
+***********************************
+Info Boxes, Pull Quotes and Rubrics
+***********************************
+
+Info boxes let you create text for a particular purpose, that quickly catches the eye.
 
 .. note::   This is a `note` style of info box.  It can contain bulleted lists and other formatting.
-
-The titles are fixed in CSS with the ``::before`` property.
 
 .. warning::
    The `warning` style of info box has different colors.
@@ -815,7 +822,8 @@ The :file:`custom.css` file allows you to pass a class name to make it less than
 
       A short **Danger** box
 
-The *right-short-admonition* class does the same but aligns the shortened box to the right column.
+The *right-short-admonition* class does the same but aligns the shortened box to the right side
+of the window.
 
 .. hint::
    :class: right-short-admonition
@@ -850,62 +858,25 @@ with those names.
 
       “Followed by a test pull-quote„
 
-A **topic** creates a simple box with a title above it.  In some themes, like the sphinx_rtd
-theme, it just creates this HTML structure, which is mapped to the CSS class *topic*:
-``<div class="topic"><p class="topic-title first">Title</p><p>Box content</p></div>``
-
-
 .. rubric:: Rubric Titles
 
-Here is the content of the rubric (topic box), for when you need a section with title that
-shouldn't be included in the index (e.g., it's too small).  Note the restyled horizontal scrollbar
-coded in CSS.
+A **rubric** is for when you need a section with title that shouldn't be included in the index
+(e.g., its content is too small).  *Rubrum* is the Latin word for *red*, as was often used in
+medieval manuscripts as the color for titles.
 
 .. code-block:: rst
    :class: short-code-block
-   :caption: How you can create a topic box
+   :caption: How you can create a rubric
    :name: _style_topic_example
 
    .. rubric:: Rubric Titles
 
-   Here is the content of the rubric (topic box), for when you need a section with title that
-   shouldn't be included in the index (e.g., it's too small).  Note the restyled horizontal
-   scrollbar coded in CSS.
+   A **rubric** is for when you need a section with title that shouldn't be
+   included in the index (e.g., its content is too small).  *Rubrum* is the
+   Latin word for *red*, as was often used in medieval manuscripts as the
+   color for titles.
 
-.. rubric:: Rubric Titles
-
-Rubrics are like Topics, but don't require indentation for the first paragraph, and in the
-current CSS have a smaller font.
-
-.. centered:: A Centered Title (using ``.. centered::``)
-
-This is like a topic or rubric, but centered.
-
-.. rubric:: Sidebar Title
-
-A **sidebar** creates a box that floats to the left.  Other elements will tend to wrap around it
-(not recommended for tablets or smartphones).
-
-.. sidebar:: Sidebar Title
-   :subtitle: *Optional Sidebar Subtitle*
-
-   Subsequent indented lines comprise the body of the sidebar.  You can put any kind of block
-   elements inside of it.
-
-This is built as follows:
-
-.. code-block:: rst
-   :caption: How to create a sidebar to the right
-   :class: short-code-block
-   :name: _style_sidebar_example
-
-   .. sidebar:: Sidebar Title
-      :subtitle: *Optional Sidebar Subtitle*
-
-      Subsequent indented lines comprise the body of
-      the sidebar.  You can put any kind of elements
-      inside of it.
-
+|
 
 
 .. _style_comments:

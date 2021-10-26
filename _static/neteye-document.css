@@ -44,10 +44,10 @@ dl, ol, ul {
 
 /* Images */
 #content .document .body .figure {
-    background-color: #FFFFFF;
-    width: 125%;
+    background-color: #F2F2F2;
+    width: 100%;
     padding: 2rem;
-    margin-left: -1rem;
+    /* margin-left: -1rem; */
 }
 
 #content .document .body .figure > span {
@@ -226,12 +226,12 @@ dl, ol, ul {
 
 /* Tables */
 #content .document .body table {
-    background-color: #FFFFFF;
-    /* display: block; */
-    margin-left: -1rem;
+    background-color: #F2F2F2;
+    border: none !important;
+    /* margin-left: -1rem; */
     overflow-x: auto;
     padding: 1rem 2rem;
-    width: 125%;
+    /* width: 100%; */
 }
 
 #content .document .body table thead {
@@ -261,12 +261,14 @@ dl, ol, ul {
 
 #content .document .body table tbody tr td {
     box-sizing: border-box;
+    background-color: white;
     border: 0;
     margin: 0;
     padding: 1rem 1rem 1.5rem;
     position: relative;
     display: table-cell;
     max-width: 36rem;
+    vertical-align: top;
 }
 
 #content .document .body table tbody tr td p {
@@ -314,9 +316,10 @@ dl, ol, ul {
 
 #content [class^='highlight-'].notranslate {
     position: relative;
-    margin-left: -1rem;
+    /* margin-left: -1rem; */
 }
 
+/*
 .document .highlight .copy:hover {
     background-color: #c6c6c6;
 }
@@ -325,6 +328,7 @@ dl, ol, ul {
     float: right;
     background-image: url('./icons/copy-black.svg');
 }
+
 
 .document .highlight .copy span.tooltip {
     width: 83px;
@@ -365,6 +369,7 @@ dl, ol, ul {
     background-position: 50% 50%;
     top: 4px;
 }
+*/
 
 #content .highlight pre {
     padding: 8px 0;

@@ -181,14 +181,6 @@ with the following command line options:
 +---------------+-------+----------+-----------------------------------------------+
 
 |
-|
-|
-
------
-
-|
-
-
 
 .. toctree::
    :name: toc_test_case_building

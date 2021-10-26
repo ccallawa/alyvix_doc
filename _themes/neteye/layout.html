@@ -59,7 +59,7 @@
 {%- block body_tag %}
     <body data-spy="scroll" data-offset="48" data-target="#local-toc-nav">
     <script>
-        if (isDarkTheme) {
+        if ((typeof isDarkTheme !== 'undefined') && isDarkTheme) {
             document.querySelector('body').classList.add('darkTheme');
         }
     </script>

@@ -27,7 +27,7 @@ Although Designer is intended to be used in conjunction with Alyvix Editor, you 
 as a standalone component from the command line as follows (you can find information about its
 :ref:`command arguments here <test_case_building_designer_launch>`):
 
-.. code-block:: bat
+.. code-block:: doscon
    :class: short-code-block
 
    C:\Alyvix\testcases> alyvix_designer

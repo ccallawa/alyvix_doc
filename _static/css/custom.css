@@ -1,3 +1,22 @@
+.highlight .nt {
+    color: green;
+}
+.highlight .s2 {
+    color: #bb8844;
+}
+.highlight .p {
+    color: #60add5;
+}
+.highlight .gp {
+    color: #408090;
+    font-weight: bold;
+}
+.highlight .go {
+    color: #c65d09;
+}
+.highlight .mi {
+    color: blue;
+}
 :target::before {
     content: '';
     display: block;
@@ -106,14 +125,14 @@ ol.bignums-xxl>li::before { /* Creates the format for the bullet point */
     font-size: 28px;
     font-weight: bold;
     line-height: 36px;
-    margin: 6px 24px 0 0;
+    margin: 0px 24px 0 0;
     padding-top: 4px;
     position: absolute;
     text-align: center;
     left: 2.4px;
     top: 7.2px;
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
 }
 
 
@@ -145,14 +164,14 @@ ol.bignums-xl>li::before { /* Creates the format for the bullet point */
     counter-increment: li-counter;
     font-size: 20px;
     line-height: 23px;  /* Height of the bullet number line (functions as padding-top) */
-    margin: 1px 24px 0 0;  /* Margin around the bullet number/circle */
+    margin: 0px 24px 0 0;  /* Margin around the bullet number/circle */
     padding-top: 3px;  /* Padding between the bullet number and bullet circle */
     position: absolute;
     text-align: center;
     left: 2.4px;  /* The offsets of the entire circle/number bullet */
     top: 10px;
-    width: 35px;  /* The width of the bullet circle */
-    height: 36px;  /* The height of the bullet circle */
+    width: 38px;  /* The width of the bullet circle */
+    height: 38px;  /* The height of the bullet circle */
 }
 ol.onelinelist>li::before {
     top: 0px;
@@ -166,8 +185,14 @@ ol.onelinelist>li::before {
 .right-short-admonition {
     width: 50%;
     /* float: right; */
-    margin-left:auto;
-    margin-right:0;
+    margin-left: auto;
+    margin-right: 0;
+}
+div .danger {
+    border-left: 2px solid red;
+}
+div.danger p.admonition-title {
+    color: red !important;
 }
 div .medium-code-block {  /* A version that isn't full width */
     width: 85%;
@@ -188,7 +213,7 @@ p {
     margin-bottom: 8px !important;
 }
 li blockquote {
-    margin-bottom: 8px;
+    margin: 12px 0px 12px 24px;
 }
 
 
@@ -272,6 +297,34 @@ code.kbd, tt.kbd, kbd {
     font-variant: small-caps;
     text-decoration: underline;
 }
+.endpoint-red {  /* An inline warning rather than a box */
+    color: #2980B9;
+    font-size: 120%;
+    font-weight: bold;
+    font-family: monospace !important;
+}
+.endpoint-black {  /* An inline warning rather than a box */
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+    font-family: monospace !important;
+}
+.endpoint-red-med {  /* An inline warning rather than a box */
+    color: #2980B9;
+    font-size: 105%;
+    font-weight: bold;
+    font-family: monospace !important;
+}
+.endpoint-black-med {  /* An inline warning rather than a box */
+    color: black;
+    font-size: 105%;
+    font-weight: bold;
+    font-family: monospace !important;
+}
+.large-font-size {
+    font-size: 120%;
+    font-weight: bold;
+}
 .lightgrey {  /* An inline light gray, e.g. for hints */
     color: lightgray;
 }
@@ -352,16 +405,37 @@ code.kbd, tt.kbd, kbd {
     font-weight: 700 !important;
     font-style: italic;
 }
-
+/* Create an Endpoint format */
+.ep-head {
+    font-weight: bold;
+    font-style: italic;
+    line-height:  36px;
+    font-size:  14px;
+    color:  rgb(41,128,185);
+}
 
 /* Override the default style for figure captions */
 div.figure, p.caption, span.caption-text {
     font-style: normal;
     font-weight: bold;
     padding-top:  10px;
-    /* padding-left:  10px; */
 }
 
+.left-column {
+    margin-bottom: 12px;
+}
+div.leftside-col {
+    display: flex;
+    float: left;
+    padding: 0px 3px 0px 0px;
+    width: 49%
+}
+div.rightside-col {
+    display: flex;
+    float: right;
+    padding: 0px 0px 0px 3px;
+    width: 49%
+}
 
 /* Make the section, subsection and topic headers stand out a bit more */
 .topic-title {
@@ -377,11 +451,11 @@ p.rubric {
 /* Change table style */
 table.docutils {
     border: 1px solid #e1e4e5 !important;
-    margin-left: 0px !important;
+    /* margin-left: 0px !important; */
     margin-bottom: 0px !important;
-    display: block;
+    /* display: block; */
     padding: 0px !important;
-    width: 100% !important;
+    /* width: 100%; */
     box-sizing: border-box;
     empty-cells: show !important;
     color: #404040 !important;
@@ -408,18 +482,39 @@ table.docutils tbody tr:first-child td {
 table.docutils tbody tr:first-child td p {
     color: white !important;
 }
-
-table.table-body-no-borders {
-    border: none !important;
+#content .document .body table.table-justify-right {
+    width: auto !important;
+    margin-left: auto;
+    margin-right: 0;
 }
-table.table-body-no-borders tbody tr td {
+
+#content .document .body table.table-body-no-borders {
+    border: none !important;
+    background-color: #f2f2f2 !important;
+}
+#content .document .body table.table-body-no-borders tbody tr {
+    padding: 40px !important;
+    border: none !important;
+    margin: 40px !important;
+}
+#content .document .body table.table-body-no-borders tbody tr:nth-child(2n-1) td {
+    background-color: #f8f8f8 !important;
+}
+#content .document .body table.table-body-no-borders tbody tr td {
+    background-color: #fefefe !important;
     vertical-align: top !important;
     padding: 20px 20px 20px 20px !important;
     border: none !important;
 }
-table.table-body-no-borders tbody tr td p {
+#content .document .body table.table-body-no-borders tbody tr td p {
     line-height: 24px !important;
     font-size: 16px !important;
+}
+#content .document .body table.table-body-no-borders tbody tr:first-child td {
+    background-color: #2980B9 !important;
+}
+#content .document .body table.table-body-no-borders tbody tr:first-child td p {
+    color: white !important;
 }
 
 table.no-header-row {
@@ -445,26 +540,29 @@ table.taller-rows tbody tr:nth-child(n+2) td {
 }
 
 /* In case we eventually need a column-based style */
-table.table-empty-no-borders {
+#content .document .body table.table-empty-no-borders {
     border: none !important;
+    margin: 0px !important;
+    background-color: #f2f2f2 !important;
     padding: 20px !important;
 }
-table.table-empty-no-borders tbody tr {
+#content .document .body table.table-empty-no-borders tbody tr {
     padding: 40px !important;
+    border: none !important;
     margin: 40px !important;
 }
-table.table-empty-no-borders tbody tr td {
-    background-color: white !important;
+#content .document .body table.table-empty-no-borders tbody tr td {
+    background-color: #f2f2f2 !important;
     border: none !important;
     padding: 40px !important;
     text-align: center !important;
 }
-table.table-empty-no-borders tbody tr:first-child td {
+#content .document .body table.table-empty-no-borders tbody tr:first-child td {
     text-align: center !important;
-    background-color: white !important;
+    background-color: #f2f2f2 !important;
 }
-table.table-empty-no-borders tbody tr:first-child td p {
-    color: black !important;
+#content .document .body table.table-empty-no-borders tbody tr:first-child td p {
+    color: #525252 !important;
 }
 .tablecell-name {
    style: bold;
@@ -474,8 +572,35 @@ table.table-empty-no-borders tbody tr:first-child td p {
 .tablecell-type {
    color: #666;
    font-size: 12pt;
+    background-clip: none;
 }
 
+
+table.tablecell-endpoint {x
+    border: none !important;
+}
+table.tablecell-endpoint tbody {
+    border: none !important;
+}
+table.tablecell-endpoint tbody tr {
+    border: none !important;
+}
+table.tablecell-endpoint tbody tr td {
+    border: none !important;
+    background-color: #dff !important;
+    padding: 20px 20px 2px 20px !important;
+}
+table.tablecell-endpoint tbody tr:nth-child(2n-1) td {
+    border: none !important;
+    background-color: #dff !important;
+    padding: 2px 20px 10px 20px !important;
+}
+table.tablecell-endpoint tbody tr:first-child td {
+    padding: 20px 20px 20px 20px !important;
+    margin-bottom: 20px !important;
+    background-color: #2980B9 !important;
+    border: none !important;
+}
 
 /* Horizontal lists */
 table.hlist>tbody>tr>td {
@@ -499,7 +624,7 @@ table.hlist>tbody>tr>td {
 }
 
 /* Pull quotes */
-blockquote.pull-quote, blockquote.pull-quote div p {
+#content .document blockquote.pull-quote, #content .document blockquote.pull-quote div p {
     font-size: 30px;
     font-style: italic;
     font-weight: bold;
@@ -578,6 +703,18 @@ code.download span.pre::before {
 }
 a:visited .fa::before {
     color: #9B59B6;
+}
+.fa-invblue::before {
+    color: white;
+    background-color: #07f;
+    padding: 4px;
+    border-radius: 50%;
+}
+.fa-invblue2::before {
+    color: white;
+    background-color: #07f;
+    padding: 1px 5px;
+    border-radius: 50%;
 }
 .fa-med::before {
     font-size: 20px;

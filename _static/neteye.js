@@ -81,9 +81,9 @@
     docReady(() => {
         initCookie();
         initCodeHighlights();
-        initUserguideTheme();
-        addBannerTags();
-        AddVersionDirectiveTags();
+        //initUserguideTheme();
+        //addBannerTags();
+        //AddVersionDirectiveTags();
 
         $('#content a.headerlink').click(function (e) {
             copyHrefToClipboard(e);
@@ -107,7 +107,7 @@
     }
 
     function initCookie() {
-        if(Cookies.get('user-accepts-cookies')  !== 'true') {
+        if((typeof Cookies !== 'undefined') && (Cookies.get('user-accepts-cookies')  !== 'true')) {
             $('#cookie-banner').show();
             $('#cookie-banner .btn-reject-cookie').on('click', function (){
                 $('#cookie-banner').hide();
@@ -155,6 +155,7 @@
         });
 
         /* Copy */
+        /*
         $('.document .highlight .copy').click((e) => {
             var el = $(e.target).parent().find('pre');
             if (el.length === 0) {
@@ -171,9 +172,11 @@
             textToCopy = textToCopy.replace(/^(# |\$ )/gm, '');
             copyToClipboard(textToCopy);
         });
+        */
     }
 
     function initUserguideTheme() {
+        if (typeof Cookie == 'undefined') { return; }
         var userguideTheme = (Cookies.get('neteye-userguide-theme') === 'true');
         if (userguideTheme) {
             $('body').addClass('darkTheme');
