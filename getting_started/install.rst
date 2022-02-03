@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 25-11-2020
+:modified: 09-11-2021
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -32,8 +32,8 @@ System Requirements
    Alyvix assumes that you have **one virtual or physical machine** exclusively dedicated to
    running Alyvix test cases.
 
-You should check that your designated machine meets the following requirements before you install
-Alyvix:
+You should check that your designated machine and the account on that machine meet the following
+requirements before you install Alyvix:
 
 .. admonition::  Requirements
    :class: warning
@@ -42,7 +42,28 @@ Alyvix:
    * OS: **Windows 64-bit** 10, Server 2012, 2016 or 2019
      (32-bit versions of Windows are :warn:`not` compatible with Alyvix)
    * Hardware:  2 CPUs and 4GB RAM
+   * Account with system administrator privileges
 
+|
+
+
+.. _installation_versions:
+
+========
+Versions
+========
+
++----------------+------------------------------+-------------------------------+
+| Alyvix Version | Python Version Required      | Install command               |
++----------------+------------------------------+-------------------------------+
+| Alyvix 3.2.3   | |python-download-link-397|   | ``pip install alyvix==3.2.3`` |
++----------------+------------------------------+-------------------------------+
+| Alyvix 3.2.0   | |python-download-link-397|   | ``pip install alyvix==3.2.0`` |
++----------------+------------------------------+-------------------------------+
+| Alyvix 3.1.6   | |python-download-link-379|   | ``pip install alyvix==3.1.6`` |
++----------------+------------------------------+-------------------------------+
+
+|
 
 
 .. _install_release_python_install:
@@ -60,7 +81,7 @@ Follow this procedure to install Python on your system:
 
 #. Start the installation:
 
-   1. Right-click on the downloaded executable and select **"Run as administrator"**
+   1. **Right-click** on the downloaded executable and select **"Run as administrator"**
    2. Check the box **"Add Python 3.7 to PATH"** at the bottom
    3. Choose the option **"Customize installation"**
 
@@ -76,7 +97,7 @@ Follow this procedure to install Python on your system:
       :alt: The second panel of the python installation process.
 
 #. On the third panel, make sure the advanced options are set as shown below.  Then under
-   **"Customize install location"**, insert the recommended location :file:`C:\\Python37\\`.
+   **"Customize install location"**, insert the recommended location :file:`C:\\Python39\\`.
    Finally, click on **"Install"**.  At this point Python will begin installing, typically
    requiring about 5 minutes.
 
@@ -88,10 +109,10 @@ Follow this procedure to install Python on your system:
    error message (if not, you will need to edit your ``Path`` environment variable):
 
    .. code-block:: doscon
-      :class: short-code-block
+      :class: tiny-code-block
 
       C:\> python --version
-      Python 3.7.9
+      Python 3.9.7
 
 
 
@@ -104,7 +125,7 @@ Installing Alyvix
 Alyvix itself is installed via *pip*, the official Python package manager.  *pip* will
 automatically detect that your system is running Python 3 and will install Alyvix 3,
 placing all executables in the directory
-:file:`C:\\Python37\\Lib\\site-packages\\alyvix\\`.
+:file:`C:\\Python39\\Lib\\site-packages\\alyvix\\`.
 
 The Alyvix installer is launched from the command prompt that, like the Python installer, must be
 **started in Adminstrator mode**.  Only this single step is required:
@@ -115,11 +136,18 @@ The Alyvix installer is launched from the command prompt that, like the Python i
    with all of its dependencies:
 
    .. code-block:: doscon
-      :class: short-code-block
+      :class: tiny-code-block
 
       C:\> pip install alyvix
 
-We recommend you place your Alyvix test cases in a separate data directory.
+   If necessary, you can install Alyvix through a proxy by adding a parameter:
+
+   .. code-block:: doscon
+      :class: long-code-block
+
+      C:\> pip install --proxy=https://[user:password@]proxyserver:port alyvix
+
+We recommend you place your Alyvix test cases in a separate data directory just for test cases.
 
 
 
@@ -142,13 +170,19 @@ Only two steps are needed to upgrade to the latest version:
 #. Upgrade Alyvix with *pip*
 
    * Start a Command Prompt **in administrator mode**
-   * Run the following command to download and upgrade to the latest Alyvix master release along
-     with all of its dependencies:
+   * Follow the case below that corresponds to your situation in order to download and upgrade
+     to the latest Alyvix master release along with all of its dependencies:
 
-     .. code-block:: doscon
-        :class: short-code-block
+     * If you have Python 3.7.9 installed, uninstall it, then manually remove its
+       containing folder (e.g., ``C:\Python37\``) and re-install Alyvix with *pip* as shown in
+       the section :ref:`Installing Alyvix <install_release_alyvix_install>` above.
 
-        C:\> pip install --upgrade alyvix
+     * If you have Python 3.9.7 installed, then you can use the *pip --upgrade* command:
+
+       .. code-block:: doscon
+          :class: short-code-block
+
+          C:\> pip install --upgrade alyvix
 
 
 
@@ -164,16 +198,11 @@ In order to create an offline installation, you will need two machines:
   source for downloading the required software packages
 * A second *target* machine that will serve as the offline probe
 
-Both machines must meet the second :ref:`system requirement <system_requirements_top>` above, and
-have access to removable media in order to physically transfer the software from the *installer*
-to the *target*.
-
 The following steps will then enable you to install Alyvix on the target machine:
 
 .. rst-class:: bignums
 
-#. On the *installer* Windows **64-bit** machine with an existing **Python 3** installation
-   (not Python 2):
+#. On the *installer* Windows **64-bit** machine with an existing **Python 3** installation:
 
    * Create a new directory with appropriate permissions
    * Download the |python-download-link| to that directory
@@ -184,8 +213,7 @@ The following steps will then enable you to install Alyvix on the target machine
 
         C:\...\MyFolder> pip download alyvix
 
-#. Copy the entire directory onto the removable media, then copy that directory onto the target
-   machine
+#. Copy the entire directory onto the target machine
 
 #. Use the Python installer now on the target machine to
    :ref:`install Python following the instructions above <install_release_python_install>`
@@ -196,7 +224,7 @@ The following steps will then enable you to install Alyvix on the target machine
    .. code-block:: doscon
       :class: code-block
 
-      C:\...\MyFolder> pip install alyvix-3.1.6-cp37-cp37m-win_amd64.whl --no-index --find-links .
+      C:\...\MyFolder> pip install alyvix-3.2.0-cp39-cp39-win_amd64.whl --no-index --find-links .
 
 #. Check that the installation was successful by starting Alyvix Editor:
 
@@ -230,7 +258,7 @@ If you only use Python to run Alyvix, you can now also remove Python itself.  Go
 :file:`Python Launcher`.  The process may take up to 5 minutes.
 
 
-Once completed, you can also manually remove the :file:`C:\\Python37\\` directory (or whichever
+Once completed, you can also manually remove the :file:`C:\\Python39\\` directory (or whichever
 directory you specified during installation) and either archive or delete your test case
 directory.
 
@@ -266,7 +294,7 @@ Below are some potential installation problems and their solutions.
    .. code-block:: doscon
       :class: nocopy
 
-      File "C:\Python37\lib\site-packages\alyvix\core\tesserocr\__init__.py", line 1, in <module> from ._tesserocr import *
+      File "C:\Python39\lib\site-packages\alyvix\core\tesserocr\__init__.py", line 1, in <module> from ._tesserocr import *
       ImportError: DLL load failed: The specified module could not be found.
 
    You can fix this problem by installing the **Microsoft Visual C++ Redistributable for Visual Studio**,

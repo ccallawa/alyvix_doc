@@ -18,7 +18,7 @@ Alyvix and Visual Monitoring
 
 |
 
-Welcome to the official guide for **Alyvix 3.1.6**
+Welcome to the official guide for **Alyvix 3.2.3**
 :iconlink:`video||videos_and_tutorials/basic_concept_tutorials.html#basic-concepts-tutorials-310-intro`
 (the documentation for version 2 of Alyvix `can be found here <https://www.alyvix.com/v2/learn/>`_).
 

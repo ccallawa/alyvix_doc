@@ -4,7 +4,7 @@
 :tags: release notes
 :lang: en-US
 :translation: false
-:status: updating
+:status: final
 
 .. include:: ../sphinx-roles.txt
 
@@ -12,9 +12,9 @@
 
 .. _release_notes_v3_1_0:
 
-===============================
-Version 3.1.0 - 3.1.6 (Current)
-===============================
+=====================
+Version 3.1.0 - 3.1.6
+=====================
 
 Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
 system requirements for Alyvix, you can :ref:`install or upgrade it <getting_started_top>`.

@@ -176,7 +176,7 @@ one of these 3 methods:
     regular expression in the :guilabel:`Regex` field, once normalized as lower cased strings.
     (An Operations tutorial video is available that :ref:`explains the regex options
     <operations_tutorials_regex>`).  The regular expression syntax is governed by the
-    :iconlink:`ext|Python Regular Expression library|https://docs.python.org/3.7/library/re.html`.
+    :iconlink:`ext|Python Regular Expression library|https://docs.python.org/3.9/library/re.html`.
 
     A green background color in the Regex field indicates the regex matches the scraped text, red
     means it does not match, and yellow indicates a syntactically well-formed special construct
