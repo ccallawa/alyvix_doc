@@ -47,6 +47,8 @@ In either case, one test case is executed at a time.
    You can also :ref:`run individual elements <alyvix_editor_interface_debug>` of a test case's
    script which can be especially useful when debugging them.
 
+|
+
 
 
 .. _alyvix_robot_cli_options:
@@ -155,6 +157,8 @@ These options are summarized in the following table:
 |                            |       |                 | ``1`` --- Also logs Alyvix actions                         |
 +----------------------------+-------+-----------------+------------------------------------------------------------+
 
+|
+
 
 
 .. _alyvix_robot_result:
@@ -179,6 +183,8 @@ Alyvix uses the following industry-standard return values for monitoring systems
 
 Using the **-\ -mode** option, you can specify the format for the information returned (defaults
 to CLI output mode).
+
+|
 
 
 
@@ -267,6 +273,8 @@ pattern *<object_name>_<map_name>-<key_name>*:
    2020/06/03 10:17:13.370: dataentry_loop-key2 DETECTED in 0.0s (+/-0.060)
    2020/06/03 10:17:13.372: start-test ends OK, taking 4.640s.
 
+|
+
 
 
 .. _alyvix_robot_result_nagios:
@@ -332,6 +340,8 @@ The time measurements for Nagios are specified as follows (note that *object_tim
 
    NOT EXECUTED transactions: <not_executed_object_01_name>; <not_executed_object_02_name>
 
+|
+
 
 
 .. _alyvix_robot_result_nats_influxdb:
@@ -347,39 +357,65 @@ NATS server IP, port, subject name, and measurement name.
 
    C:\Alyvix\testcases> alyvix_robot -f vt -m "nats-influxdb <nats_streaming_server_ip>:<port> <influxdb_subject_name> <influxdb_measurement_name>"
 
+|
+
 
 
 .. _alyvix_robot_cipher_encryption:
 
-============================
+****************************
 Alyvix Cipher for Encryption
-============================
+****************************
 
-You can use a combination of cipher and private key to protect sensitive information such as
-user names and passwords when for instance you need to log in to a login-protected application
-or web site.  The :ref:`Videos and Tutorials <production_systems_tutorials_top>` section provides
-examples of how you can do this using Microsoft's RDC and Citrix.
+You can use a combination of cipher and private key to protect sensitive information
+and credentials such as user names and passwords when for instance you need to log in
+to a login-protected application or web site.
+The :ref:`Videos and Tutorials <production_systems_tutorials_top>` section provides
+examples of how you can do this using Microsoft's RDC and Citrix as examples.
 
-To encrypt a cipher, supply the text to be encrypted and your private key:
+To encrypt a string, supply the text to be encrypted and your private key as arguments
+to the *alyvix_cipher* command in a command prompt:
 
 .. code-block::
 
    C:\Alyvix\testcases> alyvix_cipher -e <text_string_to_encrypt> -k <private_key>
 
-You can also decrypt a cipher as follows:
+You can also decrypt a cipher as follows, which returns the original string as
+long as the private keys used in both cases are the same:
 
 .. code-block::
 
    C:\Alyvix\testcases> alyvix_cipher -d <text_string_to_decrypt> -k <private_key>
 
-To use the encrypted text string, put it in the
-:ref:`string box <alyvix_designer_options_strings_top>` of an object component.
+Once you have computed the encrypted string, enter it into the
+:ref:`string box <alyvix_designer_options_strings_top>` of an object component
+(such as a text component indicating a user name or password field) and
+save the test case.
 
-You can then run a test case with encrypted strings by supplying the private key:
+There are two ways you can then use the encrypted string to hide credentials until
+the moment they are entered into the interface:
 
-.. code-block::
+* Using *alyvix_robot* from the command prompt as shown in the section above,
+  add the string as the object of the *--key* or *-k* parameter.  This will
+  decrypt the key for that single session.
+/
+  .. code-block::
 
-   C:\Alyvix\testcases> alyvix_robot -f <test_case_name> -k <private_key>
+     C:\Alyvix\testcases> alyvix_robot -f <test_case_name> -k <private_key>
+
+* Using a scheduling system like *Alyvix Server*, add the private key in the
+  appropriate field (e.g., in the
+  `Session Management Settings <https://alyvix.com/learn/server/session_management.html#session-management-settings>`_).
+  The credentials will then be passed automatically via the *--key* parameter
+  to Alyvix Robot each time it schedules a new run of the test case.
+
+.. note::  With the current version of Alyvix Editor, you cannot launch Alyvix
+           Robot while deciphering keys from within the Alyvix Editor interface
+           :ref:`as described here <alyvix_editor_run_script>`.  It will
+           run the test case but instead only insert the encrypted text.
+
+|
+
 
 
 .. _test_case_execution_measurements:
