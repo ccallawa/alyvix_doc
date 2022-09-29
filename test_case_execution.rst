@@ -398,7 +398,7 @@ the moment they are entered into the interface:
 * Using *alyvix_robot* from the command prompt as shown in the section above,
   add the string as the object of the *--key* or *-k* parameter.  This will
   decrypt the key for that single session.
-/
+
   .. code-block::
 
      C:\Alyvix\testcases> alyvix_robot -f <test_case_name> -k <private_key>

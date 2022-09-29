@@ -196,20 +196,3 @@ particularly the proper use of the Main, Fail and Exit sections.
 |source-youtube|
 
 |
-
-
-.. _operations_tutorials_sectionlogic:
-
-.. rubric:: Section Logic Video
-
-This video tutorial presents a detailed explanation of how to use
-:ref:`sections <alyvix_editor_script_mgmt_top>` and employ
-:ref:`section logic <alyvix_editor_interface_top_level_scripts>`,
-particularly the proper use of the Main, Fail and Exit sections.
-
-.. image:: images/operations-sectionlogic-314.png
-   :class: image-boxshadow image-very-large
-   :alt: Section Logic tutorial video, version 3.1.2
-   :target: https://youtu.be/5jlelr0YlhI
-
-|source-youtube|
