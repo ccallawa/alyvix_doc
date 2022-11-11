@@ -35,14 +35,23 @@ System Requirements
 You should check that your designated machine and the account on that machine meet the following
 requirements before you install Alyvix:
 
-.. admonition::  Requirements
-   :class: warning
-
-   * Screen color depth:  24-bit RGB or 32-bit RGBA
-   * OS: **Windows 64-bit** 10, Server 2012, 2016 or 2019
-     (32-bit versions of Windows are :warn:`not` compatible with Alyvix)
-   * Hardware:  2 CPUs and 4GB RAM
-   * Account with system administrator privileges
++---------------------+--------------------------------------------------------------------------+
+|                     | Minimum                                                                  |
++---------------------+--------------------------------------------------------------------------+
+| :file:`Operating`   | **Windows 10 (64-bit) Pro or Enterprise**                                |
+| :file:`System`      | **Windows Server 2016, 2019 or 2022**                                    |
+|                     | (32-bit versions of Windows are :warn:`not` compatible                   |
+|                     | with Alyvix)                                                             |
++---------------------+--------------------------------------------------------------------------+
+| :file:`Processor`   | 2 CPUs                                                                   |
++---------------------+--------------------------------------------------------------------------+
+| :file:`Memory`      | 4GB RAM                                                                  |
++---------------------+--------------------------------------------------------------------------+
+| :file:`Graphics`    | 24-bit RGB or 32-bit RGBA screen color depth                             |
++---------------------+--------------------------------------------------------------------------+
+| :file:`Application` | Users defined on Alyvix Server must have the proper permissions          |
+| :file:`Permissions` | to run and interact with the application interface being monitored       |
++---------------------+--------------------------------------------------------------------------+
 
 |
 
@@ -84,7 +93,7 @@ Follow this procedure to install Python on your system:
 #. Start the installation:
 
    1. **Right-click** on the downloaded executable and select **"Run as administrator"**
-   2. Check the box **"Add Python 3.7 to PATH"** at the bottom
+   2. Check the box **"Add Python 3.9 to PATH"** at the bottom
    3. Choose the option **"Customize installation"**
 
    .. image:: images/python-install-01.png
