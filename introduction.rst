@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 04-12-2019
-:modified: 25-05-2020
+:modified: 12-15-2022
 :tags: introduction
 :lang: en-US
 :translation: false
@@ -18,7 +18,7 @@ Alyvix and Visual Monitoring
 
 |
 
-Welcome to the official guide for **Alyvix 3.3.1**
+Welcome to the official guide for Alyvix |version|
 :iconlink:`video||videos_and_tutorials/basic_concept_tutorials.html#basic-concepts-tutorials-310-intro`
 (the documentation for version 2 of Alyvix `can be found here <https://www.alyvix.com/v2/learn/>`_).
 

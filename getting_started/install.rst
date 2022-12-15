@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 09-11-2021
+:modified: 12-15-2022
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -39,7 +39,7 @@ requirements before you install Alyvix:
 |                     | Minimum                                                                  |
 +---------------------+--------------------------------------------------------------------------+
 | :file:`Operating`   | **Windows 10 (64-bit) Pro or Enterprise**                                |
-| :file:`System`      | **Windows Server 2016, 2019 or 2022**                                    |
+| :file:`System`      | -or- **Windows Server 2016, 2019 or 2022**                               |
 |                     | (32-bit versions of Windows are :warn:`not` compatible                   |
 |                     | with Alyvix)                                                             |
 +---------------------+--------------------------------------------------------------------------+
@@ -64,6 +64,8 @@ Versions
 
 +----------------+------------------------------+-------------------------------+
 | Alyvix Version | Python Version Required      | Install command               |
++----------------+------------------------------+-------------------------------+
+| Alyvix 3.3.2   | |python-download-link-397|   | ``pip install alyvix==3.3.2`` |
 +----------------+------------------------------+-------------------------------+
 | Alyvix 3.3.1   | |python-download-link-397|   | ``pip install alyvix==3.3.1`` |
 +----------------+------------------------------+-------------------------------+

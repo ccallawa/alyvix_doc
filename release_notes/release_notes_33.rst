@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 09-28-2022
-:modified: 09-28-2022
+:modified: 12-15-2022
 :tags: release notes
 :lang: en-US
 :translation: false
@@ -12,15 +12,28 @@
 
 .. _release_notes_v3_3_0:
 
-=======================
-Version 3.3.1 (Current)
-=======================
+=====================
+Version 3.3.1 - 3.3.2
+=====================
 
 Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
 system requirements for Alyvix, you can :ref:`install or upgrade it <getting_started_top>`.
 
 :ref:`Python 3.9.7 64-bit official distribution <install_release_python_install>` is the recommended
 Python version to power Alyvix 3.3.x.
+
+|
+
+
+.. _install_release_v3_3_2:
+
+.. rubric:: Version 3.3.2
+
+**Release date:**  December 15th, 2022
+
+**Improvements**
+
+* Support version 2.0.0 of Alyvix Service
 
 |
 
