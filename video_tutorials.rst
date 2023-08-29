@@ -23,6 +23,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
 #. :ref:`Basic Concepts <basic_concepts_tutorials_top>` tutorials that show how to use the
    Alyvix interface
 
+   * 2-minute Introduction to version 3.3.1 |halftab| :shadow:`(video #37 - 2'25")`
    * Introduction to version 3.1.0 |halftab| :shadow:`(video #10 - 5'58")`
    * A minimal test case |halftab| :shadow:`(video #1 - 2'25")`
    * Extending the above example to check the results |halftab| :shadow:`(video #2 - 4'54")`
@@ -31,6 +32,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
 #. :ref:`Production Systems <production_systems_tutorials_top>` tutorials describing techniques
    based on real world production examples
 
+   * Government Service Portals |halftab| :shadow:`(video #36 - 7'40")`
    * SalesForce Cloud Service Console |halftab| :shadow:`(video #27 - 9'23")`
    * SalesForce Cloud Panoramic View |halftab| :shadow:`(video #26 - 9'23")`
    * Microsoft Dynamics 365 CRM |halftab| :shadow:`(video #24 - 9'48")`
@@ -53,6 +55,7 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
    * Output Composition |halftab| :shadow:`(video #16 - 8'18")`
    * Conditionals and Loops |halftab| :shadow:`(video #18 - 6'14")`
    * Section Logic |halftab| :shadow:`(video #22 - 4'38")`
+   * Object Building |halftab| :shadow:`(video #35 - 6'42")`
 
 |
 |

@@ -142,10 +142,11 @@ list.
 All editable fields are *validated* in real time to ensure that only new values of the correct type
 can be entered.  When a value is not valid you will see an error message like this:
 
+.. _alyvix_selector_interface_list_controls:
+
 .. image:: images/as_name_validation.png
    :class: image-boxshadow zoomable-image
    :alt: The Alyvix Selector interface.
-
 
 .. note::
 

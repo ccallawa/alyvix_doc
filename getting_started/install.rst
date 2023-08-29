@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 12-15-2022
+:modified: 07-14-2023
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -15,7 +15,7 @@
 Installation and Upgrade
 ************************
 
-Before installing Alyvix, first check that your setup meets the system requirements.
+Before installing Alyvix, first check that your environment meets the system requirements.
 If it does, you will then need to install Python on your Windows machine before installing
 Alyvix itself.
 
@@ -65,6 +65,8 @@ Versions
 +----------------+------------------------------+-------------------------------+
 | Alyvix Version | Python Version Required      | Install command               |
 +----------------+------------------------------+-------------------------------+
+| Alyvix 3.4.0   | |python-download-link-397|   | ``pip install alyvix==3.4.0`` |
++----------------+------------------------------+-------------------------------+
 | Alyvix 3.3.2   | |python-download-link-397|   | ``pip install alyvix==3.3.2`` |
 +----------------+------------------------------+-------------------------------+
 | Alyvix 3.3.1   | |python-download-link-397|   | ``pip install alyvix==3.3.1`` |
@@ -94,7 +96,7 @@ Follow this procedure to install Python on your system:
 
 #. Start the installation:
 
-   1. **Right-click** on the downloaded executable and select **"Run as administrator"**
+   1. :warn:`Right-click` on the downloaded executable and select **"Run as administrator"**
    2. Check the box **"Add Python 3.9 to PATH"** at the bottom
    3. Choose the option **"Customize installation"**
 
@@ -160,7 +162,22 @@ The Alyvix installer is launched from the command prompt that, like the Python i
 
       C:\> pip install --proxy=https://[user:password@]proxyserver:port alyvix
 
-We recommend you place your Alyvix test cases in a separate data directory just for test cases.
+#. Check that the installation concluded successfully.  Run the following command:
+
+   .. code-block:: doscon
+      :class: tiny-code-block
+
+      C:\> alyvix_editor
+
+   If the Alyvix Editor window appears as shown here, then everything is working properly.
+
+   .. image:: images/ae_full_screen.png
+      :class: image-boxshadow image-very-large zoomable-image
+      :alt: The main Alyvix Editor screen indicating the installation was successful.
+
+
+We recommend you place your Alyvix test cases in a separate data directory reserved for test cases,
+such as :file:`C:\\Alyvix\\Testcases\\`.
 
 
 
@@ -313,3 +330,22 @@ Below are some potential installation problems and their solutions.
    You can fix this problem by installing the **Microsoft Visual C++ Redistributable for Visual Studio**,
    which contains the required file.  It's available at
    :iconlink:`ext|https://aka.ms/vs/16/release/vc_redist.x64.exe|https://aka.ms/vs/16/release/vc_redist.x64.exe`.
+
+
+.. admonition::  "WindowsError: [Error 206] The filename or extension is too long"
+
+   This error is caused by Python's *pip* command attempting to write temporary files using a very long,
+   automatically generated, unique path name.
+
+   .. code-block:: doscon
+      :class: nocopy
+
+      WindowsError: [Error 206] The filename or extension is too long: <path/file>
+
+   You can fix this problem by editing the Windows setting that allows file paths longer than 260 characters.
+   Open the Group Policy editor (GPEDIT.MSC) and navigate to **Computer Configuration > Administrative
+   Templates > System > Filesystem**.  At the right, double click on *Enable Win32 long paths*, then in
+   the popup panel click on the "Enabled" setting.  Click on *Apply* and *OK*, then you'll need to
+   restart your computer or VM.
+
+|

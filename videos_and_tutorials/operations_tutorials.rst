@@ -196,3 +196,24 @@ particularly the proper use of the Main, Fail and Exit sections.
 |source-youtube|
 
 |
+
+.. _operations_tutorials_component_building:
+
+.. rubric:: Object and Component Building
+
+If one of your test cases stops working after awhile for what seems like
+no reason, the underlying problem is almost always a small change in the
+interface that you're monitoring, for instance a button has been moved
+due to a software update, or a multi-user system has persistent window
+properties.  In this best practices video, we'll see how to build more
+robust test cases so that these minor interface changes won't interrupt
+your monitoring and make you rebuild your test cases so often.
+
+.. image:: images/operations-component-building-332.png
+   :class: image-boxshadow image-very-large
+   :alt: Object and Component Building tutorial video, version 3.3.2
+   :target: https://youtu.be/3QDEJldCzzw
+
+|source-youtube|
+
+|

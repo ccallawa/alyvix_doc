@@ -370,8 +370,10 @@ Alyvix Cipher for Encryption
 You can use a combination of cipher and private key to protect sensitive information
 and credentials such as user names and passwords when for instance you need to log in
 to a login-protected application or web site.
-The :ref:`Videos and Tutorials <production_systems_tutorials_top>` section provides
-examples of how you can do this using Microsoft's RDC and Citrix as examples.
+The :ref:`Videos Tutorials <production_systems_tutorials_top>` section provides
+examples of how you can do this using Microsoft's RDC and Citrix as examples, while
+a :ref:`written tutorial <getting_started_authentication>` in the Getting Started section
+shows an example web app login.
 
 To encrypt a string, supply the text to be encrypted and your private key as arguments
 to the *alyvix_cipher* command in a command prompt:

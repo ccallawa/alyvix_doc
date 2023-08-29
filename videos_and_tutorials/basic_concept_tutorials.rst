@@ -4,7 +4,7 @@
 :tags: videos, tutorials
 :lang: en-US
 :translation: false
-:status: draft
+:status: final
 
 .. include:: ../sphinx-roles.txt
 
@@ -12,9 +12,28 @@
 
 .. _basic_concepts_tutorials_top:
 
-==============================
-Basic Concepts Video Tutorials
-==============================
+=============================
+Core Concepts Video Tutorials
+=============================
+
+.. _basic_concepts_tutorials_331_intro:
+
+.. rubric:: The 2-Minute Introduction to Version 3.3.1
+
+This introduction to version 3.3.1 of Alyvix shows how you can use Alyvix to
+visually monitor your applications by defining what a series of interaction
+sequences should look like for your application, and then executing it to
+measure the latency between each step in the interaction.
+
+.. image:: images/basics-2min-introduction-331.png
+   :class: image-boxshadow image-very-large
+   :alt: Introduction to Alyvix tutorial video, version 3.3.1
+   :target: https://youtu.be/YgKcVHH9Hp4
+
+|source-youtube|
+
+|
+
 
 .. _basic_concepts_tutorials_310_intro:
 
@@ -38,7 +57,7 @@ description of the same task.
 
 .. _basic_concepts_tutorials_300_2min:
 
-.. rubric:: 2-Minute Introduction to Version 3.0.0
+.. rubric:: The 2-Minute Introduction to Version 3.0.0
 
 This video gives you the quickest tour possible of the main features of Alyvix, including
 how to:
@@ -60,7 +79,7 @@ how to:
 
 .. _basic_concepts_tutorials_300_5min:
 
-.. rubric:: 5-Minute Introduction to Version 3.0.0
+.. rubric:: The 5-Minute Introduction to Version 3.0.0
 
 This more complete video provides further details and extends the task in the previous video to:
 
@@ -80,7 +99,7 @@ This more complete video provides further details and extends the task in the pr
 
 .. _basic_concepts_tutorials_300_10min:
 
-.. rubric:: 10-Minute Video Introduction to Version 3.0.0
+.. rubric:: The 10-Minute Video Introduction to Version 3.0.0
 
 This in-depth video contains a complex example requiring many steps to:
 

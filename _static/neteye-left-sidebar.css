@@ -145,6 +145,11 @@
     top: 7px;
 }
 
+#menu .sidebartoctree > ul > li > a[href$="introduction.html"]::before,
+#menu .sidebartoctree > ul > li:hover > a[href$="introduction.html"]::before {
+    background-image: url('./icons/modules/introduction.svg');
+}
+
 #menu .sidebartoctree > ul > li > a[href$="getting_started.html"]::before,
 #menu .sidebartoctree > ul > li:hover > a[href$="getting_started.html"]::before {
     background-image: url('./icons/modules/getting-started.svg');
@@ -180,8 +185,13 @@
     background-image: url('./icons/modules/report.svg');
 }
 
-#menu .sidebartoctree > ul > li > a[href$="server/"]::before,
-#menu .sidebartoctree > ul > li:hover > a[href$="server/"]::before {
+#menu .sidebartoctree > ul > li > a[href$="/learn/service/"]::before,
+#menu .sidebartoctree > ul > li:hover > a[href$="/learn/service/"]::before {
+    background-image: url('./icons/modules/document.svg');
+}
+
+#menu .sidebartoctree > ul > li > a[href$="/learn/server/"]::before,
+#menu .sidebartoctree > ul > li:hover > a[href$="/learn/server/"]::before {
     background-image: url('./icons/modules/document.svg');
 }
 
@@ -220,6 +230,10 @@
     background-image: url('./icons/modules/home-black.svg');
 }
 
+#menu .sidebartoctree ul > li > a[href$="introduction.html"]:hover::before {
+    background-image: url('./icons/modules/introduction-black.svg');
+}
+
 #menu .sidebartoctree ul > li > a[href$="getting_started.html"]:hover::before {
     background-image: url('./icons/modules/getting-started-black.svg');
 }
@@ -248,7 +262,11 @@
     background-image: url('./icons/modules/report-black.svg');
 }
 
-#menu .sidebartoctree ul > li > a[href$="server/"]:hover::before {
+#menu .sidebartoctree ul > li > a[href$="/learn/service/"]:hover::before {
+    background-image: url('./icons/modules/document-black.svg');
+}
+
+#menu .sidebartoctree ul > li > a[href$="/learn/server/"]:hover::before {
     background-image: url('./icons/modules/document-black.svg');
 }
 
