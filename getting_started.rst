@@ -43,9 +43,24 @@ how the Alyvix interface works.
    * Add the new step to the workflow from the previous example
    * Execute the test cases, checking that they work together
 
+#. Example:  Launch a web browser and :ref:`monitor a web page <getting_started_web_browser>`
+
+   * Launch an application by its executable path with command line parameters
+   * Measure how long it takes for the application to launch
+   * Kill the application so it can be launched the next time the test case runs
+   * Best practices when builiding test cases
+
+#. Example:  Log in to a web app :ref:`using credentials <getting_started_authentication>`
+
+   * Use the credentials and a private key to create encrypted credentials
+   * Launch the web app as in the previous example and click on the login button
+   * Use the encrypted credentials in the login fields (Alyvix will automatically decrypt them)
+   * Do a simple task and then log out
+
+|
 
 .. note::  You can find further examples, conceptual descriptions, and production-oriented use
-           cases on the :ref:`Video and Tutorial <video_tutorials_top>` page.
+           cases on the :ref:`Video Tutorials <video_tutorials_top>` page.
 
 |
 |
@@ -63,3 +78,5 @@ how the Alyvix interface works.
    getting_started/install.rst
    getting_started/windows_start_button.rst
    getting_started/windows_settings.rst
+   getting_started/web_browser.rst
+   getting_started/authentication.rst

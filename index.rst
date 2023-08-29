@@ -23,6 +23,7 @@
    video_tutorials.rst
    release_notes.rst
    glossary.rst
+   Alyvix Service User Manual <https://alyvix.com/learn/service/>
    Alyvix Server User Manual <https://alyvix.com/learn/server/>
    get_in_touch.rst
 
