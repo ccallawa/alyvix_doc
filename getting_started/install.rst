@@ -1,6 +1,6 @@
 :author: Charles Callaway
 :date: 06-12-2019
-:modified: 07-14-2023
+:modified: 09-14-2023
 :tags: install, python, pip
 :lang: en-US
 :translation: false
@@ -64,6 +64,8 @@ Versions
 
 +----------------+------------------------------+-------------------------------+
 | Alyvix Version | Python Version Required      | Install command               |
++----------------+------------------------------+-------------------------------+
+| Alyvix 3.5.0   | |python-download-link-397|   | ``pip install alyvix==3.5.0`` |
 +----------------+------------------------------+-------------------------------+
 | Alyvix 3.4.0   | |python-download-link-397|   | ``pip install alyvix==3.4.0`` |
 +----------------+------------------------------+-------------------------------+
