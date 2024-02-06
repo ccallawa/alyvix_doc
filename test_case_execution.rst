@@ -405,9 +405,9 @@ the moment they are entered into the interface:
 
      C:\Alyvix\testcases> alyvix_robot -f <test_case_name> -k <private_key>
 
-* Using a scheduling system like *Alyvix Server*, add the private key in the
-  appropriate field (e.g., in the
-  `Session Management Settings <https://alyvix.com/learn/server/session_management.html#session-management-settings>`_).
+* Using a scheduling system like *Alyvix Service*, add the private key in the
+  appropriate place (e.g., in the
+  `session management settings <https://alyvix.com/learn/service/introduction.html>`_).
   The credentials will then be passed automatically via the *--key* parameter
   to Alyvix Robot each time it schedules a new run of the test case.
 

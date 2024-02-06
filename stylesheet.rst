@@ -82,12 +82,12 @@ Bulleted lists should:
 
         With indented text and images
 
-        .. image:: pictures/alyvix_logo_399x333.png
+        .. image:: pictures/alyvix-logo.png
            :width: 40pt
 
      And with non-indented text or images
 
-     .. image:: pictures/alyvix_logo_399x333.png
+     .. image:: pictures/alyvix-logo.png
         :width: 40pt
 
 There are also enumerated lists:
@@ -445,7 +445,7 @@ You can create aliases where you want, and use them repeatedly using the ``|<ali
 It does not matter where on the page you define it; it can even be placed at the bottom of the
 page.
 
-.. |logo| image:: pictures/alyvix_logo_399x333.png
+.. |logo| image:: pictures/alyvix-logo.png
    :align: middle
    :width: 25pt
    :height: 18pt
@@ -455,7 +455,7 @@ The code for the alias:
 .. code-block:: rst
    :class: short-code-block
 
-   .. |logo| image:: pictures/alyvix_logo_399x333.png
+   .. |logo| image:: picturesalyvix-logo.png
       :align: middle
       :width: 25pt
       :height: 18pt
@@ -656,7 +656,7 @@ alignment:  use the classes "mx-auto d-block" as described
 :iconlink:`ext|in the Bootstrap doc|https://getbootstrap.com/docs/4.0/content/images/`
 to center rather than the ``:align:`` keyword.
 
-.. image:: pictures/alyvix_logo_399x333.png
+.. image:: pictures/alyvix-logo.png
    :class: mx-auto d-block
    :width: 200px
    :height: 100px
@@ -668,7 +668,7 @@ This is built as follows:
    :class: short-code-block
    :name: _style_image_example
 
-   .. image:: pictures/alyvix_logo_399x333.png
+   .. image:: pictures/alyvix-logo.png
       :class: mx-auto d-block
       :width: 200px
       :height: 100px
@@ -680,7 +680,7 @@ as follows (note that figures and images have different options):
 .. code-block:: rst
    :class: short-code-block
 
-   .. image:: pictures/alyvix_logo_399x333.png
+   .. image:: pictures/alyvix-logo.png
       :class: image-boxshadow
 
 You can also make a more structured figure.  It assumes you want an image at the top with the
@@ -692,7 +692,7 @@ entire (indented) RST structure within the figure space.  You can add the class 
 to the figure declaration and :file:`custom.css` will add a thin-lined box around the image
 (but not the caption):
 
-.. figure:: pictures/alyvix_logo_399x333.png
+.. figure:: pictures/alyvix-logo.png
    :class: outline mx-auto d-block
    :scale: 40 %
    :alt: This is alternate text.
@@ -703,7 +703,7 @@ to the figure declaration and :file:`custom.css` will add a thin-lined box aroun
 
 .. code-block:: rst
 
-   .. figure:: pictures/alyvix_logo_399x333.png
+   .. figure:: pictures/alyvix-logo.png
       :class: outline mx-auto d-block
       :scale: 40 %
       :alt: This is alternate text.
@@ -1208,7 +1208,7 @@ the linked page above for additional formatting options):
 
       Panel #2
 
-      A link to :link-badge:`https://www.alyvix.com/,"Alyvix",tooltip=A Tooltip` with tooltip
+      A link to :link-badge:`https://alyvix.com/,"Alyvix",tooltip=A Tooltip` with tooltip
 
       ---
       :body: text-center
@@ -1231,7 +1231,7 @@ the linked page above for additional formatting options):
       There's hidden content above me
 
       ---
-      :img-top: pictures/alyvix_logo_399x333.png
+      :img-top: pictures/alyvix-logo.png
 
       Panel #5 with Image at Top
 
@@ -1239,8 +1239,8 @@ the linked page above for additional formatting options):
 
          The content below is a *link-button*:
 
-         .. link-button::  https://www.alyvix.com
-            :text: www.alyvix.com
+         .. link-button::  https://alyvix.com
+            :text: alyvix.com
             :classes: bluebutton
 
 .. tabbed:: RST code
@@ -1259,7 +1259,7 @@ the linked page above for additional formatting options):
 
          Panel #2
 
-         A link to :link-badge:`https://www.alyvix.com/,"Alyvix",tooltip=A Tooltip` with tooltip
+         A link to :link-badge:`https://alyvix.com/,"Alyvix",tooltip=A Tooltip` with tooltip
 
          ---
          :body: text-center
@@ -1289,8 +1289,8 @@ the linked page above for additional formatting options):
 
             The content below is a *link-button*:
 
-            .. link-button::  https://www.alyvix.com
-               :text: www.alyvix.com
+            .. link-button::  https://alyvix.com
+               :text: alyvix.com
                :classes: bluebutton
 
 -------------
@@ -1345,7 +1345,7 @@ page a link.)  Some examples:
 
 .. tabbed:: Simple Button with Tooltip
 
-   .. link-button:: https://www.alyvix.com/
+   .. link-button:: https://alyvix.com/
       :classes: btn-success
       :type: url
       :text: Link to Alyvix
@@ -1353,7 +1353,7 @@ page a link.)  Some examples:
 
    .. code-block:: rst
 
-      .. link-button:: https://www.alyvix.com/
+      .. link-button:: https://alyvix.com/
          :classes: btn-success
          :type: url
          :text: Link to Alyvix
@@ -1362,7 +1362,7 @@ page a link.)  Some examples:
 .. tabbed:: Default Tab
    :selected:
 
-   .. link-button:: https://www.alyvix.com/
+   .. link-button:: https://alyvix.com/
       :type: url
       :text: Another link to Alyvix
       :tooltip: I also go to Alyvix
@@ -1370,7 +1370,7 @@ page a link.)  Some examples:
 
    .. code-block:: rst
 
-      .. link-button:: https://www.alyvix.com/
+      .. link-button:: https://alyvix.com/
          :type: url
          :text: Another link to Alyvix
          :tooltip: I also go to Alyvix
@@ -1591,7 +1591,7 @@ Let's create a background image, and then overlay some text on top of it:
 .. raw:: html
 
    <div class="demo-image">
-     <img src="_images/alyvix_logo_399x333.png" style="width:50%; height:50%;"/>
+     <img src="_images/alyvix-logo.png" style="width:50%; height:50%;"/>
      <div class="demo-text" height="100%">
        <br />
        <h1>Here is some Text</h1><br />
@@ -1607,7 +1607,7 @@ Let's create a background image, and then overlay some text on top of it:
    .. raw:: html
 
       <div class="demo-image">
-        <img src="_images/alyvix_logo_399x333.png" style="width:50%; height:50%;"/>
+        <img src="_images/alyvix-logo.png" style="width:50%; height:50%;"/>
         <div class="demo-text" height="100%">
           <br />
           <h1>Here is some Text</h1><br />
@@ -1647,14 +1647,14 @@ Image "Cards"
    <div class="card-row">
    <div class="card-col" style="width:49%;float:left;">
       <div class="card">
-         <img src="_images/alyvix_logo_100x83.png" alt="card1" style="width:100%;opacity:0.85;border-radius:5px;" />
+         <img src="_images/alyvix-logo.png" alt="card1" style="width:100%;opacity:0.85;border-radius:5px;" />
          <div class="card-container">
             <h4><b>Alyvix #1</b></h4>
             <p>Software Architect</p>
          </div>
       </div>
       <div class="card">
-         <img src="_images/alyvix_logo_100x83.png" alt="card2" style="width:100%;opacity:0.85;border-radius:5px;" />
+         <img src="_images/alyvix-logo.png" alt="card2" style="width:100%;opacity:0.85;border-radius:5px;" />
          <div class="card-container">
             <h4><b>Alyvix #2</b></h4>
             <p>Video Producer</p>

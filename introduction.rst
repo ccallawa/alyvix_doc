@@ -19,8 +19,7 @@ Alyvix and Visual Monitoring
 |
 
 Welcome to the official guide for Alyvix |version|
-:iconlink:`video||videos_and_tutorials/basic_concept_tutorials.html#basic-concepts-tutorials-310-intro`
-(the documentation for version 2 of Alyvix `can be found here <https://www.alyvix.com/v2/learn/>`_).
+:iconlink:`video||videos_and_tutorials/basic_concept_tutorials.html#basic-concepts-tutorials-310-intro`.
 
 `Alyvix <https://alyvix.com/>`_ lets you build end-user bots that visually interact with any
 Windows application like ERPs
