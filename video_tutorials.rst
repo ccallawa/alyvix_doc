@@ -32,6 +32,8 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
 #. :ref:`Production Systems <production_systems_tutorials_top>` tutorials describing techniques
    based on real world production examples
 
+   * VPN for Remote Monitoring |halftab| :shadow:`(video #44 - 7'09")`
+   * Remote Desktop Connection - Full Example |halftab| :shadow:`(video #42 - 7'49")`
    * Government Service Portals |halftab| :shadow:`(video #36 - 7'40")`
    * SalesForce Cloud Service Console |halftab| :shadow:`(video #27 - 9'23")`
    * SalesForce Cloud Panoramic View |halftab| :shadow:`(video #26 - 9'23")`
@@ -39,13 +41,13 @@ This page presents all Alylvix 3 videos and tutorials, classified by task type.
    * SAP Solution Manager |halftab| :shadow:`(video #23 - 6'53")`
    * Microsoft Dynamics AX 2012 R3 Warehouse |halftab| :shadow:`(video #20 - 5'42")`
    * Microsoft Dynamics AX 2012 R3 General Ledger |halftab| :shadow:`(video #17 - 6'27")`
-   * Microsoft Dynamics AX 2012 R3 Full Example |halftab| :shadow:`(video #15 - 9'55")`
+   * Microsoft Dynamics AX 2012 R3 - Full Example |halftab| :shadow:`(video #15 - 9'55")`
    * Multi-Factor Authentication Login |halftab| :shadow:`(video #13 - 9'54")`
    * Secure Citrix Login |halftab| :shadow:`(video #7 - 5'26")`
    * Secure RDC Login |halftab| :shadow:`(video #5 - 4'31")`
 
 #. :ref:`Operations <operations_tutorials_top>` tutorials with in-depth explanations of
-   specific interface elements
+   specific elements of the Alyvix Core interface
 
    * Image Components |halftab| :shadow:`(video #4 - 2'20")`
    * Rectangle Components |halftab| :shadow:`(video #6 - 3'28")`

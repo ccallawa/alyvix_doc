@@ -16,6 +16,67 @@
 Production Systems Video Tutorials
 ==================================
 
+.. _production_tutorials_vpn:
+
+.. rubric:: VPN for Remote Monitoring
+
+Having problems knowing when your workers can't connect to the company VPN?  If your
+internal monitoring says the VPN is fine, but your users say it's not, then it's
+probably time to give remote visual monitoring a try.  Alyvix Service and Alyvix let
+you use your existing monitoring tools to see when users are having problems, and even
+fix them before they notice.
+
+.. image:: images/production-vpn-340.png
+   :class: image-boxshadow image-very-large
+   :alt: VPN for Remote Monitoring, version 3.4.0
+   :target: https://youtu.be/9LZPbx8FNxU
+
+|source-youtube|
+
+|
+
+
+.. _production_tutorials_rdc_full_example:
+
+.. rubric:: Remote Desktop Connection - Full Example
+
+We'll take a look in this video at the entire Alyvix Service lifecycle when it's used
+together with a monitoring system.  We'll build a complete test case from scratch that
+uses Remote Desktop (RDC) to log in to a remote server, run an application there, and
+receive and review reports that include timing data and screenshots of each measured
+task step.
+
+.. image:: images/production-rdc-332.png
+   :class: image-boxshadow image-very-large
+   :alt: Remote Desktop Connection RDC full monitoring example, version 3.3.2
+   :target: https://youtu.be/C3GiaQoyhCQ
+
+|source-youtube|
+
+|
+
+
+.. _production_tutorials_gov_service_portals:
+
+.. rubric:: Government Service Portals
+
+Just like private enterprises, government agencies operate web services running vital
+services that need to be monitored for availability and responsiveness.  Today we'll
+talk with Gabriele Cecco, who created a visual monitoring test case for a regional
+government.  We'll get his insights into both some important features, as well as how
+to diagnose what's going on when you're building a test case and it doesn't work the
+way you expected.
+
+.. image:: images/production-government-portals-323.png
+   :class: image-boxshadow image-very-large
+   :alt: Government webervice portals, version 3.2.3
+   :target: https://youtu.be/d51Sb2EHkoE
+
+|source-youtube|
+
+|
+
+
 .. _production_tutorials_salesforce_deep:
 
 .. rubric:: SalesForce Service Console Deep View
@@ -193,6 +254,26 @@ logging in:
 |
 
 
+.. _production_tutorials_citrixlogin:
+
+.. rubric:: Secure Citrix Login
+
+Similarly, this video shows you how to securely log in via Citrix:
+
+* Encrypting your credentials
+* Locating the fields for entering credentials
+* Entering decrypted credentials in those fields
+
+.. image:: images/production-citrix-302.png
+   :class: image-boxshadow image-very-large
+   :alt: Citrix production tutorial video, version 3.0.2
+   :target: https://youtu.be/KNfB_pVijX4
+
+|source-youtube|
+
+|
+
+
 .. _production_tutorials_rdclogin:
 
 .. rubric:: Secure RDC Login
@@ -208,25 +289,5 @@ you how to securely log in by:
    :class: image-boxshadow image-very-large
    :alt: RDC production tutorial video, version 3.0.2
    :target: https://youtu.be/sAmV1GVX-Y4
-
-|source-youtube|
-
-|
-
-
-.. _production_tutorials_citrixlogin:
-
-.. rubric:: Secure Citrix Login
-
-Similarly, this video shows you how to securely log in via Citrix:
-
-* Encrypting your credentials
-* Locating the fields for entering credentials
-* Entering decrypted credentials in those fields
-
-.. image:: images/production-citrix-302.png
-   :class: image-boxshadow image-very-large
-   :alt: Citrix production tutorial video, version 3.0.2
-   :target: https://youtu.be/KNfB_pVijX4
 
 |source-youtube|
