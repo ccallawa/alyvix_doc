@@ -31,7 +31,7 @@
 }
 
 #content .document p a, #content .document div a {
-    color: #B66DFF;
+    color: #C082FF;
     font-size: 100%;
     font-weight: 600;
 }
@@ -158,7 +158,7 @@ dl, ol, ul {
 }
 
 .admonition a {
-    color: #0BB798;
+    color: #08BDBA;
     text-decoration: underline;
 }
 
@@ -179,11 +179,11 @@ dl, ol, ul {
 }
 
 .admonition.note {
-    border-left-color: #0BB798 !important;
+    border-left-color: #08BDBA !important;
 }
 
 .admonition.note .admonition-title {
-    color: #0BB798 !important;
+    color: #08BDBA !important;
 }
 
 .admonition.hint,
@@ -197,11 +197,11 @@ dl, ol, ul {
 }
 
 .admonition.warning {
-    border-left-color: #FD8339 !important;
+    border-left-color: #FF8389 !important;
 }
 
 .admonition.warning .admonition-title {
-    color: #FD8339 !important;
+    color: #FF8389 !important;
     font-weight: 500 !important;
 }
 
@@ -297,7 +297,7 @@ dl, ol, ul {
     padding: 2px 4px;
 }
 #content code.literal {
-    color: #e74c3c !important;
+    color: #DC4149 !important;
     background-color: #fff !important;
 }
 
@@ -461,7 +461,7 @@ dl, ol, ul {
 /* Scroll bar improvements for Chrome, Safari and Edge */
 div.highlight pre {
     overflow-x: scroll !important;
-    scrollbar-color: #B66DFF #fff !important;
+    scrollbar-color: #C082FF #fff !important;
     scrollbar-width:  thin !important;
 }
 div.highlight pre::-webkit-scrollbar {
@@ -470,13 +470,13 @@ div.highlight pre::-webkit-scrollbar {
 div.highlight pre::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.3) !important;
     border-radius: 10px !important;
-    background-color: #B66DFF !important;
+    background-color: #C082FF !important;
 }
 div.highlight pre::-webkit-scrollbar-thumb:hover {
-    background-color: #B66DFF !important;
+    background-color: #C082FF !important;
 }
 div.highlight pre::-webkit-scrollbar-thumb:active {
-    background-color: #B66DFF !important;
+    background-color: #C082FF !important;
 }
 div.highlight pre::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.3) !important;
@@ -561,7 +561,7 @@ div.highlight pre::-webkit-scrollbar-track {
 #content .document .versionmodified.added,
 #content .document .versionmodified.added .version-new {
     background-color: rgba(10, 157, 129, 0.15);
-    color: #B66DFF;
+    color: #C082FF;
 }4
 
 #content .document .versionmodified.changed,
@@ -607,5 +607,5 @@ div.highlight pre::-webkit-scrollbar-track {
 }
 
 code.download {
-    color: #B66DFF !important;
+    color: #C082FF !important;
 }
