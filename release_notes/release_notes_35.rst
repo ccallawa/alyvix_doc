@@ -10,11 +10,11 @@
 
 
 
-.. _release_notes_v3_5_0:
+.. _release_notes_v3_5:
 
-=======================
-Version 3.5.0 - Current
-=======================
+=============
+Version 3.5.0
+=============
 
 Alyvix is an open source APM software tool for visual monitoring. If your machine matches the
 system requirements for Alyvix, you can :ref:`install or upgrade it <getting_started_top>`.
@@ -25,7 +25,7 @@ Python version to power Alyvix 3.5.x.
 |
 
 
-.. _install_release_v3_5_0:
+.. _release_notes_v3_5_0:
 
 .. rubric:: Version 3.5.0
 

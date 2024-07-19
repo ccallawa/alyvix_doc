@@ -10,7 +10,7 @@
 
 
 
-.. _release_notes_v3_2_0:
+.. _release_notes_v3_2:
 
 =====================
 Version 3.2.0 - 3.2.3
@@ -25,7 +25,7 @@ Python version to power Alyvix 3.2.x.
 |
 
 
-.. _install_release_v3_2_3:
+.. _release_notes_v3_2_3:
 
 .. rubric:: Version 3.2.3
 
@@ -52,7 +52,7 @@ Python version to power Alyvix 3.2.x.
 |
 
 
-.. _install_release_v3_2_0:
+.. _release_notes_v3_2_0:
 
 .. rubric:: Version 3.2.0
 

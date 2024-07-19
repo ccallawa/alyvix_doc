@@ -10,7 +10,7 @@
 
 
 
-.. _release_notes_v3_0_0:
+.. _release_notes_v3_0:
 
 =====================
 Version 3.0.0 - 3.0.2
@@ -24,7 +24,7 @@ Alyvix 3.0.x.
 
 
 
-.. _install_release_v3_0_2:
+.. _release_notes_v3_0_2:
 
 .. rubric:: Version 3.0.2
 
@@ -40,7 +40,7 @@ Alyvix 3.0.x.
 
 
 
-.. _install_release_v3_0_1:
+.. _release_notes_v3_0_1:
 
 .. rubric:: Version 3.0.1
 
@@ -63,7 +63,7 @@ Alyvix 3.0.x.
 
 
 
-.. _install_release_v3_0_0:
+.. _release_notes_v3_0_0:
 
 .. rubric:: Version 3.0.0
 

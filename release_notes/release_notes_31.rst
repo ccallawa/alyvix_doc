@@ -10,7 +10,7 @@
 
 
 
-.. _release_notes_v3_1_0:
+.. _release_notes_v3_1:
 
 =====================
 Version 3.1.0 - 3.1.6
@@ -25,7 +25,7 @@ Python version to power Alyvix 3.1.x.
 |
 
 
-.. _install_release_v3_1_6:
+.. _release_notes_v3_1_6:
 
 .. rubric:: Version 3.1.6
 
@@ -48,7 +48,7 @@ Python version to power Alyvix 3.1.x.
 |
 
 
-.. _install_release_v3_1_5:
+.. _release_notes_v3_1_5:
 
 .. rubric:: Version 3.1.5
 
@@ -65,7 +65,7 @@ Python version to power Alyvix 3.1.x.
 |
 
 
-.. _install_release_v3_1_4:
+.. _release_notes_v3_1_4:
 
 .. rubric:: Version 3.1.4
 
@@ -79,7 +79,7 @@ Python version to power Alyvix 3.1.x.
 |
 
 
-.. _install_release_v3_1_3:
+.. _release_notes_v3_1_3:
 
 .. rubric:: Version 3.1.3
 
@@ -95,7 +95,7 @@ Python version to power Alyvix 3.1.x.
 |
 
 
-.. _install_release_v3_1_2:
+.. _release_notes_v3_1_2:
 
 .. rubric:: Version 3.1.2
 
@@ -109,7 +109,7 @@ Python version to power Alyvix 3.1.x.
 |
 
 
-.. _install_release_v3_1_1:
+.. _release_notes_v3_1_1:
 
 .. rubric:: Version 3.1.1
 
@@ -134,7 +134,7 @@ Python version to power Alyvix 3.1.x.
 |
 
 
-.. _install_release_v3_1_0:
+.. _release_notes_v3_1_0:
 
 .. rubric:: Version 3.1.0
 
